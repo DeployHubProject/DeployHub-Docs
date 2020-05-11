@@ -1,0 +1,26 @@
+/*
+
+Nothing defined here. The Hugo project that uses this theme can override Bootstrap by adding a file to:
+
+assets/scss/_styles_project.scss
+
+*/
+
+#search-panel {
+    margin-top: 40px;
+}
+
+#search-results { 
+    margin-top: 8px;
+}
+
+.search-results-title {
+    font-size: 110%;
+    color: #555;
+    max-width: 20em;
+    border-bottom-color: #999;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
