@@ -96,7 +96,7 @@ function populateResults(result){
     $('#search-results').append(output);
 
     $.each(snippetHighlights,function(snipkey,snipvalue){
-      $("#summary-"+key).mark(snipvalue);
+      new Mark(document.getElementById("summary-" + key)).mark(snipvalue);
     });
 
   });
