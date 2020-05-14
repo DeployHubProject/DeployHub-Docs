@@ -20,16 +20,21 @@ _Life Cycle Sub-Domains_ allow you to automate the push of your continuous deplo
 
 ## Applications
 
-Your software project will be defined by an _Application_. An _Application_ is a collection of _Components_ that make up a complete software release, including database objects, binary objects, microservices, and environment variables. An _Application_ can also be thought of as a software &#39;Project&#39; and may map directly to your version control repository. However, in DeployHub, your software project&#39;s _Components_ can come from many different locations if needed.
+If you are an application developer, this will be where you do most of your work. _Applications_ are a collection of _Components_ that can be deployed as a single software solution. You define an Application by associating the _Components_ it will consume. The first time you define an _Application,_ it is referred to as the _Application Base Version._ When you change the _Application Base Version_, you create a new _Application Version. Applications_ are assigned and deployed to _Environments_. _Applications_ are associated to a _Domain_.
 
-_Applications_ are deployed incrementally with DeployHub. It never does a &#39;monolithic&#39; style deployment. It only releases the changes. This means that only the new _Components_ are released when a deployment is pushed. DeployHub manages incremental deployments using a versioning engine.
+- **Application Base Version** : Defines the software product in terms of _Components_, _Attributes,_ and assigned _Environments_.
 
-_Applications_ can also be used to package a collection of _Components_, like microservices, that need to be released together.
+- **Application Version** : This child of the _Application Base Version_ represents changes and can be deployed just as an _Application Base Version_ is.
 
 ## Components
 
-_Components_ are assigned and consumed by an _Application_. _Components_ are the binaries, database updates, microservices (containers), etc. that make up an _Application_. _Components_ cannot be deployed and must be assigned to an _Application_ for it to be pushed out to an _Endpoint._ In other words, if a _Component_ is not being consumed, it should not be released.
+If you are an API or microservice developer, this will be where you do most of your work. However, application developers may also define _Components_ that are to be used by only a specific _Application_. _Components_ are microservices (containers), Database updates or files_,_ along with Pre and Post _Actions_ that are used to control the deployment at a detailed level. By tracking the low-level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across team.
 
+_Components_ change over time, and so DeployHub contains _Component Base Versions_ and _Component Versions_ like those of _Application Base Versions_ and _Application Versions._ And like _Applications_, _Components_ are associated to a Domain.
+
+- **Component Base Version** : Objects within DeployHub that contain the files and procedures that are deployed to _Endpoints_.
+
+- **Component Version** : A child of the _Component Base Version_ that represents changes.
 ## Components and Microservices
 
 _Components_ map directly to an individual microservice. If you are building a continuous deployment process that deploys your microservice to a container, you will define your microservice as a _Component._ If you want your microservice _Component_ to be shared across your teams, you will need to publish your _Component_ to a _Domain_ that allows sharing. If it is defined to only your _Application,_ thenonly your team will be able to see it.
@@ -48,11 +53,15 @@ When a new _Application Version_ iscreatedfrom either an _Application Base Versi
 
 DeployHub uses a simple versioning number schema starting at 1 and incrementing over time, for example Myapp;1, Myapp;2.
 
+## Release
+
+A _Release_ is only available in **DeployHub Pro**. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a &#39;Release Train.&#39;
+
 ## Continuous Configuration Management
 
 DeployHub uses _Component_ versioning data to perform intelligent incremental releases. This allows individual microservices to be deployed independently while continually keeping track of the new _Application Version_ that it creates when it is moved to an Endpoint (cluster for example.)
 
-When integrated to a CD pipeline, DeployHub can be called to automatically &#39;Version&#39; the _Application_ when a new microservice that it depends on is updated.
+When integrated to a CD pipeline, DeployHub can be called to automatically Version the _Application_ when a new microservice that it depends on is updated.
 
 ## Dependency Management
 
@@ -64,13 +73,17 @@ Each _Component_ contains a pointer to where an artifact is stored in a _Reposit
 
 ## Environments and Endpoints
 
-DeployHub sends an _Application Version_ to numerous container, virtual and physical _Endpoints_ simultaneously through the use of _Environments_. An _Environment_ is a DeployHub object which acts as a collection of _Endpoints_. An _Endpoint_ is a DeployHub object that represents a single container, virtual image, or physical server in an enterprise&#39;s IT environment targeted for deployment. An _Endpoint_ can be assigned many different _Environments_, and an _Environment_ can contain many different _Endpoints_.
+DeployHub releases an _Application Version_ to numerous container, virtual and physical _Endpoints_ simultaneously through the use of _Environments_. An _Environment_ is a DeployHub object which acts as a collection of _Endpoints_. An _Endpoint_ is a DeployHub object that represents a single container, virtual image, or physical server in an enterprise&#39;s IT environment targeted for deployment. An _Endpoint_ can be assigned many different _Environments_, and an _Environment_ can contain many different _Endpoints_.
 
 ## Component Types and Endpoint Mapping
 
-Each _Component_ is assigned a _Type_ attribute. The _Type_ attribute allows you to specify to what kind of _Endpoint_ that the _Component_ should be installed. For example, a Database _Component_ is installed onto an Endpoint that has the corresponding Database _Type_ definition. A _Component_ is assigned a single _Type_, while an _Endpoint_ can be assigned multiple _Types_. For example, if your single _Endpoint_ needed to have both a database and your application binaries installed, it would be assigned both a &#39;Database&#39; and an &#39;Binary&#39; _Type_ attribute.
+Each _Component_ is assigned a _Type_ attribute. The _Type_ attribute allows you to specify to what kind of _Endpoint_ that the _Component_ should be installed. For example, a Database _Component_ is installed onto an _Endpoint_ that has the corresponding Database _Type_ definition. A _Component_ is assigned a single _Type_, while an _Endpoint_ can be assigned multiple _Types_. For example, if your single _Endpoint_ needed to have both a database and your application binaries installed, it would be assigned both a 'Database' and an 'Binary' _Type_ attribute.
 
 Mapping of _Component_ to _Endpoints_ is accomplished by assigning one or more _Component Types_ to each _Endpoint_ and assigning a single _Type_ attribute to the _Component._ When an _Application_ is deployed, each _Component_ within the _Application_ will be deployed to each _Endpoint_ if the _Component&#39;s __Type_ attribute matches one of the _Endpoint&#39;s__ Types_ attributes. DeployHub ships with standard Endpoint Types and allows you to define custom _Type_ attributes.
+
+## Actions
+
+You create reusable deployment models using _Actions. Actions_ are made up of _Procedures, Functions,_ and other _Actions._ These are placed into an _Action&#39;s_ Workflow and connected in a logical way so that any portion of a deployment can be controlled in detail. _Actions_ can be assigned to _Tasks, Applications_, _and Components_ as _Pre-Actions_ and _Post-Actions_. _Pre_ and _Post-Actions_ are executed before and after a _Task_ is run, before and after an _Application Version_ is deployed, and before and after a _Component Version_ is deployed. Custom _Actions_ replace the normal execution of deployments for _Applications_ and _Components._ This allows for complete control of a deployment at every level.
 
 ## Functions and Procedures
 
@@ -93,19 +106,16 @@ There may come a time when the need to acquire data outside of the DeployHub sys
 
 ## Notifiers
 
-A _Notifier_ is sent to various recipients after a successful or failed deployment attempt. They are also sent when deployed files have been changed, a _Request__Task_ has been used, or that an _Endpoint_ is down, if these features have been activated on one or more _Endpoints_. _Notifier_s can be found under the _Notifiers_ tab, which is under the _Flows_ menu. DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose. A _Notifier_ contains all of the technical information necessary to send notifications.
+A _Notifier_ is sent to various recipients after a successful or failed deployment attempt. They are also sent when deployed files have been changed, a _Request_ _Task_ has been used, or that an _Endpoint_ is down, if these features have been activated on one or more _Endpoints_.  DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose. A _Notifier_ contains all of the technical information necessary to send notifications.
 
-## Release
-
-A _Release_ is only available in **DeployHub Pro**. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a &#39;Release Train.&#39;
 
 ## Audit Trail
 
-The _Audit Trail_contains a complete audit history of any changes applied to _Environments, Endpoints, Applications,_ and _Components._ An _Application&#39;s Audit Trail_ shows all deployments that occurred. Comments and documents are also added to the _Audit Trail._
+The _Audit_ _Trail_ contains a complete audit history of any changes applied to _Environments, Endpoints, Applications,_ and _Components._ An _Application's Audit Trail_ shows all deployments that occurred. Comments and documents can also be added to the _Audit Trail._
 
 ## Subscribing
 
-You can subscribe to _Environments, Endpoints, Applications, and Components_. If your _User Group_ has &#39;Read&#39; access to these objects, you can subscribe to follow the activity and changes of any of these objects.
+You can subscribe to _Environments, Endpoints, Applications_, and _Components_. If your _User Group_ has &#39;Read&#39; access to these objects, you can subscribe to follow the activity and changes of any of these objects.
 
 ## Reverse Proxy
 

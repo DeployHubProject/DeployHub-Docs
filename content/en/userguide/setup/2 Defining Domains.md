@@ -6,20 +6,22 @@ weight: 2
 
 ## Domains
 
-_Domains_ are used in DeployHub to catalog and publish public and private services. Domains organize reusable objects based on your needs. Domains can represent functional areas such as &#39;security services&#39; or departments, teams, and software projects. _Domains_ are represented within the DeployHub tree-structure interface by a &#39;world&#39; icon. There are four types of Domains:
+_Domains_ are used in DeployHub to catalog and publish public and private microservices and other reusable objects (web components, DB updates, etc.). Domains organize reusable objects based on your 'solution' spaces. Domains can represent functional areas such as 'security services' or departments, teams, and software projects. There are four types of Domains:
 
-| Site Domain | This is the highest-level organizational structure.SaaS UserYour Site Domain will be defaulted to the Project name you entered when you registered. You can rename your Site Domain if needed.
-On Premise InstallationYour default Site Domain name is &quot;Global.&quot; You can rename your Site Domain if needed. |
-| --- | --- |
-| Division Domain | DeployHub Pro User Division Domains are used by larger companies to define an organizational structure that closely represents how they do business, such as geographical areas, organizational responsibility, or business units. A Division Domain is a folder of other Sub-Division Domains and Project Domains. Division Domains can create as many Sub-Division Domains as needed. In addition, objects defined to a specific Division Domain can be secured with specific User Groups.
-DeployHub Team UserDivision Domains are not available in the DeployHub Team version. |
-| Project Domains | You assign your software project to a Project Domain. You can create as many Project Domains as needed. Project Domains cannot have child Sub-Project Domains, but they do have Life Cycle Sub-Domains. |
-| Life Cycle Sub-Domains | This Sub-Domain defines the stages in your Delivery Pipeline. Only Project Domains can have Life Cycle Sub-Domains. You create Life Cycle Sub-Domains to map to each stage in your continuous delivery Pipeline. Life Cycle Sub-Domains allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery Engine (Jenkins, Bamboo, GitLab or GitHub Actions) to perform the continuous deployment across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign Tasks to your Life Cycle Sub-Domain to define a continuous delivery process.
+_**Site Domain**_ | This is the highest-level organizational structure. For SaaS Users your Site Domain will be defaulted to the Project name you entered when you registered. You can rename your Site Domain if needed.
+On Premise InstallationYour default Site Domain name is 'Global.' You can rename your Site Domain if needed. 
+
+_**Division Domains**_ | DeployHub Pro User can take advantage of Division Domains. Division Domains are used by larger companies to define an organizational structure that closely represents how they do business, such as geographical areas, organizational responsibility, or business units. A Division Domain is a folder of other Sub-Division Domains and Project Domains. Division Domains can create as many Sub-Division Domains as needed. In addition, objects defined to a specific Division Domain can be secured with specific User Groups. Note: This feature is not available in DeployHub Team.
+
+_**Project Domains**_ | You assign your software project to a Project Domain. You can create as many Project Domains as needed. Project Domains cannot have child Sub-Project Domains, but they do have Life Cycle Sub-Domains. 
+
+_**Life Cycle Sub-Domains**_ | This Sub-Domain defines the stages in your Delivery Pipeline and will map to your Continuous Delivery solution. Only Project Domains can have Life Cycle Sub-Domains. You create Life Cycle Sub-Domains to map to each stage in your continuous delivery Pipeline. Life Cycle Sub-Domains allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery Engine (Jenkins X, CircleCI, GitLab or GitHub Actions) to perform the continuous configuration management of your microservices and applictions across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign Tasks to your Life Cycle Sub-Domain to define a continuous delivery process within DeployHub. 
+
 You can create as many Life Cycle Sub-Domains as you need for each of your Project Domains. You can also rename Life Cycle Domains if your Pipeline changes. Lifecycle Sub-Domains can be dragged and dropped in their General tab to rearrange their top-to-bottom execution order within the Domain where they exist. Rearranging Lifecycle Sub-Domains allows users to manage and organize the visual representation of their Continuous Delivery Pipeline. Lifecycle Sub-Domains are represented by a circular multi-object icon under your Project Domain tree-structure. |
 
 ## Top Down Domain Structure
 
-A _Divisional Domain_ inherits all the access properties from its parent _Global Domain_. Any child _Divisional Domains_ will inherit its parent _Divisional Domain&#39;s_ access rights. This continues down through all _Project Domains_ and _Life Cycle Sub-Domains_. All inherited access properties are shown within the Access lists with each _Group_ name highlighted in yellow. All _Group_s in lists that were added in that _Domain_, and not inherited, will be shown in the list without highlighting.
+A _Sub Domain_ inherits all the access properties from its parent _Global Domain_. Any child _Divisional Domains_ will inherit its parent _Divisional Domain&#39;s_ access rights. This continues down through all _Project Domains_ and _Life Cycle Sub-Domains_. All inherited access properties are shown within the Access lists with each _Group_ name highlighted in yellow. All _Group_s in lists that were added in that _Domain_, and not inherited, will be shown in the list without highlighting.
 
 ## Life Cycle Sub-Domains and your Delivery Pipeline
 
@@ -128,18 +130,7 @@ Additional parameters can be added to a _Task_ by clicking the plus icon in the 
 
 Additional Parameters are stored in Global variables that can be referenced anywhere within DeployHub during the execution of the _Task_. This is particularly useful during deployments where Pre and Post Actions are executed at the _Component_ and _Application_ levels.
 
-## Access Tab
 
-_Domains_, their contents and their _Sub-Domains_ are protected from unauthorized use and change via the _Access_ tab. This tab contains four lists, each of which grants a different type of access to _User_s who belong to the _User Group_s contained in the list. A fifth list contains a list of all _User Group_s, which can be dragged and dropped into each of the other four lists. By default the _Everyone_ Groupis assigned to each group at the GLOBAL domain level and this permission is then inherited by all _Sub-Domains_ and _Lifecycle States_. To restrict Access, remove the _Everyone_ Group from the desired Group list, and add only the Groups that should be given the appropriate access to the _Domain_.
-
-These four types of access are as follows:
-
-| Access | Description |
-| --- | --- |
-| _**View**_ | If a _User_ doesn&#39;t belong to a _User Group_ in the View Access list for the _Domain_, that _Domain_ will not appear in the tree structure. This keeps unauthorized _User_s from seeing the _Domain_ and helps simplify each _User&#39;s_ view of the DeployHub system. |
-| _**Change**_ | This allows a _User_ who belongs to any _User Group_ in the list to change the attributes of the _Domain_ as well as to add/remove _Task_s from the _Domain_. |
-| _**Read**_ | Performs no function for the _Domain_ itself but acts as an _Inherited Permission_ for objects created within the _Domain_. The exact meaning of &quot;Read&quot; will depend on the object created within the Domain. |
-| _**Write**_ | Performs no function for the _Domain_ itself but acts as an _Inherited Permission_ for objects created within the _Domain_. The exact meaning of &quot;Write&quot; will depend on the object created within the Domain. |
 
 ## General Tab
 
@@ -164,3 +155,8 @@ NOTE: All _Domains_ in **DeployHub Team** are _Project Domains_ except for the h
 When you set the _Sub-Domain_ to include _Lifecycle States_ from the _Domain_ Edit dialog, you define that _Domain_ as a _Project Domain_ with all further child _Sub-Domains_ to be _Lifecycle Sub-Domains._ They will all exist at the same level of the _Domain_ hierarchy_. Life Cycle Sub-Domains_ are a type of child _Sub-Domain_ that allows the parent _Sub-Domain_ to be defined to have a _Lifecycle_ process for Continuous Delivery. _Lifecycle_ processes allow for the management of the flow of the _Application_ as it moves through various states within the enterprise, such as from Development through Production.
 
 In order to create a _Life Cycle Sub-Domain_, edit the _Sub-Domain_ by highlighting it in the tree structure and select the pencil icon in the right-hand corner. Select the _Contains Lifecycle_ checkbox in the edit dialog. This will now restrict the addition of any lower level _Sub-Domains_, and instead allow you to create _Life Cycle Sub-Domains_. A _Life Cycle Sub-Domain_ cannot have a child _Sub-Domain._ The icon for the newly created _Life Cycle Sub-Domain_ will change from a world to a flowchart, indicating that this is now a _Life Cycle Sub-Domain_. You can re-order the _Life Cycle Sub-Domains_ by selecting the higher level _Sub-Domain_ General Tab. Edit the _Sub-Domain_ by selecting the pencil icon in the right-hand corner. This will bring you to the Edit General dialog box. You can drag and drop the _Life Cycle Sub-Domains_ to re-order them.
+
+## Access Options
+_Domains_, their contents and their _Sub-Domains_ are protected from unauthorized use and change via their _Access_ options. There are four options, each of which grants a different type of access to _User_s who belong to the _User Group_s contained in the list. A fifth list contains a list of all _User Group_s, which can be dragged and dropped into each of the other four lists. By default the _Everyone_ Groupis assigned to each group at the GLOBAL domain level and this permission is then inherited by all _Sub-Domains_ and _Lifecycle States_. To restrict Access, remove the _Everyone_ Group from the desired Group list, and add only the Groups that should be given the appropriate access to the _Domain_.
+
+{{% include "/resuable/Access Object.md" %}}

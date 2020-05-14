@@ -8,13 +8,13 @@ weight: 6
 
 DeployHub includes a central engine that can be installed locally or accessed via the SaaS offering via a reverse proxy. The central engine connects to external repositories, CD engines, DevOps tools, data sources, transfer protocols and notification tools. DeployHub&#39;s open architecture allows you to plug-in the tool set you use to define your release configurations.
 
-![Architecture](RackMultipart20200511-4-1d4hnht_html_b135493454ff5abe.png)
+![Architecture](/userguide/concepts/Architecture.png)
 
 ## Reverse Proxy and SaaS
 
 If you are a SaaS customer, a &#39;one-way&#39; reverse proxy is used on your side of the firewall. The reverse proxy can be timed to submit request for deployments based on the installation parameters.
 
-![SaaS Architecture](RackMultipart20200511-4-1d4hnht_html_dcd53ee841adc060.png) _SaaS Architecture_
+![SaaS Architecture](/userguide/concepts/ReverseProxy.png)
 
 ## Deployments with Custom Actions for Cloud Native Releases
 
@@ -48,7 +48,7 @@ DeployHub uses ftp, ftps, sftp, or Windows protocol to transfer files. When a de
 
 1. Pre and Post processing _Actions_ defined in the _Application_ or _Release_ are performed on each of the target _Endpoints_ in the _Environments_. Any errors found at the delivery level are logged and may fail the deployment. All logs are reported back to DeployHub and recorded in the History Tab for each _Application_ or _Release_.
 
-NOTE: A successful Deployment email template will notify recipients when the deployment proceeds normally.: Exceptions cause the deployment to be marked as &quot;failed&quot;. The Failed Deployment Email Template assigned to the _Application_ will notify recipients of that failure. Various problems, such as a missing directory on a filesystem _Repository_ type, or an operating system error which prevents the creation of a _DropZone_ directory, will result in a failure. Missing files, conversely, would not necessarily cause a failure since DeployHub has no way of knowing whether the files are supposed to be there or not. Under these circumstances, Post-Actions that have been assigned to the _Components_ could be designed, among other things, to verify what has been deployed. An Abort could be issued from within a Post-Action, which would cause the deployment to be marked as &#39;failed&#39;.
+NOTE: A successful Deployment email template will notify recipients when the deployment proceeds normally. Exceptions cause the deployment to be marked as 'failed.' The Failed Deployment Email Template assigned to the _Application_ will notify recipients of that failure. Various problems, such as a missing directory on a filesystem _Repository_ type, or an operating system error which prevents the creation of a _DropZone_ directory, will result in a failure. Missing files, conversely, would not necessarily cause a failure since DeployHub has no way of knowing whether the files are supposed to be there or not. Under these circumstances, Post-Actions that have been assigned to the _Components_ could be designed, among other things, to verify what has been deployed. An Abort could be issued from within a Post-Action, which would cause the deployment to be marked as &#39;failed&#39;.
 
 NOTE: The Base Directory for a _Component_ can either be absolute, i.e. &#39;c:\main&#39; for Windows or &#39;/main&#39; for Linux/Unix, etc., in which case it replaces the Base Directory for the _Endpoint_. If the _Component&#39;s_ Base Directory is relative, i.e. &#39;SomeFiles\SomeMoreFiles&#39;, then it is appended to the _Endpoint&#39;s_ Base Directory,
 
@@ -56,4 +56,4 @@ For example: &#39;c:\main\SomeFiles\SomeMoreFiles&#39;. If the _Component_ Targe
 
 The following diagram shows how the deployment process within DeployHub works:
 
-![Deployment Process](RackMultipart20200511-4-1d4hnht_html_21b466be11a947c5.jpg)
+![Deployment Process](/userguide/concepts/ProcessFlow.jpg)

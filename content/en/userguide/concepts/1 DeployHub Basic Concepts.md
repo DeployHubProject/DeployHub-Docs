@@ -4,11 +4,11 @@ linkTitle: "Basic Concepts"
 weight: 1
 ---
 
-## Getting Started - What You Need to Know
+## DeployHub Core Objects
 
-_Applications, Components_ and _Domai_ns are key concepts that DeployHub uses to version independently deployable objects like microservices, map their relationships, and release them to _Endpoints_ (clusters, cloud, physical, etc.).
+_Applications, Components_ and _Domains_ are key concepts that DeployHub uses to version independently deployable objects like microservices, map their relationships, and release them to _Endpoints_ (clusters, cloud, physical, etc.).
 
-For releasing _Components_, DeployHub uses an agentless architecture that is designed to support both a modern architecture of containers as well as legacy systems. And if you have already invested time and effort around solutions like Helm or Ansible to update your cluster, great! We can call those external solutions to perform the update and provide all the service to service relationship mapping and version information. DeployHub also has plug-ins to continuous delivery pipelines that supports continuous configuration management as part of your release process.
+For releasing _Components_, DeployHub uses an agentless architecture that is designed to support both a modern architecture of containers as well as legacy systems. And if you have already invested time and effort around solutions like Helm or Ansible to update your cluster, great! We can call those external solutions to perform the update and provide all the microservice configuration mapping and version information. DeployHub also has plug-ins to continuous delivery pipelines that supports continuous configuration management as part of your release process.
 
 ## Application and Component Overview
 
@@ -22,4 +22,26 @@ DeployHub organizes your shared or private microservices and reusable components
 
 The lowest level Domain is a _Life Cycle Domain._ A Life Cycle Domain includes steps that can integrate with your external Continuous Delivery (CD) Pipeline orchestration tools.
 
-![LifeCycle Domain](RackMultipart20200511-4-q36m0e_html_a920de4b1ba0a194.png)
+## Navigation
+All navigation is done via the left hand navigation menu. This menu will take you to Applicaiton, Component and Domain dashboards as well as the ability to setup Repositories, Data Sources, CD Engines and other objects.  
+
+## Right Hand Icons
+
+- **Person Icon** : Clicking on the Person Icon in the group of icons on the upper far right displays information about the current User, which can be changed. A new password can also be entered for the User.
+
+- **Question Mark Icon** : Clicking on the Question Mark Icon on the upper far right takes the User to the web page containing all the online documentation for DeployHub.
+
+- **Logout:** Clicking on the logout button on the farthest upper right causes the User to be logged out of DeployHub and immediately returned to the login window in the browser.
+
+- **Home Icon** : Clicking on the Home Icon in the group of icons on the upper far right, or clicking on any Domain in the tree structure at any time, causes three tabs to appear on the right side:
+
+- **To Do List** : This contains all Requests for the current _User_ that are created by _Request Tasks_ as well as pending _Calendar_ entries.
+- **Timeline** : All activity within the DeployHub installation for the current User.
+- **Global Reports** : These are a series of reports.
+
+  - _Endpoint_ Inventory Report: This list of the assets deployed to each _Endpoint_ in the system, including _Files, Components, Applications, Environments, Dates,_ and _Users._
+  - File Audit Trace: Allows for the selection of a file on the local user&#39;s machine, and returns all related deployments as well as Dates, _Applications_, _Components_, and _Endpoints_.
+  - Audit of the files deployed to _Endpoints_: This report shows the differences between the files on _Endpoints_ compared to what was deployed.
+  - Success/Failed Deployments per _Environment_ Report: The number of successful and failed deployments per _Environment._ It includes the Deployment Number, _Environment_ deployed to, _Application_ and _Components,_ date deployed, and each _Endpoint_ deployed to along with all files.
+
+- **Delivery Pipeline** : This tab only appears when a Domain containing _Life Cycle Sub-Domain_ has been selected. It is used to define your continuous delivery process.
