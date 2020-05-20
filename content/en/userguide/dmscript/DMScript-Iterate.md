@@ -12,7 +12,8 @@ _iterate_ is similar to foreach but loops through each array/list member, settin
 Braces are mandatory. _break_ and _continue_ may be used – _break_ to terminate the loop (as previously described) and _continue_ to restart the loop from the beginning with the next value.
 
 There are two syntaxes for iterate – both operate in the same way, use whichever you prefer:
-~~~
+
+```bash
 
 iterate (name: expression) {
  // loop-body
@@ -21,13 +22,14 @@ iterate (name: expression) {
 iterate name in expression {
  // loop-body
  }
-~~~
+```
+
 NOTE: Unlike _foreach_, iterate only operates with Arrays/Lists. Because it sets the variable to the content of each array element, the key value is not available in the body of the loop.
 
 **Example:**
 Here is an example of an _Array iterator_ – this iterates over all the values in the specified array (i.e.: the subscripts). e.g.
 
-~~~
+```bash
 set arr = { ';a'; =\> ';1';, ';b'; =\> ';2';, ';c'; =\> ';3'; };
 iterate(k: $arr) {
 
@@ -56,4 +58,4 @@ EVERYONE
 Developers
 
 Administrators
-~~~
+```

@@ -13,7 +13,7 @@ The _User_ can edit _Data Source_s by using an Access tab and Properties tab. In
 
 ## Properties Tab
 
-The Data Source Properties tab allows you to configure a _Data Source_ connection, e.g. specifying a broker name along with the required User Name and Password. Click the plus sign (+) for the _User_ to select from a list of Properties and add an associated value for it. Clicking on the pencil icon allows the _User_ to edit an existing Property. Selecting the Property from the table and clicking on the &quot;X&quot; in the upper right-hand corner deletes the selected Property from the table. There are five different types of Data Sources. They are listed here along with their Properties.
+The Data Source Properties tab allows you to configure a _Data Source_ connection, e.g. specifying a broker name along with the required User Name and Password. Click the plus sign (+) for the _User_ to select from a list of Properties and add an associated value for it. Clicking on the pencil icon allows the _User_ to edit an existing Property. Selecting the Property from the table and clicking on the "X" in the upper right-hand corner deletes the selected Property from the table. There are five different types of Data Sources. They are listed here along with their Properties.
 
 ## ODBC Data Source Properties
 

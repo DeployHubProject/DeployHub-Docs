@@ -29,11 +29,11 @@ A qualified name can include as many Domain names as is necessary to uniquely id
 
 _1) Retrieve a User.Group_
 
-set group = getusergroup(&quot;Developers&quot;);
+set group = getusergroup("Developers");
 
 _2) Retrieve a User Group specifying the enclosing domain:_
 
-set group = getusergroup(&quot;Project1.Developers&quot;);
+set group = getusergroup("Project1.Developers");
 
 
 Further descriptions of Group Objects are found in the high level section named _DMScript_ Objects, in the section named Group.

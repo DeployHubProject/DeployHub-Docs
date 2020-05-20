@@ -33,7 +33,8 @@ The following properties can be accessed for a _Component_ object:
 Attributes such as _owner_ and _parent_ return _Objects_. These objects have their own attributes. So, for example, one can get the owner name of a _Component_ by writing:
 
 **Examples:**
-~~~
+
+```bash
 set owner = ${_Component_.owner};
 
 echo ${owner.name};
@@ -41,4 +42,4 @@ echo ${owner.name};
 or, more simply:
 
 echo ${_Component_.owner.name};
-~~~
+```

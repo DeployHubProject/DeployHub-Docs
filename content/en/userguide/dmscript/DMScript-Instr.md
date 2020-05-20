@@ -25,9 +25,9 @@ Integer: An index position (starting at 0) representing the location of searchSt
 
 **Example:**
 
-set a=&quot;Hello There&quot;;
+set a="Hello There";
 
-echo ${a.instr(&quot;The&quot;)}; // echoes 6
+echo ${a.instr("The")}; // echoes 6
 
 **See Also:**
 

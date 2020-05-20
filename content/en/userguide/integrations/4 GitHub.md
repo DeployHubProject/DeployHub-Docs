@@ -29,14 +29,14 @@ Using the GitHub Repository requires a two-step process. First is the Git checko
 
 **DeployHub Pro** can reference the GitHub issues for a particular GitHub _Repository_. Typically, a _Component_ can only be associated to a single GitHub _Repository_. In **DeployHub Pro,** you can associate issues to a Component Version or Application Version. This enables the GitHub issues to be viewed from a Component or Application using the **DeployHub Pro** Change Request tab. If you have a Release defined, these GitHub issues will be rolled up from the Component and Application to the Release.
 
-To associate your GitHub Repository with **DeployHub Pro** you need to define a _Data Source_ connection with the _Type_ of &quot;GitHub.&quot; This is done from the _Connections_ Menu under the _Data Source_ tab. Right click on your Domain name and select &quot;New Data Source in this Domain.&quot; Complete the following fields:
+To associate your GitHub Repository with **DeployHub Pro** you need to define a _Data Source_ connection with the _Type_ of "GitHub." This is done from the _Connections_ Menu under the _Data Source_ tab. Right click on your Domain name and select "New Data Source in this Domain." Complete the following fields:
 
 ## GitHub Data Source Connection General Tab
 
 | Field | Description |
 | --- | --- |
 | Name | Enter a unique name for the Data Source. |
-| Type | Select &quot;GitHub. |
+| Type | Select "GitHub. |
 | Owner Type | Select User or Group who will be the owner of the Data Source (Group Ownership or User Ownership). |
 | Users/Group | Select the Group or Users that will be the owner. |
 | Summary | Describe the Data Source. |

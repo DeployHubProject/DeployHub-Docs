@@ -18,7 +18,8 @@ _rename_ takes three named parameters:
 | serverspecific | Optional. A Boolean value (true/false) that indicates that the file should be renamed for each target _Endpoint_. Defaults to false. Set this parameter to true should the new name include a value associated with an _Endpoint_. |
 
 **Example:**
-~~~
+
+```bash
 Rename a file before it's deployed:
 
 rename(from: "config.txt", to: "config.xml");
@@ -30,4 +31,4 @@ rename(from: "config.txt", to: "${server.name}\_config.xml",
 serverspecific: true);
 
 If the target _Endpoint_s are server1 and server2 then server1 will receive the config.txt renamed to server1\_config.xml and server2 will receivethe config.txt renamed to server2\_config.xml.
-~~~
+```

@@ -1,6 +1,6 @@
 ---
-title: "date"
-linkTitle: "date"
+title: "Date"
+linkTitle: "Date"
 weight: 40
 description: >
   Contructs and returns a Date from the given values.
@@ -13,7 +13,8 @@ description: >
 Constructs and returns a Date Object from the given values.
 
 **Usage:**
-~~~
+
+```bash
 date(Year,Month,Day[,Hour[,Min[,Sec]]])
 
 or
@@ -39,14 +40,15 @@ date(SecsSinceEpoch)
 Returns:
 
 Date Object
-~~~
+```
 
 **Example:**
-~~~
+
+```bash
 
 set res = date(2014,1,2,23,30,12);
 
-echo &quot;date is $res&quot;;
+echo "date is $res";
 
 Result:
 
@@ -54,4 +56,4 @@ date is Thursday, January 02, 2014 23:30:12
 
 
 The year _Component_ of the date has to be 1970 or later. Dates containing earlier years are not supported. Attempts to create a date with a year earlier than 1970 will result in an exception being thrown. This can be caught with a try/catch block.
-~~~
+```

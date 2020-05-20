@@ -29,6 +29,7 @@ If you are an application developer, this will be where you do most of your work
 - **Application Version** : This child of the _Application Base Version_ represents changes and can be deployed just as an _Application Base Version_ is.
 
 ## Components
+
 DeployHub manages microservices and other reusable objects as _Components_.  _Components_ are assigned to an _Application_ eventhough they are managed independently.  By assigning _Components_ to _Applications_ you are able to track a 'logical"' view of your software solution.  In a monolithic approach, we performed this step at the software compile and linke step. In microservices, that step goes away. Microservices are loosely coupled and linked at run-time. Defining _Components_ to _Applications_ puts the _Application_ back in the picture, even if it is only a 'logical' view.
 
 If you are an API or microservice developer, this will be where you do most of your work. However, application developers may also define _Components_ that are to be used by only a specific _Application_. _Components_ are microservices (containers), Database updates or files_,_ along with Pre and Post _Actions_ that are used to control the deployment at a detailed level. By tracking the low-level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across team.
@@ -38,6 +39,7 @@ _Components_ change over time, and so DeployHub contains _Component Base Version
 - **Component Base Version** : Objects within DeployHub that contain the files and procedures that are deployed to _Endpoints_.
 
 - **Component Version** : A child of the _Component Base Version_ that represents changes.
+
 ## Components and Microservices
 
 _Components_ map directly to an individual microservice. If you are building a continuous deployment process that deploys your microservice to a container, you will define your microservice as a _Component._ If you want your microservice _Component_ to be shared across your teams, you will need to publish your _Component_ to a _Domain_ that allows sharing. If it is defined to only your _Application,_ thenonly your team will be able to see it.
@@ -95,9 +97,9 @@ Deployments can be controlled programmatically at several levels throughout the 
 A Procedure or Function can be defined as:
 
 - A DMScript running locally to the DeployHub Server. Procedures and Functions written in DMScript have access to the DeployHub Object Model along with the various built-in methods for connecting to external systems.
-- An &quot;external&quot; script running locally to the DeployHub Server.
-- An &quot;external&quot; script running on the _Endpoint_ to which the deployment is taking place.
-- An &quot;external&quot; script which is located locally to the DeployHub Server but which is &quot;pushed&quot; to the Target _Endpoint_ automatically and execute there.
+- An "external" script running locally to the DeployHub Server.
+- An "external" script running on the _Endpoint_ to which the deployment is taking place.
+- An "external" script which is located locally to the DeployHub Server but which is "pushed" to the Target _Endpoint_ automatically and execute there.
 
 ## Credentials
 
@@ -110,7 +112,6 @@ There may come a time when the need to acquire data outside of the DeployHub sys
 ## Notifiers
 
 A _Notifier_ is sent to various recipients after a successful or failed deployment attempt. They are also sent when deployed files have been changed, a _Request_ _Task_ has been used, or that an _Endpoint_ is down, if these features have been activated on one or more _Endpoints_.  DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose. A _Notifier_ contains all of the technical information necessary to send notifications.
-
 
 ## Audit Trail
 

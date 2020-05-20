@@ -17,33 +17,33 @@ using stream $config; // create streams
 
 using stream $payload;
 
-using dropzone &quot;dp&quot; {
+using dropzone "dp" {
 
 // get the XML Soap Wrapper from the repository
 
-checkout(repository: &quot;sourcerep&quot;, pattern: &quot;soma-config-import.xml&quot;);
+checkout(repository: "sourcerep", pattern: "soma-config-import.xml");
 
 // checkout the configuration (ZIP file)
 
-checkout(repository: &quot;sourcerep&quot;, pattern: &quot;config.zip&quot;);
+checkout(repository: "sourcerep", pattern: "config.zip");
 
 // Convert the config zip to base 64
 
-read(file: &quot;config.zip&quot;, stream: $config);
+read(file: "config.zip", stream: $config);
 
 set b64 = ${config.base64encode()};
 
 // place the base64 encoded zip file into the XML wrapper
 
-modify(file: &quot;soma-config-import.xml&quot;, modifier: &quot;xml&quot;) {
+modify(file: "soma-config-import.xml", modifier: "xml") {
 
-set\_text(&quot;/Envelope/Body/request/import/input-file&quot;, value: $b64);
+set\_text("/Envelope/Body/request/import/input-file", value: $b64);
 
 }
 
 // Now send the file to the soap interface
 
-read(file: &quot;soma-config-import.xml&quot;, stream: $payload);
+read(file: "soma-config-import.xml", stream: $payload);
 
 set res = soap($DP\_TGTURL, $payload);
 

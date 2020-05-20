@@ -24,7 +24,8 @@ The following properties can be accessed for a _Component_ item object:
 | properties | Array | An array of Strings representing the values for the Repository Attributes |
 
 **Example:**
-~~~
+
+```bash
 Iterate through the _Component_ items for a _Component_:
 
 iterate(ci: ${Component.items}) {
@@ -50,4 +51,4 @@ echo "$p = ${props[$p]}"; // to the Repository
 } // for this Comp Item
 
 }
-~~~
+```

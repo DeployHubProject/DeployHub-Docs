@@ -10,7 +10,7 @@ _foreach_ is a generic iterator for string tokenization, array/list member acces
 
 There are two syntaxes for foreach – both operate in the same way, use whichever you prefer:
 
-~~~
+```bash
 foreach(name: expression) {
  // loop-body
  }
@@ -18,12 +18,13 @@ foreach(name: expression) {
 foreach name in expression {
  // loop-body
  }
-~~~
+```
+
 **Example:**
 
 Here is an example of a _String iterator_ – this splits the specified string using the global variable IFS as a separator. If IFS is not set, the default is " \t" (space or tab). The iterator can also remove quotes if the global variable DEQUOTE is true. e.g.
 
-~~~
+```bash
 set IFS ='|';
 set DEQUOTE = true;
 foreach(bar:'alpha|"beta"|gamma|delta') {
@@ -40,12 +41,13 @@ foreach(k: $arr) {
 echo "$k =\> ${arr[$k]}"; // output will be a =\> 1 etc
  }
 
- ~~~
+ ```
 
 **Example:**
 
 Here is an example of a _Stream iterator_ – this splits a stream on newlines (and/or carriage returns) e.g.
-~~~
+
+```bash
 echo"Hello\nWorld" \>\> $stream1;
 foreach(line: $stream1) {
 echo $line;
@@ -110,4 +112,4 @@ var2=hello there
 var3=this is a test
 
 var4=90
-~~~
+```

@@ -8,7 +8,7 @@ weight: 68
 
 The pre and post logic of DeployHub gives a tremendous amount of flexibility, whether used alone or in tandem with Jenkins as a plug-in. An A_pplication_ is deployed to an _Environment_ which contains one or more _Endpoint_s. An _Application_ contains _Components_, which in turn contain _Components__Items_, which access _Repositories_ that contain all the files that are deployed. Both _Application_s and _Components_ also contain _Procedures_ and _Functions_, which can be executed before and after each _Application_ deployment, and each _Components_ contained within it.
 
-Jenkins can call DeployHub in the process, enabling Jenkins to deploy files, which are typically the result of a compile step. The plug-in is displayed in the Jenkins Configure window to see what is required from DeployHub. The basic configuration, which shows under the title &quot;_Use DeployHub to run a deployment_&quot;, includes the following:
+Jenkins can call DeployHub in the process, enabling Jenkins to deploy files, which are typically the result of a compile step. The plug-in is displayed in the Jenkins Configure window to see what is required from DeployHub. The basic configuration, which shows under the title "_Use DeployHub to run a deployment_", includes the following:
 
 | Username and Password | Determines security access to the various objects within DeployHub, including the Applications and Components that are available from the Jenkins Plug-In. |
 | --- | --- |
@@ -30,8 +30,8 @@ If an _Application_ Base Version has one or more _Application_ Versions associat
 
 If this is checked, a new _Application_ Version is created once approved. _Application __Versions_ can only be formed by a _Create Version Tasks_. These can only be executed by Users with access to the _Domain_ or _Life Cycle Sub-Domain_ where the _Application_ Version and _Create Version Task_ are located. A User without access to a _Create Version Task_ can use a _Request Task_ for approval. A User with access to the _Domain_ or _Life Cycle Sub-Domain_ can execute an _Approve Task_, and the requesting User can then execute the _Create Version Task_. However, with the DeployHub plug-in within Jenkins, a new _Application__ Version_ is created if the following takes place:
 
-- The &quot;_If Latest Version is approved, create a new version_&quot; checkbox is checked in the DeployHub plug-in in Jenkins.
-- The _Create Version Task Name_ field, located below the &quot;_If Latest Version is approved_&quot; field, is filled in with the name of a _Create Version Task_ within DeployHub.
+- The "_If Latest Version is approved, create a new version_" checkbox is checked in the DeployHub plug-in in Jenkins.
+- The _Create Version Task Name_ field, located below the "_If Latest Version is approved_" field, is filled in with the name of a _Create Version Task_ within DeployHub.
 - A User has executed an _Approve Task_ against the _Create Version Task_ (a _Request Task_ is not required for an _Approve Task_ to be executed).
 
 The newly created version is then deployed. The previous version is typically moved to another Lifecycle Domain within DeployHub. The Create Version Task action is executed regardless of which User executed the Approval Task.

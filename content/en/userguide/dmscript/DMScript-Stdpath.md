@@ -25,7 +25,8 @@ _Server_.stdpath(path)
 String: The path converted to the format used by the specified systemtype.
 
 **Example**
-~~~
+
+```bash
 set res = stdpath('/tmp/file.txt', 'unix');
 
 // res is /tmp/file.txt
@@ -37,4 +38,4 @@ set res = stdpath(@'C:\Temp\file.txt', 'windows');
 set res = stdpath('$2$DKA200:[FERDU01.TEST]file.txt', 'vms');
 
 // res is /FERDU01/TEST/file.txt
-~~~
+```

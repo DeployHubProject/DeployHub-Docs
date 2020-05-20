@@ -44,7 +44,7 @@ Note, that the _owner_ attribute returns an _Object_. Such objects have their ow
 
 So, for example, one can get the owner name of an _Endpoint_ by writing:
 
-~~~
+```bash
 set owner = ${server.owner};
 
 echo ${owner.name};
@@ -52,4 +52,4 @@ echo ${owner.name};
 or, more simply:
 
 echo ${server.owner.name};
-~~~
+```

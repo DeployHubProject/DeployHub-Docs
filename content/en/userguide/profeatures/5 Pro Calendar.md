@@ -16,21 +16,21 @@ description: >
 - Block a timeframe from receiving any _Application_ or _Release_ deployments.
 - Open a timeframe to auto-approve an _Application_ or _Release_ deployment.
 
-_Calendars_ are found by going to the _Data Center_ Menu. Open the _Life Cycle Sub-Domain_ and select the _Environment_. The _Environment&#39;s Calendar_ will appear under the _Calendar_ Tab. When viewing a _Calendar_ by Month, Week, or Day you can click on a place within a selected day and drag the mouse pointer down in order to select the time span for the event. A light blue area appears, covering the selected time. Right click on this area and select &quot;_Create New Event_.&quot; A pop-up window appears with buttons that are used to set the selected time period to one of the three types listed above.
+_Calendars_ are found by going to the _Data Center_ Menu. Open the _Life Cycle Sub-Domain_ and select the _Environment_. The _Environment&#39;s Calendar_ will appear under the _Calendar_ Tab. When viewing a _Calendar_ by Month, Week, or Day you can click on a place within a selected day and drag the mouse pointer down in order to select the time span for the event. A light blue area appears, covering the selected time. Right click on this area and select "_Create New Event_." A pop-up window appears with buttons that are used to set the selected time period to one of the three types listed above.
 
 ## Availability Field
 
-The &quot;Availability&quot; field controls access to the _Environments._ You either close or open the Calendar for deployment events.
+The "Availability" field controls access to the _Environments._ You either close or open the Calendar for deployment events.
 
-- _Available Unless Denied by Calendar –_ Selecting this option **opens** the Calendar for deployments at any time. To restrict a deployment, you would add a &quot;Unavailable&quot; Event for a specified period.
+- _Available Unless Denied by Calendar –_ Selecting this option **opens** the Calendar for deployments at any time. To restrict a deployment, you would add a "Unavailable" Event for a specified period.
 
-- _Always UnAvailable Unless Allowed by Calendar_ – Selecting this option **closes** the Calendar for deployments. To open a period for deployment, you would add an &quot;Available&quot; Event for a specified period.
+- _Always UnAvailable Unless Allowed by Calendar_ – Selecting this option **closes** the Calendar for deployments. To open a period for deployment, you would add an "Available" Event for a specified period.
 
 ![Environment Calendar](RackMultipart20200511-4-1g6tuuf_html_8fec0f2a139617ec.png) _Environment Calendar_
 
 ## AutoDeploy
 
-**DeployHub Pro** allows for a scheduled deployment using the _Environment&#39;s Calendar_, which is referred to as an &quot;_AutoDeploy_.&quot; If _AutoDeploy_ is selected, a drop-down list allows the selection of an _Application_ or _Release_ to be deployed beginning at the designated Start Time. Not only does the _Calendar_ automatically run the deployment at the designated Start Time, it also keeps any other deployments from taking place in the designated Environment during that time period.
+**DeployHub Pro** allows for a scheduled deployment using the _Environment&#39;s Calendar_, which is referred to as an "_AutoDeploy_." If _AutoDeploy_ is selected, a drop-down list allows the selection of an _Application_ or _Release_ to be deployed beginning at the designated Start Time. Not only does the _Calendar_ automatically run the deployment at the designated Start Time, it also keeps any other deployments from taking place in the designated Environment during that time period.
 
 ## Reserved
 
@@ -42,7 +42,7 @@ If Unavailable is selected, no deployments can take place in the _Environment_ b
 
 ## Calendar at Continuous Deployment Availability
 
-You can auto-approve deployments for your continuous delivery pipeline by setting your &quot;Availability&quot; field to &quot;_Always Available Unless Denied by Calendar._&quot; When your CI/CD engine pushes the deployment, DeployHub will first check the Calendar to see if it is available. If not, the deployment will fail and send a message. The next time around, if the Calendar is open, the deployment will execute, jumping versions to the correct state.
+You can auto-approve deployments for your continuous delivery pipeline by setting your "Availability" field to "_Always Available Unless Denied by Calendar._" When your CI/CD engine pushes the deployment, DeployHub will first check the Calendar to see if it is available. If not, the deployment will fail and send a message. The next time around, if the Calendar is open, the deployment will execute, jumping versions to the correct state.
 
 The _DeployHub Calendar_ allows you to control deployments into each Environment. Every _Environment_ has a private _Calendar_ which allows _Users_ the ability to:
 

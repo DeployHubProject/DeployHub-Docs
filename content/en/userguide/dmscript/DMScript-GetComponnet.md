@@ -28,11 +28,11 @@ A qualified name can include as many Domain names as is necessary to uniquely id
 
 _1) Retrieve a Component._
 
-set compobject = get_Component_(&quot;WarFile1&quot;);
+set compobject = get_Component_("WarFile1");
 
 _2) Retrieve a Component specifying the enclosing domain:_
 
-set compobject = get_Component_(&quot;Project1.WarFile1&quot;);
+set compobject = get_Component_("Project1.WarFile1");
 
 
  |

@@ -33,15 +33,17 @@ ${value.member} to totalise the specified member within each Element
 **Examples:**
 
 1. Add all the values up in a List.
-~~~
+
+```bash
 set array = { 'fred' =\> 1, 'jim' =\> 2, 'sheila' =\> 4 };
  set sumofarray = ${array.sum('$value')};
 
 In this case sumofarray will be 7 (1+2+4)
-~~~
+```
 
 2. Add up all the filesizes in a drop zone
-~~~
+
+```bash
 set sqlfiles = ${_DropZone_.find('\*.sql')};
 
 set totalsize = ${sqlfiles.sum('${value.size}')};
@@ -50,4 +52,4 @@ sqlfiles will be set to an array of files matching the \*.sql pattern in the _Dr
 
 
 Note, it is necessary to surround the expression (e.g.: ${value.member}) with single quotes to prevent it from being expanded by the parser. If the expression is evaluated and expanded before being passed to sum an error will occur.
-~~~ 
+```

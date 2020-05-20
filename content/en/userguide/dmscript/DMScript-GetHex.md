@@ -38,7 +38,7 @@ Result:
 
 ff which is 255 (base 10) in hexadecimal notation
 
-ad which is 255 (base 8) = 173 decimal which is &quot;ad&quot; in hexadecimal notation.
+ad which is 255 (base 8) = 173 decimal which is "ad" in hexadecimal notation.
 
 **See Also:**
 

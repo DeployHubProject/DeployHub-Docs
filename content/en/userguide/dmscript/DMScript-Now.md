@@ -24,9 +24,9 @@ Date Object
 
 set d = now();
 
-echo &quot;The time now is $d&quot;;
+echo "The time now is $d";
 
-echo &quot;Epoch is ${d.to\_int()}&quot;;
+echo "Epoch is ${d.to\_int()}";
 
 Result:
 

@@ -29,15 +29,15 @@ A qualified name can include as many Domain names as is necessary to uniquely id
 
 _1) Retrieve a User._
 
-set user1 = getuser(&quot;admin&quot;);
+set user1 = getuser("admin");
 
-echo &quot;Name: ${user1.name}&quot;;
+echo "Name: ${user1.name}";
 
-echo &quot;Telephone: ${user1.phone}&quot;;
+echo "Telephone: ${user1.phone}";
 
 _2) Retrieve a User specifying the enclosing domain:_
 
-set user1 = getuser(&quot;Project1.User1&quot;);
+set user1 = getuser("Project1.User1");
 
 Further descriptions of User Objects are found in the high level section named _DMScript_ Objects, in the section named User.
  

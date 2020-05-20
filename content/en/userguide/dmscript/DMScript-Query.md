@@ -24,7 +24,8 @@ The parameters are:
 **Example:**
 
 In the following examples, assume there is a table called "customers" defined as follows:
-~~~
+
+```bash
 customers(
 
 id int,

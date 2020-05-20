@@ -26,14 +26,14 @@ Server.appendstd(path1,path2)
 
 String: The result of appending path2 to path1, formatted according to the specified systemtype or the system type of the _Endpoint_ object.
 
-
 **Example:**
-~~~
+
+```bash
 set res = appendstd(@'C:\Temp', 'folder/file.txt', 'windows');
 
 //
 
-// res is C:\Temp\folder\file.txt     
+// res is C:\Temp\folder\file.txt
 
 // separator char has been modified for windows _Endpoint_s.
 
@@ -47,6 +47,7 @@ set res = appendstd('$2$DKA200:[FERDU01]', 'TEST/file.txt', 'vms');
 
 //
 ```
+
 **See Also:**
 
 append()

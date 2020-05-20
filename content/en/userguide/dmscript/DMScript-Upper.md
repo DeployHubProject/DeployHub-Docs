@@ -1,14 +1,14 @@
 ---
 title: "Upper"
 linkTitle: "Upper"
-weight: 88
+weight: 112
 description: >
   Convert to uppercase.
 ---
 
 ### upper
 
-upper returns an uppercase version of the passed string.
+_upper_ returns an uppercase version of the passed string.
 
 **Usage:**
 
@@ -24,7 +24,8 @@ String
 
 **Examples:**
 
-set a = &quot;Hello There&quot;;
+```bash
+set a = "Hello There";
 
 echo ${a.upper()};
 
@@ -35,3 +36,4 @@ HELLO THERE
 **See Also:**
 
 lower()
+```

@@ -10,15 +10,15 @@ _Actions_ for Tomcat Windows servers are pre-defined within DeployHub. A deploym
 ## Define Your Tomcat Action to Your Component
 
 - From the _Flows_ Menu, select the _Actions_ tree view.
-- Right click on your _Domain_ and select &quot;_New Action in this Domain_.&quot;
+- Right click on your _Domain_ and select "_New Action in this Domain_."
 - Create a new _Action_.
 - Once your _Action_ is created, go to the _Workflow_ tab.
 - Open the Tomcat folder from the _Activities_ tree view on the right.
-- Find the &quot;_Tomcat Pre Deploy_&quot; _Procedure_ from the tree view.
+- Find the "_Tomcat Pre Deploy_" _Procedure_ from the tree view.
 - Drag it out to your design pallet.
-- To use the &quot;_Tomcat Pre Deploy_&quot; _Procedure_, enter the parameters unique to your Tomcat application.
+- To use the "_Tomcat Pre Deploy_" _Procedure_, enter the parameters unique to your Tomcat application.
 
-Repeat the same steps for creating your &quot;_Tomcat Post Deploy_&quot; _Action_. Connect the &quot;_Tomcat Pre-Deploy_&quot; _Procedure_ to the &quot;_Tomcat Post Deploy_&quot; to create your flow logic.
+Repeat the same steps for creating your "_Tomcat Post Deploy_" _Action_. Connect the "_Tomcat Pre-Deploy_" _Procedure_ to the "_Tomcat Post Deploy_" to create your flow logic.
 
 ## Variables in Parameters
 

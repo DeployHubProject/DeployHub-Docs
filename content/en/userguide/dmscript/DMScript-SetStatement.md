@@ -16,7 +16,8 @@ _Set_ assigns a variable or array element to a value. It has four possible modif
 | -i | Sets the nocase option. |
 
 The +=, -= and \*= operators perform increment, decrement and multiply on the current value. In append mode the global variable SEPARATOR can be used to act as the separator string between the values.
-~~~
+
+```bash
 set variable = expression;
 
 set variable += expression;
@@ -26,11 +27,11 @@ set variable -= expression;
 set variable -= expression;
 
 set array[expression] = expression;
-~~~
-
+```
 
 **Examples:**
-~~~
+
+```bash
 **set** foo = "bar";
 **set** bat = 1;
 **set** fred = true;
@@ -47,4 +48,4 @@ echo "match"; // This will match since mynocase is
 } // case insensitive
 **set** SEPARATOR = ', '; // variable SEPARATOR used for set -a
 **set** -a foo = "ball"; // "barbat, ball"
-~~~
+```

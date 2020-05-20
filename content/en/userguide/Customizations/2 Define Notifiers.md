@@ -16,7 +16,7 @@ Using these two objects, _Notifiers_ and _Notify __Templates_, notifications can
 
 NOTE: All Users can be assigned email addresses for email type notifications. See the chapter on Users and Groups.
 
-In order to create a _Notifier_, go to the _Flows_ menu. Select the _Notifier_ tab, and right click on any _Domain_. Select &quot;New Notifier in this Domain&quot;. This causes the Notifier Edit dialog to appear. To the right of the tree structure are several tabs which allow the _User_ to modify _Notifier_s. These are listed below, along with the fields contained in each tab, and an explanation for the use and functions of each:
+In order to create a _Notifier_, go to the _Flows_ menu. Select the _Notifier_ tab, and right click on any _Domain_. Select "New Notifier in this Domain". This causes the Notifier Edit dialog to appear. To the right of the tree structure are several tabs which allow the _User_ to modify _Notifier_s. These are listed below, along with the fields contained in each tab, and an explanation for the use and functions of each:
 
 ## Editing and Deleting a Notifier
 
@@ -77,7 +77,7 @@ The General tab contains fields with basic information for the selected _Notifie
 
 ## Editing and Deleting Notify Templates
 
-Clicking on a _Notifier_ in the tree structure allows the _User_ to select &quot;New Notify Template for this Notifier&quot; in order to create _Templates_ for the selected _Notifier_. This causes the _Template_ dialog to appear. To the right of the tree structure are several tabs which allow the _User_ to modify _Templates_. These are listed below, along with the fields contained in each tab, and an explanation for the use and functions of each:
+Clicking on a _Notifier_ in the tree structure allows the _User_ to select "New Notify Template for this Notifier" in order to create _Templates_ for the selected _Notifier_. This causes the _Template_ dialog to appear. To the right of the tree structure are several tabs which allow the _User_ to modify _Templates_. These are listed below, along with the fields contained in each tab, and an explanation for the use and functions of each:
 
 ## General Tab - Notifier
 

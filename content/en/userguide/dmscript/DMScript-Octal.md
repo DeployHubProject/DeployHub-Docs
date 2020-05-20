@@ -30,19 +30,19 @@ String.
 
 Convert a Unix file permission mask (-rwxrwxrwx) into its Octal equivalent suitable for a chmod operation.
 
-set perms=&quot;-rwxr-xr-x&quot;;
+set perms="-rwxr-xr-x";
 
-echo &quot;perms is $perms&quot;;
+echo "perms is $perms";
 
 // Convert to binary by substituting 0 for � and then anything
 
 // that isn&#39;t a 0 gets converted to a 1.
 
-set b = ${perms.regsub(&quot;-&quot;,&quot;0&quot;).regsub(&quot;[^0]&quot;,&quot;1&quot;)};
+set b = ${perms.regsub("-","0").regsub("[^0]","1")};
 
 // Convert to octal by converting the string using base 2.
 
-echo &quot;chmod ${b.octal(2)}&quot;;
+echo "chmod ${b.octal(2)}";
 
 Result:
 

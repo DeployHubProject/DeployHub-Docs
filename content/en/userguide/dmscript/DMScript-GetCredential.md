@@ -27,7 +27,7 @@ A qualified name can include as many Domain names as is necessary to uniquely id
 
 _1) Retrieve a Credential._
 
-set db2creds = getcredential(&quot;DB2LoginCredentials&quot;);
+set db2creds = getcredential("DB2LoginCredentials");
 
 set username = ${db2creds.username};
 
@@ -37,7 +37,7 @@ set password = ${db2creds.password};
 
 _2) Retrieve a Credential specifying the enclosing domain:_
 
-set db2creds = getcredential(&quot;Project1.DB2LoginCredentials&quot;);
+set db2creds = getcredential("Project1.DB2LoginCredentials");
 
 set username = ${db2creds.username};
 

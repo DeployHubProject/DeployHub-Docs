@@ -9,7 +9,7 @@ description: >
 **_assert_** is used to compare two strings, objects or expressions for equality. If the values passed are not identical then an exception is thrown. This exception will normally stop the script but can be caught and handled by a try/catch block.
 
 assert takes a number of named parameters:
-| Expression  |  Description | 
+| Expression  |  Description |
 | --- | --- |
 | expr | Specifies an expression to execute. The expression must return true in order for the assertion to succeed. If the expression returns false an exception is thrown. |
 | expr1 | Specifies an expression to execute. The result is compared to the result of the expression specified by expr2. |
@@ -23,8 +23,8 @@ Note, only the following combinations of arguments are permitted:
 
 assert takes a number of named parameters:
 
-| **Expression**  |  **Description** | 
-| --- | --- | 
+| **Expression**  |  **Description** |
+| --- | --- |
 | expr | expr on its own is checked for true/false. |
 | expr1 and expr2 | The results of the two expressions are compared. |
 | str1 and str2 | The two strings are compared for equality. |
@@ -33,7 +33,8 @@ assert takes a number of named parameters:
 Any other combination of arguments is invalid and will result in an error.
 
 **Example:**
-~~~
+
+```bash
  Use a Pre Action to an _Application_ to prevent an _Application Version_ from being deployed if it is not the latest version.
 
 set latest = ${_Application_.parent.latest()};
@@ -44,8 +45,9 @@ assert (obj1: $latest, obj2: $_Application_);
 
 } catch(ex) {
 
-abort(msg: &quot;Can only deploy the latest version (${latest.name})&quot;);
+abort(msg: "Can only deploy the latest version (${latest.name})");
 
 }
-~~~
-If the _Application_ being deployed ($_Application_) is the same as the calculated latest version then the assertion check succeeds and the script exits without error, allowing the deployment to continue. If $_Application_ differs from the calculated latest version then the assertion fails and an exception is thrown. The try/catch block simply catches this error and issues a more &quot;user friendly&quot; error message.
+```
+
+If the _Application_ being deployed ($_Application_) is the same as the calculated latest version then the assertion check succeeds and the script exits without error, allowing the deployment to continue. If $_Application_ differs from the calculated latest version then the assertion fails and an exception is thrown. The try/catch block simply catches this error and issues a more "user friendly" error message.

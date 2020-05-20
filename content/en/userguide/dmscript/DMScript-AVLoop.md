@@ -15,7 +15,7 @@ _avloop_ has optional named parameters. These are:
 | Parameter | Description |
 | --- | --- |
 | _from_ | Indicates the _Application Version_ which should be used for the start of the loop. If this parameter is not present, DeployHub will look for the version of the _Application_ on the target _Environment_. The value of "from" can either be a string indicating the name of the version, or an _Application Version_ object.|
-| _to_ | Indicates the _Application Version_ which should be used for the end of the loop. If this parameter is not present, DeployHub will use the _Application Version_ being deployed or the _Application Version_ on the stack. The value of "to" can either be a string indicating the name of the version or an _Application Version_ object.| 
+| _to_ | Indicates the _Application Version_ which should be used for the end of the loop. If this parameter is not present, DeployHub will use the _Application Version_ being deployed or the _Application Version_ on the stack. The value of "to" can either be a string indicating the name of the version or an _Application Version_ object.|
 | Both _from_ and _to_ | If specified, must refer to versions of an _Application_ on the stack. If an _Application_ has been selected (for a deployment, approval or move for example) then the selected _Application_ will already be on the stack. The avloop _must_ refer to versions of this _Application_.
 
 If you are running a stand-alone action, then you must select an _Application_ in order to push it onto the stack. Failure to do so will result in a run-time error ("No _Application_ on the Stack").
@@ -36,10 +36,9 @@ _avloop_ will examine the _Application Version_ graph to determine the route bet
 
 For example, consider the following version graph:
 
-
-
 **Example Using _Application_ Objects:**
-~~~
+
+```bash
 using Application "ITguys" {
 
 // Ensure DayOneApp is on the stack
@@ -78,10 +77,11 @@ avloop(from: $appfrom, to: $appto)
 
 //
 
-~~~
+```
 
 **Example Using _Application Version_ Names:**
-~~~
+
+```bash
 using Application "ITGuys" {
 
 // Ensure ITGuys is on the stack
@@ -157,4 +157,4 @@ echo "${_Application_.name}";
 // There is no path between "ITGuys;1a" and "ITGuys;3"
 
 //
-~~~
+```

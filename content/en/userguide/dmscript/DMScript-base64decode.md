@@ -26,9 +26,9 @@ _stream_ is the name of an existing stream. If the stream does not currently exi
 
 Integer: The length of the decoded data. The decoded data is written to the stream identified by the outer using stream statement.
 
-
 **Examples:**
-~~~
+
+```bash
 
 1. Convert a base64 encoded string into a stream:_
 
@@ -98,8 +98,7 @@ Result:
 res is Hello DeployHub!
 
 len is 23
-~~~
-
+```
 
 **See Also:**
 

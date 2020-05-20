@@ -31,11 +31,11 @@ String: The result of substituting each occurrence of the matched regular expres
 
 Examples:
 
-set a = &quot;Hello There&quot;;
+set a = "Hello There";
 
-echo ${a.regsub(&quot;^.e&quot;,&quot;x&quot;)};
+echo ${a.regsub("^.e","x")};
 
-// echoes &quot;xllo there&quot;;
+// echoes "xllo there";
 
 **See Also:**
 

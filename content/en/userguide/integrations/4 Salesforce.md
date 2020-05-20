@@ -23,8 +23,8 @@ First import the Salesforce Procedures into DeployHub and configure your Salesfo
 
 - Click on the Flows menu.
 - Click on the _Functions and__Procedures_ tab.
-- Click on a _Domain_ and select &quot;_Import a Function or Procedure into this Domain_&quot;.
-- Click the &quot;Choose File&quot; button to navigate to the directory where the 5 files are located, 4 of which have an extension of .re.
+- Click on a _Domain_ and select "_Import a Function or Procedure into this Domain_".
+- Click the "Choose File" button to navigate to the directory where the 5 files are located, 4 of which have an extension of .re.
 - Select the RunAnt.re file and click the Open button.
 - Click on the Import button.
 - Do the same for the GitCheckout.re, SalesForceDeploy.re, and _SalesforceCredential.re_ files.
@@ -32,22 +32,22 @@ First import the Salesforce Procedures into DeployHub and configure your Salesfo
 
 NOTE: Double clicking SalesForceDeployAction.png will show the arrangement of the GitCheckout, SalesForceDeploy, and SalesforceCredential Procedures within the SalesForceDeploy Action as will be described later.
 
-Notice there are now four new _Procedures_ in the _Domain_ named &quot;RunAnt&quot; and &quot;GitCheckout,&quot; under the Deploy Category, as well as &quot;SalesForceDeploy&quot; and &quot;SalesforceCredential,&quot; under the SalesForce Category.
+Notice there are now four new _Procedures_ in the _Domain_ named "RunAnt" and "GitCheckout," under the Deploy Category, as well as "SalesForceDeploy" and "SalesforceCredential," under the SalesForce Category.
 
-The _SalesforceCredential Procedure_ is of the type &quot;_DMScript Procedure in Database_&quot;. It contains _DMScript_ code that takes the username/ password of the named _Credential_. It&#39;s a single argument and therefore uses the same username/ password to access a Salesforce region (test, prod, etc.)
+The _SalesforceCredential Procedure_ is of the type "_DMScript Procedure in Database_". It contains _DMScript_ code that takes the username/ password of the named _Credential_. It&#39;s a single argument and therefore uses the same username/ password to access a Salesforce region (test, prod, etc.)
 
-The _GitCheckout Procedure_ is of the type &quot;_Procedure provided by local external script or program_&quot;. It has the following arguments:
+The _GitCheckout Procedure_ is of the type "_Procedure provided by local external script or program_". It has the following arguments:
 
 - GitRepo: The URL to the Git repository.
 - GitCommit: The version/commit to check out.
 - ToDirectory: Where files will be checked out to, a directory on the same server where DeployHub is installed.
 
-The _RunAnt Procedure_ is of the type &quot;_Procedure provided by local external script or program_&quot;. It has the following arguments:
+The _RunAnt Procedure_ is of the type "_Procedure provided by local external script or program_". It has the following arguments:
 
 - BuildFile: The Ant XML Build, which is a configuration file containing Ant tasks that are to be executed.
 - Target: Which target in the build file will be used when Ant is run. It references a group of tasks i.e., build, test, install, etc.
 
-The _SalesforceDeploy__Procedure_ is of the type &quot;_DMScript Procedure in Database_&quot;. It contains _DMScript_ that deploys classes and packages into Salesforce regions (test, production, etc.). It has the following arguments:
+The _SalesforceDeploy__Procedure_ is of the type "_DMScript Procedure in Database_". It contains _DMScript_ that deploys classes and packages into Salesforce regions (test, production, etc.). It has the following arguments:
 
 - User: Taken from the _SalesForceCredential Procedure_.
 - Password: Taken from the _SalesForceCredential Procedure_.
@@ -58,10 +58,10 @@ The _SalesforceDeploy__Procedure_ is of the type &quot;_DMScript Procedure in Da
 ## Create Salesforce Deployment Action
 
 - Create the _Action_ to be used to deploy to Salesforce by right clicking on the _Actions_ tab in the same _Domain_ as the _Procedures._
-- Select &quot;_New Action in this Domain_&quot;.
+- Select "_New Action in this Domain_".
 - In the _Workflow_ tab, scroll down the _Activities_ list on the right side and click on the plus sign next to the Salesforce Category.
-- Click and drag the _Procedure_ that was just created named &quot;GitCheckout&quot; onto the Workspace.
-- Repeat with the _Procedures_ named &quot;SalesforceCredential&quot; and &quot;SalesForceDeploy,&quot; in that order.
+- Click and drag the _Procedure_ that was just created named "GitCheckout" onto the Workspace.
+- Repeat with the _Procedures_ named "SalesforceCredential" and "SalesForceDeploy," in that order.
 
 The following Global variables must be used as Attributes within any Components used to deploy files to Salesforce regions:
 

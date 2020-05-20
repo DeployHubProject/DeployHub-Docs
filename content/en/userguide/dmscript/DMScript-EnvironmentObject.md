@@ -36,7 +36,7 @@ The following methods can be called on the _Environment_ object:
 
 Note, that attributes such as _owner_ and _parent_ return other _Objects_. These objects have their own attributes. So, for example, one can get the owner name of an _Environment_ by writing:
 
-~~~
+```bash
 set owner = ${_Environment_.owner};
 
 echo ${owner.name};
@@ -44,18 +44,18 @@ echo ${owner.name};
 or, more simply:
 
 echo ${_Environment_.owner.name};
-~~~
+```
 
 Here is an example of retrieving the _Endpoints_ in the _Environment_:
 
-~~~
+```bash
 set servers = ${_Environment_.servers};
 
 iterate(s: $servers) {
 
-echo &quot;server is ${s.name}&quot;;
+echo "server is ${s.name}";
 
-echo &quot;hostname is ${s.hostname}&quot;;
+echo "hostname is ${s.hostname}";
 
 }
-~~~
+```

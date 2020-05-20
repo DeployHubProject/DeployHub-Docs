@@ -23,14 +23,15 @@ split(String,seq);
 Array. A List of Strings.
 
 **Example:**
-~~~
-set mystr=&quot;/this/is/an/example&quot;;
 
-set dirs=${mystr.split(&quot;/&quot;)};
+```bash
+set mystr="/this/is/an/example";
+
+set dirs=${mystr.split("/")};
 
 foreach (d: $dirs) {
 
-echo &quot;dir=${dirs[$d]}&quot;;
+echo "dir=${dirs[$d]}";
 
 }
 

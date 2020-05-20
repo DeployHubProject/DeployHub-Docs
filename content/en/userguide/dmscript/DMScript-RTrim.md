@@ -24,7 +24,8 @@ rtrim(String)
 String: The passed string with any trailing whitespace removed.
 
 **Example:**
-~~~
+
+```bash
 set a = "Hello From ";
 
 echo "$a DeployHub";
@@ -36,4 +37,4 @@ Result:
 Hello From DeployHub
 
 Hello From DeployHub
-~~~
+```

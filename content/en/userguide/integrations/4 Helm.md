@@ -5,9 +5,9 @@ weight: 64
 ---
 ## Helm
 
-Helm standardizes the process of creating your container image. It is an agentless solution that can be called via a DeployHub &#39;Custom Action.&#39; Helm provides a broad set of pre-defined Helm &quot;Charts.&quot; A Helm Chart is a reusable script that simplifies the creation of your container image. When DeployHub executes the release process, it will call the Helm Chart you have defined as your Custom Action. What DeployHub offers is the versioning around your container content, what was released, including the version of the Helm Chart.  DeployHub tracks all the configuration of your release and tracks the version changes to the configuration, including Helm.
+Helm standardizes the process of creating your container image. It is an agentless solution that can be called via a DeployHub &#39;Custom Action.&#39; Helm provides a broad set of pre-defined Helm "Charts." A Helm Chart is a reusable script that simplifies the creation of your container image. When DeployHub executes the release process, it will call the Helm Chart you have defined as your Custom Action. What DeployHub offers is the versioning around your container content, what was released, including the version of the Helm Chart.  DeployHub tracks all the configuration of your release and tracks the version changes to the configuration, including Helm.
 
-Helm is called as a DeployHub &quot;Custom Action.&quot; A _Custom Action_ can replace the usual DeployHub deployment processing by calling an external script that performs its own deployment activities. _Custom Actions_ can be used when you want an external tool to perform the delivery step of the deployment process. This will be the case for Helm. To use Helm, you will need to import two Helm Procedures and Define an Action that can be reused across all teams.
+Helm is called as a DeployHub "Custom Action." A _Custom Action_ can replace the usual DeployHub deployment processing by calling an external script that performs its own deployment activities. _Custom Actions_ can be used when you want an external tool to perform the delivery step of the deployment process. This will be the case for Helm. To use Helm, you will need to import two Helm Procedures and Define an Action that can be reused across all teams.
 
 ## Importing the DeployHub Helm Procedures
 
@@ -24,9 +24,9 @@ Once downloaded, you will need to Import them into DeployHub as the Procedures. 
 
 ## Creating a Custom Action for Helm
 
-Once you have imported your Helm Procedures, you can define your Custom Action. Change to the Workflow tab on the right pane. Select your Domain and right click. This will give you the option to create a &quot;New Action in this Domain.&quot;
+Once you have imported your Helm Procedures, you can define your Custom Action. Change to the Workflow tab on the right pane. Select your Domain and right click. This will give you the option to create a "New Action in this Domain."
 
-Name the new Action &quot;HelmChart&quot; (no spaces).
+Name the new Action "HelmChart" (no spaces).
 
 ![HelmChart](RackMultipart20200511-4-mmhhr8_html_a638f5a2b049e534.png)
 

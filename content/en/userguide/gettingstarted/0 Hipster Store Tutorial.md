@@ -12,11 +12,11 @@ This _Hipster Store_ tutorial introduces you to the most basic concepts behind D
 
 ## Step 1 – Review the Hipster Store Domains
 
-Domains serve as the basic structure of your microservice catalog. Developers use Domains to organize microservices based on &#39;solution spaces&#39; allowing them to both share their services and find others. The Hipster Store is defined using several _Domains._ The first is our high-level Company _Domain_ called &quot;Vintage LLC&quot;.
+Domains serve as the basic structure of your microservice catalog. Developers use Domains to organize microservices based on &#39;solution spaces&#39; allowing them to both share their services and find others. The Hipster Store is defined using several _Domains._ The first is our high-level Company _Domain_ called "Vintage LLC".
 
 To view the _Domains_:
 
-- Click on the &quot;_Domains_&quot; menu and select &quot;Hipster Store&quot; from the Tree view.
+- Click on the "_Domains_" menu and select "Hipster Store" from the Tree view.
 - Click on the General tab.
 - You will see the following:
 
@@ -90,8 +90,8 @@ _Components_ contain the actual artifacts (files and scripts) of the _Applicatio
   - _Last Deployed_
   - _Results_
   - _Versions_
-- Filter your list by clicking in the search bar and selecting &quot;Domian&quot; and then &quot;GLOBAL.Chasing Horses LLC.Vintage LLC.Hipster Store.Ad Service&quot; from the Search bar. This will show you all the _Components_ available in the Ad Service _Domain_.
-- Double click on &quot;Ad Service: 1\_2\_2\_77&quot; and then right mouse click on the Item Icon – select &quot;Edit Details.&quot; This will show the deployment meta data required for the release of this _Component_. Anyone how uses this _Component_ will automatically bring forward all the necessary information for a deployment.
+- Filter your list by clicking in the search bar and selecting "Domian" and then "GLOBAL.Chasing Horses LLC.Vintage LLC.Hipster Store.Ad Service" from the Search bar. This will show you all the _Components_ available in the Ad Service _Domain_.
+- Double click on "Ad Service: 1\_2\_2\_77" and then right mouse click on the Item Icon – select "Edit Details." This will show the deployment meta data required for the release of this _Component_. Anyone how uses this _Component_ will automatically bring forward all the necessary information for a deployment.
 
 ![](RackMultipart20200511-4-zk9mjm_html_d751450dd4146972.jpg)
 

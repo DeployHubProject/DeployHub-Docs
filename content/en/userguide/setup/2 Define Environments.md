@@ -15,7 +15,7 @@ _Environments_ are associated to a _Domain_. You can assign _Environments_ to an
 
 ## Create Environment
 
-An _Environment_ can be created by clicking on the _Data Center_ Menu item, then the Environments tab, and right clicking on the _Domain_ where the _Environment_ is to reside. This pop-up menu includes &quot;New Environment in this Domain.&quot; Select this option to bring up a dialog box, which contains the required fields for defining the _New__Environment_.
+An _Environment_ can be created by clicking on the _Data Center_ Menu item, then the Environments tab, and right clicking on the _Domain_ where the _Environment_ is to reside. This pop-up menu includes "New Environment in this Domain." Select this option to bring up a dialog box, which contains the required fields for defining the _New__Environment_.
 
 ## Delete Environment
 
@@ -39,7 +39,7 @@ The Subscribe link in each entry of the list allows you to receive information a
 
 ## Adding Comments to a Timeline
 
-You can add information by clicking on the &#39;Comment&#39; link within a text entry field. These appear in the History column of your subscriber&#39;s home page. There is a field above the list labeled &quot;Say something about this Application&quot; that can have comments placed into it, and files can be attached to the comment as well. Entering text into this field activates the Add Message button. Click on this button to save the comment as a line in the list.
+You can add information by clicking on the &#39;Comment&#39; link within a text entry field. These appear in the History column of your subscriber&#39;s home page. There is a field above the list labeled "Say something about this Application" that can have comments placed into it, and files can be attached to the comment as well. Entering text into this field activates the Add Message button. Click on this button to save the comment as a line in the list.
 
 ## Adding Files to Your Comments
 
@@ -60,7 +60,7 @@ To view specific details such as the files deployed, the log output, activities 
 
 ## Attributes Tab
 
-Values that are stored against an _Environment_ can be used to control deployments. The Name field holds the name of the Value, and the Value field holds the data, which can be either a numeric or text value. It can also be an array of Name/Value pairs associated with a Name. Clicking the plus sign (+) allows you to add a new Attributes. Clicking on the pencil icon allows you to edit an existing Name and its associated Value. Selecting the Attribute from the table and clicking on the &quot;X&quot; in the upper right-hand corner deletes the selected line from the table of Name/Value pairs.
+Values that are stored against an _Environment_ can be used to control deployments. The Name field holds the name of the Value, and the Value field holds the data, which can be either a numeric or text value. It can also be an array of Name/Value pairs associated with a Name. Clicking the plus sign (+) allows you to add a new Attributes. Clicking on the pencil icon allows you to edit an existing Name and its associated Value. Selecting the Attribute from the table and clicking on the "X" in the upper right-hand corner deletes the selected line from the table of Name/Value pairs.
 
 ## Access Tab
 
@@ -85,6 +85,6 @@ The General Tab displays the basic information that defines an _Environment._ Se
 | _**Name**_ | The name of the _Environment_ object. |
 | _**Owner**_ | The owner of the _Environment_, it defaults to the _User_ who created it. The default owner is the _User_ who created the _Environment_. When editing this field, the Owner Type field is available which includes Owner and _Group_ as choices. Selecting one of these causes the Owner field to display either _Users_ or _Groups_ to choose from. |
 | _**Summary**_ | A short text description of the _Environment_. |
-| _**Availability**__**(DeployHub Pro feature)**_ | The default value, &quot;Always Available Unless Denied by Calendar&quot;, allows the User to deploy Applications into the Environment unless there is an entry in the Calendar during a specific time (hours, days, weeks) that prevents it from doing so through the use of an added Unavailable section. The other value, &quot;Always Unavailable Unless Denied by Calendar&quot;, doesn&#39;t allow deployments unless a specific entry in the Calendar overrides it. |
+| _**Availability**__**(DeployHub Pro feature)**_ | The default value, "Always Available Unless Denied by Calendar", allows the User to deploy Applications into the Environment unless there is an entry in the Calendar during a specific time (hours, days, weeks) that prevents it from doing so through the use of an added Unavailable section. The other value, "Always Unavailable Unless Denied by Calendar", doesn&#39;t allow deployments unless a specific entry in the Calendar overrides it. |
 | _**Created**_ | The date and time the _Environment_ was created. |
 | _**Modified**_ | The date and time the _Environment_ was last modified. |

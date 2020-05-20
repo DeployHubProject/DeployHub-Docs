@@ -11,15 +11,15 @@ description: >
 _Domains_ are used to catalog and publish microservices and other reusable objects (web components, DB updates, etc.). Domains organize reusable objects based on a 'solution' space. Domains can represent functional areas such as 'security services' or departments, teams, and software projects. There are four types of Domains:
 
 _**Site Domain**_ | This is the highest-level organizational structure. For SaaS Users your Site Domain will be defaulted to the Project name you entered when you registered. You can rename your Site Domain if needed.
-On Premise InstallationYour default Site Domain name is 'Global.' You can rename your Site Domain if needed. 
+On Premise InstallationYour default Site Domain name is 'Global.' You can rename your Site Domain if needed.
 
 _**Division Domains**_ | DeployHub Pro User can take advantage of Division Domains. Division Domains are used by larger companies to define an organizational structure that closely represents how they do business, such as geographical areas, organizational responsibility, or business units. A Division Domain is a folder of other Sub-Division Domains and Project Domains. Division Domains can create as many Sub-Division Domains as needed. In addition, objects defined to a specific Division Domain can be secured with specific User Groups. Note: This feature is not available in DeployHub Team.
 
-_**Project Domains**_ | You assign your software project to a Project Domain. You can create as many Project Domains as needed. Project Domains cannot have child Sub-Project Domains, but they do have Life Cycle Sub-Domains. 
+_**Project Domains**_ | You assign your software project to a Project Domain. You can create as many Project Domains as needed. Project Domains cannot have child Sub-Project Domains, but they do have Life Cycle Sub-Domains.
 
-_**Life Cycle Sub-Domains**_ | This Sub-Domain defines the stages in your Delivery Pipeline and will map to your Continuous Delivery solution. Only Project Domains can have Life Cycle Sub-Domains. You create Life Cycle Sub-Domains to map to each stage in your continuous delivery Pipeline. Life Cycle Sub-Domains allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery Engine (Jenkins X, CircleCI, GitLab or GitHub Actions) to perform the continuous configuration management of your microservices and applictions across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign Move, Approve and Request Tasks to your Life Cycle Sub-Domain to define a continuous delivery process within DeployHub. 
+_**Life Cycle Sub-Domains**_ | This Sub-Domain defines the stages in your Delivery Pipeline and will map to your Continuous Delivery solution. Only Project Domains can have Life Cycle Sub-Domains. You create Life Cycle Sub-Domains to map to each stage in your continuous delivery Pipeline. Life Cycle Sub-Domains allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery Engine (Jenkins X, CircleCI, GitLab or GitHub Actions) to perform the continuous configuration management of your microservices and applictions across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign Move, Approve and Request Tasks to your Life Cycle Sub-Domain to define a continuous delivery process within DeployHub.
 
-You can create as many Life Cycle Sub-Domains as you need for each of your Project Domains. You can also rename Life Cycle Domains if your Pipeline changes. Lifecycle Sub-Domains can be dragged and dropped in their General tab to rearrange their top-to-bottom execution order within the Domain where they exist. Rearranging Lifecycle Sub-Domains allows users to manage and organize the visual representation of their Continuous Delivery Pipeline. Lifecycle Sub-Domains are represented by a circular multi-object icon under your Project Domain tree-structure. 
+You can create as many Life Cycle Sub-Domains as you need for each of your Project Domains. You can also rename Life Cycle Domains if your Pipeline changes. Lifecycle Sub-Domains can be dragged and dropped in their General tab to rearrange their top-to-bottom execution order within the Domain where they exist. Rearranging Lifecycle Sub-Domains allows users to manage and organize the visual representation of their Continuous Delivery Pipeline. Lifecycle Sub-Domains are represented by a circular multi-object icon under your Project Domain tree-structure.
 
 ## Top Down Domain Structure
 
@@ -27,13 +27,11 @@ A _Sub Domain_ inherits all the access properties from its parent _Domain_. This
 
 ## Creating and Deleting Domains
 
-**New Divisional Domain** | ( **DeployHub Pro** only) Go to the _Domains_ Menu tab. To create a _Divisional Domain_ right click on your _Global Domain_ at the top of the DeployHub window. Select the &quot;_Create new Sub-Domain in this Domain_.&quot; A new _Divisional Domain_ will be created with a default name. Click on the pencil icon on the far right to edit it, including the name.
+**New Divisional Domain** | ( **DeployHub Pro** only) Go to the _Domains_ Menu tab. To create a _Divisional Domain_ right click on your _Global Domain_ at the top of the DeployHub window. Select the "_Create new Sub-Domain in this Domain_." A new _Divisional Domain_ will be created with a default name. Click on the pencil icon on the far right to edit it, including the name.
 
-**New Project Domain** | Go to the _Domains_ Menu tab. To create a _Project Domain_ right click on your _Divisional Domain_ at the top of the DeployHub window. Select the &quot;_Create new Sub-Domain in this Domain_.&quot; A new _Project Domain_ will be created with a default name. Click on the pencil icon on the far right to edit it, including the name.
+**New Project Domain** | Go to the _Domains_ Menu tab. To create a _Project Domain_ right click on your _Divisional Domain_ at the top of the DeployHub window. Select the "_Create new Sub-Domain in this Domain_." A new _Project Domain_ will be created with a default name. Click on the pencil icon on the far right to edit it, including the name.
 
-**Delete** _**Sub-Domain**_ | Go to the _Domains_ Menu tab. Select the Domain that you want to Delete. Right click on the Domain for the &quot;Delete this Sub-Domain&quot; option. A message box will appear showing the objects that are associated with the _Sub-Domain_ that prevent it from being deleted.
-
-
+**Delete** _**Sub-Domain**_ | Go to the _Domains_ Menu tab. Select the Domain that you want to Delete. Right click on the Domain for the "Delete this Sub-Domain" option. A message box will appear showing the objects that are associated with the _Sub-Domain_ that prevent it from being deleted.
 
 ## Editing a Domain or Sub-Domain
 
@@ -60,7 +58,7 @@ There are 7 different types of _Tasks_:
 The selected _Application Version_ has to be approved for the _Target Domain_ before the _Move Version_ to that _Domain_ will succeed. Once the _Move Version Task_ has been approved by the _Approval Task_, the _Application Version_ can be moved back and forth between the two _Domains_ until the _Application Version_ has been rejected through the use of the _Approval Task_. |
 | _**Deploy**_ | Deploys an _Application Version_ to an _Environment._ The target _Environment_ is selectable via a drop-down list. |
 | _**Request**_ | For **DeployHub Pro** - When a _User_ needs to run a _Task_ but doesn&#39;t have access to it, a _Request__Task_ is used to ask those with access to the _Task_ to run it.
-When the _Request Task_ is executed an entry is placed into the &quot;To Do&quot; list of all the _Users_ who are members of the _User Group(s)_ which have execute access to the _Linked Task_. When the _Linked Task_ is executed by one of the _Users_ with access, the request is removed from all of the _Users_ &quot;To Do&quot; lists.
+When the _Request Task_ is executed an entry is placed into the "To Do" list of all the _Users_ who are members of the _User Group(s)_ which have execute access to the _Linked Task_. When the _Linked Task_ is executed by one of the _Users_ with access, the request is removed from all of the _Users_ "To Do" lists.
 The _Request Task_ can have a _Request Notification Template_ defined which can send out a notification to the appropriate _User Group(s)_ when it is executed or that it needs to be performed. |
 | _**Approve**_ | Approves a _Request Task_ so that its linked _Task_ can be executed within a specified _Domain_. For example, in **DeployHub Pro** , a _User_ that belongs to a _Group_ with the authority, via a _Move Task_, to move a particular _Application_ to a specified _Domain_ can do so, but a _User_ in a _Group_ that has not been assigned the authority for this _Move Task_ must request approval from someone in a _Group_ that does have the authority. When the _User_ with the authority receives the request, that _User_ can run an _Approval Task_, which will then allow a _User_ with access to move the _Application_ to the target _Domain_. Keep in mind, if an _Approval Task_ exists within a _Domain,_ it must be run before any _Move Tasks_ can be executed to move an _Application Version_ into the specified _Domain_. |
 | _**Remove Application**_ | Removes the _Application Base __Version_ from an _Environment_, by rolling back from the currently installed _Application Version_. All files are removed, and all _Rollback__ Actions_ are executed for each _Application Version_ between the Version installed in the _Target Environment_ and the _Application Base Version_. The _Rollback Action_ associated with the _Application Base Version_ is then executed. (Normally, when rolling back to the _Application Base Version_, the _Rollback Action_ is not executed, and the _Application Base Version_ remains deployed.)
@@ -121,8 +119,6 @@ Additional parameters can be added to a _Task_ by clicking the plus icon in the 
 
 Additional Parameters are stored in Global variables that can be referenced anywhere within DeployHub during the execution of the _Task_. This is particularly useful during deployments where Pre and Post Actions are executed at the _Component_ and _Application_ levels.
 
-
-
 ## General Tab
 
 The General tab contains fields with basic information for the selected _Domain_. Information can be changed by clicking on the edit pencil in the upper right-hand corner.
@@ -148,6 +144,7 @@ When you set the _Sub-Domain_ to include _Lifecycle States_ from the _Domain_ Ed
 In order to create a _Life Cycle Sub-Domain_, edit the _Sub-Domain_ by highlighting it in the tree structure and select the pencil icon in the right-hand corner. Select the _Contains Lifecycle_ checkbox in the edit dialog. This will now restrict the addition of any lower level _Sub-Domains_, and instead allow you to create _Life Cycle Sub-Domains_. A _Life Cycle Sub-Domain_ cannot have a child _Sub-Domain._ The icon for the newly created _Life Cycle Sub-Domain_ will change from a world to a flowchart, indicating that this is now a _Life Cycle Sub-Domain_. You can re-order the _Life Cycle Sub-Domains_ by selecting the higher level _Sub-Domain_ General Tab. Edit the _Sub-Domain_ by selecting the pencil icon in the right-hand corner. This will bring you to the Edit General dialog box. You can drag and drop the _Life Cycle Sub-Domains_ to re-order them.
 
 ## Access Options
+
 _Domains_, their contents and their _Sub-Domains_ are protected from unauthorized use and change via their _Access_ options. There are four options, each of which grants a different type of access to _User_s who belong to the _User Group_s contained in the list. A fifth list contains a list of all _User Group_s, which can be dragged and dropped into each of the other four lists. By default the _Everyone_ Groupis assigned to each group at the GLOBAL domain level and this permission is then inherited by all _Sub-Domains_ and _Lifecycle States_. To restrict Access, remove the _Everyone_ Group from the desired Group list, and add only the Groups that should be given the appropriate access to the _Domain_.
 
 {{% include "userguide/reusable/Access Object.md" %}}

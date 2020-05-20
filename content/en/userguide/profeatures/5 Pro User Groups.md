@@ -25,7 +25,7 @@ An existing property can be removed from a _Domain_ by dragging and dropping a _
 
 ## Creating and Deleting Users
 
-New _Users_ and _Groups_ can be created by clicking on the Users and Groups menu and right clicking on a _Domain_ within the tree structure in the left side panel. This will give you the option to add a &quot;New User/Group in this Domain&quot;. By selecting this, the _New __User_ or _New Group_ dialog will appear. Once created, the _New__ User_ or _Group_ will appear in the list in the tree structure under the selected _Domain_. Right clicking on a _User_ or _Group_ allows you to delete it. There is no retrieving the deleted _User_ or _Group_ if this option is selected. When a _User_ or _Group_ is selected in the tree structure in the left panel, the following tabs and their fields appear in the right side panel:
+New _Users_ and _Groups_ can be created by clicking on the Users and Groups menu and right clicking on a _Domain_ within the tree structure in the left side panel. This will give you the option to add a "New User/Group in this Domain". By selecting this, the _New __User_ or _New Group_ dialog will appear. Once created, the _New__ User_ or _Group_ will appear in the list in the tree structure under the selected _Domain_. Right clicking on a _User_ or _Group_ allows you to delete it. There is no retrieving the deleted _User_ or _Group_ if this option is selected. When a _User_ or _Group_ is selected in the tree structure in the left panel, the following tabs and their fields appear in the right side panel:
 
 ## Timeline Tab
 
@@ -33,7 +33,7 @@ This tab displays log file entries for deployments that used this User, includin
 
 Users can also click on the Subscribe link in each entry of the list, which allows the _User_ to receive information about the selected deployment. Any comments added to the deploymentwill appear in the History column of the subscriber&#39;s home page.
 
-There is a field above the list labeled &quot;Say something about this User (or Group)&quot; that can have comments placed into it, and files can be attached to the comment as well. Entering text into this field activates the Add Message button. Click on this button to save the comment as a line in the list.
+There is a field above the list labeled "Say something about this User (or Group)" that can have comments placed into it, and files can be attached to the comment as well. Entering text into this field activates the Add Message button. Click on this button to save the comment as a line in the list.
 
 Clicking on the fingerprint button next to the Add Message button brings up a file explorer that allows files to be selected and attached to the comment. These attachments can later be retrieved by clicking on the fingerprint icon on the far right of the comment, which opens the line in the list to display the name of the file. Click on the file name and it will be downloaded into the default Downloads folder of the PC that hosts the browser used to run DeployHub (not on the server hosting DeployHub). A dropdown list appears at the bottom of the browser, which is labeled with the name of the file. Clicking the drop down presents options that are standard in every Windows file download interface, including Open, Always Open this Type of File, and Show in folder. Several drop-down lists can appear along the bottom of the browser. A small &#39;x&#39; on the far-right side at the bottom can be clicked to make all the lists disappear.
 
@@ -90,9 +90,9 @@ The _User_ contains the name of the _Data Source_ in the Validation Data Source 
 
 ## Creating and Deleting Groups
 
-A new _Group_ can be created by clicking on the Users and Groups menu, clicking on a _Domain_ within the tree structure in the left side panel, and selecting &quot;New Group in this _Domain_&quot; from the resulting list. A window will appear in the list beneath the _Domain_, with entry fields that can be filled in to create a new _Group_. Once a _Group_ is created, it will appear in the list of _Groups_ in the tree structure. The _Group_ can be edited by selecting it in the tree structure and clicking on the pencil icon in the right-hand corner of the window. You can delete a _Group_ by right clicking on it and selecting the &#39;Delete this Group&#39; menu option. There is no retrieving the deleted _Group_ if this option is selected.
+A new _Group_ can be created by clicking on the Users and Groups menu, clicking on a _Domain_ within the tree structure in the left side panel, and selecting "New Group in this _Domain_" from the resulting list. A window will appear in the list beneath the _Domain_, with entry fields that can be filled in to create a new _Group_. Once a _Group_ is created, it will appear in the list of _Groups_ in the tree structure. The _Group_ can be edited by selecting it in the tree structure and clicking on the pencil icon in the right-hand corner of the window. You can delete a _Group_ by right clicking on it and selecting the &#39;Delete this Group&#39; menu option. There is no retrieving the deleted _Group_ if this option is selected.
 
-NOTE: DeployHub creates a Group named &quot;Everyone&quot; whenever it is installed, and every User that is created is added to this group and cannot be removed from it.
+NOTE: DeployHub creates a Group named "Everyone" whenever it is installed, and every User that is created is added to this group and cannot be removed from it.
 
 ## User Membership Tab
 

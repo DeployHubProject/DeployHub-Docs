@@ -25,7 +25,7 @@ String
 
 **Examples:**
 
-set a = &quot;Hello There&quot;;
+set a = "Hello There";
 
 echo $a.lower();
 

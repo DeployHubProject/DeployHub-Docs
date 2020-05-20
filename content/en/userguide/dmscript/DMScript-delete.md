@@ -18,7 +18,8 @@ _delete_ takes the following optional named parameters:
 NOTE: A single file or dir parameter _must_ be specified.
 
 **Example:**
-~~~
+
+```bash
 Remove all files of zero length from the _DropZone_. If this is done in a pre-action to a _Component_, then no zero length file will be deployed to the _Endpoint_ even if they have been checked out from the repository:
 
 set filelist = ${DropZone.files};
@@ -38,12 +39,13 @@ delete(file: ${file.dzpath});
 }
 
 }
-~~~
+```
 
 **Example:**
-~~~
+
+```bash
  _Pre Action_ to a _Component_:
- 
+
   Remove all files with a modification time prior to the time the _Component_ was last deployed to the _Endpoint_. If this removes all files, the _Component_ will not be deployed (since there are no files left in the _DropZone_). This allows you to set a _Component_ to "Deploy Always" and only push files that have been added to the _Component_ since it was last deployed.
 
 if (${dep.same}) {
@@ -85,4 +87,4 @@ delete(file: $file);
 }
 
 }
-~~~
+```

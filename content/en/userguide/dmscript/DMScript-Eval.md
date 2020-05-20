@@ -13,7 +13,8 @@ _Eval_ dynamically evaluates a block of code to give a piece of text, which is f
 eval(expression);
 
 **Example:**
-~~~
+
+```bash
 
 set x = "foo";
 set y = "bar";
@@ -21,4 +22,4 @@ set bar = "bat";
 eval("set $x = \$$y;"); // _evaluates to set foo = $bar_
 
 // foo will now be "bat"
-~~~
+```

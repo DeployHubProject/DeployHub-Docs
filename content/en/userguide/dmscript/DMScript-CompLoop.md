@@ -12,13 +12,14 @@ _Comploop_ creates a _Component_ loop through all the _Component_s that make up 
 For each iteration through the loop, DeployHub pushes the _Component_ onto the stack. It also filters the current _Endpoint_ list to only include those targeted _Endpoints_. It then executes the code in the body of the loop. When the body has finished executing, the _Component_ is popped off the stack and the _Endpoint_ list is restored. On the subsequent iteration, the next _Component_ is pushed onto the stack and the _Endpoint_ list is re-filtered before the body of the loop is executed again.
 
 **Example:**
-~~~
+
+```bash
 
 // Print out the _Component_s that make up the current _Application_
 
 comploop {
 
-echo &quot;_Component_ ${_Component_.name}&quot;;
+echo "_Component_ ${_Component_.name}";
 
 // When a _Component_ is pushed onto the stack, the serverlist
 
@@ -30,11 +31,11 @@ echo &quot;_Component_ ${_Component_.name}&quot;;
 
 psloop {
 
-echo &quot;Target Server: ${server.name}&quot;;
+echo "Target Server: ${server.name}";
 
 }
 
 }
-~~~
+```
 
 NOTE: The order of the _Components_ is based on the order that the _Components_ are connected in the _Application_ on the stack. Any _Components_ linked in parallel will be presented consecutively during a _comploop_.

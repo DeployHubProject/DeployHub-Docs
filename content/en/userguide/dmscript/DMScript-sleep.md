@@ -1,7 +1,7 @@
 ---
 title: "Sleep"
 linkTitle: "Sleep"
-weight: 96    
+weight: 97   
 description: >
   Pause a DMScript execution.
 ---
@@ -15,8 +15,9 @@ _sleep_ takes a single named parameter:
 |delay |The number of seconds to wait|
 
 **Example**
-~~~
+
+```bash
 Suspend the current thread for 30 seconds
 
 sleep(delay: 30);
-~~~
+```

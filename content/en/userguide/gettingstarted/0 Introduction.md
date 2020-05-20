@@ -10,7 +10,7 @@ description: >
 
 Migrating to microservices breaks the way we assemble and configure software. DeployHub puts it back together by providing a central 'hub' for cataloging, versioning, sharing and releasing microservices across the organization. DeployHub empowers you to easily move from monolithic to microservices by supporting a central location to manage your microserivces and other reusable components.  
 
-And if you are working in a hybrid environment, supporting both microservices and monolithic applications, DeployHub can support both models. In fact, DeployHub can help teach you how to decompose a monolithic application by helping you break it down into components - the beginning of a microservice journey. 
+And if you are working in a hybrid environment, supporting both microservices and monolithic applications, DeployHub can support both models. In fact, DeployHub can help teach you how to decompose a monolithic application by helping you break it down into components - the beginning of a microservice journey.
 
 DeployHub delivers 4 main features critical to a successful implementation of microservices.
 
@@ -73,7 +73,7 @@ DeployHub Pro
 
 For additional security features and support, DeployHub Team can be upgraded to DeployHub Pro. DeployHub Pro includes extended Users and Group access controls as well as more granular _Domains_.
 
-Unique only to DeployHub Pro is the concept of &quot;Divisional Domains.&quot; This allows you to model your environments based on your organizational top-down structure, facilitating a self-service experience for developers and the ability to restrict microservice read/write access to only certain Groups of Users.
+Unique only to DeployHub Pro is the concept of "Divisional Domains." This allows you to model your environments based on your organizational top-down structure, facilitating a self-service experience for developers and the ability to restrict microservice read/write access to only certain Groups of Users.
 
 DeployHub Pro also provides integration to bug tracking tools such as Bugzilla, GitHub Issues and Jira for tracking your complete value stream from change request to final endpoint.
 

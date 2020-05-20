@@ -25,6 +25,15 @@ assets/scss/_styles_project.scss
     margin-bottom: 1em;
 }
 
+.td-content .highlight {
+  padding: 0;
+  border: none;
+}
+
+.td-content .highlight pre {
+  padding: 10px;
+}
+
 .td-navbar {
   background: #676767;
   padding-bottom: 0px;

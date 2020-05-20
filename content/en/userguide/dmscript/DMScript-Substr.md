@@ -23,10 +23,10 @@ substr(String,start[,length])
 String: The substring represented from the start point of the source string containing the rest of the string or length characters.
 
 **Example:**
-~~~
-set a = &quot;Hello There&quot;;
+```bash
+set a = "Hello There";
 
-echo ${a.substr(0,5)}; // echoes &quot;Hello&quot;
+echo ${a.substr(0,5)}; // echoes "Hello"
 
-echo ${a.substr(6)}; // echoes &quot;There&quot;
-~~~
+echo ${a.substr(6)}; // echoes "There"
+```

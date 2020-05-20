@@ -11,7 +11,8 @@ description: >
 **_break/continue_** can be used to break out of loops or _switch_ statements. _continue_ can be used to force the loop to restart with the next value.
 
 **Example with psloop:**
-~~~
+
+```bash
 
 psloop {
 echo ${server.name};
@@ -30,9 +31,11 @@ break; // break out of loop
 echo "end of loop";
 
 In this example, DeployHub will iterate through the current _Endpoint_ set, looking at the value of myattribute for each _Endpoint_. When it finds an _Endpoint_ with this attribute set to the value of nomore it will break out of the loop.
-~~~
+```
+
 **Example with continue:**
-~~~
+
+```bash
 
 for (i=1;$i<=10;i=$i+1) {
 
@@ -67,4 +70,4 @@ The output from this code will be:
 10
 
 This is because the fifth time through the loop, i will be 5. The condition will match and execute "continue" which will restart the loop with the next value (6).
-~~~
+```

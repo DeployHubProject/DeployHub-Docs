@@ -28,11 +28,11 @@ A qualified name can include as many Domain names as is necessary to uniquely id
 
 _1) Retrieve an Endpoint._
 
-set server1 = getserver(&quot;Server1&quot;);
+set server1 = getserver("Server1");
 
 _2) Retrieve an Endpoint specifying the enclosing domain:_
 
-set server1 = getserver(&quot;Project1.Server1&quot;);
+set server1 = getserver("Project1.Server1");
 
 
 Further descriptions of _Endpoint_ Objects are found in the high level section named _DMScript_ Objects, in the section named _Endpoint_s.

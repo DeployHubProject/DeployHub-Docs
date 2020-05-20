@@ -16,7 +16,8 @@ _setatt_ takes two mandatory named parameters:
 | attributes | An array of name/value pairs to set as attributes for the specified object. In the attributes array, the key is the name of the attribute and the value is its value. |
 
 **Example:**
-~~~
+
+```bash
 Store the last deployment id, version name, target _Environment_ and date/time stamp against the parent (base) version of the deployed _Application_.
 
 set atts = {
@@ -32,6 +33,6 @@ set atts = {
 };
 
 setatt(object: ${Application.parent},attributes: $atts);
-~~~
+```
 
 If this is attached to a post-deployment action then whenever an _Application Version_ is deployed, the details of the deployment are stored as attributes against the base _Application_.

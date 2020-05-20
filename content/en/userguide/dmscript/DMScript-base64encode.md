@@ -24,7 +24,8 @@ base64encode(stream)
 String: The base64 encoded representation of the passed stream data.
 
 **Examples:**
-~~~
+
+```bash
 1. _Create a string and convert it to Base64:_
 
 echo "Hello DeployHub!" >> $teststream;
@@ -69,7 +70,7 @@ set b64 = ${configzip.base64encode()};
 // b64 is now a base64 encoded version of the file "demo1.zip"
 
 }
-~~~
+```
 
 **See Also:**
 

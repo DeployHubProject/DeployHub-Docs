@@ -20,7 +20,8 @@ attachment takes a number of named parameters:
 _attachment_ can optionally open a code block. If body is not specified then the content of the attachment is taken from the output created by this code block.
 
 **Example**
-~~~
+
+```bash
  Checkout a file and include it as an attachment in an email:
 
 // Checkout "myfile.txt" and read it into the stream $myfile.
@@ -53,9 +54,11 @@ attachment(name: "myfile.txt", body: $myfile);
 
 }
 
-~~~
+```
+
 **Example**
-~~~
+
+```bash
 Create an attachment with a script and include it in an email:
 
 set me=me();
@@ -79,10 +82,11 @@ testaction(arg1: 'hello', arg2: 'world');
 }
 
 }
-~~~
+```
 
 **Example:**
-~~~
+
+```bash
 Send an email containing the Change Requests associated with the Application.
 
 set me=me();
@@ -106,6 +110,7 @@ echo "\<;tr<\<;td<${cr.id}\<;/td<\<;td<${cr.name}\<;/td<\<;/tr<";
 echo "\<;/table<";
 
 }
-~~~
+```
+
 Email Received:
 ![Sample Email](/userguide/dmscript/Attachment.jpg)

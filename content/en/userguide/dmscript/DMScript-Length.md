@@ -38,29 +38,29 @@ Integer representing the number of characters (String), elements (Array) or byte
 
 **Examples:**
 
-set mystr=&quot;Hello There&quot;;
+set mystr="Hello There";
 
-echo &quot;String length is ${mystr.length()}&quot;;
+echo "String length is ${mystr.length()}";
 
-set list={&quot;a&quot;, &quot;b&quot;, &quot;c&quot;};
+set list={"a", "b", "c"};
 
-echo &quot;Array length is ${list.length()}&quot;;
+echo "Array length is ${list.length()}";
 
-using _DropZone_ &quot;temp&quot; {
+using _DropZone_ "temp" {
 
-checkout(repository: &quot;Openmake\_Demo.demorep2&quot;,pattern: &quot;demo1.zip&quot;);
+checkout(repository: "Openmake\_Demo.demorep2",pattern: "demo1.zip");
 
 set filelist = ${_DropZone_.files};
 
-echo &quot;file size = ${filelist[&#39;demo1.zip&#39;].size}&quot;;
+echo "file size = ${filelist[&#39;demo1.zip&#39;].size}";
 
 using stream $mystream {
 
-read(file: &quot;demo1.zip&quot;);
+read(file: "demo1.zip");
 
 }
 
-echo &quot;stream size is ${mystream.length()}&quot;;
+echo "stream size is ${mystream.length()}";
 
 }
 

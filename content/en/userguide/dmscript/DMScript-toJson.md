@@ -24,7 +24,8 @@ to\_json(array)
 String: A representation of the array content in JSON syntax.
 
 **Example:**
-~~~
+
+```bash
 set myarray = {
 
 "one": "val one",
@@ -42,7 +43,8 @@ set myarray = {
 echo ${myarray.to\_json()};
 
 // echoes {"one":"val one","two":{"x":"3","y":"4"}}
-~~~
+```
+
 **See Also:**
 
 filter(), sum()

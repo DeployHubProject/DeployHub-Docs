@@ -18,7 +18,8 @@ _create_ requires named parameters:
 Once the file is created it is marked for deployment. It will be pushed to the target _Endpoint_(s) during any subsequent _transfer_ operation.
 
 **Example:**
-~~~
+
+```bash
 Creates a config file and push it to the target _Endpoint_s. This should be placed into a Custom Action in a _Component_:
 
 using DropZone 'demozone1' {
@@ -40,7 +41,7 @@ create(file: "config.file", stream: $demostream);
 transfer; // copies file in DropZone to target Endpoint(s)
 
 }
-~~~
+```
 
 ## Read
 
@@ -56,7 +57,8 @@ _read_ takes at most two parameters:
 NOTE: If stream is not specified, then the file content is written into the stream used by the enclosing using stream block. If stream is not specified and read is used outside a using stream block a runtime error occurs.
 
 **Example:**
-~~~
+
+```bash
 Checkout a file from a repository, read its content into a stream, convert it to base64, create a new file containing the base64 encoded file and transfer it to the target _Endpoint_(s). This should be placed into a _Component_ as a Custom Action.
 
 using DropZone 'dp' {
@@ -78,10 +80,11 @@ delete(file: "demo1.zip"); // Remove original file
 transfer; // transfer demo2.b64 to target
 
 }
-~~~
+```
 
-**Example:** 
-~~~
+**Example:**
+
+```bash
 Create new users in DeployHub from a file. Assume the file is constructed like this:
 
 jdoe|John Doe|jdoe@mycompany.com
@@ -137,4 +140,4 @@ Result:
 Added user jdoe okay
 
 Added user bsmith okay
-~~~
+```

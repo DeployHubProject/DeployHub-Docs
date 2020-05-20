@@ -29,14 +29,16 @@ Every invocation of the engine results in a new engine process (and therefore a 
 If the _DMScript_ has been invoked from the DeployHub Web User Interface (i.e.: a manual deployment or a task invocation) then JSESSIONID is set to the session ID of the web session. You can use this to call the DeployHub API from inside _DMScript_ without the need to explicitly log in to the API.
 
 During a deployment, the _Environment_ (and its attributes) are pushed onto the stack, followed by the _Application_ being deployed. At this point, the stack looks like this:
-~~~
+
+```bash
 
 Application
 
 Environment
 
 Global
-~~~
+```
+
 Thus, any attributes in the _Global_ scope can be overridden by attributes in the selected _Environment_. Similarly, any attributes defined in the _Environment_ can be overridden by attributes defined in the _Application_.
 
 For example, suppose the _Environment_ "Test _Environment_ A " has an attribute called QUEUE\_NAME which is set to queue1. The _Application_ "MyApp;2 " also has an attribute QUEUE\_NAME which is set to queue2.
@@ -57,13 +59,13 @@ Each scope is named as follows:
 
 _DMScript_ has built-in methods that allow you to iterate through _Endpoint_ and _Component_s and these push each _Component_/server onto the stack at the start of the loop and pop them off again at the end of the loop. This happens automatically for each iteration through the loop. So, for example, you could print the names of all the target _Endpoint_s by writing this:
 
-~~~
+```bash
 psloop {
 
 echo  "${server.name} - ${server.hostname} ";
 
 }
-~~~
+```
 
 _psloop_ stands for _Physical Server Loop_. It iterates through each _Endpoint_ in the current _Endpoint_ list (by default, this is all the _Endpoint_s associated with an _Environment_). Each _Endpoint_ is pushed onto the stack at the  "top " of the loop and popped off again at the end. So this loop will:
 
@@ -99,20 +101,23 @@ During a Deployment, the following steps are followed:
     - If the _Component_ does not have a Custom Action, then the drop-zone content is pushed to the target _Endpoint_. If the drop-zone is empty, then no push is performed.
     - Any Post-Action on the _Component_ is executed.
 
-### Pre Action to Task 
+### Pre Action to Task
+
 |  **Invocation Point**  |  **Available Objects and Variables** |
 | --- | --- |
 | $_Component_| The selected _Component_ if the task was invoked on a _Component._ |
 |$Application Object| The selected _Application_ if the task was invoked on an _Application.|   $Environment_Object| The _Environment_ being deployed to if this is a Deployment Task. |
 
-### Post Action to Task 
+### Post Action to Task
+
 |  **Invocation Point**  |  **Available Objects and Variables** |
 | --- | --- |
 | $? Integer| The Exit Status of the task.|
 | $_Component_ Object|The selected _Component_ if the task was invoked on a _Component._
 |$_Application_ Object| The selected _Application_ if the task was invoked on an _Application._ ||$_Environment_ Object| The _Environment_ being deployed to if this is a Deployment Task. |
 
-### Pre Action for _Application_ 
+### Pre Action for _Application_
+
 |  **Invocation Point**  |  **Available Objects and Variables** |
 | --- | --- |
 | ${dep.rollforward} Boolean| Set during a deployment to true or false.Indicates if the version being deployed is later than the version in the target _Environment_.|
@@ -121,28 +126,29 @@ During a Deployment, the following steps are followed:
 |$_Application_ Object| The _Application_ being deployed.
 |$_Environment_ Object| The _Environment_ being deployed to. |
 
-
 ### Post Action for _Application_
+
 |  **Invocation Point**  |  **Available Objects and Variables** |
 | --- | --- |
 | $? Integer| The Exit Status of the deployment.|
 | ${dep.rollforward} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is later than the version in the target _Environment_.
 |${dep.rollback} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is earlier than the version in the target _Environment_.|
 |${dep.same} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is the same as the version in the target _Environment_.|
-|$Application_Object| The _Application_ being deployed.
-|$Environment_Object.|  The _Environment_ being deployed to.
-
+|$Application_Object| The_Application_ being deployed.
+|$Environment_Object.|  The_Environment_ being deployed to.
 
 ### Custom Action for _Application_
+
 |  **Invocation Point**  |  **Available Objects and Variables** |
 | --- | --- |
   ${dep.rollforward} Boolean: |Set during a deployment to true or false. Indicates if the version being deployed is later than the version in the target _Environment_.
 |${dep.rollback} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is earlier than the version in the target _Environment_.|
 |${dep.same} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is the same as the version in the target _Environment_.|
-|$Application_Object| The _Application_ being deployed.|
-|$Environment_Object| The _Environment_ being deployed to.|
+|$Application_Object| The_Application_ being deployed.|
+|$Environment_Object| The_Environment_ being deployed to.|
 
 ### Pre Action for _Component_
+
 |  **Invocation Point**  |  **Available Objects and Variables** |
 | --- | --- |
  ${dep.rollforward} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is later than the version in the target _Environment_.|
@@ -150,12 +156,12 @@ During a Deployment, the following steps are followed:
 |${dep.same} | Set during a deployment to true or false. Indicates if the version being deployed is the same as the version in the target _Environment_.|
 |$_Component_Object| The _Component_ being deployed.|
 |$server Object| The _Endpoint_ the _Component_ is being deployed to.|
-|$Application_Object| The _Application_ being deployed.|
-|$Environment_Object| The _Environment_ being deployed to.|
+|$Application_Object| The_Application_ being deployed.|
+|$Environment_Object| The_Environment_ being deployed to.|
 |$_DropZone_Object| The _DropZone_ containing the files to be transferred to the _Endpoint_. |
 
-
 ### Post Action for _Component_
+
 |  **Invocation Point**  |  **Available Objects and Variables** |
 | --- | --- |
 | $? Integer| The exit code of the _Component_ deployment.|
@@ -169,6 +175,7 @@ During a Deployment, the following steps are followed:
 |$_DropZone_Object| The _DropZone_ containing the files to be transferred to the _Endpoint_. |
 
 ### Custom Actions for a _Component_
+
 |  **Invocation Point**  |  **Available Objects and Variables** |
 | --- | --- |
 | ${dep.rollforward} Boolean |Set during a deployment to true or false. Indicates if the version being deployed is later than the version in the target _Environment_.|

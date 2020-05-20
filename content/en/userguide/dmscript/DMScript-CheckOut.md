@@ -21,7 +21,8 @@ checkout takes a number of named parameters.
 The remaining parameters will depend on the chosen repository. The parameters specified will either override the defined properties (if the property is defined as _overridable_) or will be appended to them (if the property is defined as _appendable_). If a parameter attempts to override a property which is not defined as _overridable_ then a runtime error is thrown.
 
 **Example:**
-~~~
+
+```bash
 A custom action for a _Component_ to post a configuration change to a DataPower web appliance:
 
 using stream $config; // create streams
@@ -59,6 +60,6 @@ read(file: "soma-config-import.xml", stream: $payload);
 set res = soap($DP\_TGTURL, $payload);
 
 }
-~~~
+```
 
 The above example is a custom action for a _Component_ which represents a configuration change to be applied to the DataPower web appliance. Such changes are delivered over the appliance&#39;s SOAP API and do not involve conventional file transfers. In order to implement this, the custom action first checks out the XML soap body (soma-config-import.xml) and places it into the _DropZone_. It then does the same for the config.zip file (taking the latest version from the specified repository). It converts this config file into a base64 encoded stream and then uses an XML modifier to add this base64 encoded data into the XML SOAP message. Finally, the modified file is read into a stream and sent to the DataPower Web UI (DP\_TGTURL is the URL of the DataPower WebUI and is set as an attribute for the target _Environment_).

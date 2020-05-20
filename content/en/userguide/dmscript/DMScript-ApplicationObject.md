@@ -48,7 +48,8 @@ The following methods can be called on the _Application_ object:
 | latest(branchname) | Object | Returns the latest _Application Version_ of this _Application_. If branchname is specified then the returned _Application_ Object is the latest version on the specified branch. |
 
 Attributes such as _owner_ and _parent_ return _Objects_. These objects have their own attributes. So, for example, one can get the owner name of an _Application_ by writing:
-~~~
+
+```bash
 
 set owner = ${_Application_.owner};
 
@@ -64,7 +65,7 @@ set approvals = ${_Application_.approvals};
 
 foreach(a: $approvals) {
 
-echo &quot;$a : ${approvals[$a]}&quot;;
+echo "$a : ${approvals[$a]}";
 
 }
 
@@ -73,38 +74,42 @@ echo &quot;$a : ${approvals[$a]}&quot;;
 // Test : approved
 
 // Prod : rejected
-~~~
+```
+
 Since the array is keyed on the domain name, you can easily check if the app is approved for a particular domain:
 
-~~~
+```bash
 set approvals = ${_Application_.approvals};
 
-if (${approvals[&quot;Test&quot;]} = &quot;approved&quot;) {
+if (${approvals["Test"]} = "approved") {
 
 // _Application_ is approved for Test Domain
 
 }
-~~~
+```
+
 Or you can use dot notation (assuming the target domain name does not contain spaces):
 
-~~~
+```bash
 set approvals = ${_Application_.approvals};
 
-if (${approvals.Test} = &quot;approved&quot;) {
+if (${approvals.Test} = "approved") {
 
 // _Application_ is approved for Test Domain
 
 }
-~~~
+```
+
 To iterate through the _Component_s that make up the _Application_:
-~~~
+
+```bash
 set Components = ${Application.Components};
 
-echo &quot;This Application has ${Components.length()} Components&quot;;
+echo "This Application has ${Components.length()} Components";
 
 iterate(c: $Components) {
 
-echo &quot;Component ${c.name} (id ${c.id})&quot;;
+echo "Component ${c.name} (id ${c.id})";
 
 }
-~~~
+```

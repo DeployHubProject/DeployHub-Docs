@@ -17,7 +17,7 @@ A Jenkins Build Job communicates with DeployHub, passing log and results. Any ti
 
 ## Build Jobs and Components
 
-A Jenkins Build Job Run creates a Build Job Number stored in a DeployHub _Component_. A field named &#39;Last Build Number&#39; is updated every time a Build Job is executed. The DeployHub Jenkins plug-in has a &quot;notify only&quot; mode for when a build has been done. Clicking on &quot;Endpoints and Builds&quot; will show all of the builds that have been done for that _Component_. Clicking on a Build Number will open a pop-up with the build log that has been pulled from Jenkins.
+A Jenkins Build Job Run creates a Build Job Number stored in a DeployHub _Component_. A field named &#39;Last Build Number&#39; is updated every time a Build Job is executed. The DeployHub Jenkins plug-in has a "notify only" mode for when a build has been done. Clicking on "Endpoints and Builds" will show all of the builds that have been done for that _Component_. Clicking on a Build Number will open a pop-up with the build log that has been pulled from Jenkins.
 
 ## Build Job Run
 
@@ -29,7 +29,7 @@ If the &#39;Always Deploy&#39; flag is set to Yes on a Component, it makes no di
 
 ## Creating and Deleting Build Engines
 
-A _Build Engine_ is created by selecting the Data Center Menu item, clicking on the Build Engines tab, and right clicking on the _Domain_ in the tree structure. This action brings the &quot;New Build Engine in this Domain&quot; option. By selecting this option, the New Build Engine dialog box will automatically be displayed. Once created, the _Build Engine_ details can be edited by selecting the General tab and clicking on the pencil icon on the far right.
+A _Build Engine_ is created by selecting the Data Center Menu item, clicking on the Build Engines tab, and right clicking on the _Domain_ in the tree structure. This action brings the "New Build Engine in this Domain" option. By selecting this option, the New Build Engine dialog box will automatically be displayed. Once created, the _Build Engine_ details can be edited by selecting the General tab and clicking on the pencil icon on the far right.
 
 To delete a _Build Engine_, right click on the _Build Engine_ in the tree view to see the &#39;Delete this Build Engine&#39; option. Once deleted, this action cannot be undone. A _Build Engine_ can be copied by right clicking on the _Build Engine_, selecting the &#39;Copy End Point&#39;, and then paste it into another _Domain_ with a right click.
 

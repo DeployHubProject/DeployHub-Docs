@@ -28,11 +28,11 @@ A qualified name can include as many Domain names as is necessary to uniquely id
 
 _1) Retrieve an Environment._
 
-set uatenv = get_Environment_(&quot;UAT\_Env1&quot;);
+set uatenv = get_Environment_("UAT\_Env1");
 
 _2) Retrieve an Environment specifying the enclosing domain:_
 
-set uatenv = get_Environment_(&quot;Project1.UAT\_Env1&quot;);
+set uatenv = get_Environment_("Project1.UAT\_Env1");
 
 
 Further descriptions of _Environment_ Objects are found in the high level section named _DMScript_ Objects, in the section named _Environment_.

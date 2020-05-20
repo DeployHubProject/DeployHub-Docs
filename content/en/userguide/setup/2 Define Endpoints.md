@@ -11,7 +11,7 @@ An _Endpoint_ is an object representing a single container, virtual image, or ph
 
 ## Creating and Deleting Endpoints
 
-Select the _Data Center_ Menu item, clicking on the _Endpoints_ tab, and right clicking on the _Domain_ in the tree structure to create where the _Endpoint_ is to reside. The &quot;New Endpoint in this Domain&quot; option displays a dialog box. Once created, the _Endpoint_ details can be edited by selecting the _Endpoint&#39;s_ General tab and clicking on the pencil icon on the far right.
+Select the _Data Center_ Menu item, clicking on the _Endpoints_ tab, and right clicking on the _Domain_ in the tree structure to create where the _Endpoint_ is to reside. The "New Endpoint in this Domain" option displays a dialog box. Once created, the _Endpoint_ details can be edited by selecting the _Endpoint&#39;s_ General tab and clicking on the pencil icon on the far right.
 
 Right click on the _Endpoint_ in the tree view for the &#39;Delete this Endpoint&#39; option. Once deleted, this action cannot be undone. Or select the &#39;Copy Endpoint&#39; option from the list and then paste into another _Domain_ by right clicking on it in the tree structure.
 
@@ -35,13 +35,13 @@ This tab displays log file entries for the deployment of _Applications_ to the s
 
 &#39;Click to see earlier items&#39; link shows all of the entries where you can add comments in a text entry field just below the deployment information. Users can also click on the Subscribe link in each entry of the list, which allows the _User_ to receive information about the selected deployment. Any comments appear in the History column of the subscriber&#39;s home page.
 
-&quot;Say something about this End Point&quot; can also have comments placed into it, and files can be attached there. Entering text into this field activates the Add Message button. Click on this button to save the comment as a line in the list.
+"Say something about this End Point" can also have comments placed into it, and files can be attached there. Entering text into this field activates the Add Message button. Click on this button to save the comment as a line in the list.
 
 Clicking on the fingerprint button next to the Add Message button brings up a file explorer that allows files to be selected and attached. These can be retrieved by clicking on the fingerprint icon, which opens a list that displays the file name. Click on it to be downloaded into the default Downloads folder of the PC that hosts the browser used to run DeployHub (not on the server hosting DeployHub). A dropdown list appears at the bottom of the browser with the file name. The options shown are standard in every Windows file download interface, including Open, Always Open this Type of File, and Show in folder. Several drop-down lists can appear along the bottom of the browser. A small &#39;x&#39; on the far-right side at the bottom can be clicked to make all the lists disappear.
 
 ## Deployed Components Tab
 
-This tab contains a table that displays two different kinds of rows, each of which can be added or deleted by using the group of buttons on the upper right side, which consists of a plus sign and an &#39;x&#39;: The plus sign (+) is used to assign _Component Versions_ that have been deployed to the _Endpoint_ outside of DeployHub. Clicking this button on the right side displays a list of _Component Base Versions_ and _Component Versions_ in a pop-up window titled &quot;Manually Add Component Version(s)&quot; that can be selected and placed into the list, along with the current date and time, indicating that this _Component_ has been deployed to the _Endpoint_ outside of DeployHub. This allows DeployHub&#39;s database to keep track of which versions have been deployed, which will affect how deployments are executed in the future.
+This tab contains a table that displays two different kinds of rows, each of which can be added or deleted by using the group of buttons on the upper right side, which consists of a plus sign and an &#39;x&#39;: The plus sign (+) is used to assign _Component Versions_ that have been deployed to the _Endpoint_ outside of DeployHub. Clicking this button on the right side displays a list of _Component Base Versions_ and _Component Versions_ in a pop-up window titled "Manually Add Component Version(s)" that can be selected and placed into the list, along with the current date and time, indicating that this _Component_ has been deployed to the _Endpoint_ outside of DeployHub. This allows DeployHub&#39;s database to keep track of which versions have been deployed, which will affect how deployments are executed in the future.
 
 Any _Components_ that have been deployed through DeployHub&#39;s deployment process appear in this list along with the deployment number under the Details column. Clicking on the &#39;Deploy #&#39; link in the field brings up the Results window seen in various places throughout DeployHub, which includes the Files, Log, General, and Reports tabs. The &#39;x&#39; button is used to delete a line from the list.
 
@@ -57,20 +57,20 @@ The pie chart in the bottom right side shows the number of failed and successful
 
 ## Status Tab
 
-The Status tab is used to check the status of the physical or virtual server that the _Endpoint_ object represents. Clicking on the &quot;Test Now&quot; button causes DeployHub to connect to the server on the network, and returns the following information:
+The Status tab is used to check the status of the physical or virtual server that the _Endpoint_ object represents. Clicking on the "Test Now" button causes DeployHub to connect to the server on the network, and returns the following information:
 
 - Name Resolution: Determines if the server hostname could be resolved to an IP address.
-- Ping: Determines if the &quot;ping&quot; to the IP addressed derived from the name resolution step worked.
-- Connection: If the &quot;ping&quot; succeeded, whether the connection using the specified attributes to the server was successful.
-- Base Directory Check: If the connection succeeded, whether the engine could switch to the server&#39;s &quot;target directory&quot;.
+- Ping: Determines if the "ping" to the IP addressed derived from the name resolution step worked.
+- Connection: If the "ping" succeeded, whether the connection using the specified attributes to the server was successful.
+- Base Directory Check: If the connection succeeded, whether the engine could switch to the server&#39;s "target directory".
 - Ping Time (ms): Time taken for the ping to respond (in milliseconds).
-- IPv4 Address: The IP address returned by the &quot;Name Resolution&quot; step.
-- Last Checked: The date and time of the last test. If &quot;auto ping&quot; is set to true on the _End Point_ General tab, then this will update automatically to the last automatic connection test.
+- IPv4 Address: The IP address returned by the "Name Resolution" step.
+- Last Checked: The date and time of the last test. If "auto ping" is set to true on the _End Point_ General tab, then this will update automatically to the last automatic connection test.
 - Last Error: If any of the above steps failed, this displays the detected error.
 
 ## Attributes Tab
 
-Values that are stored against an _Endpoints_ can be used to control deployments. The Name field holds the name of the Value, while the Value field holds the data as either a numeric or text. It can also be an array of Name/Value pairs associated with a Name. Clicking on the plus sign (+) allows the _User_ to enter a new Name and its associated Value. Selecting the Attribute in the table and clicking on the &quot;X&quot; in the upper right-hand corner deletes the line from the table of Name/Value pairs, while selecting the pencil icon displays a window for editing the selected Name and Value.
+Values that are stored against an _Endpoints_ can be used to control deployments. The Name field holds the name of the Value, while the Value field holds the data as either a numeric or text. It can also be an array of Name/Value pairs associated with a Name. Clicking on the plus sign (+) allows the _User_ to enter a new Name and its associated Value. Selecting the Attribute in the table and clicking on the "X" in the upper right-hand corner deletes the line from the table of Name/Value pairs, while selecting the pencil icon displays a window for editing the selected Name and Value.
 
 ## Access Tab
 

@@ -28,11 +28,11 @@ A qualified name can include as many Domain names as is necessary to uniquely id
 
 _1) Retrieve an Application._
 
-set appobject = get_Application_(&quot;ITGuys&quot;);
+set appobject = get_Application_("ITGuys");
 
 _2) Retrieve an Application specifying the enclosing domain:_
 
-set appobject = get_Application_(&quot;Project1.ITGuys&quot;);
+set appobject = get_Application_("Project1.ITGuys");
 
 
 Further descriptions of _Application_ Objects are found in the high level section named _DMScript_ Objects, in the section named _Application_.

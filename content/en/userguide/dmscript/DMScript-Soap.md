@@ -29,7 +29,8 @@ Array: An associate array which is a decoded version of the XML reply from the S
 
 **Example:**
 Call an external SOAP service to list cities in a specified country:
-~~~
+
+```bash
 set soapmessage = "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
 "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">"
 
@@ -48,12 +49,13 @@ set res=${soapres.Envelope.Body.GetCitiesByCountryResponse.GetCitiesByCountryRes
 set jsonvals = ${res.xmlparse()};
 
 for (i=0;$i<${jsonvals.NewDataSet.Table.length()};i=$i+1) {
-	echo "City=${jsonvals.NewDataSet.Table[$i].City}";
+ echo "City=${jsonvals.NewDataSet.Table[$i].City}";
 }
-~~~
+```
 
 The returned XML will look like this:
-~~~
+
+```bash
 \<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"\>
 
 \<soap:Body\>
@@ -117,26 +119,30 @@ The returned XML will look like this:
 \</soap:Body\>
 
 \</soap:Envelope\>
-~~~
+```
 
 Due to the way the reply is constructed, the \<GetCitiesByCountryResult\> tag contains HTML escaped data. We therefore pull this from the Array using dot syntax:
 
-~~~
+```bash
 soapres.Envelope.Body.GetCitiesByCountryResponse.GetCitiesByCountryResult
-~~~
+```
+
 We then need to parse the XML contained within the GetCitiesByCountryResult:
-~~~
+
+```bash
 set jsonvals = ${res.xmlparse()};
-~~~
+```
 
 We can then loop around this parsed data, printing out the cities:
-~~~
+
+```bash
 for (i=0;$i\<${jsonvals.NewDataSet.Table.length()};i=$i+1) {
 
 echo "City=${jsonvals.NewDataSet.Table[$i].City}";
 
 }
-~~~
+```
+
 **See Also:**
 
 restful\_get(), restful\_post()

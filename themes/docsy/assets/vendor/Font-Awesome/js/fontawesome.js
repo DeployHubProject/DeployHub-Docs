@@ -681,7 +681,7 @@
     }
   }
   function htmlEscape(str) {
-    return "".concat(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return "".concat(str).replace(/&/g, '&amp;').replace(/"/g, '"').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
   function joinAttributes(attributes) {
     return Object.keys(attributes || {}).reduce(function (acc, attributeName) {
