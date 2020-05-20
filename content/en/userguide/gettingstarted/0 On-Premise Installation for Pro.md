@@ -1,7 +1,9 @@
 ---
 title: "DeployHub Pro On-Prem Installation"
 linkTitle: "DeployHub Pro On-Prem Installation"
-weight: 3
+weight: 4
+description: >
+  Installing DeployHub Pro On-premise.
 ---
 DeployHub Pro is installed locally using a Docker Image that includes all the necessary prerequisites. You will need to have Docker installed in order to run DeployHub on premise.
 

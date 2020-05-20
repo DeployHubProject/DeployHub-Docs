@@ -2,6 +2,8 @@
 title: "Basic Concepts"
 linkTitle: "Basic Concepts"
 weight: 1
+description: >
+  Understanding DeployHub Core Objects.
 ---
 
 ## DeployHub Core Objects
@@ -25,7 +27,7 @@ The lowest level Domain is a _Life Cycle Domain._ A Life Cycle Domain includes s
 ## Navigation
 All navigation is done via the left hand navigation menu. This menu will take you to Applicaiton, Component and Domain dashboards as well as the ability to setup Repositories, Data Sources, CD Engines and other objects.  
 
-## Right Hand Icons
+## Upper Right Hand Corner Icons
 
 - **Person Icon** : Clicking on the Person Icon in the group of icons on the upper far right displays information about the current User, which can be changed. A new password can also be entered for the User.
 

@@ -2,6 +2,8 @@
 title: "Environments"
 linkTitle: "Environments"
 weight: 7
+description: >
+  Adding Environments for Deployments.
 ---
 ## Environments
 

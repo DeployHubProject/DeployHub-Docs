@@ -1,9 +1,9 @@
 ---
-title: "Setup your Domains and Objects"
-linkTitle: "Set Up your Domains and Objects"
+title: "Setup"
+linkTitle: "Setup"
 weight: 12
 description: >
-  Defining Domains and other objects.
+  Setting up DeployHub with Domains, Repositories, Crendentials and other objects.
 ---
 
 

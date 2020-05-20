@@ -2,6 +2,8 @@
 title: "Release Trains"
 linkTitle: "Release Trains"
 weight: 80
+description: >
+  Deploying Groups of Applications.
 ---
 ## Release Trains
 

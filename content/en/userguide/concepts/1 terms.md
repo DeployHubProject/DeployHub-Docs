@@ -1,7 +1,9 @@
 ---
-title: "Terms"
-linkTitle: "Terms"
+title: "DeployHub 101"
+linkTitle: "DeployHub 101"
 weight: 2
+description: >
+  Getting a Handle on Basic DeployHub Terms and Concepts.
 ---
 
 ## DeployHub Terms
@@ -27,6 +29,7 @@ If you are an application developer, this will be where you do most of your work
 - **Application Version** : This child of the _Application Base Version_ represents changes and can be deployed just as an _Application Base Version_ is.
 
 ## Components
+DeployHub manages microservices and other reusable objects as _Components_.  _Components_ are assigned to an _Application_ eventhough they are managed independently.  By assigning _Components_ to _Applications_ you are able to track a 'logical"' view of your software solution.  In a monolithic approach, we performed this step at the software compile and linke step. In microservices, that step goes away. Microservices are loosely coupled and linked at run-time. Defining _Components_ to _Applications_ puts the _Application_ back in the picture, even if it is only a 'logical' view.
 
 If you are an API or microservice developer, this will be where you do most of your work. However, application developers may also define _Components_ that are to be used by only a specific _Application_. _Components_ are microservices (containers), Database updates or files_,_ along with Pre and Post _Actions_ that are used to control the deployment at a detailed level. By tracking the low-level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across team.
 

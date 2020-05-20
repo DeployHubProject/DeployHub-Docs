@@ -1,7 +1,7 @@
 ---
-title: "Working with Components and Applications"
-linkTitle: "Working with Components and Applications"
+title: "Components and Applications"
+linkTitle: "Components and Applications"
 weight: 14
 description: >
-  Defining your shareable Components and Consuming Applications
+  Defining your shareable Components and Consuming Applications.
 ---

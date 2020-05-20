@@ -1,11 +1,16 @@
 ---
-title: "Approvals"
-linkTitle: "Approvals"
+title: "Deployment Tasks"
+linkTitle: "Deployment Tasks"
 weight: 3
+description: >
+  Adding Deployment Tasks for a Pipeline Model.
 ---
-## Approvals
 
-You can Request and Approve tasks for Deployments using the _Request_ and _Approve Tasks_. These Tasks can be executed through a variety of methods:
+DeployHub understands a monolithic model as well as a microservice model.  In the traditional approach to deployments, Approvals and Promotions are common.  While we might move away from this in a microservice architecture, there still may be pipelines that require a microservice to be approved before it is pushed out to a particular cluster.  Following are Deployment Tasks that can be used to integrate into your pipeline. 
+
+## Request and Approvals
+
+You can _Request_ and _Approve_ Deployments to be moved to the next stage in a pipeline using the _Request_ and _Approve Tasks_. These Tasks can be executed through a variety of methods:
 
 - Right clicking on an _Application_ in the Applications tab under the Deploy menu and selecting the _Task_ from the resulting drop-down list. Normally, a deployment is run by a _User_ who has access to a _Deploy Task_, but sometimes the _Deploy Task_ needs to be run by someone who does not have access to it. This can be resolved using two additional _Tasks_: _Request_ and _Approve_. The _User_ can run a _Request Task_ to ask for access (via email) from another _User_. The _User_ with access then runs the _Approve Task_, which grants the requesting _User_ access to the _Deploy Task_.
 - The _Request Task_ contains a Linked Task field whose value is that of the _Deploy Task_.

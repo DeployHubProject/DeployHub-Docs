@@ -2,6 +2,8 @@
 title: "Data Source"
 linkTitle: "Data Source"
 weight: 20
+description: >
+  Managing Data Sources such as ODBC connections.
 ---
 ## Data Source
 

@@ -2,6 +2,8 @@
 title: "Pipelines"
 linkTitle: "Pipelines"
 weight: 42
+description: >
+  DeployHub and your Pipeline Process.
 ---
 ## Pipelines
 

@@ -2,6 +2,8 @@
 title: "Setting up DeployHub"
 linkTitle: "Setting up DeployHub"
 weight: 1
+description: >
+  The Steps Needed to Setup DeployHub for Your Organization.
 ---
 
 ## Setting up DeployHub

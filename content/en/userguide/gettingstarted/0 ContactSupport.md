@@ -1,7 +1,9 @@
 ---
 title: "Contact Support"
 linkTitle: "Contact Support"
-weight: 4
+weight: 5
+description: >
+  Where to go for technical support and information.
 ---
 
 Need help with configuring DeployHub? Think you found a bug? Or just want to chat about cool things like Kubernetes, Containers, and other DevOps realms? Reach out to us. We are focused on your success.

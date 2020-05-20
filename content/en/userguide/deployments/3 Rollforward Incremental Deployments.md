@@ -1,7 +1,9 @@
 ---
-title: "Roll Forward Incremental Deployments"
-linkTitle: "Roll Forward Incremental Deployments"
+title: "Roll Forward / Rollback Deployments"
+linkTitle: "Roll Forward / Rollback Deployments"
 weight: 7
+description: >
+  Incremental Roll Forward and Rollbacks.
 ---
 
 ## Roll Forward Incremental Deployments

@@ -2,6 +2,8 @@
 title: "Procedures and Functions"
 linkTitle: "Procedures and Functions"
 weight: 12
+description: >
+  Customizing your Deployments with Procedures and Functions.
 ---
 
 ## Procedures and Functions

@@ -2,6 +2,8 @@
 title: "Users and Groups"
 linkTitle: "Users and Groups"
 weight: 86
+description: >
+  Customizing User Groups.
 ---
 ## Defining _Users_ and _Groups_
 

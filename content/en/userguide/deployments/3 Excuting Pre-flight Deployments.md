@@ -2,6 +2,8 @@
 title: "Pre-Flight Deployments"
 linkTitle: "Pre-Flight Deployments"
 weight: 9
+description: >
+  Testing your Deployment with a Pre-Fight.
 ---
 
 ## Pre-flight Deployments

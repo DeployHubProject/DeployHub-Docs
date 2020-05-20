@@ -2,11 +2,13 @@
 title: "Domains"
 linkTitle: "Domains"
 weight: 2
+description: >
+  Learning About Domains and Creating Domains.
 ---
 
 ## Domains
 
-_Domains_ are used in DeployHub to catalog and publish public and private microservices and other reusable objects (web components, DB updates, etc.). Domains organize reusable objects based on your 'solution' spaces. Domains can represent functional areas such as 'security services' or departments, teams, and software projects. There are four types of Domains:
+_Domains_ are used to catalog and publish microservices and other reusable objects (web components, DB updates, etc.). Domains organize reusable objects based on a 'solution' space. Domains can represent functional areas such as 'security services' or departments, teams, and software projects. There are four types of Domains:
 
 _**Site Domain**_ | This is the highest-level organizational structure. For SaaS Users your Site Domain will be defaulted to the Project name you entered when you registered. You can rename your Site Domain if needed.
 On Premise InstallationYour default Site Domain name is 'Global.' You can rename your Site Domain if needed. 
@@ -15,42 +17,31 @@ _**Division Domains**_ | DeployHub Pro User can take advantage of Division Domai
 
 _**Project Domains**_ | You assign your software project to a Project Domain. You can create as many Project Domains as needed. Project Domains cannot have child Sub-Project Domains, but they do have Life Cycle Sub-Domains. 
 
-_**Life Cycle Sub-Domains**_ | This Sub-Domain defines the stages in your Delivery Pipeline and will map to your Continuous Delivery solution. Only Project Domains can have Life Cycle Sub-Domains. You create Life Cycle Sub-Domains to map to each stage in your continuous delivery Pipeline. Life Cycle Sub-Domains allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery Engine (Jenkins X, CircleCI, GitLab or GitHub Actions) to perform the continuous configuration management of your microservices and applictions across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign Tasks to your Life Cycle Sub-Domain to define a continuous delivery process within DeployHub. 
+_**Life Cycle Sub-Domains**_ | This Sub-Domain defines the stages in your Delivery Pipeline and will map to your Continuous Delivery solution. Only Project Domains can have Life Cycle Sub-Domains. You create Life Cycle Sub-Domains to map to each stage in your continuous delivery Pipeline. Life Cycle Sub-Domains allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery Engine (Jenkins X, CircleCI, GitLab or GitHub Actions) to perform the continuous configuration management of your microservices and applictions across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign Move, Approve and Request Tasks to your Life Cycle Sub-Domain to define a continuous delivery process within DeployHub. 
 
-You can create as many Life Cycle Sub-Domains as you need for each of your Project Domains. You can also rename Life Cycle Domains if your Pipeline changes. Lifecycle Sub-Domains can be dragged and dropped in their General tab to rearrange their top-to-bottom execution order within the Domain where they exist. Rearranging Lifecycle Sub-Domains allows users to manage and organize the visual representation of their Continuous Delivery Pipeline. Lifecycle Sub-Domains are represented by a circular multi-object icon under your Project Domain tree-structure. |
+You can create as many Life Cycle Sub-Domains as you need for each of your Project Domains. You can also rename Life Cycle Domains if your Pipeline changes. Lifecycle Sub-Domains can be dragged and dropped in their General tab to rearrange their top-to-bottom execution order within the Domain where they exist. Rearranging Lifecycle Sub-Domains allows users to manage and organize the visual representation of their Continuous Delivery Pipeline. Lifecycle Sub-Domains are represented by a circular multi-object icon under your Project Domain tree-structure. 
 
 ## Top Down Domain Structure
 
-A _Sub Domain_ inherits all the access properties from its parent _Global Domain_. Any child _Divisional Domains_ will inherit its parent _Divisional Domain&#39;s_ access rights. This continues down through all _Project Domains_ and _Life Cycle Sub-Domains_. All inherited access properties are shown within the Access lists with each _Group_ name highlighted in yellow. All _Group_s in lists that were added in that _Domain_, and not inherited, will be shown in the list without highlighting.
-
-## Life Cycle Sub-Domains and your Delivery Pipeline
-
-The Delivery Pipeline contains all information for a _Domain_ concerning the deployment of Applications and their movement through the _Life Cycle Sub-Domains_ contained within. It is designed to show and keep track of the procession of _Applications_ through the continuous delivery pipeline, as well as the deployment of _Applications_ into _Environments_. Keep in mind that when dealing with software lifecycles within DeployHub, parent Domains contain Lifecycle Domains, and these contain Applications and Environments. The Move, Deploy, and Request Tasks discussed in this section are utilized in the tree structure by right clicking on the Applications within Lifecycle Domains. The results are viewed in the Delivery Pipeline tab for the parent Domain.
+A _Sub Domain_ inherits all the access properties from its parent _Domain_. This inheritance continues down through all _Divisional Domains_,  _Project Domains_ and _Life Cycle Sub-Domains_. All inherited access properties are shown within the Access lists.
 
 ## Creating and Deleting Domains
 
-**New Divisional Domain:** ( **DeployHub Pro** only) Go to the _Domains_ Menu tab. To create a _Divisional Domain_ right click on your _Global Domain_ at the top of the DeployHub window. Select the &quot;_Create new Sub-Domain in this Domain_.&quot; A new _Divisional Domain_ will be created with a default name. Click on the pencil icon on the far right to edit it, including the name.
+**New Divisional Domain** | ( **DeployHub Pro** only) Go to the _Domains_ Menu tab. To create a _Divisional Domain_ right click on your _Global Domain_ at the top of the DeployHub window. Select the &quot;_Create new Sub-Domain in this Domain_.&quot; A new _Divisional Domain_ will be created with a default name. Click on the pencil icon on the far right to edit it, including the name.
 
-**New Project Domain:** Go to the _Domains_ Menu tab. To create a _Project Domain_ right click on your _Divisional Domain_ at the top of the DeployHub window. Select the &quot;_Create new Sub-Domain in this Domain_.&quot; A new _Project Domain_ will be created with a default name. Click on the pencil icon on the far right to edit it, including the name.
+**New Project Domain** | Go to the _Domains_ Menu tab. To create a _Project Domain_ right click on your _Divisional Domain_ at the top of the DeployHub window. Select the &quot;_Create new Sub-Domain in this Domain_.&quot; A new _Project Domain_ will be created with a default name. Click on the pencil icon on the far right to edit it, including the name.
 
-**Delete this**_**Sub-Domain**_: Go to the _Domains_ Menu tab. Select the Domain that you want to Delete. Right click on the Domain for the &quot;Delete this Sub-Domain&quot; option. A message box will appear showing the objects that are associated with the _Sub-Domain_ that prevent it from being deleted.
+**Delete** _**Sub-Domain**_ | Go to the _Domains_ Menu tab. Select the Domain that you want to Delete. Right click on the Domain for the &quot;Delete this Sub-Domain&quot; option. A message box will appear showing the objects that are associated with the _Sub-Domain_ that prevent it from being deleted.
 
-## Deployment Engines and Domains
 
-Deployment engines do the heavy lifting of transferring files to _Endpoints_ and performing the installation logic.
-
-- For On-Premises Users - The _Engine Hostname_ field defaults to &#39;Default Engine&#39;, which tells DeployHub to use that deployment engine for that _Domain_ and _Sub-Domain_, unless defined at the _Sub-Domain_ level. The name can be changed to a different deployment engine.
-- For SaaS users - your reverse proxy runs your deployment engine. If you need multiple deployment engines, contact support for the installers.
-
-Multiple deployment engines can be used to distribute the deployment processing for large data centers with hundreds of _Endpoints._ Each _Domain_ can be assigned a unique deployment engine. From the _Domain__General_ tab, the _Engine Host Location_ refers to the location of the process that executes the deployment&#39;s installation activities_._ You can install the deployment engineon separate host servers to distribute the workload across multiple host locations, and the high-level _Domains_ and child _Sub-Domains_ can all have unique engines. All deployments to the _Environments_ defined to the _Domain_ and its _Sub-Domains_ will be processed by the host engine defined at that level.
 
 ## Editing a Domain or Sub-Domain
 
 To the right of the tree structure are several tabs which allow the _User_ to view and edit the _Domains_ attributes. These are explained below, along with the fields contained in each tab, and an explanation for the use and functions of each.
 
-## Tasks Tab
+## Tasks
 
-_Domains_ can have _Tasks_ assigned to manage the _Application Versions_ contained within. _Tasks_ are most commonly assigned to the _Life Cycle Sub-Domains_ and are most commonly used to define a continuous delivery process. _Tasks_ can be assigned to any _Domain_ or _Sub-Domain. Task_ execution rights can be assigned to _User Groups_. Only users who are members of one or more of the assigned _User Group(s)_ can execute the _Task_. **DeployHub Team** has no execution rights over _Task_s.
+_Domains_ can have _Tasks_ assigned to manage the _Application Versions_ contained within. _Tasks_ are most commonly assigned to the _Life Cycle Sub-Domains_ and are most commonly used to define a continuous delivery process. _Tasks_ can be assigned to any _Domain_ or _Sub-Domain. Task_ execution rights can be assigned to _User Groups_. Only users who are members of one or more of the assigned _User Group(s)_ can execute the _Task_. **DeployHub Team** has no execution rights over _Tasks_.
 
 _Tasks_ are defined for each _Domain_. By checking the _Available in Sub-Domains_ checkbox then the _Task_ is made available to every _Sub-Domain_ or _Life Cycle Sub-Domain_ below the _Task&#39;s Domain_ in the hierarchy.
 
@@ -94,11 +85,11 @@ You can create as many _Tasks_ as necessary in a _Domain_ or _Life Cycle Sub-Dom
 | **Failure Notification Template** | Notification to be sent if the Task fails. |
 | **Action to Run** | For Run Action Tasks, the action to execute when the Task is run. |
 
-All _Task_s created are available in a drop-down list using a right mouse click from the _Component_, _Application,_ or _Release_ tree structure. This allows you to perform these actions against a _Component Version_, _Application Version_ or a _Release Version_. Run Action _Tasks_ can also be invoked by right-clicking on the _Domain_ or _Life Cycle Sub-Domain_.
+All _Tasks_ created are available in a drop-down list using a right mouse click from the _Component_, _Application,_ or _Release_ tree structure. This allows you to perform these actions against a _Component Version_, _Application Version_ or a _Release Version_. Run Action _Tasks_ can also be invoked by right-clicking on the _Domain_ or _Life Cycle Sub-Domain_.
 
 ## Pre and Post Task Actions
 
-Assigning Pre-Actions and Post-Actions to _Task_s adds versatility to them, allowing such things as prerequisite checking and clean-up operations to take place before and after the execution of a _Task._ You can create any type of _Action_ by going to the Flows Menu option and adding an _Action._ Any _Actions_ created for the _Domain_ and any _Parent Domains_ will be available in the Pre and Post Action drop down box.
+Assigning Pre-Actions and Post-Actions to _Tasks_ adds versatility to them, allowing such things as prerequisite checking and clean-up operations to take place before and after the execution of a _Task._ You can create any type of _Action_ by going to the Flows Menu option and adding an _Action._ Any _Actions_ created for the _Domain_ and any _Parent Domains_ will be available in the Pre and Post Action drop down box.
 
 A Pre-Action will be executed before the _Task_ is run. If the pre-action fails in some way (either by returning a non-zero exit code or by aborting) then the _Task_ is not executed. This can be used for validity checking.
 
@@ -108,7 +99,7 @@ A Post-Action will be executed after the _Task_ is run. The Post-Action is alway
 
 Once a _Task_ is defined, it must be granted execute access before it can be invoked. To do this, select the _Task_ from the _Tasks in this Domain_ area and drag the desired User Group(s) from the _Available Groups_ column to the _Group Access_ area. Users who are members of the User Group(s) in the _Group Access_ area will be allowed to execute the specified task.
 
-Keep in mind that _Group_s are assigned authority on a _Task_ by _Task_ basis, so that it is possible for a _Domain_ to have two different _Task_s that perform the same function, one of which allows a particular _Group_ to run the _Task_, and the other which doesn&#39;t. This allows similar _Task_s to be created that have different characteristics assigned to them such as Pre-Actions and/or Post-Actions, Notification Templates, etc., with different _User Group_s having authority to run them.
+Keep in mind that _Group_s are assigned authority on a _Task_ by _Task_ basis, so that it is possible for a _Domain_ to have two different _Tasks_ that perform the same function, one of which allows a particular _Group_ to run the _Task_, and the other which doesn&#39;t. This allows similar _Tasks_ to be created that have different characteristics assigned to them such as Pre-Actions and/or Post-Actions, Notification Templates, etc., with different _User Group_s having authority to run them.
 
 Example: A _Group_ is given the ability to run a Move _Task_ which moves an _Application Version_ from the Test _Lifecycle State_ to the Production _Lifecycle State_, but a _Group_ consisting of testers does not have the ability to run that same _Task_.
 
@@ -159,4 +150,4 @@ In order to create a _Life Cycle Sub-Domain_, edit the _Sub-Domain_ by highlight
 ## Access Options
 _Domains_, their contents and their _Sub-Domains_ are protected from unauthorized use and change via their _Access_ options. There are four options, each of which grants a different type of access to _User_s who belong to the _User Group_s contained in the list. A fifth list contains a list of all _User Group_s, which can be dragged and dropped into each of the other four lists. By default the _Everyone_ Groupis assigned to each group at the GLOBAL domain level and this permission is then inherited by all _Sub-Domains_ and _Lifecycle States_. To restrict Access, remove the _Everyone_ Group from the desired Group list, and add only the Groups that should be given the appropriate access to the _Domain_.
 
-{{% include "/resuable/Access Object.md" %}}
+{{% include "userguide/reusable/Access Object.md" %}}

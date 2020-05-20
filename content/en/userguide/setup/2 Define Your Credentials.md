@@ -2,6 +2,8 @@
 title: "Credentials"
 linkTitle: "Credentials"
 weight: 3
+description: >
+  Adding Credentials for Accessing Repositories and Performing Deployments.
 ---
 
 ## Credentials

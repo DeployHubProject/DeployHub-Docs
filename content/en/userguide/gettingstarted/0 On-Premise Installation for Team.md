@@ -1,7 +1,9 @@
 ---
 title: "DeployHub Team On-Premise Installation"
 linkTitle: "DeployHub Team On-Premise Installation"
-weight: 2
+weight: 3
+description: >
+  Installing DeployHub Team on-premise.
 ---
 
 DeployHub Team is installed locally using a Docker Image that includes all the necessary prerequisites. In other words, you need Docker installed.

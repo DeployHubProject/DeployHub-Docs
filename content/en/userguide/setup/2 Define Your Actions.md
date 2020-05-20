@@ -2,6 +2,8 @@
 title: "Actions"
 linkTitle: "Actions"
 weight: 11
+description: >
+  Understanding and Adding Actions for Deployments such as Helm Charts.
 ---
 
 ## Actions

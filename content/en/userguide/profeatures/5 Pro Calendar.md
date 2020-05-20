@@ -2,6 +2,8 @@
 title: "Smart Calendar"
 linkTitle: "Smart Calendar"
 weight: 84
+description: >
+  Using the Smart Calendar to schedule deployments.
 ---
 ## Smart Calendar
 

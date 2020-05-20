@@ -2,6 +2,8 @@
 title: "Executing Deployments On-demand"
 linkTitle: "Executing Deployments On-demand"
 weight: 5
+description: >
+  Executing On-Demand Deployments.
 ---
 ## Executing Deployments On-demand
 
