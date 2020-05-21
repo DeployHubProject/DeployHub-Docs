@@ -241,7 +241,7 @@ Remove the default `list-style` and left margin on list items (immediate childre
   <li>Integer molestie lorem at massa</li>
   <li>Facilisis in pretium nisl aliquet</li>
   <li>Nulla volutpat aliquam velit
-    <ul>
+    <ul style="list-style-type: none;">
       <li>Phasellus iaculis neque</li>
       <li>Purus sodales ultricies</li>
       <li>Vestibulum laoreet porttitor sem</li>

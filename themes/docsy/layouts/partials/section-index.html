@@ -5,7 +5,7 @@
     {{/* If no_list is true we don't show a list of subpages */}}
     {{ else if $parent.Params.simple_list }}
     {{/* If simple_list is true we show a bulleted list of subpages */}}
-        <ul>
+        <ul style="list-style-type: none;">
             {{ range $pages }}
                 {{ if eq .Parent $parent }}
                     <li><a href="{{ .RelPermalink }}">{{- .Title -}}</a></li>

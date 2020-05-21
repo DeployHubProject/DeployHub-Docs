@@ -14,17 +14,18 @@ For releasing _Components_, DeployHub uses an agentless architecture that is des
 
 ## Application and Component Overview
 
-Unique to DeployHub is its ability to version and map the individual parts of a software _Application._ An _Application_ is a complete software solution that is comprised of individual _Components._ For example, if you are a bank, you might have a Teller _Application_ made up of hundreds of microservices. In DeployHub terms, the Teller _Application_ is one software solution or &#39;Application&#39; regardless of the number of _Components_ it consumes. _Applications_ and _Components_ are assigned to a Domain.
+Unique to DeployHub is its ability to version and map the individual parts of a software _Application._ An _Application_ is a complete software solution that is comprised of individual _Components._ For example, if you are a bank, you might have a Teller _Application_ made up of hundreds of microservices. In DeployHub terms, the Teller _Application_ is one software solution or 'Application' regardless of the number of _Components_ it consumes. _Applications_ and _Components_ are assigned to a Domain.
 
 ## Domain Catalog Overview
 
 DeployHub is unique in the way in incorporates the use of a Domain Catalog to support a microservice domain driven design. Domains are used to organize and share microservices across teams reducing redundant coding and encouraging reuse.
 
-DeployHub organizes your shared or private microservices and reusable components via Domains. Domains support the creation of catalogs where developers can go to find and share reusable objects of any type (microservices, scripts, web components, SQL.) Domains are defined to meet your unique requirements as no two organizations are alike in terms of structure. Domains are organized based on &#39;problem spaces,&#39; geographical divisions, and security. Building a Domain Driven Design is a key step in achieving a successful microservices implementation. Without Domains, microservices and reusable objects are not easily shared across teams.
+DeployHub organizes your shared or private microservices and reusable components via Domains. Domains support the creation of catalogs where developers can go to find and share reusable objects of any type (microservices, scripts, web components, SQL.) Domains are defined to meet your unique requirements as no two organizations are alike in terms of structure. Domains are organized based on 'problem spaces,' geographical divisions, and security. Building a Domain Driven Design is a key step in achieving a successful microservices implementation. Without Domains, microservices and reusable objects are not easily shared across teams.
 
 The lowest level Domain is a _Life Cycle Domain._ A Life Cycle Domain includes steps that can integrate with your external Continuous Delivery (CD) Pipeline orchestration tools.
 
 ## Navigation
+
 All navigation is done via the left hand navigation menu. This menu will take you to Applicaiton, Component and Domain dashboards as well as the ability to setup Repositories, Data Sources, CD Engines and other objects.  
 
 ## Upper Right Hand Corner Icons
@@ -42,7 +43,7 @@ All navigation is done via the left hand navigation menu. This menu will take yo
 - **Global Reports** : These are a series of reports.
 
   - _Endpoint_ Inventory Report: This list of the assets deployed to each _Endpoint_ in the system, including _Files, Components, Applications, Environments, Dates,_ and _Users._
-  - File Audit Trace: Allows for the selection of a file on the local user&#39;s machine, and returns all related deployments as well as Dates, _Applications_, _Components_, and _Endpoints_.
+  - File Audit Trace: Allows for the selection of a file on the local user's machine, and returns all related deployments as well as Dates, _Applications_, _Components_, and _Endpoints_.
   - Audit of the files deployed to _Endpoints_: This report shows the differences between the files on _Endpoints_ compared to what was deployed.
   - Success/Failed Deployments per _Environment_ Report: The number of successful and failed deployments per _Environment._ It includes the Deployment Number, _Environment_ deployed to, _Application_ and _Components,_ date deployed, and each _Endpoint_ deployed to along with all files.
 

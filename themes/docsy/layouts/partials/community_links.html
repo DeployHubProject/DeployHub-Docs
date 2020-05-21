@@ -19,7 +19,7 @@
 </section>
 
 {{ define "community-links-list" }}
-<ul>
+<ul style="list-style-type: none;">
  {{ range . }}
  <li title="{{ .name }}">
    <a target="_blank" href="{{ .url }}"><i class="{{ .icon }}"></i> {{ .name }}:</a> {{ .desc }}

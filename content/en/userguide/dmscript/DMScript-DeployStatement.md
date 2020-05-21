@@ -8,7 +8,7 @@ description: >
 
 _Deploy_ checkouts and transfers files to the target _Endpoint_(s). The operation of deploy differs depending on what is currently on the stack.
 
-With no parameters, deploy simply deploys the _Component_ currently on the stack to the _Component_&#39;s associated _Endpoint_(s). This requires both a _Component_ and a target _Environment_ to be on the stack. This will be the case during a pre, post, or custom action for a _Component_. You can push a _Component_ onto the stack using the using _Component_ statement. You can push an _Environment_ onto the stack using the using _Environment_ statement.
+With no parameters, deploy simply deploys the _Component_ currently on the stack to the _Component_'s associated _Endpoint_(s). This requires both a _Component_ and a target _Environment_ to be on the stack. This will be the case during a pre, post, or custom action for a _Component_. You can push a _Component_ onto the stack using the using _Component_ statement. You can push an _Environment_ onto the stack using the using _Environment_ statement.
 
 _deploy_ takes the following parameter:
 

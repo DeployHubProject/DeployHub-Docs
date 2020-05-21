@@ -52,7 +52,7 @@ checkout(repository: "Openmake\_Demo.demorep2",pattern: "demo1.zip");
 
 set filelist = ${_DropZone_.files};
 
-echo "file size = ${filelist[&#39;demo1.zip&#39;].size}";
+echo "file size = ${filelist['demo1.zip'].size}";
 
 using stream $mystream {
 

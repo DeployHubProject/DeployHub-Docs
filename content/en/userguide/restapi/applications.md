@@ -10,11 +10,11 @@ description: >
 
 # Get a List Applications
 
-### Description:
+### Description
+
 This call returns an array of JSON objects representing each application to which the logged-in user has access.
 
 If the all parameter is not specified then only the applications associated with the user's home domain are listed. If the all parameter is specified and is set to "y" then the result includes the applications included in any accessible sub-domains.
-
 
 ### Parameters
 
@@ -30,15 +30,13 @@ If the all parameter is not specified then only the applications associated with
 
 ### /dmadminweb/API/application/{identifier}
 
-
 ## Retrieve specific application or application version
 
-### Description:
+### Description
 
 This call returns a JSON object representing the specified application.
 
 Note, the resulting JSON will vary slightly depending on whether the specified application is a BASE application or an application version.
-
 
 ### Parameters
 
@@ -59,12 +57,11 @@ Note, the resulting JSON will vary slightly depending on whether the specified a
 
 # Create New Application Version
 
-### Description:
+### Description
 
-This call creates a new version of an application. The new application inherits all the attributes of the predecessor application. In order for this to work through the permission model, there has to be a Create Version task either in the domain in which the specified application is located or in any of the parent domains if the Create Version task is set to be available to sub-domains. If finer control is required, the task can be named via the task parameter. 
+This call creates a new version of an application. The new application inherits all the attributes of the predecessor application. In order for this to work through the permission model, there has to be a Create Version task either in the domain in which the specified application is located or in any of the parent domains if the Create Version task is set to be available to sub-domains. If finer control is required, the task can be named via the task parameter.
 
 This mechanism ensures that the invoking user has permission to create a new version of the application (since the permissions are checked against the task) and also the target domain (i.e. the domain in which the new application is created) is determined from the task. Also, by specifying the task to execute, any pre and post link actions are executed just as if the task had been invoked via the Web UI.
-
 
 ##### Parameters
 
@@ -82,14 +79,14 @@ This mechanism ensures that the invoking user has permission to create a new ver
 ### /dmadminweb/API/new/replace/{app_id}/{old_comp_id}/{new_comp_id}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Replace a Component within an Application
 
-##### Description:
+##### Description
 
 This call replaces a specific Component within an Application. You can use this to update the version of a Component within an Application by replacing the old Component Version with the new.
-
 
 ##### Parameters
 
@@ -108,17 +105,17 @@ This call replaces a specific Component within an Application. You can use this 
 ### /dmadminweb/API/approve/{app_id}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Approving an Application
 
-##### Description:
+##### Description
 
 This call allows the API to approve/reject an application for a specified domain.
-In order for this to work through the permission model, there has to be a Approve task either in the domain in which the specified application is located or in any of the parent domains if the Approve task is set to be available to sub-domains. If finer control is required, the task can be named via the task parameter. 
+In order for this to work through the permission model, there has to be a Approve task either in the domain in which the specified application is located or in any of the parent domains if the Approve task is set to be available to sub-domains. If finer control is required, the task can be named via the task parameter.
 
 This mechanism ensures that the invoking user has permission to approve the application (since the permissions are checked against the named task) and also the target domain (i.e. the domain to which the application is being approved/rejected) is determined from the task. Also, by specifying the task to execute, any pre and post link actions are executed just as if the task had been invoked via the Web UI.
-
 
 ##### Parameters
 
@@ -138,14 +135,14 @@ This mechanism ensures that the invoking user has permission to approve the appl
 ### /dmadminweb/API/assign/application/{app_id}/{env_id}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Associate an Application to an Environment
 
-##### Description:
+##### Description
 
 This call associates an existing application with an environment. This association allows the application (or any of its versions) to be deployed to that environment. An application needs to be assigned to an environment before it can be deployed to that environment.
-
 
 ##### Parameters
 
@@ -163,16 +160,16 @@ This call associates an existing application with an environment. This associati
 ### /dmadminweb/API/unassign/application/{app_id}/{env_id}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Disassociate an Application from an Environment
 
-##### Description:
+##### Description
 
 This call disassociates an application from an environment. Once the application has been disassociated from the environment neither it nor any of its versions can be deployed to that environment.
 
 Disassociating an application from an environment does not physically remove the application from the environment. It simply prevents deploying any version of the application to the environment.
-
 
 ##### Parameters
 

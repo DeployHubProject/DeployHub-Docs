@@ -34,11 +34,11 @@ echo "a was 1 or something else";
 Here is an example of catching a parse error when converting an XML document into an Array. If the try/catch were not in place, the parse error would throw an exception and end the script.
 
 ```bash~
-set test="\&lt;a\&gt;\&lt;b\&gt;hello\&lt;/b\&gt;\&lt;b\&gt;goodbye\&lt;/b\&gt;";
+set test="<a><b>hello</b><b>goodbye</b>";
 
 try {
 
-// This will fail as there is no closing \&lt;/a\&gt; tag.
+// This will fail as there is no closing </a> tag.
 
 set jsonvals = ${test.xmlparse()};
 

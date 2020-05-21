@@ -18,7 +18,7 @@ _Domains_ also include _Tasks_. _Tasks_ include Move, Approve, Version and Deplo
 
 _Domains_ have _Sub-Domains_. Sub-Domains inherit the characteristics of their parent _Domain_. _Sub-Domains_ can override their parent configurations. The lowest level Sub-Domain is _a Life Cycle Sub-Domain._
 
-_Life Cycle Sub-Domains_ allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery engine (Jenkins, Bamboo, GitLab, CircleCI, Puppet Relay, Google CloudBuild or GitHub Actions) to perform the continuous deployment task across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign _Tasks_ to your _Life Cycle Sub-Domain_ to define a continuous deployment &#39;promotion&#39; process within DeployHub.
+_Life Cycle Sub-Domains_ allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery engine (Jenkins, Bamboo, GitLab, CircleCI, Puppet Relay, Google CloudBuild or GitHub Actions) to perform the continuous deployment task across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign _Tasks_ to your _Life Cycle Sub-Domain_ to define a continuous deployment 'promotion' process within DeployHub.
 
 ## Applications
 
@@ -60,7 +60,7 @@ DeployHub uses a simple versioning number schema starting at 1 and incrementing 
 
 ## Release
 
-A _Release_ is only available in **DeployHub Pro**. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a &#39;Release Train.&#39;
+A _Release_ is only available in **DeployHub Pro**. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a 'Release Train.'
 
 ## Continuous Configuration Management
 
@@ -74,21 +74,21 @@ DeployHub tracks each time a _Component_ is assigned to an _Application_. _Compo
 
 ## Repository
 
-Each _Component_ contains a pointer to where an artifact is stored in a _Repository_ or on a file system. When DeployHub performs the pre-deployment steps, it will retrieve the artifact from any location you specify. It pulls that artifact from the repository and creates a deployment package at deployment runtime. For this reason, it doesn&#39;t need to store the actual artifact in the DeployHub versioning engine. Each _Component_ is defined with a _Repository_ reference. Your _Repository_ can be any versioning solution such as Git, or a container registry such as Quay. A _Repository_ can also reference a file system.
+Each _Component_ contains a pointer to where an artifact is stored in a _Repository_ or on a file system. When DeployHub performs the pre-deployment steps, it will retrieve the artifact from any location you specify. It pulls that artifact from the repository and creates a deployment package at deployment runtime. For this reason, it doesn't need to store the actual artifact in the DeployHub versioning engine. Each _Component_ is defined with a _Repository_ reference. Your _Repository_ can be any versioning solution such as Git, or a container registry such as Quay. A _Repository_ can also reference a file system.
 
 ## Environments and Endpoints
 
-DeployHub releases an _Application Version_ to numerous container, virtual and physical _Endpoints_ simultaneously through the use of _Environments_. An _Environment_ is a DeployHub object which acts as a collection of _Endpoints_. An _Endpoint_ is a DeployHub object that represents a single container, virtual image, or physical server in an enterprise&#39;s IT environment targeted for deployment. An _Endpoint_ can be assigned many different _Environments_, and an _Environment_ can contain many different _Endpoints_.
+DeployHub releases an _Application Version_ to numerous container, virtual and physical _Endpoints_ simultaneously through the use of _Environments_. An _Environment_ is a DeployHub object which acts as a collection of _Endpoints_. An _Endpoint_ is a DeployHub object that represents a single container, virtual image, or physical server in an enterprise's IT environment targeted for deployment. An _Endpoint_ can be assigned many different _Environments_, and an _Environment_ can contain many different _Endpoints_.
 
 ## Component Types and Endpoint Mapping
 
 Each _Component_ is assigned a _Type_ attribute. The _Type_ attribute allows you to specify to what kind of _Endpoint_ that the _Component_ should be installed. For example, a Database _Component_ is installed onto an _Endpoint_ that has the corresponding Database _Type_ definition. A _Component_ is assigned a single _Type_, while an _Endpoint_ can be assigned multiple _Types_. For example, if your single _Endpoint_ needed to have both a database and your application binaries installed, it would be assigned both a 'Database' and an 'Binary' _Type_ attribute.
 
-Mapping of _Component_ to _Endpoints_ is accomplished by assigning one or more _Component Types_ to each _Endpoint_ and assigning a single _Type_ attribute to the _Component._ When an _Application_ is deployed, each _Component_ within the _Application_ will be deployed to each _Endpoint_ if the _Component&#39;s __Type_ attribute matches one of the _Endpoint&#39;s__ Types_ attributes. DeployHub ships with standard Endpoint Types and allows you to define custom _Type_ attributes.
+Mapping of _Component_ to _Endpoints_ is accomplished by assigning one or more _Component Types_ to each _Endpoint_ and assigning a single _Type_ attribute to the _Component._ When an _Application_ is deployed, each _Component_ within the _Application_ will be deployed to each _Endpoint_ if the _Component's __Type_ attribute matches one of the _Endpoint's__ Types_ attributes. DeployHub ships with standard Endpoint Types and allows you to define custom _Type_ attributes.
 
 ## Actions
 
-You create reusable deployment models using _Actions. Actions_ are made up of _Procedures, Functions,_ and other _Actions._ These are placed into an _Action&#39;s_ Workflow and connected in a logical way so that any portion of a deployment can be controlled in detail. _Actions_ can be assigned to _Tasks, Applications_, _and Components_ as _Pre-Actions_ and _Post-Actions_. _Pre_ and _Post-Actions_ are executed before and after a _Task_ is run, before and after an _Application Version_ is deployed, and before and after a _Component Version_ is deployed. Custom _Actions_ replace the normal execution of deployments for _Applications_ and _Components._ This allows for complete control of a deployment at every level.
+You create reusable deployment models using _Actions. Actions_ are made up of _Procedures, Functions,_ and other _Actions._ These are placed into an _Action's_ Workflow and connected in a logical way so that any portion of a deployment can be controlled in detail. _Actions_ can be assigned to _Tasks, Applications_, _and Components_ as _Pre-Actions_ and _Post-Actions_. _Pre_ and _Post-Actions_ are executed before and after a _Task_ is run, before and after an _Application Version_ is deployed, and before and after a _Component Version_ is deployed. Custom _Actions_ replace the normal execution of deployments for _Applications_ and _Components._ This allows for complete control of a deployment at every level.
 
 ## Functions and Procedures
 
@@ -119,7 +119,7 @@ The _Audit_ _Trail_ contains a complete audit history of any changes applied to 
 
 ## Subscribing
 
-You can subscribe to _Environments, Endpoints, Applications_, and _Components_. If your _User Group_ has &#39;Read&#39; access to these objects, you can subscribe to follow the activity and changes of any of these objects.
+You can subscribe to _Environments, Endpoints, Applications_, and _Components_. If your _User Group_ has 'Read' access to these objects, you can subscribe to follow the activity and changes of any of these objects.
 
 ## Reverse Proxy
 

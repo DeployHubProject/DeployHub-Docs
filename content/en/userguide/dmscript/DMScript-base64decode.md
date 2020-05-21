@@ -34,7 +34,7 @@ Integer: The length of the decoded data. The decoded data is written to the stre
 
 // Encode a String into Base 64
 
-echo "Hello DeployHub!" \&gt;\&gt; $teststream;
+echo "Hello DeployHub!" >> $teststream;
 
 set b64 = ${teststream.base64encode()};
 

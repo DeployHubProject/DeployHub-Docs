@@ -43,7 +43,6 @@ _2) Retrieve a User specifying the enclosing domain:_
 set user1 = getuser("Project1.User1");
 
 Further descriptions of User Objects are found in the high level section named _DMScript_ Objects, in the section named User.
- 
 
 **See Also:**
 

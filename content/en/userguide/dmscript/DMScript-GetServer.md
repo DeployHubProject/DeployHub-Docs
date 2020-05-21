@@ -34,8 +34,6 @@ _2) Retrieve an Endpoint specifying the enclosing domain:_
 
 set server1 = getserver("Project1.Server1");
 
-
 Further descriptions of _Endpoint_ Objects are found in the high level section named _DMScript_ Objects, in the section named _Endpoint_s.
- 
 
 **See Also:**

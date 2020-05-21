@@ -34,9 +34,7 @@ _2) Retrieve an Environment specifying the enclosing domain:_
 
 set uatenv = get_Environment_("Project1.UAT\_Env1");
 
-
 Further descriptions of _Environment_ Objects are found in the high level section named _DMScript_ Objects, in the section named _Environment_.
-
 
 **See Also:**
 

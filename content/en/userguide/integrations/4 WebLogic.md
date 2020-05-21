@@ -18,7 +18,7 @@ Download the three files from the Google link. Place the deploywl.sh into the $D
 - Click on the _Flows_ menu.
 - Click on the _Functions_ and _Procedures_ tab
 - Click on a Domain and select "_Import a Function or Procedure into this Domain_".
-- Click the &#39;Choose File&#39; button to navigate to the directory where the .re files are located.
+- Click the 'Choose File' button to navigate to the directory where the .re files are located.
 - Select the export\_WeblogicCredential.re file and click the Open button.
 - Click the Import button.
 - Repeat for the _export\_WeblogicDeploy.re_ file.
@@ -34,6 +34,6 @@ Notice there are now two new _Procedures_ in the _Domain_, named "WebLogicCreden
 - Click and drag the _Procedure_ named "WebLogicDeploy" onto the Workspace.
 - Right click on the _Procedure(s)_ in the Workflow and fill in the parameters for each one according to the definitions on the Google Groups page.
 
-Note: the WebLogicCredential Procedure can be left out of the Workspace if the WebLogicDeploy Procedure&#39;s username and password fields will be used to access the Weblogic server. Otherwise the selected Credential within the WebLogicCredential Procedure should contain the appropriate username and password.
+Note: the WebLogicCredential Procedure can be left out of the Workspace if the WebLogicDeploy Procedure's username and password fields will be used to access the Weblogic server. Otherwise the selected Credential within the WebLogicCredential Procedure should contain the appropriate username and password.
 
-Place the _Action_ within the _Application&#39;s Post Action_ field. The _Application_ should contain one or more _Components_ that have one or more _Component__Items_ that reference the artifacts that make up the Weblogic application. The _Application_ deploys its artifacts to the Weblogic server, and the Post _Action_ performs the installation.
+Place the _Action_ within the _Application's Post Action_ field. The _Application_ should contain one or more _Components_ that have one or more _Component__Items_ that reference the artifacts that make up the Weblogic application. The _Application_ deploys its artifacts to the Weblogic server, and the Post _Action_ performs the installation.

@@ -30,7 +30,7 @@ url: Is the URL to GET.
 
 Array: Associative array containing the JSON/XML returned from the RESTful get. If the returned data is encoded with XML then it is converted into the array structure using the rules outlined for xmlparse above.
 
-restful\_get can be used to post requests to DeployHub&#39;s own API.
+restful\_get can be used to post requests to DeployHub's own API.
 
 **Example:**
 

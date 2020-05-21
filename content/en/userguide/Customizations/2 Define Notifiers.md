@@ -20,7 +20,7 @@ In order to create a _Notifier_, go to the _Flows_ menu. Select the _Notifier_ t
 
 ## Editing and Deleting a Notifier
 
-To the right of the tree structure are several tabs which allow the _User_ to modify _Notifier_s. The General tab shows a summary of the _Notifier&#39;s_ configuration. You can edit information in the _Notifier&#39;s_ General tab by clicking on the pencil icon in the upper right-hand corner of the window. You can also delete a _Notifier_ by right clicking on the _Notifier_ in the tree structure and selecting the &#39;Delete&#39; option.
+To the right of the tree structure are several tabs which allow the _User_ to modify _Notifier_s. The General tab shows a summary of the _Notifier's_ configuration. You can edit information in the _Notifier's_ General tab by clicking on the pencil icon in the upper right-hand corner of the window. You can also delete a _Notifier_ by right clicking on the _Notifier_ in the tree structure and selecting the 'Delete' option.
 
 ## Properties Tab
 
@@ -35,7 +35,7 @@ _Mailport_: The port that receives email on the mail server. Typically 26, but i
 _Password:_ The password for the mail server.
 _Username_: The user name for the mail server.
 _Logfile_: Location of the logfile.
-If the Type field has been set to &#39;txtlocal&#39;, then only &#39;from&#39;, &#39;password&#39;, and &#39;username&#39; appear in the Name field:
+If the Type field has been set to 'txtlocal', then only 'from', 'password', and 'username' appear in the Name field:
 Available options for HipChat:
 _webhook_: The url for the group chat, topic chat, or chat room.
 _HTML_: Sends messages in HTML format.
@@ -47,7 +47,7 @@ _logfile_: Location of the logfile on the server that is running DeployHub.
  |
 | _**Value**_ | The actual value for the property that was selected from the Name field. |
 | _**Encrypted**_ | Checkbox that indicates that the value is to be encrypted in the DeployHub database. |
-| _**Override**_ | Checkbox that indicates the property can be changed. This is used for &#39;scripted&#39; notifications where the action editor includes a &#39;notify&#39; action. This allows the notify action to override the value, for example, of the username or hostname of the _Notifier_. |
+| _**Override**_ | Checkbox that indicates the property can be changed. This is used for 'scripted' notifications where the action editor includes a 'notify' action. This allows the notify action to override the value, for example, of the username or hostname of the _Notifier_. |
 
 ## Access tab
 
@@ -56,7 +56,7 @@ The Access tab allows you to configure how _Users_ within designated _Groups_ wi
 | Access | Description |
 | --- | --- |
 | _**View**_ | Allows _Users_ to see the _Notifier_. If the _User_ does not belong to a _Group_ in the View Access list, the _Notifier_ will not appear in the tree structure. |
-| _**Change**_ | Allows _Users_ to changes the _Notifier_&#39;s characteristics i.e. Name, Summary, etc. |
+| _**Change**_ | Allows _Users_ to changes the _Notifier_'s characteristics i.e. Name, Summary, etc. |
 | _**Send**_ | Allows _Users_ to send an email. |
 
 NOTE: DeployHub Team has only two Groups, Administrators and Users. If you need more granularity in Groups, you will need to upgrade to DeployHub Pro.

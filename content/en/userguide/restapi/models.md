@@ -8,7 +8,6 @@ description: >
 
 ### Models
 
-
 #### success
 
 Value is true for a successful result, false for unsuccessful result

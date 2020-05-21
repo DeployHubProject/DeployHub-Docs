@@ -35,7 +35,7 @@ set warfilearr = ${_DropZone_.find("myapp.war")};
 
 // Need to iterate since find returns an array keyed by filename.
 
-// However, if there&#39;s only one "myapp.war", this will only execute once.
+// However, if there's only one "myapp.war", this will only execute once.
 
 iterate(warfile: $warfilearr) {
 

@@ -9,17 +9,17 @@ description: >
 ### /dmadminweb/API/environments
 
 #### GET
-##### Summary:
+
+##### Summary
 
 List Environments
 
-##### Description:
+##### Description
 
 This call returns an array of JSON objects representing each environment to
 which the logged-in user has access.
 
 If the all parameter is not specified then only the environments associated with the user's home domain are listed. If the all parameter is specified and is set to "y" then the result includes the environments included in any accessible sub- domains.
-
 
 ##### Parameters
 
@@ -36,14 +36,14 @@ If the all parameter is not specified then only the environments associated with
 ### /dmadminweb/API/environment/{identifier}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Retrieve specific environment
 
-##### Description:
+##### Description
 
 This call returns a JSON object representing the specified environment.
-
 
 ##### Parameters
 

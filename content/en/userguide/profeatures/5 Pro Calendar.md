@@ -16,7 +16,7 @@ description: >
 - Block a timeframe from receiving any _Application_ or _Release_ deployments.
 - Open a timeframe to auto-approve an _Application_ or _Release_ deployment.
 
-_Calendars_ are found by going to the _Data Center_ Menu. Open the _Life Cycle Sub-Domain_ and select the _Environment_. The _Environment&#39;s Calendar_ will appear under the _Calendar_ Tab. When viewing a _Calendar_ by Month, Week, or Day you can click on a place within a selected day and drag the mouse pointer down in order to select the time span for the event. A light blue area appears, covering the selected time. Right click on this area and select "_Create New Event_." A pop-up window appears with buttons that are used to set the selected time period to one of the three types listed above.
+_Calendars_ are found by going to the _Data Center_ Menu. Open the _Life Cycle Sub-Domain_ and select the _Environment_. The _Environment's Calendar_ will appear under the _Calendar_ Tab. When viewing a _Calendar_ by Month, Week, or Day you can click on a place within a selected day and drag the mouse pointer down in order to select the time span for the event. A light blue area appears, covering the selected time. Right click on this area and select "_Create New Event_." A pop-up window appears with buttons that are used to set the selected time period to one of the three types listed above.
 
 ## Availability Field
 
@@ -30,7 +30,7 @@ The "Availability" field controls access to the _Environments._ You either close
 
 ## AutoDeploy
 
-**DeployHub Pro** allows for a scheduled deployment using the _Environment&#39;s Calendar_, which is referred to as an "_AutoDeploy_." If _AutoDeploy_ is selected, a drop-down list allows the selection of an _Application_ or _Release_ to be deployed beginning at the designated Start Time. Not only does the _Calendar_ automatically run the deployment at the designated Start Time, it also keeps any other deployments from taking place in the designated Environment during that time period.
+**DeployHub Pro** allows for a scheduled deployment using the _Environment's Calendar_, which is referred to as an "_AutoDeploy_." If _AutoDeploy_ is selected, a drop-down list allows the selection of an _Application_ or _Release_ to be deployed beginning at the designated Start Time. Not only does the _Calendar_ automatically run the deployment at the designated Start Time, it also keeps any other deployments from taking place in the designated Environment during that time period.
 
 ## Reserved
 
@@ -52,11 +52,11 @@ The _DeployHub Calendar_ allows you to control deployments into each Environment
 
 ## Scheduling a Deployment
 
-When viewing by Month, Week, or Day, click within a selected day and drag the mouse pointer down in order to select the time span for the event. A blue area appears covering the selected time. Right click on the area and select &#39;Create New Event&#39;. This brings up a window with the following fields:
+When viewing by Month, Week, or Day, click within a selected day and drag the mouse pointer down in order to select the time span for the event. A blue area appears covering the selected time. Right click on the area and select 'Create New Event'. This brings up a window with the following fields:
 
 | Field | Description |
 | --- | --- |
-| Start Time | The date and time for the beginning of the Reserved period, the beginning of the Unavailable period, or for the _Application_ or _Release_ to be AutoDeployed, depending on which button was selected. The Start Time and End Time are standardized to Greenwich Mean Time, so no matter where in the world the _User_ is located, DeployHub stores the time in such a manner that the _User&#39;s_ browser will display the correct local time for the deployment, while synchronizing all _Users_ to the same schedule. |
+| Start Time | The date and time for the beginning of the Reserved period, the beginning of the Unavailable period, or for the _Application_ or _Release_ to be AutoDeployed, depending on which button was selected. The Start Time and End Time are standardized to Greenwich Mean Time, so no matter where in the world the _User_ is located, DeployHub stores the time in such a manner that the _User's_ browser will display the correct local time for the deployment, while synchronizing all _Users_ to the same schedule. |
 | End Time | The date and time for the end of the Reserved period or the end of the Unavailable period, depending on which button was selected. |
 | Reserved | Blocks out the time so that only the specified _Application_ or _Release_ can be deployed to that environment during that time period. |
 | Unavailable | Nothing can be deployed to the _Environment_ during a designated time period, such as when _Endpoints_ are down for maintenance. |

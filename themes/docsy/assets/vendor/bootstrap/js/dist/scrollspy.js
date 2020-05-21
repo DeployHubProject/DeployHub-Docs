@@ -286,7 +286,7 @@
         } else {
           // Set triggered link as active
           $link.addClass(ClassName.ACTIVE); // Set triggered links parents as active
-          // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
+          // With both <ul style="list-style-type: none;"> and <nav> markup a parent is the previous sibling of any nav ancestor
 
           $link.parents(Selector.NAV_LIST_GROUP).prev(Selector.NAV_LINKS + ", " + Selector.LIST_ITEMS).addClass(ClassName.ACTIVE); // Handle special case when .nav-link is inside .nav-item
 

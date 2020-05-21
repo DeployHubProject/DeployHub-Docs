@@ -36,7 +36,7 @@ echo "perms is $perms";
 
 // Convert to binary by substituting 0 for � and then anything
 
-// that isn&#39;t a 0 gets converted to a 1.
+// that isn't a 0 gets converted to a 1.
 
 set b = ${perms.regsub("-","0").regsub("[^0]","1")};
 

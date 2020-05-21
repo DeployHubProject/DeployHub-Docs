@@ -14,13 +14,13 @@ In addition, a _Custom Action_ can replace the usual Deployment Engine processin
 
 _Actions_ can call _Procedures_ and _Functions_. These _Procedures_ and _Functions_ can be:
 
-- Written in DMScript (DeployHub&#39;s Object-Oriented Scripting Language) – this is akin to a "Stored Procedure". DMScript has access to the DeployHub Object Model.
+- Written in DMScript (DeployHub's Object-Oriented Scripting Language) – this is akin to a "Stored Procedure". DMScript has access to the DeployHub Object Model.
 
-- A script written in any scripting language supported by the Deployment Engine&#39;s operating system and held locally to the Deployment Engine.
+- A script written in any scripting language supported by the Deployment Engine's operating system and held locally to the Deployment Engine.
 
-- A script written in any scripting language supported by the target _Endpoint&#39;s_ operating system and located on the target Endpoint.
+- A script written in any scripting language supported by the target _Endpoint's_ operating system and located on the target Endpoint.
 
-- A script written in any scripting language supported by the target _Endpoint&#39;s_ operating system and held locally to the Deployment Engine. When invoked, the script is automatically copied to the target _Endpoint_ and executed there.
+- A script written in any scripting language supported by the target _Endpoint's_ operating system and held locally to the Deployment Engine. When invoked, the script is automatically copied to the target _Endpoint_ and executed there.
 
 DMScript ships with several pre-installed _Procedures_ and _Functions_. It is also easy to create your own and add them to the activities that can be used when creating a _Components_ installation logic.
 
@@ -48,7 +48,7 @@ The _Actions_ tab is available from the Flows Main Menu item.
 
 ## Creating and Deleting Actions
 
-You can create a new _Action_ by right clicking the _Domain_ or _Life Cycle Sub-Domain_. A pop-up menu item will appear to create a &#39;New Action in this Domain.&#39; Alternatively, you can delete an _Action_ by right clicking on the _Action_ in the tree structure and selecting the &#39;Delete this Action from the Domain.&#39;
+You can create a new _Action_ by right clicking the _Domain_ or _Life Cycle Sub-Domain_. A pop-up menu item will appear to create a 'New Action in this Domain.' Alternatively, you can delete an _Action_ by right clicking on the _Action_ in the tree structure and selecting the 'Delete this Action from the Domain.'
 
 ## Finding where Actions are Used
 
@@ -58,11 +58,11 @@ To find out where (or if) an _Action_ is used, right click on the _Action_ in th
 
 Once created, the _Action_ will need to be configured. _Actions_ are made up from _Activities_ within a Workflow. _Activities_ include _Procedures_ and _Functions_ that are accessible in the Domain Hierarchy. You will need to define the _Procedures_ and _Functions_ that the _Action_ will use prior to defining the Workflow_._ Alternatively, you can use the available _Procedures, Functions,_ and other _Activities_ that ship with DeployHub for defining the Workflowsteps.
 
-To configure the _Action&#39;s_ basic information, select the _Action_ from the tree view, and click on the pencil icon in the right-hand corner. This will bring up the General Dialog box for defining the _Action&#39;s_ basic information.
+To configure the _Action's_ basic information, select the _Action_ from the tree view, and click on the pencil icon in the right-hand corner. This will bring up the General Dialog box for defining the _Action's_ basic information.
 
 ## Workflow Tab
 
-_Actions_ are defined within the Workflow Tab. A tree view on the right shows all the categories available to be include in the _Action&#39;s_ Workflow. You can use the built-in activities for defining the Workflowsteps or you can create new _Procedures_ or _Functions_ and have them available as activities to use.
+_Actions_ are defined within the Workflow Tab. A tree view on the right shows all the categories available to be include in the _Action's_ Workflow. You can use the built-in activities for defining the Workflowsteps or you can create new _Procedures_ or _Functions_ and have them available as activities to use.
 
 The Workflow tab contains all activitiesthat make up the _Actions_ Workflow steps, linked together in the order they are to be executed. Each Activity in the Workflow has several Anchors where connections can be made – an Input Anchor (in blue) at the top of the Activity where the Workflow enters the Activity and zero, one or more Output Anchors where the Workflow exits that Activity.
 
@@ -74,11 +74,11 @@ The lines connecting Activities can be deleted by right clicking on the connecto
 
 Some Built-in Activities have more than one exit point. For example the "if" Activity can be used to create conditional branches where different routes are taken through the Workflow dependent on the evaluation of an expression. In such cases, there are multiple output "anchors" with labels (for example, true and false) which indicate the meaning of the anchor. Connect the Activities to the appropriate _Output Anchor_.
 
-Some Built-in _Activities_ can contain other Workflows. When such _Activities_ are dropped onto the Action&#39;s Workflow area they are represented by a larger "box" containing a diagram showing another Workflow. Double clicking on such an Activity will "drill down" into that Activity and open up another Workflow editor. Such actions are typically "loops" (where the Workflow "inside" the loop is executed for each iteration through the loop) and "using" Activities (where everything in the Workflow is set to use a particular _Stream_, _Dropzone_, _Component_ or _Application_).
+Some Built-in _Activities_ can contain other Workflows. When such _Activities_ are dropped onto the Action's Workflow area they are represented by a larger "box" containing a diagram showing another Workflow. Double clicking on such an Activity will "drill down" into that Activity and open up another Workflow editor. Such actions are typically "loops" (where the Workflow "inside" the loop is executed for each iteration through the loop) and "using" Activities (where everything in the Workflow is set to use a particular _Stream_, _Dropzone_, _Component_ or _Application_).
 
-There are _Procedures_ and _Functions_ that ship with DeployHub, such as the Windows function &#39;listservices&#39; and the WebSphere &#39;DeployWS&#39; control procedure. These are editable (by an administrator with access to the GLOBAL _Domain_) just as any _User_ defined _Function_ or _Procedure_ would be. There are also some Activities that simply wrap around DMScript (such as "Loop through Array Keys") that are not editable.
+There are _Procedures_ and _Functions_ that ship with DeployHub, such as the Windows function 'listservices' and the WebSphere 'DeployWS' control procedure. These are editable (by an administrator with access to the GLOBAL _Domain_) just as any _User_ defined _Function_ or _Procedure_ would be. There are also some Activities that simply wrap around DMScript (such as "Loop through Array Keys") that are not editable.
 
-When the Workflow is executed, it&#39;s first converted into a DMScript Procedure. DMScript is DeployHub&#39;s built-in Object-Oriented Scripting Language. If you want to see what the generated DMScript will look like, right-click anywhere in the background of the Action Editor Pane and select "Show Generated DMScript". A window pops up showing the DMScript of the assembled Workflow.
+When the Workflow is executed, it's first converted into a DMScript Procedure. DMScript is DeployHub's built-in Object-Oriented Scripting Language. If you want to see what the generated DMScript will look like, right-click anywhere in the background of the Action Editor Pane and select "Show Generated DMScript". A window pops up showing the DMScript of the assembled Workflow.
 
 You can also export the generated workflow as a _Procedure_. To do this, right-click anywhere in the background of the Action Editor Pane and select "Export as Procedure". This generates the DMScript and then exports it as a Procedure Export file. This can then be imported later into the workflow. You can use this technique to create DMScript procedures using a drag-and-drop editor.
 
@@ -86,19 +86,19 @@ NOTE: In the Workflow area, an object represents the currently selected Action. 
 
 ## Timeline Tab
 
-This tab displays audit log entries for deployments that used this Action, including deployment number, _Environment_, _Application_, and how many days ago the deployment (or hours for all of today&#39;s deployments) took place.
+This tab displays audit log entries for deployments that used this Action, including deployment number, _Environment_, _Application_, and how many days ago the deployment (or hours for all of today's deployments) took place.
 
 ## Commenting on an Action
 
-Click on the &#39;Comment&#39; link within each entry to open a text entry field just below the deployment information. There is a field labeled "Say something about this Action?" for comments and files. Entering text into this field activates the _Add Message_ button. Click on this button to save the comment as a new audit entry.
+Click on the 'Comment' link within each entry to open a text entry field just below the deployment information. There is a field labeled "Say something about this Action?" for comments and files. Entering text into this field activates the _Add Message_ button. Click on this button to save the comment as a new audit entry.
 
 ## Adding Documents to your Comments
 
-Clicking on the paperclip button next to _Add Message_ brings up a file explorer for multiple files to be selected and attached to the comment. Clicking on that paperclip expands the audit entry to show the files attached to the comment as hyperlinks. Clicking on the link downloads the file. This process is browser-specific. &#39;Click to see earlier items&#39; link shows earlier entries in the timeline.
+Clicking on the paperclip button next to _Add Message_ brings up a file explorer for multiple files to be selected and attached to the comment. Clicking on that paperclip expands the audit entry to show the files attached to the comment as hyperlinks. Clicking on the link downloads the file. This process is browser-specific. 'Click to see earlier items' link shows earlier entries in the timeline.
 
 ## Subscribing to an Action
 
-The Subscribe link places the audit entry into the User&#39;s personal timeline. Any comments added to the auditwill appear in the Timeline tab of the subscriber&#39;s home page.
+The Subscribe link places the audit entry into the User's personal timeline. Any comments added to the auditwill appear in the Timeline tab of the subscriber's home page.
 
 ## Access Tab
 
@@ -107,7 +107,7 @@ This tab contains _Groups_, and the _Users_ that belong to them, who have access
 | Access | Description |
 | --- | --- |
 | _**View**_ | Allows the _User_ to see the _Action_. If the _User_ does not belong to a _Group_ in the View Access list, the _Action_ will not appear in the tree structure |
-| _**Change**_ | Allows the _User_ to change the _Action&#39;s_ characteristics i.e. Name, Summary, etc. |
+| _**Change**_ | Allows the _User_ to change the _Action's_ characteristics i.e. Name, Summary, etc. |
 | _**Execute**_ | Allows _Users_ to execute this _Action._ |
 
 ## General Tab
@@ -119,6 +119,6 @@ The General tab defines basic information about the _Action_ and allows you to a
 | _**Name**_ | A unique Name that describes the _Action._ This cannot be the same as a reserved word within DMScript (see the DMScript chapter), as it will cause a syntax error when executed. |
 | _**Summary**_ | A brief description of what the _Action_ does. |
 | _**Category**_ | Categories are used to arrange _Actions_ in an orderly manner. Assigning a Category to an _Action_ allows lists of Categories to be used throughout DeployHub. Clicking on an individual Category expands the list and shows all _Actions_ that belong to that Category. |
-| _**Owner**_ | The _User_ or _Group_ name of the _Action&#39;s_ owner. The default owner is the _User_ who created the _Action_. When editing this field, the Owner Type field is available which includes _Owner_ and _Group_ as choices. Selecting one of these causes the Owner field to display either _Users_ or _Groups_ to choose from. |
+| _**Owner**_ | The _User_ or _Group_ name of the _Action's_ owner. The default owner is the _User_ who created the _Action_. When editing this field, the Owner Type field is available which includes _Owner_ and _Group_ as choices. Selecting one of these causes the Owner field to display either _Users_ or _Groups_ to choose from. |
 | _**Created**_ | When the _Action_ was created (read-only). |
 | _**Modified**_ | When the _Action_ was last modified (read-only). |

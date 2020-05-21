@@ -21,7 +21,7 @@ A _Procedure_ can be one of four types:
 | _**DMScript Procedure in Repository**_ | A _Procedure_ is written in DMScript and stored in a file located in an external _Repository._ |
 | _**DMScript Procedure in Database**_ | A _Procedure_ is written in DMScript and stored in the DeployHub Database (a "Stored Procedure"). |
 | _**Procedure Provided by Local External Script or Program**_ | A _Procedure_ is written in any Scripting Language that can be executed by the operating system on which the DeployHub Deployment Engine is installed. Executes locally to the Deployment Engine. |
-| _**Procedure Provided by Remote External Script or Program**_ | A _Procedure_ is written in any Scripting Language that can be executed by the target _Endpoint&#39;s_ operating system. Executes on the target _Endpoint._ By Checking the "Copy to Remote" flag, the script can be held locally to the Deployment Engine and copied to the target _Endpoint_ at the point of execution. |
+| _**Procedure Provided by Remote External Script or Program**_ | A _Procedure_ is written in any Scripting Language that can be executed by the target _Endpoint's_ operating system. Executes on the target _Endpoint._ By Checking the "Copy to Remote" flag, the script can be held locally to the Deployment Engine and copied to the target _Endpoint_ at the point of execution. |
 
 A _Function_ can be one of four types:
 
@@ -30,7 +30,7 @@ A _Function_ can be one of four types:
 | _**DMScript Function in Repository**_ | A _Function_ is written in DMScript and stored in a file located in an external _Repository._ |
 | _**DMScript Function in Database**_ | A _Function_ is written in DMScript and stored in the DeployHub Database (a "Stored Procedure"). |
 | _**Function Provided by Local External Script or Program**_ | A _Function_ is written in any Scripting Language that can be executed by the operating system on which the DeployHub Deployment Engine is installed. Executes locally to the Deployment Engine. |
-| _**Function Provided by Remote External Script or Program**_ | A _Function_ is written in any Scripting Language that can be executed by the target _Endpoint&#39;s_ operating system. Executes on the target _Endpoint._ By Checking the "Copy to Remote" flag, the script can be held locally to the Deployment Engine and copied to the target _Endpoint_ at the point of execution. |
+| _**Function Provided by Remote External Script or Program**_ | A _Function_ is written in any Scripting Language that can be executed by the target _Endpoint's_ operating system. Executes on the target _Endpoint._ By Checking the "Copy to Remote" flag, the script can be held locally to the Deployment Engine and copied to the target _Endpoint_ at the point of execution. |
 
 Selecting the _Procedure/Function_ kind will show other fields relevant to that particular kind (for example "Copy to Remote" will only appear for kind "Remote External Script or Program". Fill in the fields and then click OK to create the new _Procedure/Function_.
 
@@ -38,19 +38,23 @@ Selecting the _Procedure/Function_ kind will show other fields relevant to that 
 
 For Procedures/Functions defined as being "DMScript in Database" an additional "Body" tab is presented which allows the "stored" DMScript to be viewed and edited. Clicking on the "Body" tab will show the DMScript associated with the Procedure/Function. This is presented with syntax highlighting (it is optional and is set on by default).
 
+```bash
 action name {
 
 }
+```
 
 or
 
+```bash
 function name(arg1,arg2) {
 
 }
+```
 
 NOTE: The DMScript "header" for the Procedure or Function is implicit from the Args tab and should not be entered. This means you should just edit the "Body" of the Script and not attempt to add either.
 
-To Edit the DMScript body, click on the pencil icon in the top-right of the Body Tab. You&#39;ll see an edit area (into which text can be typed) and a menu bar with icons and drop-downs:
+To Edit the DMScript body, click on the pencil icon in the top-right of the Body Tab. You'll see an edit area (into which text can be typed) and a menu bar with icons and drop-downs:
 
 - The Floppy Disk Icon is the "Save" button. This parses the DMScript for errors and, if none are found, saves the DMScript. If there any syntax errors, they are highlighted in the body of the text.
 - The Binoculars Icon is the "Search" button. Clicking this icon opens a search/replace dialog.
@@ -69,13 +73,13 @@ A list of arguments can be made available for the _Procedure/Function_. To creat
 
 ## Type: External Procedure/Function
 
-There are two sections to the Args tab for External _Procedures_ or _Functions_ (either local or remote). These sections allow you to construct a command line from the arguments passed to the _Procedure/Function_. The section titled &#39;Inputs to this Function/Procedure&#39; contains the following fields:
+There are two sections to the Args tab for External _Procedures_ or _Functions_ (either local or remote). These sections allow you to construct a command line from the arguments passed to the _Procedure/Function_. The section titled 'Inputs to this Function/Procedure' contains the following fields:
 
 | Field | Description |
 | --- | --- |
 | _**Name**_ | Name of the Argument. The Name must start with a letter and must only include A-Z, a-z, 0-9 and \_ (underscore). No spaces or dashes are allowed in the name. |
 | _**Type**_ | Values are Entry or Checkbox. This determines how the "input" to the _Procedure_ or _Function_ is rendered when it is dropped into the _Action Editor_. |
-| _**Present**_ | Type: EntryThe text that will be prepended to the value should the argument be provided. For example, for a "filename" argument the _Present_ flag could be set to –f. If filename is provided then the argument will become –f "\&lt;filename\&gt;".
+| _**Present**_ | Type: EntryThe text that will be prepended to the value should the argument be provided. For example, for a "filename" argument the _Present_ flag could be set to –f. If filename is provided then the argument will become –f "<filename>".
 
 Type: CheckboxThe text that will appear if the checkbox is selected. For example, if _Present_ is set to –checked then the argument will become –checked should the checkbox be checked. |
 | _**Missing**_ | Type: EntryThe value that will be inserted should the argument not be provided. Only used if "Required" (see below) is false. If the optional argument is not provided then the _Missing_ text is substituted. For example, for a "filename" argument the _Missing_ flag could be set to –nofile. If no filename is provided then the argument will become –nofile.
@@ -84,7 +88,7 @@ Type: CheckboxThe text that will appear if the checkbox is not selected. For exa
 | _**Preserve With (Pad)**_ | _Preserve With "" When Not Present_ ensures that the argument occupies its positional parameter regardless of whether it is a null-length string or not. For example, if the command line ismyscript ARG1 ARG2 ARG3if ARG2 is a null-length string then myscript would be called with: myscript ARG1 ARG3Padding (or preserving) will mean the script is invoked like this: myscript ARG1 **""** ARG3This feature is useful if the script always requires the same parameters to be in the same position on the command line. |
 | _**Required**_ | Indicates the argument is required for the _Procedure/Function_. This is used when dropping the _Procedure/Function_ into the Action Editor. Any Argument marked as being "Required" is highlighted and cannot be left blank. |
 
-The section titled &#39;Additional command line switches for program below&#39; allows for the creation of "fixed" command line switches or other attributes that you wish to have present on the generated command line. These can be created by clicking on the plus sign (+) icon and adding text.
+The section titled 'Additional command line switches for program below' allows for the creation of "fixed" command line switches or other attributes that you wish to have present on the generated command line. These can be created by clicking on the plus sign (+) icon and adding text.
 
 Each "Additional Command Line Switch" can include variables and these will be expanded when the command line is constructed and executed. These variables can be attributes stored against a DeployHub Object (such as _Endpoint, Environment, Application,_ or _Component_) or can be _Global Variables_ that are set by _Additional Parameters_ to the invoking Task. See Chapter 1 (Domains) for more information on adding _Additional Parameters_ to _Tasks_.
 
@@ -96,7 +100,7 @@ All the input parameters and the Additional Command Line Switches will appear ab
 
 There is only a single section to the Args tab for DMScript _Procedures_ or _Functions_ (either _in Repository_ or _in Database_).
 
-The section titled &#39;Inputs to this Function/Procedure&#39; contains the following fields:
+The section titled 'Inputs to this Function/Procedure' contains the following fields:
 
 | Field | Description |
 | --- | --- |
@@ -106,6 +110,7 @@ The section titled &#39;Inputs to this Function/Procedure&#39; contains the foll
 
 Entered Parameters will be accessible as variables within the DMScript Procedure/Function. Checkbox values are passed as true (1) if the checkbox is selected, false (0) otherwise. You can therefore use DMScript constructs like this:
 
+```bash
 if ($myval) {
 
 // myval checkbox is checked
@@ -115,16 +120,17 @@ if ($myval) {
 // myval checkbox is NOT checked
 
 }
+```
 
 To see if the checkbox named "myval" is checked or not
 
 ## Timeline Tab
 
-This tab displays log file entries for deployments that used this _Procedure_/_Function_, including deployment number, _Environment_, and how many days ago the deployment (hours for all of today&#39;s deployments) took place. Click on the &#39;Click to see earlier items&#39; link to see all of the entries.
+This tab displays log file entries for deployments that used this _Procedure_/_Function_, including deployment number, _Environment_, and how many days ago the deployment (hours for all of today's deployments) took place. Click on the 'Click to see earlier items' link to see all of the entries.
 
 ## Timeline Comments
 
-Users can add comments to these entries by clicking on the &#39;Comment&#39; link within each entry, which opens a text entry field just below the deployment information. Users can also click on the Subscribe link in each entry of the list, which allows the User to receive information about the selected deployment. Any comments added to the deploymentwill appear in the Timeline column of the subscriber&#39;s home page.
+Users can add comments to these entries by clicking on the 'Comment' link within each entry, which opens a text entry field just below the deployment information. Users can also click on the Subscribe link in each entry of the list, which allows the User to receive information about the selected deployment. Any comments added to the deploymentwill appear in the Timeline column of the subscriber's home page.
 
 A field labeled "Say something about this Procedure?" is above all of the deployment lines for such comments. Files can be attached as well. Entering text here activates the Add Message button. Click to save the comment as a new audit entry.
 
@@ -143,7 +149,7 @@ Access includes:
 | Access | Description |
 | --- | --- |
 | _**View**_ | Allows the _User_ to see the _Procedure/Function_. If the _User_ does not belong to a _Group_ in the View Access list, the _Procedure/Function_ will not appear in the tree structure. |
-| _**Change**_ | Allows the _User_ to changes the _Procedure&#39;_s/_Function&#39;s_ characteristics i.e. Name, Summary, etc. |
+| _**Change**_ | Allows the _User_ to changes the _Procedure'_s/_Function's_ characteristics i.e. Name, Summary, etc. |
 | _**Execute**_ | Allows _Users_ to execute this _Procedure/Function_. |
 
 ## General Tab
@@ -159,15 +165,15 @@ The General tab is where the basic information about the _Function_ or _Procedur
 | _**Created**_ | The date and time the _Function_/_Procedure_ was created. Read Only. |
 | _**Modified**_ | The date and time that the _Function_/_Procedure_ was last modified. Read Only. |
 | _**Description**_ | A brief description of the Procedure/Function. |
-| _**Kind**_ |<ul style="list-style-type: none;"><li>Options include:</li><li>_Function/Procedure Provided by Local External Script or Program_ An external script (written in any programming or scripting language) that is invoked when the _Function_/_Procedure_ is called. The script is resident on the same machine as the deployment engine or can be referenced from that machine via a shared drive or UNC path. An additional Filepath field will appear if this option is chosen. Filepath is the location on the deployment engine where the script can be located.</li><li>_Function/Procedure Provided by Remote External Script or Program_ An external script (written in any programming or scripting language) that is invoked when the _Function/Procedure_ is called. The script is resident on the target _Endpoint_ unless "Copy to Remote" is checked (see below) in which case the path should refer to a directory on the same machine as the deployment engine (or can be referenced from that machine via a shared drive or UNC path) and the script is then "pushed" onto the target _Endpoint_ and executed there. If the script is pushed onto a Windows server, the script is placed into the c:\Windows\System32 folder. On a Unix or Linux system, it&#39;s placed into the /tmp directory.</li><li>All scripts that ship with DeployHub are placed into the $DMHOME\scripts directory on the deployment engine server. It would be a good idea to place any customized scripts into that directory as well, and always enter $DMHOME\scripts into the Filepath field (see below) when using _Copy to Remote_.</li><li>An additional Filepath field will appear if _Function_/_Procedure Provided by Remote Script or Program_ is chosen. The Filepath is the location either on the remote (target) _Endpoint_ (copy to remote not checked) _or_ on the deployment engine (copy to remote checked) where the script can be located.</li><li>_DMScript Function/Procedure in Repository_ A _Procedure_ or _Function_ written in DMScript and stored in an external repository. This means the script can be under version control. Additional fields will appear if this option is chosen: Repository: The name of the repository where the script can be located.</li><li>Filepath: The full path to the file in the repository containing the script.NOTE: Since the only option is "filepath", the Repository definition must include all the other properties required to locate the script.</li><li>_DMScript Function/Procedure in Database_A _Procedure/Function_ written in DMScript and stored in the DeployHub Database.</li></ul> |
+| _**Kind**_ |<ul style="list-style-type: none;"><li>Options include:</li><li>_Function/Procedure Provided by Local External Script or Program_ An external script (written in any programming or scripting language) that is invoked when the _Function_/_Procedure_ is called. The script is resident on the same machine as the deployment engine or can be referenced from that machine via a shared drive or UNC path. An additional Filepath field will appear if this option is chosen. Filepath is the location on the deployment engine where the script can be located.</li><li>_Function/Procedure Provided by Remote External Script or Program_ An external script (written in any programming or scripting language) that is invoked when the _Function/Procedure_ is called. The script is resident on the target _Endpoint_ unless "Copy to Remote" is checked (see below) in which case the path should refer to a directory on the same machine as the deployment engine (or can be referenced from that machine via a shared drive or UNC path) and the script is then "pushed" onto the target _Endpoint_ and executed there. If the script is pushed onto a Windows server, the script is placed into the c:\Windows\System32 folder. On a Unix or Linux system, it's placed into the /tmp directory.</li><li>All scripts that ship with DeployHub are placed into the $DMHOME\scripts directory on the deployment engine server. It would be a good idea to place any customized scripts into that directory as well, and always enter $DMHOME\scripts into the Filepath field (see below) when using _Copy to Remote_.</li><li>An additional Filepath field will appear if _Function_/_Procedure Provided by Remote Script or Program_ is chosen. The Filepath is the location either on the remote (target) _Endpoint_ (copy to remote not checked) _or_ on the deployment engine (copy to remote checked) where the script can be located.</li><li>_DMScript Function/Procedure in Repository_ A _Procedure_ or _Function_ written in DMScript and stored in an external repository. This means the script can be under version control. Additional fields will appear if this option is chosen: Repository: The name of the repository where the script can be located.</li><li>Filepath: The full path to the file in the repository containing the script.NOTE: Since the only option is "filepath", the Repository definition must include all the other properties required to locate the script.</li><li>_DMScript Function/Procedure in Database_A _Procedure/Function_ written in DMScript and stored in the DeployHub Database.</li></ul> |
 | _**Display Name**_ | The name that appears on the icon that represents the _Procedure_/_Function_ within a Workflow. Defaults to the value of the _Name_ field if not supplied. |
 | _**Filepath**_ | The filepath to the script to be executed, which includes the name of the script. This appears for all but the "DMScript Procedure in Database" Kind of _Procedure_/_Function_. |
 | _**Allocate Terminal**_ | If checked, this sets up a pseudo-terminal. This is for Unix/Linux targets only when operating over SFTP transfer protocol. It controls the behavior of executed programs if they operate differently with or without an allocated terminal. Note that any program running with this flag set and which calls _isatty_ will receive a return code of _true_. |
-| _**Copy to Remote**_ | A checkbox that causes DeployHub to copy the procedure script from the directory indicated by the filepath field on the localhost machine to the target machine. The procedure is then executed there. In Windows, it is placed into c:\Windows\System32. On Linux/Unix, it is placed into /tmp. This only appears for _Procedures_/_Functions_ that are of the Kind &#39;Procedure/Function provided by remote external script or program&#39;. |
+| _**Copy to Remote**_ | A checkbox that causes DeployHub to copy the procedure script from the directory indicated by the filepath field on the localhost machine to the target machine. The procedure is then executed there. In Windows, it is placed into c:\Windows\System32. On Linux/Unix, it is placed into /tmp. This only appears for _Procedures_/_Functions_ that are of the Kind 'Procedure/Function provided by remote external script or program'. |
 | _**Result is Expr**_ | Available only for _Functions._ If this box is checked then the return value from the function is interpreted as DMScript.
  Thus, if the _Function_ returns this as its standard output:
 
-set a = {"x" =\&gt; "1", "y" =\&gt; "2"};
+```set a = {"x" => "1", "y" => "2"};```
 
  If "result is expr" is checked, an array is created called "a" with two elements - key "x" will be value "1" and key "y" will be value "2".
 
@@ -177,4 +183,4 @@ To delete a _Procedure/Function_, right click on it in the tree structure and se
 
 ## Archiving
 
-Any time a _Procedure_ or _Function_ is changed, an archived version is saved within DeployHub. In the tree structure beneath the Function or Procedure, and within the Domain, there will be a copy of the Function/Procedure with all Access removed, using the original name followed by &#39;\_archived&#39;. Every time the Function/Procedure is changed, another one will appear with the name followed by an incremented number (&#39;\_archived\_1&#39;, &#39;\_archived\_2&#39;, etc.).
+Any time a _Procedure_ or _Function_ is changed, an archived version is saved within DeployHub. In the tree structure beneath the Function or Procedure, and within the Domain, there will be a copy of the Function/Procedure with all Access removed, using the original name followed by '_archived'. Every time the Function/Procedure is changed, another one will appear with the name followed by an incremented number ('_archived\_1', '_archived\_2', etc.).

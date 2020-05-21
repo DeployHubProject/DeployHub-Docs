@@ -17,4 +17,4 @@ Additional features include:
 
 - Notifications from other social media systems (Facebook, Twitter, etc.) can appear in Slack channels.
 
-See the section named _Notifiers_ for more information regarding Slack and it&#39;s use in DeployHub.
+See the section named _Notifiers_ for more information regarding Slack and it's use in DeployHub.

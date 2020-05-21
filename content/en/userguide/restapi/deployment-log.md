@@ -9,14 +9,14 @@ description: >
 ### /dmadminweb/API/log/{lognumber}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Retrieve deployment log
 
-##### Description:
+##### Description
 
 This call returns a JSON object representing the specified deployment log.
-
 
 ##### Parameters
 

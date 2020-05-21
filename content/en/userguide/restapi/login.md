@@ -9,16 +9,16 @@ description: >
 ### /dmadminweb/API/login
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Login
 
-##### Description:
+##### Description
 
 When issuing calls to the API, the client application must either first issue a "login" call, specifying the username and password or must specify the username and password in each individual call to the API.
 
 When calling the API from inside DMScript (the built-in scripting language), the JSESSIONID value for the logged-in user is available via a global variable ($JSESSIONID). This can be used to allow DMScript to call the API without the need for an explicit second login. See the DMScript user guide for more information.
-
 
 ##### Parameters
 
