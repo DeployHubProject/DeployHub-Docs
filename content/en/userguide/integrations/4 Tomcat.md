@@ -5,7 +5,7 @@ weight: 74
 ---
 ## Tomcat Integration
 
-_Actions_ for Tomcat Windows servers are pre-defined within DeployHub. A deployment points to one or more _Repositories_ with that application&#39;s artifacts. These are referenced by one or more _Components_ (and one or more of their _Component__Items_) within an _Application_. _Pre_ and _Post__Actions_ at the _Application_ level are used for Tomcat deployments. The _Pre Action_ stops the Tomcat instance, the _Post Action_ starts it. In between the start and stop, the _Components_ will deployed.
+_Actions_ for Tomcat Windows servers are pre-defined within DeployHub. A deployment points to one or more _Repositories_ with that application's artifacts. These are referenced by one or more _Components_ (and one or more of their _Component__Items_) within an _Application_. _Pre_ and _Post__Actions_ at the _Application_ level are used for Tomcat deployments. The _Pre Action_ stops the Tomcat instance, the _Post Action_ starts it. In between the start and stop, the _Components_ will deployed.
 
 ## Define Your Tomcat Action to Your Component
 

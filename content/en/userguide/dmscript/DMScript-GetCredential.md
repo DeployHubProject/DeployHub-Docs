@@ -45,10 +45,7 @@ set password = ${db2creds.password};
 
 // username and password can now be used to access external system
 
-
 Further descriptions of Credential Objects are found in the high level section named _DMScript_ Objects, in the section named Credential.
- 
-
 
 **See Also:**
 

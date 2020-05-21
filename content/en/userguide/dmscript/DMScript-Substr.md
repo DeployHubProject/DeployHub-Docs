@@ -23,6 +23,7 @@ substr(String,start[,length])
 String: The substring represented from the start point of the source string containing the rest of the string or length characters.
 
 **Example:**
+
 ```bash
 set a = "Hello There";
 

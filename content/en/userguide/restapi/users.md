@@ -10,14 +10,14 @@ description: >
 ### /dmadminweb/API/assign/user/{user_id}/{group_id}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Associate a User with a User Group
 
-##### Description:
+##### Description
 
 This call assigns an existing user to a User Group. Once a user has been assigned to the group then the user will have access to any object to which the User Group has been granted appropriate access.
-
 
 ##### Parameters
 
@@ -35,14 +35,14 @@ This call assigns an existing user to a User Group. Once a user has been assigne
 ### /dmadminweb/API/unassign/user/{user_id}/{group_id}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Disassociate a User from a User Group
 
-##### Description:
+##### Description
 
 This call disassociates a user from a User Group. Once a user has been removed from the group they no longer have access to any object to which access has been granted through the User Group.
-
 
 ##### Parameters
 

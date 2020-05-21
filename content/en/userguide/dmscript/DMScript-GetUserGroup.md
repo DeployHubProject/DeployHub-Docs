@@ -35,9 +35,7 @@ _2) Retrieve a User Group specifying the enclosing domain:_
 
 set group = getusergroup("Project1.Developers");
 
-
 Further descriptions of Group Objects are found in the high level section named _DMScript_ Objects, in the section named Group.
- 
 
 **See Also:**
 

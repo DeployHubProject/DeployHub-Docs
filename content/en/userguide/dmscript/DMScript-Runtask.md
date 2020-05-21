@@ -8,7 +8,7 @@ description: >
 
 _runtask_ allows _DMScript_ to invoke a task associated with a _Domain_. It allows tasks to be invoked via scripts, providing more opportunities for automation. Executing tasks via _DMScript_ allows you to:
 
-<ul><li>Automatically move an _Application Version_ from one Domain to Another</li>
+<ul style="list-style-type: none;"><li>Automatically move an _Application Version_ from one Domain to Another</li>
 <li> Approve an _Application Version_</li>
 <li> Create a New _Application Version_ </li>
 <li> Run a "Request" Task.</li></ul>
@@ -40,7 +40,7 @@ note: "This is an automated approval",
 approve: true);
 ```
 
-Here, the deployed _Application_&#39;s fully qualified domain is prepended to the name of the task "Approve" in order to accurately identify the task regardless of where the _Application_ is in the lifecycle.
+Here, the deployed _Application_'s fully qualified domain is prepended to the name of the task "Approve" in order to accurately identify the task regardless of where the _Application_ is in the lifecycle.
 
 NOTE: Tasks that operate on _Application_s require the _Application_ to be on the stack. During a deployment operation, the _Application_ will be on the stack and accessible via the $_Application_ object. If you are running a task outside of the deployment process you will need to push the _Application_ onto the stack by executing the task within a using _Application_ block. See _using Application_ later in this chapter for more information.
 
@@ -53,6 +53,6 @@ runtask(task: "${_Application_.fqdomain}.Request Manual Step");
 waitfor(task: "${_Application_.fqdomain}.Manual Step Performed");
 ```
 
-Here, DMscript calls the task "Request Manual Step". This is a "request" task linked to the "Manual Step Performed" task. When this task is invoked, DeployHub will issue the notification to the users in the group who have execute access to the "Manual Step Performed" task and place the request to execute this task into those users&#39; _To Do_ list on their home page.
+Here, DMscript calls the task "Request Manual Step". This is a "request" task linked to the "Manual Step Performed" task. When this task is invoked, DeployHub will issue the notification to the users in the group who have execute access to the "Manual Step Performed" task and place the request to execute this task into those users' _To Do_ list on their home page.
 
 The script will then call _waitfor_ which will suspend the script execution until the "Manual Step Performed" task is run. At which point the script will continue automatically.

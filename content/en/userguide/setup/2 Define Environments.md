@@ -19,11 +19,11 @@ An _Environment_ can be created by clicking on the _Data Center_ Menu item, then
 
 ## Delete Environment
 
-You can delete an _Environment_ by right clicking on the _Environment_ from the tree view and selecting the &#39;Delete this Environment&#39; option.
+You can delete an _Environment_ by right clicking on the _Environment_ from the tree view and selecting the 'Delete this Environment' option.
 
 ## Duplicate Environment Names
 
-Duplicates names are restricted. This prevents the User from receiving the duplicate error message even though they cannot see a duplicate name. It would be confusing when a User wants to know which _Environment_ an application is running, or could be deployed against. It is recommended that _Environments_ be named in a specific manner, such as &#39;DevEnv-CallCenter,&#39; and not use the base DevEnv alone.
+Duplicates names are restricted. This prevents the User from receiving the duplicate error message even though they cannot see a duplicate name. It would be confusing when a User wants to know which _Environment_ an application is running, or could be deployed against. It is recommended that _Environments_ be named in a specific manner, such as 'DevEnv-CallCenter,' and not use the base DevEnv alone.
 
 ## Editing Environments
 
@@ -39,11 +39,11 @@ The Subscribe link in each entry of the list allows you to receive information a
 
 ## Adding Comments to a Timeline
 
-You can add information by clicking on the &#39;Comment&#39; link within a text entry field. These appear in the History column of your subscriber&#39;s home page. There is a field above the list labeled "Say something about this Application" that can have comments placed into it, and files can be attached to the comment as well. Entering text into this field activates the Add Message button. Click on this button to save the comment as a line in the list.
+You can add information by clicking on the 'Comment' link within a text entry field. These appear in the History column of your subscriber's home page. There is a field above the list labeled "Say something about this Application" that can have comments placed into it, and files can be attached to the comment as well. Entering text into this field activates the Add Message button. Click on this button to save the comment as a line in the list.
 
 ## Adding Files to Your Comments
 
-Clicking on the fingerprint button next to the Add Message button brings up a file explorer that allows files to be selected and attached to the comment. These attachments can later be retrieved by clicking on the fingerprint icon on the far right of the comment, which opens the line in the list to display the name of the file. Click on the file name in the dropdown list. This download into the default Downloads folder of the computer that hosts the browser used to run DeployHub (not on the location hosting DeployHub). The options are standard in every Windows file download interface, including Open, Always Open this Type of File, and Show in folder. Several other lists appear along the bottom of the browser. A small &#39;x&#39; on the far-right side at the bottom can be clicked to make them disappear.
+Clicking on the fingerprint button next to the Add Message button brings up a file explorer that allows files to be selected and attached to the comment. These attachments can later be retrieved by clicking on the fingerprint icon on the far right of the comment, which opens the line in the list to display the name of the file. Click on the file name in the dropdown list. This download into the default Downloads folder of the computer that hosts the browser used to run DeployHub (not on the location hosting DeployHub). The options are standard in every Windows file download interface, including Open, Always Open this Type of File, and Show in folder. Several other lists appear along the bottom of the browser. A small 'x' on the far-right side at the bottom can be clicked to make them disappear.
 
 ## Deployment Details
 
@@ -51,7 +51,7 @@ To view specific details such as the files deployed, the log output, activities 
 
 | Tab Name | Description |
 | --- | --- |
-| Files | A list of files that were deployed to the _Environment_, which includes the _Repository&#39;s_ path of the source file, and the target path where it was placed. |
+| Files | A list of files that were deployed to the _Environment_, which includes the _Repository's_ path of the source file, and the target path where it was placed. |
 | Log | This includes step by step details of the deployment, which includes error messages in red font. |
 | Activities | A list of any _Actions_, _Procedures_, and _Functions_ that were used during the deployment. |
 | Change Request(DeployHub Pro only) | The Change Request tab shows enhancement requests and bugs for a selected _Application_ for several popular bug tracking systems, including Bugzilla, GitHub, and Jira. |
@@ -71,7 +71,7 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 | Access | Description |
 | --- | --- |
 | _**View**_ | Allows the _User_ to see the _Environment_. If the _User_ does not belong to a _Group_ in the View Access list, the _Environment_ will not appear in the tree structure. |
-| _**Change**_ | Allows the _User_ to change the _Environment&#39;s_ characteristics i.e. Name, Summary, etc. |
+| _**Change**_ | Allows the _User_ to change the _Environment's_ characteristics i.e. Name, Summary, etc. |
 | _**Create Calendar Entries**_ | Allows _Users_ to control the Calendar for the selected _Environment_.NOTE: Securing Environment Calendars is only available in DeployHub Pro.
  |
 | _**Deploy**_ | Allows _Users_ to deploy _Releases_ and the _Applications_ they contain into the selected _Environment_. |
@@ -85,6 +85,6 @@ The General Tab displays the basic information that defines an _Environment._ Se
 | _**Name**_ | The name of the _Environment_ object. |
 | _**Owner**_ | The owner of the _Environment_, it defaults to the _User_ who created it. The default owner is the _User_ who created the _Environment_. When editing this field, the Owner Type field is available which includes Owner and _Group_ as choices. Selecting one of these causes the Owner field to display either _Users_ or _Groups_ to choose from. |
 | _**Summary**_ | A short text description of the _Environment_. |
-| _**Availability**__**(DeployHub Pro feature)**_ | The default value, "Always Available Unless Denied by Calendar", allows the User to deploy Applications into the Environment unless there is an entry in the Calendar during a specific time (hours, days, weeks) that prevents it from doing so through the use of an added Unavailable section. The other value, "Always Unavailable Unless Denied by Calendar", doesn&#39;t allow deployments unless a specific entry in the Calendar overrides it. |
+| _**Availability**__**(DeployHub Pro feature)**_ | The default value, "Always Available Unless Denied by Calendar", allows the User to deploy Applications into the Environment unless there is an entry in the Calendar during a specific time (hours, days, weeks) that prevents it from doing so through the use of an added Unavailable section. The other value, "Always Unavailable Unless Denied by Calendar", doesn't allow deployments unless a specific entry in the Calendar overrides it. |
 | _**Created**_ | The date and time the _Environment_ was created. |
 | _**Modified**_ | The date and time the _Environment_ was last modified. |

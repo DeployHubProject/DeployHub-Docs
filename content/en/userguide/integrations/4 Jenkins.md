@@ -40,7 +40,7 @@ NOTE: DeployHub Team has only two User Groups, Administrators and Users. Upgrade
 
 ## Use Components Selection
 
-If this is selected, the name of the _Components_ should be entered into the _Component_ Name field, otherwise an error will occur. By filling this in, a new _Component__Version_ is created if it&#39;s associated with an _Application_ that has been approved (see earlier explanation about approved _Application_s). Once this is done, attributes can be created for the _Components__Version_.
+If this is selected, the name of the _Components_ should be entered into the _Component_ Name field, otherwise an error will occur. By filling this in, a new _Component__Version_ is created if it's associated with an _Application_ that has been approved (see earlier explanation about approved _Application_s). Once this is done, attributes can be created for the _Components__Version_.
 
 ## Set Components Attributes
 

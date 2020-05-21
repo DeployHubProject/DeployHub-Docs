@@ -10,16 +10,16 @@ description: >
 ### /dmadminweb/API/servers
 
 #### GET
-##### Summary:
+
+##### Summary
 
 List All Accessible Endpoints
 
-##### Description:
+##### Description
 
 This call returns an array of JSON objects representing each application to which the logged-in user has access.
 
 If the all parameter is not specified then only the applications associated with the user's home domain are listed. If the all parameter is specified and is set to "y" then the result includes the applications included in any accessible sub-domains.
-
 
 ##### Parameters
 
@@ -36,14 +36,14 @@ If the all parameter is not specified then only the applications associated with
 ### /dmadminweb/API/server/{identifier}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Retrieve specific server
 
-##### Description:
+##### Description
 
 This call returns a JSON object representing the specified server.
-
 
 ##### Parameters
 
@@ -57,20 +57,19 @@ This call returns a JSON object representing the specified server.
 | ---- | ----------- | ------ |
 | 200 | Success or failure.  Check success field for status. | [server_result](/restapi/models/#server_result) |
 
-
 ### /dmadminweb/API/assign/server/{server_id}/{env_id}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Assign a Server to an Environment
 
-##### Description:
+##### Description
 
 This call allows an existing server to be associated with an existing environment. Once the server is associated with an environment it can receive components during a deployment.
 
 Servers can be associated with more than one environment. Assigning a server to an environment will not disassociate the server from any other environment with which it may be already associated. To move a server between environments you must use the API/server/unassign call to remove the server from the original environment - see next section for more information.
-
 
 ##### Parameters
 
@@ -88,16 +87,16 @@ Servers can be associated with more than one environment. Assigning a server to 
 ### /dmadminweb/API/unassign/server/{server_id}/{env_id}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Disassociate a Server from an Environment
 
-##### Description:
+##### Description
 
 This call disassociates a server from an environment. When the server is disassociated from the environment then any subsequent deployments to that environment will not result in any files or operations being directed at the server.
 
 This call does not delete the server - it simply disassociates it from the environment. To delete a server use the API/del/server call.
-
 
 ##### Parameters
 

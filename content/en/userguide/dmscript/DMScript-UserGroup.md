@@ -16,7 +16,7 @@ The following properties can be accessed on the User Group object:
 | name | String | User Group Name. |
 | kind | String | Returns "group". Used to differentiate between users and groups where retrieving an owner object. |
 | fqdomain | String | Fully qualified domain name. |
-| email | String | The User Group&#39;s email address. |
+| email | String | The User Group's email address. |
 | creator | User | User Object representing the user who created this user group. |
 | modifier | User | User Object representing the user who last modified this user group. |
 | ctime | Date | Date Object representing the date/time the user group was created. |

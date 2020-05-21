@@ -114,7 +114,7 @@ Change the order of content in media objects by modifying the HTML itself, or by
 
 ## Media list
 
-Because the media object has so few structural requirements, you can also use these classes on list HTML elements. On your `<ul>` or `<ol>`, add the `.list-unstyled` to remove any browser default list styles, and then apply `.media` to your `<li>`s. As always, use spacing utilities wherever needed to fine tune.
+Because the media object has so few structural requirements, you can also use these classes on list HTML elements. On your `<ul style="list-style-type: none;">` or `<ol>`, add the `.list-unstyled` to remove any browser default list styles, and then apply `.media` to your `<li>`s. As always, use spacing utilities wherever needed to fine tune.
 
 {% capture example %}
 <ul class="list-unstyled">

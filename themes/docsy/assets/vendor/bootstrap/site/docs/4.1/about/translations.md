@@ -7,7 +7,7 @@ group: about
 
 Community members have translated Bootstrap's documentation into various languages. None are officially supported and they may not always be up to date.
 
-<ul>
+<ul style="list-style-type: none;">
 {% for language in site.data.translations %}
   <li><a href="{{ language.url }}" hreflang="{{ language.code }}">{{ language.description }} ({{ language.name }})</a></li>
 {% endfor %}

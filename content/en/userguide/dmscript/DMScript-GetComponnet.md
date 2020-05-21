@@ -34,12 +34,8 @@ _2) Retrieve a Component specifying the enclosing domain:_
 
 set compobject = get_Component_("Project1.WarFile1");
 
-
  |
 Further descriptions of _Component_ Objects are found in the high level section named _DMScript_ Objects, in the section named _Component_.
-
-
-
 
 **See Also:**
 

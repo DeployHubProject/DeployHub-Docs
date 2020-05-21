@@ -29,7 +29,7 @@ url: Is the URL to be POSTed.
 
 Array: Associative array containing the JSON/XML returned from the RESTful post. If the returned data is encoded with XML then it is converted into the array structure using the rules outlined for xmlparse above.
 
-restful\_post can be used to post requests to DeployHub&#39;s own API.
+restful\_post can be used to post requests to DeployHub's own API.
 
 **Examples:**
 

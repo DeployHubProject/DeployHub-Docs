@@ -29,6 +29,6 @@ runtask(task: "${_Application_.fqdomain}.Request Manual Step");
 
 waitfor(task: "${_Application_.fqdomain}.Manual Step Performed");
 
-Here, DMscript calls the task "Request Manual Step". This is a "request" task linked to the "Manual Step Performed" task. When this task is invoked, DeployHub will issue the notification to the users in the group who have execute access to the "Manual Step Performed" task and place the request to execute this task into those users&#39; _To Do_ list on their home page.
+Here, DMscript calls the task "Request Manual Step". This is a "request" task linked to the "Manual Step Performed" task. When this task is invoked, DeployHub will issue the notification to the users in the group who have execute access to the "Manual Step Performed" task and place the request to execute this task into those users' _To Do_ list on their home page.
 
 The script will then call waitfor which suspends the script execution until the "Manual Step Performed" task is run. At which point the script will continue automatically.

@@ -26,7 +26,7 @@ DeployHub also integrates into your CD pipeline to continuously version your mic
 
 ## Why DeployHub
 
-DeployHub&#39;s secret sauce is its backend version control database designed specifically for tracking independently deployed _Components_. Every software release configuration is based upon a collection of _Components_ and their critical deployment attributes. A _Component_ is a microservice, independent executable, database update or configuration that is part of a complete software application. _Components_ change over time creating _Component Versions_ and therefore _Application Versions_. DeployHub is the only configuration management and deployment solution that has a built-in version control engine to support fully incremental releases and supports canary or blue/green deployments with fast rollbacks, roll forward, or version jumps.
+DeployHub's secret sauce is its backend version control database designed specifically for tracking independently deployed _Components_. Every software release configuration is based upon a collection of _Components_ and their critical deployment attributes. A _Component_ is a microservice, independent executable, database update or configuration that is part of a complete software application. _Components_ change over time creating _Component Versions_ and therefore _Application Versions_. DeployHub is the only configuration management and deployment solution that has a built-in version control engine to support fully incremental releases and supports canary or blue/green deployments with fast rollbacks, roll forward, or version jumps.
 
 DeployHub supports the deployment and configuration versioning of:
 

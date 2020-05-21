@@ -9,20 +9,20 @@ description: >
 ### /dmadminweb/API/deploy/{app_id}/{env_id}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Start Deployment
 
-##### Description:
+##### Description
 
 This call starts a deployment of the specified _Application_ into the specified environment.
 
-In order for API deployments to work through the permission model, there has to be a Deploy task either in the domain in which the specified application is located or in any of the parent domains if the Deploy task is set to be available to sub-domains. If finer control is required, the task can be named via the task parameter. 
+In order for API deployments to work through the permission model, there has to be a Deploy task either in the domain in which the specified application is located or in any of the parent domains if the Deploy task is set to be available to sub-domains. If finer control is required, the task can be named via the task parameter.
 
 This mechanism ensures that the invoking user has permission to deploy the application (since the permissions are checked against the task). Also, by specifying the task to execute, any pre and post link actions are executed just as if the task had been invoked via the Web UI.
 
-Note - Any additional parameters are created as Global Variables accessible with a url_ prefix. For example, if you passed "myparam=123" as a parameter in the "deploy" api call, it would be available as $url_myparam in DeployHub.
-
+Note - Any additional parameters are created as Global Variables accessible with a url_prefix. For example, if you passed "myparam=123" as a parameter in the "deploy" api call, it would be available as $url_myparam in DeployHub.
 
 ##### Parameters
 

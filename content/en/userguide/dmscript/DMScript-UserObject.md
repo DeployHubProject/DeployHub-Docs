@@ -15,9 +15,9 @@ The following properties can be accessed on the User object:
 | name | String | User Name. |
 | kind | String | Returns "user". Used to differentiate between users and groups where retrieving an owner object. |
 | fqdomain | String | Fully qualified domain name. |
-| realname | String | The User&#39;s full name. |
-| email | String | The User&#39;s email address. |
-| phone | String | The User&#39;s telephone number. |
+| realname | String | The User's full name. |
+| email | String | The User's email address. |
+| phone | String | The User's telephone number. |
 | groups | Array | Array of UserGroup Objects – the User Groups to which this user belongs. |
 | lastlogin | Date | The date/time the user last logged into DeployHub. |
 | creator | User | User Object representing the user who created this user. |

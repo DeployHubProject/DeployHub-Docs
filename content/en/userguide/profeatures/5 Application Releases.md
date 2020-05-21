@@ -39,9 +39,9 @@ NOTE: Tasks are created, modified and deleted by using the Task Tab found under 
 
 ## Creating and Deleting Releases
 
-A _Release_ can be created by clicking on the Deploy menu, clicking the Releases tab, right clicking on the _Domain_ from the tree structure in the left side panel, and selecting &#39;New Release in this Domain.&#39; By selecting this option, the New Releasedialog will appear. Alternatively, once created, the _Release_ can be deleted by right clicking on the _Release_ from the tree view and selecting &#39;Delete this Release.&#39; Once deleted, you cannot retrieve the _Release_ or any associated _Release Versions_.After a _Release_ is created, a _Release Version_ can be created by clicking the _Release_ in the tree structure, then clicking on the Versions tab on the right. Right click in the Versions area and select &#39;Create New Release Version&#39;. A new _Release Version_ will appear in the area and will be connected to either the icon at the top that represents the _Release_, or the latest _Release Version_, depending on whether this is the first _Release Version_ created. The new _Release Version_ is created by using the _Release_ name, followed by a semi-colon and an incremented integer, i.e. MyRel;3.
+A _Release_ can be created by clicking on the Deploy menu, clicking the Releases tab, right clicking on the _Domain_ from the tree structure in the left side panel, and selecting 'New Release in this Domain.' By selecting this option, the New Releasedialog will appear. Alternatively, once created, the _Release_ can be deleted by right clicking on the _Release_ from the tree view and selecting 'Delete this Release.' Once deleted, you cannot retrieve the _Release_ or any associated _Release Versions_.After a _Release_ is created, a _Release Version_ can be created by clicking the _Release_ in the tree structure, then clicking on the Versions tab on the right. Right click in the Versions area and select 'Create New Release Version'. A new _Release Version_ will appear in the area and will be connected to either the icon at the top that represents the _Release_, or the latest _Release Version_, depending on whether this is the first _Release Version_ created. The new _Release Version_ is created by using the _Release_ name, followed by a semi-colon and an incremented integer, i.e. MyRel;3.
 
-You can also subscribe to the _Release_. Subscribing allows you to receive information about the selected _Release_. Any information connected to the _Release_ will appear in the Timeline column of the subscribing _User&#39;s_ home page. Subscribe to the _Release_ by right clicking on it in the tree view and select &#39;Subscribe to this Release.&#39;
+You can also subscribe to the _Release_. Subscribing allows you to receive information about the selected _Release_. Any information connected to the _Release_ will appear in the Timeline column of the subscribing _User's_ home page. Subscribe to the _Release_ by right clicking on it in the tree view and select 'Subscribe to this Release.'
 
 ## Editing Release Versions
 
@@ -61,15 +61,15 @@ _Release Versions_ represent the changes in the software over time. The first _R
 
 ## Timeline Tab
 
-This tab displays audit entries for the creation of _Releases_ and their deployments, _Environment_, and how many days ago the deployment (hours for all of today&#39;s deployments) took place.
+This tab displays audit entries for the creation of _Releases_ and their deployments, _Environment_, and how many days ago the deployment (hours for all of today's deployments) took place.
 
 Any attribute changes to the _Release_ are also shown on the timeline.
 
-Users can add comments to entries in the timeline by clicking on the &#39;Comment&#39; link within each entry, which opens a text entry field just below the deployment information.
+Users can add comments to entries in the timeline by clicking on the 'Comment' link within each entry, which opens a text entry field just below the deployment information.
 
-Click on the &#39;Click to see earlier items&#39; link to see earlier audit entries.
+Click on the 'Click to see earlier items' link to see earlier audit entries.
 
-Users can also click on the Subscribe link in each entry of the list, which places the audit entry into the User&#39;s personal timeline. Any comments added to the auditwill appear in the Timeline tab of the subscriber&#39;s home page.
+Users can also click on the Subscribe link in each entry of the list, which places the audit entry into the User's personal timeline. Any comments added to the auditwill appear in the Timeline tab of the subscriber's home page.
 
 There is a field labeled "Say something about this Release?" at the top of the timeline that can have comments placed into it, and files can be attached to the comment as well. Entering text into this field activates the Add Message button. Click on this button to save the comment as a new audit entry.
 
@@ -79,9 +79,9 @@ Comments with files attached are shown with a paperclip. Clicking on the papercl
 
 ## Trends Tab
 
-Using the scrolling device on the _User&#39;s_ mouse or trackpad causes the entire area to expand and contract which, along with the ability to scroll back and forth via clicking and dragging, allows the _User_ to easily view the entire Change History from beginning to end, in detail, while using the _Calendar_ as a reference.
+Using the scrolling device on the _User's_ mouse or trackpad causes the entire area to expand and contract which, along with the ability to scroll back and forth via clicking and dragging, allows the _User_ to easily view the entire Change History from beginning to end, in detail, while using the _Calendar_ as a reference.
 
-The Trends tab contains information about Release&#39;s deployments. The horizontal numbers across the bottom of the chart indicate the Deployment Number. The vertical numbers on the left side represent the time taken to deploy. Hovering the mouse pointer over any one of the dots on the chart where these intersect shows both of these values.
+The Trends tab contains information about Release's deployments. The horizontal numbers across the bottom of the chart indicate the Deployment Number. The vertical numbers on the left side represent the time taken to deploy. Hovering the mouse pointer over any one of the dots on the chart where these intersect shows both of these values.
 
 The pie chart in the bottom right side shows the number of failed and successful deployments. Hovering the mouse pointer over the chart shows the number of failures (red) and successes (green).
 
@@ -89,11 +89,11 @@ The pie chart in the bottom right side shows the number of failed and successful
 
 The Change Request tab shows enhancement requests and bugs for a selected Release and its _Applications_ for several popular bug tracking systems, including Bugzilla, Github, and Jira.
 
-The Change Request tab for _Releases_ contains two sections. The upper section is titled CR Opened/Closed over Time, which contains a burndown chart showing all of the Change Requests for all _Applications_ in the _Release_. A _Calendar_ runs across the top to show when Change Requests were opened and closed. Change Requests are shown in the horizontal area below, with open Change Requests shown in light yellow, while closed are shown in dark gray. Each line represents a Change Request, which begins with the date that it was added to a _Component_. The area turns dark gray at the point of the calendar where the Change Request was closed. Using the scrolling device on the _User&#39;s_ mouse or trackpad causes the entire area to expand and contract which, along with the ability to scroll back and forth via clicking and dragging, allows the _User_ to easily view the entire Release Plan from beginning to end, in detail, while using the _Calendar_ along the top as a reference. The numbers along the left side represent the number of Change Requests. This will adjust vertically to fit the total number of Change Requests for the _Applications_ in the _Release_. This can be adjusted further with the _User&#39;s_ mouse or trackpad.
+The Change Request tab for _Releases_ contains two sections. The upper section is titled CR Opened/Closed over Time, which contains a burndown chart showing all of the Change Requests for all _Applications_ in the _Release_. A _Calendar_ runs across the top to show when Change Requests were opened and closed. Change Requests are shown in the horizontal area below, with open Change Requests shown in light yellow, while closed are shown in dark gray. Each line represents a Change Request, which begins with the date that it was added to a _Component_. The area turns dark gray at the point of the calendar where the Change Request was closed. Using the scrolling device on the _User's_ mouse or trackpad causes the entire area to expand and contract which, along with the ability to scroll back and forth via clicking and dragging, allows the _User_ to easily view the entire Release Plan from beginning to end, in detail, while using the _Calendar_ along the top as a reference. The numbers along the left side represent the number of Change Requests. This will adjust vertically to fit the total number of Change Requests for the _Applications_ in the _Release_. This can be adjusted further with the _User's_ mouse or trackpad.
 
 The lower section contains a list of Change Requests for all _Applications_ in the _Release_, which includes the Change Request ID, Application, Title, and Status fields. Clicking on the ID takes the _User_ to a new tab in the browser that contains the source of the Change Request. For instance, if there is a Change Request _Datasource_ of the type Github, clicking on the ID field for a Change Request will open a tab with the bug or enhancement request within github.com, allowing the _User_ the ability to update, close, or read about it in detail.
 
-The Title field holds the title of the Change Request within the bug tracking system. The various bug tracking systems used by DeployHub have their own statuses. Bugzilla for instance, has statuses such as New, Unconfirmed, Assigned, etc. DeployHub interprets these as either &#39;open&#39; or &#39;closed&#39; and displays them in the Status field with a gold or dark gray background respectively.
+The Title field holds the title of the Change Request within the bug tracking system. The various bug tracking systems used by DeployHub have their own statuses. Bugzilla for instance, has statuses such as New, Unconfirmed, Assigned, etc. DeployHub interprets these as either 'open' or 'closed' and displays them in the Status field with a gold or dark gray background respectively.
 
 ## Planner
 
@@ -101,11 +101,11 @@ This tab Contains Release Planner, which helps to plan and schedule the deployme
 
 The uppermost horizontal area of the Release Planner contains a _Calendar_ that corresponds to the dates contained within _Environments_ that the _Release_ and its _Applications_ are to be deployed to. The gray area beneath this represents the _Release_ and contains any _Environments_ that the _Release_ will be deployed to. Beneath this is one or more areas, each for every _Application_ contained within the _Release_.
 
-Using the scrolling device on the _User&#39;s_ mouse or trackpad causes the entire area to expand and contract which, along with the ability to scroll back and forth via clicking and dragging, allows the User to easily view the entire Release Plan from beginning to end, in detail, while using the _Calendar_ along the top as a reference.
+Using the scrolling device on the _User's_ mouse or trackpad causes the entire area to expand and contract which, along with the ability to scroll back and forth via clicking and dragging, allows the User to easily view the entire Release Plan from beginning to end, in detail, while using the _Calendar_ along the top as a reference.
 
 There are pie charts as the first field in each _Application_ that represent open and closed defects for _Components_ contained in each _Application_. The gray section of each pie chart represents the number of closed defects, while the gold section represents the number of open defects. Hovering the pointer over a pie chart will show the actual number of open and closed defects. This is used to help with tracking defects at a glance so that they can be dealt with, thereby helping to prevent the failure or postponement of a deployment.
 
-Within the _Application_ areas are various colored blocks that represent a deployment in the _Environment&#39;s__Calendar_ in the form of either an Auto Deploy or a Reserved event. The label shown on the block refers to the domain that the target _Environment_ is contained within. Hovering the mouse pointer over it will display the name of the _Environment_ it will be deployed to. Clicking on a block will take the _User_ to the _Calendar_ entry for the designated _Environment_.
+Within the _Application_ areas are various colored blocks that represent a deployment in the _Environment's__Calendar_ in the form of either an Auto Deploy or a Reserved event. The label shown on the block refers to the domain that the target _Environment_ is contained within. Hovering the mouse pointer over it will display the name of the _Environment_ it will be deployed to. Clicking on a block will take the _User_ to the _Calendar_ entry for the designated _Environment_.
 
 A red line indicates today and assists in identifying where deployments for _Applications_ and _Releases_ are in the schedule. The various blocks within the different areas are colored according to where they stand in the release plan. A gold block represents an overdue deployment into an _Environment_, and this is will always appear to the left of the red line. A slate colored block represents a completed deployment into an _Environment_. A dark blue block represents a deployment scheduled to take place in the future.
 
@@ -136,7 +136,7 @@ This tab contains _Groups_ that have access to this _Release_. Click on a _Group
 | Access | Description |
 | --- | --- |
 | View | Allows the User to see the Release. If the User does not belong to a Group in the View Access list, the Release will not appear in the tree structure. |
-| Change | Allows the User to change the Release&#39;s characteristics i.e. Name, Summary, etc. |
+| Change | Allows the User to change the Release's characteristics i.e. Name, Summary, etc. |
 | Deploy | Allows Users to deploy this Release to Environments. |
 
 ## General Tab

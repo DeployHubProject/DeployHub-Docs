@@ -29,7 +29,7 @@ String: The directory part of the passed path.
 **Example:**
 
 ```bash
-set res = dirname("C:\temp\myfolder\myfile.txt, &#39;windows&#39;");
+set res = dirname("C:\temp\myfolder\myfile.txt, 'windows'");
 
 //
 
@@ -37,7 +37,7 @@ set res = dirname("C:\temp\myfolder\myfile.txt, &#39;windows&#39;");
 
 //
 
-set res = dirname(&#39;$2$DKA200:[FERDU01.TEST]vmsfile.txt&#39;, &#39;vms&#39;);
+set res = dirname('$2$DKA200:[FERDU01.TEST]vmsfile.txt', 'vms');
 
 //
 

@@ -10,8 +10,6 @@ The _Change Request_ object represents a change request record associated with e
 
 The following properties can be accessed for a _Change Request_ object:
 
-
-
 | id | String | The change request id. |
 | --- | --- | --- |
 | name | String | The change request description. |

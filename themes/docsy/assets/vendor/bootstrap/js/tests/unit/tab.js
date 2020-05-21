@@ -51,7 +51,7 @@ $(function () {
         '<li><a href="#profile">Profile</a></li>' +
         '</ul>'
 
-    $('<ul><li id="home"/><li id="profile"/></ul>').appendTo('#qunit-fixture')
+    $('<ul style="list-style-type: none;"><li id="home"/><li id="profile"/></ul>').appendTo('#qunit-fixture')
 
     $(tabsHTML).find('li:last-child a').bootstrapTab('show')
     assert.strictEqual($('#qunit-fixture').find('.active').attr('id'), 'profile')
@@ -67,7 +67,7 @@ $(function () {
         '<li><a href="#profile">Profile</a></li>' +
         '</ul>'
 
-    $('<ul><li id="home"/><li id="profile"/></ul>').appendTo('#qunit-fixture')
+    $('<ul style="list-style-type: none;"><li id="home"/><li id="profile"/></ul>').appendTo('#qunit-fixture')
 
     $(pillsHTML).find('li:last-child a').bootstrapTab('show')
     assert.strictEqual($('#qunit-fixture').find('.active').attr('id'), 'profile')

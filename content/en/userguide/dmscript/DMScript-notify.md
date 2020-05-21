@@ -15,8 +15,8 @@ notify takes a number of named parameters:
 | Parameter | Description |
 | --- | --- |
 | notifier | Mandatory. The name of the notifier to use to send the outgoing message. Can be qualified by domain names if required. |
-| to | Recipient list. This can be a _User_ Object, a _UserGroup_ Object, a string containing an email address (or mobile/cell number for SMS notifications) or an Array or List containing several such objects. If a _User_ or _UserGroup_ Object is passed then the object&#39;s "email" attribute is used as the recipient (for SMTP notifiers) or "phone" attribute (for SMS notifiers). If to is not specified, then the owner of any _Environment_ and/or _Endpoint_ on the stack is used as a target. |
-| cc | Carbon Copy list. SMTP notifiers only. This can be a _User_ Object, a _UserGroup_ Object, a string containing an email address or an Array or List containing several such objects. If a _User_ or _UserGroup_ Object is passed then the object&#39;s "email" attribute is used as the recipient.
+| to | Recipient list. This can be a _User_ Object, a _UserGroup_ Object, a string containing an email address (or mobile/cell number for SMS notifications) or an Array or List containing several such objects. If a _User_ or _UserGroup_ Object is passed then the object's "email" attribute is used as the recipient (for SMTP notifiers) or "phone" attribute (for SMS notifiers). If to is not specified, then the owner of any _Environment_ and/or _Endpoint_ on the stack is used as a target. |
+| cc | Carbon Copy list. SMTP notifiers only. This can be a _User_ Object, a _UserGroup_ Object, a string containing an email address or an Array or List containing several such objects. If a _User_ or _UserGroup_ Object is passed then the object's "email" attribute is used as the recipient.
 | subject | SMTP notifiers only. String containing the subject of the email.
 | from | The email address used to identify the source of the message (for SMTP notifiers) or the source of the SMS (for SMS notifiers).
 | attachment | SFTP notifiers only. A Stream to attach to the outgoing email – the content of the Stream will appear as an attachment in the email.

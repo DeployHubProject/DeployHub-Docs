@@ -8,14 +8,13 @@ description: >
 
 ### /dmadminweb/API/component/{identifier}
 
-## Summary:
+## Summary
 
 Retrieve specific component or component version
 
-### Description:
+### Description
 
 This call returns a JSON object representing the specified component. It is useful to determine the application(s) which include the component, whether the application(s) are approved, which other components are used in applications alongside the specified component and so on.
-
 
 ### Parameters
 
@@ -31,18 +30,17 @@ This call returns a JSON object representing the specified component. It is usef
 | ---- | ----------- | ------ |
 | 200 | Success or failure.  Check success field for status. | [component_version_result](/restapi/models/#component_version_result) |
 
-
 ### /dmadminweb/API/new/compver/{comp_id}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Create New Component Version
 
-##### Description:
+##### Description
 
 This call creates a new version of a component. The new component inherits all the attributes of the predecessor component including its domain.
-
 
 ##### Parameters
 
@@ -56,20 +54,19 @@ This call creates a new version of a component. The new component inherits all t
 | ---- | ----------- | ------ |
 | 200 | Success or failure.  Check success field for status. | [success](/restapi/models/#success) |
 
-
 ### /dmadminweb/API/buildid/{comp_id}/{build_id}
 
 #### GET
-##### Summary:
+
+##### Summary
 
 Associate a Build with a Component
 
-##### Description:
+##### Description
 
 This call associates a build number with a specified component. It is typically used from build engines to notify that a new build has been performed. If the component is associated with an approved application then a new version of the component and application is created automatically and the new component version replaces the old component version in the newly created application version.
 
 In order for this to work through the permission model, the associated "Create Application Version" task needs to be specified. This ensures that the invoking user has permission to create a new version of the application (since the permissions are checked against the named task) and also the target domain (i.e. the domain in which the new application is created) is determined from the task. Also, by specifying the task to execute, any pre and post link actions are executed just as if the task had been invoked via the Web UI.
-
 
 ##### Parameters
 

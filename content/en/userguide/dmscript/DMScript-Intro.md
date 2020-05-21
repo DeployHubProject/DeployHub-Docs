@@ -86,7 +86,7 @@ A method is accessed like this:
 set descendants = ${Application.children()}
 ```
 
-which returns an array of _Application_ objects, representing the descendants of the specified _Application_. When referencing an object&#39;s _method_, the method name has (). Methods are normally used when there is an optional or mandatory parameter that can be passed to the method to control its operation. In the above example, children() has an optional Boolean parameter which controls how many descendants are returned in the array.
+which returns an array of _Application_ objects, representing the descendants of the specified _Application_. When referencing an object's _method_, the method name has (). Methods are normally used when there is an optional or mandatory parameter that can be passed to the method to control its operation. In the above example, children() has an optional Boolean parameter which controls how many descendants are returned in the array.
 
 ## Storing DMScripts
 
@@ -342,10 +342,10 @@ set a="testtwo";
 echo $myarray[$a]; // echoes "2"
 ```
 
-You can also set associative array members by using { ... } syntax and using =\&gt; to specify the subscript and the value:
+You can also set associative array members by using { ... } syntax and using => to specify the subscript and the value:
 
 ```bash
-set myarray = { "testone" =\&gt; "ONE", "testtwo" =\&gt; "TWO" };
+set myarray = { "testone" => "ONE", "testtwo" => "TWO" };
 
 echo $myarray["testone"]; // echoes "ONE"
 
@@ -517,15 +517,15 @@ _DMScript_ has the usual operators you would expect in a conventional scripting 
 
 | **Operator** | **Description** | **Example** |
 | --- | --- | --- |
-| + | <ul><li>Integer addition</li><li>Date offset</li><li>App Version tree walk</li><li>Array/List joining</li><li>String Concatenation</li></ul> | <ul><li>2 + 2 = 4</li><li>$date + 7200 = 2 hours later</li><li>$av + 1 = successor</li><li>arr3 = $arr1 + $arr2</li><li>str3 = $str1 + $str2</li></ul> |
-|-|<ul><li>Integer subtraction</li><li> Date difference</li><li> Date negative offset</li><li> App Version tree walk</li></ul>|<ul><li>5 - 2 = 3</li><li> $date1 - $date2 = X seconds</li><li> $date - 3600 = an hour earlier</li><li> $av - 2 = grandfather </li></ul>|
-| \* | <ul><li>Integer Multiplication</li></ul>| <ul><li>2 \* 2 = 4 </li></ul>|
-| / | <ul><li>Integer division </li></ul>|<ul><li>5 / 2 = 2</li><li>1 / 0 = \<empty\></li></ul>|
-| % | <ul><li>Integer modulus </li></ul>| <ul><li>5 % 2 = 1 </li></ul>|
-| & or -a | <ul><li>Logical and</li></ul> |<ul><li> true & true = true</li></ul> |
-| l or -o | <ul><li>Logical or</li></ul> | <ul><li> true & false = true</ul></li> |
-| Unary-  | <ul><li>Unary minus</li></ul> | <ul><li>-1 = -1</li></ul> |
-| ! | <ul><li>Logical not </li><li>String set test</li><li>Object ref test</li></ul> | <ul><li>!true = false</li><li> !0 = true or !"" = true</li><li>!null = true</li></ul> |
+| + | <ul style="list-style-type: none;"><li>Integer addition</li><li>Date offset</li><li>App Version tree walk</li><li>Array/List joining</li><li>String Concatenation</li></ul> | <ul style="list-style-type: none;"><li>2 + 2 = 4</li><li>$date + 7200 = 2 hours later</li><li>$av + 1 = successor</li><li>arr3 = $arr1 + $arr2</li><li>str3 = $str1 + $str2</li></ul> |
+|-|<ul style="list-style-type: none;"><li>Integer subtraction</li><li> Date difference</li><li> Date negative offset</li><li> App Version tree walk</li></ul>|<ul style="list-style-type: none;"><li>5 - 2 = 3</li><li> $date1 - $date2 = X seconds</li><li> $date - 3600 = an hour earlier</li><li> $av - 2 = grandfather </li></ul>|
+| \* | <ul style="list-style-type: none;"><li>Integer Multiplication</li></ul>| <ul style="list-style-type: none;"><li>2 \* 2 = 4 </li></ul>|
+| / | <ul style="list-style-type: none;"><li>Integer division </li></ul>|<ul style="list-style-type: none;"><li>5 / 2 = 2</li><li>1 / 0 = \<empty\></li></ul>|
+| % | <ul style="list-style-type: none;"><li>Integer modulus </li></ul>| <ul style="list-style-type: none;"><li>5 % 2 = 1 </li></ul>|
+| & or -a | <ul style="list-style-type: none;"><li>Logical and</li></ul> |<ul style="list-style-type: none;"><li> true & true = true</li></ul> |
+| l or -o | <ul style="list-style-type: none;"><li>Logical or</li></ul> | <ul style="list-style-type: none;"><li> true & false = true</ul></li> |
+| Unary-  | <ul style="list-style-type: none;"><li>Unary minus</li></ul> | <ul style="list-style-type: none;"><li>-1 = -1</li></ul> |
+| ! | <ul style="list-style-type: none;"><li>Logical not </li><li>String set test</li><li>Object ref test</li></ul> | <ul style="list-style-type: none;"><li>!true = false</li><li> !0 = true or !"" = true</li><li>!null = true</li></ul> |
 | () | Sub-expression | Changes precedence |
 | = or -eq | Equals | Boolean, Integer, String, Object |
 | != or -ne | Not equals | Boolean, Integer, String, Object |

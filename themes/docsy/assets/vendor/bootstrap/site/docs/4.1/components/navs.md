@@ -35,7 +35,7 @@ The base `.nav` component does not include any `.active` state. The following ex
 {% endcapture %}
 {% include example.html content=example %}
 
-Classes are used throughout, so your markup can be super flexible. Use `<ul>`s like above, or roll your own with say a `<nav>` element. Because the `.nav` uses `display: flex`, the nav links behave the same as nav items would, but without the extra markup.
+Classes are used throughout, so your markup can be super flexible. Use `<ul style="list-style-type: none;">`s like above, or roll your own with say a `<nav>` element. Because the `.nav` uses `display: flex`, the nav links behave the same as nav items would, but without the extra markup.
 
 {% capture example %}
 <nav class="nav">
@@ -117,7 +117,7 @@ Stack your navigation by changing the flex item direction with the `.flex-column
 {% endcapture %}
 {% include example.html content=example %}
 
-As always, vertical navigation is possible without `<ul>`s, too.
+As always, vertical navigation is possible without `<ul style="list-style-type: none;">`s, too.
 
 {% capture example %}
 <nav class="nav flex-column">
@@ -247,7 +247,7 @@ If you need responsive nav variations, consider using a series of [flexbox utili
 
 ## Regarding accessibility
 
-If you're using navs to provide a navigation bar, be sure to add a `role="navigation"` to the most logical parent container of the `<ul>`, or wrap a `<nav>` element around the whole navigation. Do not add the role to the `<ul>` itself, as this would prevent it from being announced as an actual list by assistive technologies.
+If you're using navs to provide a navigation bar, be sure to add a `role="navigation"` to the most logical parent container of the `<ul style="list-style-type: none;">`, or wrap a `<nav>` element around the whole navigation. Do not add the role to the `<ul style="list-style-type: none;">` itself, as this would prevent it from being announced as an actual list by assistive technologies.
 
 Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` class, should **not** be given `role="tablist"`, `role="tab"` or `role="tabpanel"` attributes. These are only appropriate for dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel). See [JavaScript behavior](#javascript-behavior) for dynamic tabbed interfaces in this section for an example.
 
@@ -363,7 +363,7 @@ Note that dynamic tabbed interfaces should <em>not</em> contain dropdown menus, 
 </div>
 {% endhighlight %}
 
-To help fit your needs, this works with `<ul>`-based markup, as shown above, or with any arbitrary "roll your own" markup. Note that if you're using `<nav>`, you shouldn't add `role="tablist"` directly to it, as this would override the element's native role as a navigation landmark. Instead, switch to an alternative element (in the example below, a simple `<div>`) and wrap the `<nav>` around it.
+To help fit your needs, this works with `<ul style="list-style-type: none;">`-based markup, as shown above, or with any arbitrary "roll your own" markup. Note that if you're using `<nav>`, you shouldn't add `role="tablist"` directly to it, as this would override the element's native role as a navigation landmark. Instead, switch to an alternative element (in the example below, a simple `<div>`) and wrap the `<nav>` around it.
 
 <div class="bd-example bd-example-tabs">
   <nav>

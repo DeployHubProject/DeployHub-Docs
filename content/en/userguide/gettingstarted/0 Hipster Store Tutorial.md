@@ -12,7 +12,7 @@ This _Hipster Store_ tutorial introduces you to the most basic concepts behind D
 
 ## Step 1 – Review the Hipster Store Domains
 
-Domains serve as the basic structure of your microservice catalog. Developers use Domains to organize microservices based on &#39;solution spaces&#39; allowing them to both share their services and find others. The Hipster Store is defined using several _Domains._ The first is our high-level Company _Domain_ called "Vintage LLC".
+Domains serve as the basic structure of your microservice catalog. Developers use Domains to organize microservices based on 'solution spaces' allowing them to both share their services and find others. The Hipster Store is defined using several _Domains._ The first is our high-level Company _Domain_ called "Vintage LLC".
 
 To view the _Domains_:
 
@@ -22,7 +22,7 @@ To view the _Domains_:
 
 ![](RackMultipart20200511-4-zk9mjm_html_95ee7ac3d4043ec1.jpg)
 
-The _Hipster Store Domain_ is a _Sub-Domain_ of Vintage LLC. It itself includes 6 _Sub-Domains_ that organize microservices by their common &#39;solution space&#39; from _Ad Service_ to _Recommendation Service_. Another sibling _Domain_ called _Purchase Processing_ is also available and it includes 5 additional _Sub-Domains_ that organize microservices into other solution spaces. As you will see later, the Hipster Store depends on some of the _Purchase Processing_ services. In this example, all _Sub-Domains_ of the Vintage LLC company have full read/write access. With DeployHub Pro, you can restrict read/write access to _Domains_.
+The _Hipster Store Domain_ is a _Sub-Domain_ of Vintage LLC. It itself includes 6 _Sub-Domains_ that organize microservices by their common 'solution space' from _Ad Service_ to _Recommendation Service_. Another sibling _Domain_ called _Purchase Processing_ is also available and it includes 5 additional _Sub-Domains_ that organize microservices into other solution spaces. As you will see later, the Hipster Store depends on some of the _Purchase Processing_ services. In this example, all _Sub-Domains_ of the Vintage LLC company have full read/write access. With DeployHub Pro, you can restrict read/write access to _Domains_.
 
 ## Step 2 – Review the Hipster Store Domain Tasks
 
@@ -36,7 +36,7 @@ You will see that the high-level _Domain_ of Vintage LLC has no _Tasks_. If a _T
 
 ![](RackMultipart20200511-4-zk9mjm_html_cf36f0f989b46e1c.jpg)
 
-Now select the Hipster Store _Domain_ in the tree view and select the _Tasks_ Sub Menu. You will see it uses two _Tasks_. A &#39;_Deploy_&#39; Task can a &#39;_Version_&#39; Task.
+Now select the Hipster Store _Domain_ in the tree view and select the _Tasks_ Sub Menu. You will see it uses two _Tasks_. A '_Deploy_' Task can a '_Version_' Task.
 
 ![](RackMultipart20200511-4-zk9mjm_html_572bca86919cd2d1.jpg)
 
@@ -44,7 +44,7 @@ These _Tasks_ are required in order to allow DeployHub to deploy _Components_ an
 
 ## Step 3 – Review a Deploy
 
-_Applications_ are a collection of _Components_ that are released as a complete software solution. _Releases_ are a collection of _Applications_ that should be rolled out together – sometimes called a &#39;Release Train.&#39; Note: DeployHub Team does not have access to define _Releases_.
+_Applications_ are a collection of _Components_ that are released as a complete software solution. _Releases_ are a collection of _Applications_ that should be rolled out together – sometimes called a 'Release Train.' Note: DeployHub Team does not have access to define _Releases_.
 
 - Click on the Deploy Menu Item to display _Applications, Components_ and _Releases_.
 
@@ -58,11 +58,11 @@ The first time you define an _Application,_ it is referred to as the _Applicatio
 
 **Application Version** : This child of the _Application Base Version_ represents changes and can be deployed just as an _Application Base Version_ is.
 
-## Step 4 – Review an Application&#39;s Components
+## Step 4 – Review an Application's Components
 
 _Applications_ are a collection of _Components_. A _Component_ can be a microservice, a binary object, a database update or any other custom object that is required by the _Application_.
 
-- Double Click on the first _Application_ in the list: Hipster Store: July 4th. You will see a &#39;blueprint&#39; of all microservices consumed by this _Application_.
+- Double Click on the first _Application_ in the list: Hipster Store: July 4th. You will see a 'blueprint' of all microservices consumed by this _Application_.
 
 ![](RackMultipart20200511-4-zk9mjm_html_ef8865ac82f85d43.jpg)
 
@@ -70,10 +70,10 @@ This is the _Base Version_ of the July 4th Hipster store. We you setup DeployHub
 
 ## Step 5 – Review a Map of all Versions of the Hipster Store
 
-The Hipster Store has 4 versions. There are differences between each version. The Hipster Store Map shows all the Versions and the versions of the microservices they consume. To see the entire Map, click on the &#39;Map&#39; sub-menu from the Application list.
+The Hipster Store has 4 versions. There are differences between each version. The Hipster Store Map shows all the Versions and the versions of the microservices they consume. To see the entire Map, click on the 'Map' sub-menu from the Application list.
 
 - Click on _Application_ in the left menu.
-- Select the &#39;Map&#39; sub-menu. You will be displayed a full map of all versions of the Hipster Store and their associated microservices.
+- Select the 'Map' sub-menu. You will be displayed a full map of all versions of the Hipster Store and their associated microservices.
 
 ![](RackMultipart20200511-4-zk9mjm_html_97d54cea8b8ad3aa.jpg)
 

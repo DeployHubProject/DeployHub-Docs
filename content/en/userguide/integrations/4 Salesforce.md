@@ -5,7 +5,7 @@ weight: 70
 ---
 ## SalesForce Integration
 
-Salesforce offers a SaaS (Software as a Service) model where customers use and customize applications using class and package files. Create and store these into various _Repositories_ such as Git and then deploy into Salesforce for a company&#39;s Salesforce based applications.
+Salesforce offers a SaaS (Software as a Service) model where customers use and customize applications using class and package files. Create and store these into various _Repositories_ such as Git and then deploy into Salesforce for a company's Salesforce based applications.
 
 Salesforce offers different regions such as testing, preproduction, etc., where the class and package files can be deployed prior production.
 
@@ -34,7 +34,7 @@ NOTE: Double clicking SalesForceDeployAction.png will show the arrangement of th
 
 Notice there are now four new _Procedures_ in the _Domain_ named "RunAnt" and "GitCheckout," under the Deploy Category, as well as "SalesForceDeploy" and "SalesforceCredential," under the SalesForce Category.
 
-The _SalesforceCredential Procedure_ is of the type "_DMScript Procedure in Database_". It contains _DMScript_ code that takes the username/ password of the named _Credential_. It&#39;s a single argument and therefore uses the same username/ password to access a Salesforce region (test, prod, etc.)
+The _SalesforceCredential Procedure_ is of the type "_DMScript Procedure in Database_". It contains _DMScript_ code that takes the username/ password of the named _Credential_. It's a single argument and therefore uses the same username/ password to access a Salesforce region (test, prod, etc.)
 
 The _GitCheckout Procedure_ is of the type "_Procedure provided by local external script or program_". It has the following arguments:
 

@@ -6,7 +6,7 @@ description: >
   Change a file in the DropZone. 
 ---
 
-_Modify_ changes a file in the _DropZone_. _modify_ is used to make changes to either flat files or XML files before they&#39;re deployed to the target _Endpoints_. Changes can be made that are specific to individual _Endpoints_ within the _Endpoint_ list. In this case, each _Endpoint_ receives its own copy of the modified file.
+_Modify_ changes a file in the _DropZone_. _modify_ is used to make changes to either flat files or XML files before they're deployed to the target _Endpoints_. Changes can be made that are specific to individual _Endpoints_ within the _Endpoint_ list. In this case, each _Endpoint_ receives its own copy of the modified file.
 
 _modify_ opens a statement block containing the file modification statements. The statements that are permitted in the modify block are dependent on the type of modification being performed (either text file or XML file). It is these modification statements that specify what changes are made to the specified file – the parent _modify_ statement specifies the file and its format.
 

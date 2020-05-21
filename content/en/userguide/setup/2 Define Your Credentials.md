@@ -12,7 +12,7 @@ _Credentials_ are objects within DeployHub that contain username and password pa
 
 ## Creating and Deleting Credentials
 
-To create a _Credential_, select the _Connections_ Main Menu item, and right click on a _Domain_ in the tree structure. A pop-up option creates a &#39;New Credential in this Domain.&#39; By selecting this option, the &#39;New Credential&#39; dialog box will be displayed. Alternatively, right click on a _Credential_ to delete it from the _Domain_.
+To create a _Credential_, select the _Connections_ Main Menu item, and right click on a _Domain_ in the tree structure. A pop-up option creates a 'New Credential in this Domain.' By selecting this option, the 'New Credential' dialog box will be displayed. Alternatively, right click on a _Credential_ to delete it from the _Domain_.
 
 ## Editing Credentials
 
@@ -26,7 +26,7 @@ This tab displays basic information concerning the _Credential_ along with the u
 | --- | --- |
 | Name | The name of the _Credential._ |
 | Summary | A general description of the _Credential._ |
-| Kind | There are three different Kinds of _Credentials_, that vary according to where they reside:<ul style="list-style-type: none;"><li>**Encrypted in database:** The username/password pair resides in DeployHub&#39;s database using 3DES encryption.</li><li>**From Variables:** The username/password is managed in variables.</li><li>Harvest DFO in file system: For connecting to the CA Harvest DFO file system.</li><ul> |
+| Kind | There are three different Kinds of _Credentials_, that vary according to where they reside:<ul style="list-style-type: none;"><li>**Encrypted in database:** The username/password pair resides in DeployHub's database using 3DES encryption.</li><li>**From Variables:** The username/password is managed in variables.</li><li>Harvest DFO in file system: For connecting to the CA Harvest DFO file system.</li><ul style="list-style-type: none;"> |
 | Username | The username that will be used to access the object. |
 | Password | The password that will be used to access the object. |
 | Filename | Name of file where username and password are stored. _Displayed only for Harvest DFO file system option._ |
@@ -40,5 +40,5 @@ Allows _Users_ within designated _Groups_ to use and/or change the _Credential_.
 | Access | Description |
 | --- | --- |
 | View | Allows the _User_ to see the _Credential_. If the _User_ does not belong to a _Group_ in the View Access list, the _Credential_ will not appear in the tree structure. |
-| Change | Allows the _User_ to change the _Credential&#39;s_ characteristics i.e. Name, Summary, etc. |
+| Change | Allows the _User_ to change the _Credential's_ characteristics i.e. Name, Summary, etc. |
 | Read | Allows the _User_ to use the _Credential_ by assigning it to an object such as a _Server_ or _Repository_. |

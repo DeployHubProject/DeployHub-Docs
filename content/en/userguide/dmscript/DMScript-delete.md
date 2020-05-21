@@ -50,7 +50,7 @@ delete(file: ${file.dzpath});
 
 if (${dep.same}) {
 
-// We&#39;re deploying the same version of Application as currently
+// We're deploying the same version of Application as currently
 
 // on the Target Environment
 
@@ -72,7 +72,7 @@ set filelist = ${DropZone.files};
 
 iterate(file: $filelist) {
 
-if (${file.mtime} \&lt; $dt) {
+if (${file.mtime} < $dt) {
 
 echo "Removing file $file";
 

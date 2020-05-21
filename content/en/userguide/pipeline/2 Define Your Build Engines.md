@@ -17,7 +17,7 @@ A Jenkins Build Job communicates with DeployHub, passing log and results. Any ti
 
 ## Build Jobs and Components
 
-A Jenkins Build Job Run creates a Build Job Number stored in a DeployHub _Component_. A field named &#39;Last Build Number&#39; is updated every time a Build Job is executed. The DeployHub Jenkins plug-in has a "notify only" mode for when a build has been done. Clicking on "Endpoints and Builds" will show all of the builds that have been done for that _Component_. Clicking on a Build Number will open a pop-up with the build log that has been pulled from Jenkins.
+A Jenkins Build Job Run creates a Build Job Number stored in a DeployHub _Component_. A field named 'Last Build Number' is updated every time a Build Job is executed. The DeployHub Jenkins plug-in has a "notify only" mode for when a build has been done. Clicking on "Endpoints and Builds" will show all of the builds that have been done for that _Component_. Clicking on a Build Number will open a pop-up with the build log that has been pulled from Jenkins.
 
 ## Build Job Run
 
@@ -25,13 +25,13 @@ An execution of Jenkins is called a Build Job Run, and DeployHub can be called a
 
 Jenkins build logs can be viewed directly from inside the DeployHub URL, minimizing the amount of browser activity required. For example, a user can see a build artifact on a target _Endpoint_ and open the details of the generating build directly from the _Endpoint_ details page.
 
-If the &#39;Always Deploy&#39; flag is set to Yes on a Component, it makes no difference if the version of the Component is different or the same as the one on the _Endpoint_; the _Component_ is deployed to the _Endpoint_. If the &#39;Always Deploy&#39; flag is set to No, the version on the _Endpoint_ and the version of the _Component_ must be different for the _Component_ to be deployed. However, even if the version on the _Endpoint_ and the version of the _Component_ are the same, if the Last Build Number in the _Component_ is different than the last build number in Jenkins, the _Component_ will be deployed.
+If the 'Always Deploy' flag is set to Yes on a Component, it makes no difference if the version of the Component is different or the same as the one on the _Endpoint_; the _Component_ is deployed to the _Endpoint_. If the 'Always Deploy' flag is set to No, the version on the _Endpoint_ and the version of the _Component_ must be different for the _Component_ to be deployed. However, even if the version on the _Endpoint_ and the version of the _Component_ are the same, if the Last Build Number in the _Component_ is different than the last build number in Jenkins, the _Component_ will be deployed.
 
 ## Creating and Deleting Build Engines
 
 A _Build Engine_ is created by selecting the Data Center Menu item, clicking on the Build Engines tab, and right clicking on the _Domain_ in the tree structure. This action brings the "New Build Engine in this Domain" option. By selecting this option, the New Build Engine dialog box will automatically be displayed. Once created, the _Build Engine_ details can be edited by selecting the General tab and clicking on the pencil icon on the far right.
 
-To delete a _Build Engine_, right click on the _Build Engine_ in the tree view to see the &#39;Delete this Build Engine&#39; option. Once deleted, this action cannot be undone. A _Build Engine_ can be copied by right clicking on the _Build Engine_, selecting the &#39;Copy End Point&#39;, and then paste it into another _Domain_ with a right click.
+To delete a _Build Engine_, right click on the _Build Engine_ in the tree view to see the 'Delete this Build Engine' option. Once deleted, this action cannot be undone. A _Build Engine_ can be copied by right clicking on the _Build Engine_, selecting the 'Copy End Point', and then paste it into another _Domain_ with a right click.
 
 A DeployHub _Build Engine_ has a single property, which is the URL of the physical or virtual server where a continuous integration server resides. A _Build Engine_ can also have a _Credential_, which contains the username and password to the physical or virtual server.
 
@@ -74,7 +74,7 @@ When you select the _Endpoint_ from the tree structure, the details of the _Endp
 
 Build jobs are used to build different kinds of executable files for placement within _Components_ for eventual deployments.
 
-Using Jenkins as an example, Jenkins performs a software build which includes compiling source code. Jenkins then calls DeployHub and places its Build Number into DeployHub to be referenced during a subsequent deployment. (This appears in the target _Component&#39;s_ General tab within the Last Build Number field). Jenkins then puts the files into the _Repository_ that is referenced by the _Component Item(s)_ within the _Component_. As a separate operation, Jenkins calls DeployHub to perform the deployment by referencing the _Application_ that contains the _Component_. For **DeployHub Pro** users, Jenkins can also call a _Release_ that contains multiple _Applications_.
+Using Jenkins as an example, Jenkins performs a software build which includes compiling source code. Jenkins then calls DeployHub and places its Build Number into DeployHub to be referenced during a subsequent deployment. (This appears in the target _Component's_ General tab within the Last Build Number field). Jenkins then puts the files into the _Repository_ that is referenced by the _Component Item(s)_ within the _Component_. As a separate operation, Jenkins calls DeployHub to perform the deployment by referencing the _Application_ that contains the _Component_. For **DeployHub Pro** users, Jenkins can also call a _Release_ that contains multiple _Applications_.
 
 ## Builds Tab
 

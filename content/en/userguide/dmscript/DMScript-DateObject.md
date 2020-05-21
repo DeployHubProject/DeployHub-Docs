@@ -63,7 +63,7 @@ The to\_char() method returns a string which is identical to the passed fmt stri
 | %Y | The year as a decimal number including the century. |
 | %z | The +hhmm or -hhmm numeric timezone (that is, the hour and minute offset from UTC). |
 | %Z | The timezone name or abbreviation. |
-| %% | A literal &#39;%&#39; character. |
+| %% | A literal '%' character. |
 
 ### Alternate Format Modifiers
 

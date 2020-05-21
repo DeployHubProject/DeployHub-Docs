@@ -21,12 +21,11 @@ A good use for a _Custom Action_ would be the installation of a commercially ava
 
 NOTE: Custom Actions allow you to execute the existing one-off deployment scripts and can support an easy transition to using DeployHub.
 
-
 ## Deployment Engines and Domains
 
 Deployment engines do the heavy lifting of transferring files to _Endpoints_ and performing the installation logic.
 
-- For On-Premises Users - The _Engine Hostname_ field defaults to &#39;Default Engine&#39;, which tells DeployHub to use that deployment engine for that _Domain_ and _Sub-Domain_, unless defined at the _Sub-Domain_ level. The name can be changed to a different deployment engine.
+- For On-Premises Users - The _Engine Hostname_ field defaults to 'Default Engine', which tells DeployHub to use that deployment engine for that _Domain_ and _Sub-Domain_, unless defined at the _Sub-Domain_ level. The name can be changed to a different deployment engine.
 - For SaaS users - your reverse proxy runs your deployment engine. If you need multiple deployment engines, contact support for the installers.
 
-Multiple deployment engines can be used to distribute the deployment processing for large data centers with hundreds of _Endpoints._ Each _Domain_ can be assigned a unique deployment engine. From the _Domain__General_ tab, the _Engine Host Location_ refers to the location of the process that executes the deployment&#39;s installation activities_._ You can install the deployment engineon separate host servers to distribute the workload across multiple host locations, and the high-level _Domains_ and child _Sub-Domains_ can all have unique engines. All deployments to the _Environments_ defined to the _Domain_ and its _Sub-Domains_ will be processed by the host engine defined at that level.
+Multiple deployment engines can be used to distribute the deployment processing for large data centers with hundreds of _Endpoints._ Each _Domain_ can be assigned a unique deployment engine. From the _Domain__General_ tab, the _Engine Host Location_ refers to the location of the process that executes the deployment's installation activities_._ You can install the deployment engineon separate host servers to distribute the workload across multiple host locations, and the high-level _Domains_ and child _Sub-Domains_ can all have unique engines. All deployments to the _Environments_ defined to the _Domain_ and its _Sub-Domains_ will be processed by the host engine defined at that level.

@@ -21,4 +21,4 @@ Integer: A number between 0 and limit-1.
 
 **Example**
 
-echo "Here&#39;s a random number between 0 &amp; 50 $(random(51))";
+echo "Here's a random number between 0 &amp; 50 $(random(51))";

@@ -187,7 +187,7 @@ New to Bootstrap 4 is the [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version 
 
 - Switched from parent selectors to singular classes for all components, modifiers, etc.
 - Simplified dropdown styles to no longer ship with upward or downward facing arrows attached to the dropdown menu.
-- Dropdowns can be built with `<div>`s or `<ul>`s now.
+- Dropdowns can be built with `<div>`s or `<ul style="list-style-type: none;">`s now.
 - Rebuilt dropdown styles and markup to provide easy, built-in support for `<a>` and `<button>` based dropdown items.
 - Renamed `.divider` to `.dropdown-divider`.
 - Dropdown items now require `.dropdown-item`.

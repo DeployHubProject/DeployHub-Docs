@@ -7,9 +7,9 @@ description: >
 ---
 ## SaaS Sign-up Process and the Reverse Proxy
 
-[Sign-up to use the SaaS](https://www.deployhub.com/register-for-team/?) version of DeployHub and start managing microservices immediately. When you sign-up, you will be asked for basic information, such as company and project names to provide you with a unique &#39;Domain&#39; and &#39;Project&#39; identifier. If someone else from your organization signs up to DeployHub, they will need to create another Project Name.
+[Sign-up to use the SaaS](https://www.deployhub.com/register-for-team/?) version of DeployHub and start managing microservices immediately. When you sign-up, you will be asked for basic information, such as company and project names to provide you with a unique 'Domain' and 'Project' identifier. If someone else from your organization signs up to DeployHub, they will need to create another Project Name.
 
-Once you sign-up, you will see a high level &#39;Domain&#39; named after your Project name, for example "Teller." In addition, you will be assigned a Pipeline called "MyPipeline" that includes &#39;Dev", "Test" and "Production" stages. At this point you will be ready to begin defining Credentials, Repositories, and the Components of your Application.
+Once you sign-up, you will see a high level 'Domain' named after your Project name, for example "Teller." In addition, you will be assigned a Pipeline called "MyPipeline" that includes 'Dev", "Test" and "Production" stages. At this point you will be ready to begin defining Credentials, Repositories, and the Components of your Application.
 
 You can change the name of your Application or reconfigure your Pipeline in any way needed to reflect your own life cycle process.
 

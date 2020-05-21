@@ -25,5 +25,4 @@ set me = me();
 
 echo "Hello ${me.name}";
 
-
 Further descriptions of User Objects are found in the high level section named _DMScript_ Objects, in the section named User.
