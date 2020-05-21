@@ -6,10 +6,11 @@ description: >
   Assert compares two strings, objects or expressions.
 ---
 
-**_assert_** is used to compare two strings, objects or expressions for equality. If the values passed are not identical then an exception is thrown. This exception will normally stop the script but can be caught and handled by a try/catch block.
+**_assert_** is used to compare two strings, objects or expressions for equality. If the values passed are not identical then an exception is thrown. This exception will normally stop the script but can be caught and handled by a _try/catch block_.
 
-assert takes a number of named parameters:
-| Expression  |  Description |
+_assert_ takes a number of named parameters:
+
+| Expression | Description |
 | --- | --- |
 | expr | Specifies an expression to execute. The expression must return true in order for the assertion to succeed. If the expression returns false an exception is thrown. |
 | expr1 | Specifies an expression to execute. The result is compared to the result of the expression specified by expr2. |
@@ -21,7 +22,7 @@ assert takes a number of named parameters:
 
 Note, only the following combinations of arguments are permitted:
 
-assert takes a number of named parameters:
+_assert_ takes a number of named parameters:
 
 | **Expression**  |  **Description** |
 | --- | --- |
@@ -50,4 +51,4 @@ abort(msg: "Can only deploy the latest version (${latest.name})");
 }
 ```
 
-If the _Application_ being deployed ($_Application_) is the same as the calculated latest version then the assertion check succeeds and the script exits without error, allowing the deployment to continue. If $_Application_ differs from the calculated latest version then the assertion fails and an exception is thrown. The try/catch block simply catches this error and issues a more "user friendly" error message.
+If the _Application_ being deployed ($Application) is the same as the calculated latest version then the assertion check succeeds and the script exits without error, allowing the deployment to continue. If $Application differs from the calculated latest version then the assertion fails and an exception is thrown. The _try/catch block_ simply catches this error and issues a more "user friendly" error message.

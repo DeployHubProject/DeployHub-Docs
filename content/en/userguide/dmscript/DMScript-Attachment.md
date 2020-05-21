@@ -9,11 +9,11 @@ description: >
 
 An _attachment_ statement can only be included in a notify block. It is used to add an attachment into an outgoing email (via SMTP notifiers). It allows much finer control over the attachment content than that provided by the attachment parameter to the notify statement.
 
-attachment takes a number of named parameters:
+_attachment_ takes a number of named parameters:
 
 |**Parameter**| **Description** |
 | --- | --- |
- | name |   The name of the attachment. The attachment will appear with this name in the received email.|
+ | name | The name of the attachment. The attachment will appear with this name in the received email.|
  | body | Optional - The message.|  
  | A stream | The content of the stream creates the content of the attachment.|
 

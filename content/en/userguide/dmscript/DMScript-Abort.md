@@ -3,7 +3,7 @@ title: "Abort"
 linkTitle: "Abort"
 weight: 2
 description: >
-  Using Abort to end a script execution.
+  Using _abort_ to end a script execution.
 ---
 
 _abort_ throws an exception, which would normally end a script execution. It can take an optional message which DeployHub will issue when the script ends. _abort_ is typically used when a condition prevents the rest of the script from executing correctly. _abort_ takes a single, named parameter:

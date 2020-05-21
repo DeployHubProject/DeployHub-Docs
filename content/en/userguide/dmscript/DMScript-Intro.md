@@ -48,47 +48,9 @@ _DMScript_ has:
 If you need to do any of these things, either as part of a deployment activity or as part of an integration (for example, notifying an external system when an _Application Version_ has been moved or deployed) then use _DMScript_.
 You can customize any _Action_ using DM Script. DeployHub has _built-in Functions_ and _Procedures_ ready for you to call when you need customization. _Actions_ call _Activities_ that are _Functions_ or _Procedures_. _Function_ performs an _Activity_ and returns an _Object_. A _Procedure_ performs an _Activity_ and returns only 'success'or 'fail.'
 
-# Objects
 
-The following is a list of the objects that you can reference in _DMScript_.
 
-- Application
-- Change Request
-- Components
-- Component Items
-- Credentials
-- Date
-- Domain
-- DropZone
-- DropZone File
-- Environment
-- Endpoint
-- User
-- UserGroup
-
-_DMScript_ is an object-orientated scripting language. As such, it understands each object in the DeployHub model. You can access each object either by selecting it off the stack (e.g.: $_Environment_), by retrieving a reference to the object from some other object, or by calling a built-in _Function_ to retrieve it. Each object has accessible properties. Some objects also have methods that can be called.
-
-## Object Properties
-
-A property is typically accessed like this:
-
-```bash
-set appid = ${_Application_.id}
-```
-
-which will return the internal object ID of the _Application_ object. Note that when referencing a property, the property name does not contain ().
-
-## Object Methods
-
-A method is accessed like this:
-
-```bash
-set descendants = ${Application.children()}
-```
-
-which returns an array of _Application_ objects, representing the descendants of the specified _Application_. When referencing an object&#39;s _method_, the method name has (). Methods are normally used when there is an optional or mandatory parameter that can be passed to the method to control its operation. In the above example, children() has an optional Boolean parameter which controls how many descendants are returned in the array.
-
-## Storing DMScripts
+# Storing DMScripts
 
 When you write your own DMScripts for _Procedures_ and _Functions_, you can set the "kind" to either "_DMScript __Procedure__ in Database_" or "_DMScript __Procedure__ in Repository_".
 
@@ -223,7 +185,7 @@ _DMScript_ is an object-orientated scripting language. It uses a fairly broad sy
 _DMScript_ has knowledge of the DeployHub object model. Each object (_Endpoint_, _Environment_, _Application_, _Component_ etc) has a corresponding object in _DMScript_. Thus, you can use ${_Environment_.name} to get the current _Environment_ name (deployment target) and ${_Application_.name} to get the name of the _Application_ being deployed. Other objects (such as _Endpoint_ and _Component_) only become "in scope" when they are pushed onto the _Stack_ during a deployment operation.
 
 This knowledge of the object model allows _DMScript_ to use fairly sophisticated operations. For example if you have an _Application Version_ object:
-
+~~~
 $app
 
 Then
@@ -239,7 +201,7 @@ is two revisions of this Version. Similarly,
 $app+1
 
 is the revision immediately after this _Version_.
-
+~~~
 NOTE: this operation will not work if the version has two or more child versions (due to branching).
 
 ## DMScript Interpreter

@@ -8,7 +8,7 @@ description: >
 
 ## /dmadminweb/API/applications
 
-## Geta List Applications
+# Get a List Applications
 
 ### Description:
 This call returns an array of JSON objects representing each application to which the logged-in user has access.
@@ -56,7 +56,8 @@ Note, the resulting JSON will vary slightly depending on whether the specified a
 
 ### /dmadminweb/API/new/appver/{app_id}
 
-## Create New Application Version
+
+# Create New Application Version
 
 ### Description:
 
