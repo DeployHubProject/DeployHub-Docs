@@ -94,6 +94,13 @@ table tr th :last-child, table tr td :last-child {
   margin-bottom: 0;
 }
 
+td > ul > li { 
+  margin-bottom: 1em; 
+}
+
+td > ul > ul > li { 
+  margin-bottom: 1em; 
+}
 
 code, tt {
   margin: 0 2px;
