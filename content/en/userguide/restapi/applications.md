@@ -6,11 +6,9 @@ description: >
   APIs for Applications.
 ---
 
-## /dmadminweb/API/applications
+## Get a List Applications
 
-# Get a List Applications
-
-### Description
+### /dmadminweb/API/applications
 
 This call returns an array of JSON objects representing each application to which the logged-in user has access.
 
@@ -28,11 +26,9 @@ If the all parameter is not specified then only the applications associated with
 | ---- | ----------- | ------ |
 | 200 | Success or failure.  Check success field for status. | [applications_result](/restapi/models/#application_result) |
 
-### /dmadminweb/API/application/{identifier}
-
 ## Retrieve specific application or application version
 
-### Description
+### /dmadminweb/API/application/{identifier}
 
 This call returns a JSON object representing the specified application.
 
@@ -52,18 +48,16 @@ Note, the resulting JSON will vary slightly depending on whether the specified a
 | ---- | ----------- | ------ |
 | 200 | Success or failure.  Check success field for status. | [application_version_result](/restapi/models/#application_version_result) |
 
+
+## Create New Application Version
+
 ### /dmadminweb/API/new/appver/{app_id}
-
-
-# Create New Application Version
-
-### Description
 
 This call creates a new version of an application. The new application inherits all the attributes of the predecessor application. In order for this to work through the permission model, there has to be a Create Version task either in the domain in which the specified application is located or in any of the parent domains if the Create Version task is set to be available to sub-domains. If finer control is required, the task can be named via the task parameter.
 
 This mechanism ensures that the invoking user has permission to create a new version of the application (since the permissions are checked against the task) and also the target domain (i.e. the domain in which the new application is created) is determined from the task. Also, by specifying the task to execute, any pre and post link actions are executed just as if the task had been invoked via the Web UI.
 
-##### Parameters
+### Parameters
 
 | Name | Located in | Description | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |

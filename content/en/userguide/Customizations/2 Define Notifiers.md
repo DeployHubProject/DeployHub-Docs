@@ -8,7 +8,7 @@ description: >
 
 ## Notfiers
 
-The _Notifier_s tab is under the _Flows_ menu and sends notifications to various recipients after a successful or failed deployment attempt. It also can specify when deployed files have been changed, a _Request__Task_ used, or that an _Endpoint_ is down. A _Notifier_ can be used as part of your continuous _Delivery Pipeline_ to automatically update users and contains all technical information necessary. DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack, and HipChat for this purpose.
+The _Notifier_ tab is under the _Flows_ menu and sends notifications to various recipients after a successful or failed deployment attempt. It also can specify when deployed files have been changed, a _Request__Task_ used, or that an _Endpoint_ is down. A _Notifier_ can be used as part of your continuous _Delivery Pipeline_ to automatically update users and contains all technical information necessary. DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack, and HipChat for this purpose.
 
 Individual notifications are created through another DeployHub object known as a _Notify Template_. A _Notifier_ contains one or more of these. Each contains the subject and body of the actual notification, and if via email, a list of recipients. Recipients can be members of one or more _Groups_ as well as the owners of the _Application_, the owner of the _Environment_, and/or the owners of its _Servers_.
 
@@ -26,26 +26,9 @@ To the right of the tree structure are several tabs which allow the _User_ to mo
 
 | Field | Description |
 | --- | --- |
-| _**Name**__:_ | Available Options:
-_From:_ The email address of the sender, typically a shared address accessible to users who deploy _Releases_ to _Environments._
-_HTML:_ Sends emails in HTML format.
-_SSL:_ Uses Secure Sockets Layer for sending email.
-_Mailserver_: The name of the email server, i.e., smtp.mycompanyserver.com.
-_Mailport_: The port that receives email on the mail server. Typically 26, but it could be different.
-_Password:_ The password for the mail server.
-_Username_: The user name for the mail server.
-_Logfile_: Location of the logfile.
-If the Type field has been set to 'txtlocal', then only 'from', 'password', and 'username' appear in the Name field:
-Available options for HipChat:
-_webhook_: The url for the group chat, topic chat, or chat room.
-_HTML_: Sends messages in HTML format.
-_logfile_: Location of the logfile on the server that is running DeployHub.
-Available options for Slack:
-_webhook_: The url for a Slack Workspace.
-_channel_: A particular channel within a Workspace. These can be public, private, or shared.
-_logfile_: Location of the logfile on the server that is running DeployHub.
+| _**Name**_ | Available Options:<ul style="list-style-type: none;"><li> _From_: The email address of the sender, typically a shared address accessible to users who deploy _Releases_ to _Environments_.</li><li> _HTML_: Sends emails in HTML format.</li><li> _SSL_: Uses Secure Sockets Layer for sending email.</li><li> _Mailserver_: The name of the email server, i.e., smtp.mycompanyserver.com.</li><li> _Mailport_: The port that receives email on the mail server. Typically 26, but it could be different.</li><li> _Password_: The password for the mail server.</li><li> _Username_: The user name for the mail server.</li><li> _Logfile_: Location of the logfile.</li><br><li>If the Type field has been set to 'txtlocal', then only 'from', 'password', and 'username' appear in the Name field:</li><li><li>Available options for HipChat:</li><ul style="list-style-type: none;"><li> _webhook_: The url for the group chat, topic chat, or chat room.</li><li> _HTML_: Sends messages in HTML format.</li><li> _logfile_: Location of the logfile on the server that is running DeployHub.</li></ul></li><br><li>Available options for Slack:</li><ul style="list-style-type: none;"><li> _webhook_: The url for a Slack Workspace.</li><li> _channel_: A particular channel within a Workspace. These can be public, private, or shared.</li><li> _logfile_: Location of the logfile on the server that is running DeployHub.</li></ul></ul>
  |
-| _**Value**_ | The actual value for the property that was selected from the Name field. |
+ | _**Value**_ | The actual value for the property that was selected from the Name field. |
 | _**Encrypted**_ | Checkbox that indicates that the value is to be encrypted in the DeployHub database. |
 | _**Override**_ | Checkbox that indicates the property can be changed. This is used for 'scripted' notifications where the action editor includes a 'notify' action. This allows the notify action to override the value, for example, of the username or hostname of the _Notifier_. |
 
