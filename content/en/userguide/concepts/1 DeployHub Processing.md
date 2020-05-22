@@ -10,6 +10,8 @@ description: >
 
 DeployHub includes a central engine that can be installed locally or accessed via the SaaS offering via a reverse proxy. The central engine connects to external repositories, CD engines, DevOps tools, data sources, transfer protocols and notification tools. DeployHub's open architecture allows you to plug-in the tool set you use to define your release configurations.
 
+For releasing _Components_, DeployHub uses an agentless architecture that is designed to support both a modern architecture of containers as well as legacy systems. And if you have already invested time and effort around solutions like Helm or Ansible to update your cluster, great! We can call those external solutions to perform the update and provide all the microservice configuration mapping and version information. DeployHub also has plug-ins to continuous delivery pipelines that supports continuous configuration management as part of your release process.
+
 ![Architecture](/userguide/concepts/Architecture.png)
 
 ## Reverse Proxy and SaaS

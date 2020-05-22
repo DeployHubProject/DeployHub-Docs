@@ -64,6 +64,8 @@ If the "kind" is "_DMScript in Repository_" then you will be asked to specify th
 
 NOTE: You can only specify the name of the file containing the _DMScript_, so the repository definition _must_ include all the other details required to locate the file in the repository. It may therefore be necessary to define a new repository specifically for _DMScript_.
 
+
+
 # Functions
 
 _Functions_ return a new object (such as _getApplication_ or _getcredential_), perform a conversion (such as _xmlparse_), or can make calls to external web-based APIs and return structured results (such as _soap_ or _restful\_post_). Some _Functions_ act as object _methods_. For example _length()_ can be called on a string (to return its length in characters) or on an array (to return the number of elements). In these cases, the _Function_ can be called directly from the object itself like this:
@@ -713,10 +715,3 @@ echo "$res $x"; // echoes 200 99
 
 By using the –g option to set in both the calling _Procedure_ and the called _Function_, the version of x that both use is the same global variable.
 
-## Attributes
-
-Attributes set against DeployHub objects are accessible as variables in _DMScript_.
-
-For example, suppose QUEUE\_NAME is queue1 in "Test _Environment_ A" and queue2 in "Test _Environment_ B". When deploying to "Test _Environment_ A" the value of $QUEUE\_NAME will be queue1. When deploying to "Test _Environment_ B" the value of $QUEUE\_NAME will be queue2.
-
-You do not need to use any specific syntax to access an object variable. Whenever a variable is accessed, _DMScript_ will navigate up the _Stack_, looking for the first scope in which the variable is declared. When a variable with a matching name is found, the value at that point is returned. This means that variable values can be overwritten with other values declared higher in the stack. See the high-level section named The Stack for further discussion on this.

@@ -6,7 +6,6 @@ description: >
   Working with Objects using DMScript.
 ---
 
-# Working with Objects in Your DMScrpts 
 _DMScript_ is an object-orientated scripting language. As such, it understands each object in the DeployHub model. You can access each object either by selecting it off the stack (e.g.: $_Environment_), by retrieving a reference to the object from some other object, or by calling a built-in _Function_ to retrieve it. Each object has accessible properties. Some objects also have methods that can be called.
 
 
@@ -26,6 +25,13 @@ The following is a list of the objects that you can reference in _DMScript_.
 - User
 - UserGroup
 
+## Attributes
+
+Attributes set against DeployHub objects are accessible as variables in _DMScript_.
+
+For example, suppose QUEUE\_NAME is queue1 in "Test _Environment_ A" and queue2 in "Test _Environment_ B". When deploying to "Test _Environment_ A" the value of $QUEUE\_NAME will be queue1. When deploying to "Test _Environment_ B" the value of $QUEUE\_NAME will be queue2.
+
+You do not need to use any specific syntax to access an Object variable. Whenever a variable is accessed, _DMScript_ will navigate up the _Stack_, looking for the first scope in which the variable is declared. When a variable with a matching name is found, the value at that point is returned. This means that variable values can be overwritten with other values declared higher in the stack. See the high-level section named The Stack for further discussion on this.
 
 
 # Application Object
@@ -148,9 +154,10 @@ The following properties can be accessed for a _Change Request_ object:
 | api\_url | String | A URL which - if passed to restful\_get - will return an array containing the full details of the change request from the external change tracking system. Useful for getting more information than the id / description / status combination which is stored in DeployHub. |
 | html\_url | String | A URL which will direct a browser to the page describing the change request in the external change tracking system. |
 
+
 # The Component and Component Item Objects
 
-## Component
+## Component Object
 The _Component_ object represents either a _Base Component_ or a _Component_ Version. When deploying an _Application_, _Components_ are pushed onto the stack after each _Endpoint_. They can also be pushed onto the stack by using a comploop, retrieved from an _Application_ by using ${_Application_._Components_} or retrieved by calling _get_Component_.
 
 The following properties can be accessed for a _Component_ object:
@@ -166,7 +173,7 @@ The following properties can be accessed for a _Component_ object:
 | parent | Object | The Base _Component._ |
 | predecessor | Object | Predecessor _Component_ Version (the version on which this version is based). |
 | items | Array | An array of _Component_ Item objects. These represent the items that make up this _Component_. |
-| servers | Array | An array of _Endpoint_ objects. These are the _Endpoint_s to which this _Component_ has been deployed. |
+| servers | Array | An array of _Endpoint_ objects. These are the _Endpoints_ to which this _Component_ has been deployed. |
 | requests | Array | Array of _Change Request_ objects – the change requests associated with this _Component_. |
 | lastbuild | Integer | The last build number for this _Component_. 0 if never built. |
 | creator | User | User Object representing the user who created this _Component_. |
@@ -236,32 +243,30 @@ echo "$p = ${props[$p]}"; // to the Repository
 ```
 
 # Credentials
-The _credential_ object can be accessed with the built-in getcredential_Function_but only if the user executing the _DMScript_ has read access to it.
+The _Credential  Object_ can be accessed with the built-in getcredential_Function_but only if the user executing the _DMScript_ has read access to it.
 
-If the credential can be read, then its attributes can be accessed:
+If the _Credential_ can be read, then its attributes can be accessed:
 
-The following properties can be accessed for a credential object:
+The following properties can be accessed for a _Credential Object_:
 
 | Property | Type | Description |
 | --- | --- | --- |
-| id | Integer | _Endpoint_ id, as used in the database. |
-| --- | --- | --- |
-| name | String | _Endpoint_ name. |
-| fqdomain | String | Fully qualified domain name. |
+| id | Integer | _Credential_ id, as used in the database. |
+| name | String | _Credential_ name. |
+| fqdomain | String | Fully qualified _Domain_ name. |
 | summary | String | Summary text. |
-| domain | Object | Domain in which the Credential is contained. |
-| owner | Object | User or UserGroup that owns the _Endpoint._ |
+| domain | Object | Domain in which the _Credential_ is associated. |
+| owner | Object | User or UserGroup that owns the _Credential_ |
 | username | String | Decrypted username. |
 | password | String | Decrypted password. |
-| b64auth | String | A string representing the decrypted username and password together, with a : separator and then base64 encoded. Used for Basic Authorization for web-based APIs. See the description of restful\_post, restful\_get and soap in the high level section named Built-In _Functions_ for more information.
- |
-| creator | User | User Object representing the user who created this credential. |
-| modifier | User | User Object representing the user who last modified this credential. |
-| ctime | Date | Date Object representing the date/time the credential was created. |
-| mtime | Date | Date Object representing the date/time the credential was last modified. |
-| kind | String | Credential Kind. |
+| b64auth | String | A string representing the decrypted username and password together, with a : separator and then base64 encoded. Used for Basic Authorization for web-based APIs. See the description of restful\_post, restful\_get and soap in the high level section named Built-In _Functions_ for more information.  |
+| creator | User | User Object representing the user who created this _Credential_. |
+| modifier | User | User Object representing the user who last modified this _Credential_. |
+| ctime | Date | Date Object representing the date/time the _Credential_ was created. |
+| mtime | Date | Date Object representing the date/time the _Credential_ was last modified. |
+| kind | String | _Credential_ use. |
 
-You can use the credential object to access external systems in a secure and controlled manner. The user executing the _DMScript_ must have read access to the Credential. However, having read access does not allow the username/password to be viewed or modified using the Web UI. (The username is only displayed for the Credential owner, the username and password can only be changed if the User has update access to the Credential).
+You can use the _Credential Object_ to access external systems in a secure and controlled manner. The user executing the _DMScript_ must have read access to the _Credential_. However, having read access does not allow the username/password to be viewed or modified using the Web UI. (The username is only displayed for the _Credential_ owner, the username and password can only be changed if the User has update access to the _Credential_).
 
 **Example**
 
@@ -292,6 +297,7 @@ set res = restful\_get("https://myurl",null,null,$header);
 NOTE: See the description of restful\_get for more information.
 
 NOTE: If you wish to prevent the credential from being decrypted, then you ensure that the right to create _DMScript_ is only granted to power users. Otherwise, a user could create a _DMScript_ to decrypt a credential to which they only have read access.
+
 
 # Date Object
 The _date object_ represents a date/time in _DMScript_. Dates can be created (with the date() or now()_Functions_) or can be retrieved from a _DropZoneFile_ object (which represents a file in the _DropZone_).
@@ -381,10 +387,12 @@ The following properties can be accessed on the _Domain_ object:
 | mtime | Date | Date Object representing the date/time the domain was last modified. |
 | owner | Object | User or UserGroup that owns the Domain. |
 
+
+
 # Dropzone and DropZone File Object
 ## DropZone
 
-The _DropZone Object_ represents a _DropZone_. A _DropZone_ is an area on disk on the DeployHub Server where deployment artefacts are stored and manipulated before onward transmission to the target _Endpoint_(s). A _DropZone_ is placed onto the stack during a using _DropZone_ statement – all operations within this block have access to this _DropZone_ via the _DropZone Object_. A _DropZone Object_ is also present on the stack during pre and post action processing for a _Component_. In this case, the content of the _DropZone_ are the files checked out from the repository for the associated _Component_ Items.
+The _DropZone Object_ represents a _DropZone_. A _DropZone_ is an area on disk on the DeployHub Server where deployment artifacts are stored and manipulated before onward transmission to the target _Endpoint_(s). A _DropZone_ is placed onto the stack during a using _DropZone_ statement – all operations within this block have access to this _DropZone_ via the _DropZone Object_. A _DropZone Object_ is also present on the stack during pre and post action processing for a _Component_. In this case, the content of the _DropZone_ are the files checked out from the repository for the associated _Component_ Items.
 
 The following properties can be accessed for a _DropZone_ object:
 
@@ -392,7 +400,7 @@ The following properties can be accessed for a _DropZone_ object:
 | --- | --- | --- |
 | name | String | _DropZone_ name. |
 | path | String | The full path of the location on disk where the _DropZone_ is located. Useful for passing to external scripts that may need to manipulate files in the _DropZone_. |
-| files | Array | An Array of _DropZone Object_, each one of which represents a file in the _DropZone_. The array is keyed by the full path name of the file. |
+| files | Array | An Array of _DropZone Objects_, each one of which represents a file in the _DropZone_. The array is keyed by the full path name of the file. |
 
 The following methods can be called on the _DropZone_ object:
 
@@ -401,7 +409,6 @@ The following methods can be called on the _DropZone_ object:
 | find(pattern) | Array | Returns an Array of _DropZone Object_, each one of which represents a file in the _DropZone_. The Array is restricted to files whose file name matches the specified pattern. The array is keyed by the full path name of the file. |
 | dir() | String | The full path of the location on disk where the _DropZone_ is located. Equivalent to the path attribute. |
 
-###
 
 ## DropZone File
 The _DropZone File Object_ represents a file in the _DropZone_. It can be retrieved from the _DropZone_ object via the files property or the find method. Both of these calls return an array of _DropZone File Objects_, keyed on the filename. You can also call dir() on a _DropZone File Object_ that represents a zipfile to get an array of _DropZone File Objects_ representing the zipfile content.
@@ -427,53 +434,60 @@ NOTE: See also the description for zipadd, zipget and zipdel.
 
 
 # Environment Object
-The _Endpoint_ (_server, container, VM/Cloud Image_) object represents where a deployment will be sent. An _Endpoint_ object can be retrieved by accessing the servers array from an _Environment_ or more typically by running a psloop. This iterates through the current _Endpoint_ list, pushing an _Endpoint_ object onto the stack each time through the loop. This _Endpoint_ object can be referenced by $server.
+The _Environment Object_ represents a deployment target _Environment_. During a deployment, there is always an _Environment  Object_ on the stack representing the current deployment target _Environment_. This can be referenced by $_Environment_. An _Environment Object_ can also be retrieved using the _Get Environment Function_.
 
-The following properties can be accessed for an _Endpoint_ object:
+The following properties can be accessed for an _Environment_ object:
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
-| id | Integer | _Endpoint_ id, as used in the database. |
-| name | String | _Endpoint_s name. |
+| id | Integer | _Environment_ id, as used in the database. |
+| name | String | _Environment_ name. |
 | fqdomain | String | Fully qualified domain name. |
 | summary | String | Summary text. |
-| domain | Object | Domain in which the _Endpoint_ is contained. |
-| owner | Object | User or UserGroup that owns the _Endpoint._ |
-| hostname | String | Hostname (if set) or name otherwise. |
-| basedir | String | Base Directory for Deployments. |
-| type | String | _Endpoint_ Type, ie: windows, unix, as400 etc. |
-| credential | Object | The Credential Object used to access this _Endpoint_. |
-| _Components_ | Array | An Array of _Component_ Objects – the _Component_s currently installed on this _Endpoint_. |
-| creator | User | User Object representing the user who created this _Endpoint_. |
-| modifier | User | User Object representing the user who last modified this _Endpoint_. |
-| ctime | Date | Date Object representing the date/time the _Endpoint_ was created. |
-| mtime | Date | Date Object representing the date/time the _Endpoint_ was last modified. |
-| attributes | Array | Array of Strings, keyed by Attribute Name. |
+| domain | Object | Domain in which the _Environment_ is contained. |
+| owner | Object | User or UserGroup that owns the _Environment._ |
+| basedir | String | Base directory for deployments. |
+| _Endpoints_ | Array | Array of _Endpoint_ objects keyed by name. |
+| _Applications_ | Array | Array of _Application_ Objects (_Application_s present in this _Environment_). |
+| creator | User | User Object representing the user who created this _Environment_. |
+| modifier | User | User Object representing the user who last modified this _Environment_. |
+| ctime | Date | Date Object representing the date/time the _Environment_ was created. |
+| mtime | Date | Date Object representing the date/time the _Environment_ was last modified. |
+| parent | Object | Parent domain. |
 
-The following methods can be called on the _Endpoint_ object:
+The following methods can be called on the _Environment_ object:
 
 | **Method** | **Return Type** | **Description** |
 | --- | --- | --- |
-| append(path1,path2) | String | Appends path2 to path1, returning the combined path formatted according to the _Endpoint_ type. See append in the previous section for more information. |
-| appendstd(path1,path2) | String | Appends path2 to path1, returning the combined path formatted according to the _Endpoint_ type. See appendstd in the previous section for more information. |
-| basename(path) | String | Returns the filename _Component_ of the specified path. The structure of the path is based on the _Endpoint_ type. |
-| dirname(path) | String | Returns the directory path _Component_ of the specified path. The structure of the path (and the returned String) is based on the _Endpoint_ type. |
-| getatt(attname) | String | Returns the value of the specified attribute held against the _Endpoint_. Parameter is the attribute name. |
-| deptime(_Component_) | Date | Returns a Date object representing the last time the specified _Component_ was deployed to the _Endpoint_. Returns null if the _Component_ is not currently on the _Endpoint_. |
+| getatt(attname) | String | Returns the value of the specified attribute held against the _Environment_. Parameter is the attribute name. |
+| deptime(_Application_) | Date | Returns a Date object representing the last time the specified _Application_ was deployed to the _Environment_. Returns null if the specified _Application_ is not currently on the _Endpoint_. |
 
-Note, that the _owner_ attribute returns an _Object_. Such objects have their own attributes.
-
-So, for example, one can get the owner name of an _Endpoint_ by writing:
+Note, that attributes such as _owner_ and _parent_ return other _Objects_. These objects have their own attributes. So, for example, one can get the owner name of an _Environment_ by writing:
 
 ```bash
-set owner = ${server.owner};
+set owner = ${_Environment_.owner};
 
 echo ${owner.name};
 
 or, more simply:
 
-echo ${server.owner.name};
+echo ${_Environment_.owner.name};
 ```
+
+Here is an example of retrieving the _Endpoints_ in the _Environment_:
+
+```bash
+set servers = ${_Environment_.servers};
+
+iterate(s: $servers) {
+
+echo "server is ${s.name}";
+
+echo "hostname is ${s.hostname}";
+
+}
+```
+
 
 # Endpoint Object
 
@@ -484,16 +498,16 @@ The following properties can be accessed for an _Endpoint_ object:
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
 | id | Integer | _Endpoint_ id, as used in the database. |
-| name | String | _Endpoint_s name. |
-| fqdomain | String | Fully qualified domain name. |
+| name | String | _Endpoints_ name. |
+| fqdomain | String | Fully qualified _Domain_ name. |
 | summary | String | Summary text. |
-| domain | Object | Domain in which the _Endpoint_ is contained. |
+| domain | Object |_ Domain_ in which the _Endpoint_ is contained. |
 | owner | Object | User or UserGroup that owns the _Endpoint._ |
 | hostname | String | Hostname (if set) or name otherwise. |
 | basedir | String | Base Directory for Deployments. |
-| type | String | _Endpoint_ Type, ie: windows, unix, as400 etc. |
+| type | String | _Endpoint_ Type, ie: windows, unix, cluster, etc. |
 | credential | Object | The Credential Object used to access this _Endpoint_. |
-| _Components_ | Array | An Array of _Component_ Objects – the _Component_s currently installed on this _Endpoint_. |
+| _Components_ | Array | An Array of _Component_ Objects – the _Components currently installed on this _Endpoint_. |
 | creator | User | User Object representing the user who created this _Endpoint_. |
 | modifier | User | User Object representing the user who last modified this _Endpoint_. |
 | ctime | Date | Date Object representing the date/time the _Endpoint_ was created. |
@@ -524,8 +538,6 @@ or, more simply:
 
 echo ${server.owner.name};
 ```
-
-
 
 
 # User Object
@@ -559,11 +571,11 @@ The following properties can be accessed on the User Group object:
 
 | **Property** | **Return Type** | **Description** |
 | --- | --- | --- |
-| id | Integer | User Group id, as used in the database. |
-| name | String | User Group Name. |
+| id | Integer | _UserGroup_ id, as used in the database. |
+| name | String | _UserGroup_ Name. |
 | kind | String | Returns "group". Used to differentiate between users and groups where retrieving an owner object. |
-| fqdomain | String | Fully qualified domain name. |
-| email | String | The User Group&#39;s email address. |
+| fqdomain | String | Fully qualified _Domain_ name. |
+| email | String | The _UserGroup's_ email address. |
 | creator | User | User Object representing the user who created this user group. |
 | modifier | User | User Object representing the user who last modified this user group. |
 | ctime | Date | Date Object representing the date/time the user group was created. |

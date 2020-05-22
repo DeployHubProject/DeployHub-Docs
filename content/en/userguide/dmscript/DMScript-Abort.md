@@ -1,7 +1,7 @@
 ---
 title: "Abort"
 linkTitle: "Abort"
-weight: 2
+weight: 3
 description: >
   Using _abort_ to end a script execution.
 ---

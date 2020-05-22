@@ -129,12 +129,6 @@ jenkinsnfs:/jenkins is the Jenkins build results
 - DeployHub will see the Jenkins File System Repository as /jenkins
 - DeployHub will see the ssh keys as /keys
 
-## Using Multiple Deployment Engines
-
-Multiple deployment engines can distribute large deployments and can be added as you expand the number of endpoints used. Multiple deployment engines can distribute simultaneous deployments to multiple locations, making it faster. Additional deployment engines can only be installed on Linux.
-
-Download the deployment engine RPM from the DeployHub website. Install the RPM on the Linux server that will be an additional deployment engine host. Update the _Domain_ entries to point to the new deployment engine for that _Domain_.
-
 ## More Help
 
 [DeployHub Tutorials](https://www.deployhub.com/continuous-deployment-resources/)
