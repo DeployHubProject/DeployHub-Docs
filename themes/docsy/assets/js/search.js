@@ -59,6 +59,9 @@ function executeSearch(searchQuery, clear_list){
 
 function populateResults(result){
   searchQuery = document.getElementById("search-query").value;
+  console.log(searchQuery);
+  dups = {};
+
   $.each(result,function(key,value){
     var contents= value.item.contents;
     var snippet = "";
@@ -91,13 +94,18 @@ function populateResults(result){
               tags = tags + "<a href='/tags/"+ element +"'>" + "#" + element + "</a> " 
           });
       }
-      
-    var output = render(templateDefinition,{key:key,title:value.item.title,link:value.item.permalink,tags:tags,categories:value.item.categories,snippet:snippet});
-    $('#search-results').append(output);
+    
+    if (!(snippet in dups))
+    {
+     dups[snippet] = null;
+     
+     var output = render(templateDefinition,{key:key,title:value.item.title,link:value.item.permalink,tags:tags,categories:value.item.categories,snippet:snippet});
+     $('#search-results').append(output);
 
-    $.each(snippetHighlights,function(snipkey,snipvalue){
-      new Mark(document.getElementById("summary-" + key)).mark(snipvalue);
-    });
+     $.each(snippetHighlights,function(snipkey,snipvalue){
+       new Mark(document.getElementById("summary-" + key)).mark(snipvalue);
+     });
+    } 
 
   });
 }
