@@ -1,6 +1,6 @@
 ---
-title: "Actions"
-linkTitle: "Actions"
+title: "Customize Your Actions"
+linkTitle: "Customize Your Actions"
 weight: 11
 description: >
   Understanding and Adding Actions for Deployments such as Helm Charts.

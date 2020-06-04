@@ -1,6 +1,6 @@
 ---
-title: "Environments"
-linkTitle: "Environments"
+title: "Build Your Environments"
+linkTitle: "Build Your Environments"
 weight: 7
 description: >
   Adding Environments for Deployments.

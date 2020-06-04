@@ -1,6 +1,6 @@
 ---
-title: "Endpoints"
-linkTitle: "Endpoints"
+title: "Define Your Endpoints"
+linkTitle: "Define Your Endpoints"
 weight: 9
 description: >
   Defining Endpoints for Environments.

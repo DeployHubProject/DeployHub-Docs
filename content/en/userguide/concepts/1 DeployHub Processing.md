@@ -1,7 +1,7 @@
 ---
 title: "DeployHub Architecture"
 linkTitle: "DeployHub Architecture"
-weight: 6
+weight: 4
 description: >
   Understanding DeployHub's Architecture and Processesing.
 ---

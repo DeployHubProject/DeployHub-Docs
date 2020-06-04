@@ -1,7 +1,7 @@
 ---
 title: "SaaS Sign-up and Reverse Proxy"
 linkTitle: "SaaS Sign-up and Reverse Proxy"
-weight: 2
+weight: 1
 description: >
   Signing up for DeployHub SaaS and the Reverse Proxy for Deployments.
 ---
@@ -29,10 +29,6 @@ The Reverse Proxy runs as docker container. In order to install it you need to h
 
 ## Docker Installation
 
-[Docker for Windows​](https://docs.docker.com/docker-for-windows/install/)
-
-Requires Microsoft Windows 10 Professional or Enterprise 64-bit
-
 [Docker for CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 
 Requires CentOS 64-bit 7.1 and higher on x86\_64
@@ -57,7 +53,7 @@ Trusty 14.04 (LTS)
 
 Requires macOS El Capitan 10.11 and newer macOS releases are supported. We recommend upgrading to the latest version of macOS.
 
-## Test your Docker Install
+### Test your Docker Install
 
 See the [Docker Install Test](https://docs.docker.com/get-started/#test-docker-version) instructions
 
@@ -65,74 +61,27 @@ See the [Docker Install Test](https://docs.docker.com/get-started/#test-docker-v
 
 The DeployHub Reverse Proxy Docker Image is found on the DockerHub Container Catalog and the RedHat Certified Container Catalog. Follow the steps below to install the Reverse Proxy into your Docker installation.
 
-## Pull DockerHub
+## Pull Reverse Proxy from Redhat Quay Registry
 
-$docker login registry.hub.docker.com
-
-$docker pull registry.hub.docker.com/deployhub/deployhub-rproxy
-
-## Pull RedHat
-
-$ docker login registry.connect.redhat.com
-
-$ docker pull registry.connect.redhat.com/deployhub/deployhub-rproxy
-
-## Volume to access Jenkins build results
-
-## Linux and OS/X
-
-$ docker volume create --name jenkinsfs --opt type=nfs --opt device=:/var/jenkins/jobs --opt o=addr=192.168.0.101
-
-## Windows
-
-$ docker volume create --name jenkinsfs
-
---driver local --opt type=cifs
-
---opt device=//server/path/to/share
-
---opt=username=myuser,password=mypw,
-
-file\_mode=0777,dir\_mode=0777
+docker pull quay.io/deployhub/deployhub-rproxy:latest
 
 ## Set your CLIENTID as environment variable
 
-## Linux and OS/X
+### Linux and OS/X
 
-$ export CLIENTID="Client ID sent in welcome email"
-
-Windows
-
-$ set CLIENTID="Client ID sent in welcome email"
+export CLIENTID="Client ID sent in welcome email"
 
 ## Start the container
 
-## Linux and OS/X
+### Linux and OS/X
 
-$ docker run -d --hostname `hostname` -e CLIENTID=$CLIENTID -v jenkinsfs:/jenkins -v ~/.ssh:/keys:Z ${IMAGE}
+docker run -d --hostname `hostname` -e CLIENTID=$CLIENTID -v ~/.ssh:/keys:Z ${IMAGE}
 
-## Windows
-
-$ docker run -d --hostname %COMPUTERNAME•% -e CLIENTID=%CLIENTID% -v jenkinsfs:/jenkins -v ~/.ssh:/keys:Z ${IMAGE}
-
-## Volumes Used
-
-jenkinsnfs:/jenkins is the Jenkins build results
-
-~/.ssh:/keys:Z users ssh keys made visible to the container for credentials
 
 ## Notes
 
-- ${​CLIENTID} = client id assigned to your user id from the deployhub.com website or welcome email
+- $​CLIENTID = client id assigned to your user id from the deployhub.com website or welcome email
 - ${IMAGE} = image id from the docker pull
-- NFS is share Jenkins Jobs directory
-- DeployHub will see the Jenkins File System Repository as /jenkins
 - DeployHub will see the ssh keys as /keys
 
-## More Help
 
-[DeployHub Tutorials](https://www.deployhub.com/continuous-deployment-resources/)
-
-[Support Questions and Issues](https://github.com/DeployHubProject/DeployHub/issues)
-
-[Demos, Tips and Tricks](https://www.deployhub.com/continuous-deployment-resources/)

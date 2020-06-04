@@ -1,6 +1,6 @@
 ---
-title: "User Guide"
-linkTitle: "User Guide"
+title: "DeployHub User Documentation"
+linkTitle: "DeployHub User Documentation"
 weight: 12
 menu:
   main:

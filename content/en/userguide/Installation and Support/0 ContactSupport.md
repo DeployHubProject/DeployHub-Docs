@@ -1,7 +1,7 @@
 ---
 title: "Contact Support"
 linkTitle: "Contact Support"
-weight: 5
+weight: 4
 description: >
   Where to go for technical support and information.
 ---

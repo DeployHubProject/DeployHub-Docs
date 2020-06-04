@@ -1,7 +1,7 @@
 ---
 title: "DeployHub Team On-Premise Installation"
 linkTitle: "DeployHub Team On-Premise Installation"
-weight: 3
+weight: 2
 description: >
   Installing DeployHub Team on-premise.
 ---

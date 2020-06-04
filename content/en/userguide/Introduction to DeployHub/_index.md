@@ -1,6 +1,6 @@
 ---
-title: "Getting Started"
-linkTitle: "Getting Started"
+title: "Welcome to DeployHub"
+linkTitle: "Welcome to DeployHub"
 weight: 1
 description: >
   Installation, support and other bits of good info.

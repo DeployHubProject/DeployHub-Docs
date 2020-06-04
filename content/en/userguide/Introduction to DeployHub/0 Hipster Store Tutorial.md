@@ -1,7 +1,7 @@
 ---
 title: "Hipster Store Tutorial"
 linkTitle: "Hipster Store Tutorial"
-weight: 6
+weight: 3 
 description: >
   Tyring out DeployHub using the Hipster Store Example.
 ---

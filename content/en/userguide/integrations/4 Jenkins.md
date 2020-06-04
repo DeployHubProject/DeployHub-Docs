@@ -49,3 +49,27 @@ Attributes can be created and their values changed within the plug-in, and these
 ## Set Application Attributes
 
 The _Add Attribute Button_ can be used to add as many _Components_ attributes as desired. Below that the Set _Application_ attributes allows the same thing for _Application_s.
+
+## Accesing Jenkins
+
+## Volume to access Jenkins build results
+
+### Linux and OS/X
+
+$ docker volume create --name jenkinsfs --opt type=nfs --opt device=:/var/jenkins/jobs --opt o=addr=192.168.0.101
+
+### Volumes Used
+
+jenkinsnfs:/jenkins is the Jenkins build results
+
+~/.ssh:/keys:Z users ssh keys made visible to the container for credentials
+
+### Start the container
+
+
+
+$ docker run -d --hostname `hostname` -e CLIENTID=$CLIENTID -v jenkinsfs:/jenkins -v ~/.ssh:/keys:Z ${IMAGE}
+
+## Notes
+- NFS is share Jenkins Jobs directory
+- DeployHub will see the Jenkins File System Repository as /jenkins
