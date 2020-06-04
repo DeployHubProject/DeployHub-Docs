@@ -16,17 +16,14 @@ var fuseOptions = {
   ]
 };
 
-var dups = {};
 
 var searchQuery = param("s");
 if(searchQuery){
     // searchQuery = $("#search-query").val(searchQuery);
   var inputBox = document.getElementById('search-query');
   inputBox.value = searchQuery || "";
-  dups = {};
   executeSearch(searchQuery, false);
 }else {
-  dups = {};
   $('#search-results').append("<p class=\"search-results-empty\">Please enter a word or phrase above.</p>"); 
 }
 
@@ -40,7 +37,6 @@ function executeInlineSearch(){
     if(query){
         executeSearch(query, true);
     }else {
-        dups = {};
         $('#search-results').append("<p class=\"search-results-empty\">Please enter a word or phrase above, or see <a href=\"/tags/\">all tags</a>.</p>"); 
     }
 }
@@ -62,8 +58,11 @@ function executeSearch(searchQuery, clear_list){
 }
 
 function populateResults(result){
+  $(".search-results-empty").remove();
+  $(".search-results-summary").remove();
   searchQuery = document.getElementById("search-query").value;
   console.log(searchQuery);
+  var dups = {};
 
   $.each(result,function(key,value){
     var contents= value.item.contents;
