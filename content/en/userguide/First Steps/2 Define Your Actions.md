@@ -3,12 +3,12 @@ title: "Customize Your Actions"
 linkTitle: "Customize Your Actions"
 weight: 11
 description: >
-  Understanding and Adding Actions for Deployments such as Helm Charts.
+  Understanding and Adding Actions for defining your deployment logic.
 ---
 
 ## Actions
 
-DeployHub comes with a set of reusable _Actions_ that can be invoked at various points in a deployment. An _Action_ is a selection of _Activities_ which are executed in sequence in order to provide the logic of the deployment. _Actions_ are created with a graphical editor by simply dragging and dropping the _Activities_ you want to use in the order you want to use them. On save, a new _Action_ will be created.
+DeployHub comes with a set of reusable _Actions_ that can be invoked at various points in a deployment. An _Action_ includes a set of _Activities_ which are executed in sequence to provide the logic of a _Componentes_ deployment. _Actions_ are created with a graphical editor by simply dragging and dropping the _Activities_ you want to use in the order you want to use them. On save, a new _Action_ will be created.
 
 In addition, a _Custom Action_ can replace the usual Deployment Engine processing by calling an external script that performs its own deployment activities. _Custom Actions_ can be used when the normal component-level deployment is not suitable for the deployment of the _Application_.
 

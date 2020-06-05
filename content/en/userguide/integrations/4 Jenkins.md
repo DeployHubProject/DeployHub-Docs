@@ -6,15 +6,20 @@ weight: 68
 
 ## Plug-In for Jenkins
 
-The pre and post logic of DeployHub gives a tremendous amount of flexibility, whether used alone or in tandem with Jenkins as a plug-in. An A_pplication_ is deployed to an _Environment_ which contains one or more _Endpoint_s. An _Application_ contains _Components_, which in turn contain _Components__Items_, which access _Repositories_ that contain all the files that are deployed. Both _Application_s and _Components_ also contain _Procedures_ and _Functions_, which can be executed before and after each _Application_ deployment, and each _Components_ contained within it.
+The pre and post logic of DeployHub gives a tremendous amount of flexibility, whether used alone or in tandem with Jenkins as a plug-in. Jenkins can call DeployHub to perform:
 
-Jenkins can call DeployHub in the process, enabling Jenkins to deploy files, which are typically the result of a compile step. The plug-in is displayed in the Jenkins Configure window to see what is required from DeployHub. The basic configuration, which shows under the title "_Use DeployHub to run a deployment_", includes the following:
+- Continuous Configuration Management: The process of automatically versioning microservices with their consuming _Applications_. Jenkins notifiies DeployHub when a new Job has been started at which point DeployHub pulls the build job information into DeployHub's database. 
+- Approvals: Track an Approval, with audit, between Jenkins and DeployHub.
+- Moves:  Allows Jenkins to tell DeployHub to push a new update from one state to the next.
+- Deploy: Allows Jenkins to tell DeployHub when the deployment needs to be executed.
+- Shared Logs: Centralize logs between DeployHub and Jenkins. 
 
-| Username and Password | Determines security access to the various objects within DeployHub, including the Applications and Components that are available from the Jenkins Plug-In. |
-| --- | --- |
-| Target Environment | A DeployHub Environment contains all the Endpoints that will be deployed to. |
-| Application | A DeployHub Application contains all the Components that make up a deployment. It is deployed against an Environment. |
-| Wait for Deployment to Complete | This tells Jenkins to wait until DeployHub is finished with the deployment before moving on to the next step in the Job. If this option is chosen, the remaining steps in the Job will only run if the deployment was successful. If left unchecked, Jenkins will continue to the next step in the Job as soon as DeployHub begins the deployment and ignore the success or failure of the deployment. |
+| Name | Description |
+|--- | --- |
+| **Username and Password** | Determines security access to the various objects within DeployHub, including the Applications and Components that are available from the Jenkins Plug-In. |
+| **Target Environment** | A DeployHub Environment contains all the Endpoints that will be deployed to. |
+| **Application** | A DeployHub Application contains all the Components that make up a deployment. It is deployed against an Environment. |
+| **Wait for Deployment to Complete** | This tells Jenkins to wait until DeployHub is finished with the deployment before moving on to the next step in the Job. If this option is chosen, the remaining steps in the Job will only run if the deployment was successful. If left unchecked, Jenkins will continue to the next step in the Job as soon as DeployHub begins the deployment and ignore the success or failure of the deployment. |
 
 ## Advanced Application Selection Options
 
