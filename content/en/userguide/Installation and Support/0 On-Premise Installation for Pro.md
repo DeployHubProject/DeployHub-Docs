@@ -7,9 +7,10 @@ description: >
 ---
 
 ## Docker Installation
+
 DeployHub Pro is installed locally using a Docker Image that includes all the necessary prerequisites. You will need to have Docker installed in order to run DeployHub on premise.
 
-Docker installation: 
+Docker installation:
 
 [Docker for CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 

@@ -20,12 +20,12 @@ me()
 User Object
 
 **Examples:**
+
 ~~~
 set me = me();
 
 echo "Hello ${me.name}";
 ~~~
-
 
 **See Also:**
 

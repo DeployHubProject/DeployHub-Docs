@@ -48,8 +48,6 @@ _DMScript_ has:
 If you need to do any of these things, either as part of a deployment activity or as part of an integration (for example, notifying an external system when an _Application Version_ has been moved or deployed) then use _DMScript_.
 You can customize any _Action_ using DM Script. DeployHub has _built-in Functions_ and _Procedures_ ready for you to call when you need customization. _Actions_ call _Activities_ that are _Functions_ or _Procedures_. _Function_ performs an _Activity_ and returns an _Object_. A _Procedure_ performs an _Activity_ and returns only 'success'or 'fail.'
 
-
-
 # Storing DMScripts
 
 When you write your own DMScripts for _Procedures_ and _Functions_, you can set the "kind" to either "_DMScript __Procedure__ in Database_" or "_DMScript __Procedure__ in Repository_".
@@ -63,8 +61,6 @@ DMScript in Repository
 If the "kind" is "_DMScript in Repository_" then you will be asked to specify the repository in which the _DMScript_ file is located and the name of the file containing the _DMScript_.
 
 NOTE: You can only specify the name of the file containing the _DMScript_, so the repository definition _must_ include all the other details required to locate the file in the repository. It may therefore be necessary to define a new repository specifically for _DMScript_.
-
-
 
 # Functions
 
@@ -187,6 +183,7 @@ _DMScript_ is an object-orientated scripting language. It uses a fairly broad sy
 _DMScript_ has knowledge of the DeployHub object model. Each object (_Endpoint_, _Environment_, _Application_, _Component_ etc) has a corresponding object in _DMScript_. Thus, you can use ${_Environment_.name} to get the current _Environment_ name (deployment target) and ${_Application_.name} to get the name of the _Application_ being deployed. Other objects (such as _Endpoint_ and _Component_) only become "in scope" when they are pushed onto the _Stack_ during a deployment operation.
 
 This knowledge of the object model allows _DMScript_ to use fairly sophisticated operations. For example if you have an _Application Version_ object:
+
 ~~~
 $app
 
@@ -204,6 +201,7 @@ $app+1
 
 is the revision immediately after this _Version_.
 ~~~
+
 NOTE: this operation will not work if the version has two or more child versions (due to branching).
 
 ## DMScript Interpreter
@@ -714,4 +712,3 @@ echo "$res $x"; // echoes 200 99
 ```
 
 By using the –g option to set in both the calling _Procedure_ and the called _Function_, the version of x that both use is the same global variable.
-

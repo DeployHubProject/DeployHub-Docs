@@ -1,4 +1,4 @@
-### Access 
+### Access
 
 Access controls who can see and interact with this object.
 

@@ -8,7 +8,6 @@ description: >
 
 ### Getuser
 
-
 Note: A call to the Function _me_ returns a _User_ object representing the current logged in user.
 
 _getuser_ takes a User Name and returns the matching _User Object_.
@@ -26,7 +25,6 @@ FQN: Is the qualified name of the user to be retrieved.
 User Object
 
 A qualified name can include as many Domain names as is necessary to uniquely identify the user. If the user name is unique within the Domains to which the invoking user has access then no qualification is necessary. Only if there is more than one user with the same name (in different accessible domains) will it be necessary to qualify the user name with the domain in which it is located.
-
 
 **Examples:**
 

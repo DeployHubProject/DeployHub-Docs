@@ -11,7 +11,6 @@ description: >
 DeployHub integrates with CircleCI to support continuos configuration management of microservices built into your CircleCI pipeline. DeployHub integrates with CircleCI to enrich the CI/CD pipeline around microservices.  
 Critical to the process is the ability to perform configuration management, versioning and tracking of microservices across clusters and teams.  DeployHub's CircleCI orb includes the ability to perform automated version and dependency management of microservices tracking application and microservice relationships, their versions and their deployment meta data.
 
-
 ## DeployHub tasks and the CircleCI deployment orb
 
 The DeployHub CircleCI orb calls DeployHub to perform:

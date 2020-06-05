@@ -40,7 +40,7 @@ To use the ID, just place it where you would normally place the object's name. D
 
 *Do not create objects with fully numeric names - DeployHub will not be able to determine if this is an object id or the object name.*
 
-## Using cURL to access the API 
+## Using cURL to access the API
 
   Here is an example of how to use cURL to access the API.
 

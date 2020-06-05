@@ -10,7 +10,8 @@ description: >
 
 A _Repository_ is used by a _Component_. A _Repository_ acts as a source location for artifacts that will be deployed as _Components_. Each _Component_ contains a pointer to where an artifact is stored in a _Repository_ or on a file system. When DeployHub performs the pre-deployment steps, it retrieves the artifact from any location you specify. It pulls it from the _Repository_ and creates a deployment package at deployment run time. For this reason, it does not need to store the actual artifact in the DeployHub versioning engine. Each _Component_ is defined with a _Repository_ reference. Your _Repository_ can point to any type of repository such  as Git, GitHub, Quay or binary repository such as Maven. A _Repository_ can also reference a file system.
 
-## Using the Repository List View to Create and Delete 
+## Using the Repository List View to Create and Delete
+
 The _Repository_ menu option is found under the **Setup** menu on the left of the DeployHub main panel. By selecting the _Repository_ menu, you will be taken to a list of all _Repositories_ to which you have access. You can also use the Search bar, represented by a funnel icon, to filter _Repository_ based on Name or Domain.
 
 The _Repository_ List View has the following Tabs.
@@ -23,10 +24,12 @@ The _Repository_ List View has the following Tabs.
 
 By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
 
-## The _Repository_ Dashboard 
+## The _Repository_ Dashboard
+
 The Dashboard view displays all information related to a specific _Repository_ Type.  
 
 ### Common Detials of all Repositories
+
 The following details are common to all _Repository_ types:
 
 | Field | Description |
@@ -70,12 +73,12 @@ The following details are common to all _Repository_ types:
 |**URL** | The Universal Resource Locator used to locate the HTTP repository. |
 |**URL Encrypted** | Select the box to indicate the URL should be hidden in the database.|
 |**URL Override** |Select the box if the URL can be replaced at the _Component_ definition.|
-| **Log File**|  The fully qualified file name to the logs from the HTTP get. 
+| **Log File**|  The fully qualified file name to the logs from the HTTP get.
 | **Log File Encrypted** | Select the box to indicate the Log File name should be hidden in the database.|
-| **Log File Override** | Select the box if the Log File can be replaced at the _Component_ definition. | 
+| **Log File Override** | Select the box if the Log File can be replaced at the _Component_ definition. |
 |**Params** | Paramters used to invoke a RESTful API, allowing more detailed interaction with the HTTP Endpoint.|
 | **Params Encrypted** | Select the box to indicate the Parameters should be hidden in the database.|
-| **Params Override** | Select the box if the Parameters can be replaced at the _Component_ definition. | 
+| **Params Override** | Select the box if the Parameters can be replaced at the _Component_ definition. |
 |**Pattern** | This defines the file types you want to pull from the _Repository_, such as \*.exe, \*.dll, \*.war. |
 |**Pattern Encrypted** | Select the box to indicate the Pattern should be hidden in the database.|
 |**Pattern Override** |Select the box if the Pattern can be replaced at the _Component_ definition.|
@@ -105,7 +108,7 @@ The following details are common to all _Repository_ types:
 |**Version Encrypted** | Select the box to indicate the Version should be hidden in the database.|
 |**Version Override** |Select the box if the Version can be replaced at the _Component_ definition.|
 
-### OpenMake Meister _Repository_ Details 
+### OpenMake Meister _Repository_ Details
 
 | Field | Description |
 | --- | --- |
@@ -121,7 +124,7 @@ The following details are common to all _Repository_ types:
 |**Recursive**| Select the box in order to cause the _Repository_ to return all of the files from directories below those designated by Filepath. |
 |**Recursive Override** |Select the box if the Recursive option can be replaced at the _Component_ definition.|
 
-### SVN _Repository_ Details 
+### SVN _Repository_ Details
 
 | Field | Description |
 | --- | --- |

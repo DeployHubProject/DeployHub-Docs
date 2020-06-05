@@ -16,6 +16,6 @@ Following are the items you must define to DeployHub to get started:
 4. **Define your** _**Environment**_ and _**Endpoints**_ where you will be deploying to.
 5. **Define your deployment _Actions_** calling Helm for example for a container deployment.
 
-Once you have completed your basic setup, you can begin publishing _Components_, like microservices, and assigning them to an _Application Base Version_ which sets you up for tracking changes overtime. 
+Once you have completed your basic setup, you can begin publishing _Components_, like microservices, and assigning them to an _Application Base Version_ which sets you up for tracking changes overtime.
 
 ![DeployHub Setup](/userguide/setup/DeployHubSetup-Infographics.png)

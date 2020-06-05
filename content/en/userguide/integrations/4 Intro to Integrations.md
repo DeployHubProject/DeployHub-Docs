@@ -10,6 +10,6 @@ DeployHub has an open architecture with many out of the box integrations with ot
 
 ## Continuos Delivery Pipeline
 
-Integrations also provide you the ability to add DeployHub to your continuous delivery process. Calling DeployHub from your CD workflow is important to perform continuous configuration management each time a _Component_, like a microservice 
+Integrations also provide you the ability to add DeployHub to your continuous delivery process. Calling DeployHub from your CD workflow is important to perform continuous configuration management each time a _Component_, like a microservice
 
 Following is a list of each of the published and supported integrations included with DeployHub.

@@ -8,11 +8,11 @@ weight: 68
 
 The pre and post logic of DeployHub gives a tremendous amount of flexibility, whether used alone or in tandem with Jenkins as a plug-in. Jenkins can call DeployHub to perform:
 
-- Continuous Configuration Management: The process of automatically versioning microservices with their consuming _Applications_. Jenkins notifiies DeployHub when a new Job has been started at which point DeployHub pulls the build job information into DeployHub's database. 
+- Continuous Configuration Management: The process of automatically versioning microservices with their consuming _Applications_. Jenkins notifiies DeployHub when a new Job has been started at which point DeployHub pulls the build job information into DeployHub's database.
 - Approvals: Track an Approval, with audit, between Jenkins and DeployHub.
 - Moves:  Allows Jenkins to tell DeployHub to push a new update from one state to the next.
 - Deploy: Allows Jenkins to tell DeployHub when the deployment needs to be executed.
-- Shared Logs: Centralize logs between DeployHub and Jenkins. 
+- Shared Logs: Centralize logs between DeployHub and Jenkins.
 
 | Name | Description |
 |--- | --- |
@@ -71,10 +71,9 @@ jenkinsnfs:/jenkins is the Jenkins build results
 
 ### Start the container
 
-
-
 $ docker run -d --hostname `hostname` -e CLIENTID=$CLIENTID -v jenkinsfs:/jenkins -v ~/.ssh:/keys:Z ${IMAGE}
 
 ## Notes
+
 - NFS is share Jenkins Jobs directory
 - DeployHub will see the Jenkins File System Repository as /jenkins

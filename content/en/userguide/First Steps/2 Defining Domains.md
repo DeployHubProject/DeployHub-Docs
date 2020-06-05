@@ -11,11 +11,11 @@ description: >
 _Domains_ are used to catalog and publish microservices and other reusable objects (web components, DB updates, etc.) supporting a Domain Driven Design for organization. Domains make it easy for you to catalog and share reusable _Components_ across siloed teams.  Domains organize reusable objects based on a 'solution' space. Domains can represent functional areas such as 'security services' or departments, teams, and software projects. There are four types of Domains:
 
 | **Domain Type** | Description |
-|---| --- | 
+|---| --- |
 | **Site Domain** | This is the highest-level organizational structure. For SaaS Users your Site Domain will be defaulted to the Project name you entered when you registered. You can rename your Site Domain if needed. On Premise Installation, your default Site Domain name is 'Global.' You can rename your Site Domain if needed.|
 |**Division Domains**| DeployHub Pro User can take advantage of Division Domains. Division Domains are used by larger companies to define an organizational structure that closely represents how they do business, such as geographical areas, organizational responsibility, or business units. A Division Domain is a Sub-Domain. Division Domains can create as many Sub-Division Domains as needed. In addition, objects defined to a specific Division Domain can be secured with specific User Groups.|
 |**Project Domains**_ | You assign your software project to a Project Domain. You can create as many Project Domains as needed. Project Domains cannot have child Sub-Project Domains, but they do have Life Cycle Sub-Domains.|
-|**Life Cycle Sub-Domains**_ | This Sub-Domain defines the stages in your Delivery Pipeline and will map to your Continuous Delivery solution. Only Project Domains can have Life Cycle Sub-Domains. You create Life Cycle Sub-Domains to map to each stage in your continuous delivery Pipeline. Life Cycle Sub-Domains allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery Engine (Jenkins X, CircleCI, GitLab or GitHub Actions,ect.) to perform the continuous configuration management of your microservices and _Applictions_ across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign Move, Approve and Request Tasks to your Life Cycle Sub-Domain to define a continuous delivery process within DeployHub. You can create as many Life Cycle Sub-Domains as you need for each of your Project Domains. You can also rename Life Cycle Domains if your Pipeline changes. |
+|**Life Cycle Sub-Domains**_| This Sub-Domain defines the stages in your Delivery Pipeline and will map to your Continuous Delivery solution. Only Project Domains can have Life Cycle Sub-Domains. You create Life Cycle Sub-Domains to map to each stage in your continuous delivery Pipeline. Life Cycle Sub-Domains allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery Engine (Jenkins X, CircleCI, GitLab or GitHub Actions,ect.) to perform the continuous configuration management of your microservices and_Applictions_ across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign Move, Approve and Request Tasks to your Life Cycle Sub-Domain to define a continuous delivery process within DeployHub. You can create as many Life Cycle Sub-Domains as you need for each of your Project Domains. You can also rename Life Cycle Domains if your Pipeline changes. |
 
 ### Top Down Domain Structure
 
@@ -25,22 +25,20 @@ A _Sub Domain_ inherits all the access properties from its parent _Domain_. This
 
 The Domain Dashboard provides you a full view of all _Domains_ which you have access to based on your User privileges.  The view is displayed in a "Sun Burst" map, starting at the highest level _Domain_ with the ability to drive down into the Sub-Domains, and Sub-Domains after that. The detail section of the Dashboard displays the information based on the Sun Burst selection. Each time you move up or down the _Domain_ hierarchy using the Sun Burst map, your detail information will be re-displayed according to where you are in the map.  Folloiwng is a description of the _Domain_ details provided by the _Domain_ Dashboard:
 
-
 ### _Domain_ Details
 
 | Details | Description |
 | --- | --- |
-|Full Name | The fully qualified _Domain_ Name including any parent _Domains_. 
+|Full Name | The fully qualified _Domain_ Name including any parent _Domains_.
 | Name | The Name of the _Domain_ |
 | Summary | Domain Description |
 | Owner Type | User or Group |
 | Owner | Name of the Owner|
 | Created | Auto generated date when the _Domain_ was created.|
 | Modified | Auto generated date when the _Domain_ was modified.|
-| Sub-Domains | All Sub-Domains assigned to this _Domain_ including all _Life Cycle Domains_. 
+| Sub-Domains | All Sub-Domains assigned to this _Domain_ including all _Life Cycle Domains_.
 
 {{% include "userguide/reusable/Access Object.md" %}}
-
 
 ## Tasks in this _Domain_
 
@@ -113,8 +111,6 @@ Additional parameters can be added to a _Task_ by clicking the plus icon in the 
 
 Additional Parameters are stored in Global variables that can be referenced anywhere within DeployHub during the execution of the _Task_. This is particularly useful during deployments where Pre and Post Actions are executed at the _Component_ and _Application_ levels.
 
-
-
 ## Creating a Life Cycle Sub-Domain
 
 NOTE: All _Domains_ in **DeployHub Team** are _Project Domains_ except for the high-level _Site Domain._
@@ -122,5 +118,3 @@ NOTE: All _Domains_ in **DeployHub Team** are _Project Domains_ except for the h
 When you set the _Sub-Domain_ to include _Lifecycle States_ from the _Domain_ Edit dialog, you define that _Domain_ as a _Project Domain_ with all further child _Sub-Domains_ to be _Lifecycle Sub-Domains._ They will all exist at the same level of the _Domain_ hierarchy_. Life Cycle Sub-Domains_ are a type of child _Sub-Domain_ that allows the parent _Sub-Domain_ to be defined to have a _Lifecycle_ process for Continuous Delivery. _Lifecycle_ processes allow for the management of the flow of the _Application_ as it moves through various states within the enterprise, such as from Development through Production.
 
 In order to create a _Life Cycle Sub-Domain_, edit the _Sub-Domain_ by highlighting it in the tree structure and select the pencil icon in the right-hand corner. Select the _Contains Lifecycle_ checkbox in the edit dialog. This will now restrict the addition of any lower level _Sub-Domains_, and instead allow you to create _Life Cycle Sub-Domains_. A _Life Cycle Sub-Domain_ cannot have a child _Sub-Domain._ The icon for the newly created _Life Cycle Sub-Domain_ will change from a world to a flowchart, indicating that this is now a _Life Cycle Sub-Domain_. You can re-order the _Life Cycle Sub-Domains_ by selecting the higher level _Sub-Domain_ General Tab. Edit the _Sub-Domain_ by selecting the pencil icon in the right-hand corner. This will bring you to the Edit General dialog box. You can drag and drop the _Life Cycle Sub-Domains_ to re-order them.
-
-

@@ -48,7 +48,6 @@ Note, the resulting JSON will vary slightly depending on whether the specified a
 | ---- | ----------- | ------ |
 | 200 | Success or failure.  Check success field for status. | [application_version_result](/restapi/models/#application_version_result) |
 
-
 ## Create New Application Version
 
 ### /dmadminweb/API/new/appver/{app_id}

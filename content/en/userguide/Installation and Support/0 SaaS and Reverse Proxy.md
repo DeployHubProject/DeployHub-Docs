@@ -77,11 +77,8 @@ export CLIENTID="Client ID sent in welcome email"
 
 docker run -d --hostname `hostname` -e CLIENTID=$CLIENTID -v ~/.ssh:/keys:Z ${IMAGE}
 
-
 ## Notes
 
 - $​CLIENTID = client id assigned to your user id from the deployhub.com website or welcome email
 - ${IMAGE} = image id from the docker pull
 - DeployHub will see the ssh keys as /keys
-
-

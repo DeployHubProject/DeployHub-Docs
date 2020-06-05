@@ -8,13 +8,11 @@ description: >
 
 ## Intro to Core Objects
 
-The core _Objects_ that define DeployHub are _Domains_, _Applications_, _Components_ , _Environments_ and _Endpoints_. These key Objects are used to catalog, track, and version independently deployable objects like microservices, map their relationships, and release them to clusters, cloud, or physical datacenters. 
+The core _Objects_ that define DeployHub are _Domains_, _Applications_, _Components_ , _Environments_ and _Endpoints_. These key Objects are used to catalog, track, and version independently deployable objects like microservices, map their relationships, and release them to clusters, cloud, or physical datacenters.
 
-_Domains_ are core to DeployHub's management of microserivces.  _Domains_ are hierarchical and pass inheritance from parent to siblings.  For this reason, _Components_ can be shared across the _Sub-Domains_.  The hierarchical structure of _Domains_ provide a high-level of control and management over how microservices are shared and reused. 
-
+_Domains_ are core to DeployHub's management of microserivces.  _Domains_ are hierarchical and pass inheritance from parent to siblings.  For this reason, _Components_ can be shared across the _Sub-Domains_.  The hierarchical structure of _Domains_ provide a high-level of control and management over how microservices are shared and reused.
 
 ![Example of Domains, Applications, Components and Environments](/userguide/concepts/OnlineStore-GlobalDomain.jpg)
-
 
  The other _Objects_ include:
 
@@ -26,23 +24,21 @@ _Domains_ are core to DeployHub's management of microserivces.  _Domains_ are hi
 - User
 - UserGroup (DeployHub Pro Object)
 
-These Objects support how DeployHub does it works and can be referenced using DeployHub APIs or custom DMSCripts. 
-
+These Objects support how DeployHub does it works and can be referenced using DeployHub APIs or custom DMSCripts.
 
 Following is a description of each Object and their attributes.
 
 ## Domain Object
 
-The _Domain Object_ represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Sub-Domains_. _Sub-Domains_ inherit the parents properties, and access. 
+The _Domain Object_ represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Sub-Domains_. _Sub-Domains_ inherit the parents properties, and access.
 
-Your microservices, which are a type of _Component_ are cataloged based on _Domains_ and _Sub_Domains_ which you define. _Domains_ are used to catalog microservices that solve the same 'problem sets.' In a similar way, _Applications_ are assigned to their own _Domain_. _Environments_ and _Endpoints_ are associated to _Domains_ that are managing _Applications_. 
+Your microservices, which are a type of _Component_ are cataloged based on _Domains_ and _Sub_Domains_which you define._Domains_are used to catalog microservices that solve the same 'problem sets.' In a similar way,_Applications_are assigned to their own_Domain_._Environments_and_Endpoints_are associated to_Domains_that are managing_Applications_.
 
-The highest level _Domain_ is your _Global Domain_. If you are using the SaaS version, your _Global Domain_ name is defined based on your Company.  If you are using the on-premise installation, you will see a Domain called _Global_. 
+The highest level _Domain_ is your _Global Domain_. If you are using the SaaS version, your _Global Domain_ name is defined based on your Company.  If you are using the on-premise installation, you will see a Domain called _Global_.
 
 _Domains_ also include _Tasks_. _Tasks_ include Move, Approve, Version and Deploy. _Tasks_ can be called by external solutions via APIs for integration into your Continuous Delivery Pipeline. _Tasks_ are associated to any _Domain_ and can be defined as _Pre_ or _Post_.  _Tasks_ are normally defined to _Life Cycle Sub-Domains_ and support continuous configuration management in your continuous delivery process.
 
 _Life Cycle Sub-Domains_ allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery engine (Jenkins, Bamboo, GitLab, CircleCI, Puppet Relay, Google CloudBuild or GitHub Actions) to perform the continuous deployment task across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign _Tasks_ to your _Life Cycle Sub-Domain_ to define a continuous deployment 'promotion' process within DeployHub.
-
 
 The following properties can be accessed on the _Domain_ object:
 
@@ -54,7 +50,7 @@ The following properties can be accessed on the _Domain_ object:
 | summary | Summary text. |
 | domain | Domain in which the Domain is contained |
 | subdomains | List of _Domain_ objects which are contained within this Domain. |
-| lifecycle | A _Domain_ that includes a pipeline and the lowest level _Sub_Domain_ Lifecycle _Domains_ cannot have _Sub_Domains_. |
+| lifecycle | A _Domain_ that includes a pipeline and the lowest level _Sub_Domain_Lifecycle_Domains_cannot have_Sub_Domains_. |
 | _Applications_ | The _Application_ objects which are contained within this _Domain_. |
 | _Environments_ | The _Environment_ objects which are contained within this _Domain_. |
 | creator | The User Object representing the user who created this _Domain_. |
@@ -71,7 +67,6 @@ If you are an application developer, this will be where you do most of your work
 
 - **Application Version** : This child of the _Application Base Version_ represents changes and can be deployed just as an _Application Base Version_ is.
 
-
 An Application has the following properties:
 
 | **Property** | **Description** |
@@ -83,7 +78,7 @@ An Application has the following properties:
 | owner | User or UserGroup that owns the _Application._ |
 | parent | The Base _Application_ |
 | predecessor |Predecessor _Application Version_ (the version on which this version is based) |
-| _Release_ | Defines the _Application_Object_ with more than one _Application_  |
+| _Release_ | Defines the _Application_Object_with more than one_Application_  |
 | _Applications_ | Multiple _Application_s used to create a _Release_|
 | _Components_ | The objects that the _Application_ consumes |
 | approvals | Used  as part of a pipeline process allowing a control point for progressing a change across the pipeline |
@@ -98,8 +93,7 @@ An Application has the following properties:
 
 A _Release_ is only available in **DeployHub Pro**. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a 'Release Train.'
 
-
-## Component Object 
+## Component Object
 
 DeployHub manages microservices and other reusable objects as _Components_.  _Components_ are assigned to an _Application_ eventhough they are managed independently.  By assigning _Components_ to _Applications_ you are able to track a 'logical"' view of your software solution.  In a monolithic approach, we performed this step at the software compile and linke step. In microservices, that step goes away. Microservices are loosely coupled and linked at run-time. Defining _Components_ to _Applications_ puts the _Application_ back in the picture, even if it is only a 'logical' view.
 
@@ -124,7 +118,7 @@ A _Component_ object has the following properties:
 | parent | The Base _Component_ |
 | predecessor | Predecessor _Component_ Version (the version on which this version is based) |
 | items | The items that make up this _Component_ |
-| servers | These are the _Endpoints to which this _Component_ has been deployed |
+| servers | These are the _Endpoints to which this_Component_ has been deployed |
 | requests | The change requests associated with this _Component_ |
 | lastbuild | The last build number for this _Component_, 0 if never built. |
 | creator | The user who created this _Component_. |
@@ -147,10 +141,9 @@ When a new _Application Version_ is createdfrom either an _Application Base Vers
 
 DeployHub uses a simple versioning number schema starting at 1 and incrementing over time, for example Myapp;1, Myapp;2.
 
-
 ## Environment Object
 
-The _Environment Object_ represents a collection of _Endpoints_ that an _Application_ is deployed to. Mutlple _Environments_ are used to represent Development, Testing and Production for a single _Application_.  Your _Application_ can have as many _Envrionments_ as needed to support your Lifecycle Pipeline. 
+The _Environment Object_ represents a collection of _Endpoints_ that an _Application_ is deployed to. Mutlple _Environments_ are used to represent Development, Testing and Production for a single _Application_.  Your _Application_ can have as many _Envrionments_ as needed to support your Lifecycle Pipeline.
 
 The following properties can be accessed for an _Environment_ object:
 
@@ -184,7 +177,7 @@ Mapping of _Component_ to _Endpoints_ is accomplished by assigning one or more _
 The _Endpoint_ object has the following properties:
 
 | **Property** | **Description** |
-| --- | --- | 
+| --- | --- |
 | id | A unique identifier for the _Endpoint_ as used in the database. |
 | name | The Endpoint name |
 | fqdomain | Fully qualified _Domain_ name |
@@ -202,10 +195,9 @@ The _Endpoint_ object has the following properties:
 | mtime | The date/time the _Endpoint_ was last modified |
 | attributes | Array of Strings, keyed by Attribute Name |
 
-
 ## Change Request Object
 
-The _Change Request_ object represents a change request record associated with either a _Component_ or an _Application_. 
+The _Change Request_ object represents a change request record associated with either a _Component_ or an _Application_.
 
 The _Change Request_ object has the following properties:
 
@@ -218,6 +210,7 @@ The _Change Request_ object has the following properties:
 | html\_url | A URL which will direct a browser to the page describing the change request in the external change tracking system. |
 
 ## Credential Object
+
 The _Credential Object_ contains the logon and password needed to access _EndPoints_ and external Repositories like Git or Quay.
 
 The _Credential Object_ has the following properties:
@@ -239,17 +232,16 @@ The _Credential Object_ has the following properties:
 | mtime | The date/time the _Credential_ was last modified |
 | kind  | _Credential_ use. |
 
-
 ## Date Object
-Dates are used to track the date/time of the creation, deletion or update of an Object. 
+
+Dates are used to track the date/time of the creation, deletion or update of an Object.
 
 The _Date Object_ has the following properties:
 
 | Property | Description |
-| --- | --- | 
+| --- | --- |
 | to\_int(secs) | Returns an integer representing the date as the number of seconds since midnight on January 1st 1970 (epoch). The secs parameter is optional. If specified, the specified number of seconds is added to the date/time before the new value is returned. |
 | to\_char(fmt) |  Formats the date into a string given by the passed fmt string. The fmt string should contain characters as specified below. |
-
 
 ## Dropzone Object
 
@@ -264,20 +256,21 @@ A _DropZone Object_ has the following properties:
 | files | An Array of _DropZone Objects_, each one of which represents a file in the _DropZone_. The array is keyed by the full path name of the file. |
 
 ### DropZone File Object
-The _DropZone File Object_ represents a file in the _DropZone_. 
+
+The _DropZone File Object_ represents a file in the _DropZone_.
 
 The _DropZone File Object_ has the following properties:
 
 | Property | Description |
-| --- | --- | 
+| --- | --- |
 | dzpath | The relative path of the file in the _DropZone_. |
 | repopath | The relative path of the file as located in the Repository (this path is relative to the base directory of the repository). |
 | size | The size of the file in bytes. |
 | ctime | The creation time of the file. |
 | mtime | The modified time of the file. |
 
-
 ## User Object
+
 The _User object_ represents a user in DeployHub. _User objects_. The _User Object_ has the following properties:
 
 | **Property** | **Return Type** | **Description** |
@@ -297,8 +290,8 @@ The _User object_ represents a user in DeployHub. _User objects_. The _User Obje
 | mtime | Date | Date Object representing the date/time the user was last modified. |
 | owner | Object | User or UserGroup that owns the User |
 
-
 ## UserGroup Object
+
 The _UserGroup object_ represents a collection of _Users_ with the same _Domain_ and security access. (Pro feature)
 
 The _UserGroup Object_ has the following properties:
@@ -329,7 +322,3 @@ There may come a time when the need to acquire data outside of the DeployHub sys
 ### Notifiers
 
 A _Notifier_ is sent to various recipients after a successful or failed deployment attempt. They are also sent when deployed files have been changed, a _Request_ _Task_ has been used, or that an _Endpoint_ is down, if these features have been activated on one or more _Endpoints_.  DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose. A _Notifier_ contains all of the technical information necessary to send notifications.
-
-
-
-
