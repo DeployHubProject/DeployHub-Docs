@@ -132,4 +132,3 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Acti
 NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
 
 {{% include "userguide/reusable/AuditTrail.md" %}}
-

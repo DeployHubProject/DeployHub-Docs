@@ -78,7 +78,6 @@ The _Change Request_ object has the following properties:
 | api\_url | A URL which - if passed to restful\_get - will return an array containing the full details of the change request from the external change tracking system. Useful for getting more information than the id / description / status combination which is stored in DeployHub. |
 | html\_url | A URL which will direct a browser to the page describing the change request in the external change tracking system. |
 
-
 ## Component Object
 
 DeployHub manages microservices and other reusable objects as [_Components_](/userguide/publishing-components/).  _Components_ are assigned to an _Application_ eventhough they are managed independently.  By assigning _Components_ to _Applications_ you are able to track a 'logical"' view of your software solution.  In a monolithic approach, we performed this step at the software compile and linke step. In microservices, that step goes away. Microservices are loosely coupled and linked at run-time. Defining _Components_ to _Applications_ puts the _Application_ back in the picture, even if it is only a 'logical' view.
@@ -169,7 +168,7 @@ The _Date Object_ has the following properties:
 
 The [_Domain Object_](/userguide/customizations/2-define-your-functions-and-procedures/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Sub-Domains_. _Sub-Domains_ inherit the parents properties, _Tasks_ and access.
 
-Your microservices, which are a type of _Component_ are cataloged based on _Domains_ and _Sub_Domains_which you define._Domains_are used to catalog microservices that solve the same 'problem sets.' In a similar way,_Applications_are assigned to their own _Domain_. _Environments_and_Endpoints_are associated to_Domains_that are managing _Applications_.
+Your microservices, which are a type of _Component_ are cataloged based on _Domains_ and _Sub_Domains_which you define._Domains_are used to catalog microservices that solve the same 'problem sets.' In a similar way,_Applications_are assigned to their own_Domain_._Environments_and_Endpoints_are associated to_Domains_that are managing_Applications_.
 
 The highest level _Domain_ is your _Global Domain_. If you are using the SaaS version, your _Global Domain_ name is defined based on your Company.  If you are using the on-premise installation, you will see a Domain called _Global_.
 
@@ -275,7 +274,6 @@ The _Endpoint_ object has the following properties:
 | ctime | The date/time the _Endpoint_ was created. |
 | mtime | The date/time the _Endpoint_ was last modified. |
 | attributes | Array of Strings, keyed by Attribute Name. |
-
 
 ## Notifier Objects
 

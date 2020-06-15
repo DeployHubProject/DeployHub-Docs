@@ -12,14 +12,14 @@ _Domains_ are used to catalog and publish microservices and other reusable objec
 
 ### Top Down Domain Structure
 
-A _Sub Domain_ inherits all the access properties from its parent _Domain_. This inheritance continues down through all _Divisional Domains_,  _Project Domains_ and _Life Cycle Sub-Domains_. 
+A _Sub Domain_ inherits all the access properties from its parent _Domain_. This inheritance continues down through all _Divisional Domains_,  _Project Domains_ and _Life Cycle Sub-Domains_.
 
 There are typically 4 common ways to implement _Domains_:
 
 | **Purpose** | Description |
 |---| --- |
 | **Site Domain** | This is the highest-level and default _Domain_. Everyone has a Site _Domain_. For SaaS Users your Site _Domain_ will be defaulted to the Project name you entered when you registered. You can rename your Site _Domain_ if needed. For an on Premise Installation, your default Site _Domain_ name is 'Global.' You can rename your Site _Domain_ if needed. Anything defined to this level can be shared across all lower level _Sub-Domains_. For example, _Environments_ and _Tasks_ defined to the Site _Domain_ are shared by all child _Sub-Domains_.|
-|**Catalog Sub-Domains**| Organizing reusable _Components_, such as microservices, can be done using a Catalog _Sub-Domain_. At this level, you create as many _Sub-Domains_ as needed to represent your _Component_ organization based on the "solution space" they serve. For example, you could build your Catalog as follows: <ul><li> Security Services</li><li>Purchase Processing</li><li>Data Access<li>Ad Services</li> 
+|**Catalog Sub-Domains**| Organizing reusable _Components_, such as microservices, can be done using a Catalog _Sub-Domain_. At this level, you create as many _Sub-Domains_ as needed to represent your _Component_ organization based on the "solution space" they serve. For example, you could build your Catalog as follows: <ul><li> Security Services</li><li>Purchase Processing</li><li>Data Access<li>Ad Services</li>
 |**Division Sub-Domains**| DeployHub Pro Users can take advantage of Division Domains. Division Domains are used by larger companies to define a catalog that more closely represents how they do business and how they want to share _Components_ based on geographical areas, organizational responsibility, or business units. A Division _Sub-Domain_ can have as many child _Sub-Domains_ as needed. For example, a Catalog _Sub-Domain_ for Security and Purchasing Services could be broken down into further _Sub-Domains_: <ul><li> Security Services</li><ul><li>Login Services</li><li>Payment Processing Services <li>Merchant Services</li><li>EMEA Shipping Services</li><li>North America Shipping Services</li></ul><br><li>Purchase Processing Services</li><ul><li>EMEA Check-out Services</li><li>North America Check-out Services</li></ul> |
 |**Project Sub-Domains**| Project _Sub-Domains_ are unique because they contain only Life Cycle Sub-Domains and are intended for the management of an _Application_.  An _Application_ is a package of _Components_ that are versioned and tracked together.  _Applications_ are managed via a continuous delivery pipeline or "life cycle". If you define your _Sub-Domain_ as "Contains Life Cycles", you are restricting any lower _Sub-Domains_ except for Life Cycle _Sub-Domains_.|
 |**Life Cycle Sub-Domains**| This is the lowest level of Sub-Domain and is available when the parent _Domain_ is defined has "Contains Life Cycles". You create Life Cycle _Sub-Domains_ to map to each stage in your continuous delivery pipeline. Most often Life Cycle _Sub-Domains_ have specific _Environments_ and _Tasks_ assigned for interaction with your continuous delivery orchestration engine.  DeployHub can be called by your continuous delivery Engine (Jenkins X, CircleCI, CloudBuild, GitLab or GitHub Actions,ect.) to perform the continuous configuration management of your microservices and _Applications_ across all _Environment_ states. If you are not using a continuous delivery orchestration engine, you can assign Move, Approve and Request Tasks to your Life Cycle _Sub-Domain_ to define a continuous delivery pipeline process within DeployHub. |
@@ -28,9 +28,9 @@ There are typically 4 common ways to implement _Domains_:
 
 ## Using the Domain Dashboard for Viewing and Editing
 
-The Domain Dashboard provides you a full view of all _Domains_ which you have access to based on your User privileges.  The view is displayed in a "Sun Burst" map, starting at the highest level _Domain_ with the ability to drive down into the _Sub-domains_, and _Sub-domains_ after that. 
+The Domain Dashboard provides you a full view of all _Domains_ which you have access to based on your User privileges.  The view is displayed in a "Sun Burst" map, starting at the highest level _Domain_ with the ability to drive down into the _Sub-domains_, and _Sub-domains_ after that.
 
-The detail section of the Dashboard displays the information based on the Sun Burst selection. Each time you move up or down the _Domain_ hierarchy using the Sun Burst map, your detail information will be re-displayed according to where you are in the map.  Following is a description of the _Domain_ details: 
+The detail section of the Dashboard displays the information based on the Sun Burst selection. Each time you move up or down the _Domain_ hierarchy using the Sun Burst map, your detail information will be re-displayed according to where you are in the map.  Following is a description of the _Domain_ details:
 
 ### _Domain_ Details
 
@@ -47,7 +47,7 @@ The detail section of the Dashboard displays the information based on the Sun Bu
 |Containes Lifecycles| This specifies that the _Domain_ will include a Pipeline model.  Lifecycles are normally used as _Sub-domains_ to the Project _Domain_.  Lifecycle _Domains_ cannot have _Sub-domains_. |
 | Sub-Domains | A list of all _Sub-domains_ assigned to this _Domain_ including all _Life Cycle Domains_.
 
-### Access 
+### Access
 
 The Access Section allows _Users_ within designated _Groups_ to update the _Domain_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Domain_ in the following ways:
 
@@ -59,7 +59,6 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 | **Change** | Allows the _User_ to change the _Domain's_ characteristics i.e. Name, Summary, etc. |
 | **Read** | Allows _Users_ to see the _Domain_.|
 | **Write** | Allows _Users_ to create _Sub-Domains_. |
-
 
 ### Tasks in this _Domain_
 
@@ -80,7 +79,7 @@ There are 7 different types of _Tasks_. By default, your _Domain_ is created wit
 
 ### Adding and Editing Tasks in the Lifecycle Domains
 
- You can add new _Tasks_ to a _Domain_ by selecting the "+Add Task" in the _Task_ section of the Dashboard and selecting the type of _Task_ you would like to add to your _Domain_. Alternatively, you can select a _Task_ and delete it using the Delete "trash can" icon. 
+ You can add new _Tasks_ to a _Domain_ by selecting the "+Add Task" in the _Task_ section of the Dashboard and selecting the type of _Task_ you would like to add to your _Domain_. Alternatively, you can select a _Task_ and delete it using the Delete "trash can" icon.
 
  When you create a new _Task_ is is created with a default name based on its type along with a number to make the name unique. It is recommended that the newly created _Task_ be renamed to something more meaningful than the default name.  _Tasks_ will have the following options:
 

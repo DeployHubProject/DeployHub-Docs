@@ -9,13 +9,13 @@ description: >
 
 You may need to acquire data from outside of DeployHub such as an ODBC connection to Oracle. The _Data Source_ object communicates with various databases, HTTP servers, FTP servers, etc., and can be used to take advantage of this kind of information sharing.
 
-The most common use for _Data Sources_ is for setting up integration with issue tracking systems such as Jira, Bugzilla and GitHub.  If you are using DeployHub Pro, you can configure _Components_ with  _Change Requests_. To do this, you will need to define a connection to the change request system. This can be done using _Data Sources_. 
+The most common use for _Data Sources_ is for setting up integration with issue tracking systems such as Jira, Bugzilla and GitHub.  If you are using DeployHub Pro, you can configure _Components_ with  _Change Requests_. To do this, you will need to define a connection to the change request system. This can be done using _Data Sources_.
 
 ## The _Data Sources_ List View for Adding or Deleting
 
 You will find _Data Sources_ under the Setup menu.  Selecting _Data Sources_ will take you to a list of all _DataSources_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Data Sources_ List View.  You can filter the list view on _Data Sources_ and _Domains_.
 
-_Data Sources_ are defined to a _Domain_ and will be displayed based on your access to the _Domain_ to which it belongs. 
+_Data Sources_ are defined to a _Domain_ and will be displayed based on your access to the _Domain_ to which it belongs.
 
 The _Data Sources_ List View has the following Tabs.
 
@@ -46,7 +46,6 @@ The following details are common to all _Data Sources_ types:
 | **Created** | Auto generated date when the _Data Source_ was added.|
 | **Modified**| Auto generated date when the _Data Source_ was updated.|
 | **Credential**| The _Credential_ used to access the _Repository_ if required. |
-
 
 ### Git _Data Source_ Details
 

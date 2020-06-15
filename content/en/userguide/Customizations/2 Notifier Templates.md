@@ -8,9 +8,10 @@ description: >
 
 
 ## Intro to _Notifier Templates_
-_Notifier Templates_ are used to create standard messages that are automatically sent by _Notifiers_.  Each _Notifier_ is assigned to one or more _Notifier Template_. For example, one for a successful deployment and one for a failed deployment. 
 
-Note: To create a _Notifier Template_ you will need to first create the _Notifier_. 
+_Notifier Templates_ are used to create standard messages that are automatically sent by _Notifiers_.  Each _Notifier_ is assigned to one or more _Notifier Template_. For example, one for a successful deployment and one for a failed deployment.
+
+Note: To create a _Notifier Template_ you will need to first create the _Notifier_.
 
 Each _Notifier Template_ contains the subject and body of the actual notification, and if via email, a list of recipients. Recipients can be members of one or more _Groups_ as well as the owners of the _Application_, the owner of the _Environment_, and/or the owners of its _Endpoints_.
 
@@ -38,7 +39,6 @@ From the _Notifier Template_ List View, double click on the _Notifier Template_ 
 
 The Dashboard view displays all information related to a specific _Notifier_.
 
-
 ### Notifier Details
 
 | Field | Description |
@@ -47,7 +47,6 @@ The Dashboard view displays all information related to a specific _Notifier_.
 | _**Summary**_ | A short text field to describe the _Template_ and its use. |
 | _**Created**_ | The date and time the _Template_ was created. |
 | _**Modified**_ | The date and time the _Template_ was last changed. |
-
 
 ## Recipients Section
 
@@ -71,9 +70,9 @@ Variables that can be used in your _Notifier Template_ with a description.
 
 |Variable Name|  Description Operation |
 |---|---|
-|${application.name}|The name of the current application	Any DeployHub task operating on an Application (such as Deploy, Move, Approve etc)|
-|${environment.name}|The name of the target environment	Any DeployHub task operating on an Environment (such as Deploy etc)|
-|${user.name}|The name of the invoking user	Any DeployHub task.|
+|${application.name}|The name of the current application Any DeployHub task operating on an Application (such as Deploy, Move, Approve etc)|
+|${environment.name}|The name of the target environment Any DeployHub task operating on an Environment (such as Deploy etc)|
+|${user.name}|The name of the invoking user Any DeployHub task.|
 |$DEPLOY_ID|The Deployment ID Number. Set during a Deploy task.|
 |$SERVER_NAME|End Point Name. The name of the end point during an automatic periodic scan (AutoPing or AutoMD5). Use this variable in a Ping or MD5 template.|
 |$SERVER_HOSTNAME| End Point hostname. The hostname of the end point during an automatic periodic scan (AutoPing or AutoMD5). Use this variable in a Ping or MD5 template.|

@@ -7,14 +7,17 @@ description: >
 ---
 
 ## Intro to _User_ and _Groups_
+
 DeployHub Team has two Groups - Administrators and Users.  Access control to objects are based on these two high level _Groups_. DeployHub Team allows you to create as many _Users_ as required but only the "User" and "Administrator" _Groups_ are supported.
 
 **DeployHub Pro** allows you to create custom User Groups for more granular security control around _Domains_, _Environments_, _Applications_ and _Components_. For information on how to create User _Groups_ with DeployHub Pro see [Creating DeployHub Pro User Groups](/userguide/profeatures/5-pro-groups/.)
 
 Both _Users_ and _Groups_ are given access to DeployHub Objects. _Users_ who belong to a _Group_ that has been granted access to an object are also granted the same access. A many-to-many relationship exists between _Users_ and _Groups_, so that a _User_ can belong to many different _Groups_, and a _Group_ can contain many different _Users_.
 
-### _User_ and _Group_ Access Priveledges 
+### _User_ and _Group_ Access Priveledges
+
 Access is applied to the following Objects within DeployHub:
+
 - _Domains_
 - _Credentials_
 - _Repositories_
@@ -87,4 +90,4 @@ The following details are common to all _Users_ types:
 
 ## Group Membership
 
-This Section contains a list of all the _Groups_ the selected _User_ belongs to. Add a _Group_ to the selected _User_ by clicking on the plus '+Add' sign in the upper right, which adds an empty row to the table with a drop down list of all avaialbe _Groups_. Use the Trash Can icon to delete a _Group_ from the table. 
+This Section contains a list of all the _Groups_ the selected _User_ belongs to. Add a _Group_ to the selected _User_ by clicking on the plus '+Add' sign in the upper right, which adds an empty row to the table with a drop down list of all avaialbe _Groups_. Use the Trash Can icon to delete a _Group_ from the table.

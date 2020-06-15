@@ -27,6 +27,4 @@ An _Application_ can be moved to another _Life Cycle Sub-Domain_ by right-clicki
 
 If an _Application_ is deployed, it appears in one of the lower boxes which represents the _Environment_ it was deployed to, and the _Application_ no longer appears in the upper box titled _Undeployed Applications_. _Environments_ are stacked vertically under the _Life Cycle Sub-Domains_ in which they belong.
 
-
-
 Using Jenkins as an example, Jenkins performs a software build which creates a new artificat (container, binary, etc.). Jenkins then calls DeployHub and places its Build Number into DeployHub to be referenced during a subsequent deployment. (This appears in the target _Component's_ General tab within the Last Build Number field). Jenkins then puts the files into the _Repository_ that is referenced by the _Component Item(s)_ within the _Component_. As a separate operation, Jenkins calls DeployHub to perform the deployment by referencing the _Application_ that contains the _Component_. For **DeployHub Pro** users, Jenkins can also call a _Release_ that contains multiple _Applications_.

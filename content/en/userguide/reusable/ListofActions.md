@@ -1,14 +1,17 @@
 ## Built-In _Actions_
-In some cases, the integration work you are looking for may already be done with our Built-in _Actions_.  Built-in _Actions_ have been contributed by the Open Source Community and added to the DeployHub database. 
 
-Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task like deleting files in a DropZone, or running a PostGres script. Other Built-in _Actions_ integrate with specific DevOps tools such as Ansible, Helm, Slack or GitHub. 
+In some cases, the integration work you are looking for may already be done with our Built-in _Actions_.  Built-in _Actions_ have been contributed by the Open Source Community and added to the DeployHub database.
 
-### Built-In Database Actions:
+Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task like deleting files in a DropZone, or running a PostGres script. Other Built-in _Actions_ integrate with specific DevOps tools such as Ansible, Helm, Slack or GitHub.
+
+### Built-In Database Actions
+
 | Name | Description |
 |---|---|
 |**Run SQL Script (Postgres)** | Runs one or more SQL scripts against a Postgres Database. |
 
-### Built-In Deploy Actions:
+### Built-In Deploy Actions
+
  Name | Description |
 |---|---|
 | **Checkout** | Extracts items from the specified _Repository_ and places them in the _Dropzone_. |
@@ -17,7 +20,8 @@ Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task
  | **Execute** | Runs a script on the appropriate _Endpoints_ within the targeted _Environment_. Use IF conditions to filter the server list to those matching the specified criteria. |
 | **Transfer** | Deploys the _Component_ on the stack to the _Endpoint_ on the stack. |
 
-### Built-In Dropzone Actions:
+### Built-In Dropzone Actions
+
  Name | Description |
 |---|---|
 |**Add File to ZIP** | Puts a _Dropzone_ file into a ZIP/WAR/JAR/EAR file. |
@@ -33,7 +37,8 @@ Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task
 |**XML - Set Attribute** | Sets an attribute name in an XML element. |
 |**XML - Set Text** | Sets the text in an XML element. |
 
-### Built-In Flow Logic Actions:
+### Built-In Flow Logic Actions
+
  Name | Description |
 |---|---|
 |**Calculate MD5** | Calculates the MD5 of a file. |
@@ -51,7 +56,8 @@ Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task
 |**Using Stream** | Use a named stream. |
 |**Wait for Task** | Wait for a Specific DeployHub Task to be Run. |
 
- ### Built-In Loop Actions:
+### Built-In Loop Actions
+
  Name | Description |
 |---|---|
 |**Component Loop** | Loops through each _Component_ that makes up the _Application_. |
@@ -59,26 +65,27 @@ Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task
 |**Server Loop** | Iterates through the current set of _Endpoints_. |
 |**Version Loop** | Loops through each version between version on target _Endpoint_ and version being deployed. |
 
+### Built-In Tomcat Actions
 
-### Built-In Tomcat Actions:
  Name | Description |
 |---|---|
 |**TomcatPostDeploy** | Cleans work directory and starts Tomcat. |
 |**TomcatPreDeploy** | Shuts down Tomcat before deployment. |
 
- ### Built-In WebSphere Actions:
+### Built-In WebSphere Actions
+
  Name | Description |
 |---|---|
 |**Deploy App** | Deploys an _Application_ to Websphere. |
 
- ### Built-In Windows Actions:
+### Built-In Windows Actions
+
  Name | Description |
 |---|---|
 |**Extract Zip** | Extracts the contents of a zip file. |
 |**List Services** | Returns a list of installed services into an array. |
 |**Start Service** | Starts a Windows Service on the appropriate _Endpoints_ within the targeted _Environment_. Use IF conditions to filter the _Endpoint_ list to those matching the specified criteria. |
 |**Stop Service** | Stops a Windows Service on the appropriate _Endpoints_ within the targeted _Environment_. Use IF conditions to filter the _Endpoint_ list to those matching the specified criteria. |
-
 
 ## Built-in _Actions_ that Support DevOps Interoperability
 
@@ -91,4 +98,3 @@ Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task
 | [Tomcat](/userguide/integrations/tomcat/) | Deploys to a Tomcat environment.   |
 | [WebLogic](userguide/integrations/weblogic/) | Deploys to a WebLogic Environment. |
 | [WebSphere](/userguide/integrations/websphere/) | Deploys to a WebSphere Environment.  |
-

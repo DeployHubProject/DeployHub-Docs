@@ -1,5 +1,6 @@
 ## Slack Details
-DeployHub can send messages to slack based on certain events. In order to integrate Slack with DeployHub, Slack must be configured as a _Notifier_. 
+
+DeployHub can send messages to slack based on certain events. In order to integrate Slack with DeployHub, Slack must be configured as a _Notifier_.
 
 | Field | Description |
 | --- | --- |

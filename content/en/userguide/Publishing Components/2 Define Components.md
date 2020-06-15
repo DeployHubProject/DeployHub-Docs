@@ -18,7 +18,6 @@ You can also use the Filter bar, represented by a funnel icon, to reorder your _
 - Result
 - Version
 
-
 ## Additional Tabs from the _Component_ List View
 
 The _Component_ List View has the following Tabs.

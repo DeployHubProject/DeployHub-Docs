@@ -8,6 +8,7 @@ description: >
 
 
 ## Retrieve a _Component_
+
 Retrieve specific _Component_ or _Component_ version. This call returns a JSON Object representing the specified _Component_. It is useful to determine the _Application_(s) which include the _Component_, whether the _Application_ is approved, which other _Components_ are used alongside the specified _Component_ and so on.
 
 **REST Api Endpoint**
@@ -34,7 +35,6 @@ Retrieve specific _Component_ or _Component_ version. This call returns a JSON O
 {{% include "userguide/reusable/Model Request.md" %}}
 {{% include "userguide/reusable/Model Approve or Reject.md" %}}
 
-
 ## Create New _Component Version_
 
 This call creates a new _Component Version_. The new _Component_ inherits all the attributes of the predecessor _Component_ including its _Domain_.
@@ -49,11 +49,10 @@ This call creates a new _Component Version_. The new _Component_ inherits all th
 
 | Name | Located in | Description | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
-| comp_id | path | Is the ID of the _Component_ which will be the parent of the new _Component Version_. Either its name, its qualified name with its parent _Domains_ included in dot notation (i.e. GLOBAL.Product) or its internal ID. The newly created _Component Version_ will inherit all the attributes from this _Component_. | Yes | integer |
+| comp_id | path | Is the ID of the_Component_which will be the parent of the new_Component Version_. Either its name, its qualified name with its parent_Domains_included in dot notation (i.e. GLOBAL.Product) or its internal ID. The newly created_Component Version_will inherit all the attributes from this_Component_. | Yes | integer |
 
 {{% include "userguide/reusable/Model Component Result.md" %}}
 {{% include "userguide/reusable/Model Success.md" %}}
-
 
 ## Associate a Build with a _Component_
 
@@ -71,8 +70,8 @@ In order for this to work through the permission model, the associated "Create _
 
 | Name | Located in | Value | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
-| comp_id | path | Is the ID of a _Component Base Version_. The latest version of this _Component_ will be found and associated to the build with that _Component Version_. If "branch" is specified then the latest version on the branch is located. The _Component_ can be specified using either its name, its qualified name with its parent _Domains_ included in dot notation (i.e. GLOBAL.Products) or its internal ID. | Yes | integer |
-| build_id | path | Is the numeric build ID to associate with the latest version of _Component_ ID (comp_id). | Yes | integer |
+| comp_id | path | Is the ID of a_Component Base Version_. The latest version of this_Component_will be found and associated to the build with that_Component Version_. If "branch" is specified then the latest version on the branch is located. The_Component_can be specified using either its name, its qualified name with its parent_Domains_ included in dot notation (i.e. GLOBAL.Products) or its internal ID. | Yes | integer |
+| build_id | path | Is the numeric build ID to associate with the latest version of_Component_ID (comp_id). | Yes | integer |
 | taskname | query | Is the identifier of a "Create New _Application_ Task" to execute in order to create the new _Application Version_. Either its name, its qualified name with its _Domain_ and any parent _Domains_ included in dot notation (i.e. GLOBAL.Product) or its internal ID. | Yes | string |
 | commit | query | Is the commit ID which triggered the build. | No | string |
 | issue | query | Is a change request id to associate with this build. If you add an issue then the specified _Component_ must have an associated Change Request _Data Source_ associated with it. This is because the API  will query the change tracking tool in order to retrieve the description of the change and the current status. If the _Component_ does not have such a Change Request _Data Source_ an error is returned.  You can specify one or more issue parameters if you need to associate multiple change requests with this build or use the issues parameter to specify multiple change requests. | No | string |

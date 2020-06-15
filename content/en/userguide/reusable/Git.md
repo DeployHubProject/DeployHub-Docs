@@ -1,5 +1,6 @@
 ## Git _Repository_ Details
-You can pull files from a Git Repository to be used by your _Components_.  The following details are requred for defining your Git Repository connection. 
+
+You can pull files from a Git Repository to be used by your _Components_.  The following details are requred for defining your Git Repository connection.
 
 | Field | Description |
 | --- | --- |

@@ -7,9 +7,9 @@ description: >
 ---
 ## Procedures and Functions
 
-_Procedures_ and _Functions_ are the steps that make up an _Action_. If you have not worked with _Actions_, read about them in them in the [Customize your Actions Chapter](/userguide/customizations/2-define-your-actions/). 
+_Procedures_ and _Functions_ are the steps that make up an _Action_. If you have not worked with _Actions_, read about them in them in the [Customize your Actions Chapter](/userguide/customizations/2-define-your-actions/).
 
-_Functions_ and _Procedures_ are used by _Actions_ to define custom installation logic of a _Component_ or perform any type of Pre or Post Action. Using _Actions_, _Functions_ and _Procedures_ allows you to be as creative as needed to meet the unique needs of your implementation. 
+_Functions_ and _Procedures_ are used by _Actions_ to define custom installation logic of a _Component_ or perform any type of Pre or Post Action. Using _Actions_, _Functions_ and _Procedures_ allows you to be as creative as needed to meet the unique needs of your implementation.
 
 The difference between _Procedures_ and _Functions_ is a _Procedures_ execute a process but does not return a value. A _Function_ returns a value. _Procedures_ and _Functions_ can be:
 
@@ -40,13 +40,12 @@ _Function_ Types
 
 Selecting the _Procedure/Function_ kind will show other fields relevant to that particular kind (for example "Copy to Remote" will only appear for kind "Remote External Script or Program". Fill in the fields and then click OK to create the new _Procedure/Function_.
 
-
 ## The _Functions_ and _Procedures_ List View for Adding or Deleting
 
 From the _Functions_ and _Procedures_ menu option to the left of the DeployHub main panel, you will be taken to a list of all available _Functions_ and _Procedures_ which you have access to based on the _Domain_. You can also use the Filter bar, represented by a funnel icon, to reorder your _Functions_ and _Procedures_ List View.  You can filter on:
 
 - Domain
-- Name 
+- Name
 - Type (_Function_ or _Procedure_)
 
 The _Function_ or _Procedure_ List View has the following Tabs.
@@ -156,7 +155,6 @@ if ($myval) {
 To see if the checkbox named "myval" is checked or not
 
 {{% include "userguide/reusable/AuditTrail.md" %}}
-
 
 ## Body Section
 

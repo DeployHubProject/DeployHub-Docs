@@ -13,6 +13,6 @@ Is a JSON  object representing the _Component_ being retrieved.
 | ownergroup | string | If the "owner" of the _Component_ is a _Group_, then this is the name of that _Group_. | No |
 | requests |  Request | A change request Object.| No |
 | summary | string | Is the summary text associated with the _Component Version_. | No |
-| component_versions | _Component Version_ | A specific _Component_ with a unique identifier. | No |
+| component_versions |_Component Version_| A specific_Component_ with a unique identifier. | No |
 | applications | _Application Version_ with full details  | All details for the _Application Version_. | No |
 | predecessor | The parent of the _Component_| An earlier _Component Version_.  | No |

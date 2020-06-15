@@ -26,8 +26,7 @@ Note - Any additional parameters are created as Global Variables accessible with
 | ---- | ---------- | ----------- | -------- | ---- |
 | wait | query | If the wait parameter is not specified - or is specified and set to Y - then the call does not return until the deployment is complete. If the wait parameter is set to N then the call returns as soon as the deployment has been instigated but before it completes. In both cases, the deployment id is returned.  | No | string |
 | task | query | Is the identifier of a Deploy task to execute in order to perform the deployment. Either its name, its qualified name with its domain and any parent _Domains_ included in dot notation(i.e. GLOBAL.Product) or its internal ID. If the task is not specified, the first accessible Deploy Task within the _Application's_ _Domain_ is used (or any Deploy Task in parent _Domain_ if they are set to be "available" to _Sub-domains).  | No | string |
-| app_id | path | Is the identifier of an _Application_. Either its name, its qualified name with its parent _Domain included in dot notation (i.e. GLOBAL.Product) or its internal ID. | Yes | string |
-| env_id | path | Is the identifier of an _Environment_. Either its name, its qualified name with its parent _Domains_ included in dot notation (i.e. GLOBAL.Product) or its internal ID. | Yes | string |
-
+| app_id | path | Is the identifier of an_Application_. Either its name, its qualified name with its parent_Domain included in dot notation (i.e. GLOBAL.Product) or its internal ID. | Yes | string |
+| env_id | path | Is the identifier of an_Environment_. Either its name, its qualified name with its parent_Domains_ included in dot notation (i.e. GLOBAL.Product) or its internal ID. | Yes | string |
 
 {{% include "userguide/reusable/Model Deployment Result.md" %}}

@@ -48,7 +48,7 @@ Below are the Details for an _Environment_.
 | **Created** | Auto generated date and time the _Environment_ was created. |
 | **Modified** | Auto generated date and time the _Environment_ was last modified. |
 
-### Access 
+### Access
 
 The Access Section allows _Users_ within designated _Groups_ to update the _Environment_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Environment_ in the following ways:
 
@@ -61,19 +61,20 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 | **Create Calendar Entries** | Allows _Users_ to control the Calendar for the selected _Environment_. NOTE: Securing Environment Calendars is only available in DeployHub Pro.|
 | **Deploy** | Allows _Users_ to deploy  _Applications_ into the selected _Environment_. |
 
-
 {{% include "userguide/reusable/Attributes.md" %}}
 
 {{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
 
-### Endpoint 
+### Endpoint
 
 _Environments_ are a collection of _Endpoints_. Use this section to assign the _Endpoints_ that will make up this _Environment_.
 
-### Trends 
+### Trends
+
 This section shows the success/failure rate and time required for the last 10 deployments to this _Environment_.
 
-###  Associated _Applications_
+### Associated _Applications_
+
 Allows you to associate an _Application Base Version_ to this _Environment_. Assignment of _Applications_ to _Environments_ can be done at both levels. _Application Versions_ inherit _Environments_ from the _Application Base Version_.
 
 ## The Calendar

@@ -7,7 +7,7 @@ description: >
 ---
 ## Intro to _Build Jobs_
 
-_Build Jobs_ are used to build different kinds of artifacts for that create _Components_ for eventual deployments. _Build Jobs_ are created by _CD Engines_ that you have connected to DeployHub. 
+_Build Jobs_ are used to build different kinds of artifacts for that create _Components_ for eventual deployments. _Build Jobs_ are created by _CD Engines_ that you have connected to DeployHub.
 
 ## Using the _Build Jobs_ List View for Adding and Deleting
 

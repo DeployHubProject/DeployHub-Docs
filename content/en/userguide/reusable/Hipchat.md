@@ -1,4 +1,5 @@
 ## Hipchat Details
+
 DeployHub allows you to send notifications via HipChat using the HipChat Group, Topic, or Room features. Notifications are sent as a Post _Action_ to the _Component_ or _Application_ to inform the recipient(s) of the _Component_ or _Applications_ deployment's success or failure.
 
 | Field | Description |

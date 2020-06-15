@@ -8,7 +8,8 @@ description: >
 
 ## Intro to _Notifiers_
 
- _Notifiers_ send messages to various recipients and can be used as follows: 
+ _Notifiers_ send messages to various recipients and can be used as follows:
+
 - After a successful or failed deployment.
 - When a _Request_ Task has ben used against an _Application_.
 - When an _Endpoint_ is unavailable.
@@ -17,6 +18,7 @@ description: >
 DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack, and HipChat for this purpose.
 
 ## _Notifiers_ and _Notifier Templates_
+
 _Notifiers_ are associated to a Template. The Template is standard message that needs to be sent when the _Notifier_ is called.  Individual notifications are created through the _Notify Template_. A _Notifier_ contains one or more of these. Each contains the subject and body of the actual notification, and if via email, a list of recipients. Recipients can be members of one or more _Groups_ as well as the owners of the _Application_, the owner of the _Environment_, and/or the owners of its _Servers_.
 
 For more information on _Notifier Templates_ see [Using Notifier Templates](/userguide/customizations/2-notifier-templates/).
@@ -59,8 +61,8 @@ The following details are common to all _Notifiers_ types:
 | **Modified**| Auto generated date when the _Notifier_ was updated.|
 | **Credential**| The _Credential_ used to access the _Notifier_ if required. |
 
-
 ## SMTP Email Details
+
 | Field | Description |
 | --- | --- |
 |**HTML**| If 'Yes,' will send email in HTML format.|

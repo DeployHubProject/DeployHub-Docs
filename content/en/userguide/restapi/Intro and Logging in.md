@@ -7,7 +7,6 @@ description: >
 ---
 APIs can be used to extract and update DeployHub [Objects](/userguide/concepts/1-deployhub-basic-concepts/).  The most common use for APIs is to integrate DeployHub into your continuous delivery engine for a continuous configuration management and deploy process.  APIs are generally used for executing deployments, but can also be used to automatically update _Component_ and _Application_ versions.  
 
-
 ## Object Accessibility
 
 APIs rely _User and Group_ access to determine if the call is allowed. The Objects that are accessible via the API are restricted based on the logged-in user. Only Objects that are contained within the user's home _Domain_ and any _Sub-domains_ are accessible via the API.
@@ -23,6 +22,7 @@ If a requested object does not have "read" permission then it cannot be accessed
 When specifying an Object by name you can always qualify the name by pre-pending it with the name of the _Domain_ in which it is contained. The name of the _Domain_ should be separated from the name of the object by a period.
 
 **Example:**
+
 ~~~
     GLOBAL.USA.Development.demoenv
 
