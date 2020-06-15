@@ -6,9 +6,6 @@ description: >
   Convert a value to a string and replace all occurrences. 
 ---
 
-
-### Regsub
-
 regsub converts the value to a string and then replaces all the occurrences of the given regular expression with the specified substitute string.
 
 **Usage:**

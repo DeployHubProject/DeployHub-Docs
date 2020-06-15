@@ -5,6 +5,7 @@ weight: 128
 description: >
  Add a file or group of files into a zip archive for the current DropZone.  
 ---
+
 _zipadd_ adds a file (or a group of files) into a zip archive within the current _DropZone_. If the zip archive does not currently exist then zipadd will create it. WAR, JAR and EAR files are simply ZIP files with a different extension. You can thus use _zipadd_ (and _zipget_ and _zipdel_) with WAR, JAR and EAR files as well as with ZIP archives. This provides a powerful way of manipulating WAR, JAR and EAR files in the _DropZone_ before onward deployment to the target _Endpoint_(s).
 
 _zipadd_ takes a mandatory named parameter. Other parameters can be specified depending on what is being added to the zipfile:

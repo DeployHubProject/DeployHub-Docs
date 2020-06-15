@@ -6,9 +6,6 @@ description: >
   Turn the given value into a String and remove any trailing whitespace.
 ---
 
-
-### rtrim
-
 _rtrim_ turns the given value into a String and removes any trailing whitespace characters before returning the result.
 
 **Usage:**

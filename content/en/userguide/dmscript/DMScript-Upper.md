@@ -6,8 +6,6 @@ description: >
   Convert to uppercase.
 ---
 
-### upper
-
 _upper_ returns an uppercase version of the passed string.
 
 **Usage:**

@@ -6,8 +6,6 @@ description: >
   Converts the given value into a string.
 ---
 
-### Substr
-
 _substr_ turns the given value into a String and then takes a substring from the integer start position (the first character in a string is position 0) to the end of the string or - if an optional length parameter is provided - of length characters.
 
 **Usage:**

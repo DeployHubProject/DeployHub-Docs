@@ -6,8 +6,6 @@ description: >
   Gets a User Group object based on a User Group Name. 
 ---
 
-### getusergroup
-
 getusergroup takes a User Group Name and returns the matching _User Group Object_.
 
 **Usage:**

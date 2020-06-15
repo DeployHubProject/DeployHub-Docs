@@ -5,6 +5,7 @@ weight: 116
 description: >
   Retrieve a User Object.
 ---
+
 The _User object_ represents a user in _DMScript_. User objects can be retrieved as the owner from other objects (such as _Endpoints_, _Environments_, _Applications_ etc.). They can also be returned from a getuser call. A call to the Function _me_ returns a _User_ object representing the current logged in user.
 
 The following properties can be accessed on the User object:

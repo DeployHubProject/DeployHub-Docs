@@ -6,9 +6,6 @@ description: >
   Get the User Object based on the logged in User. 
 ---
 
-
-### me
-
 me returns a _User Object_ representing the current logged in user.
 
 **Usage:**

@@ -6,9 +6,6 @@ description: >
   Generate a random number. 
 ---
 
-
-### Random
-
 Returns a random number between 0 and the specified limit.
 
 **Usage:**

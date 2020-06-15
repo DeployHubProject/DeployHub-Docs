@@ -7,8 +7,6 @@ description: >
 ---
 
 
-## base64encode
-
 _base64encode_ operates on a stream. It converts the stream content (which may contain binary data) into a base64 encoded string and returns it.
 
 **Usage:**

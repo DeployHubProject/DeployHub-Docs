@@ -7,9 +7,6 @@ description: >
 ---
 
 
-
-### Date
-
 Constructs and returns a Date Object from the given values.
 
 **Usage:**

@@ -6,8 +6,6 @@ description: >
   Get an Environment object based on the Environment Name. 
 ---
 
-### getEnvironment
-
 get_Environment_ takes an _Environment_ Name and returns the matching _Environment Object_.
 
 **Usage:**

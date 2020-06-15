@@ -6,8 +6,6 @@ description: >
   Append one path to another.
 ---
 
-## Append
-
 _append_ appends one path to another formatting the paths according to the optional _systemtype_ parameter. If the system type is not specified, then the system type is taken from the _Endpoint_ currently on the stack. If no _Endpoint_ is on the stack, an exception is thrown.
 
 _append_ is also a method that can be called on an _Endpoint_ object. In this case, the system type is taken from the _Endpoint_ itself.

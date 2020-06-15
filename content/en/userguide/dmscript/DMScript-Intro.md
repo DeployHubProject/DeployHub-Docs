@@ -5,6 +5,7 @@ weight: 1
 description: >
   Customize any Action using Built-in Functions and Procedures with DMScript.
 ---
+
 _DMScript_ (_D_eployment _M_anagement _Script_ing) is DeployHub's own scripting language. It underpins nearly all the activities that take place during a deployment.
 
 Users with the appropriate permissions can create their own _DMScript Activities_ by creating custom _Procedures_ and _Functions_. _DMScripts_ can be stored in the DeployHub database (as stored procedures) or can be held in an external filesystem or even in a _Repository_. Storing _DMScript_ in a _Repository_ allows it to be version controlled.
