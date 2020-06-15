@@ -7,8 +7,6 @@ description: >
 ---
 
 
-## restful\_post
-
 _restful\_post_ is used to make POST calls to RESTful based APIs. It takes a single mandatory parameter: the URL to which the message should be sent. There are three optional parameters:
 
 **Usage:**

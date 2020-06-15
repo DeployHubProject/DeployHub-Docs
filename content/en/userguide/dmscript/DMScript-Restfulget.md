@@ -6,9 +6,6 @@ description: >
   Retrieve data from an external RESTful API. 
 ---
 
-
-### restful\_get
-
 _restful\_get_ is used to make GET calls to RESTful based APIs. It takes a single mandatory parameter: the URL to which the message should be sent. There are three optional parameters:
 
 **Usage:**

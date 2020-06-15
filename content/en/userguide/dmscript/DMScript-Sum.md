@@ -6,8 +6,6 @@ description: >
   Interate through each arry element. 
 ---
 
-### sum
-
 _sum_ operates on an array, iterating through each array element. The specified expression is passed to the totalizer and each value is added before the result is returned.
 
 Expression can be $key in which case for each iteration the expression is set to the Array key (subscript) and this is the value that is passed to the totalizer. Expression can also be $value in which case the expression is set to the content of the Array element. If the Array element is an object then $value is the object itself. In this case, you can set expression to ${value.member} in order to access the member property of the value.

@@ -6,10 +6,6 @@ description: >
   Get the length of the associated object.  
 ---
 
-
-
-### length
-
 length returns a number indicating the length of the associated object. When called with a String it returns the number of characters in the string. When called from an Array it returns the number of elements in the Array. When called with a Stream it returns the size of the Stream in bytes.
 
 **Usage:**

@@ -6,9 +6,6 @@ description: >
   Convert to lowercase. 
 ---
 
-
-### Lower
-
 lower returns a lowercase version of the passed string.
 
 **Usage:**

@@ -6,5 +6,3 @@ description: >
   Integrating Hipchat with DeployHub Notifiers.
 ---
 {{% include "/userguide/reusable/Hipchat.md/" %}}
-
-

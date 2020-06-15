@@ -84,12 +84,11 @@ Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task
 
 |Action|Description|
 |---|---|
-| [Ansible](/userguide/integrations/4-ansible/) | Uses Ansible to perform Deployments. |
-| [Cloud Foundry](/userguide/integrations/4-cloud-foundry/) | Uses Cloud Foundry to perform Deployments. |
-| [Helm](/userguide/integrations/4-helm/) | Uses Helm to deploy Containers. |
-| [Lambda](/userguide/integrations/4-lamda/)| Deploys AWS Lamda functions.  |
-| [SalesForce](/userguide/integrations/4-salesforce/) | Deploys _Applications_ to SalesForce.   |
-| [Tomcat](/userguide/integrations/4-tomcat/) | Deploys to a Tomcat environment.   |
-| [WebLogic](userguide/integrations/4-weblogic/) | Deploys to a WebLogic Environment. |
-| [WebSphere](/userguide/integrations/4-websphere/) | Deploys to a WebSphere Environment.  |
+| [Ansible](/userguide/integrations/ansible/) | Uses Ansible to perform Deployments. |
+| [Cloud Foundry](/userguide/integrations/cloud-foundry/) | Uses Cloud Foundry to perform Deployments. |
+| [Helm](/userguide/integrations/helm/) | Uses Helm to deploy Containers. |
+| [SalesForce](/userguide/integrations/salesforce/) | Deploys _Applications_ to SalesForce.   |
+| [Tomcat](/userguide/integrations/tomcat/) | Deploys to a Tomcat environment.   |
+| [WebLogic](userguide/integrations/weblogic/) | Deploys to a WebLogic Environment. |
+| [WebSphere](/userguide/integrations/websphere/) | Deploys to a WebSphere Environment.  |
 

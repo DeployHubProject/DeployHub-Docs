@@ -6,8 +6,6 @@ description: >
   Take a source string and split it into substrings.
 ---
 
-### Split
-
 _split_ takes a source string and splits into a number of substrings. The split is performed at the specified character sequence. The resulting strings are returned in a list of strings.
 
 **Usage:**

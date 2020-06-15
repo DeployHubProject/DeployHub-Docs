@@ -5,6 +5,7 @@ weight: 114
 description: >
   Retrieve a User Group Object.
 ---
+
 The _UserGroup object_ represents a user group in _DMScript_. UserGroup objects can be retrieved as the owner from other objects (such as _Endpoints_, _Environments_, _Applications_ etc.). They can also be returned from a getusergroup call or from a _User_ object (as a list of groups to which the user belongs).
 
 The following properties can be accessed on the User Group object:

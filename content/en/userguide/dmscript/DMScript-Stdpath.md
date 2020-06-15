@@ -6,8 +6,6 @@ description: >
   Get a host path converted into a standard format. 
 ---
 
-### Stdpath
-
 Returns a host path converted to the standardized format using the optional systemtype parameter **.** If the systemtype is not specified then the system type is taken from the _Endpoint_ currently on the stack. If no _Endpoint_ is on the stack, an exception is thrown.
 
 stdpath is also a method that can be called on a _Endpoint_ object. In this case, the system type is taken from the _Endpoint_ itself.

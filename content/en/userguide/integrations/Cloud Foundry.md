@@ -23,15 +23,13 @@ cf target -o myorg -s myspace
 cf push `my_app` -c null
 ```
 
-
 DeployHub must be able to access your script in order for the _Custom Action_ to work.  Deploying the _Application_ that contains the _Component_ causes the _Action_ to be called, which runs the script and starts the Cloud Foundry _Application_ named my\_app.
 
 Cloud Foundry is ideal for Blue-Green deployment strategies. In such a scenario, Production is mirrored across two distinct environments - "blue" and "green". End Users point to one of these _Environments_ whilst deployments are made to the other. Once testing is complete on the deployed _Environment_, users are switched over to this _Environment_ and the deployment is performed again to the other _Environment_. This maximizes uptime and minimizes the risks in performing a _Rollback_.
 
 DeployHub supports such a Blue-Green deployment strategy. Both _Environments_ can be targeted individually as part of two separate deployments or you can deploy to both with DeployHub deploying to the second _Environment_ automatically following successful test and switch-over.
 
-
 For more information see:
 
-- [Customizing Actions](/userguide/first-steps/2-define-your-actions/) 
+- [Customizing Actions](/userguide/first-steps/2-define-your-actions/)
 - [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)

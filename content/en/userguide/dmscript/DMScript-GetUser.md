@@ -6,8 +6,6 @@ description: >
   Gets a User object based on a User Name. 
 ---
 
-### Getuser
-
 Note: A call to the Function _me_ returns a _User_ object representing the current logged in user.
 
 _getuser_ takes a User Name and returns the matching _User Object_.

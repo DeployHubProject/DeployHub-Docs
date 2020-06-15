@@ -6,8 +6,6 @@ description: >
   Get the Application object based on Application Name. 
 ---
 
-### getApplication
-
 get_Application_ takes an _Application_ Name and returns the matching _Application Object_.
 
 **Usage:**

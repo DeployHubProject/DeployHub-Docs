@@ -7,7 +7,6 @@ description: >
 ---
 
 
-
 **_break/continue_** can be used to break out of loops or _switch_ statements. _continue_ can be used to force the loop to restart with the next value.
 
 **Example with psloop:**

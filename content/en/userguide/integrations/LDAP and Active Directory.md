@@ -6,7 +6,6 @@ description: >
   Using LDAP and Active Directory for managing Logins.
 ---
 
-## LDAP and Active Directory
 Your DeployHub login can be controlled by accessing _Users_ in an LDAP server instead of DeployHub's database. This is accomplished by creating a Data Source of Type 'ldap' with parameters that will allow it to access an LDAP database and use the information stored there to gain access to DeployHub. It also populates the _Users_ General tab with Real Name and Email, which it gets from the LDAP database.
 
 To support LDAP integration, you must create an LDAP  _Credential_ whose Username value is in the form of a user id (uid) followed by the necessary Ldap domain components (dc), all comma delimited (i.e., uid=mycompany,dc=example,dc=com). The _Credential's_ Password field contains the password for the user in the LDAP directory. For more on creating _Credentials_ see [Create Your Credentials](/userguide/first-steps/2-define-your-credentials/).

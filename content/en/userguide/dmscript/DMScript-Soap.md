@@ -6,9 +6,6 @@ description: >
   Make a call to an external Soap-based API.
 ---
 
-
-### soap
-
 _soap_ is used to make a call to an external soap-based API. It takes two mandatory parameters: the URL to which the message should be sent and string containing the XML message body. There are three optional parameters which allow for the SOAP action to be specified, for cookies to be passed (or received if the cookie parameter is a string) and for a credential object to be passed for basic authentication.
 
 **Usage:**

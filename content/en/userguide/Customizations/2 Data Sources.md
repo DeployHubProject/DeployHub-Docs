@@ -99,6 +99,4 @@ The following details are common to all _Data Sources_ types:
 |**Status Encrypted**| Select the box to indicate the Status should be hidden in the database. |
 |**Status Override**| Select the box if the Status can be changed. |
 
-{{% include "/userguide/integrations/4 LDAP and Active Directory.md/" %}}
-
-{{% include "userguide/reusable/AuditTrail.md" %}}
+{{% include "/userguide/integrations/LDAP and Active Directory.md/" %}}

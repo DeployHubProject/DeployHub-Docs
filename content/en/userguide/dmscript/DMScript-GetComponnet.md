@@ -6,7 +6,6 @@ description: >
   Get a Component object based on the Component Name. 
 ---
 
-### getComponent
 
 get_Component_ takes an _Component_ Name and returns the matching _Component Object_.
 

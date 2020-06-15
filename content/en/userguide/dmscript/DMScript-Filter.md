@@ -6,8 +6,6 @@ description: >
   Get a subset of an array. 
 ---
 
-### Filter
-
 _filter_ operates on an array. It returns a new array which contains a subset of the array containing just those entries whose keys match the given regular expression.
 
 **Usage:**

@@ -5,7 +5,7 @@ weight: 67
 description: >
   Get a Credential object based on the Credential Name. 
 ---
-### getcredential
+
 
 getcredential takes an Credential Name and returns the matching _Credential Object_.
 

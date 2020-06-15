@@ -7,8 +7,6 @@ description: >
 ---
 
 
-### to\_json
-
 to\_json operates on an Array. It returns a String representing the contents of the array in JSON notation.
 
 **Usage:**
