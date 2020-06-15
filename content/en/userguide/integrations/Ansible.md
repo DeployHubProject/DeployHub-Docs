@@ -1,11 +1,10 @@
 ---
-title: "Ansible"
-linkTitle: "Ansible"
+title: "Ansible Galaxy Roles"
+linkTitle: "Ansible Galaxy Roles"
 weight: 50
 description: >
   Using Ansible to execute deployments as an Action.
 ---
-## Ansible
 
 Ansible is an agentless Infrastructure configuration management solution that automates cloud provisioning and infrastructure level deployments. Ansible consists of Galaxy Roles, which are reusable playbooks that perform different infrastructure operations. Galaxy Roles contain Tasks, which are the individual commands executed, performing operations such as installing a package or creating a directory. Playbooks are written in programming language called YAML, while Modules (a more complicated type of Task) can be written in any language.
 
@@ -17,7 +16,7 @@ In Ansible is an Inventory which lists endpoints that Ansible will execute Modul
 
 ## Adding Components Containing Ansible Modules to an Application
 
-- Go to the _Components_ menu which will take you to the _Component_ List View. 
+- Go to the _Components_ menu which will take you to the _Component_ List View.
 - Click on the plus sign for the Infrastructure Domain within the tree structure. This contains all Categories containing _Components_ that have a _Custom Actions_, each of which contains an Ansible Module. After selecting the _Application_ tab and opening a _Domain_, click on the _Assigned Components_ tab in order to see the workflow area containing the _Components_ for a given _Application_. On the far right are all available _Component_ Categories, each of which contains one or more _Components_. Click on the plus sign for a Category in order to see all _Components_ listed within it. Drag and drop the desired _Component_ onto the workflow area and make sure it connects to either the Start icon or to another _Component_.
 
 Right click on the _Component_ and select the 'Go to this Component' item in the resulting drop-down list. The General tab shows the _Custom Action_ field in the _Component_. This allows an Ansible Module to be run from anywhere within a DeployHub deployment. Notice that the Action is given the same name as the _Component_, with a suffix of '_action'.

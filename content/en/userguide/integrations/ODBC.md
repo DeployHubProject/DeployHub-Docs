@@ -5,7 +5,6 @@ weight: 71
 description: >
   Using LDAP and Active Directory for managing Logins.
 ---
-## ODBC Data Source Properties
 
 You can use and ODBC connection to retrieve data from an external database. This is done by defining an ODBC _Data Source_ and calling it from any _Action_ written in [DMScript](/userguide/dmscript/).
 

@@ -62,4 +62,4 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 | **Server URL Encrypted** | Server URL is hidden in the DeployHub database. |
 | **Server URL Override** | Server URL can be changed.|
 
-For more information on the Jenkins Integration see [Jenkins](/userguide/integrations/4-jenkins/)
+For more information on the Jenkins Integration see [Jenkins](/userguide/integrations/jenkins/)
