@@ -8,4 +8,4 @@
 | branch | string | Is the name of the branch on which this application is located (if an application version. If no branch is specified, this string is zero length. | No |
 | components |  _Component_  | See Component Object.  | No |
 | requests |  request | See Request Object. | No |
-| application_versions | Arry of Related_Application Versions_| See_Application_ Object. | No |
+| application_versions | Array of Related_Application Versions_| See_Application_ Object. | No |

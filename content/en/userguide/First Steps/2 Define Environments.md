@@ -7,9 +7,9 @@ description: >
 ---
 ## Intro to Environments
 
-_Environments_ represent a collection of _Endpoints_ where a deployment occurs. Many _Enviornments_ are assigned to your _Application_  and represent your Pipeline states (Dev, Test, Production).  _Environments_ can be mapped to your Continuous Delivery Pipeline for the deployment step.
+_Environments_ represent a collection of _Endpoints_ where a deployment occurs. Many _Environments_ are assigned to your _Application_  and represent your Pipeline states (Dev, Test, Production).  _Environments_ can be mapped to your Continuous Delivery Pipeline for the deployment step.
 
-Note: To define your _Enviornment_ you will need to have first defined [_Endpoints_](/userguide/first-steps/2-define-endpoints/) that will be assigned to your _Environment._
+Note: To define your _Environment_ you will need to have first defined [_Endpoints_](/userguide/first-steps/2-define-endpoints/) that will be assigned to your _Environment._
 
 ### Environments and Domains
 

@@ -8,7 +8,7 @@ description: >
 
 ## The _Component_ List View for Adding or Deleting
 
-Manage your _Components Base Version_ and _Component Versions_ using the Component List View accessible from the left hand _Component_ menu option.  You will be provided a list of all _Components_ organized by version and _Domanin_. If you have not defined any _Components_ to DeployHub, you will see only the sample data.
+Manage your _Components Base Version_ and _Component Versions_ using the Component List View accessible from the left hand _Component_ menu option.  You will be provided a list of all _Components_ organized by version and _Domain_. If you have not defined any _Components_ to DeployHub, you will see only the sample data.
 
 You can also use the Filter bar, represented by a funnel icon, to reorder your _Component_ List View.  You can filter on:
 
@@ -25,7 +25,7 @@ The _Component_ List View has the following Tabs.
 | Tab | Description |
 | --- | --- |
 |Refresh | Refreshes the browser. |
-| +Add | Allows you to Add a new _Componnet Base Version_. |
+| +Add | Allows you to Add a new _Component Base Version_. |
 | New Component Version | Creates a copy of the selected _Component_ in the list. |
 | Delete | Deletes the selected item. |
 | List | Takes you back to the List View if you have been in the Map View. |
@@ -45,7 +45,7 @@ Based on what you selected, you will be provided with the appropriate fields to 
 
 ## Viewing and Editing _Components_ with the Dashboard
 
-_Components_ are defined as Container, File or Database.  These three definition types will address all of the different types of _Components_ you may need from microservices to binares and DB updates. The Dashboard view displays all information related to a specific _Component Base Version_ or _Component Version_. Depending on what type of _Component_ you are defining, you will be presented with different data definition fields.
+_Components_ are defined as Container, File or Database.  These three definition types will address all of the different types of _Components_ you may need from microservices to binaries and DB updates. The Dashboard view displays all information related to a specific _Component Base Version_ or _Component Version_. Depending on what type of _Component_ you are defining, you will be presented with different data definition fields.
 
 The following fields are common to all _Components_:
 
@@ -61,7 +61,7 @@ The following fields are common to all _Components_:
 | _**Endpoint Type**_ | Used to map the _Component_ to _Endpoints_ within an _Environment_ at deployment.  This allows DeployHub to map the _Component_ to the correct _Endpoint_ when moving across different environments. For example a database update is mapped to an _Endpoint_ with a database, or an .EAR file is mapped to an _Endpoint_ with WebSphere Server.
 | _**Change Request Data Source**_ | This _Data Source_ assigned to the _Component_ for tracking Change Request. |
 | _**Category**_ | Categories allow the selection of _Components_ in an orderly manner. Assigning a Category to a _Component_ allows lists of Categories to be used throughout DeployHub. You can add a new Category by simply typing it into the entry field, or use an existing Category displayed in the drop down. |
-| _**Always Deploy**_ | The _Component_ is deployed to the associated _Endpoint(s)_ in the _Target Environment_ regardless if the _Component_ is already present on the _Endpoint(s)._ This is useful for monoloithc applications where you want to copy over a binary for example.|
+| _**Always Deploy**_ | The _Component_ is deployed to the associated _Endpoint(s)_ in the _Target Environment_ regardless if the _Component_ is already present on the _Endpoint(s)._ This is useful for monolithic applications where you want to copy over a binary for example.|
 | _**Deploy Sequentially**_ | Normally when a _Component_ in an _Application_ is deployed to several _Endpoints_ in an _Environment_, it is deployed to each _Endpoint_ at the same time (in parallel). The "Deploy Sequentially" option changes this behavior to force the _Component_ to deploy to each _Endpoint_ in turn, sequentially. |
 | _**Pre-Action**_ | An _Action_ that is to be run prior to the deployment of this _Component_. This can be used to perform prerequisite requirements, such as creating directories, creating files from scratch, or moving files between directories. It is executed **after** all of the files have been pulled from the _Repositories_ referenced in the _Component Items_ associated with the _Component_ but **before** they are deployed to _Endpoints_ in the target _Environment_. |
 | _**Post-Action**_ | An _Action_ that is to be run before the deployment of this _Component_. This can be used to execute actions on the target _Endpoint_ after the _Component_ has been deployed. |
@@ -82,11 +82,11 @@ Docker component items have the following additional attributes, none of which a
 | **Helm Chart Namespace** | The sub-division of the Kubernetes cluster where your _Component_ Container should run. |
 | **Operator**| The RedHat Operator used to deploy your _Component_ container.|
 |**Build Date**| The timestamp from when the last build job was run.|
-|**Docker Regsitry**| The Docker registry where the Container is stored. |
+|**Docker Registry**| The Docker registry where the Container is stored. |
 | **Docker Digest** | The SHA number of the Docker image. |
 |**Docker Tag**| The tag that was assigned to the Docker image. ||
 
-### Appliction Specific Data Definition
+### Application Specific Data Definition
 
 |**Field** | **Description**|
 | --- | --- |
@@ -108,7 +108,7 @@ When you choose 'Create New Database Component', a window will appear titled "Ed
 
 ### _Component_ Dependency Map
 
-The Dependency Map provides a graphical view of all _Applicaitons_ that is consuming this _Component_. This will remain empty until your  _Component_ is used by an an _Application_.  
+The Dependency Map provides a graphical view of all _Applications_ that is consuming this _Component_. This will remain empty until your  _Component_ is used by an an _Application_.  
 
 ### _Endpoints_
 

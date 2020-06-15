@@ -82,7 +82,7 @@ The following details are common to all _Data Sources_ types:
 
 | Field | Description |
 | --- | --- |
-|**Component** | The name of the [Bugzila Component](https://bugzilla.readthedocs.io/en/latest/api/core/v1/bug.html#search-bugs). |
+|**Component** | The name of the [Bugzilla Component](https://bugzilla.readthedocs.io/en/latest/api/core/v1/bug.html#search-bugs). |
 |**Component Encrypted** | Select the box to indicate the Bugzilla Component should be hidden in the database.|
 |**Component Override** |Select the box if the Bugzilla Component can be changed.|
 |**Poll Interval** | The time frequency of how often DeployHub should look for Bugzilla issues in seconds, i.e. 60.  |

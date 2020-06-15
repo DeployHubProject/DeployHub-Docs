@@ -3,7 +3,7 @@ title: "Credential APIs"
 linkTitle: "Credentials APIs"
 weight: 16
 description: >
-  Create a new Crendential.
+  Create a new Credential.
 ---
 
 ## Create a _Credential_

@@ -3,7 +3,7 @@ title: "Intro to Applications"
 linkTitle: "Intro Applications"
 weight: 4
 description: >
-  Intro to Applicaitons
+  Intro to Applications
 ---
 
 
@@ -17,10 +17,7 @@ If you are an application developer, this will be where you do most of your work
 
 An _Application_ and all objects within it will be deployed to one or more _Endpoints_ (each of which represents a container, physical or virtual server in the enterprise) in an _Environment_. DeployHub uses a back end versioning engine to track all _Application Version_ configurations. For this reason, each new version will be given a new version number.
 
-```
-For instance, your Application Base Version may be called MyApp;1,
-subsequent versions would be automatically named MyApp;2, MyApp;3, etc.
-```
+For instance, your Application Base Version may be called MyApp;1, subsequent versions would be automatically named MyApp;2, MyApp;3, etc.
 
 ## Applications and their Components
 

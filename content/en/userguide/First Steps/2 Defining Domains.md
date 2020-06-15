@@ -44,7 +44,7 @@ The detail section of the Dashboard displays the information based on the Sun Bu
 | Created | Auto generated date when the _Domain_ was created.|
 | Modified | Auto generated date when the _Domain_ was modified.|
 | Engine| The hostname of the deployment engine. Defaults to "Deployment Engine." This field can be used to specify another DeployHub Deployment Engine for widely distributed deployments. |
-|Containes Lifecycles| This specifies that the _Domain_ will include a Pipeline model.  Lifecycles are normally used as _Sub-domains_ to the Project _Domain_.  Lifecycle _Domains_ cannot have _Sub-domains_. |
+|Contains Lifecycles| This specifies that the _Domain_ will include a Pipeline model.  Lifecycles are normally used as _Sub-domains_ to the Project _Domain_.  Lifecycle _Domains_ cannot have _Sub-domains_. |
 | Sub-Domains | A list of all _Sub-domains_ assigned to this _Domain_ including all _Life Cycle Domains_.
 
 ### Access
@@ -62,7 +62,7 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 
 ### Tasks in this _Domain_
 
-_Domains_ can have _Tasks_ assigned to manage the _Applications_ contained within. _Tasks_ are most commonly used for _Life Cycle Sub-Domains_ to define a continuous delivery process that can be mapped to your Continuous Delivery soltuion. _Tasks_ can be assigned to any _Domain_ or _Sub-Domain. Task_ execution rights can be assigned to _User Groups_. Only _Users_ who are members of one or more of the assigned _User Group(s)_ can execute the _Task_. **DeployHub Team** has no execution restriction rights over _Tasks_.
+_Domains_ can have _Tasks_ assigned to manage the _Applications_ contained within. _Tasks_ are most commonly used for _Life Cycle Sub-Domains_ to define a continuous delivery process that can be mapped to your Continuous Delivery solution. _Tasks_ can be assigned to any _Domain_ or _Sub-Domain. Task_ execution rights can be assigned to _User Groups_. Only _Users_ who are members of one or more of the assigned _User Group(s)_ can execute the _Task_. **DeployHub Team** has no execution restriction rights over _Tasks_.
 
 _Tasks_ are defined for each _Domain_. By checking the _Available in Sub-Domains_ checkbox then the _Task_ is made available to every _Sub-Domain_ or _Life Cycle Sub-Domain_ below the _Task's Domain_ in the hierarchy.
 
@@ -75,7 +75,7 @@ There are 7 different types of _Tasks_. By default, your _Domain_ is created wit
 |"Deploy Application Version to an Environment"| (Default Task) Deploys an _Application Version_ to an _Environment._ The target _Environment_ is selectable via a drop-down list. |
 | "Request calendar entry for a deployment to an Environment" | For **DeployHub Pro** - Deployments can be scheduled on the calendar via a calendar entry.  If you do not want all _Users_ to have access to the calendar, you can allow them to "Request" that a deployment be added to the calendar schedule. When the "Request calendar entry..." is executed, an entry is placed into the "To Do" list of all the _Users_ who have access to update the calendar.  Once the Task is completed, the "Request Calendar entry..." Task is removed from all of the _User_ "To Do" lists. This Task can have a _Request Notification Template_ defined which can send out a notification to the appropriate _Users_ when it is executed or that it needs to be performed. |
 | Create new Application Version | (Default Task) Makes a new _Application Version_ from either an _Application Base Version_ or a specific _Application Version_, depending on the choice made by the _User_. This Task is also useful for integration into your continuous delivery pipeline to continuously update the _Application Version_ each time a new microservice is pushed to the cluster.  |
-| "Manually trigger an Action to be executed"| (Defualt Tasks) Runs a stand-alone _Action_. It will be available only in the _Domain_ where it is created, unless the 'Available in Sub-Domains' checkbox is selected.|
+| "Manually trigger an Action to be executed"| (Default Tasks) Runs a stand-alone _Action_. It will be available only in the _Domain_ where it is created, unless the 'Available in Sub-Domains' checkbox is selected.|
 
 ### Adding and Editing Tasks in the Lifecycle Domains
 
@@ -118,7 +118,7 @@ Example: A Move _Task_ is linked to a Request _Task_. A _User_ in the Test _Grou
 
 NOTE: Another way to accomplish this is to link an Approval Task to the Request Task. The User in the User Group would send the Request Task, and a User in the Admin Group would be notified. They would then run the Approve Task to allow the User in the Test Group to run the Move Task.
 
-NOTE: **DeployHub Team** has only two Groups, Administrators and Users. **Deployhub Pro** can have unlimited User Groups.
+NOTE: **DeployHub Team** has only two Groups, Administrators and Users. **DeployHub Pro** can have unlimited User Groups.
 
 ### Additional Parameters
 

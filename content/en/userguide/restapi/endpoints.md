@@ -42,7 +42,7 @@ This call returns a JSON object representing the specified _Endpoint_.
 
 | Name | Located in | Description | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
-| identifier | path | Is the identifier of the _Endpoint_. Either its name, its qualified name with its parent _Domains_ included in dot notation (i.e. GLOBLAL.Product) or its internal ID. | Yes | string |
+| identifier | path | Is the identifier of the _Endpoint_. Either its name, its qualified name with its parent _Domains_ included in dot notation (i.e. GLOBAL.Product) or its internal ID. | Yes | string |
 
 {{% include "userguide/reusable/Model Endpoint Result.md" %}}
 {{% include "userguide/reusable/Model Endpoints.md" %}}
