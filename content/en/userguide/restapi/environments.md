@@ -1,58 +1,52 @@
 ---
 title: "Environments"
 linkTitle: "Environments"
-weight: 30
+weight: 26
 description: >
   Get a list of Environments.
 ---
 
-### /dmadminweb/API/environments
 
-#### GET
 
-##### Summary
+## List Environments
 
-List Environments
+**Description**
 
-##### Description
+This call returns an array of JSON objects representing each _Environment_ to
+which the logged-in _User_ has access.
 
-This call returns an array of JSON objects representing each environment to
-which the logged-in user has access.
+If the all parameter is not specified then only the _Environments_ associated with the _User's_ home _Domain_ are listed. If the all parameter is specified and is set to "y", for yes, then the result includes the _Environments_ included in any accessible _Sub-domains_.
 
-If the all parameter is not specified then only the environments associated with the user's home domain are listed. If the all parameter is specified and is set to "y" then the result includes the environments included in any accessible sub- domains.
+**REST Api Endpoint**
 
-##### Parameters
+| HTTP Verb | URL |
+| ---- | ----------- |
+| GET | /dmadminweb/API/environments |
+
+**Parameters**
 
 | Name | Located in | Description | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
 | all | query | y or n | No | string |
 
-##### Responses
+{{% include "userguide/reusable/Model Environments Result.md" %}}
+{{% include "userguide/reusable/Model Environment.md" %}}
 
-| Code | Description | Schema |
-| ---- | ----------- | ------ |
-| 200 | Success or failure.  Check success field for status. | [environments_result](/restapi/models/#environments_result) |
+## Retrieve specific _Environment_
 
-### /dmadminweb/API/environment/{identifier}
+This call returns a JSON object representing the specified _Environment_.
 
-#### GET
+**REST Api Endpoint**
 
-##### Summary
+| HTTP Verb | URL |
+| ---- | ----------- |
+| GET | /dmadminweb/API/environment/{identifier}
 
-Retrieve specific environment
-
-##### Description
-
-This call returns a JSON object representing the specified environment.
-
-##### Parameters
+**Parameters**
 
 | Name | Located in | Description | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
-| identifier | path | Is the identifier of the environment. Either its name, its qualified name i.e. with its parent domains included in dot notations or its internal ID. | Yes | string |
+| identifier | path | Is the identifier of the _Environment_. Either its name, its qualified name with its parent _Domains_ included in dot notations (i.e. GLOBAL.Product) or its internal ID. | Yes | string |
 
-##### Responses
-
-| Code | Description | Schema |
-| ---- | ----------- | ------ |
-| 200 | Success or failure.  Check success field for status. | [environment_result](/restapi/models/#environment_result) |
+{{% include "userguide/reusable/Model Success.md" %}}
+{{% include "userguide/reusable/Model Environments Result.md" %}}

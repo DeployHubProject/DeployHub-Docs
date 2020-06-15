@@ -1,4 +1,4 @@
-**_Endpoint_ Object for APIs **
+**_Endpoint_ Object**
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |

@@ -1,97 +1,75 @@
 ---
-title: "Credentials"
-linkTitle: "Credentials"
-weight: 70
+title: "Credential APIs"
+linkTitle: "Credentials APIs"
+weight: 16
 description: >
   Create a new Crendential.
 ---
 
-### /dmadminweb/API/new/credential/{cred_id}
+## Create a _Credential_
+This call creates a new credential. All of the attributes of the new _Credential_ are set through parameters to the API. If "_Domain_" is not specified then the _Environment_ is created in the logged in _User's_ home _Domain_.
 
-#### GET
+**REST Api Endpoint**
 
-##### Summary
+| HTTP Verb | URL |
+| ---- | ----------- |
+| GET | /dmadminweb/API/new/credential/{cred_id} |
 
-Create a New Credential
 
-##### Description
-
-This call creates a new credential. All of the attributes of the new credential are set through parameters to the API.
-
-If "domain" is not specified then the environment is created in the logged in user's home domain.
-
-##### Parameters
+**Parameters**
 
 | Name | Located in | Description | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
-| cred_id | path | Is the name of the credential to be created. | Yes | string |
-| domain | query | Is the identifier of the domain in which the credential is to be created. Either its name, its qualified name (i.e. with its parent domain(s) included in dot notation) or its internal ID. | Yes | string |
-| summary | query | Is the summary text for the credential. | No | string |
-| kind | query | The type of credential to create. Must be one of -      encrypted The username and password are held encrypted in the database.     vars The username and password contain variable names to be expanded when the credential is used. Held unencrypted in the database.     ppk Public/Private Key file.     dfo DFO filename for use with Harvest.  | No | string |
-| username | query | Required for credentials of kind encrypted, vars or ppk. The username to be stored against the credential. | No | string |
-| password | query | Required for credentials of kind encrypted and vars. The password to be stored against the credential. | No | string |
-| keyfile | query | Required for credentials of kind ppk. The path of the private keyfile to be used by the credential. | No | string |
-| filename | query | Required for credentials of kind dfo. The path of the Harvest DFO file containing the encrypted username/password. | No | string |
+| cred_id | path | Is the name of the _Credential_ to be created. | Yes | string |
+| domain | query | Is the identifier of the _Domain_ in which the _Credential_ is to be created. Either its name, its qualified name with its parent _Domains_ included in dot notation (i.e. GLOBAL.Product) or its internal ID. | Yes | string |
+| summary | query | Is the summary text for the _Credential_. | No | string |
+| kind | query | The type of _Credential_ to create. Must be one of -<li>encrypted - The username and password are held encrypted in the database.</li><li>vars - The username and password contain variable names to be expanded when the _Credential_ is used. Held un-encrypted in the database.</li><li>ppk - Public/Private Key file.</li><li>dfo- DFO filename for use with CA Harvest.</li>| No | string |
+| username | query | Required for _Credential_ of kind encrypted, vars or ppk. The username to be stored against the _Credential_. | No | string |
+| password | query | Required for _Credential_ of kind encrypted and vars. The password to be stored against the credential. | No | string |
+| keyfile | query | Required for _Credential_ of kind ppk. The path of the private keyfile to be used by the _Credential_. | No | string |
+| filename | query | Required for _Credential_ of kind dfo. The path of the Harvest DFO file containing the encrypted username/password. | No | string |
 
-##### Responses
+{{% include "userguide/reusable/Model Success.md" %}}
 
-| Code | Description | Schema |
-| ---- | ----------- | ------ |
-| 200 | Success or failure.  Check success field for status. | [success](/restapi/models/#success) |
+## Modify a _Credential_
 
-### /dmadminweb/API/mod/credential/{cred_id}
+This call modifies an existing _Credential_. The attributes of the _Credential_ are modified through parameters to the API.
 
-#### GET
+**REST Api Endpoint**
 
-##### Summary
+| HTTP Verb | URL |
+| ---- | ----------- |
+| GET | /dmadminweb/API/new/credential/{cred_id} |
 
-Modify a Credential
-
-##### Description
-
-This call modifies an existing credential. The attributes of the credential are modified through parameters to the API.
-
-It is not possible to modify the credential's kind (encrypted, vars, dfo or ppk) once it has been created. If you need to change the kind of the credential you must delete it and recreate it.
-
-##### Parameters
+**Parameters**
 
 | Name | Located in | Description | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
-| cred_id | path | Is the ID of the credential to be modified. Either its name, its qualified name (i.e. with its parent domain(s) included in dot notation) or its internal ID. | Yes | string |
-| domain | query | Is the identifier of the domain in which the credential is to be created. Either its name, its qualified name (i.e. with its parent domain(s) included in dot notation) or its internal ID. | Yes | string |
-| summary | query | Is the summary text for the credential. | No | string |
-| kind | query | The type of credential to create. Must be one of -      encrypted The username and password are held encrypted in the database.     vars The username and password contain variable names to be expanded when the credential is used. Held unencrypted in the database.     ppk Public/Private Key file.     dfo DFO filename for use with Harvest.  | No | string |
-| username | query | Required for credentials of kind encrypted, vars or ppk. The username to be stored against the credential. | No | string |
-| password | query | Required for credentials of kind encrypted and vars. The password to be stored against the credential. | No | string |
-| keyfile | query | Required for credentials of kind ppk. The path of the private keyfile to be used by the credential. | No | string |
-| filename | query | Required for credentials of kind dfo. The path of the Harvest DFO file containing the encrypted username/password. | No | string |
+| cred_id | path | Is the ID of the _Credential_ to be modified. Either its name, its qualified name (i.e. with its parent domain(s) included in dot notation) or its internal ID. | Yes | string |
+| domain | query | Is the identifier of the _Domain_ in which the _Credential_ is to be created. Either its name, its qualified name with its parent _Domains_ included in dot notation (i.e. GLOBAL.Products) or its internal ID. | Yes | string |
+| summary | query | Is the summary text for the _Credential_. | No | string |
+| kind | query | The type of _Credential_ to create. Must be one of -<li>encrypted - The username and password are held encrypted in the database.</li><li>vars - The username and password contain variable names to be expanded when the _Credential_ is used. Held un-encrypted in the database.</li><li>ppk - Public/Private Key file.</li><li>dfo- DFO filename for use with CA Harvest.</li>| No | string |
+| username | query | Required for _Credential_ of kind encrypted, vars or ppk. The username to be stored against the credential. | No | string |
+| password | query | Required for _Credential_ of kind encrypted and vars. The password to be stored against the credential. | No | string |
+| keyfile | query | Required for _Credential_ of kind ppk. The path of the private keyfile to be used by the credential. | No | string |
+| filename | query | Required for _Credential_ of kind dfo. The path of the Harvest DFO file containing the encrypted username/password. | No | string |
 
-##### Responses
+{{% include "userguide/reusable/Model Success.md" %}}
 
-| Code | Description | Schema |
-| ---- | ----------- | ------ |
-| 200 | Success or failure.  Check success field for status. | [success](/restapi/models/#success) |
+## Deleting a Credential
 
-### /dmadminweb/API/del/credential/{cred_id}
+This call deletes a _Credential_.
 
-#### GET
+**REST Api Endpoint**
 
-##### Summary
+| HTTP Verb | URL |
+| ---- | ----------- |
+| GET | /dmadminweb/API/del/credential/{cred_id} |
 
-Deleting a Credential
-
-##### Description
-
-This call deletes a credential.
-
-##### Parameters
+**Parameters**
 
 | Name | Located in | Description | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
-| cred_id | path | Is the ID of the credential to be deleted. Either its name, its qualified name (i.e. with its parent domain(s) included in dot notation) or its internal ID. | Yes | string |
+| cred_id | path | Is the ID of the _Credential_ to be deleted. Either its name, its qualified name with its parent _Domain_ included in dot notation (i.e. GLOBAL.Products) or its internal ID. | Yes | string |
 
-##### Responses
-
-| Code | Description | Schema |
-| ---- | ----------- | ------ |
-| 200 | Success or failure.  Check success field for status. | [success](/restapi/models/#success) |
+{{% include "userguide/reusable/Model Success.md" %}}

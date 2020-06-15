@@ -1,31 +1,24 @@
 ---
 title: "Deployment Log"
 linkTitle: "Deployment Log"
-weight: 60
+weight: 22
 description: >
   Retrieve a deployment log.
 ---
 
-### /dmadminweb/API/log/{lognumber}
+Retrieve deployment log. This call returns a JSON object representing the specified deployment log.
 
-#### GET
+**REST Api Endpoint**
 
-##### Summary
+| HTTP Verb | URL |
+| ---- | ----------- |
+| GET | /dmadminweb/API/log/{lognumber} |
 
-Retrieve deployment log
-
-##### Description
-
-This call returns a JSON object representing the specified deployment log.
-
-##### Parameters
+**Parameters**
 
 | Name | Located in | Description | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
-| lognumber | path | Is the deployment ID being retrieved. Note if the deployment log relates to an application outside of your domain hierarchy or to an application to which you do not have read access then you will receive an error. | Yes | integer |
+| lognumber | path | Is the deployment ID being retrieved. Note if the deployment log relates to an _Application_ outside of your _Domain_ access or to an _Application_ to which you do not have read access, then you will receive an error. | Yes | integer |
 
-##### Responses
-
-| Code | Description | Schema |
-| ---- | ----------- | ------ |
-| 200 | Success or failure.  Check success field for status. | [log_result](/restapi/models/#log_result) |
+{{% include "userguide/reusable/Model Deployment Log Result.md" %}}
+{{% include "userguide/reusable/Model Deployment Log.md" %}}

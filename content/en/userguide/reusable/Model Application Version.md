@@ -1,4 +1,4 @@
-**Responses for _Application Version_**
+**_Application Version_ Object**
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |

@@ -1,4 +1,4 @@
-**Responses for Deployment Result**
+**Deployment Result**
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |

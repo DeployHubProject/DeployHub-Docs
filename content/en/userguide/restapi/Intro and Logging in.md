@@ -57,7 +57,7 @@ To use the ID, just place it where you would normally place the object's name. T
     curl --data "all=Y" --cookie c:\temp\session.txt http://mac:8080/dmadminweb/API/servers
 ~~~
 
-##Login
+## Login
 
 When issuing calls to the API, the client application must either first issue a "login" call, specifying the username and password or must specify the username and password in each individual call to the API.
 
