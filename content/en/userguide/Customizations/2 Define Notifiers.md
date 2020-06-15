@@ -1,92 +1,108 @@
 ---
-title: "Notifiers"
-linkTitle: "Notifiers"
+title: "Using Notifiers for Messaging"
+linkTitle: "Using Notifiers for Messaging"
 weight: 28
 description: >
-  Notify Users on Success and Fail.
+  Using _Notifiers_ for communicating deployment results.
 ---
 
-## Notfiers
+## Intro to _Notifiers_
 
-The _Notifier_ tab is under the _Flows_ menu and sends notifications to various recipients after a successful or failed deployment attempt. It also can specify when deployed files have been changed, a _Request__Task_ used, or that an _Endpoint_ is down. A _Notifier_ can be used as part of your continuous _Delivery Pipeline_ to automatically update users and contains all technical information necessary. DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack, and HipChat for this purpose.
+ _Notifiers_ send messages to various recipients and can be used as follows: 
+- After a successful or failed deployment.
+- When a _Request_ Task has ben used against an _Application_.
+- When an _Endpoint_ is unavailable.
+- Used As part of your continuous _Delivery Pipeline_ to automatically update users.
 
-Individual notifications are created through another DeployHub object known as a _Notify Template_. A _Notifier_ contains one or more of these. Each contains the subject and body of the actual notification, and if via email, a list of recipients. Recipients can be members of one or more _Groups_ as well as the owners of the _Application_, the owner of the _Environment_, and/or the owners of its _Servers_.
+DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack, and HipChat for this purpose.
 
-Using these two objects, _Notifiers_ and _Notify __Templates_, notifications can be sent whenever a deployment to an _Environment_ fails or succeeds, whenever a _Request__ Task_ is executed, or the state of an _End__Point_ changes, using a variety of email or messaging systems, with individually tailored notifications containing all information needed to inform all relevant teams.
+## _Notifiers_ and _Notifier Templates_
+_Notifiers_ are associated to a Template. The Template is standard message that needs to be sent when the _Notifier_ is called.  Individual notifications are created through the _Notify Template_. A _Notifier_ contains one or more of these. Each contains the subject and body of the actual notification, and if via email, a list of recipients. Recipients can be members of one or more _Groups_ as well as the owners of the _Application_, the owner of the _Environment_, and/or the owners of its _Servers_.
 
-NOTE: All Users can be assigned email addresses for email type notifications. See the chapter on Users and Groups.
+For more information on _Notifier Templates_ see [Using Notifier Templates](/userguide/customizations/2-notifier-templates/).
 
-In order to create a _Notifier_, go to the _Flows_ menu. Select the _Notifier_ tab, and right click on any _Domain_. Select "New Notifier in this Domain". This causes the Notifier Edit dialog to appear. To the right of the tree structure are several tabs which allow the _User_ to modify _Notifier_s. These are listed below, along with the fields contained in each tab, and an explanation for the use and functions of each:
+Using these two objects, _Notifiers_ and _Notifier Templates_, notifications can be sent whenever a deployment to an _Environment_ fails or succeeds, whenever a _Request__ Task_ is executed, or the state of an _End__Point_ changes, using a variety of email or messaging systems, with individually tailored notifications containing all information needed to inform all relevant teams.
 
-## Editing and Deleting a Notifier
+## Using the _Notifiers_ List View for Adding or Deleting
 
-To the right of the tree structure are several tabs which allow the _User_ to modify _Notifier_s. The General tab shows a summary of the _Notifier's_ configuration. You can edit information in the _Notifier's_ General tab by clicking on the pencil icon in the upper right-hand corner of the window. You can also delete a _Notifier_ by right clicking on the _Notifier_ in the tree structure and selecting the 'Delete' option.
+You will find _Notifiers_ under the Setup menu.  Selecting _Notifiers_ will take you to a list of all _Notifiers_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Notifiers_ List View.  You can reorder the list view on _Notifiers_ and _Domains_
 
-## Properties Tab
+_Notifiers_ are defined to a _Domain_ and will be displayed based on your access to the _Domain_ to which it belongs.
+
+The _Notifiers_ List View has the following Tabs.
+
+| Tab | Description |
+| --- | --- |
+|Refresh | Refreshes the browser. |
+| Add | Allows you to Add a new _Notifier_ of a particular type. |
+| Delete | Deletes the selected item. |
+
+From the _Notifier_ List View, double click on the _Notifier_ which you would like to view to see all Details.  
+
+## Using the _Notifiers_ Dashboard for Viewing and Editing
+
+The Dashboard view displays all information related to a specific _Notifier_.
+
+### Common Details of all _Notifiers_
+
+The following details are common to all _Notifiers_ types:
 
 | Field | Description |
 | --- | --- |
-| _**Name**_ | Available Options:<ul style="list-style-type: none;"><li> _From_: The email address of the sender, typically a shared address accessible to users who deploy _Releases_ to _Environments_.</li><li> _HTML_: Sends emails in HTML format.</li><li> _SSL_: Uses Secure Sockets Layer for sending email.</li><li> _Mailserver_: The name of the email server, i.e., smtp.mycompanyserver.com.</li><li> _Mailport_: The port that receives email on the mail server. Typically 26, but it could be different.</li><li> _Password_: The password for the mail server.</li><li> _Username_: The user name for the mail server.</li><li> _Logfile_: Location of the logfile.</li><br><li>If the Type field has been set to 'txtlocal', then only 'from', 'password', and 'username' appear in the Name field:</li><li><li>Available options for HipChat:</li><ul style="list-style-type: none;"><li> _webhook_: The url for the group chat, topic chat, or chat room.</li><li> _HTML_: Sends messages in HTML format.</li><li> _logfile_: Location of the logfile on the server that is running DeployHub.</li></ul></li><br><li>Available options for Slack:</li><ul style="list-style-type: none;"><li> _webhook_: The url for a Slack Workspace.</li><li> _channel_: A particular channel within a Workspace. These can be public, private, or shared.</li><li> _logfile_: Location of the logfile on the server that is running DeployHub.</li></ul></ul>
- |
- | _**Value**_ | The actual value for the property that was selected from the Name field. |
-| _**Encrypted**_ | Checkbox that indicates that the value is to be encrypted in the DeployHub database. |
-| _**Override**_ | Checkbox that indicates the property can be changed. This is used for 'scripted' notifications where the action editor includes a 'notify' action. This allows the notify action to override the value, for example, of the username or hostname of the _Notifier_. |
+| **Full Domain Name** | The fully qualified name of the _Domain_ to which the _Notifier_ was defined. |
+| **Name** | The Name of the _Notifier_. |
+| **Type** | The _Notifier_ Type chosen when you performed the Add. |
+| **Owner Type** | User or Group. |
+| **Owner** | Name of the Owner. |
+| **Summary** | A description of the _Notifier_.|
+| **Created** | Auto generated date when the _Notifier_ was added.|
+| **Modified**| Auto generated date when the _Notifier_ was updated.|
+| **Credential**| The _Credential_ used to access the _Notifier_ if required. |
 
-## Access tab
+### Access
 
-The Access tab allows you to configure how _Users_ within designated _Groups_ will Access the _Notifier_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list on the far right into the desired Access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Notifier_ in the following ways:
+The Access Section allows _Users_ within designated _Groups_ to update the _Notifier_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Notifier_ in the following ways:
 
 | Access | Description |
 | --- | --- |
-| _**View**_ | Allows _Users_ to see the _Notifier_. If the _User_ does not belong to a _Group_ in the View Access list, the _Notifier_ will not appear in the tree structure. |
-| _**Change**_ | Allows _Users_ to changes the _Notifier_'s characteristics i.e. Name, Summary, etc. |
-| _**Send**_ | Allows _Users_ to send an email. |
+| _**View**_ | Allows _Users_ to see the _Notifier_. If the _User_ does not belong to a _Group_ in the View Access list, the _Notifier_ will not appear in the List View. |
+| _**Change**_ | This allows a _User_ who belongs to any _User Group_ in the list to change the attributes of the _Notifier_. |
+| _**Send**_ | Allows _Users_ to send an email.. |
 
-NOTE: DeployHub Team has only two Groups, Administrators and Users. If you need more granularity in Groups, you will need to upgrade to DeployHub Pro.
+NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
 
-## General Tab
+## SMTP Email Details
+| Field | Description |
+| --- | --- |
+|**HTML**| If 'Yes,' will send email in HTML format.|
+|**HTML Override** |If checked will indicate the value can be overriden. This is used for 'scripted' notifications where the action editor includes a 'notify' action. This allows the notify action to override the value, for example, of the username or hostname of the _Notifier_.|
+|**SSL**|Uses Secure Sockets Layer for sending email.|
+|**SSL Override**| The SSL can be changed.|
+|**From**|The email address of the sender. Typically, this is a shared address accessible to users who push deployments. |
+|**From  Encrypted**| The From name can be hidden in the DeployHub database. |
+|**From  Override**| The From name can be changed. |
+|**Logfile**| The location of the log results between DeployHub and the Mail Server.|
+|**Logfile Encrypted**| The Logfile can be hidden in the DeployHub database. |
+|**Logfile Override**| The Logfile location can be changed. |
+|**Mailport**| The port that receives email on the mail server. Typically 26, but it could be different.|
+|**Mailport Encrypted**| The Mailport can be hidden in the DeployHub database. |
+|**Mailport Override**| The Mailport can be changed. |
 
-The General tab contains fields with basic information for the selected _Notifier_. Information can be changed by clicking on the edit pencil in the upper right-hand corner.
+## SMS Details
 
 | Field | Description |
 | --- | --- |
-| _**Name**_ | The name of the _Notifier._ |
-| _**Type**_ | The type of _Notifier_;Options include: smtpemail, slack, hipchat, and txtlocal |
-| _**Owner**_ | The owner of the _Notifier_, defaults to the name of the _User_ who created it. The default owner is the _User_ who created the _Notifier_. When editing this field, the Owner Type field is available which includes Owner and Group as choices. Selecting one of these causes the Owner field to display either _Users_ or _Groups_ to choose from. |
-| _**Summary**_ | A short text field to describe the _Notifier_ and its use. |
-| _**Created**_ | The date and time the _Notifier_ was created. |
-| _**Modified**_ | The date and time the _Notifier_ was last changed. |
-| _**Credential**_ | The name of the _Credential_ with username/password for accessing the _Notifier.__Credentials_ are created under the End Points menu. These contain the User Names and Passwords for accessing a _Notifier_. |
+|**From**|The address of the sender. Typically, this is a shared address accessible to users who push deployments. |
+|**From  Encrypted**| The From name can be hidden in the DeployHub database. |
+|**From  Override**| The From name can be changed. |
 
-## Editing and Deleting Notify Templates
+{{% include "/userguide/reusable/Hipchat.md/" %}}
 
-Clicking on a _Notifier_ in the tree structure allows the _User_ to select "New Notify Template for this Notifier" in order to create _Templates_ for the selected _Notifier_. This causes the _Template_ dialog to appear. To the right of the tree structure are several tabs which allow the _User_ to modify _Templates_. These are listed below, along with the fields contained in each tab, and an explanation for the use and functions of each:
+{{% include "/userguide/reusable/Slack.md/" %}}
 
-## General Tab - Notifier
 
-| Field | Description |
-| --- | --- |
-| _**Name**_ | The name of the _Template._ |
-| _**Summary**_ | A short text field to describe the _Template_ and its use. |
-| _**Created**_ | The date and time the _Template_ was created. |
-| _**Modified**_ | The date and time the _Template_ was last changed. |
 
-## Recipients Tab
+## Notifier Templates
 
-This tab contains the list of _Users_ that will receive the email created from this _Template_ if it is an email type _Template_. Clicking on the plus (+) sign in the upper right will cause a pop-up window to appear which contains a list of values to choose from. The list will change according to which value is chosen from the Type drop down list:
-
-| List | Description |
-| --- | --- |
-| _**Calculated**_ | One of three choices:${environment.owner}: the _Environment_ that was deployed to.${server.owner}: the _Server_ that was deployed to.${version.owner}: the _Version_ that was deployed. |
-| _**Users**_ | All of the individual _Users_ in the DeployHub installation. |
-| _**Groups**_ | All of the _Groups_ in the DeployHub installation. |
-
-Click on a _User_ or _Group_ from these three lists and click the OK button to place the selected value into the Recipients list. All _Users_ and _Groups_ assigned to the Recipients list will receive the email.
-
-## Body Tab
-
-This contains two fields, Subjectand Body, which will be used as the subject and body of the notification that is sent.
-
-## General Tab - Template
-
-This tab contains the fields for the name of the _Template_ and a Summary for the entry of a short description. Created and Modified fields are also included on this tab.
+You can create standard message templates for you _Notifiers_.  For more information see:
+[Notifier Templates](/userguide/customizations/2-notifier-templates/).

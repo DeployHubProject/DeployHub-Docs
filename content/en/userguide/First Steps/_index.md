@@ -1,9 +1,9 @@
 ---
-title: "First Steps"
-linkTitle: "First Steps"
+title: "Basic Setup"
+linkTitle: "Basic Setup"
 weight: 12
 description: >
-  Your first steps for setting up DeployHub.
+  Setting up DeployHub.
 ---
 
 

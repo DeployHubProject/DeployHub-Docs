@@ -54,7 +54,7 @@ Each scope is named as follows:
 | Global | Contains all Environment variables and any  "additional attributes " set by the user when the invoking task is run. |
 | Environment | Pushed during a deployment or when a manual task is invoked by right-clicking on an Environment. This scope contains the Environment Object itself and any attributes defined for that Environment. |
 | Application | Pushed during a deployment or when a manual task is invoked by right-clicking on an Application. This scope contains the Application Object itself and any attributes defined for that Application. |
-| server | Pushed during a deployment when a particular Endpoint is being targeted. Also available during a psloop (see  "psloop " later in this section). This scope contains the Endpoint Object itself and any attributes defined for that Endpoint. |
+| Endpoint | Pushed during a deployment when a particular Endpoint is being targeted. Also available during a psloop (see  "psloop " later in this section). This scope contains the Endpoint Object itself and any attributes defined for that Endpoint. |
 | Component | Pushed during a deployment when the Application is being deployed. The scope contains the Component Object itself and any attributes defined for that Component. |
 
 _DMScript_ has built-in methods that allow you to iterate through _Endpoint_ and _Component_s and these push each _Component_/server onto the stack at the start of the loop and pop them off again at the end of the loop. This happens automatically for each iteration through the loop. So, for example, you could print the names of all the target _Endpoint_s by writing this:

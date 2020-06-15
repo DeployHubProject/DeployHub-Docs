@@ -109,36 +109,18 @@ Within the _Application_ areas are various colored blocks that represent a deplo
 
 A red line indicates today and assists in identifying where deployments for _Applications_ and _Releases_ are in the schedule. The various blocks within the different areas are colored according to where they stand in the release plan. A gold block represents an overdue deployment into an _Environment_, and this is will always appear to the left of the red line. A slate colored block represents a completed deployment into an _Environment_. A dark blue block represents a deployment scheduled to take place in the future.
 
-## Attributes Tab
+### Access
 
-Values that are stored against a _Release_ can be used to control deployments. The Name field holds the name of the value, and the Value field holds the data, which can be either a numeric or text value. It can also be an array of Name/Value pairs. Clicking on a blank Name field allows the user to enter a new Name, and then tab into and enter its associated Value.
-
-To enter the values for an array, use the following syntax for the Name:
-
-name[subscript]
-
-You can enter multiple names with different subscripts to create an array. Note, the subscript need not be numeric since arrays in DeployHub are associative.
-
-## Access Tab
-
-| Field | Description |
-| --- | --- |
-| Name | The name of the _Release_. |
-| Owner | The owner of the _Release_, this defaults to the _User_ who created it. The default owner is the _User_ who created the _Release_. When editing this field, the Owner Type field is available which includes _Owner_ and _Group_ as choices. Selecting one of these causes the Owner field to display either _Users_ or _Groups_ to choose from. |
-| Summary | A brief description of the _Release_, its use, etc. |
-| Created | The date and time the _Release_ was created. |
-| Modified | The date and time the _Release_ was updated. |
-| Successful Deployment Email Template | The email that will be sent to _Users_ whenever a deployment is successful, which is determined by the _Notify Template_ selected from this list.NOTE: Email templates are objects that belong to _Notifiers_ and can be created by going to the NotifierTab under the Deploy menu, right clicking on a _Notifier_, and selecting "New Notify Template for this Notifier". |
-| Failed Deployment Email Template | The email that will be sent to Users whenever a deployment is unsuccessful, which is determined by the _Notify Template_ selected from this list.NOTE: Email templates are objects that belong to _Notifiers_ and can be created by going to the NotifierTab under the Deploy menu, right clicking on a _Notifier_, and selecting "New Notify Template for this Notifier". |
-
-This tab contains _Groups_ that have access to this _Release_. Click on a _Group_ name in the Available Groups list and drag this into one of the lists to allow the _Users_ in that _Group_ access to View, Change, or Deploy the currently selected _Release_. Access includes:
+The Access Section allows _Users_ within designated _Groups_ to update the _Release_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Release_ in the following ways:
 
 | Access | Description |
 | --- | --- |
-| View | Allows the User to see the Release. If the User does not belong to a Group in the View Access list, the Release will not appear in the tree structure. |
-| Change | Allows the User to change the Release's characteristics i.e. Name, Summary, etc. |
-| Deploy | Allows Users to deploy this Release to Environments. |
+|**View**| Allows the _User_ to see the _Release_. If the _User_ does not belong to a _Group_ in the View Access list, the _Release_ will not appear in the List View. |
+|**Change**| This allows any _User_ that belongs to any _Group_ in this list to make changes to the _Release_. |
+|**Deploy**|Allows _Users_ to deploy this _Release_ to an _Environment_.
 
-## General Tab
+Allows Users to deploy this Release to Environments.
 
-The General tab includes basic descriptive fields, along with _Action_ fields, that determine deployment behavior for _Release Versions_.
+NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
+
+{{% include "userguide/reusable/Attributes.md" %}}

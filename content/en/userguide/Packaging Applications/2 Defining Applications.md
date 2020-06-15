@@ -6,9 +6,9 @@ description: >
   Creating a New Baseline Application.
 ---
 
-# The _Application_ List View for Adding, Editing or Deleteing
+## The _Application_ List View for Adding or Deleting
 
-From the _Application_ menu option to the left of the DeployHub main panel, you will be taken to a list of all _Application Base Versions_ and _Application Versions_ which you have access to. You can also use the Search bar, represented by a funnel icon, to filter _Applications_.  You can filter on:
+From the _Application_ menu option to the left of the DeployHub main panel, you will be taken to a list of all _Application Base Versions_ and _Application Versions_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Application_ List View.  You can filter on:
 
 - Domain
 - Environment
@@ -17,6 +17,8 @@ From the _Application_ menu option to the left of the DeployHub main panel, you 
 - Version
 
 By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
+
+## Additional Tabs from the _Application_ List View
 
 The _Application_ List View has the following Tabs.
 
@@ -30,26 +32,26 @@ The _Application_ List View has the following Tabs.
 | List | Takes you back to the List View if you have been in the Map View. |
 | Map | Displays a global Map of all versions of the _Application_ with _Components_. |
 
-## The _Application_ Dashboard
+From the _Application_ List View, double click on the _Application Base Version_ or _Application Version_ which you would like to view to see all Details.
 
-The Dashboard view displays all information related to a specific _Application Base Version_ or _Application Version_. The Dashboard view as two additional tab options - Package Components and Versions. From the _Application_ List View, double click on the _Application Base Version_ or _Application Version_ which you would like to view to see all Detials.  You can also create a new _Application Base Version_ by selecting the **+Add** option at the top of the List View.  To create a new _Applicaiton Version_, check box which _Applicaiton_ you wish to serve as the parent, and then select **New Application Version**.  Below are the Detials for an _Application_.
+## Viewing and Editing with the _Application_ Dashboard
 
-### _Application_ Details
+The Dashboard view displays all information related to a specific _Application Base Version_ or _Application Version_. The Dashboard view has two additional tab options - Package Components and Versions.  Below are the Details for an _Application_.
 
 | Details | Description |
 | --- | --- |
 | Domain | The _Domain_ that the _Application_ is associated. |
-|Name | The Name of your _Application_. | 
-|Owner Type| Owned by a User or Group. |    
-|Owner | Name of User or Group. |    
-|Summary | Description of the _Application_. | 
-|Created | Auto generated based on the date the _Application_ was added. |    
-|Modified | Auto generated based on the date the _Application_ was updated. |    
-|Change Request DataSource | DeployHub Pro Option - Establishes the Change Request system for the _Application_.|    
-Pre-Action| An action that should be executed prior to the deployment of the _Application_.| 
+|Name | The Name of your _Application_. |
+|Owner Type| Owned by a User or Group. |
+|Owner | Name of User or Group. |
+|Summary | Description of the _Application_. |
+|Created | Auto generated based on the date the _Application_ was added. |
+|Modified | Auto generated based on the date the _Application_ was updated. |  
+|Change Request DataSource | DeployHub Pro Option - Establishes the Change Request system for the _Application_.|
+Pre-Action| An action that should be executed prior to the deployment of the _Application_.|
 Post-Action| An action that should be executed at the completion of the _Application_ deployment.|
-Custom Action | Overides any Pre or Post Actions, such as calling an external soltutions such as Helm.|   
-Successful Deployment Template | The template that should be used for success notifications. |    
+Custom Action | Overrides any Pre or Post Actions, such as calling an external solutions such as Helm.|
+Successful Deployment Template | The template that should be used for success notifications. |
 Failed Deployment Template| The template that should be used for failure notifications.|
 
 ### _Application_ Dependency Map
@@ -58,11 +60,9 @@ The Dependency Map provides a graphical view of all your _Package Components_. T
 
 ### Log History
 
-_Applicaitons_ can be deployed many times, to the same or different locations (_Environments_). For every Deployment, the Log History will show all steps executed as part of the deployment process.
+_Applications_ can be deployed many times, to the same or different locations (_Environments_). For every Deployment, the Log History will show all steps executed as part of the deployment process.
 
-### Attributes
-
-Attributes are environment variables that need to be assigned to the _Application_ such as Key Value Pairs. Use the +Add option to add Attributes to your _Application_. Attributes have a Name and a Value. Any Attributes defined at the _Application_ level override any Attributes defined at the _Environment_ level.
+{{% include "userguide/reusable/Attributes.md" %}}
 
 ### Trends
 
@@ -70,17 +70,13 @@ The Trends graph shows you your success or failure rates overtime as well at the
 
 ### Associated Environments
 
-_Applications_ are deployed to _Environments_.  By using the +Assign option, you can add _Environments_ where the _Application_ is to be deployed. Use the +Assign option to add multiple _Environments_.  The Detial field will contain a link to the deployment Log for each _Environment_ where the _Application_ was deployed.
+Each _Application Base Version_ are assigned the _Environments_ to which they will be deployed. _Applicaiton Versions_ inherit the _Environments_ from the _Application Base Version_. By using the +Assign option, you can add _Environments_ where the _Application_ is to be deployed. Use the +Assign option to add multiple _Environments_.  The Detail field will contain a link to the deployment Log for each _Environment_ where the _Application_ was deployed.
 
 ### Last Deployment Difference Graph
 
 The Difference Graph shows what changed in the last deployment between the previous deployment. For the _Application Base Version_ all _Components_ will be shown.  Subsequent deployments will only show what changed.
 
-### Audit Trail
-
-The Audit Trail displays audit entries for deployments, including deployment number, _Environment_, and how many days ago the deployment (hours for all of today's deployments) took place. Any attribute changes to the _Application_ are also shown on the Audit Trail.
-
-{{% include "userguide/reusable/Access Object.md" %}}
+{{% include "userguide/reusable/AuditTrail.md" %}}
 
 ### Change Request
 
@@ -110,14 +106,6 @@ To add a new _Application_, go to the _Application_ menu from the left side of y
 
 You can create an _Application Version_ if the _Application Base Version_ has been assigned the _Create Version_ Task at the _Domain_ Level.  The _Create Version Task_ must be available before this is possible. See the chapter on 'Domains' for instructions on how to create _Tasks_.
 
-To create an _Application Version_, select an _Application Base Version_ or _Application Version_ from the _Applicaiton_ List View. Use the Task tab at the top of the List View to drop down the available Tasks.  Select the _Create Version_ Task. The new _Application Version_ will be based on the _Application Base Version_ or _Application Version_ you selected from the list view.
+To create an _Application Version_, select an _Application Base Version_ or _Application Version_ from the _Application_ List View. Use the Task tab at the top of the List View to drop down the available Tasks.  Select the _Create Version_ Task. The new _Application Version_ will be based on the _Application Base Version_ or _Application Version_ you selected from the list view.
 
 The new _Application Version_ is created by using the parent name, followed by a semi-colon and an incremented integer, i.e. MyApp;3.
-
-## Deleting Applications
-
- Once created, the _Application Base Version_ or _Application Version_ can be deleted by selecting it from the List view and using the Delete option at the top of the List.  The _Application Base Version_ cannot be deleted if child _Application Versions_ are available.
-
-## Editing Applications
-
-Double clicking on an item in the List View will take you to the Dashboard for editing.  

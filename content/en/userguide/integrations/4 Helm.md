@@ -2,7 +2,10 @@
 title: "Helm"
 linkTitle: "Helm"
 weight: 64
+description: >
+  Using Helm to execute deployments as an Action.
 ---
+
 ## Helm
 
 Helm standardizes the process of creating your container image. It is an agentless solution that can be called via a DeployHub 'Custom Action.' Helm provides a broad set of pre-defined Helm "Charts." A Helm Chart is a reusable script that simplifies the creation of your container image. When DeployHub executes the release process, it will call the Helm Chart you have defined as your Custom Action. What DeployHub offers is the versioning around your container content, what was released, including the version of the Helm Chart.  DeployHub tracks all the configuration of your release and tracks the version changes to the configuration, including Helm.
@@ -80,3 +83,9 @@ Docker component items have the following attributes, none of which are required
 | _**PostAction**_ | Name of the Post-Action |
 | _**CustomAction**_ | Name of the Custom-Action |
 | _**Summary**_ | Component Summary or Description |
+
+
+or more information see:
+
+- [Customizing Actions](/userguide/first-steps/2-define-your-actions/) 
+- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)

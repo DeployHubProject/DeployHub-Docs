@@ -2,7 +2,11 @@
 title: "WebLogic"
 linkTitle: "WebLogic"
 weight: 76
----
+description: >
+  Executing deployments requiring a WebLogic Server.
+------
+
+
 ## WebLogic
 
 A DeployHub deployment can point to one or more _Repositories_ with artifacts (.ear, .jar, and .war files) making up a Weblogic application. These are referenced by one or more _Components_ (and one or more of their _Component__Items_) within an _Application_. These are deployed into a Weblogic server domain. A (Post) _Action_ is then executed which installs these artifacts into the Weblogic server. The user creates the _Action_, which itself contains _Procedures_ that can be downloaded via Google Groups at the following link:
@@ -27,13 +31,19 @@ Notice there are now two new _Procedures_ in the _Domain_, named "WebLogicCreden
 
 ## Create your Weblogic Action
 
-- Right click on the _Actions_ tab in the same _Domain_ as the _Procedures._
-- Select "_New Action in this Domain_".
+- Go to the _Actions_ List View
+- Select "+Add".
 - In the _Workflow_ tab, scroll down the _Activities_ list on the right side and click on the plus sign next to the Weblogic Category.
 - Click and drag the _Procedure_ that was just created named "WebLogicCredential" onto the Workspace.
 - Click and drag the _Procedure_ named "WebLogicDeploy" onto the Workspace.
 - Right click on the _Procedure(s)_ in the Workflow and fill in the parameters for each one according to the definitions on the Google Groups page.
 
-Note: the WebLogicCredential Procedure can be left out of the Workspace if the WebLogicDeploy Procedure's username and password fields will be used to access the Weblogic server. Otherwise the selected Credential within the WebLogicCredential Procedure should contain the appropriate username and password.
+Note: the WebLogicCredential _Procedure_ can be left out of the Workspace if the WebLogicDeploy _Procedure's_ username and password fields will be used to access the Weblogic server. Otherwise the selected Credential within the WebLogicCredential Procedure should contain the appropriate username and password.
 
 Place the _Action_ within the _Application's Post Action_ field. The _Application_ should contain one or more _Components_ that have one or more _Component__Items_ that reference the artifacts that make up the Weblogic application. The _Application_ deploys its artifacts to the Weblogic server, and the Post _Action_ performs the installation.
+
+
+For more information see:
+
+- [Customizing Actions](/userguide/first-steps/2-define-your-actions/) 
+- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)

@@ -2,6 +2,8 @@
 title: "Jenkins"
 linkTitle: "Jenkins"
 weight: 68
+description: >
+  Calling DeployHub from Jenkins for microservice tracking.
 ---
 
 ## Plug-In for Jenkins
@@ -77,3 +79,25 @@ $ docker run -d --hostname `hostname` -e CLIENTID=$CLIENTID -v jenkinsfs:/jenkin
 
 - NFS is share Jenkins Jobs directory
 - DeployHub will see the Jenkins File System Repository as /jenkins
+
+For more information see:
+- - [Building Your Domain Catalog - Tasks in this Domain](/userguide/first-steps/2-defining-domains/)
+- [Customizing Actions](/userguide/first-steps/2-define-your-actions/) 
+- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
+
+
+### Jenkins Build Engine
+
+A Jenkins Build Job communicates with DeployHub, passing log and results. Any time a DeployHub deployment is performed from Jenkins, the _Application Version_ and _Environment_ are required, by name, i.e. Application;1, Environment. If the names are not unique, the domain name must be included, i.e. DomainName.Application;1.
+
+## Jenkins _Build Jobs_ and Components
+
+A Jenkins Build Job Run creates a Build Job Number stored in a DeployHub _Component_. A field named 'Last Build Number' is updated every time a Build Job is executed. The DeployHub Jenkins plug-in has a "notify only" mode for when a build has been done. Clicking on "Endpoints and Builds" will show all of the builds that have been done for that _Component_. Clicking on a Build Number will open a pop-up with the build log that has been pulled from Jenkins.
+
+## Build Job Run
+
+An execution of Jenkins is called a Build Job Run, and DeployHub can be called at any step during the execution. It can build files, call DeployHub to perform a deployment, build more files, call DeployHub again, etc. This can be done in any order, in separate runs, or all together.
+
+Jenkins build logs can be viewed directly from inside the DeployHub URL, minimizing the amount of browser activity required. For example, a user can see a build artifact on a target _Endpoint_ and open the details of the generating build directly from the _Endpoint_ details page.
+
+If the 'Always Deploy' flag is set to Yes on a Component, it makes no difference if the version of the Component is different or the same as the one on the _Endpoint_; the _Component_ is deployed to the _Endpoint_. If the 'Always Deploy' flag is set to No, the version on the _Endpoint_ and the version of the _Component_ must be different for the _Component_ to be deployed. However, even if the version on the _Endpoint_ and the version of the _Component_ are the same, if the Last Build Number in the _Component_ is different than the last build number in Jenkins, the _Component_ will be deployed.

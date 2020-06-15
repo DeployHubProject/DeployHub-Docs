@@ -2,9 +2,9 @@
 title: "DataPower"
 linkTitle: "DataPower"
 weight: 60
+description: >
+  Deploying and managing DataPower with DeployHub.
 ---
-## DataPower
-
 DeployHub can deploy DataPower the same as it deploys to any _Endpoint_ types, such as docker containers, physical servers, virtual servers, cloud servers, routers, and Gateways. A DataPower multi-channel Gateway provides access, security, and control to a range of mobile devices, web applications, and APIs.
 
 DeployHub can be used to install, configure, and reconfigure DataPower gateways quickly and easily. Due to its agentless architecture, configuration changes to the Data Power gateway can be deployed as standard. DeployHub has built-in _Actions_ that allow zip files to be read, converted to base-64 and embedded into an out-going SOAP message which can then be posted to the Data Power Gateway.
@@ -13,6 +13,7 @@ The following example demonstrates how DeployHub's DMScript can be used to make 
 
 Example: A custom action for a component to post a configuration change to a DataPower web appliance:
 
+~~~
 using stream $config; // create streams
 
 using stream $payload;
@@ -49,6 +50,16 @@ set res = soap($DP\_TGTURL, $payload);
 
 }
 
-This is a _Custom Action_ for a _Component_ which represents a configuration change to be applied to the DataPower web appliance. Such changes are delivered over the appliance's SOAP API and do not involve conventional file transfers. In order to implement this, the _Custom Action_ first checks out the XML soap body (soma-config-import.xml) and places it into the DeployHub _Dropzone_ (a temporary area where files are placed just prior to deployment). It then does the same for the config.zip file (taking the latest version from the specified _Repository_). It converts this config file into a base64 encoded stream and then uses an XML modifier to add this base64 encoded data into the XML SOAP message. Finally, the modified file is read into a stream and sent to the DataPower Web UI (DP\_TGTURL is the URL of the DataPower WebUI and is set as an attribute for the target _Environment_).
+~~~
+
+This is a _Custom Action_ for a _Component_ which represents a configuration change to be applied to the DataPower web appliance. Such changes are delivered over the appliance's SOAP API and do not involve conventional file transfers. In order to implement this, the _Custom Action_ first checks out the XML soap body (soma-config-import.xml) and places it into the DeployHub _Dropzone_ (a temporary area where files are placed just prior to deployment). 
+
+It then does the same for the config.zip file (taking the latest version from the specified _Repository_). It converts this config file into a base64 encoded stream and then uses an XML modifier to add this base64 encoded data into the XML SOAP message. Finally, the modified file is read into a stream and sent to the DataPower Web UI (DP\_TGTURL is the URL of the DataPower WebUI and is set as an attribute for the target _Environment_).
 
 Data Power configuration changes can be tracked by creating them as a _Component Versions_ and including them in the _Application_ version just like any other _Component_ (such as database changes, application code, and any Ansible infrastructure). DeployHub then knows which configuration is currently installed on each Data Power gateway and can apply and _Rollback_ such configurations as part of the associated _Application_ deployment.
+
+
+For more information see:
+
+- [Customizing Actions](/userguide/first-steps/2-define-your-actions/) 
+- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)

@@ -1,18 +1,30 @@
 ---
 title: "Procedures and Functions"
 linkTitle: "Procedures and Functions"
-weight: 12
+weight: 34
 description: >
   Customizing your Deployments with Procedures and Functions.
 ---
 
 ## Procedures and Functions
 
-_Procedures_ and _Functions_ are the steps making up an _Action_. They allow you to define the installation logic of a _Component_. _Procedures_ do not return a value while _Functions_ do_._ The _Procedures_ and _Functions_ tab is under the _Flows_ Main Menu Item.
+_Procedures_ and _Functions_ are the steps that make up an _Action_. They allow you to define the installation logic of a _Component_. The difference between _Procedures_ and _Functions_ is a _Procedures_ execute a process but do not return a value. A _Functions_ returns a value.
 
-## Adding and Deleting Custom Procedures and Functions
+- An "external" script running locally to the DeployHub Server.
+- An "external" script running on the _Endpoint_ to which the deployment is taking place.
+- An "external" script which is located locally to the DeployHub Server but which is "pushed" to the Target _Endpoint_ automatically and execute there.
 
-You can add and configure user-defined _Functions_ or _Procedures_ by going to the Flows menu and selecting the Functions and Procedures tab. This will display a list of _Domains_ and _Life Cycle__Sub-Domains_. Right click on the _Domain_ where it is to be located and select either "New Procedure in this Domain" or "New Function in this Domain".
+These _Procedures_ and _Functions_ can be:
+
+- Written in DMScript (DeployHub's Deployment Scripting Language). DMScript ships with several pre-installed _Procedures_ and _Functions_. You can also create custom _Procedures_ and _Functions_ and add them to the _Activities_ that can be used when creating a _Components_ installation logic. See the [DMscript Chapter](/userguide/dmscript/) for detials.
+
+- A script written in any scripting language supported by the Deployment Engine's operating system and held locally to the Deployment Engine.
+
+- A script written in any scripting language supported by the target _Endpoint's_ operating system and located on the target Endpoint.
+
+- A script written in any scripting language supported by the target _Endpoint's_ operating system and held locally to the Deployment Engine. When invoked, the script is automatically copied to the target _Endpoint_ and executed there.
+
+For more information on _Actions_, _Procedures_ or _Functions_ see the [Customize Your Actions Chapter.](/userguide/setup/2-define-your-actions/)
 
 A _Procedure_ can be one of four types:
 
@@ -124,33 +136,20 @@ if ($myval) {
 
 To see if the checkbox named "myval" is checked or not
 
-## Timeline Tab
+{{% include "userguide/reusable/AuditTrail.md" %}}
 
-This tab displays log file entries for deployments that used this _Procedure_/_Function_, including deployment number, _Environment_, and how many days ago the deployment (hours for all of today's deployments) took place. Click on the 'Click to see earlier items' link to see all of the entries.
+### Access
 
-## Timeline Comments
-
-Users can add comments to these entries by clicking on the 'Comment' link within each entry, which opens a text entry field just below the deployment information. Users can also click on the Subscribe link in each entry of the list, which allows the User to receive information about the selected deployment. Any comments added to the deploymentwill appear in the Timeline column of the subscriber's home page.
-
-A field labeled "Say something about this Procedure?" is above all of the deployment lines for such comments. Files can be attached as well. Entering text here activates the Add Message button. Click to save the comment as a new audit entry.
-
-## Adding Documents to the Timeline
-
-Clicking on the paperclip button next to the Add Message button brings up a file explorer, which allows multiple files to be selected and attached to the comment.
-
-Comments with files attached are shown with a paperclip. Clicking on the paperclip expands the audit entry to show those as hyperlinks. Clicking on the link will download the file. This process is browser-specific.
-
-## Access Tab
-
-This tab contains _Groups_ and the _Users_ that have access to this _Procedure/Function_. Click on a _Group_ name in the Available Groups list. Drag this into one of the lists to allow the _Users_ to View, Change, or Execute the currently selected _Procedure/Function_. If the _Procedure/Function_ is already part of a parent _Action_ then no check is yet the _Procedure/Function_ still runs.
-
-Access includes:
+The Access Section allows _Users_ within designated _Groups_ to update the _Function_ or _Procedure_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Function_ or _Procedure_ in the following ways:
 
 | Access | Description |
 | --- | --- |
-| _**View**_ | Allows the _User_ to see the _Procedure/Function_. If the _User_ does not belong to a _Group_ in the View Access list, the _Procedure/Function_ will not appear in the tree structure. |
-| _**Change**_ | Allows the _User_ to changes the _Procedure'_s/_Function's_ characteristics i.e. Name, Summary, etc. |
-| _**Execute**_ | Allows _Users_ to execute this _Procedure/Function_. |
+|**View**| Allows _Users_ to see the _Function_ or _Procedure_. If the _User_ does not belong to a _Group_ in the View Access list, the _Function_ or _Procedure_ will not appear in the List View. |
+|**Change**| Allows _User_ to change the _Function_ or _Procedure_ characteristics i.e. Name, Summary, etc. |
+|**Execute**| Allows _Users_ to execute this _Function_ or _Procedure_. |
+
+NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
+
 
 ## General Tab
 

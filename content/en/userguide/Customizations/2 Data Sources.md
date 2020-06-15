@@ -1,36 +1,102 @@
 ---
-title: "Data Source"
-linkTitle: "Data Source"
+title: "Managing Data Sources"
+linkTitle: "Managing Data Sources"
 weight: 20
 description: >
   Managing Data Sources such as ODBC connections.
 ---
-## Data Source
+## Intro to Data Sources
 
-You may need to acquire data outside of the DeployHub system, for example with an ODBC connection to Oracle. The _Data Source_ object communicates with various databases, HTTP servers, FTP servers, etc., and can be used to take advantage of this kind of information sharing.
+You may need to acquire data from outside of DeployHub such as an ODBC connection to Oracle. The _Data Source_ object communicates with various databases, HTTP servers, FTP servers, etc., and can be used to take advantage of this kind of information sharing.
 
-The _User_ can edit _Data Source_s by using an Access tab and Properties tab. In addition, the General tab shows a summary of the _Data Source_ configuration. To edit the information within the General tab, click on the pencil icon in the right-hand corner.
+The most common use for _Data Sources_ is for setting up integration with issue tracking systems such as Jira, Bugzilla and GitHub.  If you are using DeployHub Pro, you can configure _Components_ with  _Change Requests_. To do this, you will need to define a connection to the change request system. This can be done using _Data Sources_. 
 
-## Properties Tab
+## The _Data Sources_ List View for Adding or Deleting
 
-The Data Source Properties tab allows you to configure a _Data Source_ connection, e.g. specifying a broker name along with the required User Name and Password. Click the plus sign (+) for the _User_ to select from a list of Properties and add an associated value for it. Clicking on the pencil icon allows the _User_ to edit an existing Property. Selecting the Property from the table and clicking on the "X" in the upper right-hand corner deletes the selected Property from the table. There are five different types of Data Sources. They are listed here along with their Properties.
+You will find _Data Sources_ under the Setup menu.  Selecting _Data Sources_ will take you to a list of all _DataSources_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Data Sources_ List View.  You can filter the list view on _Data Sources_ and _Domains_.
 
-## ODBC Data Source Properties
+_Data Sources_ are defined to a _Domain_ and will be displayed based on your access to the _Domain_ to which it belongs. 
+
+The _Data Sources_ List View has the following Tabs.
+
+| Tab | Description |
+| --- | --- |
+|Refresh | Refreshes the browser. |
+| Add | Allows you to Add a new _Data Sources_ of a particular type. |
+| Delete | Deletes the selected item. |
+
+From the _Data Source_ List View, double click on the _Data Source_ which you would like to view to see all Details.  
+
+## Using the _Data Sources_ Dashboard for Viewing and Editing
+
+The Dashboard view displays all information related to a specific _Data Source_.
+
+### Common Details of all _Data Sources_
+
+The following details are common to all _Data Sources_ types:
 
 | Field | Description |
 | --- | --- |
-| _**Name**_ | <ul style="list-style-type: none;"><li>**Data source name**: Name of the ODBC data source.</li><li>**password** : ODBC password.</li><li>**username** : ODBC user name.</li></ul>  |
-| _**Value**_ | <ul style="list-style-type: none;"><li>**Data source name** : The name of the data structure that contains the information about a specific database that an Open Database Connectivity ( ODBC ) driver needs in order to connect to it.</li><li>**password** : The password that will be used to access the object.</li><li>**username** : The username that will be used to access the object.</li></ul> |
-| _**Encrypted**_ | Checkbox that indicates that the value is to be encrypted in the DeployHub database. |
-| _**Overridable**_ | Checkbox that indicates the _Property_ can be changed at runtime by specifying a replacement value in the _Component Item_. |
-| _**Appendable**_ | Checkbox that indicates the _Property_ can be appended to at runtime in the _Component Item._ |
+| **Full Domain Name** | The fully qualified name of the _Domain_ to which the _Data Source_ was defined. |
+| **Name** | The Name of the _Data Source_. |
+| **Type** | The _Data Sources_ Type chosen when you performed the Add. |
+| **Owner Type** | User or Group. |
+| **Owner** | Name of the Owner. |
+| **Summary** | A description of the _Data Source_.|
+| **Created** | Auto generated date when the _Data Source_ was added.|
+| **Modified**| Auto generated date when the _Data Source_ was updated.|
+| **Credential**| The _Credential_ used to access the _Repository_ if required. |
 
-## LDAP Data Source Properties
+
+### Git _Data Source_ Details
 
 | Field | Description |
 | --- | --- |
-| _**Name**_ |  <ul style="list-style-type: none;"><li>**LDAP Server** : A specific LDAP server, such as LDAP://server01.</li><li>**Port Number** : The port on which the LDAP server is listening.</li><li>**Search Base** : A search base (the distinguished name of the search base object) defines the location in the directory from which the LDAP search begins.</li><li>**Search Filter** : Used for determining search criteria.</li></ul> |
-| _**Value**_ | <ul style="list-style-type: none;"><li>**LDAP Server** : I.P. address or hostname of the LDAP Server.</li><li>**Port Number** : The port on which the LDAP server is listening.</li><li>**Search Base** : The search base defines the starting point for the search in the LDAP directory tree.</li><li>**Search Filter** : Filters are used for selecting which objects are returned when browsing for the search base, and identifying which objects in your directory are examined, for example email address attributes or user attributes.</li></ul> |
-| _**Encrypted**_ | Checkbox that indicates that the value is to be encrypted in the DeployHub database. |
-| _**Overridable**_ | Checkbox that indicates the _Property_ can be changed at runtime. |
-| _**Appendable**_ | Checkbox that indicates the _Property_ can be appended to at runtime. |
+|**Poll Interval** | The time frequency of how often DeployHub should look for Git issues in seconds, i.e. 60. |
+|**Poll Interval Encrypted** | Select the box to indicate the Poll Interval should be hidden in the database.|
+|**Poll Interval Override** |Select the box if the Poll Interval can be changed.|
+| **Organization**| The full URL to the Git [Organization](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/about-organizations). |
+| **Organization Encrypted** | Select the box to indicate the Product name should be hidden in the database.|
+| **Organization Override** | Select the box if the Product can be changed. |  
+|**Repository** | The name of the [Git Repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories) underneath the Git Product. |
+|**Repository Encrypted** | Select the box to indicate the Git Repository should be hidden in the database.|
+|**Repository Override** |Select the box if the Git Repository can be changed.|
+
+### Jira _Data Source_ Details
+
+| Field | Description |
+| --- | --- |
+|**Filter**| Enter the [Jira Status](https://confluence.atlassian.com/adminjiraserver/defining-status-field-values-938847108.html) you want to use as your filter.  |
+|**Filter** Encrypted**| Select the box to indicate the Filter name should be hidden in the database. |
+|**Filter** Override**| Select the box to indicate the Filter name can be changed. |
+|**Poll Interval** | The time frequency of how often DeployHub should look for Jira issues in seconds, i.e. 60.|
+|**Poll Interval Encrypted** | Select the box to indicate the Poll Interval should be hidden in the database.|
+|**Poll Interval Override** |Select the box if the Poll Interval can be changed.|
+| **Project**| The [Jira Project Name](https://support.atlassian.com/jira-software-cloud/docs/what-is-a-jira-software-project/) within the Jira Server. |
+| **Project Encrypted** | Select the box to indicate the Project name should be hidden in the database.|
+| **Project Override** | Select the box if the Project can be changed. |  
+|**Server** | The fully qualified URL to the Jira Server so DeployHub can get access. |
+|**Server Encrypted** | Select the box to indicate the Jira Server should be hidden in the database.|
+|**Server Override** |Select the box if the Jira Server can be changed.|
+
+### Bugzilla _Data Source_ Details
+
+| Field | Description |
+| --- | --- |
+|**Component** | The name of the [Bugzila Component](https://bugzilla.readthedocs.io/en/latest/api/core/v1/bug.html#search-bugs). |
+|**Component Encrypted** | Select the box to indicate the Bugzilla Component should be hidden in the database.|
+|**Component Override** |Select the box if the Bugzilla Component can be changed.|
+|**Poll Interval** | The time frequency of how often DeployHub should look for Bugzilla issues in seconds, i.e. 60.  |
+|**Poll Interval Encrypted** | Select the box to indicate the Poll Interval should be hidden in the database.|
+|**Poll Interval Override** |Select the box if the Poll Interval can be changed.|
+| **Product**| The full URL to the [Bugzilla Product](https://bugzilla.readthedocs.io/en/latest/administering/categorization.html). |
+| **Product Encrypted** | Select the box to indicate the Product name should be hidden in the database.|
+| **Product Override** | Select the box if the Product can be changed. |  
+|**Server** | The fully qualified URL to the Bugzilla Server so DeployHub can get access. |
+|**Server Encrypted** | Select the box to indicate the Server should be hidden in the database.|
+|**Server Override** |Select the box if the Server can be changed.|
+|**Status**| The [Bugzilla Status](https://bugzilla.readthedocs.io/en/latest/using/understanding.html?highlight=what%20is%20a%20status) you want to use as your Filter. |
+|**Status Encrypted**| Select the box to indicate the Status should be hidden in the database. |
+|**Status Override**| Select the box if the Status can be changed. |
+
+{{% include "/userguide/integrations/4 LDAP and Active Directory.md/" %}}

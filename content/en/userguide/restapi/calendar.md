@@ -1,31 +1,32 @@
 ---
-title: "Environments Calendar"
-linkTitle: "Environments Calendar"
-weight: 80
+title: "Environment Calendar API"
+linkTitle: "Environment Calendar API"
+weight: 12
 description: >
-  Get a Calendar Event. 
+  Get an _Environments_ Calendar Event. 
 ---
-### /dmadminweb/API/calendar
 
-## Summary
+Retrieves a calendar event for an _Environment_. This call returns a JSON object representing the events in the _Environment_ calendar. Events can be filtered based on the _Environment_ to which the calendar belongs, the _Application_ associated with the event, a date/time range or a combination of all of these.
 
-Retrieve calendar events
+**REST Api Endpoint**
 
-### Description
+| HTTP Verb | URL |
+| ---- | ----------- |
+| GET | /dmadminweb/API/approve/{app_id} |/dmadminweb/API/assign/application/{app_id}/{env_id} |
 
-This call returns a JSON object representing the events in the calendar(s). Events can be filtered based on the environment to which the calendar belongs, the application associated with the event, a date/time range or a combination of all of these.
+**Parameters**
 
-### Parameters
-
-| Name | Located in | Description | Required | Schema |
+| Name | Located in | Value | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
-| env | query | Is the identifier of an environment. Either its name, its qualified name (i.e. with its parent domain(s) included in dot notation) or its internal ID. Specifying the environment filters the results to those events associated with the given environment | No | string |
-| app | query | Is the identifier of an application. Either its name, its qualified name (i.e. with its parent domain(s) included in dot notation) or its internal ID. Specifying the application filters the results to those events associated with the given application.. | No | string |
-| starttime | query | Is a date/time which - if specified - restricts the result to only include events which start on or before the specified time. If endtime is not provided, the API returns all future events.  YYYY:MM:DD A date (4 digit year, a 2 digit month number and a 2 digit day of month).  YYYY:MM:DD:hh:mm A date and time (4 digit year, a 2 digit month number, a 2 digit day of month and then the hours and minutes).  nnnnnnnnnn An integer number representing the number of seconds since midnight, 1st Jan 1970 (Epoch time) | No | string |
-| endtime | query | Is a date/time which - if specified - restricts the result to only include events which start on or after the specified time. If starttime is not provided, the API only returns events that in the future. Specifying a starttime before the current date/time will return historical events  YYYY:MM:DD A date (4 digit year, a 2 digit month number and a 2 digit day of month).  YYYY:MM:DD:hh:mm A date and time (4 digit year, a 2 digit month number, a 2 digit day of month and then the hours and minutes).  nnnnnnnnnn An integer number representing the number of seconds since midnight, 1st Jan 1970 (Epoch time) | No | string |
+| env | query | Is the identifier of an _Environment_. Either its name, its qualified name with its parent _Domains_ included in dot notation (i.e. GLOBAL.Product) or its internal ID. Specifying the _Environment_ filters the results to those events associated with the given _Environment_. | No | string |
+| app | query | Is the identifier of an _Application_. Either its name, its qualified name with its parent _Domains_ included in dot notation (i.e. GLOBAL.Product) or its internal ID. Specifying the _Application_ filters the results to those events associated with the given _Application_. | No | string |
+| starttime | query | Is a date/time which - if specified - restricts the result to only include events which start on or before the specified time. If endtime is not provided, the API returns all future events. Values can be: <li>  YYYY:MM:DD - A date represented by a 4 digit year, a 2 digit month number and a 2 digit day of month.</li>  <li>YYYY:MM:DD:hh:mm - A date and time represented by a 4 digit year, a 2 digit month number, a 2 digit day of month and then the hours and minutes. </li> <li> nnnnnnnnnn - An integer number representing the number of seconds since midnight, 1st Jan 1970 (Epoch time) </li> | No | string |
+| endtime | query | Is a date/time which - if specified - restricts the result to only include events which start on or after the specified time. If starttime is not provided, the API only returns events that in the future. Specifying a starttime before the current date/time will return historical events. Values can be: <li> YYYY:MM:DD - A date represented by a 4 digit year, a 2 digit month number and a 2 digit day of month.</li> <li> YYYY:MM:DD:hh:mm -  A date and time represented by a 4 digit year, a 2 digit month number, a 2 digit day of month and then the hours and minutes. <li> nnnnnnnnnn - An integer number representing the number of seconds since midnight, 1st Jan 1970 (Epoch time) </li>| No | string |
 
-### Responses
+**Responses**
 
-| Code | Description | Schema |
+| Return Code | Return Code Description | Schema |
 | ---- | ----------- | ------ |
-| 200 | Success or failure.  Check success field for status. | [calendar_event_result](/restapi/models/#calendar_event_result) |
+| 200 | Success or failure.  Check success field for status. | [calendar_event_result](/userguide/restapi/models/#calendar_event_result) |
+
+{{% include "userguide/reusable/.md" %}}

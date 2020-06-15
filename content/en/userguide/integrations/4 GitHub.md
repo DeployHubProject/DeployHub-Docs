@@ -2,7 +2,11 @@
 title: "GitHub"
 linkTitle: "GitHub"
 weight: 62
+description: >
+  Tracking GitHub issues with DeployHub Pro.
 ---
+
+
 ## GitHub
 
 DeployHub supports GitHub in three ways.
@@ -27,9 +31,9 @@ Using the GitHub Repository requires a two-step process. First is the Git checko
 
 ## Connecting GitHub to DeployHub Pro
 
-**DeployHub Pro** can reference the GitHub issues for a particular GitHub _Repository_. Typically, a _Component_ can only be associated to a single GitHub _Repository_. In **DeployHub Pro,** you can associate issues to a Component Version or Application Version. This enables the GitHub issues to be viewed from a Component or Application using the **DeployHub Pro** Change Request tab. If you have a Release defined, these GitHub issues will be rolled up from the Component and Application to the Release.
+DeployHub Pro can reference the GitHub issues for a particular GitHub _Repository_. Typically, a _Component_ can only be associated to a single GitHub _Repository_. In DeployHub Pro, you can associate issues to a Component Version or Application Version. This enables the GitHub issues to be viewed from a Component or Application using the DeployHub Pro Change Request tab. If you have a Release defined, these GitHub issues will be rolled up from the Component and Application to the Release.
 
-To associate your GitHub Repository with **DeployHub Pro** you need to define a _Data Source_ connection with the _Type_ of "GitHub." This is done from the _Connections_ Menu under the _Data Source_ tab. Right click on your Domain name and select "New Data Source in this Domain." Complete the following fields:
+To associate your GitHub Repository with DeployHub Pro you need to define a _Data Source_ connection with the _Type_ of "GitHub." This is done from the _Connections_ Menu under the _Data Source_ tab. Right click on your Domain name and select "New Data Source in this Domain." Complete the following fields:
 
 ## GitHub Data Source Connection General Tab
 
@@ -61,3 +65,8 @@ From the _Deploy_ Menu, select the Component or Application from the selection t
 ## GitHub Wiki and DeployHub
 
 The GitHub Wiki page can be used to consolidate deployment output using both DeployHub Team and Pro. The GitHub Wiki is implemented as a Git Repository. Because of this, DeployHub can check-out the Wiki, update the contents, and commit the changes. The Wiki is processed as part of the deployment Workflow. To add the Wiki updates, you define a Post Action to the Application. Your Post Action calls an external script that updates and commits the Wiki. You will need to create the external script.
+
+For more information: 
+
+- [Managing DataSorces](userguide/customizations/2-data-sources/)
+- [Connect Your Repositories](userguide/first-steps/2-define-repositories/)

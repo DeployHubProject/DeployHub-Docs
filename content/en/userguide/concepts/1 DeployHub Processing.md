@@ -34,23 +34,18 @@ A _DropZone_ is created for each _Component_ during a deployment. Files from the
 
 DeployHub uses ftp, ftps, sftp, or Windows protocol to transfer files. When a deployment is executed, DeployHub performs the following steps:
 
-1. The first _Application_ is moved onto the stack. Any Pre-Action for the _Application_ will be executed at this point.
+1The first _Application_ is moved onto the stack. Any Pre-Action for the _Application_ will be executed at this point.
 
-1. The first _Component_ is moved onto the stack.
-
-1. A _DropZone_ is created for the Component.
-
-1. The first _Component Item_ for the current _Component_ is processed. Files from the _Repository_ referenced by the _Component Item_ are placed into the _DropZone_. This continues until all the files from all the _Component Items_ are placed there.
-
-1. A Pre-Action for the _Component_ is performed with usually one or more scripts to manipulate files within the _DropZone_ before deploying them.
-
-1. The _DropZone_ files are placed into every _Endpoint_ within the _Environment_ where the _Endpoint_ type is the same as the _Component_ type. Keep in mind that a _Component_ can have only one type and an _Endpoint_ can have many types.
-
-1. A Post-Action for the _Component_ is performed for cleanup or additional manipulation of files. It is run against every _Endpoint_ with the same _Component Type_ as the _Component_.
-
-1. If there are more _Components_, steps 2 through 7 are performed again after a new _DropZone_ is created.
-
-1. Pre and Post processing _Actions_ defined in the _Application_ or _Release_ are performed on each of the target _Endpoints_ in the _Environments_. Any errors found at the delivery level are logged and may fail the deployment. All logs are reported back to DeployHub and recorded in the History Tab for each _Application_ or _Release_.
+|Step|Description|
+|---|---|
+|1| The first _Component_ is moved onto the stack.|
+|2| A _DropZone_ is created for the Component.|
+|3| The first _Component_ is processed. Files from the _Repository_ referenced by the _Component_ are placed into the _DropZone_. |
+|4| If needed, A Pre-Action for the _Component_ is performed within the _DropZone_ before deploying them.|
+|5| The _DropZone_ files are placed into every _Endpoint_ within the _Environment_ where the _Endpoint_ type is the same as the _Component_ type. Keep in mind that a _Component_ can have only one type and an _Endpoint_ can have many types.|
+|6|A Post-Action for the _Component_ is performed for cleanup or additional manipulation of files. It is run against every _Endpoint_ with the same _Component Type_ as the _Component_.|
+|7|If there are more _Components_, steps 2 through 7 are performed again after a new _DropZone_ is created.
+|8|Pre and Post processing _Actions_ defined in the _Application_ or _Release_ are performed on each of the target _Endpoints_ in the _Environments_. Any errors found at the delivery level are logged and may fail the deployment. All logs are reported back to DeployHub and recorded in the History Tab for each _Application_ or _Release_.
 
 NOTE: A successful Deployment email template will notify recipients when the deployment proceeds normally. Exceptions cause the deployment to be marked as 'failed.' The Failed Deployment Email Template assigned to the _Application_ will notify recipients of that failure. Various problems, such as a missing directory on a filesystem _Repository_ type, or an operating system error which prevents the creation of a _DropZone_ directory, will result in a failure. Missing files, conversely, would not necessarily cause a failure since DeployHub has no way of knowing whether the files are supposed to be there or not. Under these circumstances, Post-Actions that have been assigned to the _Components_ could be designed, among other things, to verify what has been deployed. An Abort could be issued from within a Post-Action, which would cause the deployment to be marked as 'failed'.
 

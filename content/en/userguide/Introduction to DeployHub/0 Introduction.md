@@ -8,7 +8,9 @@ description: >
 
 ## Why DeployHub
 
-Migrating to microservices breaks the way we assemble and configure software. What is most difficult about microservices is the loss of the 'software application.' We no longer manage a complete software solution and instead manage smaller pieces that are independently deployed across multiple environments. The difficulty in managing microservices without the higher order _Application_ is that it impacts most of our standard software practices.  After all, everything we do is based on an _Applicaiton_ version from tracking changes request, to determining impact analysis and performing releases. While microservices are a big improvement over monolithic practices, we still need a method of tracking what we are delivering to an end-user, which is a collection of microservices.  DeployHub allows you to move to microservices by giving you back your _Application_ but in a 'logical view.'
+Migrating to microservices breaks the way we assemble and configure software. What is most difficult about microservices is the loss of the 'software application.' We no longer manage a complete software solution and instead manage smaller pieces that are independently deployed across multiple environments. The difficulty in managing microservices without the higher order _Application_ is that it impacts most of our standard software practices.  After all, everything we do is based on an _Applicaiton_ version from tracking changes request, to bill of material and difference reports and testing. 
+
+While microservices are a big improvement over monolithic practices, we still need a method of tracking what we are delivering to an end-user, which is a collection of microservices.  DeployHub allows you to move to microservices by giving you back your _Application_ but in a 'logical view.'
 
 DeployHub is a SaaS based central 'hub' for cataloging, versioning, sharing and deploying microservices and other _Components_ across Kubernetes, cloud, virtual and physical _Environments_. An on-premise download is also available.
 

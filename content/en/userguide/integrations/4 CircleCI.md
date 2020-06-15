@@ -1,7 +1,7 @@
 ---
 title: "CircleCI Orb"
 linkTitle: "CircleCI Orb"
-weight: 56
+weight: 58
 description: >
   Using the CircleCI Orb with DeployHub.
 ---
@@ -33,3 +33,8 @@ For a full description, go to the [CircleCI Orb Registry](https://circleci.com/o
 ### Two-way communication and shared logging
 
 DeployHub and CircleCI have a two-way logging communication.  The DeployHub CircleCI Deployment orb includes the ability for all logs about software deployments to be reported in both solutions.  CircleCI can report to DeployHub when deployments are ready to be executed, with DeployHub reporting back the status of the deployment. For most users, CircleCI remains their primary location to find results and logs.
+
+For more information see:
+- [Building Your Domain Catalog - Tasks in this Domain](/userguide/first-steps/2-defining-domains/)
+- [Customizing Actions](/userguide/first-steps/2-define-your-actions/) 
+- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)

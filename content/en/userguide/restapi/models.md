@@ -6,17 +6,6 @@ description: >
   Using RESTful API's to Integrate DeployHub into DevOps Tooling.
 ---
 
-### Models
-
-#### success
-
-Value is true for a successful result, false for unsuccessful result
-
-| Name | Type | Description | Required |
-| ---- | ---- | ----------- | -------- |
-| success | boolean |  | Yes |
-| error | string |  | No |
-
 #### Application
 
 | Name | Type | Description | Required |
@@ -30,11 +19,7 @@ Value is true for a successful result, false for unsuccessful result
 | versionid | integer | The ID of the application version if the application is a version. | No |
 | versionname | string | The name of the application version if the application is a version. | No |
 
-#### Applications
 
-| Name | Type | Description | Required |
-| ---- | ---- | ----------- | -------- |
-| Applications | array |  |  |
 
 #### Environment
 
@@ -46,13 +31,9 @@ Value is true for a successful result, false for unsuccessful result
 | owneruser | string | If the "owner" of the environment is a user, then this is the name of the user | No |
 | ownergroup | string | If the "owner" of the environment is a user group, then this is the name of that group. | No |
 | summary | string | The summary string associated with the environment. | No |
-| applications | [applications](/restapi/models/#applications) |  | No |
+| applications | [applications](/userguide/restapi/models/#applications) |  | No |
 
-#### Environments
 
-| Name | Type | Description | Required |
-| ---- | ---- | ----------- | -------- |
-| Environments | array |  |  |
 
 #### Environments_result
 
@@ -61,19 +42,13 @@ Value is true for a successful result, false for unsuccessful result
 | success | boolean | Is true or false depending on the success or failure of the query. If success is false then result is not returned and a text field named "error" is returned instead. | No |
 | result | [ [environments](/restapi/models/#environments) ] | Is a JSON  array of objects, one for each environment returned by the query (if success is true). | No |
 
+
 #### environment_result
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
 | success | boolean | Is true or false depending on the success or failure of the query. If success is false then result is not returned and a text field named "error" is returned instead. | No |
 | result | [environment](/restapi/models/#environment) |  | No |
-
-#### applications_result
-
-| Name | Type | Description | Required |
-| ---- | ---- | ----------- | -------- |
-| success | boolean | Is true or false depending on the success or failure of the query. If success is false then result is not returned and a text field named "error" is returned instead. | No |
-| result | [ [applications](/restapi/models/#applications) ] | Is a JSON  array of objects, one for each environment returned by the query (if success is true). | No |
 
 #### request
 

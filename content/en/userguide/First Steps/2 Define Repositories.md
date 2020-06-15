@@ -10,7 +10,7 @@ description: >
 
 A _Repository_ is used by a _Component_. A _Repository_ acts as a source location for artifacts that will be deployed as _Components_. Each _Component_ contains a pointer to where an artifact is stored in a _Repository_ or on a file system. When DeployHub performs the pre-deployment steps, it retrieves the artifact from any location you specify. It pulls it from the _Repository_ and creates a deployment package at deployment run time. For this reason, it does not need to store the actual artifact in the DeployHub versioning engine. Each _Component_ is defined with a _Repository_ reference. Your _Repository_ can point to any type of repository such  as Git, GitHub, Quay or binary repository such as Maven. A _Repository_ can also reference a file system.
 
-## Using the Repository List View to Create and Delete
+## Using the Repository List View for Adding and Deleting
 
 The _Repository_ menu option is found under the **Setup** menu on the left of the DeployHub main panel. By selecting the _Repository_ menu, you will be taken to a list of all _Repositories_ to which you have access. You can also use the Search bar, represented by a funnel icon, to filter _Repository_ based on Name or Domain.
 
@@ -24,11 +24,11 @@ The _Repository_ List View has the following Tabs.
 
 By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
 
-## The _Repository_ Dashboard
+## Using the _Repository_ Dashboard for Viewing and Editing
 
 The Dashboard view displays all information related to a specific _Repository_ Type.  
 
-### Common Detials of all Repositories
+### Common Details of all _Repositories_
 
 The following details are common to all _Repository_ types:
 
@@ -44,29 +44,24 @@ The following details are common to all _Repository_ types:
 | **Modified**| Auto generated date when the _Repository_ was updated.|
 | **Credential**| The _Credential_ used to access the _Repository_ if required. |
 
-### Git _Repository_ Details
+### Access
 
-| Field | Description |
+The Access Section allows _Users_ within designated _Groups_ to update the _Repository_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Repository_ in the following ways:
+
+| Access | Description |
 | --- | --- |
-|**Git Repo** | URL to the Git Repo. |
-|**Git Repo Encrypted** | Select the box to indicate the Git Repo should be hidden in the database.|
-|**Git Repo Override** |Select the box if the Git Repo can be replaced at the _Component_ definition.|
-|**Git Commit**| Git Commit to be checked out. |
-|**Git Commit Encrypted** | Select the box to indicate the Git Commit should be hidden in the database.|
-|**Git Commit Override** |Select the box if the Git Commit can be replaced at the _Component_ definition.|
-|**To Dir** | Directory where the files will be checked out to. |
-|**To Dir Encrypted** | Select the box to indicate the To Dir should be hidden in the database.|
-|**To Dir Override** |Select the box if the To Dir can be replaced at the _Component_ definition.|
-| **Filepath**|  The fully qualified directory name to the files that will need to be deployed. These files must be on a file system that the DeployHub deployment engine has access to. |
-| **Filepath Encrypted** | Select the box to indicate the Filepath name should be hidden in the database.|
-| **Filepath Override** | Select the box if the Filepath can be replaced at the _Component_ definition. |  
-|**Pattern** | This defines the file types you want to pull from the _Repository_, such as \*.exe, \*.dll, \*.war. |
-|**Pattern Encrypted** | Select the box to indicate the Pattern should be hidden in the database.|
-|**Pattern Override** |Select the box if the Pattern can be replaced at the _Component_ definition.|
-|**Recursive**| Select the box in order to cause the _Repository_ to return all of the files from directories below those designated by Filepath. |
-|**Recursive Override** |Select the box if the Recursive option can be replaced at the _Component_ definition.|
+| **View** | If a _User_ belongs to a _User Group_ in the View Access list for the this _Repository_, the _Repository_ will be visible. |
+| **Change** | This allows a _User_ who belongs to any _User Group_ in the list to change the attributes of the _Repository_. |
+| **Check-out Access** | Allows Users to check out files from the _Repository_. This is inherited from the Read Access of the parent _Domain_. |
+| **Check-in Access** | Allows Users to check in files to the _Repository_. This is inherited from the Write Access of the parent _Domain_. |
 
-### HTTP _Repository_ Details
+NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
+
+{{% include "userguide/reusable/AuditTrail.md" %}}
+
+{{% include "/userguide/reusable/Git.md/" %}}
+
+## HTTP _Repository_ Details
 
 | Field | Description |
 | --- | --- |
@@ -76,7 +71,7 @@ The following details are common to all _Repository_ types:
 | **Log File**|  The fully qualified file name to the logs from the HTTP get.
 | **Log File Encrypted** | Select the box to indicate the Log File name should be hidden in the database.|
 | **Log File Override** | Select the box if the Log File can be replaced at the _Component_ definition. |
-|**Params** | Paramters used to invoke a RESTful API, allowing more detailed interaction with the HTTP Endpoint.|
+|**Params** | Parameters used to invoke a RESTful API, allowing more detailed interaction with the HTTP Endpoint.|
 | **Params Encrypted** | Select the box to indicate the Parameters should be hidden in the database.|
 | **Params Override** | Select the box if the Parameters can be replaced at the _Component_ definition. |
 |**Pattern** | This defines the file types you want to pull from the _Repository_, such as \*.exe, \*.dll, \*.war. |
@@ -92,7 +87,7 @@ The following details are common to all _Repository_ types:
 |**Version Encrypted** | Select the box to indicate the Version should be hidden in the database.|
 |**Version Override** |Select the box if the Version can be replaced at the _Component_ definition.|
 
-### File System _Repository_ Details
+## File System _Repository_ Details
 
 | Field | Description |
 | --- | --- |
@@ -108,38 +103,6 @@ The following details are common to all _Repository_ types:
 |**Version Encrypted** | Select the box to indicate the Version should be hidden in the database.|
 |**Version Override** |Select the box if the Version can be replaced at the _Component_ definition.|
 
-### OpenMake Meister _Repository_ Details
+{{% include "/userguide/reusable/OpenMake Meister.md/" %}}
 
-| Field | Description |
-| --- | --- |
-| **Buildnumber**| The identifier of the Build that resides in the Meister _Repository_.|
-| **Buildnumber Encrypted**| Select the box to indicate the Build Number should be hidden in the database.|
-| **Buildnumber Override**| Select the box if the Build Number can be replaced at the _Component_ definition. |
-| **Filepath**|  The fully qualified directory name to the files in the OpenMake Meister repository that will need to be deployed. |
-| **Filepath Encrypted** | Select the box to indicate the Filepath name should be hidden in the database.|
-| **Filepath Override** | Select the box if the Filepath can be replaced at the _Component_ definition. |  
-|**Pattern** | This defines the file types you want to pull from the _Repository_, such as \*.exe, \*.dll, \*.war. |
-|**Pattern Encrypted** | Select the box to indicate the Pattern should be hidden in the database.|
-|**Pattern Override** |Select the box if the Pattern can be replaced at the _Component_ definition.|
-|**Recursive**| Select the box in order to cause the _Repository_ to return all of the files from directories below those designated by Filepath. |
-|**Recursive Override** |Select the box if the Recursive option can be replaced at the _Component_ definition.|
-
-### SVN _Repository_ Details
-
-| Field | Description |
-| --- | --- |
-| **Path** | The path to the files within the Subversion repository.|
-|**Path Encrypted** | Select the box to indicate the Path should be hidden in the database.|
-|**Path Override** |Select the box if the Path can be replaced at the _Component_ definition.|
-| **Revision** | Refers to the Tag used within the Subversion repository that contains the versions of the necessary files.|
-|**Revision Encrypted** | Select the box to indicate the Revision should be hidden in the database.|
-|**Revision Override** |Select the box if the Revision can be replaced at the _Component_ definition.|
-|**URL** | The Universal Resource Locator used to locate the Subversion repository. |
-|**URL Encrypted** | Select the box to indicate the URL should be hidden in the database.|
-|**URL Override** |Select the box if the URL can be replaced at the _Component_ definition.|
-
-{{% include "userguide/reusable/Access Object.md" %}}
-
-### Audit Trail
-
-The Audit Trail displays audit entries for any updates to a _Repository_.
+{{% include "/userguide/reusable/SVN.md/" %}}

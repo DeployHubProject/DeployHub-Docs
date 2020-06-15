@@ -7,9 +7,9 @@ description: >
 ---
 ## Executing Deployments
 
-DeployHub deploys _Applications_ which are a collection of _Components_, and it does so incrementally. If a _Component_ is already running in an Environment, it is not re-released. This is how DeployHub independently deploys microservices to clusters. When DeployHub executes a deployment, it delivers the  _Application's Components_ to an _Environment_ associated with one or more _Endpoints._ These _Endpoints_ represent the actual, container, physical, or virtual servers within an enterprise's data center.
+DeployHub deploys _Applications_ which are a collection of _Components_, and it does so incrementally. If a _Component_ is already running in an _Environment_, it is not re-released. This is how DeployHub independently deploys microservices. When DeployHub executes a deployment, it delivers the _Application's Components_ to an _Environment_ associated with one or more _Endpoints._ These _Endpoints_ represent the actual, container, physical, or virtual servers within an enterprise's data center.
 
-Deployment processing defaults to the configuration of the _Component_. This is the source location where the files and scripts reside, and the target _Endpoint_ to which the files will be deployed. When you execute a deployment, DeployHub will move the files within _Component_ from the source location to the target _Endpoint_. Default processing can be enhanced by _Actions_ that allow you to refine the way the deployment will occur. _Actions_ themselves contain _Procedures_, _Functions,_ and other _Actions_ which allow you to develop highly functioning and re-useable processes that can be shared across the _Domain to which they belong.
+Deployment processing is based on the deployment configuration of the _Component_.  When you execute a deployment, DeployHub will move the _Component_ from the source location to the target _Endpoint_. Default processing can be enhanced by _Actions_ that allow you to refine the way the deployment will occur. _Actions_ themselves contain _Procedures_, _Functions,_ and other _Actions_ which allow you to develop highly functioning and re-useable processes that can be shared across the _Domain_ to which they belong.
 
 ## Executing Deployments with an External Script
 
