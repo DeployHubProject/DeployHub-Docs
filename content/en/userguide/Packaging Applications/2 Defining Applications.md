@@ -76,7 +76,7 @@ Each _Application Base Version_ are assigned the _Environments_ to which they wi
 
 The Difference Graph shows what changed in the last deployment between the previous deployment. For the _Application Base Version_ all _Components_ will be shown.  Subsequent deployments will only show what changed.
 
-{{% include "userguide/reusable/AuditTrail.md" %}}
+{{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
 
 ### Change Request
 

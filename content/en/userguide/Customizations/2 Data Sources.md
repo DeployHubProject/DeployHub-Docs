@@ -100,3 +100,5 @@ The following details are common to all _Data Sources_ types:
 |**Status Override**| Select the box if the Status can be changed. |
 
 {{% include "/userguide/integrations/4 LDAP and Active Directory.md/" %}}
+
+{{% include "userguide/reusable/AuditTrail.md" %}}

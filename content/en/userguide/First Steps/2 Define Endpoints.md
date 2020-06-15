@@ -56,7 +56,7 @@ The Dashboard view displays all information related to a specific _Endpoint_.  B
 | **MD5 Mismatch Template** | The name of the _Email Template_ that is used to notify _Users_ if any of the deployed files change, causing the result of the MD5 calculation to change. |
 | **Endpoint Component Types** | Used to match _Components_ to _Endpoints_ using a many-to-one relationship, with each _Endpoint_ having one or more Types and each _Component Version_ having only one Type. When an _Application Version_ is deployed into an _Environment_, each _Component_ in the _Application_ will be deployed against each _Endpoint_ that matches its _Component Type._ |
 
-{{% include "userguide/reusable/AuditTrail.md" %}}
+{{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
 
 ### Deployed Components
 

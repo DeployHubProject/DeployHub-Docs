@@ -1,7 +1,7 @@
 ---
 title: "User APIs"
 linkTitle: "User APIs"
-weight: 20
+weight: 30
 description: >
   Associate a User to a User Group (Pro Feature).
 ---

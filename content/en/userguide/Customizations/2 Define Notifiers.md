@@ -59,17 +59,6 @@ The following details are common to all _Notifiers_ types:
 | **Modified**| Auto generated date when the _Notifier_ was updated.|
 | **Credential**| The _Credential_ used to access the _Notifier_ if required. |
 
-### Access
-
-The Access Section allows _Users_ within designated _Groups_ to update the _Notifier_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Notifier_ in the following ways:
-
-| Access | Description |
-| --- | --- |
-| _**View**_ | Allows _Users_ to see the _Notifier_. If the _User_ does not belong to a _Group_ in the View Access list, the _Notifier_ will not appear in the List View. |
-| _**Change**_ | This allows a _User_ who belongs to any _User Group_ in the list to change the attributes of the _Notifier_. |
-| _**Send**_ | Allows _Users_ to send an email.. |
-
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
 
 ## SMTP Email Details
 | Field | Description |
@@ -100,7 +89,19 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 
 {{% include "/userguide/reusable/Slack.md/" %}}
 
+### Access
 
+The Access Section allows _Users_ within designated _Groups_ to update the _Notifier_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Notifier_ in the following ways:
+
+| Access | Description |
+| --- | --- |
+| _**View**_ | Allows _Users_ to see the _Notifier_. If the _User_ does not belong to a _Group_ in the View Access list, the _Notifier_ will not appear in the List View. |
+| _**Change**_ | This allows a _User_ who belongs to any _User Group_ in the list to change the attributes of the _Notifier_. |
+| _**Send**_ | Allows _Users_ to send an email.. |
+
+NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
+
+{{% include "userguide/reusable/AuditTrail.md" %}}
 
 ## Notifier Templates
 

@@ -1,6 +1,6 @@
 ---
-title: "Deployment Log"
-linkTitle: "Deployment Log"
+title: "Deployment Log APIs"
+linkTitle: "Deployment Log APIs"
 weight: 22
 description: >
   Retrieve a deployment log.

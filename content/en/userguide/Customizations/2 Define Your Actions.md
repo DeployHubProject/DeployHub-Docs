@@ -75,14 +75,13 @@ The Dashboard view displays all information related to a specific _Action_.
 
 | Details | Description |
 | --- | --- |
-| _**Name**_ | A unique Name that describes the _Action._ |
-| _**Summary**_ | A brief description of what the _Action_ does. |
-| _**Category**_ | Categories are used to arrange _Actions_ in an orderly manner. Assigning a Category to an _Action_ allows lists of Categories to be used throughout DeployHub. Clicking on an individual Category expands the list and shows all _Actions_ that belong to that Category. You can add a new Catergory by simply adding it to the list using the entry field. |
+| **Name** | A unique Name that describes the _Action._ |
+| **Summary** | A brief description of what the _Action_ does. |
+| **Category** | Categories are used to arrange _Actions_ in an orderly manner. Assigning a Category to an _Action_ allows lists of Categories to be used throughout DeployHub. Clicking on an individual Category expands the list and shows all _Actions_ that belong to that Category. You can add a new Category by simply adding it to the list using the entry field. |
 | **Owner Type** | User or Group |
-| _**Owner**_ | The _User_ or _Group_ name of the _Action's_ owner. The default owner is the _User_ who created the _Action_. |
-| _**Created**_ | An auto generated date when the _Action_ was created (read-only). |
-| _**Modified**_ | An auto generated date when the _Action_ was last modified (read-only). |
-
+| **Owner** | The _User_ or _Group_ name of the _Action's_ owner. The default owner is the _User_ who created the _Action_. |
+| **Created** | An auto generated date when the _Action_ was created (read-only). |
+| **Modified** | An auto generated date when the _Action_ was last modified (read-only). |
 
 ### Workflow Section
 
@@ -108,7 +107,6 @@ You can also export the generated workflow as a _Procedure_. To do this, right-c
 
 NOTE: In the Workflow area, an object represents the currently selected Action. It is distinguishable by the arrow icon that appears in the object along with the word "Start", and it is positioned in the top of the window. It can be moved horizontally to aid with Workflow layout. This Start Activity has a single Output Anchor which must be connected to the first Activity to be executed, otherwise DeployHub does not know where to begin, and the Workflow will fail.
 
-
 ### Commenting on an Action
 
 Click on the 'Comment' link within each entry to open a text entry field just below the deployment information. There is a field labeled "Say something about this Action?" for comments and files. Entering text into this field activates the _Add Message_ button. Click on this button to save the comment as a new audit entry.
@@ -132,5 +130,6 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Acti
 |**Execute**| Allows _Users_ to execute this _Action_. |
 
 NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
+
 {{% include "userguide/reusable/AuditTrail.md" %}}
 

@@ -46,8 +46,7 @@ Based on what you selected, you will be provided with the appropriate fields to 
 
 ## Viewing and Editing _Components_ with the Dashboard
 
-_Components_ are defined as Container, File or Database.  These three definition types will address all of the different types of _Components_ you may need from microservices to binares and DB updates.  
-The Dashboard view displays all information related to a specific _Component Base Version_ or _Component Version_. Depending on what type of _Component_ you are defining, you will be presented with different data definition fields.
+_Components_ are defined as Container, File or Database.  These three definition types will address all of the different types of _Components_ you may need from microservices to binares and DB updates. The Dashboard view displays all information related to a specific _Component Base Version_ or _Component Version_. Depending on what type of _Component_ you are defining, you will be presented with different data definition fields.
 
 The following fields are common to all _Components_:
 
@@ -60,12 +59,11 @@ The following fields are common to all _Components_:
 | _**Summary**_ | A short text field with a description of the _Component_. |
 | _**Created**_ | The date and time that the _Component_ was created. |
 | _**Modified**_ | The date and time of the last time the _Component_ was changed. |
-| _**Endpoint Type**_ | Used to map the _Component_ to _Endpoints_ within an _Environment_ at deployment.  This allows DeployHub to map the _Component_ to the correct Endpoint when moving across different environments. For example a database update is mapped to an endpoint with a database, or an .EAR file is mapped to an endpoint with WebSphere Server.
+| _**Endpoint Type**_ | Used to map the _Component_ to _Endpoints_ within an _Environment_ at deployment.  This allows DeployHub to map the _Component_ to the correct _Endpoint_ when moving across different environments. For example a database update is mapped to an _Endpoint_ with a database, or an .EAR file is mapped to an _Endpoint_ with WebSphere Server.
 | _**Change Request Data Source**_ | This _Data Source_ assigned to the _Component_ for tracking Change Request. |
 | _**Category**_ | Categories allow the selection of _Components_ in an orderly manner. Assigning a Category to a _Component_ allows lists of Categories to be used throughout DeployHub. You can add a new Category by simply typing it into the entry field, or use an existing Category displayed in the drop down. |
 | _**Always Deploy**_ | The _Component_ is deployed to the associated _Endpoint(s)_ in the _Target Environment_ regardless if the _Component_ is already present on the _Endpoint(s)._ This is useful for monoloithc applications where you want to copy over a binary for example.|
 | _**Deploy Sequentially**_ | Normally when a _Component_ in an _Application_ is deployed to several _Endpoints_ in an _Environment_, it is deployed to each _Endpoint_ at the same time (in parallel). The "Deploy Sequentially" option changes this behavior to force the _Component_ to deploy to each _Endpoint_ in turn, sequentially. |
-| _**Base Directory**_ | The Base Directory for a _Component_ can either be absolute or relative. If it is absolute, i.e. 'c:\main' for Windows or '/main' for Linux/Unix, etc., then it replaces the Base Directory for the _Endpoint_. If the _Component's_ Base Directory is relative, i.e. 'SomeFiles\SomeMoreFiles', then it is appended to the _Endpoint's_ Base Directory, i.e. 'c:\main\SomeFiles\SomeMoreFiles'. Note that the _Target Directory_ for each _Component_ is always appended to this combined path. |
 | _**Pre-Action**_ | An _Action_ that is to be run prior to the deployment of this _Component_. This can be used to perform prerequisite requirements, such as creating directories, creating files from scratch, or moving files between directories. It is executed **after** all of the files have been pulled from the _Repositories_ referenced in the _Component Items_ associated with the _Component_ but **before** they are deployed to _Endpoints_ in the target _Environment_. |
 | _**Post-Action**_ | An _Action_ that is to be run before the deployment of this _Component_. This can be used to execute actions on the target _Endpoint_ after the _Component_ has been deployed. |
 | _**Custom Action**_ | An _Action_ that replaces the usual Deployment Engine processing. Custom _Actions_ can be used to call Ansible, Helm or other external deployment tools.|
@@ -127,7 +125,7 @@ A map showing all _Environments_ where the _Component_ is deployed.
 
 This section shows a list of all _Applications_ that are consuming this _Component_.
 
-{{% include "userguide/reusable/AuditTrail.md" %}}
+{{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
 
 ### Access
 

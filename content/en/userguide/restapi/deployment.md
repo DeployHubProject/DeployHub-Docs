@@ -1,6 +1,6 @@
 ---
-title: "Deployment"
-linkTitle: "Deployment"
+title: "Deployment APIs"
+linkTitle: "Deployment APIs"
 weight: 20
 description: >
   Start a deployment for a specified Application

@@ -1,12 +1,10 @@
 ---
-title: "Environments"
-linkTitle: "Environments"
+title: "Environment APIs"
+linkTitle: "Environment APIs"
 weight: 26
 description: >
   Get a list of Environments.
 ---
-
-
 
 ## List Environments
 

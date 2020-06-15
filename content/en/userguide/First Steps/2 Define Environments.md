@@ -61,9 +61,10 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 | **Create Calendar Entries** | Allows _Users_ to control the Calendar for the selected _Environment_. NOTE: Securing Environment Calendars is only available in DeployHub Pro.|
 | **Deploy** | Allows _Users_ to deploy  _Applications_ into the selected _Environment_. |
 
-{{% include "userguide/reusable/AuditTrail.md" %}}
 
 {{% include "userguide/reusable/Attributes.md" %}}
+
+{{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
 
 ### Endpoint 
 
