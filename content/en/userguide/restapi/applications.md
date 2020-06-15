@@ -24,7 +24,7 @@ If the "all" parameters is not specified then only the _Applications_ associated
 | ---- | ---------- | ----------- | -------- | ---- |
 | all | query | y or n | No | string |
 
-{{% include "userguide/reusable/API Application Result.md" %}}
+{{% include "userguide/reusable/Model Application Result.md" %}}
 
 ## Retrieve specific _Application_ or _Application Version_
 
@@ -70,7 +70,7 @@ This mechanism ensures that the invoking user has permission to create a new ver
 | app_id | path | Is the ID of the _Application_ which will be the parent of the new _Application Version_. Either its name, its qualified name with its parent _Domains_ included in dot notation (i.e. GLOBAL.products) or its internal ID. The newly created _Application Version_ will inherit all the attributes from this _Application_. | Yes | integer |
 | task | query | Is the identifier of a _Task_ to execute in order to create the new _Application Version_. Either its name, its qualified name with its _Domain_ and any parent _Domains_ included in dot notation (i.e. GLOBAL.Product) or its internal ID. If the _Task_ is not specified, the first accessible _Create Version Task_ within the _Application's_ _Domain_ is used (or any _Create Version Task_ in parent _Domains_ as long as they are set to be "available" to _Sub-domains_). | No | string |
 
-{{% include "userguide/reusable/API Success.md" %}}
+{{% include "userguide/reusable/Model Success.md" %}}
 
 ## Replace Component
 

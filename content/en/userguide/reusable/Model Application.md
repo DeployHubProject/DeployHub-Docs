@@ -1,4 +1,4 @@
-**_Application_ Object for APIs**
+**_Application_ Object**
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |

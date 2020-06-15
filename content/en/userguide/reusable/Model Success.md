@@ -1,6 +1,6 @@
-**Response for Success/Fail Schema**
+**Response Success Object**
 
-Value is true for a successful result, false for unsuccessful result
+This Object contains the success/failed return code and an error message.
 
 | Name | Type | Boolean Description| Required |
 | ---- | ---- | ----------- | -------- |

@@ -1,4 +1,4 @@
-**Responses for Event Creator**
+**_Event Creator_ Object**
 
 Is an Object representing the user who created the Event.
 

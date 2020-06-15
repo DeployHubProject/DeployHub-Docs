@@ -12,7 +12,7 @@ Retrieves a calendar event for an _Environment_. This call returns a JSON object
 
 | HTTP Verb | URL |
 | ---- | ----------- |
-| GET | /dmadminweb/API/approve/{app_id} |/dmadminweb/API/assign/application/{app_id}/{env_id} |
+| GET | /dmadminweb/API/calendar |
 
 **Parameters**
 
@@ -23,10 +23,10 @@ Retrieves a calendar event for an _Environment_. This call returns a JSON object
 | starttime | query | Is a date/time which - if specified - restricts the result to only include events which start on or before the specified time. If endtime is not provided, the API returns all future events. Values can be: <li>  YYYY:MM:DD - A date represented by a 4 digit year, a 2 digit month number and a 2 digit day of month.</li>  <li>YYYY:MM:DD:hh:mm - A date and time represented by a 4 digit year, a 2 digit month number, a 2 digit day of month and then the hours and minutes. </li> <li> nnnnnnnnnn - An integer number representing the number of seconds since midnight, 1st Jan 1970 (Epoch time) </li> | No | string |
 | endtime | query | Is a date/time which - if specified - restricts the result to only include events which start on or after the specified time. If starttime is not provided, the API only returns events that in the future. Specifying a starttime before the current date/time will return historical events. Values can be: <li> YYYY:MM:DD - A date represented by a 4 digit year, a 2 digit month number and a 2 digit day of month.</li> <li> YYYY:MM:DD:hh:mm -  A date and time represented by a 4 digit year, a 2 digit month number, a 2 digit day of month and then the hours and minutes. <li> nnnnnnnnnn - An integer number representing the number of seconds since midnight, 1st Jan 1970 (Epoch time) </li>| No | string |
 
-**Responses**
 
-| Return Code | Return Code Description | Schema |
-| ---- | ----------- | ------ |
-| 200 | Success or failure.  Check success field for status. | [calendar_event_result](/userguide/restapi/models/#calendar_event_result) |
-
-{{% include "userguide/reusable/.md" %}}
+{{% include "userguide/reusable/Model Calendar Event Result.md" %}}
+{{% include "userguide/reusable/Model Calendar Event.md" %}}
+{{% include "userguide/reusable/Model Application.md" %}}
+{{% include "userguide/reusable/Model Event Timestamp.md" %}}
+{{% include "userguide/reusable/Model Event Creator.md" %}}
+{{% include "userguide/reusable/Model Event Environment.md" %}}

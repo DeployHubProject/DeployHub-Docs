@@ -1,4 +1,4 @@
-**Responses for Event Timestamp**
+**_Event Timestamp_ Object**
 
 datetime and epoc
 
