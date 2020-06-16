@@ -69,7 +69,7 @@ The Dashboard view displays all information related to a specific _Function_ or 
 | --- | --- |
 | **Name** | A unique Name that identifies the _Function_ or _Procedure_ |
 | **Summary** | A brief description of what the _Function_ or _Procedure_ does. |
-| **Category** | Categories are used to arrange _Function_ or _Procedure_ in an orderly manner. Assigning a Category to an _Function_ or _Procedure_ allows lists of Categories to be used throughout DeployHub. Clicking on an individual Category expands the list and shows all _Function_ or _Procedure_ that belong to that Category. You can add a new Category by simply adding it to the list using the entry field. |
+| **Category** | Categories are used to arrange _Function_ or _Procedure_ in an orderly manner. Assigning a Category to an _Function_ or _Procedure_ allows lists of Categories to be used throughout DeployHub. Clicking on an individual Category expands the list and shows all _Function_ or _Procedure_ that belong to that Category. You can add a new Category by simply adding it to the list using the entry field. Pre-defined Categories include: <li>Build - _Actions_, _Functions_ and _Procedures_ for calling ANT (SalesForce integration).</li><li>Database - _Actions_, _Functions_ and _Procedures_ for database updates.</li><li>Deploy-_Actions_, _Functions_ and _Procedures_ for Deployments.</li><li>Dropzone- _Actions_, _Functions_ and _Procedures_ for interacting with the Dropzone.</li><li>File Logic-_Actions_, _Functions_ and _Procedures_ related to File manipulation.</li><li>Flow Logic-_Actions_, _Functions_ and _Procedures_ for if then else in DMScrit.</li><li>Loops-_Actions_, _Functions_ and _Procedures_for file looping.</li><li>General-Non-categorized Objects (default).</li><li>WebLogic-_Actions_, _Functions_ and _Procedures_ for deploying to WebLogic.</li><li>WebSphere-_Actions_, _Functions_ and _Procedures_ for deploying to WebSphere.</li><li>Windows-_Actions, Functions_ and _Procedures_ used for Windows deployments.</li> |
 | **Owner Type** | User or Group |
 | **Owner** | The _User_ or _Group_ name of the _Function_ or _Procedure's_ owner. The default owner is the _User_ who created the _Function_ or _Procedure_. |
 | **Created** | An auto generated date when the _Function_ or _Procedure_ was created (read-only). |
@@ -197,7 +197,7 @@ The General tab is where the basic information about the _Function_ or _Procedur
 | --- | --- |
 | _**Name**_ | Name of the _Function_/_Procedure._ This cannot be the same as a reserved word within DMScript (see the DMScript chapter), as it will cause a syntax error when executed. |
 | _**Summary**_ | A short description of the _Function_/_Procedure._ |
-| _**Category**_ | The category in which the _Function/Procedure_ can be found under the Activities pane on the Action Editor. |
+| _**Category**_ | The category in which the _Function/Procedure_ can be found under the Activities pane on the Action Editor.   |
 | _**Owner Type**_ | The default owner is the _User_ who created the _Function/Procedure_. When editing this field, the _Owner Type_ field is available which includes _Owner_ and _Group_ as choices. Selecting one of these causes the Owner field to display either _Users_ or _Groups_ to choose from. |
 | _**Created**_ | The date and time the _Function_/_Procedure_ was created. Read Only. |
 | _**Modified**_ | The date and time that the _Function_/_Procedure_ was last modified. Read Only. |

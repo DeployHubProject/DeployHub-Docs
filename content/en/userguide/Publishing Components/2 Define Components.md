@@ -8,13 +8,26 @@ description: >
 
 ## The _Component_ List View for Adding or Deleting
 
-Manage your _Components Base Version_ and _Component Versions_ using the Component List View accessible from the left hand _Component_ menu option.  You will be provided a list of all _Components_ organized by version and _Domain_. If you have not defined any _Components_ to DeployHub, you will see only the sample data.
+Manage your _Components Base Version_ and _Component Versions_ to which you have access using the Component List View accessible from the left hand _Component_ menu option.  There is a row for every _Environment_ to which the _Component Base Version_ or _Component Version_ has been deployed.  For this reason, you will see multiple entries for the same _Component_ if it has been deployed to multiple _Environments_. You will be provided a list of all _Components_ organized by the following: 
+
+| List Column | Description|
+|---|---|
+|**Version**|  The _Component Base Version_ or _Component Version_ number. |
+|**Domain**| The _Domain_ to which the _Component_ belongs.|
+|**Parent**| The _Component Base Version_ from which the _Component Version_ was created. This will be empty for the _Component Base Version_.|
+|**Environment**| The _Environment_ to which the _Component_ has been deployed. Each _Environment_ will represent a different row in the List View table.|
+|**Last Deployment to Environment**| The Deployment Log number.|
+|**Completed**|The date and time of the last deployment to the listed _Environment_.|
+|**Results**| Success or Fail.|
+
+Note: If you have not defined any _Components_ to DeployHub, you will see only the sample data.
 
 You can also use the Filter bar, represented by a funnel icon, to reorder your _Component_ List View.  You can filter on:
 
 - Domain
 - Environment
 - Last Deployment
+- Parent
 - Result
 - Version
 
@@ -25,9 +38,9 @@ The _Component_ List View has the following Tabs.
 | Tab | Description |
 | --- | --- |
 |Refresh | Refreshes the browser. |
-| +Add | Allows you to Add a new _Component Base Version_. |
-| New Component Version | Creates a copy of the selected _Component_ in the list. |
-| Delete | Deletes the selected item. |
+| +Add Base | Allows you to Add a new _Component Base Version_. You will select from one of three types: Container, Application File, Database |
+| +Add Version | Creates a copy of the selected _Component_ in the list creating a new _Component Version_.  |
+| Delete | Deletes the selected item. However, you must delete the _Components_ starting from the newest to the oldest.  The _Component Base Version_ would be deleted last. Sorting by "Version" gives you the order.  |
 | List | Takes you back to the List View if you have been in the Map View. |
 | Map | Displays a global Map of all _Component_ versions, with their _Application_ relationships.  |
 
@@ -37,37 +50,37 @@ When adding new _Components_ you will select the type of _Component_ you want to
 
 | **Type** | **Description** |
 | --- | --- |
-| Docker Container | For _Components_ residing in a Docker Registry. |
-| Application File | For files residing in a file repository (binaries). |
-| Database | For SQL statements residing in a file repository. |
+| Container | For Containers such as Docker.  |
+| Application File | For binary files such as .jar, .war, .ear, .exe, .dll, Linux executable files, or similar artifacts.   |
+| Database | For SQL files such as .ddl or other database update scripts. |
 
-Based on what you selected, you will be provided with the appropriate fields to complete.
 
 ## Viewing and Editing _Components_ with the Dashboard
 
-_Components_ are defined as Container, File or Database.  These three definition types will address all of the different types of _Components_ you may need from microservices to binaries and DB updates. The Dashboard view displays all information related to a specific _Component Base Version_ or _Component Version_. Depending on what type of _Component_ you are defining, you will be presented with different data definition fields.
+_Components_ are defined as Container, Application File or Database.  These three definition types will address all of the different types of _Components_ you may need from microservices to binaries and DB updates. The Dashboard view displays all information related to a specific _Component Base Version_ or _Component Version_. Depending on what type of _Component_ you are defining, you will be presented with different data definition fields.
 
 The following fields are common to all _Components_:
 
 | Field | Description |
 | --- | --- |
-| **Domain** | The _Domain_ the _Component_ will be published to. |
-| _**Name**_ | The name of the _Component._ |
+| **Full Domain** | The fully qualified path of the _Domain_ that the _Component_ is to be associated, showing all parent _Domains_. |
+| **Name** | The name of the _Component._ |
 | **Owner Type** | Owned by a User or Group. |
-| _**Owner**_ | The owner of the _Component_, whose default value is the creator of the _Component_.  
-| _**Summary**_ | A short text field with a description of the _Component_. |
-| _**Created**_ | The date and time that the _Component_ was created. |
-| _**Modified**_ | The date and time of the last time the _Component_ was changed. |
-| _**Endpoint Type**_ | Used to map the _Component_ to _Endpoints_ within an _Environment_ at deployment.  This allows DeployHub to map the _Component_ to the correct _Endpoint_ when moving across different environments. For example a database update is mapped to an _Endpoint_ with a database, or an .EAR file is mapped to an _Endpoint_ with WebSphere Server.
-| _**Change Request Data Source**_ | This _Data Source_ assigned to the _Component_ for tracking Change Request. |
-| _**Category**_ | Categories allow the selection of _Components_ in an orderly manner. Assigning a Category to a _Component_ allows lists of Categories to be used throughout DeployHub. You can add a new Category by simply typing it into the entry field, or use an existing Category displayed in the drop down. |
-| _**Always Deploy**_ | The _Component_ is deployed to the associated _Endpoint(s)_ in the _Target Environment_ regardless if the _Component_ is already present on the _Endpoint(s)._ This is useful for monolithic applications where you want to copy over a binary for example.|
-| _**Deploy Sequentially**_ | Normally when a _Component_ in an _Application_ is deployed to several _Endpoints_ in an _Environment_, it is deployed to each _Endpoint_ at the same time (in parallel). The "Deploy Sequentially" option changes this behavior to force the _Component_ to deploy to each _Endpoint_ in turn, sequentially. |
-| _**Pre-Action**_ | An _Action_ that is to be run prior to the deployment of this _Component_. This can be used to perform prerequisite requirements, such as creating directories, creating files from scratch, or moving files between directories. It is executed **after** all of the files have been pulled from the _Repositories_ referenced in the _Component Items_ associated with the _Component_ but **before** they are deployed to _Endpoints_ in the target _Environment_. |
-| _**Post-Action**_ | An _Action_ that is to be run before the deployment of this _Component_. This can be used to execute actions on the target _Endpoint_ after the _Component_ has been deployed. |
-| _**Custom Action**_ | An _Action_ that replaces the usual Deployment Engine processing. Custom _Actions_ can be used to call Ansible, Helm or other external deployment tools.|
-| _**Build Job**_ | The Continuous Delivery Build Job that is used to build/compile the _Component_.  |
-| _**Last Build Number**_ | The number of the last Continuous Delivery Workflow that created the files referenced within the _Component._ |
+| **Owner** | The owner of the _Component_, whose default value is the creator of the _Component_.  
+| **Summary** | A short text field with a description of the _Component_. |
+| **Created** | The date and time that the _Component_ was created. |
+| **Modified** | The date and time of the last time the _Component_ was changed. |
+| **Kind**| Populated based on the Type you selected, i.e. Container, Application File, Database.|
+| _**Endpoint Type**_ | Used to map the _Component_ to _Endpoints_ within an _Environment_ at deployment.  This allows DeployHub to map the _Component_ to the correct _Endpoint_ when moving across different environments. For example a database update is mapped to an _Endpoint_ with a database, or a container is mapped to an _Endpoint_ in Kubernetes. You can add your own _Endpoint_ Types from the Customize Types menu or select from the default options.|
+| **Change Request Data Source** | This _Data Source_ assigned to the _Component_ for tracking Change Request. A Change Request Data Source must be pre-defined for this field to be used. |
+| **Category** | Categories allow the selection of _Components_ in an orderly manner. Assigning a Category to a _Component_ allows lists of Categories to be used throughout DeployHub. You can add a new Category by simply typing it into the entry field, or use an existing Category displayed in the drop down. Pre-defined Categories include: <li>Build - _Actions_, _Functions_ and _Procedures_ for calling ANT (SalesForce integration).</li><li>Database - _Actions_, _Functions_ and _Procedures_ for database updates.</li><li>Deploy-_Actions_, _Functions_ and _Procedures_ for Deployments.</li><li>Dropzone- _Actions_, _Functions_ and _Procedures_ for interacting with the Dropzone.</li><li>File Logic-_Actions_, _Functions_ and _Procedures_ related to File manipulation.</li><li>Flow Logic-_Actions_, _Functions_ and _Procedures_ for if then else in DMScrit.</li><li>Loops-_Actions_, _Functions_ and _Procedures_for file looping.</li><li>General-Non-categorized Objects (default).</li><li>WebLogic-_Actions_, _Functions_ and _Procedures_ for deploying to WebLogic.</li><li>WebSphere-_Actions_, _Functions_ and _Procedures_ for deploying to WebSphere.</li><li>Windows-_Actions, Functions_ and _Procedures_ used for Windows deployments.</li>   |
+| **Always Deploy** | The _Component_ is deployed to the associated _Endpoints_ in the _Target Environment_ regardless if the _Component_ is already present on the _Endpoints_. This is useful for monolithic applications where you want to copy over a binary for example.|
+|_**Deploy Sequentially** | Normally when a _Component_ in an _Application_ is deployed to several _Endpoints_ in an _Environment_, it is deployed to each _Endpoint_ at the same time (in parallel). The "Deploy Sequentially" option changes this behavior to force the _Component_ to deploy to each _Endpoint_ in turn, sequentially. |
+| **Custom Action** | An _Action_ that replaces the usual Deployment Engine processing. Custom _Actions_ can be used to call Ansible, Helm or other external deployment tools.|
+|**Build Job** | The Continuous Delivery Build Job that is used to build/compile the _Component_.  |
+| **Build ID** | The internal identifier for the _Build Engine_. |
+| **Build URL**| The URL to the _Build Engine_. |
+| **Last Build Number** | The number of the last Continuous Delivery Workflow that created the files referenced within the _Component._ |
 
 ### Container Specific Data Definition
 
@@ -75,8 +88,6 @@ Docker component items have the following additional attributes, none of which a
 
 | **Field**| **Description** |
 | --- | --- |
-| **Build ID** | The internal identifier for the _Build Engine_. |
-| **Build URL**| The URL to the _Build Engine_. |
 | **Helm Chart** | The Helm Chart used to deploy the _Component_. |
 | **Helm Chart Version** | The Helm Chart Version from the Helm Repository. |
 | **Helm Chart Namespace** | The sub-division of the Kubernetes cluster where your _Component_ Container should run. |
@@ -85,11 +96,17 @@ Docker component items have the following additional attributes, none of which a
 |**Docker Registry**| The Docker registry where the Container is stored. |
 | **Docker Digest** | The SHA number of the Docker image. |
 |**Docker Tag**| The tag that was assigned to the Docker image. ||
+|**Git Commit**| The Git SHA number. Populated when integrated into Continuous Delivery Pipelines.|
+|**Git Repo**| The Git Repository that triggered the build.Populated when integrated into Continuous Delivery Pipelines.|
+|**Git Tag**| The last tag for the Git Repository. Populated when integrated into Continuous Delivery Pipelines.|
+|**Git URL**| The URL for the Git Repository.Populated when integrated into Continuous Delivery Pipelines.|
 
 ### Application Specific Data Definition
 
 |**Field** | **Description**|
 | --- | --- |
+| _**Pre-Action**_ | An _Action_ that is to be run prior to the deployment of this _Component_. This can be used to perform prerequisite requirements, such as creating directories, creating files from scratch, or moving files between directories. |
+| _**Post-Action**_ | An _Action_ that is to be run after the deployment of this _Component_. This can be used to execute actions on the target _Endpoint_ after the _Component_ has been deployed. |
 | _**Target Directory**_ | The Base Directory for a _Component_ can either be absolute or relative. If it is absolute, i.e. 'c:\main' for Windows or '/main' for Linux/Unix, etc., then it replaces the Base Directory for the _Endpoint_. If the _Component's_ Base Directory is relative, i.e. 'SomeFiles\SomeMoreFiles', then it is appended to the _Endpoint's_ Base Directory, i.e. 'c:\main\SomeFiles\SomeMoreFiles'.If the _Component Item's_ Target Directory has a value, it is _always_ appended to the end of whatever value has been created from the Base Directories of the _Endpoint_ and _Component_. |
 | _**Repository**_ | A required field, this is the _Repository_ where the files to be deployed are located. Clicking on the field presents a drop-down list containing the names of all of the _Repositories_ within the DeployHub installation to which the current _User_ has access. Selecting a Repository will change the Repository Overrides fields to include:<ul style="list-style-type: none;"><li>Any _Property_ that has not been defined at the corresponding _Repository_ Level.</li><li>Any _Property_ that has been defined at the corresponding _Repository_ Level but is marked as being either _overridable_ or _appendable_.</li></ul> For more information on _Repositories_ and their options, see the ["Define Repository" Chapter.](/userguide/setup/2-define-repositories/)|
 | **Repository Overrides**| These fields override data that is defined at the _Repository_ level, for the selected _Repository. |
@@ -100,6 +117,8 @@ When you choose 'Create New Database Component', a window will appear titled "Ed
 
 | Field | Description |
 | --- | --- |
+| _**Pre-Action**_ | An _Action_ that is to be run prior to the deployment of this _Component_. This can be used to perform prerequisite requirements, such as creating directories, creating files from scratch, or moving files between directories. |
+| _**Post-Action**_ | An _Action_ that is to be run after the deployment of this _Component_. This can be used to execute actions on the target _Endpoint_ after the _Component_ has been deployed. |
 | _**Roll-Forward**_ | Used in the event that there is a _Roll Forward_ taking place during a deployment. A _Roll Forward_ takes place when the version being deployed is later than the version located on the target. This is determined by the order that the _Application Versions_ are linked in on the _Base Application's_ Versions tab and NOT by the _Application Version_ name. There are three possible values for this field. <ul style="list-style-type: none;"><li> On: Roll Forward from the _Version_ on the _Endpoint_ +1 to the version being deployed.</li>  <li>Off: Do not include in a Roll Forward.All: Roll Forward from the _Version_ on the _Endpoint_ to the version being deployed inclusive. For example: If pulling SQL files to apply alter scripts, the roll-forward flag should be set to "On" for the corresponding component item(s). If the Environment contains version 2 and we are deploying version 5, this will operate on version 3 (to roll the DB forward from version 2 to version 3), version 4 (to roll the DB forward from version 3 to version 4) and finally for version 5 (to roll the DB forward from version 4 to version 5).</li> </ul>|
 | _**Rollback**_ | Used when there is a Rollback taking place during a deployment. This refers to when the version being deployed is earlier than the version located on the target. This is determined by the order that the _Application Versions_ are linked on the _Base Application's_ Versions tab and NOT by the _Application Version_ name. There are three possible values for this field. <ul style="list-style-type: none;"><li>On: Rollback from the _Version_ on the _Endpoint_ to the _Version_ being deployed + 1 </li><li> Off: Do not include in a rollback. </li> <li>All: Rollback from the _Version_ on the _Endpoint_ to the _Version_ being deployed inclusive. For example: If pulling SQL files to apply rollback scripts, the roll-back flag should be set to "On" for the corresponding component item(s). If the _Environment_ contains version 5 and we are deploying version 2, this will operate on version 5 (to roll the DB back from version 5 to version 4), version 4 (to roll the DB back from version 4 to version 2) and finally for version 3 (to roll the DB back from version 3 to version 2). </li>|
 | _**Target Directory**_ | The Base Directory for a _Component_ can either be absolute or relative. If it is absolute, i.e. 'c:\main' for Windows or '/main' for Linux/Unix, etc., then it replaces the Base Directory for the _Endpoint_. If the _Component's_ Base Directory is relative, i.e. 'SomeFiles\SomeMoreFiles', then it is appended to the _Endpoint's_ Base Directory, i.e. 'c:\main\SomeFiles\SomeMoreFiles'.If the _Component Item's_ Target Directory has a value, it is _always_ appended to the end of whatever value has been created from the Base Directories of the _Endpoint_ and _Component_. |

@@ -8,21 +8,19 @@ description: >
 
 ## Intro to _Components_
 
-DeployHub manages microservices and other reusable objects as _Components_.  _Components_ are assigned to an _Application_ eventhough they are managed independently.  By assigning _Components_ to _Applications_ you are able to track a 'logical"' view of your software solution.  In a monolithic approach, we performed this step at the software compile and link step. In microservices, that step goes away. Microservices are loosely coupled and linked at run-time. Defining _Components_ to _Applications_ puts the _Application_ back in the picture, even if it is only a 'logical' view.
+DeployHub manages microservices and other reusable objects as _Components_.  _Components_ are assigned to an _Application_ eventhough they are managed independently.  By assigning _Components_ to _Applications_ you are able to track a 'logical' view of your software solution.  In a monolithic approach, we performed this step at the software compile and link step. In microservices, that step goes away. Microservices are loosely coupled and linked at run-time. Defining _Components_ to _Applications_ puts the _Application_ back in the picture, even if it is only a 'logical' view.
 
-If you are an API or microservice developer, this will be where you do most of your work. However, application developers may also define _Components_ that are to be used by only a specific _Application_. _Components_ are microservices (containers), Database updates or files, along with Pre and Post _Actions_ that are used to control the deployment at a detailed level. By tracking the low-level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across team.
+If you are an API or microservice developer, this will be where you do most of your work. However, application developers may also define _Components_ that are used only by their specific _Application_. _Components_ are microservices (containers), Database updates or files, along with Pre and Post _Actions_ that are used to control the deployment of the _Component_. By tracking the low-level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across team and _Environments_.
 
 _Components_ change over time, and so DeployHub contains _Component Base Versions_ and _Component Versions_.
 
-- **Component Base Version** : Objects within DeployHub that contain the files and procedures that are deployed to _Endpoints_.
+- **Component Base Version** : The initial definition of a _Component_.
 
 - **Component Version** : A child of the _Component Base Version_ that represents changes.
 
-When you define your _Component_ you also define deployment meta data. By tracking the low-level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across teams and _Environments_.
-
 ## Components and Domains
 
-_Components_ are organized by _Domains_. When you create a new _Component_ you publish it to the _Domain_ that defines the "Solution Space" the _Component_ addresses.  By organizing _Components_ into _Domains_, you create a catalog that allows other teams within your organization to find and reuse your _Components_. The organization of _Components_ by _Domains_ support the Domain Driven Design of a microservices architecture. Before you begin publishing _Components_, you will need to have a _Domain_ ready.  For more on _Domains_ see the "Building Your Domain Catalog" chapter.
+_Components_ are organized by _Domains_. When you create a new _Component_ you publish it to the _Domain_ that defines the "Solution Space" the _Component_ addresses.  By organizing _Components_ into _Domains_, you create a catalog that allows other teams within your organization to find and reuse your _Components_. The organization of _Components_ by _Domains_ support the Domain Driven Design of a microservices architecture. Before you begin publishing _Components_, you will need to have a _Domain_ ready.  For more on _Domains_ see the [Building Your Domain Catalog](/userguide/first-steps/2-defining-domains/).
 
 ## _Components_ and _Applications_
 
@@ -41,14 +39,14 @@ DeployHub uses a back-in versioning engine to track your _Components_. Versionin
 - GiHub, Bugzilla, Jire Change Request (DeployHub Pro Feature)
 - Gitrepo
 - Git commit (Branch and Tag)
-- CD Build /Workflow Number
+- CD Build / Workflow Number
 - Container SHA
 - Docker Registry
 - Enviornment Vairaibles
 - Deployment script (Hlem Chart, Ansible Playbook, etc.)
 - Any Attributes (DB Name for example) such as the _Action_ used to perform the deployment, environment variables, and database schemas.
 
-This information is collected when you define your _Component_ to the DeployHub catalog. You can use the DeployHub CD plugin to automatically update this information via your CD Pipeline once you have defined your _Component Base Version_. When the CD Pipeline initiates a workflow for the _Component_, it indicates that a new version of the _Component_ is being pushed across the Pipeline causing all consuming _Applications_ to be automatically incremented to a new version number.  If a _Component_ changes, the consuming _Application_ also changes.  Both get a new version number.
+This information is collected when you define your _Component_ to the DeployHub catalog. You can use the DeployHub APIs to automatically update this information via your CD Pipeline once you have defined your _Component Base Version_. When your CD engine initiates a workflow for the _Component_, it indicates that a new version of the _Component_ is being pushed across the Pipeline causing all consuming _Applications_ to be automatically incremented to a new version number.  If a _Component_ changes, the consuming _Application_ also changes.  Both get a new version number. For more information see [CD Engines](/userguide/pipeline/2-define-your-build-engines/).
 
 When you first define your _Component_ DeployHub tracks it as the _Component Base Version_. Subsequent updates to that _Component_ creates a new _Component Version_ which represent the updates over time. A _Component Base Version_ is always the first one created, and it acts as a model for subsequent _Component Versions_. Otherwise they are identical types of objects.
 
