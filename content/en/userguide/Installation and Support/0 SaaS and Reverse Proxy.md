@@ -3,29 +3,31 @@ title: "SaaS Sign-up and Reverse Proxy"
 linkTitle: "SaaS Sign-up and Reverse Proxy"
 weight: 1
 description: >
-  Signing up for DeployHub SaaS and the Reverse Proxy for Deployments.
+  How to Sign up 
 ---
 ## SaaS Sign-up Process and the Reverse Proxy
 
-[Sign-up to use the SaaS](https://www.deployhub.com/register-for-team/?) version of DeployHub and start managing microservices immediately. When you sign-up, you will be asked for basic information, such as company and project names to provide you with a unique 'Domain' and 'Project' identifier. If someone else from your organization signs up to DeployHub, they will need to create another Project Name.
+When you [Sign-up to use the SaaS](https://www.deployhub.com/register-for-team/?) version, you will be asked for basic information. Your company and project names are unique 'Domain' and 'Project' identifiers. If someone else from your organization signs up, they will need to create another Project Name.
 
-Once you sign-up, you will see a high level 'Domain' named after your Project name, for example "Teller." In addition, you will be assigned a Pipeline called "MyPipeline" that includes 'Dev", "Test" and "Production" stages. At this point you will be ready to begin defining Credentials, Repositories, and the Components of your Application.
+A high level 'Domain' comes after your Project name, for example "Teller." 
+An assigned Pipeline will be called "MyPipeline" that includes 'Dev", "Test", and "Production" stages. 
+Then you define your Credentials, Repositories, and the Components of your Application.
 
 You can change the name of your Application or reconfigure your Pipeline in any way needed to reflect your own life cycle process.
 
-To begin deploying you will need to install a Reverse Proxy inside your firewall. The Reverse Proxy contacts DeployHub running in our SaaS environment to receive deployment requests.
+To begin deploying, you first install a Reverse Proxy inside your firewall. This contacts DeployHub in our SaaS environment to receive deployment requests.
 
 ## What is the Reverse Proxy
 
-For SaaS users, the Reverse Proxy provides a security layer to prevent you from opening a port to the outside world. The Reverse Proxy uses standard HTTPS request to the DeployHub SaaS  running on the Google GKE environment.  Nothing from the external Google side of the firewall is pushed to the local DeployHub Reverse Proxy. Instead the Reverse Proxy queries the DeployHub SaaS every minute to determine if a deployment is needed.
+A Reverse Proxy queries the DeployHub SaaS every minute to determine if a deployment is needed. For SaaS users, it provides a security layer, preventing you from opening a port to the outside world. It uses standard HTTPS request on the Google GKE environment. Nothing from the external Google side of the firewall is pushed to the local DeployHub Reverse Proxy.
 
-Once the Reverse Proxy determines that a deployment is needed, the Reverse Proxy will execute the deployment using all files on the inside of the firewall. The one-way communication is needed only to initiate the deployment, but all work is done local to your network.  On completion of the deployment, the logs are pushed back up to the DeployHub SaaS for viewing and audit.
+Once the Reverse Proxy determines that a deployment is needed, it executes the deployment using all files on the inside of the firewall. The one-way communication initiates the deployment but all work is done local to your network. On completion of the deployment, the logs are pushed back up to the DeployHub SaaS for viewing and audit.
 
 ![DeployHub Architecture](/userguide/gettingstarted/reverseproxy.png)
 
 ## Reverse Proxy Installation
 
-The Reverse Proxy runs as docker container. In order to install it you need to have Docker up and running.
+The Reverse Proxy runs as docker container. In order to install it, you need to install Docker. 
 
 ## Docker Installation
 

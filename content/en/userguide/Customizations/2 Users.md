@@ -10,7 +10,7 @@ description: >
 
 DeployHub Team has two Groups - Administrators and Users.  Access control to objects are based on these two high level _Groups_. DeployHub Team allows you to create as many _Users_ as required but only the "User" and "Administrator" _Groups_ are supported.
 
-**DeployHub Pro** allows you to create custom User Groups for more granular security control around _Domains_, _Environments_, _Applications_ and _Components_. For information on how to create User _Groups_ with DeployHub Pro see [Creating DeployHub Pro User Groups](/userguide/profeatures/5-pro-groups/.)
+**DeployHub Pro** allows you to create custom UserGroups for more granular security control around _Domains_, _Environments_, _Applications_ and _Components_. For information on how to create User _Groups_ with DeployHub Pro see [Creating DeployHub Pro UserGroups](/userguide/profeatures/5-pro-groups/.)
 
 Both _Users_ and _Groups_ are given access to DeployHub Objects. _Users_ who belong to a _Group_ that has been granted access to an object are also granted the same access. A many-to-many relationship exists between _Users_ and _Groups_, so that a _User_ can belong to many different _Groups_, and a _Group_ can contain many different _Users_.
 
@@ -31,8 +31,8 @@ Access is applied to the following Objects within DeployHub:
 
 | Access | Description |
 | --- | --- |
-| _**View**_ | If a _User_ belongs to a _User Group_ in the View Access list for the this object, the object will be visible. |
-| _**Change**_ | This allows a _User_ who belongs to any _User Group_ in the list to change the attributes of the object as well as to add/remove items from the object. |
+| _**View**_ | If a _User_ belongs to a _UserGroup_ in the View Access list for the this object, the object will be visible. |
+| _**Change**_ | This allows a _User_ who belongs to any _UserGroup_ in the list to change the attributes of the object as well as to add/remove items from the object. |
 | _**Read**_ | Performs no function for the object itself but acts as an _Inherited Permission_ for items created within the object. The exact meaning of 'Read' will depend on the item created within the object. |
 | _**Write**_ | Performs no function for the object itself but acts as an _Inherited Permission_ for items created within the object. The exact meaning of 'Write' will depend on the item created within the object. |
 

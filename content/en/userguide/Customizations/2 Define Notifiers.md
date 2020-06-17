@@ -98,10 +98,10 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Noti
 | Access | Description |
 | --- | --- |
 | _**View**_ | Allows _Users_ to see the _Notifier_. If the _User_ does not belong to a _Group_ in the View Access list, the _Notifier_ will not appear in the List View. |
-| _**Change**_ | This allows a _User_ who belongs to any _User Group_ in the list to change the attributes of the _Notifier_. |
+| _**Change**_ | This allows a _User_ who belongs to any _UserGroup_ in the list to change the attributes of the _Notifier_. |
 | _**Send**_ | Allows _Users_ to send an email.. |
 
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
+NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
 
 {{% include "userguide/reusable/AuditTrail.md" %}}
 

@@ -6,9 +6,8 @@ description: >
   Installing DeployHub Team on-premise.
 ---
 
-DeployHub Team is installed locally using a Docker Image that includes all the necessary prerequisites. In other words, you need Docker installed.
 
-## Docker Installation
+## First Step: Docker Installation
 
 [Docker for CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 
@@ -38,12 +37,12 @@ Requires macOS El Capitan 10.11 and newer macOS releases are supported. We recom
 
 See the [Docker Install Test](https://docs.docker.com/get-started/#test-docker-version) instructions.
 
-## Downloading and Installing DeployHub Team
+## Download and Install DeployHub Team
 
-Once you have downloaded and tested your Docker installation, you are ready for DeployHub Team. To download and run the container follow [the online instructions](https://www.deployhub.com/deployhub-oss-on-prem-installation/).
+Once Docker is installation, you are ready to download and run the container follow [the online instructions](https://www.deployhub.com/deployhub-oss-on-prem-installation/).
 
-## Using Multiple Deployment Engines
+## Use Multiple Deployment Engines
 
-Multiple deployment engines can be used to distribute large deployments which you can add as you expand the number of endpoints used. Multiple deployment engines can distribute simultaneous deployment to multiple locations, making it faster. Additional deployment engines can only be installed on Linux.
+Multiple deployment engines distribute large deployments, which you add as you expand the number of endpoints used. Multiple deployment engines can distribute simultaneous deployment to multiple locations, making it faster. Additional deployment engines can only be installed on Linux.
 
 Download the deployment engine RPM from the DeployHub website. Install the RPM on the Linux server that will be an additional deployment engine host. Update the _Domain_ entries to point to the new deployment engine for that _Domain_.

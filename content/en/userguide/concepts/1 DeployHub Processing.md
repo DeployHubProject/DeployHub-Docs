@@ -1,22 +1,22 @@
 ---
-title: "DeployHub Architecture"
-linkTitle: "DeployHub Architecture"
+title: "Architecture"
+linkTitle: "Architecture"
 weight: 4
 description: >
-  Understanding DeployHub's Architecture and Processesing.
+  Understanding our Architecture and Processesing
 ---
 
-## DeployHub Architecture
+## Architecture
 
-DeployHub includes a central engine that can be installed locally or accessed via the SaaS offering via a reverse proxy. The central engine connects to external repositories, CD engines, DevOps tools, data sources, transfer protocols and notification tools. DeployHub's open architecture allows you to plug-in the tool set you use to define your release configurations.
+DeployHub includes a central engine that can be installed locally or accessed via the SaaS offering via a reverse proxy. The central engine connects to external repositories, CD engines, DevOps tools, data sources, transfer protocols and notification tools. With our open architecture, you plug-in the tool-set you use to define your release configurations.
 
-For releasing _Components_, DeployHub uses an agentless architecture that is designed to support both a modern architecture of containers as well as legacy systems. And if you have already invested time and effort around solutions like Helm or Ansible to update your cluster, great! We can call those external solutions to perform the update and provide all the microservice configuration mapping and version information. DeployHub also has plug-ins to continuous delivery pipelines that supports continuous configuration management as part of your release process.
+For releasing _Components_, an agentless architecture supports both a modern architecture of containers as well as legacy systems. If you use solutions like Helm or Ansible to update your cluster, great, we can call those external solutions to perform the updates and provide all the microservice configuration mapping and version information. DeployHub also has plug-ins to continuous delivery pipelines that supports continuous configuration management as part of your release process.
 
 ![Architecture](/userguide/concepts/Architecture.png)
 
 ## Reverse Proxy and SaaS
 
-If you are a SaaS customer, a 'one-way' reverse proxy is used on your side of the firewall. The reverse proxy can be timed to submit request for deployments based on the installation parameters.
+As a SaaS customer, a 'one-way' reverse proxy is used on your side of the firewall. This can be timed to submit request for deployments based on the installation parameters.
 
 ![SaaS Architecture](/userguide/concepts/ReverseProxy.png)
 
@@ -26,7 +26,7 @@ DeployHub integrates with external deployment solutions such as Helm to perform 
 
 ## The DeployHub Engine for Monolithic Releases and Database Updates
 
-DeployHub includes its own deployment engine for managing monolithic deployments and database updates. The DeployHub engines moves files and scripts from source _Repositories_ to a target _Environment_ which contains one or more _Endpoints_. This is performed via _Releases_ or _Applications_, which contain _Components_. _Components_ each reference a Repository, whose files and scripts are placed into a Dropzone. Customized _Actions_ can be used to manipulate the files (edit, delete, etc.) within the Dropzone before being deployed, in a predetermined order, to every _Endpoint_ within the _Environment_. A _Release_ is a collection of _Applications._
+Our deployment engine manages monolithic deployments and database updates. It moves files and scripts from source _Repositories_ to a target _Environment_ which contains one or more _Endpoints_. This is performed via _Releases_ or _Applications_, which contain _Components_. _Components_ reference a Repository, whose files and scripts are placed into a Dropzone. Customized _Actions_  manipulate the files (edit, delete, etc.) within the Dropzone. This happens before being deployed in a predetermined order to every _Endpoint_ within the _Environment_. A _Release_ is a collection of _Applications._
 
 DeployHub performs all deployments in an Agentless mode. No remote agents need be installed on the target _Endpoint_ to execute deployments.
 
@@ -34,25 +34,25 @@ A _DropZone_ is created for each _Component_ during a deployment. Files from the
 
 DeployHub uses ftp, ftps, sftp, or Windows protocol to transfer files. When a deployment is executed, DeployHub performs the following steps:
 
-1The first _Application_ is moved onto the stack. Any Pre-Action for the _Application_ will be executed at this point.
+The first _Application_ is moved onto the stack. Any Pre-Action for the _Application_ will be executed at this point.
 
 |Step|Description|
 |---|---|
 |1| The first _Component_ is moved onto the stack.|
-|2| A _DropZone_ is created for the Component.|
-|3| The first _Component_ is processed. Files from the _Repository_ referenced by the _Component_ are placed into the _DropZone_. |
-|4| If needed, A Pre-Action for the _Component_ is performed within the _DropZone_ before deploying them.|
+|2| A _DropZone_ is created for the _Component_.|
+|3| The first _Component_ is processed. It references specific files from the _Repository_ and these are placed into the _DropZone_. |
+|4| If needed, A Pre-Action for the _Component_ is performed within the _DropZone_ before deployment. |
 |5| The _DropZone_ files are placed into every _Endpoint_ within the _Environment_ where the _Endpoint_ type is the same as the _Component_ type. Keep in mind that a _Component_ can have only one type and an _Endpoint_ can have many types.|
 |6|A Post-Action for the _Component_ is performed for cleanup or additional manipulation of files. It is run against every _Endpoint_ with the same _Component Type_ as the _Component_.|
-|7|If there are more _Components_, steps 2 through 7 are performed again after a new _DropZone_ is created.
+|7|If there are more _Components_, steps 2 through 7 are performed again after a new _DropZone_ is created. 
 |8|Pre and Post processing _Actions_ defined in the _Application_ or _Release_ are performed on each of the target _Endpoints_ in the _Environments_. Any errors found at the delivery level are logged and may fail the deployment. All logs are reported back to DeployHub and recorded in the History Tab for each _Application_ or _Release_.
 
-NOTE: A successful Deployment email template will notify recipients when the deployment proceeds normally. Exceptions cause the deployment to be marked as 'failed.' The Failed Deployment Email Template assigned to the _Application_ will notify recipients of that failure. Various problems, such as a missing directory on a filesystem _Repository_ type, or an operating system error which prevents the creation of a _DropZone_ directory, will result in a failure. Missing files, conversely, would not necessarily cause a failure since DeployHub has no way of knowing whether the files are supposed to be there or not. Under these circumstances, Post-Actions that have been assigned to the _Components_ could be designed, among other things, to verify what has been deployed. An Abort could be issued from within a Post-Action, which would cause the deployment to be marked as 'failed'.
+NOTE: A Successful Deployment Email template will notify recipients when the deployment proceeds normally. A Failed Deployment Email Template will notify recipients of a failure. Various problems, such as a missing directory on a filesystem _Repository_ type, or an operating system error which prevents the creation of a _DropZone_ directory, will result in an exception. Missing files, conversely, would not necessarily cause a failure since DeployHub has no way of knowing whether the files are supposed to be there or not. Under these circumstances, Post-Actions assigned to the _Components_ could verify what has been deployed. Also an Abort could be issued from within a Post-Action, and then be marked as 'failed'.
 
 NOTE: The Base Directory for a _Component_ can either be absolute, i.e. 'c:\main' for Windows or '/main' for Linux/Unix, etc., in which case it replaces the Base Directory for the _Endpoint_. If the _Component's_ Base Directory is relative, i.e. 'SomeFiles\SomeMoreFiles', then it is appended to the _Endpoint's_ Base Directory,
 
 For example: 'c:\main\SomeFiles\SomeMoreFiles'. If the _Component_ Target Directory has a value, it is always appended to the end of whatever value has been created from the Base Directories of the _Endpoint_ and _Component_.
 
-The following diagram shows how the deployment process within DeployHub works:
+The following diagram shows how the deployment process works:
 
 ![Deployment Process](/userguide/concepts/ProcessFlow.jpg)

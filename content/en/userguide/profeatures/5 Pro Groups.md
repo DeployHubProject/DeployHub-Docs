@@ -1,9 +1,9 @@
 ---
-title: "Creating Pro User Groups"
-linkTitle: "Creating Pro User Groups"
+title: "Creating Pro UserGroups"
+linkTitle: "Creating Pro UserGroups"
 weight: 82
 description: >
-  Add additional User Groups for more security and control of _Components_ and deployments.
+  Add additional UserGroups for more security and control of _Components_ and deployments.
 ---
 # Creating and Deleting Groups
 
@@ -28,7 +28,7 @@ Override Access Control allows any _User_ belonging to a _Group_ with this contr
 | Field | Description |
 | --- | --- |
 | Users | Allows the _User_ to create and add Users to any of the _Domains_ to which they belong. |
-| User Groups | Allows the _User_ to create and add _Groups_ to any of the _Domains_ to which they belong. |
+| UserGroups | Allows the _User_ to create and add _Groups_ to any of the _Domains_ to which they belong. |
 | Domains | Allows the _User_ to create and add _Sub-domains_ to any of the _Domains_ to which they belong. |
 | Environments | Allows the _User_ to create and add _Environments_ to any of the _Domains_ to which they belong. |
 | Endpoints | Allows the _User_ to create and add _Endpoints_ to any of the _Domains_ to which they belong. |

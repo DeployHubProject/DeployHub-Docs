@@ -1,8 +1,8 @@
 ---
   
-title: "DeployHub Key Concepts"
-linkTitle: "DeployHub Key Concepts"
+title:  "Key Concepts"
+linkTitle: "Key Concepts"
 weight: 10
 description: >
-  Key concepts on how DeployHub organizes Domains, Applications, Components and Environments.
+  Organization of Domains, Applications, Components and Environments.
 ---

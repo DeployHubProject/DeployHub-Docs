@@ -1,7 +1,7 @@
 ---
 title: "Welcome to DeployHub"
-linkTitle: "Welcome to DeployHub"
+linkTitle: "Welcome"
 weight: 1
 description: >
-  Installation, support and other bits of good info.
+  Installation, Support and other bits of good info
 ---

@@ -89,7 +89,7 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Func
 |**Change**| Allows _User_ to change the _Function_ or _Procedure_ characteristics i.e. Name, Summary, etc. |
 |**Execute**| Allows _Users_ to execute this _Function_ or _Procedure_. |
 
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
+NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
 
 {{% include "userguide/reusable/AuditTrail.md" %}}
 

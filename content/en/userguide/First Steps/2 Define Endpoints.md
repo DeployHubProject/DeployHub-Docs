@@ -80,4 +80,4 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Endp
 |**Change**| This allows any _User_ that belongs to any _Group_ in this list to make changes to the _Endpoint_. |
 |**Available Groups**|This list contains all the Groups within the DeployHub installation. Dragging and dropping back and forth between this list and the other two lists allows or prevents access to viewing and changing the selected _EndPoint_.
 
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
+NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**

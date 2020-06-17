@@ -23,7 +23,7 @@ To create a _Deploy Task_:
 - There are also two lists, 'Group Access' and 'Available Groups', below the 'Tasks in this Domain' and 'Task Detail' areas.
 - Click on a _Group_ in the 'Available Groups' list and drag and drop it into the 'Group Access' list in order to allow _Users_ in the selected _Group_ to run the selected _Deploy Task_.
 
-NOTE: **DeployHub Team** has two Groups, Administrators and Users. If you need more granular User Groups, you will need to upgrade to **DeployHub Pro**.
+NOTE: **DeployHub Team** has two Groups, Administrators and Users. If you need more granular UserGroups, you will need to upgrade to **DeployHub Pro**.
 
 To run a _Deploy Task_:
 

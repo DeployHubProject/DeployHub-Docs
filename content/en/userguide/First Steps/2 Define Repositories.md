@@ -51,7 +51,7 @@ The following details are common to all _Repository_ types:
 | **Modified**| Auto generated date when the _Repository_ was updated.|
 | **Credential**| The _Credential_ used to access the _Repository_ if required. |
 
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
+NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
 {{% include "/userguide/reusable/Git.md/" %}}
 
 
@@ -108,8 +108,8 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Repo
 
 | Access | Description |
 | --- | --- |
-| **View** | If a _User_ belongs to a _User Group_ in the View Access list for the this _Repository_, the _Repository_ will be visible. |
-| **Change** | This allows a _User_ who belongs to any _User Group_ in the list to change the attributes of the _Repository_. |
+| **View** | If a _User_ belongs to a _UserGroup_ in the View Access list for the this _Repository_, the _Repository_ will be visible. |
+| **Change** | This allows a _User_ who belongs to any _UserGroup_ in the list to change the attributes of the _Repository_. |
 | **Check-out Access** | Allows Users to check out files from the _Repository_. This is inherited from the Read Access of the parent _Domain_. |
 | **Check-in Access** | Allows Users to check in files to the _Repository_. This is inherited from the Write Access of the parent _Domain_. |
 

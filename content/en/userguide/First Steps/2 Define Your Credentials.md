@@ -54,6 +54,6 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Cred
 | _**Change**_ | Allows the _User_ to change the _Credential’s_ characteristics i.e. Name, Summary, etc. |
 | _**Read**_ | Allows the _User_ to use the _Credential_ by assigning it to an object such as an _EndPoint_ or _Repository_. |
 
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
+NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
 
 {{% include "userguide/reusable/AuditTrail.md" %}}

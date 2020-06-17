@@ -552,7 +552,7 @@ The following properties can be accessed on the User object:
 | realname | String | The User&#39;s full name. |
 | email | String | The User&#39;s email address. |
 | phone | String | The User&#39;s telephone number. |
-| groups | Array | Array of UserGroup Objects – the User Groups to which this user belongs. |
+| groups | Array | Array of UserGroup Objects – the UserGroups to which this user belongs. |
 | lastlogin | Date | The date/time the user last logged into DeployHub. |
 | creator | User | User Object representing the user who created this user. |
 | modifier | User | User Object representing the user who last modified this user. |
@@ -562,9 +562,9 @@ The following properties can be accessed on the User object:
 
 # UserGroup Object
 
-The _UserGroup object_ represents a user group in _DMScript_. UserGroup objects can be retrieved as the owner from other objects (such as _Endpoints_, _Environments_, _Applications_ etc.). They can also be returned from a getusergroup call or from a _User_ object (as a list of groups to which the user belongs).
+The _UserGroup object_ represents a UserGroup in _DMScript_. UserGroup objects can be retrieved as the owner from other objects (such as _Endpoints_, _Environments_, _Applications_ etc.). They can also be returned from a getusergroup call or from a _User_ object (as a list of groups to which the user belongs).
 
-The following properties can be accessed on the User Group object:
+The following properties can be accessed on the UserGroup object:
 
 | **Property** | **Return Type** | **Description** |
 | --- | --- | --- |
@@ -573,8 +573,8 @@ The following properties can be accessed on the User Group object:
 | kind | String | Returns "group". Used to differentiate between users and groups where retrieving an owner object. |
 | fqdomain | String | Fully qualified _Domain_ name. |
 | email | String | The _UserGroup's_ email address. |
-| creator | User | User Object representing the user who created this user group. |
-| modifier | User | User Object representing the user who last modified this user group. |
-| ctime | Date | Date Object representing the date/time the user group was created. |
-| mtime | Date | Date Object representing the date/time the user group was last modified. |
-| owner | Object | User or UserGroup that owns the User Group. |
+| creator | User | User Object representing the user who created this UserGroup. |
+| modifier | User | User Object representing the user who last modified this UserGroup. |
+| ctime | Date | Date Object representing the date/time the UserGroup was created. |
+| mtime | Date | Date Object representing the date/time the UserGroup was last modified. |
+| owner | Object | User or UserGroup that owns the UserGroup. |

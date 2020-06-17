@@ -3,11 +3,11 @@ title: "User APIs"
 linkTitle: "User APIs"
 weight: 30
 description: >
-  Associate a User to a User Group (Pro Feature).
+  Associate a User to a UserGroup (Pro Feature).
 ---
 
 
-## Associate a User with a User Group
+## Associate a User with a UserGroup
 
 This call assigns an existing _User_ to a _Group_. Once a user has been assigned to the group then the _User_ will have access to any object to which the _Group_ has been granted appropriate access.
 

@@ -37,7 +37,7 @@ iterate(k: $arr) {
 echo "$k"; // output will be 1, 2, 3
  }
 
-Here is an example of iterating through a list of Objects. Get a list of user groups to which the invoking user belongs:
+Here is an example of iterating through a list of Objects. Get a list of UserGroups to which the invoking user belongs:
 
 set me=me();
 
