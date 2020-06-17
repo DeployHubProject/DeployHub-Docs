@@ -5,20 +5,15 @@ weight: 34
 description: >
   Customizing your Deployments with Procedures and Functions.
 ---
-## Procedures and Functions
+##  Functions and Procedures
 
-_Procedures_ and _Functions_ are the steps that make up an _Action_. If you have not worked with _Actions_, read about them in them in the [Customize your Actions Chapter](/userguide/customizations/2-define-your-actions/).
+_Functions_ and _Procedures_ are the steps that make up an _Action_. If you have not worked with _Actions_, read about them in them in the [Customize your Actions Chapter](/userguide/customizations/2-define-your-actions/).
 
 _Functions_ and _Procedures_ are used by _Actions_ to define custom installation logic of a _Component_ or perform any type of Pre or Post Action. Using _Actions_, _Functions_ and _Procedures_ allows you to be as creative as needed to meet the unique needs of your implementation.
 
-The difference between _Procedures_ and _Functions_ is a _Procedures_ execute a process but does not return a value. A _Function_ returns a value. _Procedures_ and _Functions_ can be:
+The difference between _Procedures_ and _Functions_ is a _Procedures_ execute a process but does not return a value. A _Function_ returns a value. _Functions_ and _Procedures_ can be:
 
-- Written in DMScript (DeployHub's Deployment Scripting Language). DMScript ships with several pre-installed _Procedures_ and _Functions_. You can also create custom _Procedures_ and _Functions_ and add them to the _Activities_ that can be used when creating a _Components_ installation logic. See the [DMscript Chapter](/userguide/dmscript/) for details.
-- A script written in any scripting language supported by the Deployment Engine's operating system and held locally to the Deployment Engine.
-- A script written in any scripting language supported by the target _Endpoint's_ operating system and located on the target _Endpoint_.
-- A script written in any scripting language supported by the target _Endpoint's_ operating system and held locally to the Deployment Engine. When invoked, the script is automatically copied to the target _Endpoint_ and executed there.
-
-A _Function_ or _Procedure_ can be one of four types:
+Following are the types of _Function_ or _Procedure_:
 
 _Procedure_ Types
 
@@ -38,7 +33,6 @@ _Function_ Types
 | _**Function Provided by Local External Script or Program**_ | A _Function_ is written in any Scripting Language that can be executed by the operating system on which the DeployHub Deployment Engine is installed. Executes locally to the Deployment Engine. |
 | _**Function Provided by Remote External Script or Program**_ | A _Function_ is written in any Scripting Language that can be executed by the target _Endpoint's_ operating system. Executes on the target _Endpoint._ By Checking the "Copy to Remote" flag, the script can be held locally to the Deployment Engine and copied to the target _Endpoint_ at the point of execution. |
 
-Selecting the _Procedure/Function_ kind will show other fields relevant to that particular kind (for example "Copy to Remote" will only appear for kind "Remote External Script or Program". Fill in the fields and then click OK to create the new _Procedure/Function_.
 
 ## The _Functions_ and _Procedures_ List View for Adding or Deleting
 
@@ -61,9 +55,11 @@ The _Function_ or _Procedure_ List View has the following Tabs.
 
 From the _Action_ List View, double click on the _Action_ to view to see all Details.
 
+
 ## Using the _Function_ or _Procedure_ Dashboard for Viewing and Editing
 
 The Dashboard view displays all information related to a specific _Function_ or _Procedure_.
+Selecting the _Procedure/Function_ kind will show other fields relevant to that particular kind (for example "Copy to Remote" will only appear for kind "Remote External Script or Program". Fill in the fields and then click OK to create the new _Procedure/Function_.
 
 | Details | Description |
 | --- | --- |
@@ -75,7 +71,7 @@ The Dashboard view displays all information related to a specific _Function_ or 
 | **Created** | An auto generated date when the _Function_ or _Procedure_ was created (read-only). |
 | **Modified** | An auto generated date when the _Function_ or _Procedure_ was last modified (read-only). |
 | **Description** | A more detailed Description of the _Function_ or _Procedure_.
-|**Kind**| Select _Function_ or _Procedure_.|
+|**Kind**| Select _Function_ or _Procedure_. Selecting the _Procedure/Function_ kind will show other fields relevant to that particular kind (for example "Copy to Remote" will only appear for kind "Remote External Script or Program". Fill in the fields and then click OK to create the new _Procedure/Function_.|
 |**Display Name**| An alternative Name if required.  If not used defaults to the "Name".|
 | _**Filepath**_ | The filepath to the script to be executed, which includes the name of the script. This appears for all but the "DMScript Procedure in Database" Kind of _Procedure_ or _Function_. |
 | _**Allocate Terminal**_ | If checked, this sets up a pseudo-terminal. This is for Unix/Linux targets only when operating over SFTP transfer protocol. It controls the behavior of executed programs if they operate differently with or without an allocated terminal. Note that any program running with this flag set and which calls _isatty_ will receive a return code of _true_. |

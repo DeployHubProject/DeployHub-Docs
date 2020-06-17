@@ -7,95 +7,111 @@ description: >
 ---
 ## Release Trains
 
-_Releases and Release Versions_ (DeployHub Pro only) are collections of one or more _Applications_. A _Release_ is the first one created and acts as a model for subsequent _Release Versions_. For the purpose of simplicity, both will be referred to as _Releases_ from here on unless it is necessary to draw a distinction between the two. A _Release_ can include multiple _Applications_ that must be managed as a single deployment due to their interdependencies.
+ A _Release_ manages the progression and deployment of multiple _Applications_ together.  _Releases_ and _Release Versions_ (DeployHub Pro only) are collections of one or more _Applications_ that are managed as a unit due to their interdependencies. _Releases_ are only available in DeployHub Pro. 
 
-For example, a _Release_ could be made up of three different _Applications_, one that includes the sets of binaries that make up the client interface, one set of binaries that manages data access routines, and another set that delivers management reports_. Releases_ allow for a highly flexible method of packaging together the artifacts that need to be included in a single deployment. _Releases_ can be found under the _Deploy_ Main Menu item.
+Like _Applications_ and _Components_, _Releases_ are versioned each time they are deployed. A _Release Base Version_ is the initial version and acts as a model for subsequent _Release Versions_.
 
-## Deployments and Releases
+## The _Release_ List View for Adding or Deleting
 
-A deployed _Release_ may be any one of several versions. For instance, it might be the very first one named MyRelease, or any one of several later versions, i.e., MyRelease;2, MyRelease;3, and so forth.
+From the _Release_ menu option to the left of the DeployHub main panel, you will be taken to a list of all _Release Base Versions_ and _Release Versions_ to which you have access. There is a row for every _Environment_ to which the _Release Base Version_ or _Release Version_ has been deployed.  For this reason, you will see multiple entries for the same _Release_ if it has been deployed to multiple _Environments_.  
 
-Whenever a _Release_ is deployed, DeployHub deploys each _Application_ contained within it to an _Environment_, by comparing them to what _Applications_ and _Components_ are already on the _End Point_. A _Release_ contains multiple _Applications,_ which contain _Component Versions_.
+The list view is organized on the following columns:
 
-You can deploy the _Release_ by right clicking on it in the tree view. If the _Domain_ containing the _Release_ has been configured with aDeploy Task, that Deploy Task will display in the pop-up menu options.
+| List Column | Description|
+|---|---|
+|**Version**|  The _Release Base Version_ or _Release Version_ number. |
+|**Domain**| The _Domain_ to which the _Release_ belongs.|
+|**Parent**| The _Release Base Version_ from which the _Release Version_ was created. This will be empty for the _Release Base Version_.|
+|**Environment**| The _Environment_ to which the _Release_ has been deployed. Each _Environment_ will represent a different row in the List View table.|
+|**Last Deployment to Environment**| The Deployment Log number.|
+|**Completed**|The date and time of the last deployment to the listed _Environment_.|
+|**Results**| Success or Fail.|
 
-## Release Versions and Tasks
+You can also use the Filter bar, represented by a funnel icon, to reorder your _Release_ List View.  You can filter on:
 
-When you create a _Domain,_ you can assign Tasks to that _Domain_. All Tasks can be removed, added, or uniquely customized. All Tasks defined to the _Domain_ will be available for any and all _Releases_ withinthe _Domain_. A right click on the _Release_ in the tree view will display all Tasks that are defined for that _Domain_ (to which the user has been given access) and can be used for both _Releases_ and _Applications_. The following Task Types are available for Releases:
+- Domain
+- Environment
+- Last Deployment
+- Parent
+- Result
+- Version
 
-| Task | Description |
+By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
+
+## Additional Tabs from the _Release_ List View
+
+The _Release_ List View has the following Tabs.
+
+| Tab | Description |
 | --- | --- |
-| Move Version | Moves a Release from one Domain to another. This can be used as a promotion or a demotion of a Release between Lifecycle States. When the task is defined, the Target Domain (or Lifecycle State) has to be specified as part of the task definition.
-If an Approve task exists in the same Domain or Lifecycle State as the Move Version task and the Approve task points to the same Target Domain, then that Approve task has to have been executed for the selected Release in order to approve the Application Version for the Target Domain. If this has not been done, the Move Version task will fail when it is executed. In other words, the selected Release has to have approved for the Target Domain before the Move Version to that Domain will succeed. |
-| Deploy | Deploys a Release to an Environment. The target Environment is selectable via a drop-down list. |
-| Request | Sends a request from a User without the authority to run a particular Task, to the User Group(s) who do have the authority. When the Request Task is defined it is linked to the task to be requested. This Linked Task will typically have different access control to the Request Task.
-When the Request Task is executed an entry is placed into the "To Do" list of all the users who are members of the User Group(s) which have execute access to the Linked Task. When the Linked Task is executed, the request is automatically removed from the "To Do" list.
-The Request Task can have a Request Notification Template defined which can send out a notification to the appropriate User Group(s) when it is executed. |
-| Approve | Approves a Release so that it can be moved to a specified Target Domain. This works in conjunction with the Move Task (see above). When the Approve Task is defined, the Target Domain has to be specified.
-When the Approve Task is executed, the selected Release can either be Approved or Rejected. Only when the Release is Approved can it be moved to the specified Target Domain. |
-| Run Action | Runs a stand-alone Action. The task can be selected by right clicking on the Domain or Lifecycle State or by right clicking on a Component, Application or Release. In the latter case, the selected Component, Application or Release is automatically placed onto the Stack where it is available for the Action to process. See DMScript documentation and the discussion on Actions for more information. |
+| Refresh | Refreshes the browser. |
+| Add Base | Allows you to Add a new _Release Base Version_. |
+| Add Version | Creates a copy of the selected _Release_ in the list, creating a new _Release Version_. |
+| Delete | Deletes the selected item. However, you must delete the _Release_ starting from the newest to the oldest.  The _Release Base Version_ would be deleted last. Sorting by "Version" gives you the order.  |
+| Tasks | Displays all _Release_ Tasks defined to this _Domain_ and available for the selected Item. See [Tasks](/userguide/first-steps/2-defining-domains/#tasks) for more information.  |
+| List | Takes you back to the List View if you have been in the Map View. |
 
-NOTE: Tasks are created, modified and deleted by using the Task Tab found under the Domain Main Menu item. Select the Domain for which the Tasks should be managed and the Tasks Tab will become available.
+## Viewing and Editing with the _Release_ Dashboard
 
-## Creating and Deleting Releases
+The Dashboard view displays all information related to a specific _Release Base Version_ or _Release Version_. The Dashboard view has two additional tab options - Package Components and Versions.  Below are the Details for an _Release_.
 
-A _Release_ can be created by clicking on the Deploy menu, clicking the Releases tab, right clicking on the _Domain_ from the tree structure in the left side panel, and selecting 'New Release in this Domain.' By selecting this option, the New Releasedialog will appear. Alternatively, once created, the _Release_ can be deleted by right clicking on the _Release_ from the tree view and selecting 'Delete this Release.' Once deleted, you cannot retrieve the _Release_ or any associated _Release Versions_.After a _Release_ is created, a _Release Version_ can be created by clicking the _Release_ in the tree structure, then clicking on the Versions tab on the right. Right click in the Versions area and select 'Create New Release Version'. A new _Release Version_ will appear in the area and will be connected to either the icon at the top that represents the _Release_, or the latest _Release Version_, depending on whether this is the first _Release Version_ created. The new _Release Version_ is created by using the _Release_ name, followed by a semi-colon and an incremented integer, i.e. MyRel;3.
+| Details | Description |
+| --- | --- |
+|Full Domain | The fully qualified path of the _Domain_ that the _Release_ is to be associated, showing all parent _Domains_. |
+|Name | The Name of your _Release_. |
+|Owner Type| Owned by a User or Group. |
+|Owner | Name of User or Group. |
+|Summary | Description of the _Release_. |
+|Created | Auto generated based on the date the _Release_ was added. |
+|Modified | Auto generated based on the date the _Release_ was updated. |  
+|Change Request DataSource | DeployHub Pro Option - Establishes the Change Request system for the _Release_. A Change Request Data Source must be pre-defined for this field to be used. |
+Pre-Action| An action that should be executed prior to the deployment of the _Release_.|
+Post-Action| An action that should be executed at the completion of the _Release_ deployment.|
+Custom Action | Overrides any Pre or Post Actions, such as calling an external solutions such as Helm.|
+Successful Deployment Template | The template that should be used for success notifications. |
+Failed Deployment Template| The template that should be used for failure notifications.|
 
-You can also subscribe to the _Release_. Subscribing allows you to receive information about the selected _Release_. Any information connected to the _Release_ will appear in the Timeline column of the subscribing _User's_ home page. Subscribe to the _Release_ by right clicking on it in the tree view and select 'Subscribe to this Release.'
+### Assigned Applications 
 
-## Editing Release Versions
-
-To edit a _Release Version_, select it in the Tree view, then click on the General tab. Edit the General information by clicking on the pencil icon in the upper right-hand corner of the window. In addition to General information about the _Release Version_, you can define Attributes, assign Access and view Reports and History. These options are available under their corresponding tabs.
-
-### Assigned Applications Tab
-
-This tab contains all of the _Applications_ that make up the _Release Version_, linked together in order of deployment. Click on the tree structure on the right side in order to see all the available _Applications_, then click and drag an _Application_ from the list on the right side and drop it into the _Release_ area. It will appear in the area as a box containing the name of the _Application_ and will automatically link to the last _Application_ in the area. The connecting line can be deleted by right clicking on the connector line and selecting "Delete this Connector". A new connector can be created by clicking on the anchor (the green dot at the bottom of the _Application_) and dragging and dropping it onto another _Application_. This determines the order that _Applications_ will be deployed. Keep in mind that each _Application_ contains _Components_, which contain _Component Items_, all of which are linked together in the order that they are executed.
+This section contains all of the _Applications_ that make up the _Release Version_, linked together in order of deployment. Click on the tree structure on the right side in order to see all the available _Applications_, then click and drag an _Application_ from the list on the right side and drop it into the _Release_ area. It will appear in the area as a box containing the name of the _Application_ and will automatically link to the last _Application_ in the area. The connecting line can be deleted by right clicking on the connector line and selecting "Delete this Connector". A new connector can be created by clicking on the anchor (the green dot at the bottom of the _Application_) and dragging and dropping it onto another _Application_. This determines the order that _Applications_ will be deployed. Keep in mind that each _Application_ contains _Components_, which contain _Component Items_, all of which are linked together in the order that they are executed.
 
 NOTE: In the Application Version area, there is an object that represents the currently selected Release Version. It is distinguishable from any Applications in the area by the arrow icon that appears in the object along with the word "Start" and is positioned in the top center of the window and cannot be moved from that position. This must be connected to the first Application to be deployed, otherwise DeployHub does not know which Application to begin with, and the deployment will fail.
 
 Applications can be set to deploy in parallel by joining two or more applications to a common parent. In this case, when the parent application has been deployed the "child" applications are deployed in parallel. You can attach multiple application to the "Start" block in order to deploy the initial applications in parallel.
 
-## Versions Tab
+### Log History
 
-_Release Versions_ represent the changes in the software over time. The first _Release Version_ inherits data from the _Release_, and subsequent _Releases_ inherit data from previous ones. _Release Versions_ allow you to track the software deployments as they change over time without having to re-create the release base information each time an update is available. To create a _Release Version_ from a _Release_, see the instructions above.
+_Releases_ can be deployed many times, to the same or different locations (_Environments_). For every Deployment, the Log History will show all deployments based on "Result" and "Date".
 
-## Timeline Tab
+{{% include "userguide/reusable/Attributes.md" %}}
 
-This tab displays audit entries for the creation of _Releases_ and their deployments, _Environment_, and how many days ago the deployment (hours for all of today's deployments) took place.
+### Trends
 
-Any attribute changes to the _Release_ are also shown on the timeline.
+The Trends graph shows you your success or failure rates overtime as well at the time required for the last 10 deployments. If a _Release_ deployment is taking longer than previous deployments, this might indicate an issue with your deployment logic.
 
-Users can add comments to entries in the timeline by clicking on the 'Comment' link within each entry, which opens a text entry field just below the deployment information.
 
-Click on the 'Click to see earlier items' link to see earlier audit entries.
+{{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
 
-Users can also click on the Subscribe link in each entry of the list, which places the audit entry into the User's personal timeline. Any comments added to the auditwill appear in the Timeline tab of the subscriber's home page.
+### Access
 
-There is a field labeled "Say something about this Release?" at the top of the timeline that can have comments placed into it, and files can be attached to the comment as well. Entering text into this field activates the Add Message button. Click on this button to save the comment as a new audit entry.
+The Access Section allows _Users_ within designated _Groups_ to update or view the _Release_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Release_:
 
-Clicking on the paperclip button next to the Add Message button brings up a file explorer that allows multiple files to be selected and attached to the comment.
+| Access | Description |
+| --- | --- |
+| **View** | This allows any _User_ that belongs to any _Group_ in this list to see the selected _Component_ in the List View. |
+| **Change** | This allows any _User_ that belongs to any _Group_ in this list to make changes to the _Component_. |
+| **Deploy** | This allows any _User_ that belongs to any _Group_ in this list to deploy the _Application_.  This is further restricted based on the Access defined at the _Environment_ level. |
 
-Comments with files attached are shown with a paperclip. Clicking on the paperclip expands the audit entry to show the files attached to the comment as hyperlinks. Clicking on the link will download the file. This process in browser-specific.
 
-## Trends Tab
+### Change Request
 
-Using the scrolling device on the _User's_ mouse or trackpad causes the entire area to expand and contract which, along with the ability to scroll back and forth via clicking and dragging, allows the _User_ to easily view the entire Change History from beginning to end, in detail, while using the _Calendar_ as a reference.
+The Change Request section, available for DeployHub Pro users, shows enhancement requests and bugs for a selected _Application_ that your _Release_ consumes. You must have a "Change Request" Data Source defined in your General settings in order to see Change Requests. Change Request Data Sources can be connected to several popular bug tracking systems, including Bugzilla, GitHub, and Jira. To setup your Change Request see [Managing Data Sources](/userguide/customizations/2-data-sources/).
 
-The Trends tab contains information about Release's deployments. The horizontal numbers across the bottom of the chart indicate the Deployment Number. The vertical numbers on the left side represent the time taken to deploy. Hovering the mouse pointer over any one of the dots on the chart where these intersect shows both of these values.
+Select the "+Add Change Request to this Version" to assign a Change Request to the _Release_. This will display all the Change Requests (Enhancements, Bugs, etc.) from the assigned Data Source in the resulting Select Bug Record pop up window, and one or more of these can be assigned to the _Release_ by clicking on the box to the left of each CR ID field.
 
-The pie chart in the bottom right side shows the number of failed and successful deployments. Hovering the mouse pointer over the chart shows the number of failures (red) and successes (green).
+The lower section contains a list of Change Requests with the fields CR ID, Title, and Status. Clicking on the CR ID takes the User to a new tab in the browser that contains the source of the Change Request. For instance, if the _Release_ has a Change Request Data Source of the type GitHub, clicking on the CR ID field for a Change Request will open a tab with the bug or enhancement request within github.com, allowing the User the ability to update, close, or read about it in detail. The Title field holds the title of the Change Request within the bug tracking system. The various bug tracking systems used by DeployHub have their own statuses. Bugzilla for instance, has statuses such as New, Unconfirmed, Assigned, etc. DeployHub interprets these as either 'open' or 'closed’ and displays them in the Status field with a gold or dark gray background respectively.
 
-## Change Requests
-
-The Change Request tab shows enhancement requests and bugs for a selected Release and its _Applications_ for several popular bug tracking systems, including Bugzilla, Github, and Jira.
-
-The Change Request tab for _Releases_ contains two sections. The upper section is titled CR Opened/Closed over Time, which contains a burndown chart showing all of the Change Requests for all _Applications_ in the _Release_. A _Calendar_ runs across the top to show when Change Requests were opened and closed. Change Requests are shown in the horizontal area below, with open Change Requests shown in light yellow, while closed are shown in dark gray. Each line represents a Change Request, which begins with the date that it was added to a _Component_. The area turns dark gray at the point of the calendar where the Change Request was closed. Using the scrolling device on the _User's_ mouse or trackpad causes the entire area to expand and contract which, along with the ability to scroll back and forth via clicking and dragging, allows the _User_ to easily view the entire Release Plan from beginning to end, in detail, while using the _Calendar_ along the top as a reference. The numbers along the left side represent the number of Change Requests. This will adjust vertically to fit the total number of Change Requests for the _Applications_ in the _Release_. This can be adjusted further with the _User's_ mouse or trackpad.
-
-The lower section contains a list of Change Requests for all _Applications_ in the _Release_, which includes the Change Request ID, Application, Title, and Status fields. Clicking on the ID takes the _User_ to a new tab in the browser that contains the source of the Change Request. For instance, if there is a Change Request _Datasource_ of the type Github, clicking on the ID field for a Change Request will open a tab with the bug or enhancement request within github.com, allowing the _User_ the ability to update, close, or read about it in detail.
-
-The Title field holds the title of the Change Request within the bug tracking system. The various bug tracking systems used by DeployHub have their own statuses. Bugzilla for instance, has statuses such as New, Unconfirmed, Assigned, etc. DeployHub interprets these as either 'open' or 'closed' and displays them in the Status field with a gold or dark gray background respectively.
-
-## Planner
+## Planner Tab
 
 This tab Contains Release Planner, which helps to plan and schedule the deployment of _Releases_ and their _Applications_ throughout the software lifecycle. The Release Planner provides an overall view of the activities for a _Release_, which includes the _Applications_ contained within the _Release_, the number of Defects for Components within each _Application_, and target _Environments_ for the deployment of _Releases_ and _Applications_, all in a linear _Calendar_ format with drag and expansion capabilities. By viewing the number of open defects along with the scheduled testing time for each _Application_ in the _Release_, Production Support Teams can easily make judgements as to whether the _Release_ is on track or needs to be restructured or rescheduled.
 
@@ -109,18 +125,3 @@ Within the _Application_ areas are various colored blocks that represent a deplo
 
 A red line indicates today and assists in identifying where deployments for _Applications_ and _Releases_ are in the schedule. The various blocks within the different areas are colored according to where they stand in the release plan. A gold block represents an overdue deployment into an _Environment_, and this is will always appear to the left of the red line. A slate colored block represents a completed deployment into an _Environment_. A dark blue block represents a deployment scheduled to take place in the future.
 
-### Access
-
-The Access Section allows _Users_ within designated _Groups_ to update the _Release_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Release_ in the following ways:
-
-| Access | Description |
-| --- | --- |
-|**View**| Allows the _User_ to see the _Release_. If the _User_ does not belong to a _Group_ in the View Access list, the _Release_ will not appear in the List View. |
-|**Change**| This allows any _User_ that belongs to any _Group_ in this list to make changes to the _Release_. |
-|**Deploy**|Allows _Users_ to deploy this _Release_ to an _Environment_.
-
-Allows Users to deploy this Release to Environments.
-
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
-
-{{% include "userguide/reusable/Attributes.md" %}}

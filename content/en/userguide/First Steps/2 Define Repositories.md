@@ -24,9 +24,16 @@ The _Repository_ List View has the following Tabs.
 
 By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
 
-## Using the _Repository_ Dashboard for Viewing and Editing
+## Using the Repository Dashboard for Viewing and Editing
 
-The Dashboard view displays all information related to a specific _Repository_ Type.  
+The Dashboard view displays all information related to a specific _Repository_ Type.  Following are the Repository Types supported out-of-the-box:
+
+- HTTP
+- File System (included as a default with override and append options enabled)
+- Git
+- OpenMake Meister (Build system with a binary repository)
+- SVN
+
 
 ### Common Details of all _Repositories_
 
@@ -44,20 +51,9 @@ The following details are common to all _Repository_ types:
 | **Modified**| Auto generated date when the _Repository_ was updated.|
 | **Credential**| The _Credential_ used to access the _Repository_ if required. |
 
-### Access
-
-The Access Section allows _Users_ within designated _Groups_ to update the _Repository_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Repository_ in the following ways:
-
-| Access | Description |
-| --- | --- |
-| **View** | If a _User_ belongs to a _User Group_ in the View Access list for the this _Repository_, the _Repository_ will be visible. |
-| **Change** | This allows a _User_ who belongs to any _User Group_ in the list to change the attributes of the _Repository_. |
-| **Check-out Access** | Allows Users to check out files from the _Repository_. This is inherited from the Read Access of the parent _Domain_. |
-| **Check-in Access** | Allows Users to check in files to the _Repository_. This is inherited from the Write Access of the parent _Domain_. |
-
 NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your User Groups, you will need to upgrade to **DeployHub Pro.**
-
 {{% include "/userguide/reusable/Git.md/" %}}
+
 
 ## HTTP _Repository_ Details
 
@@ -101,8 +97,20 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 |**Version Encrypted** | Select the box to indicate the Version should be hidden in the database.|
 |**Version Override** |Select the box if the Version can be replaced at the _Component_ definition.|
 
+{{% include "/userguide/reusable/Git.md/" %}}
 {{% include "/userguide/reusable/OpenMake Meister.md/" %}}
 
 {{% include "/userguide/reusable/SVN.md/" %}}
+
+### Access
+
+The Access Section allows _Users_ within designated _Groups_ to update the _Repository_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Repository_ in the following ways:
+
+| Access | Description |
+| --- | --- |
+| **View** | If a _User_ belongs to a _User Group_ in the View Access list for the this _Repository_, the _Repository_ will be visible. |
+| **Change** | This allows a _User_ who belongs to any _User Group_ in the list to change the attributes of the _Repository_. |
+| **Check-out Access** | Allows Users to check out files from the _Repository_. This is inherited from the Read Access of the parent _Domain_. |
+| **Check-in Access** | Allows Users to check in files to the _Repository_. This is inherited from the Write Access of the parent _Domain_. |
 
 {{% include "userguide/reusable/AuditTrail.md" %}}

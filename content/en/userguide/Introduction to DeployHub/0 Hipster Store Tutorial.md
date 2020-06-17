@@ -22,11 +22,11 @@ To view the _Domains_:
 
 ![](RackMultipart20200511-4-zk9mjm_html_95ee7ac3d4043ec1.jpg)
 
-The _Hipster Store Domain_ is a _Sub-Domain_ of Vintage LLC. It itself includes 6 _Sub-Domains_ that organize microservices by their common 'solution space' from _Ad Service_ to _Recommendation Service_. Another sibling _Domain_ called _Purchase Processing_ is also available and it includes 5 additional _Sub-Domains_ that organize microservices into other solution spaces. As you will see later, the Hipster Store depends on some of the _Purchase Processing_ services. In this example, all _Sub-Domains_ of the Vintage LLC company have full read/write access. With DeployHub Pro, you can restrict read/write access to _Domains_.
+The _Hipster Store Domain_ is a _Sub-Domain_ of Vintage LLC. It itself includes 6 _Sub-domains_ that organize microservices by their common 'solution space' from _Ad Service_ to _Recommendation Service_. Another sibling _Domain_ called _Purchase Processing_ is also available and it includes 5 additional _Sub-domains_ that organize microservices into other solution spaces. As you will see later, the Hipster Store depends on some of the _Purchase Processing_ services. In this example, all _Sub-domains_ of the Vintage LLC company have full read/write access. With DeployHub Pro, you can restrict read/write access to _Domains_.
 
 ## Step 2 – Review the Hipster Store Domain Tasks
 
-Domains can include _Tasks_. A _Task_ defined to a _Domain_ is applied to all _Sub-Domains_. _Sub-Domains_ can override the _Tasks_ of the parent _Domain_.
+Domains can include _Tasks_. A _Task_ defined to a _Domain_ is applied to all _Sub-domains_. _Sub-domains_ can override the _Tasks_ of the parent _Domain_.
 
 - Click on the Vintage LLC Domain in the Tree view.
 

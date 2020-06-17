@@ -43,7 +43,7 @@ The _Application_ List View has the following Tabs.
 | Add Base | Allows you to Add a new _Application Base Version_. |
 | Add Version | Creates a copy of the selected _Application_ in the list, creating a new _Application Version_. |
 | Delete | Deletes the selected item. However, you must delete the _Applications_ starting from the newest to the oldest.  The _Application Base Version_ would be deleted last. Sorting by "Version" gives you the order.  |
-| Tasks | Displays all Application Tasks available for the selected Item. |
+| Tasks | Displays all _Application_ Tasks available for the selected Item based on the Tasks defined to the _Application_ Domain. See [Tasks](/userguide/first-steps/2-defining-domains/#tasks) for more information.   |
 | List | Takes you back to the List View if you have been in the Map View. |
 | Map | Displays a global Map of all versions of the _Application_ with _Components_. |
 
@@ -73,7 +73,7 @@ The Dependency Map provides a graphical view of all your _Package Components_. T
 
 ### Log History
 
-_Applications_ can be deployed many times, to the same or different locations (_Environments_). For every Deployment, the Log History will show all steps executed as part of the deployment process.
+_Applications_ can be deployed many times, to the same or different locations (_Environments_). For every Deployment, the Log History will show all deployments based on "Result" and "Date".
 
 {{% include "userguide/reusable/Attributes.md" %}}
 
@@ -93,7 +93,7 @@ The Difference Graph shows what changed in the last deployment between the previ
 
 ### Access
 
-The Access Section allows _Users_ within designated _Groups_ to update or view the _Component_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Component_:
+The Access Section allows _Users_ within designated _Groups_ to update or view the _Application_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Application_:
 
 | Access | Description |
 | --- | --- |
@@ -104,7 +104,7 @@ The Access Section allows _Users_ within designated _Groups_ to update or view t
 
 ### Change Request
 
-The Change Request section, available for DeployHub Pro users, shows enhancement requests and bugs for a selected _Component_ that your _Application_ consumes. You must have a "Change Request" Data Source defined in your General settings in order to see Change Requests. Change Request Data Sources can be connected to several popular bug tracking systems, including Bugzilla, GitHub, and Jira. To setup your Change Request see [Managing Data Sources](/userguide/customizations/2-data-sources/).
+The Change Request section, available for DeployHub Pro users, shows enhancement requests and bugs for a selected _Application_. You must have a "Change Request" Data Source defined in your General settings in order to see Change Requests. Change Request Data Sources can be connected to several popular bug tracking systems, including Bugzilla, GitHub, and Jira. To setup your Change Request see [Managing Data Sources](/userguide/customizations/2-data-sources/).
 
 Select the "+Add Change Request to this Version" to assign a Change Request to the _Application_. This will display all the Change Requests (Enhancements, Bugs, etc.) from the assigned Data Source in the resulting Select Bug Record pop up window, and one or more of these can be assigned to the _Application_ by clicking on the box to the left of each CR ID field.
 

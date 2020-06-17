@@ -13,7 +13,7 @@ Note: To define your _Environment_ you will need to have first defined [_Endpoin
 
 ### Environments and Domains
 
-_Environments_ are associated to a [_Domain_](/userguide/first-steps/2-defining-domains/). You can assign _Environments_ to any level of _Domain_ including the _Global Domain_. However, _Environments_ are most commonly associated to a _Project Domain_ used for _Applications_. A _Project Domain_ is the lowest level of _Domain_ and includes _Life Cycle Sub-Domains_ for managing your continuous _Delivery Pipeline_.
+_Environments_ are associated to a [_Domain_](/userguide/first-steps/2-defining-domains/). You can assign _Environments_ to any level of _Domain_ including the _Global Domain_. However, _Environments_ are most commonly associated to a _Project Domain_ used for _Applications_. A _Project Domain_ is the lowest level of _Domain_ and includes _Life Cycle Sub-domains_ for managing your continuous _Delivery Pipeline_.
 
 ## Using the _Environment_ List View for Adding and Deleting
 

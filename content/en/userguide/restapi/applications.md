@@ -51,7 +51,7 @@ This call returns a JSON object representing the specified _Application_. The re
 
 ## Create New Application Version
 
-This call creates a new _Application Version._ The new _Application Version_ inherits all the attributes of the predecessor _Application_. In order for this to work through the permission model, there has to be a _Create Version Task_ either in the _Domain_ in which the specified _Application_ is located or in any of the parent _Domains_ as long as the _Create Version Task_ is set to be "available" to _Sub-domains_.
+This call creates a new _Application Version_. The new _Application Version_ inherits all the attributes of the predecessor _Application_. In order for this to work through the permission model, there has to be a _Create Version Task_ either in the _Domain_ in which the specified _Application_ is located or in any of the parent _Domains_ as long as the _Create Version Task_ is set to be "available" to _Sub-domains_.
 
 This mechanism ensures that the invoking user has permission to create a new version of the _Application_ (since the permissions are checked against the _Task_) and also the target _Domain_ (i.e. the _Domain_ in which the new _Application_ is created) is determined from the _Task_. Also, by specifying the _Task_ to execute, any pre and post link _Actions_ are executed just as if the _Task_ had been invoked via the Web UI.
 
@@ -65,7 +65,7 @@ This mechanism ensures that the invoking user has permission to create a new ver
 
 | Name | Located in | Value| Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
-| app_id | path | Is the ID of the_Application_which will be the parent of the new_Application Version_. Either its name, its qualified name with its parent_Domains_included in dot notation (i.e. GLOBAL.products) or its internal ID. The newly created_Application Version_will inherit all the attributes from this_Application_. | Yes | integer |
+| app_id | path | Is the ID of the _Application_ which will be the parent of the new _Application Version_. Either its name, its qualified name with its parent _Domains_ included in dot notation (i.e. GLOBAL.products) or its internal ID. The newly created _Application Version_ will inherit all the attributes from this _Application_. | Yes | integer |
 | task | query | Is the identifier of a _Task_ to execute in order to create the new _Application Version_. Either its name, its qualified name with its _Domain_ and any parent _Domains_ included in dot notation (i.e. GLOBAL.Product) or its internal ID. If the _Task_ is not specified, the first accessible _Create Version Task_ within the _Application's_ _Domain_ is used (or any _Create Version Task_ in parent _Domains_ as long as they are set to be "available" to _Sub-domains_). | No | string |
 
 {{% include "userguide/reusable/Model Success.md" %}}

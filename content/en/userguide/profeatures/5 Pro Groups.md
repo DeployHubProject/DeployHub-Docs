@@ -17,7 +17,7 @@ A list of all _Users_ who belong to the selected _Group_ appears on this tab. Cl
 
 ## Admin Rights Tab
 
-Access can be applied to the creation of objects within DeployHub and the restriction of menu items. In addition, you can create a 'Super Administrator Group' by providing the group with override access to all objects within DeployHub. This is done by default with the Administrators _Group_. Defining these access rights are done using checkboxes in the selected _Group_. It is also important to understand that the _Groups_ can only see objects in the _Domain_ they have been assigned. When you create a new _Group_, you create that _Group_ under a particular _Domain_. The _Group_ will be able to see their primary _Domain_ and all its _Sub-Domains_. The access rights for the _Group_ are defined as follows:
+Access can be applied to the creation of objects within DeployHub and the restriction of menu items. In addition, you can create a 'Super Administrator Group' by providing the group with override access to all objects within DeployHub. This is done by default with the Administrators _Group_. Defining these access rights are done using checkboxes in the selected _Group_. It is also important to understand that the _Groups_ can only see objects in the _Domain_ they have been assigned. When you create a new _Group_, you create that _Group_ under a particular _Domain_. The _Group_ will be able to see their primary _Domain_ and all its _Sub-domains_. The access rights for the _Group_ are defined as follows:
 
 ## Access Control Rights
 
@@ -29,7 +29,7 @@ Override Access Control allows any _User_ belonging to a _Group_ with this contr
 | --- | --- |
 | Users | Allows the _User_ to create and add Users to any of the _Domains_ to which they belong. |
 | User Groups | Allows the _User_ to create and add _Groups_ to any of the _Domains_ to which they belong. |
-| Domains | Allows the _User_ to create and add _Sub-Domains_ to any of the _Domains_ to which they belong. |
+| Domains | Allows the _User_ to create and add _Sub-domains_ to any of the _Domains_ to which they belong. |
 | Environments | Allows the _User_ to create and add _Environments_ to any of the _Domains_ to which they belong. |
 | Endpoints | Allows the _User_ to create and add _Endpoints_ to any of the _Domains_ to which they belong. |
 | Repositories | Allows the _User_ to create and add _Repositories_ to any of the _Domains_ to which they belong. |
