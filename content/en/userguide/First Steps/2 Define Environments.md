@@ -5,15 +5,15 @@ weight: 9
 description: >
   Adding Environments for Deployments.
 ---
-## Intro to Environments
+## Intro to _Environments_
 
 _Environments_ represent a collection of _Endpoints_ where a deployment occurs. Many _Environments_ are assigned to your _Application_  and represent your Pipeline states (Dev, Test, Production).  _Environments_ can be mapped to your Continuous Delivery Pipeline for the deployment step.
 
 Note: To define your _Environment_ you will need to have first defined [_Endpoints_](/userguide/first-steps/2-define-endpoints/) that will be assigned to your _Environment._
 
-### Environments and Domains
+### _Environments_ and _Domains_
 
-_Environments_ are associated to a [_Domain_](/userguide/first-steps/2-defining-domains/). You can assign _Environments_ to any level of _Domain_ including the _Global Domain_. However, _Environments_ are most commonly associated to a _Project Domain_ used for _Applications_. A _Project Domain_ is the lowest level of _Domain_ and includes _Life Cycle Sub-domains_ for managing your continuous _Delivery Pipeline_.
+_Environments_ are associated to a [_Domain_](/userguide/first-steps/2-defining-domains/). You can assign _Environments_ to any level of _Domain_ including the _Global Domain_. However, _Environments_ are most commonly associated to a _Project Domain_ used for _Applications_. A _Project Domain_ is used to manage an _Application_ and may be defined to include _Life Cycle Sub-domains_ for managing your continuous _Delivery Pipeline_.
 
 ## Using the _Environment_ List View for Adding and Deleting
 
@@ -26,7 +26,7 @@ The _Environments_ List View has the following Tabs.
 |**Refresh** | Refreshes the browser. |
 | **Add** | Allows you to Add a new _Environment_. |
 | **Delete** | Deletes the selected item. |
-| **Reports** | Environment Reports |
+| **Reports** | Success or Failed Report:  This report shows an ongoing list of all deployments to all _Environments_, regardless of _Domain_ or _Application_ with success or fail status. This report can be sorted based on the column for easy viewing. It can also be exported into various formats including .csv and .pdf. |
 
 By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
 
@@ -61,36 +61,42 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 | **Create Calendar Entries** | Allows _Users_ to control the Calendar for the selected _Environment_. NOTE: Securing Environment Calendars is only available in DeployHub Pro.|
 | **Deploy** | Allows _Users_ to deploy  _Applications_ into the selected _Environment_. |
 
-{{% include "userguide/reusable/Attributes.md" %}}
-
 {{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
 
-### Endpoint
+{{% include "userguide/reusable/Attributes.md" %}}
 
-_Environments_ are a collection of _Endpoints_. Use this section to assign the _Endpoints_ that will make up this _Environment_.
+### Assigned _Endpoints_
+
+Note: You will need to have pre-defined your _Endpoints_.  See the [Define Your Endpoints](/userguide/first-steps/2-define-endpoints/) chapter for more information. 
+
+_Environments_ are a collection of _Endpoints_. Use this section to assign the _Endpoints_ that will make up this _Environment_. Use the +Add to create a new row in the _Endpoints_ table. Use Save to commit the row.  Select the row and use Edit or Delete to update or remove an _Endpoint_. When you add a new _Endpoint_ the  Hostname will be displayed. The Hostname is the actual network name or IP address.  It is assigned when the _Endpoint_ is defined, but not a required field.  If it is defined, it will be displayed in the row.
 
 ### Trends
 
 This section shows the success/failure rate and time required for the last 10 deployments to this _Environment_.
 
-### Associated _Applications_
+### Assigned _Applications_
 
-Allows you to associate an _Application Base Version_ to this _Environment_. Assignment of _Applications_ to _Environments_ can be done at both levels. _Application Versions_ inherit _Environments_ from the _Application Base Version_.
+This section shows all of the _Application Base Versions_ assigned to this _Environment_. This is read only.  _Applications Base Versions_ are associated to _Environments_ when created using the [_Application_ Dashboard](/userguide/packaging-applications/2-defining-applications/#viewing-and-editing-with-the-_application_-dashboard). 
 
-## The Calendar
+### Deployed _Components_ to _Environment_ Map
 
-**DeployHub**** Team**_Calendar_ only shows you a history of what has already been deployed.
+This map shows you all of the current _Component Versions_, with _Application Versions_, that have been deployed to this _Environment_.
 
-**DeployHub Pro** _Calendar_ has added features. _Calendar Events_ allow you to schedule deployments and block the _Calendar_ for each _Environment_. This allows for a no-touch approval process driven by your continuous delivery pipeline. Each _Environment_ has its own _Calendar_ that can be used to:
+## Smart _Environment_ Calendars
+
+**DeployHub Team** _Calendar_ only shows you a history of what has already been deployed.
+
+**DeployHub Pro**  uses a Smart _Calendar_ to control the scheduling of deployments to the _Environment_. Each _Environment_ has a unique Calendar.  Smart Calanders use events that allow you to schedule deployment for 'Auto Deploy', schedule a Task for an on-demand deployment, or block the _Calendar_ to prevent a deployment. Smart Calendars allow for a no-touch approval process driven by your continuous delivery pipeline. If an _Environment_ Owner needs to block the Calendar, your CI/CD process will be blocked from executing the deployment. Once the Calendar has been re-opened, the deployments will once again be allowed brining the _Application Version_ to the correct state.   Each _Environment_ has its own _Calendar_ that can be used to:
 
 - Automatically deploy an _Application_ or _Release_ into the _Environment_ on a certain date and time.
-- Reserve a date to manually deploy an _Application_ or _Release_, preventing other _Users_ from performing deployments into the same _Environment_.
+- Reserve a date to deploy on-demand an _Application_ or _Release_, preventing other _Users_ from performing deployments into the same _Environment_.
 - Block a timeframe from receiving any _Application_ or _Release_ deployments.
 - Open a timeframe to auto-approve an _Application_ or _Release_ deployment.
 
-_Calendars_ are found by going to the _Data Center_ Menu. Open the _Life Cycle Sub-Domain_ and select the _Environment_. The _Environment's Calendar_ will appear under the _Calendar_ Tab. When viewing a _Calendar_ by Month, Week, or Day you can click on a place within a selected day and drag the mouse pointer down in order to select the time span for the event. A light blue area appears, covering the selected time. Right click on this area and select "_Create New Event_." A pop-up window appears with buttons that are used to set the selected time period to one of the three types listed above.
+When viewing a _Calendar_ by Month, Week, or Day you can click on a place within a selected day and drag the mouse pointer down in order to select the time span for the event. A light blue area appears, covering the selected time. Right click on this area and select "_Create New Event_." A pop-up window appears with buttons that are used to set the selected time period to one of the three types listed above.
 
-## Availability Field
+**Availability Field**
 
 The "Availability" field controls access to the _Environments._ You either close or open the Calendar for deployment events.
 
@@ -98,15 +104,15 @@ The "Availability" field controls access to the _Environments._ You either close
 
 - _Always UnAvailable Unless Allowed by Calendar_ – Selecting this option **closes** the Calendar for deployments. To open a period for deployment, you would add an "Available" Event for a specified period.
 
-## AutoDeploy
+**AutoDeploy**
 
 **DeployHub Pro** allows for a scheduled deployment using the _Environment's Calendar_, which is referred to as an "_AutoDeploy_." If _AutoDeploy_ is selected, a drop-down list allows the selection of an _Application_ or _Release_ to be deployed beginning at the designated Start Time. Not only does the _Calendar_ automatically run the deployment at the designated Start Time, it also keeps any other deployments from taking place in the designated Environment during that time period.
 
-## Reserved
+**Reserved**
 
 If Reserved is selected, only the _Application_ or _Release_ that is selected via the drop-down list can be deployed to the _Environment_ between the Start Time and End Time. No other deployments can take place in the _Environment_ during this period. After a Reserved event has been created, a Task within a _Domain_ in the tree structure can be used to run the deployment using a Deploy Task.
 
-## Unavailable
+**Unavailable**
 
 If Unavailable is selected, no deployments can take place in the _Environment_ between the Start Time and End Time. This can be used to block out time to perform administrative duties such as backups, restores, etc.
 

@@ -4,7 +4,7 @@ Task are used for executing deployments, managing approvals, or staging a deploy
 
 ### Adding, Editing and Deleting Tasks
 
- You can add new Tasks to a _Domain_ by selecting the +Add in the Task section of the Dashboard. A pop-up will display all available Tasks to Add. Selecting the type of Task will add a row into your Task table and display the unique details for that Task.
+ You can add new Tasks to a _Domain_ by selecting the +Add in the Task section of the Dashboard. A pop-up will display all available Tasks to add. Selecting the type of Task will add a row into your Task table and display the unique details for that Task.
 
 **Approve Version for Move to Next Pipeline State** 
 
@@ -86,10 +86,8 @@ Once a _Task_ is defined, it must be granted execute access to a _Group_ before 
 
  Keep in mind that _Groups_ are assigned authority on a _Task_ by _Task_ basis, so that it is possible for a _Domain_ to have two different _Tasks_ that perform the same function, one of which allows a particular _Group_ to run the _Task_, and the other which doesn't. This allows similar _Tasks_ to be created that have different characteristics assigned to them such as Pre-Actions and/or Post-Actions, Notification Templates, etc., with different _User Groups_ having authority to run them.
 
-~~~
-Example: A _Group_ is given the ability to run a "Move" Task which moves an _Application Version_ from the Test Lifecycle State to the Production Lifecycle State, but a Group consisting of testers does not have the ability to run that same Task.
+- Example: A _Group_ is given the ability to run a "Move" Task which moves an _Application Version_ from the Test Lifecycle State to the Production Lifecycle State, but a Group consisting of testers does not have the ability to run that same Task.
 
-Example: A Move Task is linked to a Request Task. A User in the Test Group would run the Request Task, which notifies Users in the Release Group and requests that the Application Version be moved. Users in the Production Group would then receive the Request Task through their To Do List and optionally an email (which was designated as the Request Notification Template in the Request Task). They would then run the linked Move Task to move the Application Version to the Production Lifecycle State.
+- Example: A Move Task is linked to a Request Task. A User in the Test Group would run the Request Task, which notifies Users in the Release Group and requests that the Application Version be moved. Users in the Production Group would then receive the Request Task through their To Do List and optionally an email (which was designated as the Request Notification Template in the Request Task). They would then run the linked Move Task to move the Application Version to the Production Lifecycle State.
 
 NOTE: Another way to accomplish this is to link an Approval Task to the Request Task. The User in the User Group would send the Request Task, and a User in the Admin Group would be notified. They would then run the Approve Task to allow the User in the Test Group to run the Move Task.
-~~~

@@ -85,9 +85,13 @@ The Trends graph shows the success or failure rates overtime as well at the time
 
 Each _Application Base Version_ is assigned the _Environments_ to which they will be deployed. _Application Versions_ inherit the _Environments_ from the _Application Base Version_. By using the "+Add this Application to an Environment to enable Deployments" option, you can add _Environments_ where the _Application_ is to be deployed. You can assign the _Application_ to as many _Environments_ as needed.  The Detail field will contain a link to the deployment Log for the last _Environment_ where the _Application_ was deployed.
 
-### Last Deployment Difference Graph
+### Last Deployment Difference Based on Environment
 
+<<<<<<< HEAD
 The Difference Graph shows what changed in the last deployment between the previous deployment. For the _Application Base Version_ all _Components_ will be shown.  Subsequent deployments will only show  changes.
+=======
+The Difference Map shows what changed in an _Environment_ for the selected _Application_. Because _Applications_ are deployed to many _Environments_, you are given the option of selecting the _Environment_ to interrogate. The resulting map shows what changed between the current and previous _Application_ in the selected _Environment_.  
+>>>>>>> b4d49e4bb12c290564b008b93a4551e512827f12
 
 {{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
 
