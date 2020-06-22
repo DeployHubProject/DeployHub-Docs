@@ -10,7 +10,7 @@ description: >
 
 The core _Objects_ are _Domains_, _Applications_, _Components_ , _Environments_ and _Endpoints_. These _Objects_ catalog, track, and version independently deployable objects, map their relationships, and release them to clusters, cloud, or physical data centers.
 
-_Domains_ are core to DeployHub's management of microservices.  _Domains_ are hierarchical and pass inheritance from parent to siblings. For this reason, _Components_ can be shared across the _Sub-domains_. The hierarchical structure of _Domains_ provides a high-level of control and management over how microservices are shared and reused.
+_Domains_ are core to DeployHub's management of microservices.  _Domains_ are hierarchical and pass inheritance from parent to siblings. For this reason, _Components_ can be shared across the _Subdomains_. The hierarchical structure of _Domains_ provides a high-level of control and management over how microservices are shared and reused.
 
 ![Example of Domains, Applications, Components and Environments](/userguide/concepts/OnlineStore-GlobalDomain.jpg)
 
@@ -166,15 +166,15 @@ The _Date Object_ has the following properties:
 
 ## Domain Object
 
-The [_Domain Object_](/userguide/customizations/2-define-your-functions-and-procedures/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Sub-domains_. _Sub-domains_ inherit the parents properties, _Tasks_ and access.
+The [_Domain Object_](/userguide/customizations/2-define-your-functions-and-procedures/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Subdomains_. _Subdomains_ inherit the parents properties, _Tasks_ and access.
 
 Your microservices, a type of _Component_, are cataloged based on _Domains_ and _Sub_Domains_which you define. _Domains_ catalog microservices that solve the same 'problem sets.' In a similar way,_Applications_ are assigned to their own _Domain_._Environments_ and _Endpoints_ are associated to _Domains_ that are managing _Applications_.
 
 The highest level _Domain_ is your _Global Domain_. With the SaaS version, your _Global Domain_ name is defined based on your Company. With the on-premise installation, you will see a Domain called _Global_.
 
-_Domains_ also include _Tasks_. _Tasks_ include Move, Approve, Version and Deploy. _Tasks_ can be called by external solutions via APIs for integration into your Continuous Delivery Pipeline. _Tasks_ are associated to any _Domain_ and can be defined as _Pre_ or _Post_.  _Tasks_ are normally defined to _Life Cycle Sub-domains_ and support continuous configuration management in your continuous delivery process.
+_Domains_ also include _Tasks_. _Tasks_ include Move, Approve, Version and Deploy. _Tasks_ can be called by external solutions via APIs for integration into your Continuous Delivery Pipeline. _Tasks_ are associated to any _Domain_ and can be defined as _Pre_ or _Post_.  _Tasks_ are normally defined to _Life Cycle Subdomains_ and support continuous configuration management in your continuous delivery process.
 
-_Life Cycle Sub-domains_ allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery engine (Jenkins, Bamboo, GitLab, CircleCI, Puppet Relay, Google CloudBuild or GitHub Actions) to perform the continuous deployment task across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign _Tasks_ to your _Life Cycle Sub-Domain_ to define a continuous deployment 'promotion' process within DeployHub.
+_Life Cycle Subdomains_ allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery engine (Jenkins, Bamboo, GitLab, CircleCI, Puppet Relay, Google CloudBuild or GitHub Actions) to perform the continuous deployment task across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign _Tasks_ to your _Life Cycle Sub-Domain_ to define a continuous deployment 'promotion' process within DeployHub.
 
 The following properties can be accessed on the _Domain_ object:
 
@@ -186,7 +186,7 @@ The following properties can be accessed on the _Domain_ object:
 | summary | Summary text. |
 | domain | Higher level _Domain_ to which it belongs. |
 | subdomains | List of _Domain_ objects which are contained within it. |
-| lifecycle | A _Domain_ that includes a pipeline and the lowest level _Sub-domains_. _Lifecycle-domains_ cannot have _Sub-domains_. |
+| lifecycle | A _Domain_ that includes a pipeline and the lowest level _Subdomains_. _Lifecycle-domains_ cannot have _Subdomains_. |
 | _Applications_ | The _Application_ objects which are contained within it. |
 | _Environments_ | The _Environment_ objects which are contained within it. |
 | creator | The User Object representing the user who created it. |

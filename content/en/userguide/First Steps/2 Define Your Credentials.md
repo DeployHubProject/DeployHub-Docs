@@ -8,9 +8,13 @@ description: >
 
 ## Intro to Credentials
 
-_Credentials_ are objects within DeployHub that contain username and password pairs. These access the various objects used to retrieve files, execute actions, and deploy files. Each _Credential_ can be assigned to various objects within DeployHub, so that a single _Credential_ could be assigned to many _Endpoints_ with the same username/password pair. _Credentials_ are primarily used for accessing _Endpoints_ and _Repositories_ but can be applied to any object in DeployHub that requires a User Name and Password. _Credentials_ are assigned to _Domains._ Anyone with access to the _Domain_ can view the _Credentials_. Further restrictions can be done at the _Credential_ access level .
+_Credentials_ are objects within DeployHub that contain username and password pairs. These access the various objects used to retrieve files, interact with Helm and Kubernetes, execute actions, and deploy files. Each _Credential_ can be assigned to various objects within DeployHub, so that a single _Credential_ could be assigned to many _Endpoints_ with the same username/password pair. _Credentials_ are primarily used for accessing _Endpoints_ and _Repositories_ but can be applied to any object in DeployHub that requires a User Name and Password. _Credentials_ are assigned to _Domains._ Anyone with access to the _Domain_ can view the _Credentials_. Further restrictions can be done at the _Credential_ access level .
 
 Note:  In order to define a _Repository_ or _Endpoint_ you will need to pre-define the _Credential_ used to access them.
+
+## Containers and Credentials
+
+You may not need _Credentials_ if you are deploying only containers. DeployHub uses Helm to perform container deployments.  Helm is interacting with the Kubernetes cluster, Helm Chart Museum and the container registry to pull charts and images for the deployment. _Credentials_ are only needed to access a private container registry and private Chart Museum and are assigned to the _Endpoint_ or _Environment_. 
 
 ## Using the Credential List View for Adding or Deleting
 
@@ -56,4 +60,3 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Cred
 
 NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
 
-{{% include "userguide/reusable/AuditTrail.md" %}}

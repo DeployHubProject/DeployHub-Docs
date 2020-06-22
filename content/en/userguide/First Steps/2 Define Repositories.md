@@ -10,6 +10,15 @@ description: >
 
 A _Repository_ is used by a _Component_. A _Repository_ acts as a source location for artifacts that will be deployed as _Components_. Each _Component_ contains a pointer to where an artifact is stored in a _Repository_ or on a file system. When DeployHub performs the pre-deployment steps, it retrieves the artifact from any location you specify. It pulls it from the _Repository_ and creates a deployment package at deployment run time. For this reason, it does not need to store the actual artifact in the DeployHub versioning engine. Each _Component_ is defined with a _Repository_ reference. Your _Repository_ can point to any type of repository such  as Git, GitHub, Quay or binary repository such as Maven. A _Repository_ can also reference a file system.
 
+## Container Repositories
+
+You do not need to define a _Repository_ if you are just deploying containers. Containers are managed in "registries" which are handled differently than source code and file repositories. If you are using a Container registry, DeployHub will reference this from within your Container _Component_ definition.  When you define your _Component_ as a "Container" _Component_ Type you will be prompted to enter the following container details.  
+
+- container registry
+- container image
+- container digest
+- container tag  
+
 ## Using the Repository List View for Adding and Deleting
 
 The _Repository_ menu option is found under the **Setup** menu on the left of the DeployHub main panel. By selecting the _Repository_ menu, you will be taken to a list of all _Repositories_ to which you have access. You can also use the Search bar, represented by a funnel icon, to filter _Repository_ based on Name or Domain.

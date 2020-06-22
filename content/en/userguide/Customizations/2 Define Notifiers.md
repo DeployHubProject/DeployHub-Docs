@@ -103,8 +103,6 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Noti
 
 NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
 
-{{% include "userguide/reusable/AuditTrail.md" %}}
-
 ## Notifier Templates
 
 You can create standard message templates for you _Notifiers_.  For more information see:

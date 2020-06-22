@@ -22,6 +22,7 @@ The _Endpoints_ List View has the following Tabs.
 |**Refresh** | Refreshes the browser. |
 | **Add** | Allows you to Add a new _Endpoint_. |
 | **Delete** | Deletes the selected item. |
+| **Test Connection**|
 | **Reports** | _Endpoint_ Reports |
 
 By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
@@ -41,22 +42,23 @@ The Dashboard view displays all information related to a specific _Endpoint_.  B
 | **Summary** | A short text description of the _Endpoint_. |
 | **Created** | The date and time the _Endpoint_ was created. |
 | **Modified**| The date and time the _Endpoint_ was last modified. |
-| **Endpoint Type** | The platform type of the physical or virtual server that the _Endpoints_ resides on, the list currently includes AS400, Mac, Unix, Windows, Tandem, Stratus, and OpenVMS. For Docker, you should select Unix or Windows. |
+| **Endpoint Operating System Type** | The platform type of the physical or virtual server that the _Endpoints_ resides on, the list currently includes Unix, Windows, Tandem, Stratus, and OpenVMS. For containers you should select Unix. |
+| **Endpoint Types** | Used to route specific types of _Components_ to the matching _EndPoint_.|
 | **Hostname**| The unique name of a server that is used to identify it on the network. |
 | **Protocol** | The protocol used to communicate with the _Endpoint_. Currently this includes win, ftp, sftp, and ftps. |
 | **SSH Port Number** | The SSH Port used to connect to the _Endpoint_ if the selected Protocol is sftp. |
 | **Base Directory** | The Base Directory for a _Component_ can either be absolute, i.e. 'c:\main' for Windows or '/main' for Linux/Unix, etc., in which case it replaces the Base Directory for the _End Point_. If the _Component's_ Base Directory is relative, i.e. 'SomeFiles\SomeMoreFiles', then it is appended to the _End Point's_ Base Directory, i.e. 'c:\main\SomeFiles\SomeMoreFiles'.If the _Component Item's_ Target Directory has a value, it is always appended to the end of whatever value has been created from the Base Directories of the _Endpoint_ and _Component_. |
 | **Credential** | The Username and Password pair needed to login to the _Endpoint_. |
-| **Auto Ping** | A checkbox that indicates if the DeployHub system will ping the _Endpoint_ periodically. If checked, it causes the Ping Interval, Ping Start, and Ping End fields to be available. |
-| **Auto MD5 Check** | Each _Endpoint_ has a number stored in the DeployHub database that is derived from an MD5 check of all files deployed to the _Endpoint_. If Auto Ping is checked, this field is made available. If the Auto MD5 Check field is selected, an MD5 check is run every time the _Endpoint_ is pinged, and the resulting value is compared against the number stored in the database to see if there have been any changes made outside of DeployHub. If there is a difference, it will be reported via the _Endpoint_ Owner's Home Page. |
-| **Ping Interval**| Indicates how often the _Endpoint_ will be pinged, using 15 minute increments. Value can between 15 and 240 minutes. |
-| **Ping Start** | Indicates what time pinging will start each day, in military time. |
-|**Ping End** | Indicates what time pinging will stop each day, in military time. |
-| **Ping Failure Template** | The name of the _Email Template_ that is used to notify _Users_ if Auto Ping is set to Yes and the _Endpoint_ cannot be reached over the network. |
-| **MD5 Mismatch Template** | The name of the _Email Template_ that is used to notify _Users_ if any of the deployed files change, causing the result of the MD5 calculation to change. |
-| **Endpoint Component Types** | Used to match _Components_ to _Endpoints_ using a many-to-one relationship, with each _Endpoint_ having one or more Types and each _Component Version_ having only one Type. When an _Application Version_ is deployed into an _Environment_, each _Component_ in the _Application_ will be deployed against each _Endpoint_ that matches its _Component Type._ |
+| **Auto Ping** | A checkbox that indicates if the DeployHub system will ping the _Endpoint_ periodically. If checked, the following fields will be displayed. <ul><li>Auto MD5 Check:Each _Endpoint_ has a number stored in the DeployHub database that is derived from an MD5 check of all files deployed to the _Endpoint_. If Auto Ping is checked, this field is made available. If the Auto MD5 Check field is selected, an MD5 check is run every time the _Endpoint_ is pinged, and the resulting value is compared against the number stored in the database to see if there have been any changes made outside of DeployHub. If there is a difference, it will be reported via the _Endpoint_ Owner's Home Page. </li> <li>Ping Interval: Indicates how often the _Endpoint_ will be pinged, using 15 minute increments. Value can between 15 and 240 minutes</li><li> Ping Start:Indicates what time pinging will start each day, in military time.</li></li>Ping End:Indicates what time pinging will stop each day, in military time.</li><li>Ping Failure Template:The name of the _Email Template_ that is used to notify _Users_ if Auto Ping is set to Yes and the _Endpoint_ cannot be reached over the network. </li><li>MD5 Mismatch Template: The name of the _Email Template_ that is used to notify _Users_ if any of the deployed files change, causing the result of the MD5 calculation to change.</li><li>Endpoint Component Types</ul>|
+|**Name Resolution**| Checks to see if the DNS name can be resolved. Returns "OK" on success or "Failed" if not. |
+|**Ping**| Checks to see if the _Endpoint_ responds to ping. Returns "OK" on success or "Failed" if not.|
+|**Base Directory Check**| Checks to ensure the Base Directory is available on the _EndPoint_|
+|**Ping Time**| Time in milliseconds (ms) for the Ping to respond.|
+|**IPV4 Address**| The IP address of the Hostname.|
+|**Last Checked**| Timestamp of when the last test connection was performed by using the "Test Connection" option from the _Endpoint_ Dashboard.|
+|**Test Results**| Success or Failed message for the last "Test Connection" executed, performed by using the "Test Connection" option from the _Endpoint_ Dashboard.|
 
-{{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
+{{% include "userguide/reusable/AuditTrail.md" %}}
 
 ### Deployed Components
 

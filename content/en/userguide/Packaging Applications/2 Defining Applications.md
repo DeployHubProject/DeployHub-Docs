@@ -81,7 +81,7 @@ _Applications_ can be deployed many times, to the same or different locations (_
 
 The Trends graph shows you your success or failure rates overtime as well at the time required for the last 10 deployments. If an _Application_ deployment is taking longer than previous deployments, this might indicate an issue with your deployment logic.
 
-### Associated Environments
+### Assigned Environments
 
 Each _Application Base Version_ are assigned the _Environments_ to which they will be deployed. _Application Versions_ inherit the _Environments_ from the _Application Base Version_. By using the "+Add this Application to an Environment to enable Deployments" option, you can add _Environments_ where the _Application_ is to be deployed. You can assign the _Application_ to as many _Environments_ as needed.  The Detail field will contain a link to the deployment Log for the last _Environment_ where the _Application_ was deployed.
 

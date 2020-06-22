@@ -13,7 +13,7 @@ Note: To define your _Environment_ you will need to have first defined [_Endpoin
 
 ### _Environments_ and _Domains_
 
-_Environments_ are associated to a [_Domain_](/userguide/first-steps/2-defining-domains/). You can assign _Environments_ to any level of _Domain_ including the _Global Domain_. However, _Environments_ are most commonly associated to a _Project Domain_ used for _Applications_. A _Project Domain_ is used to manage an _Application_ and may be defined to include _Life Cycle Sub-domains_ for managing your continuous _Delivery Pipeline_.
+_Environments_ are associated to a [_Domain_](/userguide/first-steps/2-defining-domains/). You can assign _Environments_ to any level of _Domain_ including the _Global Domain_. However, _Environments_ are most commonly associated to a _Project Domain_ used for _Applications_. A _Project Domain_ is used to manage an _Application_ and may be defined to include _Life Cycle Subdomains_ for managing your continuous _Delivery Pipeline_.
 
 ## Using the _Environment_ List View for Adding and Deleting
 
@@ -26,7 +26,7 @@ The _Environments_ List View has the following Tabs.
 |**Refresh** | Refreshes the browser. |
 | **Add** | Allows you to Add a new _Environment_. |
 | **Delete** | Deletes the selected item. |
-| **Reports** | Success or Failed Report:  This report shows an ongoing list of all deployments to all _Environments_, regardless of _Domain_ or _Application_ with success or fail status. This report can be sorted based on the column for easy viewing. It can also be exported into various formats including .csv and .pdf. |
+| **Reports** | Success or Failed Report:  This report shows an ongoing list of all deployments to all _Environments_, regardless of _Domain_ or _Application_ with success or fail status. This report can be sorted based on the column for easy viewing. It can also be exported. |
 
 By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
 
