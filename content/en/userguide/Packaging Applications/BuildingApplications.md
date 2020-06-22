@@ -8,13 +8,13 @@ description: >
 
 ## Application Base Versions and Versions
 
-If you are an application developer, this will be where you do most of your work. _Applications_ are a main [Object](/userguide/concepts/1-deployhub-basic-concepts/#application-object) in DeployHub. They are a collection of _Components_ that can be deployed as a single software solution. You define an _Application_ by associating the _Components_ it will consume. The first time you define an _Application_, it is referred to as the _Application Base Version._ When you change the _Application Base Version_, you create a new _Application Version_. _Applications_ are assigned and deployed to _Environments_. _Applications_ are associated to a _Domain_.
+ _Applications_ are a main [Object](/userguide/concepts/1-deployhub-basic-concepts/#application-object) in DeployHub. They are a collection of _Components_ that can be deployed as a single software solution. You define an _Application_ by associating the _Components_ it will consume. The first time you define an _Application_, it is referred to as the _Application Base Version._ When you change the _Application Base Version_, you create a new _Application Version_. _Applications_ are assigned and deployed to _Environments_. _Applications_ are associated to a _Domain_.
 
 - **Application Base Version** : Defines the software product in terms of _Components_, _Attributes,_ and assigned _Environments_.
 
 - **Application Version** : This child of the _Application Base Version_ represents changes and can be deployed just as an _Application Base Version_ is.
 
-An _Application_ and all objects within it will be deployed to one or more _Endpoints_ (each of which represents a container, physical or virtual server in the enterprise) in an _Environment_. DeployHub uses a back end versioning engine to track all _Application Version_ configurations. For this reason, each new version will be given a new version number.
+An _Application_ and all objects within it will be deployed to one or more _Endpoints_. (Each one represents a container, physical or virtual server in the enterprise in an _Environment_. A back-end versioning engine tracks all _Application Version_ configurations. For this reason, each new version will be given a new version number.
 
 For instance, your Application Base Version may be called MyApp;1, subsequent versions would be automatically named MyApp;2, MyApp;3, etc.
 
@@ -26,7 +26,7 @@ When a new _Application Version_ is created from either an _Application Base Ver
 
 ## Applications and Tasks
 
-_Tasks_ allow you to act upon _Applications_. _Tasks_ are defined at the _Domain_ level and will be available to all of the _Applications_ within the Domain as default _Tasks_.  _Tasks_ can also be called via your continuous delivery pipeline.  Common _Tasks_ integrated into continuous delivery are _Move Version_, _Approve_ and _Deploy_. All _Tasks_ are managed at the _Domain_ level.
+_Tasks_ allow you to act upon _Applications_. They are defined at the _Domain_ level and are available to all of the _Applications_ within the Domain as default _Tasks_.  _Tasks_ can also be called via your continuous delivery pipeline.  Common _Tasks_ integrated into continuous delivery are _Move Version_, _Approve_ and _Deploy_. All _Tasks_ are managed at the _Domain_ level.
 
 | Task | Description |
 | --- | --- |

@@ -16,7 +16,7 @@ DeployHub is a SaaS based central 'hub' for cataloging, versioning, sharing and 
 
 DeployHub is not a 'microservice registry.' Instead, Developers interact with DeployHub to 'check-in' or publish microservices to a Domain Catalog before they are deployed to any environment. This is like an internal market place for finding, tracking and deploying microservices and relating them to the _Applications_ that consume them. The publishing catalog is based on a _Domain_ structure to support a Domain Driven Design.
 
-DeployHub is unique in how it incrementally deploys any _Component_ of an _Application_. Microservices are independently deployable. They require a solution to support this process. A back-end version controls the database to accurately track and deploy the many moving parts of a microservice implementation, producing _Application_ maps and _Component_ dependencies.
+DeployHub is unique in how it incrementally deploys any _Component_ of an _Application_. Microservices are now independently deployable and require a solution to support this process. Our back-end version controls the database to accurately track and deploy the many moving parts of a microservice implementation, producing _Application_ maps and _Component_ dependencies.
 
 If you have not moved to a microservice architecture, DeployHub  helps you visualize and continuously deploy your monolithic _Application_ based on _Components_ .  A _Component_ can be anything from a microservice to a .Jar file, a DB update to an environment variable update.  So while you begin digesting a new modern architecture, DeployHub starts shifting the way you conceptualize your monolithic _Application_ and prepares you for a service based architecture.
 
