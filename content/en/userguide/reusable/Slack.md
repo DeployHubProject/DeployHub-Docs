@@ -1,15 +1,15 @@
 ## Slack Details
 
-DeployHub can send messages to slack based on certain events. In order to integrate Slack with DeployHub, Slack must be configured as a _Notifier_.
+DeployHub can send messages to Slack based on certain events. Below are the Slack details used when called by _Notifiers_.  
 
 | Field | Description |
 | --- | --- |
 |**Channel**|  A particular channel within a Workspace. These can be public, private, or shared.|
-|**Channel Encrypted** | The Channel can be hidden in the DeployHub Database.|
-|**Channel Override** |The Channel name can be changed.|
+|**Channel Encrypted** | If checked, the Channel can be hidden in the DeployHub Database.|
+|**Channel Override** | If checked, the Channel name can be changed.|
 |**Logfile**| The location of the log results between DeployHub and Slack.|
-|**Logfile Encrypted**| The Logfile can be hidden in the DeployHub database. |
-|**Logfile Override**| The Logfile location can be changed. |
+|**Logfile Encrypted**| If checked, the Logfile can be hidden in the DeployHub database. |
+|**Logfile Override**| If checked, the Logfile location can be changed. |
 |**Webhook** |The url for the group chat, topic chat, or chat room.|
-|**Webhook Encrypted**| The Webhook can be hidden in the DeployHub database. |
-|**Webhook Override**| The Webhook can be changed. |
+|**Webhook Encrypted**| If checked, the Webhook can be hidden in the DeployHub database. |
+|**Webhook Override**| If checked, the Webhook can be changed. |

@@ -111,7 +111,7 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 
 {{% include "/userguide/reusable/SVN.md/" %}}
 
-### Access
+## Repository Access Controls
 
 The Access Section allows _Users_ within designated _Groups_ to update the _Repository_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Repository_ in the following ways:
 

@@ -1,8 +1,8 @@
 ## Built-In _Actions_
 
-In some cases, the integration work you are looking for may already be done with our Built-in _Actions_.  Built-in _Actions_ have been contributed by the Open Source Community and added to the DeployHub database.
+In some cases, the integration work you are looking for may already be done with our Built-in _Actions_. Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task like deleting files in a DropZone, or running a PostGres script. Other Built-in _Actions_ integrate with specific DevOps tools such as Ansible, Helm, Slack or GitHub.
 
-Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task like deleting files in a DropZone, or running a PostGres script. Other Built-in _Actions_ integrate with specific DevOps tools such as Ansible, Helm, Slack or GitHub.
+Following is a list of Built-in _Actions_:
 
 ### Built-In Database Actions
 
@@ -15,9 +15,9 @@ Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task
  Name | Description |
 |---|---|
 | **Checkout** | Extracts items from the specified _Repository_ and places them in the _Dropzone_. |
-| **Deploy** | Extracts items from the specified _Repository_ and deploys then to the Endpoint(s) within the targeted _Environment_. Use IF conditions to filter the _Endpoint_ list to those matching the specified criteria. |
+| **Deploy** | Extracts items from the specified _Repository_ and deploys then to the _Endpoints_ within the targeted _Environment_. Use IF conditions to filter the _Endpoint_ list to those matching the specified criteria. |
  | **Deploy Component** | Deploys the specified _Component_ to the appropriate _Endpoints_ within the targeted _Environment_. |
- | **Execute** | Runs a script on the appropriate _Endpoints_ within the targeted _Environment_. Use IF conditions to filter the server list to those matching the specified criteria. |
+ | **Execute** | Runs a script on the appropriate _Endpoints_ within the targeted _Environment_. Use IF conditions to filter the _Endpoint_ list to those matching the specified criteria. |
 | **Transfer** | Deploys the _Component_ on the stack to the _Endpoint_ on the stack. |
 
 ### Built-In Dropzone Actions
@@ -50,7 +50,7 @@ Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task
 |**If** | General Condition Expression evaluation. Also use this to filter the list of servers based on those matching the specified criteria. |
 |**Increment Variable** | Increments a variable. |
 |**Parallel** | Execute blocks in parallel. |
-|**Run Task** | Execute a Specific DeployHub Task. |
+|**Run Task** | Execute a Specific Task. |
 |**Set Variable** | Creates and sets a variable. |
 |**Sleep** | Pauses for n seconds. |
 |**Using Stream** | Use a named stream. |

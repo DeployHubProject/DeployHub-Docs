@@ -23,6 +23,7 @@ Task are used for executing deployments, managing approvals, or staging a deploy
 |**Rejected _Notify Template_**| The _Notify Template_ that will be emailed on rejection. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).  |
 
 **Move Version to the Next or Previous Pipeline State** 
+
 Moves an _Application_ or _Release_ version from one Pipeline state (Lifecycle _Sub-Domain_) to another. This can be used as a promotion or a demotion of an _Application_ or _Release_ version between Lifecycle states. When the task is defined, the Lifecycle _Sub-Domain_ has to be specified as part of the task definition. If an Approve task exists in the same Lifecycle _Sub-Domain_ as the Move Version task and the Approve task points to the same Lifecycle _Sub-Domain_, then that Approve task has to have been executed for the selected _Application_ or _Release_ version in order to approve the Version for the Target Lifecyle _Sub-domain_. If this has not been done, the Move Version task will fail when it is executed. In other words, the Approval Task must be accepted for the Move Version to succeed.
 
 | "Move" Task Detail Fields| Description|
@@ -38,6 +39,7 @@ Moves an _Application_ or _Release_ version from one Pipeline state (Lifecycle _
 |**Failure _Notify Template_**| The _Notify Template_ that will be emailed on a failed move. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).  |
 
 **Deploy Version to _Environment_** 
+
 Deploys an _Application_ or _Release_ version to an _Environment_. The target _Environment_ is selectable via a drop-down list.
 
 | "Deploy" Task Detail Fields| Description|
@@ -50,6 +52,7 @@ Deploys an _Application_ or _Release_ version to an _Environment_. The target _E
 |**Available in _Subdomains_**| If this is selected, all _Subdomains_ will have access to this Task.  |
 
 **Request Calendar Entry for Deployment to an _Environment_** 
+
 DeployHub Pro feature. Sends a request from a _User_ to add a time slot to the calendar for a deployment. The request is sent to _Group_ who has the authority to manage a particular _Enviornment's_ Calendar. . When the Request Task is defined it is linked to the task to be requested. When the Request Task is executed an entry is placed into the "To Do" list of all the _Users_ who are members of the _Group_ with the calendar access. The Request Task can have a Request Notification Template defined which can send out a notification to the appropriate _Groups_.
 
 | "Request" Task Detail Fields| Description|
@@ -64,6 +67,7 @@ DeployHub Pro feature. Sends a request from a _User_ to add a time slot to the c
 |**Request _Notify Template_**| The _Notify Template_ that will be emailed for the request. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).  |
 
 **Manually Trigger _Action_ to be executed**
+
 Runs a stand-alone Action. For example, if you need to interrupt a deployment process, this Task allows you to execute the steps manually. The manually triggered _Action_ will be placed in the "To do" list of the _User_ or _Group_ that executed the Deploy Task.
 
 | "Manually Trigger" Task Detail Fields| Description|

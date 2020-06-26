@@ -16,11 +16,11 @@ Each _Notifier Template_ contains the subject and body of the actual notificatio
 
 For more information on _Notifiers_ see [Using Notifiers for Messaging](/userguide/customizations/2-define-notifiers/).
 
-Using these two objects, _Notifiers_ and _Notifier Templates_, notifications can be sent whenever a deployment to an _Environment_ fails or succeeds, whenever a _Request_ Task is executed, or the state of an _EndPoint_ changes, by using a variety of email or messaging systems, with individually tailored notifications containing all information needed to inform all relevant teams.
+Using these two objects, _Notifiers_ and _Notifier Templates_, notifications can be sent whenever a deployment to an _Environment_ fails or succeeds, whenever a _Request_ Task is executed, or the state of an _EndPoint_ changes. You can also use the Filter bar, represented by a funnel icon, to reorder your _Notify Templates_ by _Notifier Template_ Name and _Notifier_.
 
 ## Using the _Notifiers_ List View for Adding or Deleting
 
-You will find _Notifier Templates_ under the Setup menu.  Selecting _Notifier Templates_ will take you to a list of all _Notifier Templates_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Notifier Templates_ List View.  You can reorder the list view on _Notifier Templates_ and _Domains_
+You will find _Notifier Templates_ under the Setup menu.  Selecting _Notifier Templates_ will take you to a list of all _Notifier Templates_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Notifier Templates_ List View.  You can reorder the list view on _Notifier Templates_ and _Domains_.
 
 _Notifiers Templates_ are defined to a _Domain_ and will be displayed based on your access to the _Domain_ to which it belongs.
 
@@ -42,11 +42,11 @@ The Dashboard view displays all information related to a specific _Notifier_.
 
 | Field | Description |
 | --- | --- |
-|**Notifier**| The _The Notifier_ that will use this _Notifier Template_.|
-| **Name** | The name of the _Template._ |
-| **Summary** | A short text field to describe the _Template_ and its use. |
-| **Created** | The date and time the _Template_ was created. |
-| **Modified** | The date and time the _Template_ was last changed. |
+|**Notifier**| The _Notifier_ that will use this _Notifier Template_.|
+| **Name** | A unique name for the  _Notifier Template._ |
+| **Summary** | A short text field to describe the _Notifier Template_ and its use. |
+| **Created** | The date and time the _Notifier Template_ was created. |
+| **Modified** | The date and time the _Notifier Template_ was last changed. |
 |**Subject**| The email subject line. |
 |**Body**| The email message.|
 

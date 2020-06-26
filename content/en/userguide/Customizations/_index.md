@@ -3,6 +3,6 @@ title: "Customizations"
 linkTitle: "Customizations"
 weight: 85
 description: >
-  Creating custom Functions, Procedures, Notifiers and Data Sources.
+  Adding Users, and Modifying Groups, Functions, Procedures, Notifiers and Notifier Templates.
 ---
 

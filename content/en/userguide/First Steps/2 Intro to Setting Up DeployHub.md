@@ -3,7 +3,7 @@ title: "Setting up DeployHub"
 linkTitle: "Setting up DeployHub"
 weight: 1
 description: >
- 
+  What you need to get started.  
 ---
 
 Define the following items to get started:
