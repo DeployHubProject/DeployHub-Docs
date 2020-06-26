@@ -3,12 +3,11 @@ title: "Intro to  Components"
 linkTitle: "Intro to Components"
 weight: 1
 description: >
-  Understanding Components and Versions.
+  
 ---
-
 ## Intro to _Components_
 
-DeployHub manages microservices and other reusable objects as _Components_.  _Components_ are assigned to an _Application_ eventhough they are managed independently.  By assigning _Components_ to _Applications_ you are able to track a 'logical' view of your software solution.  In a monolithic approach, we performed this step during the software compile and link, or 'build' process. In microservices, that step largely goes away. Microservices are loosely coupled and linked at run-time. Defining _Components_ to [_Applications_](/userguide/packaging-applications/buildingapplications/) puts the _Application_ back in the picture, even if it is only a 'logical' view.
+DeployHub manages microservices and other reusable objects as _Components_.  _Components_ are assigned to an _Application_ even though they are managed independently.  Assign _Components_ to _Applications_ to track a 'logical' view of your software solution. In a monolithic approach, we performed this step during the software compile and link, or 'build' process. In microservices, they are loosely coupled and linked at run-time. Defining _Components_ to [_Applications_](/userguide/packaging-applications/buildingapplications/) puts the _Application_ in a 'logical' view.
 
 If you are an API or microservice developer, this will be where you do most of your work. However, application developers may also define _Components_ that are used only by their specific _Application_. _Components_ are microservices (containers), Database updates or files, along with Pre and Post [_Actions_](/userguide/customizations/2-define-your-actions/#intro-to-actions) that are used to control the deployment of the _Component_. By tracking the low-level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across organizational teams and _Environments_.
 
@@ -24,13 +23,13 @@ _Components_ are organized by _Domains_. When you create a new _Component_ you p
 
 ## _Components_ and _Applications_
 
-_Components_ are consumed by _Applications_. You are able to track a 'logical' view of your complete software solution by seeing what _Components_ the _Application_ uses.  Defining _Components_ to _Applications_ is a "packaging" process done at the _Application_ level.
+_Components_ are consumed by _Applications_. You track a 'logical' view of your complete software solution by seeing which _Components_ the _Application_ uses.  Defining _Components_ to _Applications_ is a "packaging" process done at the _Application_ level.
 
-There is a many to many relationship between _Applications_ and _Components._ An _Application_ can contain many different _Components_, and a _Component_ can be used across many different _Applications_. With DeployHub, _Components_ can be easily shared between _Applications_. DeployHub tracks and versions the _Component_ relationships including to which _Applications_ they have been assigned.
+There is a many-to-many relationship between _Applications_ and _Components._ An _Application_ can contain many different _Components_. A _Component_ can be used across many different _Applications_. _Components_ can be easily shared between _Applications_. DeployHub tracks and versions these _Component_ relationships including to which _Applications_ they have been assigned.
 
 ## Sharing _Components_
 
-If you want your microservice _Component_ to be shared across your teams, you will need to publish your _Component_ to a _Domain_ that allows sharing. If it is defined to only your _Application,_ then only your team will be able to see it.
+If you want your microservice _Component_ to be shared across your teams, publish your _Component_ to a _Domain_ that allows sharing. If it is defined to only your _Application,_ then only your team will be able to see it.
 
 ## _Component_ Versioning
 

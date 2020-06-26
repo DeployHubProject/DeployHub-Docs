@@ -1,6 +1,6 @@
 ---
-title: "Auto Creating New Application Versions"
-linkTitle: "Auto Creating New Application Versions "
+title: "Auto-Create New Application Versions"
+linkTitle: "Auto-Create New Application Versions "
 weight: 6
 description: >
   Create new _Application_ versions with Continuous Delivery

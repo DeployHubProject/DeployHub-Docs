@@ -3,10 +3,10 @@ title: "DeployHub 101"
 linkTitle: "DeployHub 101"
 weight: 2
 description: >
-  Understanding DeployHub Core Objects and concepts.
+  Understanding Core Objects and Concepts.
 ---
 
-## Intro to Core Objects
+## Introduction
 
 The core _Objects_ are _Domains_, _Applications_, _Components_ , _Environments_ and _Endpoints_. These _Objects_ catalog, track, and version independently deployable objects, map their relationships, and release them to clusters, cloud, or physical data centers.
 
@@ -14,7 +14,7 @@ _Domains_ are core to DeployHub's management of microservices.  _Domains_ are hi
 
 ![Example of Domains, Applications, Components and Environments](/userguide/concepts/OnlineStore-GlobalDomain.jpg)
 
- The other _Objects_ include:
+ Other _Objects_ include:
 
 - Change Request
 - Credentials
@@ -32,32 +32,32 @@ Following is a description of each _Object_ and their attributes.
 
 ## Application Object
 
-If you are an application developer, this will be where you do most of your work. [_Applications_](/userguide/packaging-applications/) are a collection of _Components_ that can be deployed as a single software solution. You define an Application by associating the _Components_ it will consume. The first time you define an _Application_, it is referred to as the _Application Base Version._ When you change the _Application Base Version_, you create a new _Application Version_. _Applications_ are assigned and deployed to _Environments_. _Applications_ are associated to a _Domain_.
+[_Applications_](/userguide/packaging-applications/) are a collection of _Components_ that can be deployed as a single software solution. You define an Application by associating the _Components_ it will consume. The first version is the _Application Base Version._ When you change this _Application Base Version_, you create a new _Application Version_. _Applications_ are assigned and deployed to _Environments_. _Applications_ are associated to a _Domain_.
 
 - **Application Base Version** : Defines the software product in terms of _Components_, _Attributes,_ and assigned _Environments_.
 
-- **Application Version** : This represents any changes made and is deployed just like an _Application Base Version_.
+- **Application Version** : This represents any changes madei. It s deployed like an _Application Base Version_.
 
 An Application has the following properties:
 
 | **Property** | **Description** |
 | --- | --- |
-| id | A unique identifier for the _Application_ as used in the database. |
+| id | A unique identifier for the _Application_  in the database. |
 | name | _Application_ name. |
 | fqdomain |Fully qualified _Domain_ name. |
 | summary | Summary of the _Domain_. |
-| owner | User or UserGroup that owns the _Application._ |
+| owner | User or UserGroup that owns it. |
 | parent | The Base _Application_ .|
-| predecessor |Predecessor _Application Version_ (the version on which this version is based). |
+| predecessor |Predecessor _Application Version_. |
 | _Release_ | Defines the _Application_Object_ with more than one _Application_. |
 | _Applications_ | Multiple _Applications_ used to create a _Release_.|
 | _Components_ | The objects that the _Application_ consumes. |
 | approvals | Allows a control point for progressing a change within the pipeline process. |
 | requests | The _Change Request_ objects associated with this _Application_ (Pro feature).|
-| creator | The User who created this _Application_. |
-| modifier | The User who last modified this _Application_. |
-| ctime | The date/time the _Application_ was created. |
-| mtime |  The date/time the _Application_ was last modified. |
+| creator | The User who created it. |
+| modifier | The User who last modified it. |
+| ctime | The date/time it was created. |
+| mtime |  The date/time it was last modified. |
 | attributes |  An Array of Strings, keyed by Attribute Name. |
 
 ### Release Object

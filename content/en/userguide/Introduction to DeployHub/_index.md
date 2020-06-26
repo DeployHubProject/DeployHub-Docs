@@ -1,5 +1,5 @@
 ---
-title: "Welcome to DeployHub"
+title: "Welcome"
 linkTitle: "Welcome"
 weight: 1
 description: >

@@ -3,12 +3,12 @@ title: "Defining Components"
 linkTitle: "Defining Components"
 weight: 2
 description: >
-  Publishing Components to Domains.
+  How to Publish Components to Domains
 ---
 
-## The _Component_ List View for Adding or Deleting
+## _Component_ List View allows Adding or Deleting
 
-Manage your _Components Base Version_ and _Component Versions_ to which you have access using the _Component_ List View accessible from the left hand _Component_ menu option.  There is a row for every _Environment_ where the _Component Base Version_ or _Component Version_ has been deployed.  For this reason, you will see multiple entries for the same _Component_ if it has been deployed to multiple _Environments_. You will be provided a list of all _Components_ organized by the following:
+Use the _Component_ List View accessible from the left hand _Component_ menu option. Manage your _Components Base Version_ and _Component Versions_. Each_Environment_ has a row where the _Component Base Version_ or _Component Version_ has been deployed. There can be multiple entries for the same _Component_ if it has been deployed to multiple _Environments_. A list of all _Components_ is organized by the following:
 
 | List Column | Description|
 |---|---|
@@ -22,7 +22,7 @@ Manage your _Components Base Version_ and _Component Versions_ to which you have
 
 Note: If you have not defined any _Components_ to DeployHub, you will see only the sample data.
 
-You can also use the Filter bar, represented by a funnel icon, to reorder your _Component_ List View.  You can filter on:
+You can also use the Filter bar, represented by a funnel icon, to reorder your _Component_ List View:
 
 - Domain
 - Environment
@@ -33,20 +33,19 @@ You can also use the Filter bar, represented by a funnel icon, to reorder your _
 
 ## Additional Tabs from the _Component_ List View
 
-The _Component_ List View has the following Tabs.
 
 | Tab | Description |
 | --- | --- |
 |Refresh | Refreshes the browser. |
 | +Add Base | Allows you to Add a new _Component Base Version_. You will select from one of three types: Container, Application File, Database |
-| +Add Version | Creates a copy of the selected _Component_ in the list creating a new _Component Version_.  |
+| +Add Version | Creates a copy of the selected _Component_.  |
 | Delete | Deletes the selected item. However, you must delete the _Components_ starting from the newest to the oldest.  The _Component Base Version_ would be deleted last. Sorting by "Version" gives you the order.  |
-| List | Takes you back to the List View if you have been in the Map View. |
+| List | Return to List View if in the Map View. |
 | Map | Displays a global Map of all _Component_ versions, with their _Application_ relationships.  |
 
 ## _Component_ Types
 
-When adding new _Components_ you will select the type of _Component_ you want to create.  Select the _Component_ Type from the drop down list.  Options include:
+When adding new _Components_ select the  _Component_ Type from the drop down list/:
 
 | **Type** | **Description** |
 | --- | --- |
@@ -55,9 +54,9 @@ When adding new _Components_ you will select the type of _Component_ you want to
 | Database | For SQL files such as .ddl or other database update scripts. |
 
 
-## Viewing and Editing _Components_ with the Dashboard
+## How to View and Edit _Components_ 
 
-_Components_ are defined as Container, Application File or Database.  These three definition types will address all of the different types of _Components_ you may need from microservices to binaries and DB updates. The Dashboard view displays all information related to a specific _Component Base Version_ or _Component Version_. Depending on what type of _Component_ you are defining, you will be presented with different data definition fields.
+_Components_ are defined as Container, Application File, or Database.  These are the different types of _Components_ you may need from microservices to binaries and DB updates. The Dashboard view displays all information related to a specific _Component Base Version_ or _Component Version_. Depending on what type of _Component_ you are defining, you will be presented with different data definition fields.
 
 The following fields are common to all _Components_:
 
@@ -69,11 +68,11 @@ The following fields are common to all _Components_:
 | **Owner** | The owner of the _Component_, whose default value is the creator of the _Component_.  
 | **Summary** | A short text field with a description of the _Component_. |
 | **Created** | The date and time that the _Component_ was created. |
-| **Modified** | The date and time of the last time the _Component_ was changed. |
-| **Kind**| Populated based on the Type you selected, i.e. Container, Application File, Database.|
-|**Endpoint Type** | Used to map the _Component_ to _Endpoints_ within an _Environment_ at deployment.  This allows DeployHub to map the _Component_ to the correct _Endpoint_ when moving across different environments. For example a database update is mapped to an _Endpoint_ with a database, or a container is mapped to an _Endpoint_ in Kubernetes. You can add your own _Endpoint_ Types from the Customize Types menu or select from the default options.|
-| **Change Request Data Source** | This _Data Source_ assigned to the _Component_ for tracking Change Request. A Change Request Data Source must be pre-defined for this field to be used. |
-| **Category** | Categories allow the selection of different Objects in an orderly manner. Assigning a Category to an Object allows lists of Objects based on Categories to be used throughout DeployHub. You can add a new Category by simply typing it into the entry field or use an existing Category displayed in the drop down. Categories are most commonly associated with _Actions_, _Functions_ and _Procedures_. Pre-defined Categories include: <li>Build - _Actions_, _Functions_ and _Procedures_ for calling ANT (SalesForce integration).</li><li>Database - _Actions_, _Functions_ and _Procedures_ for database updates.</li><li>Deploy-_Actions_, _Functions_ and _Procedures_ for Deployments.</li><li>Dropzone- _Actions_, _Functions_ and _Procedures_ for interacting with the Dropzone.</li><li>File Logic-_Actions_, _Functions_ and _Procedures_ related to File manipulation.</li><li>Flow Logic-_Actions_, _Functions_ and _Procedures_ for if then else in DMScrit.</li><li>Loops-_Actions_, _Functions_ and _Procedures_ for file looping.</li><li>General-Non-categorized Objects (default).</li><li>WebLogic-_Actions_, _Functions_ and _Procedures_ for deploying to WebLogic.</li><li>WebSphere-_Actions_, _Functions_ and _Procedures_ for deploying to WebSphere.</li><li>Windows-_Actions, Functions_ and _Procedures_ used for Windows deployments.</li>   |
+| **Modified** | The date and time of the last change. |
+| **Kind**|  Container, Application File, or Database.|
+|**Endpoint Type** | Used to map the _Component_ to _Endpoints_ within an _Environment_ at deployment.  This allows DeployHub to map the _Component_ to the correct _Endpoint_ when moving across different environments.  You can add your own _Endpoint_ Types from the Customize Types menu or select from the default options.|
+| **Change Request Data Source** | This _Data Source_ is assigned to the _Component_ for tracking Change Request. A Change Request Data Source must be pre-defined for this field to be used. |
+| **Category** | Assigning a Category to an Object allows lists of Objects based on Categories to be used throughout DeployHub. Add a new Category in the entry field or use an existing Category displayed in the drop down. Categories are most commonly associated with _Actions_, _Functions_ and _Procedures_. Pre-defined Categories include: <li>Build - _Actions_, _Functions_ and _Procedures_ for calling ANT (SalesForce integration).</li><li>Database - _Actions_, _Functions_ and _Procedures_ for database updates.</li><li>Deploy- _Actions_, _Functions_ and _Procedures_ for Deployments.</li><li>Dropzone- _Actions_, _Functions_ and _Procedures_ for interacting with the Dropzone.</li><li>File Logic- _Actions_, _Functions_ and _Procedures_ related to File manipulation.</li><li>Flow Logic- _Actions_, _Functions_ and _Procedures_ for if then else in DMScript.</li><li>Loops- _Actions_, _Functions_ and _Procedures_ for file looping.</li><li>General-Non-categorized Objects (default).</li><li>WebLogic- _Actions_, _Functions_ and _Procedures_ for deploying to WebLogic.</li><li>WebSphere- _Actions_, _Functions_ and _Procedures_ for deploying to WebSphere.</li><li>Windows- _Actions, Functions_ and _Procedures_ used for Windows deployments.</li>   |
 | **Always Deploy** | The _Component_ is deployed to the associated _Endpoints_ in the _Target Environment_ regardless if the _Component_ is already present on the _Endpoints_. This is useful for monolithic applications where you want to copy over a binary for example.|
 |**Deploy Sequentially** | Normally when a _Component_ in an _Application_ is deployed to several _Endpoints_ in an _Environment_, it is deployed to each _Endpoint_ at the same time (in parallel). The "Deploy Sequentially" option changes this behavior to force the _Component_ to deploy to each _Endpoint_ in turn, sequentially. |
 | **Custom Action** | An _Action_ that replaces the usual Deployment Engine processing. Custom _Actions_ can be used to call Ansible, Helm or other external deployment tools.|
@@ -81,9 +80,9 @@ The following fields are common to all _Components_:
 
 ### Container Specific Data Definition
 
-For deploying Containers _Components_, Helm is required.  DeployHub interfaces with Helm to support a Kubernetes Cluster deployment.
+Helm is required for deploying Containers _Components_. DeployHub interfaces with Helm to support a Kubernetes Cluster deployment.
 
-A Container _Component_ has the following additional attributes, none of which are required:
+A Container _Component_ has the following optional attributes:
 
 | **Field**| **Description** |
 | --- | --- |
@@ -158,7 +157,7 @@ The Dependency Map provides a graphical view of all _Applications_ that is consu
 
 ### _Endpoints_
 
-This section provides a list of all _Endpoints_ that the _Component_ has been installed to with the Deployment Number. The Deployment Number is generated by DeployHub for each unique deployment.  You can also use this section to stop incremental deployments and force a specific version to be deployed to the _Endpoint_. By manually adding a specific _Component Version_ to the _Endpoint_, you bypass the incremental deployment logic of the deployment engine.  For example, if you would like to deploy a particular container without accepting any intermediate updates, you would go to the intermediate _Component Versions_ and manually add them to the _Endpoints_, causing the deployment engine to believe that it was previously deployed. When you manually add an _Endpoint_, the Deployment Number will show "manually deployed." To manually add a _Component_ to an _Endpoint_, use the +Add option. You will be provided a list of available _Endpoints_. Use Save to commit the change to the table. You can select multiple _Endpoints_.  To Edit or Delete an _Endpoint_, select the _Endpoint_ and use the Edit or Delete option. 
+This section lists all _Endpoints_ that the _Component_ has been installed to with its Deployment Number. The Deployment Number is generated by DeployHub for each unique deployment.  You can also use this section to stop incremental deployments and force a specific version to be deployed to the _Endpoint_. By manually adding a specific _Component Version_ to the _Endpoint_, you bypass the incremental deployment logic of the deployment engine.  For example, if you would like to deploy a particular container without accepting any intermediate updates, you would go to the intermediate _Component Versions_ and manually add them to the _Endpoints_, causing the deployment engine to believe that it was previously deployed. When you manually add an _Endpoint_, the Deployment Number will show "manually deployed." To manually add a _Component_ to an _Endpoint_, use the +Add option. You will be provided a list of available _Endpoints_. Use Save to commit the change to the table. You can select multiple _Endpoints_.  To Edit or Delete an _Endpoint_, select the _Endpoint_ and use the Edit or Delete option. 
 
 {{% include "userguide/reusable/Attributes.md" %}}
 
@@ -185,13 +184,13 @@ The Access Section allows _Users_ within designated _Groups_ to update or view t
 
 The Change Request section, available for DeployHub Pro users,  shows enhancement requests and bugs for a selected Component for several popular bug tracking systems, including Bugzilla, GitHub, and Jira.
 
-Select the "+Add Change Request to this Version" to assign a Change Request to the _Component_. This will display all the Change Requests (Enhancements, Bugs, etc.) from the assigned Data Source in the resulting Select Bug Record pop up window, and one or more of these can be assigned to the _Component_ by clicking on the box to the left of each CR ID field.
+Select the "+Add Change Request to this Version" to assign a Change Request to the _Component_. This will display all the Change Requests (Enhancements, Bugs, etc.) from the assigned Data Source in the resulting Select Bug Record pop up window. One or more of these can be assigned to the _Component_ by clicking on the box to the left of each CR ID field.
 
-The lower section contains a list of Change Requests with the fields CR ID, Title, and Status. Clicking on the CR ID takes the User to a new tab in the browser that contains the source of the Change Request. For instance, if the _Component_ has a Change Request Data Source of the type GitHub, clicking on the CR ID field for a Change Request will open a tab with the bug or enhancement request within github.com, allowing the User the ability to update, close, or read about it in detail. The Title field holds the title of the Change Request within the bug tracking system. The various bug tracking systems used by DeployHub have their own statuses. Bugzilla for instance, has statuses such as New, Unconfirmed, Assigned, etc. DeployHub interprets these as either 'open' or 'closed’ and displays them in the Status field with a gold or dark gray background respectively.
+The lower section contains a list of Change Requests with the fields CR ID, Title, and Status. Clicking on the CR ID  to see the source of the Change Request. For instance, if the _Component_ has a Change Request Data Source of the type GitHub, clicking on the CR ID field for a Change Request will open a tab with the bug or enhancement request within github.com, allowing the User the ability to update, close, or read about it in detail. The Title field holds the title of the Change Request within the bug tracking system. The various bug tracking systems used by DeployHub have their own statuses. Bugzilla for instance, has statuses such as New, Unconfirmed, Assigned, etc. DeployHub interprets these as either 'open' or 'closed’ and displays them in the Status field with a gold or dark gray background respectively.
 
-## Publishing a New _Component Versions_ Based on an Existing _Component Version_
+## Publish a New _Component Version_ Based on an Existing _Component Version_
 
-Create _Component Versions_ that are patterned after the _Component Base Version_ or any _Component Version_. To do this, check box the _Component Base Version_ or _Component Versions_ from which you want to base the new version. Select the New Version Tab and you will be brought into the _Component_ Dashboard to edit the new _Component Version_. When you manually create a new _Component Version_ the name will be auto generated with a new number. You may need to provide it a unique name based on your versioning patterns.
+Create _Component Versions_ that are patterned after the _Component Base Version_ or any _Component Version_. Check the box _Component Base Version_ or _Component Versions_ from which you want to base the new version. Select the New Version Tab to access the _Component_ Dashboard and then edit the new _Component Version_. When you manually create a new _Component Version_ the name will be auto generated with a new number. You may need to provide it a unique name based on your versioning patterns.
 
  
   
