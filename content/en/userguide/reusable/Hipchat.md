@@ -4,8 +4,8 @@ DeployHub allows you to send notifications via HipChat using the HipChat Group, 
 
 | Field | Description |
 | --- | --- |
-|**HTML**| If 'Yes,' will send email in HTML format.|
-|**HTML Override** |If checked will indicate the value can be overriden. This is used for 'scripted' notifications where the action editor includes a 'notify' action. This allows the notify action to override the value, for example, of the username or hostname of the _Notifier_.|
+|**HTML**| If checked, will send email in HTML format.|
+|**HTML Override** |If checked will indicate the value can be overridden. This is used for 'scripted' notifications where the action editor includes a 'notify' action. |
 |**Logfile**| The location of the log results between DeployHub and Hipchat.|
 |**Logfile Encrypted**| The Logfile can be hidden in the DeployHub database. |
 |**Logfile Override**| The Logfile location can be changed. |

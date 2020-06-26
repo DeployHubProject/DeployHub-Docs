@@ -1,55 +1,75 @@
 ---
-title: "Creating Pro UserGroups"
-linkTitle: "Creating Pro UserGroups"
+title: "Creating Pro User Groups"
+linkTitle: "Creating Pro User Groups"
 weight: 82
 description: >
-  Add additional UserGroups for more security and control of _Components_ and deployments.
+  Add additional User Groups for more security and control over DeployHub Objects.
 ---
-# Creating and Deleting Groups
+## Intro to _Groups_
+DeployHub Team has two Groups - Administrators and Users.  Access control to Objects are based on these two high level _Groups_. DeployHub Team allows you to create as many _Users_ as required but only the "User" and "Administrator" _Groups_ are supported.
 
-A new _Group_ can be created by clicking on the Users and Groups menu, clicking on a _Domain_ within the tree structure in the left side panel, and selecting "New Group in this _Domain_" from the resulting list. A window will appear in the list beneath the _Domain_, with entry fields that can be filled in to create a new _Group_. Once a _Group_ is created, it will appear in the list of _Groups_ in the tree structure. The _Group_ can be edited by selecting it in the tree structure and clicking on the pencil icon in the right-hand corner of the window. You can delete a _Group_ by right clicking on it and selecting the 'Delete this Group' menu option. There is no retrieving the deleted _Group_ if this option is selected.
+**DeployHub Pro** allows you to create custom _Groups_ for organizing _Users_ giving you more granular security control around _Domains_, _Environments_, _Applications_ and _Components_. 
+
+[_Users_](/userguide/customizations/2-users/) are given access to DeployHub Objects based on their _Group_ access. A many-to-many relationship exists between _Users_ and _Groups_, so that a _User_ can belong to many different _Groups_, and a _Group_ can contain many different _Users_. If a _User_ belongs to more than one _Group_, the _User_ will be given the highest level of access. 
+
+## _Groups_ and _Domain_ Inheritance
+
+_Users_ and _Groups_ are created under a _Domain_. A _User_ or _Group_ that is created at a higher level _Domain_ will inherit access to all _Subdomains_, based on their access settings. _Group_ access and inherited access properties can be overridden within a _Sub-Domain_. As an example, Administrators, Director, and Operational level _Users_ or _Groups_ can be assigned to the highest level _Domain_ for the Enterprise while Application Teams and Testing Teams can be defined to only the _Subdomains_ that pertain to their area of expertise. _Users_ or _Groups_ can belong to multiple _Domains_.  
+
+## Using the _Group_ List View for Adding or Deleting
+
+You will find _Groups_ under the Setup menu.  Selecting _Groups_ will take you to a list of all _Groups_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Groups_ List View based on _Groups_ and _Domains_.
+
+The _Groups_ List View has the following Tabs.
+
+| Tab | Description |
+| --- | --- |
+|**Refresh** | Refreshes the browser. |
+|**Add** | Allows you to Add a new _User_ of a particular type. |
+|**Delete** | Deletes the selected item. |
+
+From the _Groups_ List View, double click on the _Group_ which you would like to view to see all Details.  
+
+## Using the _Group_ Dashboard for Viewing and Editing
+
+The _Group_ Dashboard view displays all information related to a specific _Group_.
+
+### _Group_ Details Section
+
+_Groups_ have the following attributes:
+
+| Field | Description |
+| --- | --- |
+|**Full Domain**| The fully qualified name of the _Domain_ to which the _Data Source_ was defined. |
+| **Group Name** | The name of the DeployHub _Group._ |
+|**Summary**| A description of the _Group_.|
+| **Email** | The _Group_ email address that members of a _Group_ would all have access to, in the event of a notify process. |
+|**Created**| Auto generated date when the _Data Source_ was added.|
+|**Modified**| Auto generated date when the _Data Source_ was updated.|
+|**Override Access Control**| If checked, allows any _User_ belonging to this _Group_ to have control over the entire system, and no access restrictions apply to them. This option creates a Super Group level of Administrator and should only be used for individuals with full administrative privileges. |
+| **Users** | When checked, allows the _User_ to create and add Users to any of the _Domains_ to which they belong. |
+| **User Groups**| When checked, allows the _User_ to create and add _Groups_ to any of the _Domains_ to which they belong. |
+| **Domains** | When checked, allows the _User_ to create and add _Subdomains_ to any of the _Domains_ to which they belong. |
+| **Environments** | When checked, allows the _User_ to create and add _Environments_ to any of the _Domains_ to which they belong. |
+| **Endpoints** | When checked, allows the _User_ to create and add _Endpoints_ to any of the _Domains_ to which they belong. |
+| **Repositories** | When checked, allows the _User_ to create and add _Repositories_ to any of the _Domains_ to which they belong. |
+| **Components** | When checked, allows the _User_ to create and add _Components_ to any of the _Domains_ to which they belong. |
+| **Credentials** | When checked, allows the _User_ to create and add _Credentials_ to any of the _Domains_ to which they belong. |
+| **Applications** | When checked, allows the _User_ to create and add _Applications_ to any of the _Domains_ to which they belong. |
+| **Application Versions** | When checked, allows the _User_ to create and add _Application Versions_ to any of the _Domains_ to which they belong. |
+| **Actions** | When checked, allows the _User_ to create and add _Actions_ to any of the _Domains_ to which they belong. |
+| **Procedures** | When checked, allows the _User_ to create and add _Procedures_ to any of the _Domains_ to which they belong. |
+| **Data Sources** | When checked, allows the _User_ to create and add _DataSources_ to any of the _Domains_ to which they belong. |
+| **Notifiers** | When checked, allows the _User_ to create and add _Notifiers_ to any of the _Domains_ to which they belong. |
+| **Build Engines**|When checked, allows the _User_ to create and add _Build Engines_ to any of the _Domains_ to which they belong.|
+
+### Group Membership
 
 NOTE: DeployHub creates a Group named "Everyone" whenever it is installed, and every User that is created is added to this group and cannot be removed from it.
 
-## User Membership Tab
+This section shows a list of all _Users_ who belong to the selected _Group_. Click on the plus '+Add' option to add a _User_ to this _Group_. A new row will be added to the table with a drop down list allowing you to select the _User_ to add to the _Group_. Select "Save" to commit the row to the table. By selecting the User, you can  . A pop-up window will appear containing all available _Users_. Select a _User_ and click OK to add the _User_ to the list of _Users_ in the User Membership tab. You can select multiple users by holding down the shift key while selecting _Users_. A _User_ can be removed from the _Group_ by selecting the _User_ in the User Membership table under the User Membership tab and clicking the 'X' button.
 
-A list of all _Users_ who belong to the selected _Group_ appears on this tab. Click on the plus '+' button to add a _User_ to this _Group_. A pop-up window will appear containing all available _Users_. Select a _User_ and click OK to add the _User_ to the list of _Users_ in the User Membership tab. You can select multiple users by holding down the shift key while selecting _Users_. A _User_ can be removed from the _Group_ by selecting the _User_ in the User Membership table under the User Membership tab and clicking the 'X' button.
+This Section contains a list of all the _Groups_ the selected _User_ belongs to. Add a _Group_ to the selected _User_ by clicking on the plus '+Add' sign in the upper right, which adds an empty row to the table with a drop down list of all available _Groups_. Use the Save option to commit it to the table. Use the Trash Can icon to delete a _Group_ from the table.
 
-## Admin Rights Tab
+{{% include "userguide/reusable/AuditTrail.md" %}}
 
-Access can be applied to the creation of objects within DeployHub and the restriction of menu items. In addition, you can create a 'Super Administrator Group' by providing the group with override access to all objects within DeployHub. This is done by default with the Administrators _Group_. Defining these access rights are done using checkboxes in the selected _Group_. It is also important to understand that the _Groups_ can only see objects in the _Domain_ they have been assigned. When you create a new _Group_, you create that _Group_ under a particular _Domain_. The _Group_ will be able to see their primary _Domain_ and all its _Subdomains_. The access rights for the _Group_ are defined as follows:
-
-## Access Control Rights
-
-Override Access Control allows any _User_ belonging to a _Group_ with this control turned on to have control over the entire system, and no access restrictions apply to them. This option creates a Super Group level of Administrator and should only be used for individuals with full administrative privileges.
-
-### Creation Rights
-
-| Field | Description |
-| --- | --- |
-| Users | Allows the _User_ to create and add Users to any of the _Domains_ to which they belong. |
-| UserGroups | Allows the _User_ to create and add _Groups_ to any of the _Domains_ to which they belong. |
-| Domains | Allows the _User_ to create and add _Subdomains_ to any of the _Domains_ to which they belong. |
-| Environments | Allows the _User_ to create and add _Environments_ to any of the _Domains_ to which they belong. |
-| Endpoints | Allows the _User_ to create and add _Endpoints_ to any of the _Domains_ to which they belong. |
-| Repositories | Allows the _User_ to create and add _Repositories_ to any of the _Domains_ to which they belong. |
-| Components | Allows the _User_ to create and add _Components_ to any of the _Domains_ to which they belong. |
-| Credentials | Allows the _User_ to create and add _Credentials_ to any of the _Domains_ to which they belong. |
-| Applications | Allows the _User_ to create and add _Applications_ to any of the _Domains_ to which they belong. |
-| Application Versions | Allows the _User_ to create and add _Application Versions_ to any of the _Domains_ to which they belong. |
-| Actions | Allows the _User_ to create and add _Actions_ to any of the _Domains_ to which they belong. |
-| Procedures | Allows the _User_ to create and add _Procedures_ to any of the _Domains_ to which they belong. |
-| DataSources | Allows the _User_ to create and add _DataSources_ to any of the _Domains_ to which they belong. |
-| Notifiers | Allows the _User_ to create and add _Notifiers_ to any of the _Domains_ to which they belong. |
-
-### Group General Tab
-
-The General tab displays the basic descriptive fields that define a _Group._ You can edit this information by clicking on the pencil icon on the right-hand corner of the window. The basic information that defines a _Group_ includes:
-
-| Field | Description |
-| --- | --- |
-| Group Name | The name of the DeployHub _Group._ |
-| Summary | A text field for short description. |
-| Email | The _Group_ email address that members of a _Group_ would all have access to, in the event of a notify process. |
-| Created | The date and time the _Group_ was created. |
-| Modified | The date and time that information concerning the _Group_ was last edited. |

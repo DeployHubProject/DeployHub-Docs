@@ -3,7 +3,7 @@ title: "DeployHub Pro On-Prem Installation"
 linkTitle: "DeployHub Pro On-Prem Installation"
 weight: 3
 description: >
-  Installing DeployHub Pro On-premise.
+  Installing DeployHub Pro On-premise
 ---
 
 ## Docker Installation

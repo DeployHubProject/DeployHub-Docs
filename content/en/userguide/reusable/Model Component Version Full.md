@@ -1,6 +1,6 @@
 **_Component Version_ Full Detail**
 
-Is a JSON  object representing the _Component_ being retrieved.
+A JSON  object represents the _Component_ being retrieved.
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
