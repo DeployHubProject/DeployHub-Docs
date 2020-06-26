@@ -3,7 +3,7 @@ title: "Define Your Endpoints"
 linkTitle: "Define Your Endpoints"
 weight: 7
 description: >
-  Defining Endpoints for Environments.
+  How to Define Endpoints for Environments
 ---
 ## Introduction to Endpoints
 
@@ -11,9 +11,9 @@ An _Endpoint_ is an object representing a container deployment host, virtual ima
 
 _Endpoints_ can be the location where you will run your Helm Chart for a Kubernetes deployment, a database server, cloud images, request routers, or WebSphere server. There is a many-to-many relationship between _Environments_ and _Endpoints_, so that an _Endpoint_ can be assigned to more than one _Environment_, and an _Environment_ can contain many _Endpoints_.
 
-## Using the _Endpoint_ List View for Adding and Deleting
+## Use the _Endpoint_ List View to Add or Delete
 
-The _Endpoint_ menu option is found on the left of the DeployHub main panel. By selecting the _Endpoint_ menu, you will be taken to a list of all _Endpoints_ to which you have access. You can also use the Search bar, represented by a funnel icon, to reorder _Endpoints_ based on _Endpoint_ Name or _Domain_.
+The _Endpoint_ menu is on the left of the main panel. Select the _Endpoint_ menu to view a list of all _Endpoints_ to which you have access. Or use the Search bar, represented by a funnel icon, to reorder _Endpoints_ based on Name or _Domain_.
 
 The _Endpoints_ List View has the following Tabs.
 
@@ -23,11 +23,11 @@ The _Endpoints_ List View has the following Tabs.
 | **Add** | Allows you to Add a new _Endpoint_. |
 | **Delete** | Deletes the selected item. |
 
-By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
+Double click on an item in the list to see the _Dashboard_.
 
-## Using the _Endpoint_ Dashboard for Viewing and Editing
+## Use the _Endpoint_ Dashboard to View and Edit
 
-The Dashboard view displays all information related to a specific _Endpoint_.  Below are the Details for a _Endpoint_.
+The Dashboard view displays all information related to a specific _Endpoint_. 
 
 ### Endpoint Details
 
@@ -36,7 +36,7 @@ The Dashboard view displays all information related to a specific _Endpoint_.  B
 | **Full Domain** | The fully qualified name of the _Domain_ to which the _Endpoint_ is defined.|
 | **Name** | The name of the _Endpoint_ object. For managing Kubernetes clusters, you should name your _Endpoint_ to match the cluster name that the _Endpoint_ is deploying to.  This will allow DeployHub to track what has been deployed to each cluster.  |
 | **Owner Type** | Group or User |
-| **Owner** | The owner of the _Endpoint_, it defaults to the _User_ or _Group_ who created it. |
+| **Owner** | The owner defaults to the _User_ or _Group_ who created it. |
 | **Summary** | A short text description of the _Endpoint_. |
 | **Created** | The date and time the _Endpoint_ was created. |
 | **Modified**| The date and time the _Endpoint_ was last modified. |
@@ -53,12 +53,12 @@ The Dashboard view displays all information related to a specific _Endpoint_.  B
 
 ### _Endpoint_ Access Control
 
-The Access Section allows _Users_ within designated _Groups_ to update the _Endpoint_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Endpoint_ in the following ways:
+The Access Section allows _Users_ within designated _Groups_ to update the _Endpoint_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ within one of the Access lists will be granted access to the _Endpoint_ in the following ways:
 
 | Access | Description |
 | --- | --- |
-|**View**| This allows any _User_ that belongs to any _Group_ in this list to see the selected _EndPoint_ in the List View. |
-|**Change**| This allows any _User_ that belongs to any _Group_ in this list to make changes to the _Endpoint_. |
+|**View**| Any _User_ in any _Group_ in this list can see the selected _EndPoint_. |
+|**Change**| Any _User_ in any _Group_ in this list can make changes to the _Endpoint_. |
 |**Available Groups**|This list contains all the Groups within the DeployHub installation. Dragging and dropping back and forth between this list and the other two lists allows or prevents access to viewing and changing the selected _EndPoint_.
 
 NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**

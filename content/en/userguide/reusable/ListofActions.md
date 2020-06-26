@@ -1,8 +1,7 @@
 ## Built-In _Actions_
 
-In some cases, the integration work you are looking for may already be done with our Built-in _Actions_. Some Built-in _Actions_ are _Functions_ or _Procedures_ that perform simple task like deleting files in a DropZone, or running a PostGres script. Other Built-in _Actions_ integrate with specific DevOps tools such as Ansible, Helm, Slack or GitHub.
+The integration work may already be done with our Built-in _Actions_. Some Built-in _Actions_ are _Functions_ or _Procedures_ that can  delete files in a DropZone, or run a PostGres script. Other Built-in _Actions_ integrate with specific DevOps tools such as Ansible, Helm, Slack or GitHub.
 
-Following is a list of Built-in _Actions_:
 
 ### Built-In Database Actions
 
@@ -25,12 +24,12 @@ Following is a list of Built-in _Actions_:
  Name | Description |
 |---|---|
 |**Add File to ZIP** | Puts a _Dropzone_ file into a ZIP/WAR/JAR/EAR file. |
-|**Amend File Content** | Modifies a flat file in the _Dropzone_. Setting ""Server Specific"" makes a copy specific for each _Endpoint_. |
+|**Amend File Content** | Modifies a flat file in the _Dropzone_. Set ""Server Specific"" to make a copy specific for each _Endpoint_. |
 |**Delete File** | Removes a file from the _Dropzone_. |
 |**Extract File from ZIP** | Extracts a named file from a ZIP/WAR/JAR/EAR file. |
 |**Iterate through Dropzone** | Loops through each file in the _Dropzone_. |
 |**Remove File from ZIP** | Deletes a file from a ZIP/WAR/JAR/EAR archive. |
-|**Rename File** | Renames a file in the _Dropzone_. Setting ""Server Specific"" makes a copy specific to the current _Endpoint_. |
+|**Rename File** | Renames a file in the _Dropzone_. Set ""Server Specific"" to make a copy specific to the current _Endpoint_. |
 |**Using Dropzone** | Use a named _Dropzone_. |
 |**XML - Add Element** | Adds a New XML element. |
 |**XML - Remove Element** | Removes an XML element. |

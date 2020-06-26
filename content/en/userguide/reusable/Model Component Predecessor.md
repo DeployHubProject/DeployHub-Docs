@@ -1,6 +1,6 @@
 **_Component_ Predecessor**
 
-Only returned for _Component Versions_. A JSON Object representing the predecessor of this _Component_.
+Only returned for _Component Versions_. A JSON Object represents the predecessor of this _Component_.
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |

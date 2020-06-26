@@ -1,6 +1,6 @@
 **Responses for _Application_ Predecessor**
 
-Only returned for _Application Versions_. A JSON Object representing the predecessor of this _Application_.
+Only returned for _Application Versions_. A JSON Object represents the predecessor of this _Application_.
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |

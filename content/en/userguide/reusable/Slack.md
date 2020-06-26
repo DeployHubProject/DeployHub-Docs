@@ -1,6 +1,6 @@
 ## Slack Details
 
-DeployHub can send messages to Slack based on certain events. Below are the Slack details used when called by _Notifiers_.  
+DeployHub sends messages to Slack based on certain events. Below are the Slack details used when called by _Notifiers_.  
 
 | Field | Description |
 | --- | --- |

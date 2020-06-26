@@ -3,18 +3,18 @@ title: "CD Engines"
 linkTitle: "CD Engines"
 weight: 34
 description: >
-  Integrating with CD Engines for automated configuration management.
+  How to Integrate with CD Engines for automated configuration management
 ---
 
 ## Intro to CD Engines
 
 A DeployHub CD Engine maps to your continuous delivery orchestration solution.
 
-## Using the _CD Engine_ List View for Adding and Deleting
+## Use the _CD Engine_ List View to Add or Delete
 
-The _CD Engine_ menu option is found on the left of the DeployHub main panel. By selecting the _CD Engine_ menu, you will be taken to a list of all _CD Engines_ to which you have access. You can also use the Search bar, represented by a funnel icon, to reorder _CD Engines_ based on Name or _Domain_.
+The _CD Engine_ menu option is on the left of the main panel. Select the _CD Engine_ menu to be taken to a list of all _CD Engines_ to which you have access. Use the Search bar, represented by a funnel icon, to reorder _CD Engines_ based on Name or _Domain_.
 
-The _CD Engine_ List View has the following Tabs.
+The _CD Engine_ List View has the following Tabs:
 
 | Tab | Description |
 | --- | --- |
@@ -22,11 +22,11 @@ The _CD Engine_ List View has the following Tabs.
 | **Add** | Allows you to Add a new _CD Engine_, by selecting a type. |
 | **Delete** | Deletes the selected item. |
 
-By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
+Double click on an item to be taken to the _Dashboard_ view.
 
-## Using the _CD Engine_ Dashboard for Viewing and Editing
+## Use the _CD Engine_ Dashboard to View or Edit
 
-The Dashboard view displays all information related to a specific _CD Engine_ based on the type you selected.  Below are the Details common to all _CD Engines_.
+The Dashboard view displays all information related to a specific _CD Engine_ based on the type you selected. Below are the Details common to all _CD Engines_:
 
 | Field | Description |
 | --- | --- |
@@ -36,13 +36,13 @@ The Dashboard view displays all information related to a specific _CD Engine_ ba
 | **Owner Type** | User or Group. |
 | **Owner** | Name of the Owner. |
 | **Summary** | A description of the _CD Engine_.|
-| **Created** | Auto generated date when the _CD Engine_ was added.|
-| **Modified**| Auto generated date when the _CD Engine_ was updated.|
+| **Created** | Auto-generated date when the _CD Engine_ was added.|
+| **Modified**| Auto-generated date when the _CD Engine_ was updated.|
 | **Credential**| The _Credential_ used to access the _CD Engine_ if required. |
 
 ### Access
 
-The Access Section allows _Users_ within designated _Groups_ to update the _CD Engine_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _CD Engine_ in the following ways:
+The Access Section allows _Users_ within designated _Groups_ to update the _CD Engine_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ in one of the Access lists will be granted access to the _CD Engine_ in the following ways:
 
 | Access | Description |
 | --- | --- |
