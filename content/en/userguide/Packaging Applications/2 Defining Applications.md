@@ -8,7 +8,7 @@ description: >
 
 ## Using the _Application_ List View for Adding or Deleting
 
-From the _Application_ menu option to the left of the main panel, is a list of all _Application Base Versions_ and _Application Versions_ to which you have access. There is a row for every _Environment_ to which the _Application Base Version_ or _Application Version_ has been deployed.  For this reason, there will be multiple entries for the same _Application_ if it has been deployed to multiple _Environments_.  
+Use the _Application_ List View accessible from the left hand _Application_ menu option. This will take you to a list of all _Application Base Versions_ and _Application Versions_ to which you have access. There is a row for every _Environment_ to which the _Application Base Version_ or _Application Version_ has been deployed.  For this reason, there will be multiple entries for the same _Application_ if it has been deployed to multiple _Environments_.  
 
 The list view is organized on the following columns:
 
@@ -77,10 +77,6 @@ _Applications_ can be deployed many times, to the same or different locations (_
 
 {{% include "userguide/reusable/Attributes.md" %}}
 
-### Trends
-
-The Trends graph shows the success or failure rates overtime as well at the time required for the last 10 deployments. If an _Application_ deployment takes longer than previous deployments, there is an issue with the deployment logic.
-
 ### Assigned Environments
 
 Each _Application Base Version_ is assigned the _Environments_ to which they will be deployed. _Application Versions_ inherit the _Environments_ from the _Application Base Version_. By using the "+Add this Application to an Environment to enable Deployments" option, you can add _Environments_ where the _Application_ is to be deployed. You can assign the _Application_ to as many _Environments_ as needed.  The Detail field will contain a link to the deployment Log for the last _Environment_ where the _Application_ was deployed.
@@ -101,6 +97,9 @@ The Difference Graph shows what changed in the last deployment between the previ
 | **Change** | Any _User_ in any _Group_ within this list can make changes to the _Component_. |
 | **Deploy** | Any _User_ in any _Group_ within this list can deploy the _Application_.  Restrictions are based on the Access defined at the _Environment_ level. |
 
+### Trends
+
+The Trends graph shows the success or failure rates overtime as well at the time required for the last 10 deployments. If an _Application_ deployment takes longer than previous deployments, there is an issue with the deployment logic.
 
 ### Change Request
 

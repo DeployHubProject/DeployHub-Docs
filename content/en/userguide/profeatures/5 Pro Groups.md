@@ -6,9 +6,14 @@ description: >
   Add additional User Groups for more security and control over DeployHub Objects.
 ---
 ## Intro to _Groups_
-DeployHub Team has two Groups - Administrators and Users.  Access control to Objects are based on these two high level _Groups_. DeployHub Team allows you to create as many _Users_ as required but only the "User" and "Administrator" _Groups_ are supported.
 
-**DeployHub Pro** allows you to create custom _Groups_ for organizing _Users_ giving you more granular security control around _Domains_, _Environments_, _Applications_ and _Components_. 
+Access control to Objects are based on _Groups_. DeployHub Pro allows you to create custom _Groups_ for organizing _Users_ giving you more granular security control around the DeployHub Objects.
+
+DeployHub default _Groups_ include:
+-Administrator _Group_ - The _User_ who initially signs into DeployHub is automatically added to this _Group_. By default, this _Group_ has access to all objects.
+-User _Group_ - All _Users_ who sign in after the initial Administrator _User_ is created.
+-Everyone _Group_ - All Users regardless of their assigned _Group_ are automatically added to this _Group_. It is the default _Group_ that provides access to "everyone" for all Objects.  To restrict _Everyone_ access, update the _Access_ options at the Object level.  This _Group_ cannot be modified.  If you delete a _User_ from the system, they will be deleted from the Everyone _Group_.
+
 
 [_Users_](/userguide/customizations/2-users/) are given access to DeployHub Objects based on their _Group_ access. A many-to-many relationship exists between _Users_ and _Groups_, so that a _User_ can belong to many different _Groups_, and a _Group_ can contain many different _Users_. If a _User_ belongs to more than one _Group_, the _User_ will be given the highest level of access. 
 
@@ -61,15 +66,13 @@ _Groups_ have the following attributes:
 | **Procedures** | When checked, allows the _User_ to create and add _Procedures_ to any of the _Domains_ to which they belong. |
 | **Data Sources** | When checked, allows the _User_ to create and add _DataSources_ to any of the _Domains_ to which they belong. |
 | **Notifiers** | When checked, allows the _User_ to create and add _Notifiers_ to any of the _Domains_ to which they belong. |
-| **Build Engines**|When checked, allows the _User_ to create and add _Build Engines_ to any of the _Domains_ to which they belong.|
+| **CD Engines**|When checked, allows the _User_ to create and add _Build Engines_ to any of the _Domains_ to which they belong.|
 
-### Group Membership
+### User Membership
 
 NOTE: DeployHub creates a Group named "Everyone" whenever it is installed, and every User that is created is added to this group and cannot be removed from it.
 
-This section shows a list of all _Users_ who belong to the selected _Group_. Click on the plus '+Add' option to add a _User_ to this _Group_. A new row will be added to the table with a drop down list allowing you to select the _User_ to add to the _Group_. Select "Save" to commit the row to the table. By selecting the User, you can  . A pop-up window will appear containing all available _Users_. Select a _User_ and click OK to add the _User_ to the list of _Users_ in the User Membership tab. You can select multiple users by holding down the shift key while selecting _Users_. A _User_ can be removed from the _Group_ by selecting the _User_ in the User Membership table under the User Membership tab and clicking the 'X' button.
-
-This Section contains a list of all the _Groups_ the selected _User_ belongs to. Add a _Group_ to the selected _User_ by clicking on the plus '+Add' sign in the upper right, which adds an empty row to the table with a drop down list of all available _Groups_. Use the Save option to commit it to the table. Use the Trash Can icon to delete a _Group_ from the table.
+This section shows a list of all _Users_ who belong to the selected _Group_. Click on the plus '+Add' option to add a _User_ to this _Group_. A new row will be added to the table with a drop down list allowing you to select the _User_ to add to the _Group_. Select "Save" to commit the row to the table. You can use the Edit option to make a switch without having to first perform a Delete, and then an +Add.
 
 {{% include "userguide/reusable/AuditTrail.md" %}}
 

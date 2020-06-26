@@ -13,8 +13,6 @@ _Functions_ and _Procedures_ are used by _Actions_ to define custom installation
 
 The difference between _Procedures_ and _Functions_ is a _Procedures_ execute a process but does not return a value. A _Function_ returns a value. _Functions_ and _Procedures_ can be:
 
-Following are the types of _Function_ or _Procedure_:
-
 _Procedure_ Types
 
 | Procedure | Description |
@@ -50,10 +48,10 @@ The _Function_ or _Procedure_ List View has the following Tabs.
 | Add Function | Allows you to Add a new _Function_. |
 | Add Procedure | Allows you to Add a new _Procedure_.|
 | Export | Allows you to Export an existing _Function_ or _Procedure_. Used to transfer _Functions_ and _Procedures_ between DeployHub installations, and allows you to check them into a source repository.
-| Import | Takes a previously exported _Function_ or _Procedure_ and re-imports it. Will maintain the original _Function_ or _Procedure_ name regardless of the name of the import file (.re). To change the Name of the _Function_ or _Procedure_, update the "action name="[new name]" inside the .re file that was exported. Duplicate names are allowed as long as they are defined using a different _Domain.|
+| Import | Takes a previously exported _Function_ or _Procedure_ and re-imports it. Will maintain the original _Function_ or _Procedure_ name regardless of the name of the import file (.re). To change the Name of the _Function_ or _Procedure_, update the "action name="[new name]" inside the .re file that was exported. Duplicate names are allowed as long as they are defined using a different _Domain_.|
 | Delete | Deletes the selected item. |
 
-From the _Action_ List View, double click on the _Action_ to view to see all Details.
+From the _Functions_ and _Procedures_ List View, double click on the _Functions_ or _Procedures_ to view to see all Details.
 
 
 ## Using the _Function_ or _Procedure_ Dashboard for Viewing and Editing

@@ -6,14 +6,19 @@ description: >
   Adding and Managing Users. 
 ---
 
-## Intro to _User_
+## Intro to _Users_
 
-_Users_ are given access to DeployHub Objects based on their _Group_ access. A many-to-many relationship exists between _Users_ and _Groups_, so that a _User_ can belong to many different _Groups_, and a _Group_ can contain many different _Users_. If a _User_ belongs to more than one _Group_, the _User_ will be given the highest level of access. 
+_Users_ are given access to DeployHub Objects based on their _Group_ access. By default there are three _Groups_.
 
+-Administrator _Group_ - The _User_ who initially signs into DeployHub is automatically added to this _Group_. By default, this _Group_ has access to all objects. 
+-User _Group_ - All _Users_ who sign in after the initial Administrator _User_ is created.
+-Everyone _Group_ - All Users regardless of their assigned _Group_ are automatically added to this _Group_. It is the default _Group_ that provides access to "everyone" for all Objects.  To restrict _Everyone_ access, update the _Access_ options at the Object level.  This _Group_ cannot be modified.  If you delete a _User_ from the system, they will be deleted from the Everyone _Group_.
+
+A many-to-many relationship exists between _Users_ and _Groups_, so that a _User_ can belong to many different _Groups_, and a _Group_ can contain many different _Users_. If a _User_ belongs to more than one _Group_, the _User_ will be given the highest level of access. 
 
 ### _Users_ and _Domain_ Inheritance
 
-_Users_ and _Groups_ are created under a _Domain_. A _User_ or _Group_ that is created at a higher level _Domain_ will inherit access to all _Subdomains_, based on their access settings. _Group_ access and inherited access properties can be overridden within a _Sub-Domain_. As an example, Administrators, Director, and Operational level _Users_ or _Groups_ can be assigned to the highest level _Domain_ for the Enterprise while Application Teams and Testing Teams can be defined to only the _Subdomains_ that pertain to their area of expertise. _Users_ or _Groups_ can belong to multiple _Domains_.  
+_Users_ are created under a _Domain_. A _User_ that is created at a higher level _Domain_ will inherit access to all _Subdomains_, based on their access settings. _Group_ access and inherited access properties can be overridden within a _Sub-Domain_. As an example, Administrators, Director, and Operational level _Users_ or _Groups_ can be assigned to the highest level _Domain_ for the Enterprise while Application Teams and Testing Teams can be defined to only the _Subdomains_ that pertain to their area of expertise. _Users_ or _Groups_ can belong to multiple _Domains_.  
 
 ## Using the _User_ List View for Adding or Deleting
 
