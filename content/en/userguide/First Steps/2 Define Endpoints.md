@@ -3,17 +3,17 @@ title: "Define Your Endpoints"
 linkTitle: "Define Your Endpoints"
 weight: 7
 description: >
-  Defining Endpoints for Environments.
+  How to Define Endpoints for Environments
 ---
 ## Endpoints
 
 An _Endpoint_ is an object representing a single container, virtual image, or physical server in an enterprise's data center. A DeployHub _Environment_ is a collection of _Endpoints_ to which your _Application_ will be deployed.
 
- DeployHub can deploy your _Application_ to _Environments_ with a mixture of _Endpoints_ such as containers in a cluster,  database servers or images, cloud images, request routers, or application servers or images. There is a many-to-many relationship between _Environments_ and _Endpoints_, so that an _Endpoint_ can be assigned more than one _Environment_, and an _Environment_ can contain many _Endpoints_.
+ DeployHub deploys _Applications_ to _Environments_ with a mixture of _Endpoints_ such as containers in a cluster,  database servers or images, cloud images, request routers, or application servers or images. There is a many-to-many relationship between _Environments_ and _Endpoints_, so that an _Endpoint_ can be assigned more than one _Environment_, and an _Environment_ can contain many _Endpoints_.
 
-## Using the _Endpoint_ List View for Adding and Deleting
+## Use the _Endpoint_ List View to Add or Delete
 
-The _Endpoint_ menu option is found on the left of the DeployHub main panel. By selecting the _Endpoint_ menu, you will be taken to a list of all _Endpoints_ to which you have access. You can also use the Search bar, represented by a funnel icon, to reorder _Endpoints_ based on Name or _Domain_.
+The _Endpoint_ menu is on the left of the main panel. Select the _Endpoint_ menu to view a list of all _Endpoints_ to which you have access. Or use the Search bar, represented by a funnel icon, to reorder _Endpoints_ based on Name or _Domain_.
 
 The _Endpoints_ List View has the following Tabs.
 
@@ -25,11 +25,11 @@ The _Endpoints_ List View has the following Tabs.
 | **Test Connection**|
 | **Reports** | _Endpoint_ Reports |
 
-By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
+Double click on an item in the list to see the _Dashboard_.
 
-## Using the _Endpoint_ Dashboard for Viewing and Editing
+## Use the _Endpoint_ Dashboard to View and Edit
 
-The Dashboard view displays all information related to a specific _Endpoint_.  Below are the Details for a _Endpoint_.
+The Dashboard view displays all information related to a specific _Endpoint_. 
 
 ### Endpoint Details
 
@@ -38,11 +38,11 @@ The Dashboard view displays all information related to a specific _Endpoint_.  B
 | **Full Domain Name** | The fully qualified name of the _Domain_ to which the _Endpoint_ is defined.|
 | **Name** | The name of the _Endpoint_ object. |
 | **Owner Type** | Group or User |
-| **Owner** | The owner of the _Endpoint_, it defaults to the _User_ or _Group_ who created it. |
+| **Owner** | The owner defaults to the _User_ or _Group_ who created it. |
 | **Summary** | A short text description of the _Endpoint_. |
 | **Created** | The date and time the _Endpoint_ was created. |
 | **Modified**| The date and time the _Endpoint_ was last modified. |
-| **Endpoint Operating System Type** | The platform type of the physical or virtual server that the _Endpoints_ resides on, the list currently includes Unix, Windows, Tandem, Stratus, and OpenVMS. For containers you should select Unix. |
+| **Endpoint Operating System Type** | The platform type of the physical or virtual server that the _Endpoints_ resides on, including Unix, Windows, Tandem, Stratus, and OpenVMS. For containers you should select Unix. |
 | **Endpoint Types** | Used to route specific types of _Components_ to the matching _EndPoint_.|
 | **Hostname**| The unique name of a server that is used to identify it on the network. |
 | **Protocol** | The protocol used to communicate with the _Endpoint_. Currently this includes win, ftp, sftp, and ftps. |
@@ -62,24 +62,24 @@ The Dashboard view displays all information related to a specific _Endpoint_.  B
 
 ### Deployed Components
 
-This tab contains a table that displays two different kinds of rows, each of which can be added or deleted by using the group of buttons on the upper right side, which consists of a plus sign and an 'x': The plus sign (+) is used to assign _Component Versions_ that have been deployed to the _Endpoint_ outside of DeployHub. Clicking this button on the right side displays a list of _Component Base Versions_ and _Component Versions_ in a pop-up window titled "Manually Add Component Version(s)" that can be selected and placed into the list, along with the current date and time, indicating that this _Component_ has been deployed to the _Endpoint_ outside of DeployHub. This allows DeployHub's database to keep track of which versions have been deployed, which will affect how deployments are executed in the future.
+This table displays two different kinds of rows, which are added or deleted by using the group of buttons on the upper right side. The plus sign (+) assigsn _Component Versions_ that have been deployed to the _Endpoint_ outside of DeployHub. Click this to display a list of _Component Base Versions_ and _Component Versions_ in a pop-up window titled "Manually Add Component Version(s)". This can be selected and placed into the list, along with the current date and time, indicating that this _Component_ has been deployed to the _Endpoint_ outside of DeployHub.  DeployHub's database then can keep track of which versions have been deployed, which will affect how deployments are executed in the future.
 
-Any _Components_ that have been deployed through DeployHub's deployment process appear in this list along with the deployment number under the Details column. Clicking on the 'Deploy #' link in the field brings up the Results window seen in various places throughout DeployHub, which includes the Files, Log, General, and Reports tabs. The 'x' button is used to delete a line from the list.
+Any _Components_ deployed through DeployHub's process appear with a deployment number under the Details column. Click on the 'Deploy #' link to brings up the Results window. This can be seen in various places throughout DeployHub, including Files, Log, General, and Reports tabs. The 'x' button is used to delete a line from the list.
 
 {{% include "userguide/reusable/Attributes.md" %}}
 
 ### Trends
 
-The Trends graph shows you your success or failure rates overtime as well at the time required for the last 10 deployments. If an _Application_ deployment is taking longer than previous deployments, this might indicate an issue with your deployment logic.
+The Trends graph shows the success or failure rates overtime as well at the time required for the last 10 deployments. If an _Application_ deployment takes longer than previous deployments, this might indicate an issue with your deployment logic.
 
 ### Access
 
-The Access Section allows _Users_ within designated _Groups_ to update the _Endpoint_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Endpoint_ in the following ways:
+The Access Section allows _Users_ within designated _Groups_ to update the _Endpoint_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ within one of the Access lists will be granted access to the _Endpoint_ in the following ways:
 
 | Access | Description |
 | --- | --- |
-|**View**| This allows any _User_ that belongs to any _Group_ in this list to see the selected _EndPoint_ in the List View. |
-|**Change**| This allows any _User_ that belongs to any _Group_ in this list to make changes to the _Endpoint_. |
+|**View**| Any _User_ in any _Group_ in this list can see the selected _EndPoint_. |
+|**Change**| Any _User_ in any _Group_ in this list can make changes to the _Endpoint_. |
 |**Available Groups**|This list contains all the Groups within the DeployHub installation. Dragging and dropping back and forth between this list and the other two lists allows or prevents access to viewing and changing the selected _EndPoint_.
 
 NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**

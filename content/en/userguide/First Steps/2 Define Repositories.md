@@ -3,7 +3,7 @@ title: "Connect Your Repositories"
 linkTitle: "Connect Your Repositories"
 weight: 5
 description: >
-  Connecting Repositories to retrieve artifacts. 
+  How to Connect Repositories to retrieve artifacts. 
 ---
 
 ## Intro to Repositories
@@ -12,28 +12,28 @@ A _Repository_ is used by a _Component_. A _Repository_ acts as a source locatio
 
 ## Container Repositories
 
-You do not need to define a _Repository_ if you are just deploying containers. Containers are managed in "registries" which are handled differently than source code and file repositories. If you are using a Container registry, DeployHub will reference this from within your Container _Component_ definition.  When you define your _Component_ as a "Container" _Component_ Type you will be prompted to enter the following container details.  
+You do not need to define a _Repository_ if you only deploy containers. Containers are managed in "registries" which are handled differently than source code and file repositories. If you use a Container registry, DeployHub references this from within your Container _Component_ definition.  When you define your _Component_ as a "Container" _Component_ Type, you will enter the following container details:  
 
 - container registry
 - container image
 - container digest
 - container tag  
 
-## Using the Repository List View for Adding and Deleting
+## Use the Repository List View for Adding and Deleting
 
-The _Repository_ menu option is found under the **Setup** menu on the left of the DeployHub main panel. By selecting the _Repository_ menu, you will be taken to a list of all _Repositories_ to which you have access. You can also use the Search bar, represented by a funnel icon, to filter _Repository_ based on Name or Domain.
+The _Repository_ menu option is in the **Setup** menu on the left of the DeployHub main panel. Select the _Repository_ menu for a list of all _Repositories_ to which you have access. The Search bar, represented by a funnel icon, filters _Repositories_ based on Name or Domain.
 
-The _Repository_ List View has the following Tabs.
+The _Repository_ List View has the following Tabs:
 
 | Tab | Description |
 | --- | --- |
 |Refresh | Refreshes the browser. |
-| Add | Allows you to Add a new _Repository_. You will select from various different _Repository_ Types that have been pre-configured. Each Type will determine the Details for that _Repository_.|
+| Add | Allows you to Add a new _Repository_. Select from various pre-configured _Repository_ Types. Each Type will determine the Details for that _Repository_.|
 | Delete | Deletes the selected item. |
 
-By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
+Double click on an item in the list to get the _Dashboard_ view.
 
-## Using the Repository Dashboard for Viewing and Editing
+## Use the Repository Dashboard for Viewing and Editing
 
 The Dashboard view displays all information related to a specific _Repository_ Type.  Following are the Repository Types supported out-of-the-box:
 
@@ -44,9 +44,8 @@ The Dashboard view displays all information related to a specific _Repository_ T
 - SVN
 
 
-### Common Details of all _Repositories_
+### Common Details of all _Repositories_ Types
 
-The following details are common to all _Repository_ types:
 
 | Field | Description |
 | --- | --- |
@@ -56,8 +55,8 @@ The following details are common to all _Repository_ types:
 | **Owner Type** | User or Group. |
 | **Owner** | Name of the Owner. |
 | **Summary** | A description of the _Repository_.|
-| **Created** | Auto generated date when the _Repository_ was added.|
-| **Modified**| Auto generated date when the _Repository_ was updated.|
+| **Created** | Auto-generated date when the _Repository_ was added.|
+| **Modified**| Auto-generated date when the _Repository_ was updated.|
 | **Credential**| The _Credential_ used to access the _Repository_ if required. |
 
 NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
@@ -113,7 +112,7 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 
 ### Access
 
-The Access Section allows _Users_ within designated _Groups_ to update the _Repository_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Repository_ in the following ways:
+The Access Section allows _Users_ within designated _Groups_ to update the _Repository_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Repository_ in the following ways:
 
 | Access | Description |
 | --- | --- |

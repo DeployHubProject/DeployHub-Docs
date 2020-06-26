@@ -3,7 +3,7 @@ title: "Create Your Credentials"
 linkTitle: "Create Your Credentials"
 weight: 3
 description: >
-  Adding Credentials for Accessing Repositories and Deployment Endpoints.
+  How to Add Credentials to Access Repositories and Deployment Endpoints.
 ---
 
 ## Intro to Credentials
@@ -14,13 +14,13 @@ Note:  In order to define a _Repository_ or _Endpoint_ you will need to pre-defi
 
 ## Containers and Credentials
 
-You may not need _Credentials_ if you are deploying only containers. DeployHub uses Helm to perform container deployments.  Helm is interacting with the Kubernetes cluster, Helm Chart Museum and the container registry to pull charts and images for the deployment. _Credentials_ are only needed to access a private container registry and private Chart Museum and are assigned to the _Endpoint_ or _Environment_. 
+You may not need _Credentials_ if you only deploy containers. DeployHub uses Helm to perform container deployments.  Helm interacts with the Kubernetes cluster, Helm Chart Museum and the container registry to pull charts and images for the deployment. _Credentials_ are only needed to access a private container registry and private Chart Museum and are assigned to the _Endpoint_ or _Environment_. 
 
-## Using the Credential List View for Adding or Deleting
+## Use the Credential List View for Adding or Deleting
 
-The _Credentials_ menu option is found under the **Setup** menu on the left of the DeployHub main panel. By selecting the _Credentials_ menu, you will be taken to a list of all _Credentials_ to which you have access. You can also use the Search bar, represented by a funnel icon, to filter _Credentials_ based on Name or Domain.
+The _Credentials_ menu option is found under the **Setup** menu on the left of the DeployHub main panel. By selecting the _Credentials_ menu, you see a list of all _Credentials_ to which you have access. You can also use the Search bar, represented by a funnel icon, to filter _Credentials_ based on Name or Domain.
 
-The _Credentials_ List View has the following Tabs.
+The _Credentials_ List View has the following Tabs:
 
 | Tab | Description |
 | --- | --- |
@@ -30,15 +30,15 @@ The _Credentials_ List View has the following Tabs.
 
 By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
 
-## The _Credential_ Dashboard for Viewing and Editing
+## Use the Credential Dashboard for Viewing and Editing
 
-The Dashboard view displays all information related to a specific _Credential_.  Below are the Details for a _Credential_.
+The Dashboard view displays all information related to a specific _Credential_. 
 
 ### _Credential_ Details
 
 | Field | Description |
 | --- | --- |
-| **Full Domain** | The fully qualified path of the Domain which the Credential belongs. |
+| **Full Domain** | The fully qualified path of the Domain to which the Credential belongs. |
 | **Name** | The name of the _Credential._ |
 | **Summary** | A general description of the _Credential._ |
 | **Kind* | The type of _Credential_. There are two different types of _Credentials_ based on where they reside:<ul style="list-style-type: none;"><li>**Encrypted in database:** The username/password pair resides in DeployHub's database using 3DES encryption.</li><li>**From Variables:** The username/password is managed in variables.</li><ul style="list-style-type: none;"> |
