@@ -1,9 +1,8 @@
-## Using a LDAP or Active Directory _Data Source_ for Single Sign-on 
+## Using a LDAP or Active Directory _Data Source_ for Single Sign-on
 
 DeployHub allows you to use LDAP or Active Directory to manage your _User_ logins.  Create an LDAP _Data Source_ to access an LDAP database and use the information stored to gain access to DeployHub. It also populates the _Users_ General tab with Real Name and Email, which it gets from the LDAP database. When you define a _User_, you associate the LDAP authentication method. At login, DeployHub checks the User's authentication method to determine if LDAP or Active Directory should be used.  
 
 ### Creating a LDAP or Active Directory _Data Source_
-
 
 To support LDAP integration, you must create an LDAP  _Credential_ whose Username value is a user id (uid) followed by the necessary Ldap domain components (dc), all comma delimited (i.e., uid=mycompany,dc=example,dc=com). The _Credential's_ Password field contains the password for the user in the LDAP directory. For more on creating _Credentials_ see [Create Your Credentials](/userguide/first-steps/2-define-your-credentials/).
 

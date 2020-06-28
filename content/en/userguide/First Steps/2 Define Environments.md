@@ -7,7 +7,7 @@ description: >
 ---
 ## Intro to _Environments_
 
-_Environments_ represent where you execute your _Application_ and _Components_ such as a Kubernetes Cluster for Dev, Test or Production. An _Environment_ could be a virtual cloud or physical datacenter.  _Applications_ run in many _Environments_ to support your Pipeline states. 
+_Environments_ represent where you execute your _Application_ and _Components_ such as a Kubernetes Cluster for Dev, Test or Production. An _Environment_ could be a virtual cloud or physical datacenter.  _Applications_ run in many _Environments_ to support your Pipeline states.
 
 Note: First define [_Endpoints_](/userguide/first-steps/2-define-endpoints/) to be assigned before you can define an _Environment_.
 
@@ -68,7 +68,7 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 
 ### Assigned _Endpoints_
 
-Note: You will need to have pre-defined your _Endpoints_.  See the [Define Your Endpoints](/userguide/first-steps/2-define-endpoints/) chapter for more information. 
+Note: You will need to have pre-defined your _Endpoints_.  See the [Define Your Endpoints](/userguide/first-steps/2-define-endpoints/) chapter for more information.
 
 _Environments_ are a collection of _Endpoints_. Use this section to assign the _Endpoints_ that will make up this _Environment_. Use +Add to create a new row in the _Endpoints_ table. Use Save to commit the row.  Select the row and use Edit or Delete to update or remove an _Endpoint_. When you add a new _Endpoint_ the  Hostname will be displayed. The Hostname is the actual network name or IP address.  It is assigned when the _Endpoint_ is defined, but is not a required field. If it is defined, it will be displayed in the row.
 
@@ -78,7 +78,7 @@ This section shows the success/failure rate and time required for the last 10 de
 
 ### Assigned _Applications_
 
-View all the _Application Base Versions_ assigned to this _Environment_. This is read only.  _Applications Base Versions_ are associated to _Environments_ when created using the [_Application_ Dashboard](/userguide/packaging-applications/2-defining-applications/#viewing-and-editing-with-the-_application_-dashboard). 
+View all the _Application Base Versions_ assigned to this _Environment_. This is read only.  _Applications Base Versions_ are associated to _Environments_ when created using the [_Application_ Dashboard](/userguide/packaging-applications/2-defining-applications/#viewing-and-editing-with-the-_application_-dashboard).
 
 ### Deployed _Components_ to _Environment_ Map
 

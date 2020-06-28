@@ -27,7 +27,7 @@ Double click on an item in the list to see the _Dashboard_.
 
 ## Use the _Endpoint_ Dashboard to View and Edit
 
-The Dashboard view displays all information related to a specific _Endpoint_. 
+The Dashboard view displays all information related to a specific _Endpoint_.
 
 ### Endpoint Details
 

@@ -9,8 +9,8 @@ description: >
 
 When you [Sign-up to use the SaaS](https://www.deployhub.com/register-for-team/?) version, you will be asked for basic information. Your company and project names are unique 'Domain' and 'Project' identifiers. If someone else from your organization signs up, they will need to create another Project Name.
 
-A high level 'Domain' comes after your Project name, for example "Teller." 
-An assigned Pipeline will be called "MyPipeline" that includes 'Dev", "Test", and "Production" stages. 
+A high level 'Domain' comes after your Project name, for example "Teller."
+An assigned Pipeline will be called "MyPipeline" that includes 'Dev", "Test", and "Production" stages.
 Then you define your Credentials, Repositories, and the Components of your Application.
 
 You can change the name of your Application or reconfigure your Pipeline in any way needed to reflect your own life cycle process.
@@ -27,7 +27,7 @@ Once the Reverse Proxy determines that a deployment is needed, it executes the d
 
 ## Reverse Proxy Installation
 
-The Reverse Proxy runs as docker container. In order to install it, you need to install Docker. 
+The Reverse Proxy runs as docker container. In order to install it, you need to install Docker.
 
 ## Docker Installation
 

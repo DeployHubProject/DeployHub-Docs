@@ -12,7 +12,7 @@ _Custom Types_ or found on the _Endpoint_ Dashboard and the _Component_ Dashboar
 
 _Components_ map to a single _Endpoint_, but an _Endpoint_ can map to multiple types of _Components_. For example, your _Endpoint_ could serve as both your Application Server and Database Server.
 
-You can create your own _Endpoint Types_ for defining this mapping. 
+You can create your own _Endpoint Types_ for defining this mapping.
 
 ## Using the _Customize Type_ List View for Adding or Deleting
 
@@ -41,4 +41,3 @@ The following details are common to all _Custom Type_:
 | **Full Domain** | The fully qualified name of the _Domain_ to which the _Custom Type_ was defined. |
 |**Name**| The name of your _Custom Type_.|
 | **Database Roll-forward/Rollback** | Select this checkbox if your _Custom Type_ uses a database. |
-

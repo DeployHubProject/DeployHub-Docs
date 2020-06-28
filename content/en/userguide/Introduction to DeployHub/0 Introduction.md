@@ -47,7 +47,7 @@ This level of information can also be viewed from the _Component_ level showing 
 
 Deployhub supports working in a hybrid environment, for both microservices and monolithic applications. In fact, you will be able to decompose a monolithic application, as you break it down into _Components_ - which is the beginning of a microservice journey.
 
-## Key Features 
+## Key Features
 
 Our four main features are critical to a successful implementation of microservices.
 
@@ -63,7 +63,7 @@ Our four main features are critical to a successful implementation of microservi
 
 ## The Secret Sauce
 
-DeployHub is the only configuration management and deployment solution with a built-in version control engine. This supports fully incremental releases as well as canary or blue/green deployments with fast rollbacks, roll forward, or version jumps. Our back-end version control database is designed specifically for tracking independently deployed _Components_. Every software release configuration is based upon a collection of _Components_ and their critical deployment attributes. A _Component_ is a microservice, executable, database update or configuration, and is part of a complete software _Application_. _Components_ change over time creating _Component Versions_ and therefore _Application Versions_. 
+DeployHub is the only configuration management and deployment solution with a built-in version control engine. This supports fully incremental releases as well as canary or blue/green deployments with fast rollbacks, roll forward, or version jumps. Our back-end version control database is designed specifically for tracking independently deployed _Components_. Every software release configuration is based upon a collection of _Components_ and their critical deployment attributes. A _Component_ is a microservice, executable, database update or configuration, and is part of a complete software _Application_. _Components_ change over time creating _Component Versions_ and therefore _Application Versions_.
 
 DeployHub supports continuous configuration versioning of:
 
@@ -95,7 +95,6 @@ This agentless technology works for both cloud native and legacy architectures i
 - Request Routers and Appliances
 
 ## Free Version with Optional Pro Upgrade
-
 
 **DeployHub Team**
 

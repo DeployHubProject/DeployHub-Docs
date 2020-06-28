@@ -5,7 +5,7 @@ weight: 34
 description: >
   Customizing your Deployment _Actions_ with _Functions_ and _Procedures_.
 ---
-##  Functions and Procedures
+## Functions and Procedures
 
 _Functions_ and _Procedures_ are the steps that make up an _Action_. If you have not worked with _Actions_, read about them in them in the [Customize your Actions Chapter](/userguide/customizations/2-define-your-actions/).
 
@@ -14,7 +14,6 @@ _Functions_ and _Procedures_ are used by _Actions_ to define custom installation
 The difference between _Functions_ and _Procedures_ is a _Procedure_ execute a process but does not return a value. A _Function_ returns a value. DeployHub provides a Dashboard for customizing your _Functions_ and _Procedures_ including the creation of Parameters, and a Parameters Dialog box that is displayed at the _Action_ level. The Parameters Dialog Box enables other _Users_ to utilize your custom process, with an easy way to understand what Parameter options are available. In this way, you are able to create custom _Functions_ and _Procedures_ and share them across teams.  The associated Parameters Dialog Box simplifies the use of your custom process.  
 
 _Functions_ and _Procedures_ can be:
-
 
 | _Function_ or _Procedure_ Type | Description |
 | --- | --- |
@@ -73,7 +72,7 @@ This type of _Function_ or _Procedure_ runs on the deployment engine and require
 
 **Additional Details for _Endpoint_ Scripts**
 
-This type of _Function_ or _Procedure_ runs on the _Endpoint_ and requires these additional details. 
+This type of _Function_ or _Procedure_ runs on the _Endpoint_ and requires these additional details.
 
 | Details | Description |
 | --- | --- |
@@ -114,8 +113,8 @@ A list of parameters can be made available for the user of your  _Function_ or _
 |**Name** | The name of the input parameter. It can only have the characters A-Z, 0-8, and "_". |
 |**Type**| This defines if the input parameter can be entered as text, or as a checkbox. This field will be displayed on the dialog box used to edit the values for the Procedure or Function on the _Action_ blueprint designer.|
 |**Format**| This field defines what your Parameters Dialog Box will look like. <ul><li>Entry Field - Using the "entry" option will allow your user to enter the required value and not worry about any flags that are needed for the command line.  In this field you will enter the flags that should be used for the command line. The end user will enter the value that they require and it will be pre-pended with the flag defined on this screen. The result will be used for the command line call. For example, if you enter -f in this field and then your user enters "filename" as a value, the resulting parameter passed to the command line will be "–f filename". </li><li>If your type is set to "checkbox," this will give the user the option to select the value or not for the command line call. In this case, you are defining the value and flags and simply giving the user the option to use them or not.</li></ul> |  
-|**Missing**|This field provides a default if the above Format value is null. Like the Format value, it uses Entry and Checkbox types. <ul><li>Using the "entry" option will provide a default value for when the Format is not entered. </li><li>If your type is set to "checkbox," this will provide a value when the Format checkbox is not selected by the user. </li></ul> 
-|**Padding**| This field is used for positional command line parameters where you need to provide quote, space, quote (" ") for a positional parameter that is not entered by the user. This prevents the command line from throwing and error. 
+|**Missing**|This field provides a default if the above Format value is null. Like the Format value, it uses Entry and Checkbox types. <ul><li>Using the "entry" option will provide a default value for when the Format is not entered. </li><li>If your type is set to "checkbox," this will provide a value when the Format checkbox is not selected by the user. </li></ul>
+|**Padding**| This field is used for positional command line parameters where you need to provide quote, space, quote (" ") for a positional parameter that is not entered by the user. This prevents the command line from throwing and error.
 |**Required**|Indicates the argument is required for the Procedure/Function. Any parameter marked as being "Required" is highlighted and cannot be left blank.
 |**Pos**| This is used only when calling the _Function_ or _Procedure_ from DMScript. The Position orders the parameters when making the call in DMScript.  
 
@@ -123,7 +122,7 @@ A list of parameters can be made available for the user of your  _Function_ or _
 
 The Section allows for the creation of "fixed" command line switches or other attributes that you wish to have present on the generated Command Line. These can be created by clicking on the plus +Add option to add a new switch. You must use Save to commit the new row to the table.  When you add Parameters and Switches, they are placed in a "pallet" above the Command Line Section. To remove or update an item, check the item and use Delete or Edit options.
 
-Each "Command Line Switch" can include variables which will be expanded when the Command Line is constructed and executed. These variables can be attributes stored against a DeployHub Object (such as _Endpoint, Environment, Application,_ or _Component_) or can be Global Variables. 
+Each "Command Line Switch" can include variables which will be expanded when the Command Line is constructed and executed. These variables can be attributes stored against a DeployHub Object (such as _Endpoint, Environment, Application,_ or _Component_) or can be Global Variables.
 
 **Command Line**
 
@@ -131,7 +130,7 @@ You can drag and drop the items from the "pallet" of Switches in the correct ord
 
 **DMScript in Database Editor**
 
-The embedded editor includes: 
+The embedded editor includes:
 
 - The Floppy Disk Icon is the "Save" button. This parses the DMScript for errors and, if none are found, saves the DMScript. If there any syntax errors, they are highlighted in the body of the text.
 - The Binoculars Icon is the "Search" button. Clicking this icon opens a search/replace dialog.

@@ -56,7 +56,6 @@ The Dashboard view displays all information related to a specific _Repository_ T
 | **Modified**| Auto-generated date when the _Repository_ was updated.|
 | **Credential**| The _Credential_ used to access the _Repository_ if required. |
 
-
 ## HTTP _Repository_ Details
 
 | Field | Description |

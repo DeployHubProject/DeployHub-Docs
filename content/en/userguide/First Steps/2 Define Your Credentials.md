@@ -14,7 +14,7 @@ Note:  In order to define a _Repository_ or _Endpoint_ you will need to first de
 
 ## Containers and Credentials
 
-You may not need _Credentials_ if you only deploy containers. DeployHub uses Helm to perform container deployments.  Helm interacts with the Kubernetes cluster, Helm Chart Museum and the container registry to pull charts and images for the deployment. _Credentials_ are only needed to access a private container registry and private Chart Museum and are assigned to the _Endpoint_ or _Environment_. 
+You may not need _Credentials_ if you only deploy containers. DeployHub uses Helm to perform container deployments.  Helm interacts with the Kubernetes cluster, Helm Chart Museum and the container registry to pull charts and images for the deployment. _Credentials_ are only needed to access a private container registry and private Chart Museum and are assigned to the _Endpoint_ or _Environment_.
 
 ## Use the Credential List View for Adding or Deleting
 
@@ -32,7 +32,7 @@ By double clicking on an item in the list, you will be taken to the _Dashboard_ 
 
 ## Use the Credential Dashboard for Viewing and Editing
 
-The Dashboard view displays all information related to a specific _Credential_. 
+The Dashboard view displays all information related to a specific _Credential_.
 
 ### Common _Credential_ Details
 
@@ -77,4 +77,3 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Cred
 | **Read** | Allows the _User_ to use the _Credential_ by assigning it to an object such as an _EndPoint_ or _Repository_. |
 
 NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your _Groups_, you will need to upgrade to **DeployHub Pro.**
-

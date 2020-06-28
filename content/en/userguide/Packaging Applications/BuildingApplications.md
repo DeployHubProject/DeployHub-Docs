@@ -31,5 +31,3 @@ _Tasks_ allow you to act upon _Applications_. They are defined at the _Domain_ l
 ## Applications and Iterative Deployments
 
  Whenever an _Application_ is deployed, DeployHub determines the deployment status of each _Component_ contained within the _Application_.  It compares it to _Components_ on the associated _Endpoint_.  This delta processing performs iterative deployments accurately when there is a change or is set to _Always Deploy_.
-
-

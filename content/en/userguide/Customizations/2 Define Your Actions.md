@@ -32,13 +32,13 @@ _Actions_ can be implemented in many ways including:
 
 _Actions_ can be invoked:
 
-- Before any _Task_ in a _Domain_ is executed: When the _Task_ is created, a "Pre-Action" can be specified. This can be either a _Procedure_ or a _Function_. The specified _Procedure_ or _Function_ is invoked before the _Task_ is executed. If the _Procedure_ or _Function_ aborts or returns a non-zero return code, the _Task_ itself is prevented from running. 
+- Before any _Task_ in a _Domain_ is executed: When the _Task_ is created, a "Pre-Action" can be specified. This can be either a _Procedure_ or a _Function_. The specified _Procedure_ or _Function_ is invoked before the _Task_ is executed. If the _Procedure_ or _Function_ aborts or returns a non-zero return code, the _Task_ itself is prevented from running.
 
 - After any _Task_ in a _Domain_ is executed: When the _Task_ is created, a "Post-Action" can be specified. The specified _Action_ is invoked after the _Task_ is executed. This can be used to connect to external systems to notify others that a _Task_ has been executed (for example, to notify a bug-tracking system that an _Application Version_ has been moved to a Testing state).
 
 - As a stand-alone _Action_ that can be invoked from the DeployHub User Interface: The _Action_ is associated with a "Run Action" _Task_. When invoked, the _Action_ is executed. A user can right-click on the _Domain_ to view the _Task_ to execute the _Action_. Alternatively, they can right-click on an _Application_ or a _Component_. In these circumstances, the selected object is pushed onto the _Stack_ and is available via the $application or $component objects. See DMScript [Stack](/userguide/dmscript/dmscript-stack/) for more information.
 
-- Before an _Application_ is deployed: An _Application_ can be defined as having a "Pre-Action." This can be either an _Action_ or a _Function_. When the _Application_ is deployed, this "Pre-Action" is invoked first before any other operation. If this Pre-Action aborts or returns a non-zero return code, the deployment itself will be prevented. 
+- Before an _Application_ is deployed: An _Application_ can be defined as having a "Pre-Action." This can be either an _Action_ or a _Function_. When the _Application_ is deployed, this "Pre-Action" is invoked first before any other operation. If this Pre-Action aborts or returns a non-zero return code, the deployment itself will be prevented.
 
 - After an _Application_ is deployed: An _Application_ can be defined as having a "Post-Action." When the _Application_ has completed a deployment, this "Post-Action" is invoked. This can be used to connect to external systems to notify others that an _Application_ has been deployed.
 
@@ -106,23 +106,22 @@ The blueprint designer contains all activities that make up the _Actions_ logica
 Click on one of the Categories in the list to see the available _Functions_ or _Procedures_. Expand a Category and then select the desired Activity to drag and drop it into the _Action_ blueprint area. It appears as a box containing the name of the _Function_ or _Procedure_. It automatically links to the nearest "box" with a output anchor.
 
 #### The _Function_ or _Procedure_ Parameter Dialog Box
- 
+
 The Parameter Dialog Box displays the options defined when the _Function_ or _Procedure_ was created using the Input Parameters Section from the _Functions_ and _Procedures_ Dashboard. When you add a new _Function_ or _Procedure_ to your _Action_ blueprint designer, the Parameter Dialog Box will automatically display.  If you are working on an existing _Action_ and want to view the parameters, a right click will display:
 
 - View Detials - opens the Parameter Dialog Box
-- Got to the Procedure - takes you to the Dashboard of the _Function_ or _Procedure_. Your work will be saved automatically before navigating to the _Functions_ and _Procedures_ Dashboard. 
+- Got to the Procedure - takes you to the Dashboard of the _Function_ or _Procedure_. Your work will be saved automatically before navigating to the _Functions_ and _Procedures_ Dashboard.
 - Delete this Activity - deletes the _Function_ or _Procedure_ from the blueprint designer.
 An editor box opens automatically to set any input values required. If the dropped item is a _Function,_ then an additional _Result_ field is presented. This needs to be the name of a _Variable_ that receives the result of the _Function_.
 
 You can connect items in any order you require. To do this, left-click and hold down the button on one of the output anchors, then drag the resulting line onto another input anchor. This connects the items together and determines the order for processing the steps. The lines connecting items can be deleted by right clicking on the connector line and selecting "Delete this Connector".
 
-Some Built-in _Functions_ and _Procedures_ have more than one exit point. For example the "if" process can be used to create conditional branches where different routes are taken through the logic dependent on the evaluation of an expression. In such cases, there are multiple output "anchors" with labels (for example, true and false) which indicate the meaning of the anchor. 
+Some Built-in _Functions_ and _Procedures_ have more than one exit point. For example the "if" process can be used to create conditional branches where different routes are taken through the logic dependent on the evaluation of an expression. In such cases, there are multiple output "anchors" with labels (for example, true and false) which indicate the meaning of the anchor.
 
 Some Built-in _Functions_ and _Procedures_ can contain other _Action's_ logic. When such _Actions_ are dropped onto the blueprint area they are represented by a larger "box" containing a diagram showing the other _Action_. Double clicking on such an item will "drill down" into that item and open up another blueprint editor. Such _Actions_ are typically "loops" (where the process "inside" the loop is executed for each iteration through the loop).
 
 There are _Procedures_ and _Functions_ that ship with DeployHub, such as the Windows function 'listservices' and the WebSphere 'DeployWS' control procedure. These are editable (by an administrator with access to the GLOBAL _Domain_) just as any _User_ defined _Function_ or _Procedure_ would be. There are also some _Procedures_ and _Functions_ that simply wrap around DMScript (such as "Loop through Array Keys") that are not editable.
 
 When the blueprint logic is executed, it's first converted into a DMScript Procedure. DMScript is DeployHub's built-in Object-Oriented Scripting Language.
-
 
 {{% include "userguide/reusable/ListofActions.md" %}}

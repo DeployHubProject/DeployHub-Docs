@@ -2,7 +2,6 @@
 
 The integration work may already be done with our Built-in _Actions_. Some Built-in _Actions_ are _Functions_ or _Procedures_ that can  delete files in a DropZone, or run a PostGres script. Other Built-in _Actions_ integrate with specific DevOps tools such as Ansible, Helm, Slack or GitHub.
 
-
 ### Built-In Database Actions
 
 | Name | Description |

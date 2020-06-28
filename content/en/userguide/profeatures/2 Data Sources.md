@@ -49,7 +49,7 @@ DeployHub supports GitHub, Jira and Bugzilla for tracking change request to _App
 
 ### GitHub _Data Source_ Details
 
-This _Data Source_ allows you to connect to GitHub to retrieve GitHub issues associated to your _Components_ or _Applications_. You will need to define a unique _Data Source_ for each repository that needs to be connected to your _Components_ or _Applications_. 
+This _Data Source_ allows you to connect to GitHub to retrieve GitHub issues associated to your _Components_ or _Applications_. You will need to define a unique _Data Source_ for each repository that needs to be connected to your _Components_ or _Applications_.
 
 | Field | Description |
 | --- | --- |
@@ -65,7 +65,7 @@ This _Data Source_ allows you to connect to GitHub to retrieve GitHub issues ass
 
 ### Jira _Data Source_ Details
 
-This _Data Source_ allows you to connect to Jira to retrieve Jira issues associated to your _Components_ or _Applications_. You will need to define a unique _Data Source_ for each Project Key that needs to be connected to your _Components_ or _Applications_. 
+This _Data Source_ allows you to connect to Jira to retrieve Jira issues associated to your _Components_ or _Applications_. You will need to define a unique _Data Source_ for each Project Key that needs to be connected to your _Components_ or _Applications_.
 
 | Field | Description |
 | --- | --- |
@@ -118,4 +118,3 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Data
 | **Delete** | Allows the _User_ to remove the _Data Source_.|
 
 NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
-

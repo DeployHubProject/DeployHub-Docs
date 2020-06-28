@@ -19,7 +19,7 @@ DeployHub hooks into the CI step after the build has been completed and the arti
 | Google CloudBuild | DeployHub CLI Container | [DeployHub CLI Docker Container](https://github.com/ortelius/compupdate) |
 | TeamCity | DeployHub CLI Container | [DeployHub CLI Docker Container](https://github.com/ortelius/compupdate) |
 
-The DeployHub CI integration is used to gather information about the _Component_ build. The DeployHub Plugin will create a new _Component_ Base Version if one does not exist and then create a _Component Version_.  It will also associate build data to the _Component Version_. 
+The DeployHub CI integration is used to gather information about the _Component_ build. The DeployHub Plugin will create a new _Component_ Base Version if one does not exist and then create a _Component Version_.  It will also associate build data to the _Component Version_.
 
 ### Automatic Versioning
 
@@ -42,7 +42,7 @@ An example of the full name is: email-service;ssl-update;v1_5_1_145-g3d55a2
 | ssl-update | Variant that you supply to the DeployHub Plugin for the _Component_. |
 | semi colon | Separator. |
 | v | Indicates start of the version. |
-| 1_5_1_ | Version that you supply to the DeployHub Plugin for the _Component_. |
+| 1_5_1_| Version that you supply to the DeployHub Plugin for the_Component_. |
 | 145 | Number of Git Commits for the associated repository.  Used for auto incrementing. |
 | -g | Separator indicating that the Git commit is next |
 | 3d55a2 | Git command SHA for the commit that triggered the CI process. |
@@ -104,7 +104,7 @@ The DeploHub Plugin will move the _Application_ from the _From Domain_ using the
 The DeployHub Plugin will assign the _Components_ to an _Application Version_ creating the _Application Version_ if it does not exist.  This _Assign_ feature is used to associate _Component Versions_ to an _Application Version_ in bulk from the CI proccess.  
 
 **Export**
-The DeployHub Plugin will export all of the objects contained in a _Domain_ and all of the _Sub-domains_.  The output is json data formated for the _Import_ feature.  This _Export_ feature enables sharing of a _Domain_ from one DeployHub install to another. 
+The DeployHub Plugin will export all of the objects contained in a _Domain_ and all of the _Sub-domains_.  The output is json data formated for the _Import_ feature.  This _Export_ feature enables sharing of a _Domain_ from one DeployHub install to another.
 
 **Import**
 The DeployHub Plugin will import all of the objects contained in the json export file.  The objects will be created in the _To Domain_ specified.  The new _Domain_ hierarchy will be created on-the-fly if it doesn't exist.

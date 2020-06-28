@@ -7,4 +7,3 @@ description: >
 ---
 
 {{% include "userguide/reusable/LDAP-DataSource.md" %}}
-

@@ -7,11 +7,12 @@ description: >
 ---
 
 ## Intro to _Groups_
+
 DeployHub Team has three default Groups - Administrators, Everyone and Users.  Access control to Objects are based on these three high level _Groups_. DeployHub Team allows you to create as many _Users_ as required but only the "Users" "Everyone" and "Administrator" _Groups_ are available. You can modify these _Groups_ as needed to create access controls around Objects. If you need to create custom _Groups_, you will need to upgrade to DeployHub Pro.  See [Creating Pro User _Groups_](/userguide/profeatures/5-pro-groups/) for details on Pro _User_ _Groups_.
 
 ## Using the _Group_ List Viewing
 
-You will find _Groups_ under the Setup menu.  Selecting _Groups_ will take you to a list of displaying the Administration _Group_ and _User_ Group. 
+You will find _Groups_ under the Setup menu.  Selecting _Groups_ will take you to a list of displaying the Administration _Group_ and _User_ Group.
 
 From the _Groups_ List View, double click on the _Group_ which you would like to view to see all Details.  
 
@@ -52,6 +53,6 @@ _Groups_ have the following attributes:
 
 NOTE: DeployHub creates a Group named "Everyone" whenever it is installed, and every User that is created is added to this group and cannot be removed from it.
 
-This section shows a list of all _Users_ who belong to the selected _Group_. Click on the plus '+Add' option to add a _User_ to this _Group_. A new row will be added to the table with a drop down list allowing you to select the _User_ to add to the _Group_. Select "Save" to commit the row to the table. You can delete a _User_ from the _Group_ using the Delete option. 
+This section shows a list of all _Users_ who belong to the selected _Group_. Click on the plus '+Add' option to add a _User_ to this _Group_. A new row will be added to the table with a drop down list allowing you to select the _User_ to add to the _Group_. Select "Save" to commit the row to the table. You can delete a _User_ from the _Group_ using the Delete option.
 
 {{% include "userguide/reusable/AuditTrail.md" %}}

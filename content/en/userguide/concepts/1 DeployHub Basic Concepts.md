@@ -49,7 +49,7 @@ An Application has the following properties:
 | owner | User or UserGroup that owns it. |
 | parent | The Base _Application_ .|
 | predecessor |Predecessor _Application Version_. |
-| _Release_ | Defines the _Application_Object_ with more than one _Application_. |
+| _Release_ | Defines the _Application_Object_with more than one_Application_. |
 | _Applications_ | Multiple _Applications_ used to create a _Release_.|
 | _Components_ | The objects that the _Application_ consumes. |
 | approvals | Allows a control point for progressing a change within the pipeline process. |
@@ -151,7 +151,7 @@ The _Credential Object_ has the following properties:
 
 ## Data Source Objects
 
- The [_Data Source_](/userguide/customizations/2-data-sources/) object  communicates with various sources of information such as databases, HTTP servers, FTP servers, etc., and can be used to connect to other DevOps tools as needed. 
+ The [_Data Source_](/userguide/customizations/2-data-sources/) object  communicates with various sources of information such as databases, HTTP servers, FTP servers, etc., and can be used to connect to other DevOps tools as needed.
 
 ## Date Object
 
@@ -168,7 +168,7 @@ The _Date Object_ has the following properties:
 
 The [_Domain Object_](/userguide/customizations/2-define-your-functions-and-procedures/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Subdomains_. _Subdomains_ inherit the parents properties, _Tasks_ and access.
 
-Your microservices, a type of _Component_, are cataloged based on _Domains_ and _Sub_Domains_which you define. _Domains_ catalog microservices that solve the same 'problem sets.' In a similar way,_Applications_ are assigned to their own _Domain_._Environments_ and _Endpoints_ are associated to _Domains_ that are managing _Applications_.
+Your microservices, a type of _Component_, are cataloged based on _Domains_ and _Sub_Domains_which you define._Domains_catalog microservices that solve the same 'problem sets.' In a similar way,_Applications_are assigned to their own_Domain_._Environments_and_Endpoints_are associated to_Domains_that are managing_Applications_.
 
 The highest level _Domain_ is your _Global Domain_. With the SaaS version, your _Global Domain_ name is defined based on your Company. With the on-premise installation, you will see a Domain called _Global_.
 
@@ -275,10 +275,9 @@ The _Endpoint_ object has the following properties:
 | mtime | The date/time it was last modified. |
 | attributes | Array of Strings, keyed by Attribute Name. |
 
-
 ## Notifier Objects
 
-A [_Notifier_](/userguide/customizations/2-define-notifiers/) is sent after a successful or failed deployment attempt. If these features are activated, they are also sent when deployed files have been changed, a _Request_ _Task_ has been used, or when an _Endpoint_ is down,  DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose. 
+A [_Notifier_](/userguide/customizations/2-define-notifiers/) is sent after a successful or failed deployment attempt. If these features are activated, they are also sent when deployed files have been changed, a _Request_ _Task_ has been used, or when an _Endpoint_ is down,  DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose.
 
 ## User Object
 

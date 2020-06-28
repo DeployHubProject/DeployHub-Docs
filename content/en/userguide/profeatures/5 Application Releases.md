@@ -64,7 +64,7 @@ The Dashboard view displays all information related to a specific _Release Base 
 |**Successful Deployment Template** | The template that should be used for success notifications. |
 |**Failed Deployment Template**| The template that should be used for failure notifications.|
 
-### Assigned Applications 
+### Assigned Applications
 
 This section contains all of the _Applications_ that make up the _Release Version_, linked together in order of deployment. Click on the tree structure on the right side in order to see all the available _Applications_, then click and drag an _Application_ from the list on the right side and drop it into the _Release_ area. It will appear in the area as a box containing the name of the _Application_ and will automatically link to the last _Application_ in the area. The connecting line can be deleted by right clicking on the connector line and selecting "Delete this Connector". A new connector can be created by clicking on the anchor (the green dot at the bottom of the _Application_) and dragging and dropping it onto another _Application_. This determines the order that _Applications_ will be deployed. Keep in mind that each _Application_ contains _Components_, which contain _Component Items_, all of which are linked together in the order that they are executed.
 
@@ -82,7 +82,6 @@ _Releases_ can be deployed many times, to the same or different locations (_Envi
 
 The Trends graph shows you your success or failure rates overtime as well at the time required for the last 10 deployments. If a _Release_ deployment is taking longer than previous deployments, this might indicate an issue with your deployment logic.
 
-
 {{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
 
 ### Access
@@ -94,7 +93,6 @@ The Access Section allows _Users_ within designated _Groups_ to update or view t
 | **View** | This allows any _User_ that belongs to any _Group_ in this list to see the selected _Component_ in the List View. |
 | **Change** | This allows any _User_ that belongs to any _Group_ in this list to make changes to the _Component_. |
 | **Deploy** | This allows any _User_ that belongs to any _Group_ in this list to deploy the _Application_.  This is further restricted based on the Access defined at the _Environment_ level. |
-
 
 {{% include "userguide/reusable/ChangeRequest.md" %}}
 
@@ -111,4 +109,3 @@ There are pie charts as the first field in each _Application_ that represent ope
 Within the _Application_ areas are various colored blocks that represent a deployment in the _Environment's__Calendar_ in the form of either an Auto Deploy or a Reserved event. The label shown on the block refers to the domain that the target _Environment_ is contained within. Hovering the mouse pointer over it will display the name of the _Environment_ it will be deployed to. Clicking on a block will take the _User_ to the _Calendar_ entry for the designated _Environment_.
 
 A red line indicates today and assists in identifying where deployments for _Applications_ and _Releases_ are in the schedule. The various blocks within the different areas are colored according to where they stand in the release plan. A gold block represents an overdue deployment into an _Environment_, and this is will always appear to the left of the red line. A slate colored block represents a completed deployment into an _Environment_. A dark blue block represents a deployment scheduled to take place in the future.
-

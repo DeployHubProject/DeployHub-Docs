@@ -33,7 +33,6 @@ You can also use the Filter bar, represented by a funnel icon, to reorder your _
 
 ## Additional Tabs from the _Component_ List View
 
-
 | Tab | Description |
 | --- | --- |
 |**Refresh** | Refreshes the browser. |
@@ -53,8 +52,7 @@ When adding new _Components_ select the  _Component_ Type from the drop down lis
 | **Application File** | For binary files such as .jar, .war, .ear, .exe, .dll, Linux executable files, Oracle Forms, or similar artifacts.   |
 | **Database** | For SQL files such as .ddl or other database update scripts. |
 
-
-## How to View and Edit _Components_ 
+## How to View and Edit _Components_
 
 _Components_ are defined as Container, Application File, or Database.  These are the different types of _Components_ you may need from microservices to binaries and DB updates. The Dashboard view displays all information related to a specific _Component Base Version_ or _Component Version_. Depending on what type of _Component_ you are defining, you will be presented with different data definition fields.
 
@@ -77,7 +75,6 @@ The following fields are common to all _Components_:
 | **Always Deploy** | The _Component_ is deployed to the associated _Endpoints_ in the _Target Environment_ regardless if the _Component_ is already present on the _Endpoints_. This is useful for monolithic applications where you want to copy over a binary for example.|
 |**Deploy Sequentially** | Normally when a _Component_ in an _Application_ is deployed to several _Endpoints_ in an _Environment_, it is deployed to each _Endpoint_ at the same time (in parallel). The "Deploy Sequentially" option changes this behavior to force the _Component_ to deploy to each _Endpoint_ in turn, sequentially. |
 | **Custom Action** | An _Action_ that replaces the usual Deployment Engine processing. Custom _Actions_ can be used to call Ansible, Helm or other external deployment tools.|
-
 
 ### Container Specific Data Definition
 
@@ -103,7 +100,6 @@ A Container _Component_ has the following optional attributes:
 |**Git Repo**| The Git Repository that triggered the build.Populated when integrated into Continuous Delivery Pipelines.|
 |**Git Tag**| The last tag for the Git Repository. Populated when integrated into Continuous Delivery Pipelines.|
 |**Git URL**| The URL for the Git Repository.Populated when integrated into Continuous Delivery Pipelines.|
-
 
 ### Application Specific Data Definition
 
@@ -135,7 +131,8 @@ Database _Components_ are used for making database updates such as table changes
 | **Rollback Repository** | Choose the Repository that contains your Roll Forward SQL. This list box is populated based on the _Repositories_ pre-defined in your initial setup. Based on the _Repository_ you select, you may be provided override or append fields if they were made available. For more information on _Repositories_ see [Connecting Your Repositories](/userguide/first-steps/2-define-repositories/#using-the-repository-dashboard-for-viewing-and-editing).<ul><li>Filepath Override: Enter a filepath that will override the default filepath defined at the _Repository_ level.</li><li>Pattern Override: Enter a pattern that will override the default pattern defined at the _Repository_ level.  Patterns are file types you want to pull from the _Repository_, such as \*.exe, \*.dll, \*.war. </li><li>Recursive Override: Select the box in order to override the default recursive behavior defined at the _Repository_ level. This will turn recursion on or off depending on the setting at the _Repository_ level. </li><li>Version Override: Overrides the default template of your versioning pattern defined at the _Repository_ level. </li></ul> |
 
 ### Formatting of the Deployment Directory with Base and Target Directories for Database and Application File Deployments
-You must define the directory where your _Component_ file is going to be deployed on your _Endpoint_.  This is the purpose of your _Component_ Base and Target Directories. The Base Directory is the high level directory, the Target Directory is the lower level, or final "Target" directory.  _Endpoints_ may be managed by a System Administrator who may want to force the use of a particular Base Directory on the _Endpoint_.  If so, this directory can be set at the _Endpoint_ Base Directory and override the _Component_ level Base Directory.  When a deployment occurs, the process will check to see if the _Endpoint_ has a Base Directory defined, and will replace the _Component_ Base Directory with the _Endpoint_ Base Directory to create the full path for the deployment.   
+
+You must define the directory where your _Component_ file is going to be deployed on your _Endpoint_.  This is the purpose of your _Component_ Base and Target Directories. The Base Directory is the high level directory, the Target Directory is the lower level, or final "Target" directory.  _Endpoints_ may be managed by a System Administrator who may want to force the use of a particular Base Directory on the _Endpoint_.  If so, this directory can be set at the _Endpoint_ Base Directory and override the _Component_ level Base Directory.  When a deployment occurs, the process will check to see if the _Endpoint_ has a Base Directory defined, and will replace the _Component_ Base Directory with the _Endpoint_ Base Directory to create the full path for the deployment.
 
 Below is how the full file deployment path is formatted:
 
@@ -150,15 +147,13 @@ Below is how the full file deployment path is formatted:
 | Has Value | Has Value |Has Value| Endpoint Base Directory + Component Target Directory. |
 | Null | Null | Null | Deployment will fail. |
 
-
-
 ### _Component_ Dependency Map
 
 The Dependency Map provides a graphical view of all _Applications_ that is consuming this _Component_. This will remain empty until your  _Component_ is used by an an _Application_.  
 
 ### _Endpoints_
 
-This section lists all _Endpoints_ that the _Component_ has been installed to with its Deployment Number. The Deployment Number is generated by DeployHub for each unique deployment.  You can also use this section to stop incremental deployments and force a specific version to be deployed to the _Endpoint_. By manually adding a specific _Component Version_ to the _Endpoint_, you bypass the incremental deployment logic of the deployment engine.  For example, if you would like to deploy a particular container without accepting any intermediate updates, you would go to the intermediate _Component Versions_ and manually add them to the _Endpoints_, causing the deployment engine to believe that it was previously deployed. When you manually add an _Endpoint_, the Deployment Number will show "manually deployed." To manually add a _Component_ to an _Endpoint_, use the +Add option. You will be provided a list of available _Endpoints_. Use Save to commit the change to the table. You can select multiple _Endpoints_.  To Edit or Delete an _Endpoint_, select the _Endpoint_ and use the Edit or Delete option. 
+This section lists all _Endpoints_ that the _Component_ has been installed to with its Deployment Number. The Deployment Number is generated by DeployHub for each unique deployment.  You can also use this section to stop incremental deployments and force a specific version to be deployed to the _Endpoint_. By manually adding a specific _Component Version_ to the _Endpoint_, you bypass the incremental deployment logic of the deployment engine.  For example, if you would like to deploy a particular container without accepting any intermediate updates, you would go to the intermediate _Component Versions_ and manually add them to the _Endpoints_, causing the deployment engine to believe that it was previously deployed. When you manually add an _Endpoint_, the Deployment Number will show "manually deployed." To manually add a _Component_ to an _Endpoint_, use the +Add option. You will be provided a list of available _Endpoints_. Use Save to commit the change to the table. You can select multiple _Endpoints_.  To Edit or Delete an _Endpoint_, select the _Endpoint_ and use the Edit or Delete option.
 
 {{% include "userguide/reusable/Attributes.md" %}}
 
@@ -186,6 +181,3 @@ The Access Section allows _Users_ within designated _Groups_ to update or view t
 ## Publish a New _Component Version_ Based on an Existing _Component Version_
 
 Create _Component Versions_ that are patterned after the _Component Base Version_ or any _Component Version_. Check the box _Component Base Version_ or _Component Versions_ from which you want to base the new version. Select the New Version Tab to access the _Component_ Dashboard and then edit the new _Component Version_. When you manually create a new _Component Version_ the name will be auto generated with a new number. You may need to provide it a unique name based on your versioning patterns.
-
- 
-  

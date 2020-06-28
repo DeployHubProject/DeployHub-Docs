@@ -26,11 +26,11 @@ There are four common ways to implement _Domains_:
 
 ![Example of Domains, Applications, Components and Environments](/userguide/concepts/OnlineStore-GlobalDomain.jpg)
 
-## Using the Domain Dashboard 
+## Using the Domain Dashboard
 
 Access of a full view of all _Domains_ on the dashboard is based upon your User privileges. The view is displayed in a "Sun Burst" map, starting at the highest level _Domain_ with the ability to drive down into the _Subdomains_, and _Subdomains_ after that.
 
-When scrolling up or down the _Domain_ hierarchy using the Sun Burst map, the detail information is re-displayed according to where you are in the map. 
+When scrolling up or down the _Domain_ hierarchy using the Sun Burst map, the detail information is re-displayed according to where you are in the map.
 
 ### _Domain_ Details
 
@@ -64,10 +64,10 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 
 ### Additional Parameters
 
-Additional parameters can be added to a Task. These additional parameters set a Global Variable at execution time. To add them, select the _Task_ from the _Tasks_ table . Use +Add to create a new entry into the Parameters table for the selected task. It will have two columns: 
+Additional parameters can be added to a Task. These additional parameters set a Global Variable at execution time. To add them, select the _Task_ from the _Tasks_ table . Use +Add to create a new entry into the Parameters table for the selected task. It will have two columns:
 
 - Label: This will appear on the _Task_'s execution window whenever the _Task_ is executed.
 
 - Variable: An Entry, Password, or Dropdown field appears to the right of the Label whenever a _Task_ is executed, where values can be either entered or selected, depending on the Type.
 
-Use the Save to commit the change to the table. Use Edit to update a Task, or Delete to remove a Task. 
+Use the Save to commit the change to the table. Use Edit to update a Task, or Delete to remove a Task.

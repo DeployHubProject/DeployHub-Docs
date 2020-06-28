@@ -36,11 +36,11 @@ Create an _Endpoint_ that is set to "localhost" for the Hostname.
 
 ## Import Your SalesForce _Procedures_ from GitHub
 
-You will need to import the most current GitCheckout, RunAnt, SalesforceCredential and SalesforceDeploy _Procedures_/_Functions_ from the Ortelius Open Source GitHub Project at: 
+You will need to import the most current GitCheckout, RunAnt, SalesforceCredential and SalesforceDeploy _Procedures_/_Functions_ from the Ortelius Open Source GitHub Project at:
 
 [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/)
 
-The following _Procedures_ need to be retrieved: 
+The following _Procedures_ need to be retrieved:
 
 - **GitCheckout.re** - This _Procedure_ clones the repo to the _Dropzone_ and then checks out the commit, branch or tag specified.
 

@@ -20,5 +20,3 @@ Integrations can be created using:
 - [_APIs_](/userguide/restapi/) for creating continuous delivery plug-ins for continuous configuration management.
 
 {{% include "userguide/reusable/ListofActions.md" %}}  
-
-

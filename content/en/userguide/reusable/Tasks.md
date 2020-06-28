@@ -6,7 +6,7 @@ Task are used for executing deployments, managing approvals, or staging a deploy
 
  You can add new Tasks to a _Domain_ by selecting +Add in the Task section of the Dashboard. A pop-up displays all available Tasks. Select the type of Task to add a row into the table and display their unique details.
 
-**Approve Version for Move to Next Pipeline State** 
+**Approve Version for Move to Next Pipeline State**
 
  Approves the _Application_ or _Release_ version so that it can be moved to a specified state in the pipeline (Lifecycle _Sub-Domain_). This works in conjunction with the Move Version Task (see below). When the Approve Task is defined, the Target _Domain_ has to be specified. When the Approve Task is executed, the selected _Application_ or _Release_ version can either be Approved or Rejected. Only when the an _Application_ or _Release_ version is "approved" can it be "Moved" or "Deployed". |
 
@@ -22,7 +22,7 @@ Task are used for executing deployments, managing approvals, or staging a deploy
 |**Approval _Notify Template_**| The _Notify Template_ that will be emailed on approval. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).  |
 |**Rejected _Notify Template_**| The _Notify Template_ that will be emailed on rejection. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).  |
 
-**Move Version to the Next or Previous Pipeline State** 
+**Move Version to the Next or Previous Pipeline State**
 
 Moves an _Application_ or _Release_ version from one Pipeline state (Lifecycle _Sub-Domain_) to another. This can be used as a promotion or a demotion of an _Application_ or _Release_ version between Lifecycle states. When the task is defined, the Lifecycle _Sub-Domain_ has to be specified as part of the task definition. The Approval Task must be accepted for the Move Version to succeed.
 
@@ -38,7 +38,7 @@ Moves an _Application_ or _Release_ version from one Pipeline state (Lifecycle _
 |**Success _Notify Template_**| The _Notify Template_ emailed on a successful move. You need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).  |
 |**Failure _Notify Template_**| The _Notify Template_ emailed on a failed move. You need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).  |
 
-**Deploy Version to _Environment_** 
+**Deploy Version to _Environment_**
 
 Deploys an _Application_ or _Release_ version to an _Environment_. Select the target _Environment_ via a drop-down list.
 
@@ -51,7 +51,7 @@ Deploys an _Application_ or _Release_ version to an _Environment_. Select the ta
 |**Post-Action**| Change the default behavior by assigning a custom _Action_ to execute as a Post-processing step. |
 |**Available in _Subdomains_**| If selected, all _Subdomains_ will have access to this Task.  |
 
-**Request Calendar Entry for Deployment to an _Environment_** 
+**Request Calendar Entry for Deployment to an _Environment_**
 
 DeployHub Pro feature. Sends a request from a _User_ to add a time slot to the calendar for a deployment. The request is sent to _Group_ who has the authority to manage a particular _Enviornment's_ Calendar. . When the Request Task is defined it is linked to the task to be requested. When the Request Task is executed an entry is placed into the "To Do" list of all the _Users_ who are members of the _Group_ with the calendar access. The Request Task can have a Request Notification Template defined which can send out a notification to the appropriate _Groups_.
 

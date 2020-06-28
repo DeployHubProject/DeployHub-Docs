@@ -105,9 +105,8 @@ The Trends graph shows the success or failure rates overtime as well at the time
 
 ## Package Components Tab
 
-This tab contains all the _Components_ that make up an _Application_, linked together in order of deployment if needed using a blueprint designer. Click on the _Component_ Selector on the right side to see the available _Components_ based on _Domains_ and Categories. A Category acts as a tag or label assigned at the _Component_ level and are not specific to _Domains_.  _Domains_ are identified with a sitemap icon. A Category is identified with a Tag icon. Selecting either expands the options to show all available _Components_. 
+This tab contains all the _Components_ that make up an _Application_, linked together in order of deployment if needed using a blueprint designer. Click on the _Component_ Selector on the right side to see the available _Components_ based on _Domains_ and Categories. A Category acts as a tag or label assigned at the _Component_ level and are not specific to _Domains_.  _Domains_ are identified with a sitemap icon. A Category is identified with a Tag icon. Selecting either expands the options to show all available _Components_.
 
 Click and drag a _Component_ from the list on the far right side and drop it into the Assigned _Components_ area. It will appear in the area as a box containing the name of the _Component_. It automatically links to the last _Component_. Right click on the connecting line, select "Delete this Connection".Create by Click on the anchor (the green dot at the bottom of the _Component_)  to create a new connector. Then drag and drop it onto another _Component_. This determines the order in which the _Components_ will be deployed. Each _Component_ contains _Component Items_ also linked together in the order to be executed.  For a microservice implementation, they can all be linked to the "start point". This means they will be deployed in parallel.
 
 NOTE: At least one _Component_ must be connected to the "start point" or the deployment will fail.
-

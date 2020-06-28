@@ -10,11 +10,11 @@ description: >
 
 _Users_ are given access to DeployHub Objects based on their _Group_ access. By default there are three _Groups_.
 
--Administrator _Group_ - The _User_ who initially signs into DeployHub is automatically added to this _Group_. By default, this _Group_ has access to all objects. 
+-Administrator _Group_ - The _User_ who initially signs into DeployHub is automatically added to this _Group_. By default, this _Group_ has access to all objects.
 -User _Group_ - All _Users_ who sign in after the initial Administrator _User_ is created.
 -Everyone _Group_ - All Users regardless of their assigned _Group_ are automatically added to this _Group_. It is the default _Group_ that provides access to "everyone" for all Objects.  To restrict _Everyone_ access, update the _Access_ options at the Object level.  This _Group_ cannot be modified.  If you delete a _User_ from the system, they will be deleted from the Everyone _Group_.
 
-A many-to-many relationship exists between _Users_ and _Groups_, so that a _User_ can belong to many different _Groups_, and a _Group_ can contain many different _Users_. If a _User_ belongs to more than one _Group_, the _User_ will be given the highest level of access. 
+A many-to-many relationship exists between _Users_ and _Groups_, so that a _User_ can belong to many different _Groups_, and a _Group_ can contain many different _Users_. If a _User_ belongs to more than one _Group_, the _User_ will be given the highest level of access.
 
 ### _Users_ and _Domain_ Inheritance
 
@@ -67,6 +67,5 @@ This Section contains a list of all the _Groups_ the selected _User_ belongs to.
 DeployHub Team has two _Groups_, Administrators and Users, to which _Users_ can be assigned.  Access control to Objects are based on these two high level _Groups_. DeployHub Team allows you to create as many _Users_ as required but only the "User" and "Administrator" _Groups_ are supported.
 
 **DeployHub Pro** allows you to create custom _Groups_ for assigning _Users_ giving you more security control around the Objects. For information on how to create _User_ _Groups_ with DeployHub Pro see [Creating DeployHub Pro Groups](/userguide/profeatures/5-pro-groups/.)
-
 
 {{% include "userguide/reusable/AuditTrail.md" %}}
