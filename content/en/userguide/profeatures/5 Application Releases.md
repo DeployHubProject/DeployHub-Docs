@@ -1,19 +1,17 @@
 ---
-title: "Release Trains"
-linkTitle: "Release Trains"
+title: "Creating Releases"
+linkTitle: "Creating Releases"
 weight: 80
 description: >
-  Deploying Groups of Applications.
+  Using _Releases_ to manage many _Applications_ in a single deployment.
 ---
-## Release Trains
+## Intro to Releases
 
- A _Release_ manages the progression and deployment of multiple _Applications_ together.  _Releases_ and _Release Versions_ (DeployHub Pro only) are collections of one or more _Applications_ that are managed as a unit due to their interdependencies. _Releases_ are only available in DeployHub Pro. 
-
-Like _Applications_ and _Components_, _Releases_ are versioned each time they are deployed. A _Release Base Version_ is the initial version and acts as a model for subsequent _Release Versions_.
+ A _Release_ manages the progression and deployment of multiple _Applications_ together.  _Releases_ and _Release Versions_ are a DeployHub Pro feature.  _Releases_ and _Release Versions_ are collections of one or more _Applications_ that are managed as a unit due to their interdependencies. This is sometimes referred to as a "Release Train." Like _Applications_ and _Components_, _Releases_ are versioned each time they are deployed. A _Release Base Version_ is the initial version and acts as a model for subsequent _Release Versions_.
 
 ## The _Release_ List View for Adding or Deleting
 
-From the _Release_ menu option to the left of the DeployHub main panel, you will be taken to a list of all _Release Base Versions_ and _Release Versions_ to which you have access. There is a row for every _Environment_ to which the _Release Base Version_ or _Release Version_ has been deployed.  For this reason, you will see multiple entries for the same _Release_ if it has been deployed to multiple _Environments_.  
+Use the _Release_ List View accessible from the left hand _Release_ menu option. This will take you to a list of all _Release Base Versions_ and _Release Versions_ to which you have access. There is a row for every _Environment_ to which the _Release Base Version_ or _Release Version_ has been deployed.  For this reason, you will see multiple entries for the same _Release_ if it has been deployed to multiple _Environments_.  
 
 The list view is organized on the following columns:
 
@@ -44,32 +42,27 @@ The _Release_ List View has the following Tabs.
 
 | Tab | Description |
 | --- | --- |
-| Refresh | Refreshes the browser. |
-| Add Base | Allows you to Add a new _Release Base Version_. |
-| Add Version | Creates a copy of the selected _Release_ in the list, creating a new _Release Version_. |
-| Delete | Deletes the selected item. However, you must delete the _Release_ starting from the newest to the oldest.  The _Release Base Version_ would be deleted last. Sorting by "Version" gives you the order.  |
-| Tasks | Displays all _Release_ Tasks defined to this _Domain_ and available for the selected Item. See [Tasks](/userguide/first-steps/2-defining-domains/#tasks) for more information.  |
-| List | Takes you back to the List View if you have been in the Map View. |
+| **Refresh** | Refreshes the browser. |
+| **Add Base** | Allows you to Add a new _Release Base Version_. |
+| **Add Version** | Creates a copy of the selected _Release_ in the list, creating a new _Release Version_. |
+| **Delete** | Deletes the selected item. However, you must delete the _Release_ starting from the newest to the oldest.  The _Release Base Version_ would be deleted last. Sorting by "Version" gives you the order.  |
+| **Tasks** | Displays all _Release_ Tasks defined to this _Domain_ and available for the selected Item. See [Tasks](/userguide/first-steps/2-defining-domains/#tasks) for more information.  |
 
 ## Viewing and Editing with the _Release_ Dashboard
 
-The Dashboard view displays all information related to a specific _Release Base Version_ or _Release Version_. The Dashboard view has two additional tab options - Package Components and Versions.  Below are the Details for an _Release_.
+The Dashboard view displays all information related to a specific _Release Base Version_ or _Release Version_.  Below are the Details for a _Release_.
 
 | Details | Description |
 | --- | --- |
-|Full Domain | The fully qualified path of the _Domain_ that the _Release_ is to be associated, showing all parent _Domains_. |
-|Name | The Name of your _Release_. |
-|Owner Type| Owned by a User or Group. |
-|Owner | Name of User or Group. |
-|Summary | Description of the _Release_. |
-|Created | Auto generated based on the date the _Release_ was added. |
-|Modified | Auto generated based on the date the _Release_ was updated. |  
-|Change Request DataSource | DeployHub Pro Option - Establishes the Change Request system for the _Release_. A Change Request Data Source must be pre-defined for this field to be used. |
-Pre-Action| An action that should be executed prior to the deployment of the _Release_.|
-Post-Action| An action that should be executed at the completion of the _Release_ deployment.|
-Custom Action | Overrides any Pre or Post Actions, such as calling an external solutions such as Helm.|
-Successful Deployment Template | The template that should be used for success notifications. |
-Failed Deployment Template| The template that should be used for failure notifications.|
+|**Full Domain** | The fully qualified path of the _Domain_ that the _Release_ is to be associated, showing all parent _Domains_. |
+|**Name** | The Name of your _Release_. |
+|**Owner Type**| Owned by a User or Group. |
+|**Owner** | Name of User or Group. |
+|**Summary** | Description of the _Release_. |
+|**Created** | Auto generated based on the date the _Release_ was added. |
+|**Modified** | Auto generated based on the date the _Release_ was updated. |  
+|**Successful Deployment Template** | The template that should be used for success notifications. |
+|**Failed Deployment Template**| The template that should be used for failure notifications.|
 
 ### Assigned Applications 
 
@@ -103,13 +96,7 @@ The Access Section allows _Users_ within designated _Groups_ to update or view t
 | **Deploy** | This allows any _User_ that belongs to any _Group_ in this list to deploy the _Application_.  This is further restricted based on the Access defined at the _Environment_ level. |
 
 
-### Change Request
-
-The Change Request section, available for DeployHub Pro users, shows enhancement requests and bugs for a selected _Application_ that your _Release_ consumes. You must have a "Change Request" Data Source defined in your General settings in order to see Change Requests. Change Request Data Sources can be connected to several popular bug tracking systems, including Bugzilla, GitHub, and Jira. To setup your Change Request see [Managing Data Sources](/userguide/customizations/2-data-sources/).
-
-Select the "+Add Change Request to this Version" to assign a Change Request to the _Release_. This will display all the Change Requests (Enhancements, Bugs, etc.) from the assigned Data Source in the resulting Select Bug Record pop up window, and one or more of these can be assigned to the _Release_ by clicking on the box to the left of each CR ID field.
-
-The lower section contains a list of Change Requests with the fields CR ID, Title, and Status. Clicking on the CR ID takes the User to a new tab in the browser that contains the source of the Change Request. For instance, if the _Release_ has a Change Request Data Source of the type GitHub, clicking on the CR ID field for a Change Request will open a tab with the bug or enhancement request within github.com, allowing the User the ability to update, close, or read about it in detail. The Title field holds the title of the Change Request within the bug tracking system. The various bug tracking systems used by DeployHub have their own statuses. Bugzilla for instance, has statuses such as New, Unconfirmed, Assigned, etc. DeployHub interprets these as either 'open' or 'closed’ and displays them in the Status field with a gold or dark gray background respectively.
+{{% include "userguide/reusable/ChangeRequest.md" %}}
 
 ## Planner Tab
 

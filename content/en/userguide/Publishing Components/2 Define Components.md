@@ -36,12 +36,12 @@ You can also use the Filter bar, represented by a funnel icon, to reorder your _
 
 | Tab | Description |
 | --- | --- |
-|Refresh | Refreshes the browser. |
-| +Add Base | Allows you to Add a new _Component Base Version_. You will select from one of three types: Container, Application File, Database |
-| +Add Version | Creates a copy of the selected _Component_.  |
-| Delete | Deletes the selected item. However, you must delete the _Components_ starting from the newest to the oldest.  The _Component Base Version_ would be deleted last. Sorting by "Version" gives you the order.  |
-| List | Return to List View if in the Map View. |
-| Map | Displays a global Map of all _Component_ versions, with their _Application_ relationships.  |
+|**Refresh** | Refreshes the browser. |
+| **+Add Base** | Allows you to Add a new _Component Base Version_. You will select from one of three types: Container, Application File, Database |
+| **+Add Version** | Creates a copy of the selected _Component_.  |
+| **Delete** | Deletes the selected item. However, you must delete the _Components_ starting from the newest to the oldest.  The _Component Base Version_ would be deleted last. Sorting by "Version" gives you the order.  |
+| **List** | Return to List View if in the Map View. |
+| **Map** | Displays a global Map of all _Component_ versions, with their _Application_ relationships.  |
 
 ## _Component_ Types
 
@@ -49,9 +49,9 @@ When adding new _Components_ select the  _Component_ Type from the drop down lis
 
 | **Type** | **Description** |
 | --- | --- |
-| Container | For Containers such as Docker.  |
-| Application File | For binary files such as .jar, .war, .ear, .exe, .dll, Linux executable files, Oracle Forms, or similar artifacts.   |
-| Database | For SQL files such as .ddl or other database update scripts. |
+| **Container** | For Containers such as Docker.  |
+| **Application File** | For binary files such as .jar, .war, .ear, .exe, .dll, Linux executable files, Oracle Forms, or similar artifacts.   |
+| **Database** | For SQL files such as .ddl or other database update scripts. |
 
 
 ## How to View and Edit _Components_ 
@@ -69,7 +69,8 @@ The following fields are common to all _Components_:
 | **Summary** | A short text field with a description of the _Component_. |
 | **Created** | The date and time that the _Component_ was created. |
 | **Modified** | The date and time of the last change. |
-| **Kind**|  Container, Application File, or Database.|
+| **Object**| Displays _Component_ for the Base Version or _Component Version_.|
+| **Type**| The kind of Component created, i..e. Container, Application File, or Database.|
 |**Endpoint Type** | Used to map the _Component_ to _Endpoints_ within an _Environment_ at deployment.  This allows DeployHub to map the _Component_ to the correct _Endpoint_ when moving across different environments.  You can add your own _Endpoint_ Types from the Customize Types menu or select from the default options.|
 | **Change Request Data Source** | This _Data Source_ is assigned to the _Component_ for tracking Change Request. A Change Request Data Source must be pre-defined for this field to be used. |
 | **Category** | Assigning a Category to an Object allows lists of Objects based on Categories to be used throughout DeployHub. Add a new Category in the entry field or use an existing Category displayed in the drop down. Categories are most commonly associated with _Actions_, _Functions_ and _Procedures_. Pre-defined Categories include: <li>Build - _Actions_, _Functions_ and _Procedures_ for calling ANT (SalesForce integration).</li><li>Database - _Actions_, _Functions_ and _Procedures_ for database updates.</li><li>Deploy- _Actions_, _Functions_ and _Procedures_ for Deployments.</li><li>Dropzone- _Actions_, _Functions_ and _Procedures_ for interacting with the Dropzone.</li><li>File Logic- _Actions_, _Functions_ and _Procedures_ related to File manipulation.</li><li>Flow Logic- _Actions_, _Functions_ and _Procedures_ for if then else in DMScript.</li><li>Loops- _Actions_, _Functions_ and _Procedures_ for file looping.</li><li>General-Non-categorized Objects (default).</li><li>WebLogic- _Actions_, _Functions_ and _Procedures_ for deploying to WebLogic.</li><li>WebSphere- _Actions_, _Functions_ and _Procedures_ for deploying to WebSphere.</li><li>Windows- _Actions, Functions_ and _Procedures_ used for Windows deployments.</li>   |
@@ -180,13 +181,7 @@ The Access Section allows _Users_ within designated _Groups_ to update or view t
 | **View** | This allows any _User_ that belongs to any _Group_ in this list to see the selected _Component_ in the List View. |
 | **Change** | This allows any _User_ that belongs to any _Group_ in this list to make changes to the _Component_. |
 
-### Change Request
-
-The Change Request section, available for DeployHub Pro users,  shows enhancement requests and bugs for a selected Component for several popular bug tracking systems, including Bugzilla, GitHub, and Jira.
-
-Select the "+Add Change Request to this Version" to assign a Change Request to the _Component_. This will display all the Change Requests (Enhancements, Bugs, etc.) from the assigned Data Source in the resulting Select Bug Record pop up window. One or more of these can be assigned to the _Component_ by clicking on the box to the left of each CR ID field.
-
-The lower section contains a list of Change Requests with the fields CR ID, Title, and Status. Clicking on the CR ID  to see the source of the Change Request. For instance, if the _Component_ has a Change Request Data Source of the type GitHub, clicking on the CR ID field for a Change Request will open a tab with the bug or enhancement request within github.com, allowing the User the ability to update, close, or read about it in detail. The Title field holds the title of the Change Request within the bug tracking system. The various bug tracking systems used by DeployHub have their own statuses. Bugzilla for instance, has statuses such as New, Unconfirmed, Assigned, etc. DeployHub interprets these as either 'open' or 'closed’ and displays them in the Status field with a gold or dark gray background respectively.
+{{% include "userguide/reusable/ChangeRequest.md" %}}
 
 ## Publish a New _Component Version_ Based on an Existing _Component Version_
 

@@ -39,13 +39,11 @@ No fields are required for _WriteEnv2File_.
 
 | Field | Value | Description |
 | --- | --- | --- |
-| _**Title**_ | Not Required |
- |
-| _**Summary**_ | Not Required |
- |
-| _**RspFile**_ | $RspFile | The results from the WriteEnv2Toml.re Procedure |
-| _**Chart**_ | $(Chart) | The Helm Chart to be used during the deployment |
-| _**Release Name**_ | $(component.name) | The name of the release |
+| **Title** | Not Required | Name of the step in your deployment workflow.  |
+| **Summary** | Not Required | Enter a summary of this step. | |
+| **RspFile** | $RspFile | The results from the WriteEnv2Toml.re Procedure |
+| **Chart** | $(Chart) | The Helm Chart to be used during the deployment |
+| **Release Name** | $(component.name) | The name of the release |
 
 At this point the Action is ready to be used by anyone with access (based on Domain and security options). Each Component that uses the Action will need to define specific values. Because this new Action is reusable, no Component variables are defined.
 
@@ -57,31 +55,31 @@ Docker component items have the following attributes, none of which are required
 
 | Field | Description |
 | --- | --- |
-| _**BuildId**_ | The build ID from the build system such as Quay or DockerHub |
-| _**BuildUrl**_ | Build URL for the build system |
-| _**Chart**_ | Helm chart for the component |
-| _**Chart Version**_ | Version of the Helm chart |
-| _**Chart Name Space**_ | Namespace for the Helm chart to deploy to |
-| _**Operator**_ | Kubernetes Operator |
-| _**DockerBuildDate**_ | Timestamp for the Docker Build |
-| _**DockerSha**_ | SHA for the Docker Image |
-| _**DockerRepo**_ | URL for the Docker Registry |
-| _**GitCommit**_ | Git Commit that triggered the Build |
-| _**GitRepo**_ | Git Repo Name |
-| _**GitTag**_ | Git Tag such as 'Master' or 'v1.5.0' |
-| _**GitUrl**_ | URL to the Git Repository |
-| _**BuildNumber**_ | Build Job Number for CI/CD |
-| _**Build Job**_ | Build Job name for CI/CD |
-| _**ComponentType**_ | Name of the Component Type |
-| _**ChangeRequestDS**_ | Name of the Change Request Datasource |
-| _**Category**_ | Name of the Components Category |
-| _**AlwaysDeploy**_ | Y/N |
-| _**DeploySequentially**_ | Y/N |
-| _**BaseDirectory**_ | Base Directory for the Component |
-| _**PreAction**_ | Name of the Pre-Action |
-| _**PostAction**_ | Name of the Post-Action |
-| _**CustomAction**_ | Name of the Custom-Action |
-| _**Summary**_ | Component Summary or Description |
+| **BuildId** | The build ID from the build system such as Quay or DockerHub |
+| **BuildUrl** | Build URL for the build system |
+| **Chart** | Helm chart for the component |
+| **Chart Version** | Version of the Helm chart |
+| **Chart Name Space** | Namespace for the Helm chart to deploy to |
+| **Operator** | Kubernetes Operator |
+| **DockerBuildDate** | Timestamp for the Docker Build |
+| **DockerSha** | SHA for the Docker Image |
+| **DockerRepo** | URL for the Docker Registry |
+| **GitCommit** | Git Commit that triggered the Build |
+| **GitRepo** | Git Repo Name |
+| **GitTag** | Git Tag such as 'Master' or 'v1.5.0' |
+| **GitUrl** | URL to the Git Repository |
+| **BuildNumber** | Build Job Number for CI/CD |
+| **Build Job** | Build Job name for CI/CD |
+| **ComponentType** | Name of the Component Type |
+| **ChangeRequestDS** | Name of the Change Request Datasource |
+| **Category** | Name of the Components Category |
+| **AlwaysDeploy** | Y/N |
+| **DeploySequentially** | Y/N |
+| **BaseDirectory** | Base Directory for the Component |
+| **PreAction** | Name of the Pre-Action |
+| **PostAction** | Name of the Post-Action |
+| **CustomAction** | Name of the Custom-Action |
+| **Summary** | Component Summary or Description |
 
 or more information see:
 

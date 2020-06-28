@@ -41,7 +41,7 @@ The Dashboard view displays all information related to a specific _Credential_.
 | **Full Domain** | The fully qualified path of the Domain to which the Credential belongs. |
 | **Name** | The name of the _Credential._ |
 | **Summary** | A general description of the _Credential._ |
-| **Kind** | The type of _Credential_. There are two different types of _Credentials_:<ul style="list-style-type: none;"><li>**Encrypted in Database:** This _Credential_ Type is used to access external _Data Sources_ such as Git or SalesForce. The username/password pair resides in DeployHub's database using 3DES encryption.</li><li>**SSH Private Key:** An operating system level SSH key used to access _Endpoints_ for deployments. </li></ul> |
+| **Tyoe** | The kind of _Credential_. There are two different Types of _Credentials_:<ul style="list-style-type: none;"><li>**Encrypted in Database:** This _Credential_ Type is used to access external _Data Sources_ such as Git or SalesForce. The username/password pair resides in DeployHub's database using 3DES encryption.</li><li>**SSH Private Key:** An operating system level SSH key used to access _Endpoints_ for deployments. </li></ul> |
 |**Owner Type**|  _User_ or _Group_.|
 |**Owner**| The _User_ name or _Group_ name who created the _Credential_.|
 | **Created** | The date and time the _Credential_ was created. |
@@ -72,9 +72,9 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Cred
 
 | Access | Description |
 | --- | --- |
-| _**View**_ | Allows the _User_ to see the _Credential_. If the _User_ does not belong to a _Group_ in the View Access list, the _Credential_ will not appear in the List View. |
-| _**Change**_ | Allows the _User_ to change the _Credential’s_ characteristics i.e. Name, Summary, etc. |
-| _**Read**_ | Allows the _User_ to use the _Credential_ by assigning it to an object such as an _EndPoint_ or _Repository_. |
+| **View** | Allows the _User_ to see the _Credential_. If the _User_ does not belong to a _Group_ in the View Access list, the _Credential_ will not appear in the List View. |
+| **Change** | Allows the _User_ to change the _Credential’s_ characteristics i.e. Name, Summary, etc. |
+| **Read** | Allows the _User_ to use the _Credential_ by assigning it to an object such as an _EndPoint_ or _Repository_. |
 
 NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your _Groups_, you will need to upgrade to **DeployHub Pro.**
 

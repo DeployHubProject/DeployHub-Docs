@@ -14,12 +14,11 @@ DeployHub has an open architecture with many out of the box integrations with ot
 
 Integrations can be created using:
 
-- _Notifiers_ for calling, Email, Slack or Hipchat.
-- _Actions_ for deploying and managing Infrastructure Components like Tomcat or WebSphere.
-- _Data Sources_ for connecting to outside data such as Change Request systems like Jira, Git or Bugzilla.
-- _Custom Actions_ for performing deployments like Helm, Ansible and Cloud Foundry.
-- _APIs_ for creating continuous delivery plug-ins for continuous configuration management.
+- [_Notifiers_](/userguide/customizations/2-define-notifiers/) for calling, Email, Slack or Hipchat.
+- [_Actions_ and _Custom Actions_](/userguide/customizations/2-define-your-actions/) for deploying and managing Infrastructure Components like Tomcat or WebSphere or performing deployments with Helm, Ansible or Cloud Foundry.
+- [_Data Sources_](/userguide/profeatures/2-data-sources/) for connecting to outside data such as Change Request systems like Jira, Git or Bugzilla.
+- [_APIs_](/userguide/restapi/) for creating continuous delivery plug-ins for continuous configuration management.
 
 {{% include "userguide/reusable/ListofActions.md" %}}  
 
-## Customizing Integrations
+

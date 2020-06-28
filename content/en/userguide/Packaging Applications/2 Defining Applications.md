@@ -39,13 +39,13 @@ The _Application_ List View has the following Tabs.
 
 | Tab | Description |
 | --- | --- |
-| Refresh | Refreshes the browser. |
-| Add Base | Allows you to Add a new _Application Base Version_. |
-| Add Version | Creates a copy of the selected _Application_ in the list, creating a new _Application Version_. |
-| Delete | Deletes the selected item. However, you must delete the _Applications_ starting from the newest to the oldest.  The _Application Base Version_ would be deleted last. Sorting by "Version" gives you the order.  |
-| Tasks | Displays all _Application_ Tasks available for the selected item based on the Tasks defined to the _Application_ Domain. See [Tasks](/userguide/first-steps/2-defining-domains/#tasks) for more information.   |
-| List | Displays the List View. |
-| Map | Displays a global Map of all versions of the _Application_ with _Components_. |
+| **Refresh** | Refreshes the browser. |
+| **Add Base** | Allows you to Add a new _Application Base Version_. |
+| **Add Version** | Creates a copy of the selected _Application_ in the list, creating a new _Application Version_. |
+| **Delete** | Deletes the selected item. However, you must delete the _Applications_ starting from the newest to the oldest.  The _Application Base Version_ would be deleted last. Sorting by "Version" gives you the order.  |
+| **Tasks** | Displays all _Application_ Tasks available for the selected item based on the Tasks defined to the _Application_ Domain. See [Tasks](/userguide/first-steps/2-defining-domains/#tasks) for more information.   |
+| **List** | Displays the List View. |
+| **Map** | Displays a global Map of all versions of the _Application_ with _Components_. |
 
 ## Viewing and Editing with the _Application_ Dashboard
 
@@ -53,19 +53,19 @@ The Dashboard view displays all information related to a specific _Application B
 
 | Details | Description |
 | --- | --- |
-|Full Domain | The fully qualified path of the _Domain_ that the _Application_ is to be associated with, showing all parent _Domains_. |
-|Name | The Name of your _Application_. |
-|Owner Type| Owned by a User or Group. |
-|Owner | Name of User or Group. |
-|Summary | Description of the _Application_. |
-|Created | The date the _Application_ was added. |
-|Modified | The date the _Application_ was updated. |  
-|Change Request DataSource | DeployHub Pro Option - Establishes the Change Request system for the _Application_. A Change Request Data Source must be pre-defined for this field to be used. |
-Pre-Action| An action executed prior to the deployment.|
-Post-Action| An action executed at the completion of deployment.|
-Custom Action | Overrides any Pre or Post Actions, such as calling an external solutions such as Helm.|
-Successful Deployment Template | Used for success notifications. |
-Failed Deployment Template| Used for failure notifications.|
+|**Full Domain** | The fully qualified path of the _Domain_ that the _Application_ is to be associated with, showing all parent _Domains_. |
+|**Name** | The Name of your _Application_. |
+|**Owner Type**| Owned by a User or Group. |
+|**Owner** | Name of User or Group. |
+|**Summary** | Description of the _Application_. |
+|**Created** | The date the _Application_ was added. |
+|**Modified** | The date the _Application_ was updated. |  
+|**Change Request DataSource** | DeployHub Pro Option - Establishes the Change Request system for the _Application_. A Change Request Data Source must be pre-defined for this field to be used. |
+|**Pre-Action**| An action executed prior to the deployment.|
+|**Post-Action**| An action executed at the completion of deployment.|
+|**Custom Action** | Overrides any Pre or Post Actions, such as calling an external solutions such as Helm.|
+|**Successful Deployment Template** | Used for success notifications. |
+|**Failed Deployment Template**| Used for failure notifications.|
 
 ### _Application_ Dependency Map
 
@@ -101,13 +101,7 @@ The Difference Graph shows what changed in the last deployment between the previ
 
 The Trends graph shows the success or failure rates overtime as well at the time required for the last 10 deployments. If an _Application_ deployment takes longer than previous deployments, there is an issue with the deployment logic.
 
-### Change Request
-
-The Change Request section, available for DeployHub Pro users, shows enhancement requests and bugs for a selected _Application_. You must have a "Change Request" Data Source defined in your General settings in order to see Change Requests. Change Request Data Sources can be connected to several popular bug tracking systems, including Bugzilla, GitHub, and Jira. To setup your Change Request see [Managing Data Sources](/userguide/customizations/2-data-sources/).
-
-Select the "+Add Change Request to this Version" to assign a Change Request to the _Application_. This will display all the Change Requests (Enhancements, Bugs, etc.) from the assigned Data Source in the resulting Select Bug Record pop up window. One or more of these can be assigned to the _Application_ by clicking on the box to the left of each CR ID field.
-
-The lower section contains a list of Change Requests with the fields CR ID, Title, and Status. Clicking on the CR ID takes the User to a new tab in the browser that contains the source of the Change Request. For instance, if the _Application_ has a Change Request Data Source of the type GitHub, clicking on the CR ID field for a Change Request will open a tab with the bug or enhancement request within github.com. This  allows the User the ability to update, close, or read about it in detail. The Title field holds the title of the Change Request within the bug tracking system. The various bug tracking systems used by DeployHub have their own statuses. Bugzilla for instance, has statuses such as New, Unconfirmed, Assigned, etc. DeployHub interprets these as either 'open' or 'closed’ and displays them in the Status field with a gold or dark gray background respectively.
+{{% include "userguide/reusable/ChangeRequest.md" %}}
 
 ## Package Components Tab
 

@@ -20,15 +20,13 @@ Repeat the same steps for creating your "_Tomcat Post Deploy_" _Action_.
 
 ### _TomcatPreDeploy_ and _TomcatPostDeploy_ Parameters
 
-| _**Field**_ | Value | Description |
+| **Field** | Value | Description |
 | --- | --- | --- |
-| _**Title**_ | Not Required |
- |
-| _**Summary**_ | Not Required |
- |
-| _**Tomcat Service Name**_ | $TOMCAT_SERVICE_NAME| The service running Tomcat |
-| _**Tomcat Root**_ | $TOMCAT_ROOT | Tomcat web root |
-| _**Application Name**_ | $APPLICATION_NAME | Application name (based on the .war or .ear) |
+| **Title** | Not Required | Name of the step in your deployment workflow.  |
+| **Summary** | Not Required | Enter a summary of this step. | |
+| **Tomcat Service Name** | $TOMCAT_SERVICE_NAME| The service running Tomcat |
+| **Tomcat Root** | $TOMCAT_ROOT | Tomcat web root |
+| **Application Name** | $APPLICATION_NAME | Application name (based on the .war or .ear) |
 
 At this point the Action is ready to be used by anyone with access (based on Domain and security options). Each Component that uses the Action will need to define specific values. Because this new Action is reusable, no Component variables are defined.
 

@@ -39,13 +39,10 @@ The Dashboard view displays all information related to a specific _Repository_ T
 
 - HTTP
 - File System (included as a default with override and append options enabled)
-- Git
 - OpenMake Meister (Build system with a binary repository)
 - SVN
 
-
 ### Common Details of all _Repositories_ Types
-
 
 | Field | Description |
 | --- | --- |
@@ -58,9 +55,6 @@ The Dashboard view displays all information related to a specific _Repository_ T
 | **Created** | Auto-generated date when the _Repository_ was added.|
 | **Modified**| Auto-generated date when the _Repository_ was updated.|
 | **Credential**| The _Credential_ used to access the _Repository_ if required. |
-
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
-{{% include "/userguide/reusable/Git.md/" %}}
 
 
 ## HTTP _Repository_ Details
@@ -105,7 +99,6 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 |**Version Encrypted** | Select the box to indicate the Version should be hidden in the database.|
 |**Version Override** |Select the box if the Version can be replaced at the _Component_ definition.|
 
-{{% include "/userguide/reusable/Git.md/" %}}
 {{% include "/userguide/reusable/OpenMake Meister.md/" %}}
 
 {{% include "/userguide/reusable/SVN.md/" %}}

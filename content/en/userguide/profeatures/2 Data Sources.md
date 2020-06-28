@@ -7,26 +7,18 @@ description: >
 ---
 ## Intro to Data Sources
 
-Connecting to external _Data Sources_ is a DeployHub Pro feature. If you are a DeployHub Team user, this option will not be visible.   _Data Sources_ are used to acquire data from outside of DeployHub. The most common use for _Data Sources_ is for setting up integration with issue tracking systems such as Jira, Bugzilla and GitHub.  If you are using DeployHub Pro, you can configure _Components_ with  _Change Requests_. To do this, you will need to define a connection to the change request system. This can be done using _Data Sources_. 
-
-You can also use a _Data Source_ for accessing LDAP or Active Directory information for _User_ logins. The _Data Source_ object communicates with various databases, HTTP servers, FTP servers, etc., and can be used to take advantage of this kind of information sharing.
-
-### _Data Source_ and _Credentials_
-
-When accessing external data, a User Name and Password pair is often required. For this reason, you will first need to define a _Credential_ for your _Data Source_.  See [Create Your Credentials](/userguide/first-steps/2-define-your-credentials/) for more information on defining a _Credential_ for your _Data Source_.
+_Data Sources_ are used to connect to Jira, Bugzilla, and GitHub to track change request and LDAP and Active Directory for single sign-on. You will need to define a _Credential_ for these _Data Sources_ in order to login. See [Create Your Credentials](/userguide/first-steps/2-define-your-credentials/) for more information on defining a _Credential_ for your _Data Source_.
 
 ## The _Data Sources_ List View for Adding or Deleting
 
-You will find _Data Sources_ under the Setup menu.  Selecting _Data Sources_ will take you to a list of all _DataSources_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Data Sources_ List View.  You can filter the list view on _Data Sources_ and _Domains_.
-
-_Data Sources_ are defined to a _Domain_ and will be displayed based on your access to the _Domain_.
+You will find _Data Sources_ under the Setup menu.  Selecting _Data Sources_ will take you to a list of all _DataSources_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Data Sources_ List View.  You can filter the list view on _Data Sources_ and _Domains_. _Data Sources_ are defined to a _Domain_ and will be displayed based on your access to the _Domain_.
 
 The _Data Sources_ List View has the following Tabs.
 
 | Tab | Description |
 | --- | --- |
 |Refresh | Refreshes the browser. |
-| Add | Allows you to Add a new _Data Sources_ of a particular type. |
+| Add | Allows you to Add a new _Data Sources_ of the following types: <ul><li>Jira</li><li>Bugzilla</li><li>GitHub Issues</li><li>LDAP</li><li>Active Directory</li></ul>|
 | Delete | Deletes the selected item. |
 
 From the _Data Source_ List View, double click on the _Data Source_ which you would like to view to see all Details.  
@@ -51,9 +43,13 @@ The following details are common to all _Data Sources_ types:
 |**Modified**| Auto generated date when the _Data Source_ was updated.|
 |**Credential**| The _Credential_ used to access the _Repository_ if required. |
 
-## GitHub _Data Source_ Details
+## Change Request _Data Sources_
 
-This _Data Source_ allows you to connect to GitHub to retrieve GitHub issues associated to your _Components_. 
+DeployHub supports GitHub, Jira and Bugzilla for tracking change request to _Applications_ and _Components_. For a complete description of the integration see [Tracking Jira, Bugzilla and GitHub Issues](/userguide/integrations/jira-bugzilla-and-git-issues/ ).
+
+### GitHub _Data Source_ Details
+
+This _Data Source_ allows you to connect to GitHub to retrieve GitHub issues associated to your _Components_ or _Applications_. You will need to define a unique _Data Source_ for each repository that needs to be connected to your _Components_ or _Applications_. 
 
 | Field | Description |
 | --- | --- |
@@ -67,8 +63,9 @@ This _Data Source_ allows you to connect to GitHub to retrieve GitHub issues ass
 |**Repository Encrypted**| Select the box to indicate the Git Repository should be hidden in the database.|
 |**Repository Override**|Select the box if the Git Repository can be changed.|
 
-## Jira _Data Source_ Details
-This _Data Source_ allows you to connect to Jira to retrieve Jira issues associated to your _Components_.
+### Jira _Data Source_ Details
+
+This _Data Source_ allows you to connect to Jira to retrieve Jira issues associated to your _Components_ or _Applications_. You will need to define a unique _Data Source_ for each Project Key that needs to be connected to your _Components_ or _Applications_. 
 
 | Field | Description |
 | --- | --- |
@@ -85,9 +82,9 @@ This _Data Source_ allows you to connect to Jira to retrieve Jira issues associa
 |**Server Encrypted**| Select the box to indicate the Jira Server should be hidden in the database.|
 |**Server Override**|Select the box if the Jira Server can be changed.|
 
-## Bugzilla _Data Source_ Details
+### Bugzilla _Data Source_ Details
 
-This _Data Source_ allows you to connect to Bugzilla to retrieve Bugzilla issues associated to your _Components_.
+This _Data Source_ allows you to connect to Bugzilla to retrieve Bugzilla issues associated to your _Components_ or _Applications_. You will need to define a unique _Data Source_ for each Product that needs to be connected to your _Components_ or _Applications_.
 
 | Field | Description |
 | --- | --- |

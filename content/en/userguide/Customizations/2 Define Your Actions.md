@@ -81,6 +81,7 @@ The Dashboard view displays all information related to a specific _Action_.
 | **Owner** | The _User_ or _Group_ name of the _Action's_ owner. The default owner is the _User_ who created the _Action_. |
 | **Created** | An auto generated date when the _Action_ was created (read-only). |
 | **Modified** | An auto generated date when the _Action_ was last modified (read-only). |
+|**Display Name**| You can use this field to create a more user friendly name for your _Action_|
 
 ### Access
 
@@ -98,11 +99,20 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 
 ### Blueprint Section
 
-The logic of an _Action_ is defined using a graphical drag and drop blueprint designer. A tree view on the right shows all the _Functions_ and _Procedures_ organized by categories that can be include in the _Action's_ logic. You can use the built-in activities for defining the logical steps of the _Action_ or you can create new _Procedures_ or _Functions_ and have them available as activities to use. See [_Functions_ and _Procedures_](/userguide/customizations/2-define-your-functions-and-procedures/) for more information. 
+The logic of an _Action_ is defined using a graphical drag and drop blueprint designer. A tree view on the right shows all the _Functions_ and _Procedures_ organized by categories that can be include in the _Action's_ logic. You can use the built-in activities for defining the logical steps of the _Action_ or you can create new _Procedures_ or _Functions_ and have them available as activities to use. See [_Functions_ and _Procedures_](/userguide/customizations/2-define-your-functions-and-procedures/) for more information.
 
-The blueprint designer contains all activities that make up the _Actions_ logical processing steps, linked together in the order they are to be executed. Each step in the process has anchors where connections can be made. When you drag a item onto the designer, a blue input anchor is displayed the top of the items "box." You will see a green anchor at the bottom representing output. In this way you can create connections between the processes.  
+The blueprint designer contains all activities that make up the _Actions_ logical processing steps, linked together in the order they are to be executed. Each step in the process has anchors where connections can be made. When you drag a item onto the designer, a blue input anchor is displayed at the top of the items "box." You will see a green anchor at the bottom representing output. In this way you can create connections between the processes.  
 
-Click on one of the Categories in the list to see the available _Functions_ or _Procedures_. Expand a Category and then select the desired Activity to drag and drop it into the _Action_ blueprint area. It appears as a box containing the name of the _Function_ or _Procedure_. It automatically links to the nearest "box" with a output anchor. An editor box opens automatically to set any input values required. If the dropped item is a _Function,_ then an additional _Result_ field is presented. This needs to be the name of a _Variable_ that receives the result of the _Function_.
+Click on one of the Categories in the list to see the available _Functions_ or _Procedures_. Expand a Category and then select the desired Activity to drag and drop it into the _Action_ blueprint area. It appears as a box containing the name of the _Function_ or _Procedure_. It automatically links to the nearest "box" with a output anchor.
+
+#### The _Function_ or _Procedure_ Parameter Dialog Box
+ 
+The Parameter Dialog Box displays the options defined when the _Function_ or _Procedure_ was created using the Input Parameters Section from the _Functions_ and _Procedures_ Dashboard. When you add a new _Function_ or _Procedure_ to your _Action_ blueprint designer, the Parameter Dialog Box will automatically display.  If you are working on an existing _Action_ and want to view the parameters, a right click will display:
+
+- View Detials - opens the Parameter Dialog Box
+- Got to the Procedure - takes you to the Dashboard of the _Function_ or _Procedure_. Your work will be saved automatically before navigating to the _Functions_ and _Procedures_ Dashboard. 
+- Delete this Activity - deletes the _Function_ or _Procedure_ from the blueprint designer.
+An editor box opens automatically to set any input values required. If the dropped item is a _Function,_ then an additional _Result_ field is presented. This needs to be the name of a _Variable_ that receives the result of the _Function_.
 
 You can connect items in any order you require. To do this, left-click and hold down the button on one of the output anchors, then drag the resulting line onto another input anchor. This connects the items together and determines the order for processing the steps. The lines connecting items can be deleted by right clicking on the connector line and selecting "Delete this Connector".
 

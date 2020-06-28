@@ -65,13 +65,13 @@ The _Action_ can now be placed into the _Custom Action field_ of a _Component_ a
 
 **GitCheckout Parameters**
 
-| _**Field**_ | Value | Description |
+| **Field** | Value | Description |
 | --- | --- | --- |
-| _**Title**_ | Not Required | The name of the step. |
-| _**Summary**_ | Not Required | Description of the step.  |
-| _**Git Repo**_ | $GIT_URL| Git Repo containing the SalesForce Source Code.|
-| _**Git Commit**_ | $GIT_COMMIT | The commit, tag or branch to checkout. |
-| _**To Dir**_ | $GIT_DIR | The directory to checkout into.  Use "." for the default directory. |
+| **Title** | Not Required | Name of the step in your deployment workflow.  |
+| **Summary** | Not Required | Enter a summary of this step. | |
+| **Git Repo** | $GIT_URL| Git Repo containing the SalesForce Source Code.|
+| **Git Commit** | $GIT_COMMIT | The commit, tag or branch to checkout. |
+| **To Dir** | $GIT_DIR | The directory to checkout into.  Use "." for the default directory. |
 
 **SalesforceCredential Parameters**
 

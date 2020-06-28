@@ -6,96 +6,60 @@ description: >
   Integrating GitHub repository and issues with DeployHub Pro.
 ---
 
-DeployHub supports GitHub in three ways.
+DeployHub supports GitHub in the following ways.
 
-1. Repository for artifacts which can be any type of object such as binaries or Python scripts.
+1. A binary Repository for retrieving artifacts to deploy such as binaries or scripts.
 2. GitHub Issue Tracking for **DeployHub Pro**. A bridge connects a GitHub issue with a DeployHub Change Request.
-3. Wiki updates for collaborating DeployHub output.
 
-## GitHub Repository Connection
+## GitHub as a Binary Repository
 
-GitHub can store any type of object in its Repository. These objects are referenced through Git Commits, Tags, and Branches. DeployHub performs a check-out of these objects as part of the Pre-Actions to a Component Version or Application Version. This Git Check-out places the files into the DropZone for pre-processing prior to the deployment.
+You can configure DeployHub to call out to a Git Repo to pull deployable artifacts (binaries, scripts, etc.) as part of your deployment.  The process will check out your deployable artifacts based on commit, branch or tag specified. You will need to configure DeployHub with a file system DeployHub _Repository_ that will pull the files need fro the deployment.  You will also need to create a "Git Checkout" _Procedure_ and _Action_.  
 
-Using the GitHub Repository requires a two-step process. First is the Git checkout to the file system and second references the checked-out files using the _File System Repository_. The git checkout is done using the GitCheckOutAction as a Pre-Action to the Component. This then places the files so that the File System Repository will reference them for deployment.
+**Step 1 - Create a DeployHub File System _Repository_** 
 
-## Creating the GitHub Checkout Action
+DeployHub can use GitHub as a binary repository for retrieving deployable objects as part of the deployment process.  To do this you will first need to define GitHub as a connected _Repository_ Object from within DeployHub. This connection will be used by as part of the deployment process using a _Procedure_ and a _Action_. For information on setting up File System as a binary repository see [Connect Your Repositories](/userguide/first-steps/2-define-repositories/).
 
-### Importing the Procedures
+Once you have completed this step, you are ready to create a new _Procedure_ that performs the check out from the GitHub repository.
 
- You will need to import the most current Git Procedure from GitHub.
+**Step 2 - Create your GitHub Checkout _Procedure_ for your _Action_**
 
-- **GitCheckout.re** - This _Procedure_ clones the repo to the _Dropzone_ and then checks out the commit, branch or tag specified.
+_Procedures_ are called by _Actions_ to execute deployment logic. A pre-defined DeployHub _Procedure__ is available from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). This where you will find the most current version of this _Procedure_. For more information on creating _Procedures see [Functions and Procedures](/userguide/customizations/2-define-your-functions-and-procedures/). 
 
-Download them from:
+From the Ortelius Git Repo, pull the file named **GitCheckout.re** 
 
-[Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/)
+Once downloaded, you will need to Import it into DeployHub from the Func/Procs List View. Navigate to the List View by selecting the Func/Procs menu option on the left hand side of the DeployHub main panel. From the Func/Procs List view select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the GitCheckout.re file.  Next, select your _Domain_ and upload the _Procedure_ into the DeployHub. You are now ready to create your _Action_.
 
-Once downloaded, you will need to Import them into DeployHub as the Procedures. To import these Procedures login to DeployHub and select the _Func/Procs_.  From the list view select  **Import** menu. Select your Domain, such as '_Global_ Domain' and upload the _Procedure_ into the DeployHub.
+**Step 3 - Create your _Action_ for the GitHub Checkout _Procedure_**
 
-## New Action for the GitHub Checkout
+Once you have imported your GitCheckout.re _Procedure_, you can define your _Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub main panel. Use the +Add option to create a new _Action_ for you _Procedure_. Name the new _Action_ **GitCheckAction** (no spaces). See [Customize Your Actions](/userguide/customizations/2-define-your-actions/) for more information on creating _Actions_.
 
-Once you have imported your _Procedures_, you can define your _Action_. Change to the _Actions_ list view and select "Add" menu.  
+Now we are going to customize this _Action_. On the right hand side, you will see a list of _Functions_ and _Procedures_ you can choose from.  Navigate to your _Domain_ to find the GitCheckOut _Procedure_. Drag it onto the area under _Start._
 
-Name the new Action "GitCheckAction" (no spaces).
+_GitCheckout_ Parameters
 
-Now we are going to customize this _Action_. You will see the 'Activity Hub' on the Righthand side of your screen. Navigate to your Domain to find the _Procedures_. Drag them onto the area under _Start._
-
-### _GitCheckout_ Parameters
-
-| _**Field**_ | Value | Description |
+| **Field** | Value | Description |
 | --- | --- | --- |
-| _**Title**_ | Not Required |
- |
-| _**Summary**_ | Not Required |
- |
-| _**Git Repo**_ | $GIT_URL| Repo containing the Playbook |
-| _**Git Commit**_ | $GIT_COMMIT | The commit, tag or branch to checkout |
-| _**To Dir**_ | $GIT_DIR | The directory to checkout into.  Use "." for the default directory |
+| **Title** | Not Required | Name of the step in your deployment workflow. Use "Git Checkout." |
+| **Summary** | Not Required | Enter a summary of this step. | 
+| **Git Repo** | $GIT_URL| This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level. |
+| **Git Commit** | $GIT_COMMIT | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.|
+| **To Dir** | $GIT_DIR | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
 
-At this point the Action is ready to be used by anyone with access (based on Domain and security options). Each Component that uses the Action will need to define specific values. Because this new Action is reusable, no Component variables are defined.
+At this point the _Action_ is ready to be used by anyone with access (based on _Domain_ and _Group_ options). 
+Note: Because this _Action_ is reusable, no _Component_ variables are defined. This is performed at the _Component_ level.
 
-### Assign the _GitCheckoutAction_ to a Component
+**Step 4 - Assign the GitCheckoutAction to your _Component_ to be deployed**
 
-For each _File Component_ you will need to define the variable values. These values will override those defined at the _Application_ or _Environment_ level. The values from DeployHub will be passed along to the GitCheckoutAction__ at execution time.
+For each _Component_ you will need to define the variable values for $GIT_URL, $GIT_COMMIT and $GIT_DIR that the GitCheckoutAction will use at the _Component_ level. The values will be passed to the GitCheckoutAction at deploy time. See [Defining _Components_](/userguide/publishing-components/2-define-components/) for more information. 
 
-## GitHub Issues in DeployHub Pro
+## GitHub Issues and DeployHub Pro Change Request
 
-DeployHub Pro can reference the GitHub issues for a particular GitHub _Repository_. _Components_ can only be associated to a single GitHub _Repository_. In DeployHub Pro, you can associate issues to a _Component Version_ or _Application Version_. This enables the GitHub issues to be viewed from a _Component_ or _Application_ using the DeployHub Pro _Change Request_ tab. If you have a _Release_ defined, these GitHub issues will be rolled up from the _Component_ and _Application_ to the _Release_.
+DeployHub Pro can reference the GitHub issues to track Change Request for _Components_ and _Applictions_. This enables the GitHub issues to be viewed from a _Component_ or _Application_ using the DeployHub Pro _Change Request_ section from the _Component_ or _Application_. If you have a _Release_ defined, these GitHub issues will be rolled up from the _Component_ and _Application_ to the _Release_.
 
-To associate your GitHub Repository with DeployHub Pro you need to define a _Data Source_ connection with the _Type_ of "GitHub." This is done from the _Connections_ Menu under the _Data Source_ tab. Right click on your Domain name and select "New Data Source in this Domain." Complete the following fields:
+For more information see [Tracking Jira, Bugzilla and GitHub Issue](/userguide/integrations/jira-bugzilla-and-git-issues/).
 
-## GitHub Data Source Connection General Tab
+Additional information:
 
-| Field | Description |
-| --- | --- |
-| Name | Enter a unique name for the Data Source. |
-| Type | Select "GitHub. |
-| Owner Type | Select User or Group who will be the owner of the Data Source (Group Ownership or User Ownership). |
-| Users/Group | Select the Group or Users that will be the owner. |
-| Summary | Describe the Data Source. |
-| Credentials | Select the Credentials needed for accessing the GitHub Repository. NOTE: You must create your Credentials from the Credentials tab under the Connections menu.
- |
-
-Once completed, you need to select the Properties tab and click on the Plus (+) sign to add the following properties:
-
-## GitHub Data Source Properties
-
-| Field | Description |
-| --- | --- |
-| Product | The name of your Repository. |
-| Repository | The name of your Repository Owner. |
-
-You are now ready to associate your GitHub issues with your DeployHub Pro Components and/or Applications.
-
-## Selecting a GitHub Issue to a Component or Application
-
-Use the _Change Request_ section at the bottom of a _Component_ or _Application_ details screen to add and delete GitHub issues.
-
-## GitHub Wiki and DeployHub
-
-The GitHub Wiki page can be used to consolidate deployment output using both DeployHub Team and Pro. The GitHub Wiki is implemented as a Git Repository. Because of this, DeployHub can check-out the Wiki, update the contents, and commit the changes. The Wiki is processed as part of the deployment Workflow. To add the Wiki updates, you define a Post Action to the Application. Your Post Action calls an external script that updates and commits the Wiki. You will need to create the external script.
-
-For more information:
-
-- [Managing DataSorces](userguide/customizations/2-data-sources/)
-- [Connect Your Repositories](userguide/first-steps/2-define-repositories/)
+- [Managing _Data Sources_](userguide/customizations/2-data-sources/)
+- [Connect Your _Repositories_](userguide/first-steps/2-define-repositories/)
+- [Defining _Components_](/userguide/publishing-components/2-define-components/)

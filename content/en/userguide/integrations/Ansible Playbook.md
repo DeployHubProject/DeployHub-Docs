@@ -36,15 +36,13 @@ Now we are going to customize this Action. You will see the 'Activity Hub' on th
 
 ### _GitCheckout_ Parameters
 
-| _**Field**_ | Value | Description |
+| **Field** | Value | Description |
 | --- | --- | --- |
-| _**Title**_ | Not Required |
- |
-| _**Summary**_ | Not Required |
- |
-| _**Git Repo**_ | $GIT_URL| Repo containing the Playbook |
-| _**Git Commit**_ | $GIT_COMMIT | The commit, tag or branch to checkout |
-| _**To Dir**_ | $GIT_DIR | The directory to checkout into.  Use "." for the default directory |
+| **Title** | Not Required | Name of the step in your deployment workflow.  |
+| **Summary** | Not Required | Enter a summary of this step. | |
+| **Git Repo** | $GIT_URL| Repo containing the Playbook |
+| **Git Commit** | $GIT_COMMIT | The commit, tag or branch to checkout |
+| **To Dir** | $GIT_DIR | The directory to checkout into.  Use "." for the default directory |
 
 ### _WriteEnv2File_ Parameters
 
@@ -52,11 +50,11 @@ No fields are required for _WriteEnv2File_.
 
 ### _RunAnsiblePlaybook_ Parameters
 
-| _**Field**_ | Value | Description |
+| **Field** | Value | Description |
 | --- | --- | --- |
-| _**Title**_ | Not Required | |
-| _**Summary**_ | Not Required | |
-| _**RspFile**_ | $RspFile | The results from the WriteEnv2Toml.re Procedure |
+| **Title** | Not Required | Name of the step in your deployment workflow.  |
+| **Summary** | Not Required | Enter a summary of this step. | |
+| **RspFile** | $RspFile | The results from the WriteEnv2Toml.re Procedure |
 
 At this point the Action is ready to be used by anyone with access (based on Domain and security options). Each Component that uses the Action will need to define specific values. Because this new Action is reusable, no Component variables are defined.
 
