@@ -1,9 +1,9 @@
 ---
-title: "Using Lifecycle _Subdomains_"
-linkTitle: "Using Lifecycle _Subdomains_"
+title: "DeployHub and Continuous Delivery"
+linkTitle: "DeployHub and Continuous Delivery"
 weight: 42
 description: >
-  Using Lifecycle _Subdomains_ and Pipelines
+  Using DeployHub with your Continuous Delivery solution. 
 ---
 ## Introduction to Lifecycle _Subdomains_
 
@@ -26,9 +26,3 @@ To deploy an _Application_ into an _Environment_ make sure that the Deploy Task 
 ### Your Lifecycle _Subdomains_ and your Continuous Delivery Engine
 
 Your continuous delivery (CD) engine will define your lifecycle progression.  When you integrate DeployHub into your existing CD Pipeline, you will need to define your Lifecycle _Subdomains_ to mimic your CD Workflow progression. You can then associate integration of each of your CD Workflows directly to a DeployHub Lifecycle _Subdomain_. You can perform calls to DeployHub to both "Move" and "Deploy" _Applications_ into _Environments_.  If you are a DeployHub Pro users, you can also call "Request" and "Approve" Tasks as part of your integration. These Tasks interact with DeployHub Pro "Smart" calendars, not available in DeployHub Team.
-
-Tasks
-
-Any combination of Tasks can be defined to your Lifecycle _Subdomain_. Tasks are defined and linked from the _Domain_ Dashboard.
-
-_Domains_ and their Tasks are a core concept of how DeployHub manages deployments and deployment authorization. To learn more, see [Building Your Domain Catalog](/userguide/first-steps/2-defining-domains/).

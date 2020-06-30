@@ -3,7 +3,7 @@ title: "Architecture"
 linkTitle: "Architecture"
 weight: 4
 description: >
-  Understanding our Architecture and Processesing
+  Understanding DeployHub Architecture and Processesing.
 ---
 
 ## Architecture

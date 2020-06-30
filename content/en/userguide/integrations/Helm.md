@@ -1,41 +1,44 @@
 ---
-title: "Helm"
-linkTitle: "Helm"
+title: "Helm for Container Deployments"
+linkTitle: "Helm for Container Deployments"
 weight: 64
 description: >
-  Using Helm to execute deployments as an Action.
+  Using Helm to execute deployments as an _Action_.
 ---
 
-Helm standardizes the process of creating your container image. It is an agentless solution that can be called via a DeployHub 'Custom Action.' Helm provides a broad set of pre-defined Helm "Charts." A Helm Chart is a reusable script that simplifies the creation of your container image. When DeployHub executes the release process, it will call the Helm Chart you have defined as your Custom Action. What DeployHub offers is the versioning around your container content, what was released, including the version of the Helm Chart.  DeployHub tracks all the configuration of your release and tracks the version changes to the configuration, including Helm.
+Helm is called to replace the DeployHub default processing engine for performing container deployments. When DeployHub executes the release process, it will call the Helm Chart you have defined as your _Custom Action_ at the _Component_ level.  DeployHub includes the version of the Helm chart as part of its overall configuration data.
 
-Helm is called as a DeployHub "Custom Action." A _Custom Action_ can replace the usual DeployHub deployment processing by calling an external script that performs its own deployment activities. _Custom Actions_ can be used when you want an external tool to perform the delivery step of the deployment process. This will be the case for Helm. To use Helm, you will need to import two Helm Procedures and Define an Action that can be reused across all teams.
+## Helm and _Custom Actions_
 
-## Importing the DeployHub Helm Procedures
+Helm is called as a DeployHub [_Custom Action_](/userguide/customizations/2-define-your-actions/). To use Helm, you will need to import two Helm files as DeployHub _Procedures_ and define them to your _Custom Action_. This Helm _Custom Action_ can then be assigned to your Container _Components_. See [_Procedures and Functions_](/userguide/customizations/2-define-your-functions-and-procedures/) and  [Customize Actions](/userguide/customizations/2-define-your-actions/) to learn more. The following steps will create your Helm _Custom Action_.
 
-To use Helm, you will need to import the most current DeployHub Helm Procedures from GitHub. There will be two:
+**Step 1 - Download and Import the Helm scripts as _Procedures_**
 
-- _WriteEnv2Toml.re_ - This Procedure takes all the attributes from DeployHub Environments, Applications, Endpoints and Components and writes them to a file readable by the Helm Procedure.
-- _HelmUpgrade.re_ – This Procedure performs a Helm upgrade/install of the Helm Chart.
+Download the the most current DeployHub Helm Procedures from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). There will be two:
 
-Download them from:
+- **WriteEnv2Toml.re**:  This _Procedure_ takes all the attributes from DeployHub _Environments_, _Applications_, _Endpoints_ and _Components_ and writes them to a file readable by the Helm _Procedure._
 
-[Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/)
+- **HelmUpgrade.re** – This _Procedure_ performs a Helm upgrade/install of the Helm Chart.
 
-Once downloaded, you will need to Import them into DeployHub as the Procedures. To import these Procedures login to DeployHub and select the _Flows_ menu and then navigate to the _Function &amp; Procedures_ tab. Select your Domain, such as '_Global_ Domain,' and right click for the Menu. Choose _Import a Function or Procedure into this Domain._ Upload the two Procedures one at a time into the DeployHub database.
+**Step 2 - Create your _Procedures_**
 
-## Creating a Custom Action for Helm
+Once downloaded, you will need to Import the scripts into DeployHub as _Procedures_. To import these _Procedures_ navigate to the _Func/Procs_ Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the _Functions and Procedures_ List View. From the _Functions and Procedures_ List View select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the WriteEnv2Toml.re and HelmUpgrade.re files.
 
-Once you have imported your Helm Procedures, you can define your Custom Action. Change to the Workflow tab on the right pane. Select your Domain and right click. This will give you the option to create a "New Action in this Domain."
+Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub. If you select a lower level _Subdomain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
 
-Name the new Action "HelmChart" (no spaces).
+**Step 3 - Create your _Action_ for the GitHub Checkout _Procedure_**
 
-Now we are going to customize this Action. You will see the 'Activity Hub' on the righthand side of your screen. Navigate to your Domain to find the two Procedures. Drag them onto the area under _Start._   The order should be _WriteEnv2Toml_, _HelmUpgrade_
+Once you have imported your WriteEnv2Toml.re and HelmUpgrade.re files as _Procedures_, you can define your _Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Main Menu panel.
 
-### _WriteEnv2File_ Parameters
+Use the +Add option to create a new _Action_ for you _Procedure_. In the "Full Domain" field select your "Global" _Domain_. If you select a lower level _Subdomain_ you will restrict access to this _Custom Action_.  By defining it to your highest level _Domain_, all _Users_ will be able to execute the process regardless of their _SubDomain_. 
 
-No fields are required for _WriteEnv2File_.
+Name the new _Action_ **HelmChart** (no spaces).
 
-### _HelmUpgrade_ Parameters
+Now we are going to customize this _Action_. On the right hand side, you will see a list of _Functions_ and _Procedures_ you can choose from.  Navigate to your _Domain_ to find the WriteEnv2Toml.re and HelmUpgrade.re imported _Procedures_.  Drag them onto the area under "Start". The order should be _WriteEnv2Toml_, _HelmUpgrade_.
+
+No Parameter fields are required for _WriteEnv2File_.
+
+When you drag the HelmUpgrade _Procedure_ onto the area under "Start" a pop-up dialog box will open for you to complete the following parameters:
 
 | Field | Value | Description |
 | --- | --- | --- |
@@ -45,43 +48,8 @@ No fields are required for _WriteEnv2File_.
 | **Chart** | $(Chart) | The Helm Chart to be used during the deployment |
 | **Release Name** | $(component.name) | The name of the release |
 
-At this point the Action is ready to be used by anyone with access (based on Domain and security options). Each Component that uses the Action will need to define specific values. Because this new Action is reusable, no Component variables are defined.
+At this point the Action is ready to be used by anyone with access (based on Domain and security options). Each _Component_ that uses the _Action_ will need to define specific values. Because this new _Action_ is reusable, no _Component_ variables are defined at the _Action_ level.
 
 ## Assign the HelmChart Action to a Component
 
-For each Docker Component you will need to define the variable values. Values are specified when you create a new Docker _Component._ Values will override those defined at the _Application_ or _Environment_ level. The values from DeployHub will be passed along to Helm's values.yml file at execution time.
-
-Docker component items have the following attributes, none of which are required:
-
-| Field | Description |
-| --- | --- |
-| **BuildId** | The build ID from the build system such as Quay or DockerHub |
-| **BuildUrl** | Build URL for the build system |
-| **Chart** | Helm chart for the component |
-| **Chart Version** | Version of the Helm chart |
-| **Chart Name Space** | Namespace for the Helm chart to deploy to |
-| **Operator** | Kubernetes Operator |
-| **DockerBuildDate** | Timestamp for the Docker Build |
-| **DockerSha** | SHA for the Docker Image |
-| **DockerRepo** | URL for the Docker Registry |
-| **GitCommit** | Git Commit that triggered the Build |
-| **GitRepo** | Git Repo Name |
-| **GitTag** | Git Tag such as 'Master' or 'v1.5.0' |
-| **GitUrl** | URL to the Git Repository |
-| **BuildNumber** | Build Job Number for CI/CD |
-| **Build Job** | Build Job name for CI/CD |
-| **ComponentType** | Name of the Component Type |
-| **ChangeRequestDS** | Name of the Change Request Datasource |
-| **Category** | Name of the Components Category |
-| **AlwaysDeploy** | Y/N |
-| **DeploySequentially** | Y/N |
-| **BaseDirectory** | Base Directory for the Component |
-| **PreAction** | Name of the Pre-Action |
-| **PostAction** | Name of the Post-Action |
-| **CustomAction** | Name of the Custom-Action |
-| **Summary** | Component Summary or Description |
-
-or more information see:
-
-- [Customizing Actions](/userguide/first-steps/2-define-your-actions/)
-- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
+Create your new _Component_ from the _Component_ Dashboard. See [Defining _Components_](/userguide/publishing-components/2-define-components/).  For each container _Component_ you will need to define the variable values. Values are specified when you create a new container _Component._ Values will override those defined at the _Application_ or _Environment_ level. The values from DeployHub will be passed along to Helm's values.yml file at execution time. For more information on defining your container _Component_ see [Container Specific Data Definition](/userguide/publishing-components/2-define-components/#container-specific-data-definition).

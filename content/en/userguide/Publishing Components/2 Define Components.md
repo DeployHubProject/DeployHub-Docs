@@ -8,7 +8,7 @@ description: >
 
 ## _Component_ List View allows Adding or Deleting
 
-Use the _Component_ List View accessible from the left hand _Component_ menu option. Manage your _Components Base Version_ and _Component Versions_. Each_Environment_ has a row where the _Component Base Version_ or _Component Version_ has been deployed. There can be multiple entries for the same _Component_ if it has been deployed to multiple _Environments_. A list of all _Components_ is organized by the following:
+Use the _Component_ List View accessible from the left hand _Component_ menu option to manage your _Components Base Version_ and _Component Versions_. Because each _Environment_ has a row where the _Component Base Version_ or _Component Version_ has been deployed, there can be multiple entries for the same _Component_ if it has been deployed to multiple _Environments_. A list of all _Components_ is organized by the following:
 
 | List Column | Description|
 |---|---|
@@ -78,7 +78,9 @@ The following fields are common to all _Components_:
 
 ### Container Specific Data Definition
 
-Helm is required for deploying Containers _Components_. DeployHub interfaces with Helm to support a Kubernetes Cluster deployment.
+Helm is required for deploying Container _Components_. DeployHub interfaces with Helm to support a Kubernetes Cluster deployment. 
+
+Initially, you will need to create a _Custom Action_ for using Helm as your deployment engine. Once your _Custom Action_ has been created, it can be reused by all _Users_ as long as you define the _Custom Action_ to your "Global" Domain. Follow the steps at [Helm for Container Deployments](/userguide/integrations/helm/).
 
 A Container _Component_ has the following optional attributes:
 
