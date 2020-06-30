@@ -22,8 +22,6 @@ This process involves the creation of custom _Procedures_ and a _Post Action_.  
 Once downloaded, you will need to Import them into DeployHub as the Procedures. To import these Procedures login to DeployHub and select the _Func/Procs_.  From the list view select  **Import** menu. Select your Domain, such as '_Global_ Domain' and upload the _Procedure_ into the DeployHub.
 
 
-
-
 **Step 1 - Download and Import the WebLogic scripts as _Procedures_**
 
 Download the the most current DeployHub WebLogic Procedures from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). There will be two:
@@ -50,39 +48,54 @@ Now we are going to customize this _Action_. On the right hand side, you will se
 
 The order should be _WeblogicCredential_, and then _WeblogicDeploy_.
 
-
-
 At this point the Action is ready to be used by anyone with access (based on Domain and security options). Each Component that uses the Action will need to define specific values.
 The _Action_ can now be placed into the _Post Action field_ of a _Component_ as part of an _Application_ deployed to a Weblogic region.
 
 ### _WeblogicCredential_ Parameters
 
-| Argument | Description |
-|--- | --- |
-| **Credential Name** | Name of the Credential to use for the Weblogic Deployment |
+| **Field** | Value | Description |
+| --- | --- | --- |
+| **Credential Name** | ${WeblogicCredName} | Name of the Credential to use for the Weblogic Deployment |
 
 ### _WeblogicDeploy_ Parameters
 
-| Argument | Description |
-|--- | --- |
-| **AdminUrl** | Admin url for performing deployment on|
-| **WeblogicHome** | Home directory for Weblogic |
-| **UserName** | Weblogic user name |
-| **Password** | Weblogic password |
-| **Id** | Task identifier of a running deployment task |
-| **UserConfigFile** | Config file to use |
-| **Action** | Action to perform |
-| **Name** | Name of the application |
-| **Targets** | Targets to perform deployment on |
-| **Plan** | Deployment plan to use |
-| **Library** | dentifies the deployment as a shared J2EE library or optional package |
-| Source | Archive to deploy |
+| **Field** | Value | Description |
+| --- | --- | --- |
+| **AdminUrl** | ${AdminUrl} | Admin url for performing deployment on|
+| **WeblogicHome** | ${WeblogicHome} | Home directory for Weblogic |
+| **UserName** | ${$WLUserName} | Weblogic user name.  This is passed to this _Procedure_ from the WeblogicCredential _Procedure_. |
+| **Password** | ${$WLPassword} | Weblogic password. This is passed to this _Procedure_ from the WeblogicCredential _Procedure_. |
+| **Id** | ${WeblogicTaskId} | Task identifier of a running deployment task |
+| **UserConfigFile** | ${WeblogicConfig} | Config file to use |
+| **Action** | ${WeblogicAction} | Action to perform |
+| **Name** | ${WeblogicAppName} | Name of the application |
+| **Targets** | ${WeblogicTargets} | Targets to perform deployment on |
+| **Plan** | ${WeblogicPlan} | Deployment plan to use |
+| **Library** | ${WeblogicLibrary} | identifies the deployment as a shared J2EE library or optional package |
+| **Source** | ${dep.files} | Archive to deploy |
 
-Note: the WeblogicCredential _Procedure_ can be left out of the Workspace if the WeblogicDeploy _Procedure's_ username and password fields will be used to access the Weblogic server. Otherwise the selected Credential within the WeblogicCredential Procedure should contain the appropriate username and password.
+**Step 4 - Set Your _Action_ to your _Component_**
 
-Place the _Action_ within the _Application's Post Action_ field. The _Application_ should contain one or more _Components_ that have one or more _Component__Items_ that reference the artifacts that make up the Weblogic application. The _Application_ deploys its artifacts to the Weblogic server, and the Post _Action_ performs the installation.
+Place the _Action_ within the _Component's Post Action_ field. When _Application_ deploys its artifacts to the Weblogic server, and the  _Post Action_ at the _Component_ level performs the installation into Weblogic Target.
 
 For more information see:
 
 - [Customizing Actions](/userguide/first-steps/2-define-your-actions/)
 - [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
+
+**Step 5 - Set Your _Component_ Attributes_**
+
+The following variables must be added to the Attributes Section for all  _Components_ using the WeblogicDeployAction _Post Action_.  The Attributes section can be found on the _Component_ Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:
+
+| Variable Name | Value Description |
+|--- | --- |
+| **WeblogicCredName** | Name of the Credential to use for the Weblogic Deployment |
+| **AdminUrl** | Admin url for performing deployment on|
+| **WeblogicHome** | Home directory for Weblogic |
+| **WeblogicTaskId** | Task identifier of a running deployment task |
+| **WeblogicConfig** | Config file to use |
+| **WeblogicAction** | Action to perform |
+| **WeblogicAppName** | Name of the application |
+| **WeblogicTargets** | Targets to perform deployment on |
+| **WeblogicPlan** | Deployment plan to use |
+| **WeblogicLibrary** | identifies the deployment as a shared J2EE library or optional package |
