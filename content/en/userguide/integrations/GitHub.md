@@ -52,6 +52,16 @@ Note: Because this _Action_ is reusable, no _Component_ variables are defined. T
 
 For each _Component_ you will need to define the variable values for $GIT_URL, $GIT_COMMIT and $GIT_DIR that the GitCheckoutAction will use at the_Component_ level. The values will be passed to the GitCheckoutAction at deploy time. See [Defining _Components_](/userguide/publishing-components/2-define-components/) for more information.
 
+**Step 5 - Set Your _Component_ Attributes_**
+
+The following variables must be added to the Attributes Section for all  _Components_ using the GitCheckoutAction _Pre Action_.  The Attributes section can be found on the _Component_ Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:
+
+| Variable Name | Value Description |
+|--- | --- |
+| **GIT_URL** | This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level. |
+| **GIT_COMMIT** | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.|
+| **GIT_DIR** | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
+
 ## GitHub Issues and DeployHub Pro Change Request
 
 DeployHub Pro can reference the GitHub issues to track Change Request for _Components_ and _Applictions_. This enables the GitHub issues to be viewed from a _Component_ or _Application_ using the DeployHub Pro _Change Request_ section from the _Component_ or _Application_. If you have a _Release_ defined, these GitHub issues will be rolled up from the _Component_ and _Application_ to the _Release_.

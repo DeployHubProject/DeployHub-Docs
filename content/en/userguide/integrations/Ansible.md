@@ -79,8 +79,19 @@ No Parameter fields are required for _WriteEnv2File_.
 
 At this point the Action is ready to be used by anyone with access (based on Domain and security options). Each _Component_ that uses the _Action_ will need to define specific values. Because this new _Action_ is reusable, no _Component_ variables are defined at the _Action_ level.
 
-## Assign the AnsiblePlaybook Action to a _Component_
+**Step 4 - Assign the AnsiblePlaybook Action to a _Component_**
 
 Now that you have defined your Ansible _Action_ you are ready to assign it to the _Components_. For using your Ansible Playbook to perform the deployment of the _Component_ you define it to the _Custom Action_ field at the _Component_ level.  If a _Custom Action_ is defined, DeployHub will call the _Custom Action_ instead of using it's internal deployment engine. When you define your _Custom Action_ you will select "AnsiblePlaybook." You will be given a dialog box to input the needed variable values. Values are specific to the _Component._ Values will override those defined at the _Application_ or _Environment_ level. The values from DeployHub will be passed along to the Playbook at execution time. See [Defining Components](/userguide/publishing-components/2-define-components/) for more information.
 
 You can also use the AnsiblePlaybook Action to execute Pre and Post _Actions_. Using it in these fields will not override the standard deployment processing. 
+
+**Step 5 - Set Your _Component_ Attributes_**
+
+The following variables must be added to the Attributes Section for all  _Components_ using the AnsiblePlaybook _Action_.  The Attributes section can be found on the _Component_ Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:
+
+| Variable Name | Value Description |
+|--- | --- |
+| GIT_URL| Repo containing the Playbook |
+| GIT_COMMIT | The commit, tag or branch to checkout |
+| GIT_DIR | The directory to checkout into.  Use "." for the default directory |
+| taskfile | The name of the Playbook to run |

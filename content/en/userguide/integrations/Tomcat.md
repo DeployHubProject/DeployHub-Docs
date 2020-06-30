@@ -61,9 +61,18 @@ Follow the directions above, except name the new Action "TomcatStopAction" (no s
 | **Tomcat Root** | $TOMCAT_ROOT | Tomcat web root |
 | **Application Name** | $APPLICATION_NAME | Application name (based on the .war or .ear) |
 
-At this point your new _Actions_ are ready to be used by anyone with access (based on Domain and security options). Each _Component_ that uses the these _Actions_ as Pre and Post steps to the deployment will need to define specific values. Because these _Actions_ are reusable, no _Component_ variables are defined.
+At this point your new _Actions_ are ready to be used by anyone with access (based on Domain and security options). Each _Component_ that uses the these _Actions_ as Pre and Post steps to the deployment will need to define specific values. 
 
-## Assign the TomcatStop amd TomcatStart Action to an _Application_
+**Step 4 - Assign the TomcatStop and TomcatStart Action to an _Application_**
 
 Create your _Application_ and define your Pre and Post Tomcat _Actions_ using the _Application_ Dashboard. The _Applications_ _Pre-Action_ should be assigned the TomcatStopAction.  This will cause your Tomcat server to be stopped prior to the _Application_ files being deployed.  The _Application's_ _Post-Action_ should be assigned the TomcatStartAction which will start Tomcat after the deployment of your .ear/.war has been completed.  For more information see [Defining Your Application](/userguide/packaging-applications/2-defining-applications/).
 
+**Step 5 - Set Your _Application_ Attributes_**
+
+The following variables must be added to the Attributes Section for your Application using the TomcatStopAction _Pre Action_ and TomcatStartAction _Post Action_.  The Attributes section can be found on the _Application_ Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:
+
+| Variable Name | Value Description |
+|--- | --- |
+| **TOMCAT_SERVICE_NAME** | The service running Tomcat |
+| **TOMCAT_ROOT** | Tomcat web root |
+| **APPLICATION_NAME** | Application name (based on the .war or .ear) |

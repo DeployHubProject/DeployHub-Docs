@@ -120,7 +120,7 @@ When you drag your Ansible _Procedures_ onto the area under "Start" a pop-up dia
 
 At this point the _Custom Action_ is ready to be used by anyone with access (based on Domain and security options). Each _Component_ that uses the _Custom Action_ will need to define specific values. Because this new _Custom Action_ is reusable, no _Component_ variables are defined at the _Action_ level.
 
-## Create Your SalesForce _Component_
+**Step 6 - Create Your SalesForce _Component_**
 
 Now that you have defined your SalesForce _Custom Action_ you are ready to create your SalesForce _Component_. Define your _Component_ to use a _Custom Action_ from the _Component_ Dashboard. See [Defining Components](/userguide/publishing-components/2-define-components/) for more details on creating your new _Component_. 
 
@@ -130,7 +130,7 @@ Update the _Custom Action_ Detail field by choosing the SalesForceAction provide
 | ---| --- |
 |**Repository**| Select your SalesForce Repository.|
 
-**Set Your _Component_ Attributes_**
+**Step 7 - Set Your _Component_ Attributes_**
 
 The following variables must be added to the Attributes Section for all  _Components_ using the SalesForceAction _Custom Action_.  The Attributes section can be found on the _Component_ Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:
 
@@ -141,4 +141,3 @@ The following variables must be added to the Attributes Section for all  _Compon
 |**GIT_DIR**| The temporary directory is used by git to clone and checkout. This parameter should be a directory defined in a DeployHub _Repository_ for the_Component_ to find the files.|
 
 You are now ready to assign your SalesForce _Component_ to an _Application_ and perform a deployment to one of the SalesForce _Environments_.
-
