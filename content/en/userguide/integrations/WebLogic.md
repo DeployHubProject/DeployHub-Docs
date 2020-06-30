@@ -6,31 +6,51 @@ description: >
   Executing deployments requiring a Weblogic Server.
 ---
 
-A DeployHub deployment can point to one or more _Repositories_ with artifacts (.ear, .jar, and .war files) making up a Weblogic application. These are referenced by one or more _Components_ (and one or more of their _Component__Items_) within an _Application_. These are deployed into a Weblogic server domain. A (Post) _Action_ is then executed which installs these artifacts into the Weblogic server.
+## Introduction to the WebLogic DeployHub Integration
+
+The DeployHub WebLogic integration supports a WebLogic deployment using a _Post Action_ at the _Component_ level. This _Post Action_  installs your WebLogic solution binaries (.ear, .jar, and .war files) by loading them into the correct WebLogic target.  The process will first send your solution binaries to the the WebLogic Server. The _Post Action_ performs the load into the target.
 
 ## Creating the Weblogic Action
 
-### Importing the Procedures
+This process involves the creation of custom _Procedures_ and a _Post Action_.  For more information on creating _Procedures_ and _Actions_ see:
 
- You will need to import the most current WeblogicCredential and WeblogicDeploy _Procedures_ from GitHub.
+- [Customizing Actions](/userguide/first-steps/2-define-your-actions/)
+- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
 
-- **WeblogicCredential.re** - This _Procedure_ exposes the credential for the Weblogic Deploy _Procedure_
 
-- **WeblogicDeploy.re** - This Procedure executes Ant against a dymanically created build.xml file to upload the classes to Weblogic.
-
-Download them from:
-
-[Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/)
 
 Once downloaded, you will need to Import them into DeployHub as the Procedures. To import these Procedures login to DeployHub and select the _Func/Procs_.  From the list view select  **Import** menu. Select your Domain, such as '_Global_ Domain' and upload the _Procedure_ into the DeployHub.
 
-## New Action for the Weblogic
 
-Once you have imported your _Procedures_, you can define your _Action_. Change to the _Actions_ list view and select "Add" menu.  
+
+
+**Step 1 - Download and Import the WebLogic scripts as _Procedures_**
+
+Download the the most current DeployHub WebLogic Procedures from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). There will be two:
+
+- **WeblogicCredential.re** - This _Procedure_ exposes the credential for the Weblogic Deploy _Procedure_.
+
+- **WeblogicDeploy.re** - This Procedure executes Ant against a dynamically created build.xml file to upload the classes to Weblogic.
+
+**Step 2 - Create your WebLogic _Procedures_**
+
+Once downloaded, you will need to Import the scripts into DeployHub as _Procedures_. To import these _Procedures_ navigate to the _Func/Procs_ Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the _Functions and Procedures_ List View. From the _Functions and Procedures_ List View select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the WeblogicCredential.re and WeblogicDeploy.re files.
+
+Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub. If you select a lower level _Subdomain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
+
+**Step 3 - Create your _Action_ for the WebLogic _Procedure_**
+
+Once you have imported your WeblogicCredential.re and WeblogicDeploy.re files as _Procedures_, you can define your WebLogic _Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Main Menu panel.  
+
+Use the +Add option to create your new _Action_.  In the "Full Domain" field select your "Global" _Domain_. If you select a lower level _Subdomain_ you will restrict access to this _Custom Action_.  By defining it to your highest level _Domain_, all _Users_ will be able to execute the process regardless of their _SubDomain_.
 
 Name the new Action "WeblogicDeployAction" (no spaces).
 
-Now we are going to customize this Action. You will see the 'Activity Hub' on the righthand side of your screen. Navigate to your Domain to find the two Procedures. Drag them onto the area under _Start._   The order should be _WeblogicCredential_, and _WeblogicDeploy_.
+Now we are going to customize this _Action_. On the right hand side, you will see a list of _Functions_ and _Procedures_ you can choose from.  Navigate to your _Domain_ to find the WeblogicCredential.re and WeblogicDeploy.re imported _Procedures_.  Drag them onto the area under "Start". When you drag the WeblogicCredential.re and WeblogicDeploy.re  _Procedures_ onto the area under "Start" a pop-up dialog box will open for you to complete the following parameters. 
+
+The order should be _WeblogicCredential_, and then _WeblogicDeploy_.
+
+
 
 At this point the Action is ready to be used by anyone with access (based on Domain and security options). Each Component that uses the Action will need to define specific values.
 The _Action_ can now be placed into the _Post Action field_ of a _Component_ as part of an _Application_ deployed to a Weblogic region.
@@ -39,23 +59,23 @@ The _Action_ can now be placed into the _Post Action field_ of a _Component_ as 
 
 | Argument | Description |
 |--- | --- |
-| Credential Name | Name of the Credential to use for the Weblogic Deployment |
+| **Credential Name** | Name of the Credential to use for the Weblogic Deployment |
 
 ### _WeblogicDeploy_ Parameters
 
 | Argument | Description |
 |--- | --- |
-| AdminUrl | Admin url for performing deployment on|
-| WeblogicHome | Home directory for Weblogic |
-| UserName | Weblogic user name |
-| Password | Weblogic password |
-| Id | Task identifier of a running deployment task |
-| UserConfigFile | Config file to use |
-| Action | Action to perform |
-| Name | Name of the application |
-| Targets | Targets to perform deployment on |
-| Plan | Deployment plan to use |
-| Library | dentifies the deployment as a shared J2EE library or optional package |
+| **AdminUrl** | Admin url for performing deployment on|
+| **WeblogicHome** | Home directory for Weblogic |
+| **UserName** | Weblogic user name |
+| **Password** | Weblogic password |
+| **Id** | Task identifier of a running deployment task |
+| **UserConfigFile** | Config file to use |
+| **Action** | Action to perform |
+| **Name** | Name of the application |
+| **Targets** | Targets to perform deployment on |
+| **Plan** | Deployment plan to use |
+| **Library** | dentifies the deployment as a shared J2EE library or optional package |
 | Source | Archive to deploy |
 
 Note: the WeblogicCredential _Procedure_ can be left out of the Workspace if the WeblogicDeploy _Procedure's_ username and password fields will be used to access the Weblogic server. Otherwise the selected Credential within the WeblogicCredential Procedure should contain the appropriate username and password.

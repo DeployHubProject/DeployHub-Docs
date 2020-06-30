@@ -6,33 +6,20 @@ description: >
   Calling DeployHub from Jenkins for microservice tracking.
 ---
 
-A Jenkins Build Job communicates with DeployHub, passing log and results. Any time a DeployHub deployment is performed from Jenkins, the _Application Version_ and _Environment_ are required, by name, i.e. Application;1, Environment. If the names are not unique, the domain name must be included, i.e. DomainName.Application;1.
+You can setup Jenkins to call a DeployHub step inside the Jenkins Pipeline. The step will execute continuous configuration management of the _Components_ and _Applications_ creating new versions as changes progress, and continuous deployments of independent objects like microservices.
 
-## Jenkins _Build Jobs_ and Components
+## Using the Groovy Library for Jenkins Integration
 
-A Jenkins Build Job Run creates a Build Job Number stored in a DeployHub _Component_. A field named 'Last Build Number' is updated every time a Build Job is executed. The DeployHub Jenkins plug-in has a "notify only" mode for when a build has been done. Clicking on "Endpoints and Builds" will show all of the builds that have been done for that _Component_. Clicking on a Build Number will open a pop-up with the build log that has been pulled from Jenkins.
+The Jenkins integration uses the a DeployHub Jenkins Groovy Library to peform the following steps :
 
-## Build Job Run
+- **Continuous Configuration Management**: The process of automatically versioning _Components_, like microservices, with their consuming _Applications_.
+- **Moves**:  Allows Jenkins to tell DeployHub to push a new update from one state to the next.
+- **Deploy**: Allows Jenkins to tell DeployHub when the deployment needs to be executed.
+- **Approvals**: Tracks an Approval, with audit, between Jenkins and DeployHub Pro (not supported in DeployHub Team).
 
-An execution of Jenkins is called a Build Job Run, and DeployHub can be called at any step during the execution. It can build files, call DeployHub to perform a deployment, build more files, call DeployHub again, etc. This can be done in any order, in separate runs, or all together.
+## Installation
 
-Jenkins build logs can be viewed directly from inside the DeployHub URL, minimizing the amount of browser activity required. For example, a user can see a build artifact on a target _Endpoint_ and open the details of the generating build directly from the _Endpoint_ details page.
-
-If the 'Always Deploy' flag is set to Yes on a Component, it makes no difference if the version of the Component is different or the same as the one on the _Endpoint_; the _Component_ is deployed to the _Endpoint_. If the 'Always Deploy' flag is set to No, the version on the _Endpoint_ and the version of the _Component_ must be different for the _Component_ to be deployed. However, even if the version on the _Endpoint_ and the version of the _Component_ are the same, if the Last Build Number in the _Component_ is different than the last build number in Jenkins, the _Component_ will be deployed.
-
-## Groovy Library for Jenkins
-
-The pre and post logic of DeployHub gives a tremendous amount of flexibility, whether used alone or in tandem with Jenkins as a Groovy Pipeline Library. Jenkins can call DeployHub to perform:
-
-- Continuous Configuration Management: The process of automatically versioning microservices with their consuming _Applications_. Jenkins notifiies DeployHub when a new Job has been started at which point DeployHub pulls the build job information into DeployHub's database.
-- Approvals: Track an Approval, with audit, between Jenkins and DeployHub.
-- Moves:  Allows Jenkins to tell DeployHub to push a new update from one state to the next.
-- Deploy: Allows Jenkins to tell DeployHub when the deployment needs to be executed.
-- Shared Logs: Centralize logs between DeployHub and Jenkins.
-
-### Installation
-
-Update your Jenkins Configure System - Global Pipeline Libraries to load the DeployHub Groovy Library from Git.
+Update your Jenkins Configure System - Global Pipeline Libraries to load the DeployHub Groovy Library from Git as follows:
 
 ![Jenkins Setup](/userguide/images/jenkins-setup.png)
 

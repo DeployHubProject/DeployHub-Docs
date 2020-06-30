@@ -26,7 +26,7 @@ Once downloaded, you will need to Import the scripts into DeployHub as _Procedur
 
 Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub. If you select a lower level _Subdomain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
 
-**Step 3 - Create your _Action_ for the GitHub Checkout _Procedure_**
+**Step 3 - Create your _Action_ for Your Helm _Procedures_**
 
 Once you have imported your WriteEnv2Toml.re and HelmUpgrade.re files as _Procedures_, you can define your _Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Main Menu panel.
 

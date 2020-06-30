@@ -8,7 +8,7 @@ description: >
 
 ## Intro to Integrations
 
-DeployHub has an open architecture with many out of the box integrations with other DevOps tools. You can incorporate the use of tools such as Ansible or Helm, add Slack or deploy to WebSphere or Salesforce with our built-in _Actions_ or create _Custom Actions_ using [DMScript](/userguide/dmscript/).  In addition, you can use DeployHub's [RESTfull APIs](/userguide/restapi/)to interact with the DeployHub Objects for integration into external systems, or execute on a continuous delivery trigger.
+DeployHub has an open architecture with many out of the box integrations with other DevOps tools. You can incorporate the use of tools such as Ansible or Helm, add Slack or deploy to WebSphere or Salesforce with our built-in _Actions_ or by creating _Custom Actions_ using any scripting languages.  In addition, you can use [DMScript](/userguide/dmscript/) which has pre-built access to the DeployHub Objects.  [RESTfull APIs](/userguide/restapi/) are also available to interact with the DeployHub Objects for integration into external systems, or execute on a continuous delivery trigger.
 
 ## Types of Integrations
 

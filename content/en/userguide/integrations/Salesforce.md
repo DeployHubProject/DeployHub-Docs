@@ -6,70 +6,99 @@ description: >
   Deploying SalesForce objects with DeployHub.
 ---
 
-Salesforce offers a SaaS where customized applications can be developed using class and package files. Developers create and store these class and package files into various source repositories, such as Git,  and then deploys them into Salesforce to be executed. Salesforce offers different regions such as testing, pre-production, production, where the class and package files can be deployed.
+## Using a _Custom Action_ for SalesForce Deployments
+If you are developing your _Applications_ using SaleForce, this integration will allow you to support SalesForce deployments. By creating this _Custom Action_ you can replace the DeployHub standard deployment processing engine and instead use a process designed specific to Salesforce including the mapping of DeployHub _Environments_ to different SalesForce regions such as testing, pre-production, production, where the class and package files can be deployed.
 
-The following directions allows you to import pre-written _Procedures_ downloaded from the Ortelius Open Source Project.  You will create an SalesForce _Custom Action_ that can then be referenced when you create your SalesForce _Component_.
+The following directions allows you to create a _Custom Action_ using the pre-written DeployHub _Procedures_ to support a SaleForce deployment model.  Once you create your SalesForce _Custom Action_ you assign it to your SalesForce _Component_ which will override the DeployHub standard deployment engine.
 
-## Create a SalesForce Repository
+## Steps for Creating Your SalesForce _Custom Action_
 
-A Filesystem DeployHub _Repository_ is used to reference files pulled from Git.  For this reason, you will need to create a DeployHub FileSystem _Repository_.  To create this _Repository_ see the [Connect Your Repositories](/userguide/first-steps/2-define-repositories/) section.
+You will need to create a SalesForce _Custom Action_ that will support your SalesForce deployment . This is done by adding the DeployHub pre-defined _Procedures_ and then defining them to a _Custom Action_ that your _Component_ will use for deployment.  For more details on creating _Procedures_ and _Actions_ see:
 
-## Create a SalesForce Credential
+- [Customizing Actions](/userguide/customizations/2-define-your-actions/)
+- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
 
-You will need a DeployHub _Credential_ to login to Salesforce for the deployment step.  See the [Create Your Credentials](/userguide/first-steps/2-define-your-credentials/) section.
+The following steps will take you through the process: 
 
-## Create a SalesForce Environment and EndPoint
+**Step 1 - Create a SalesForce _Repository_**
 
-You will need to create an _Endpoint_ and then an _Environment_ for your SalesForce deployment. You can create as many _Environments_ as needed based on your SalesForce Regions. See the [Define Your Endpoints](/userguide/first-steps/2-define-endpoints/] and [Build Your Environments](/userguide/first-steps/2-define-environments/) sections for more information.  The following parameters should be used when defining your _Environment_.
+A _Repository_ of the type "File System" is used to reference files pulled from Git.  For this reason, you will need to create a DeployHub "File System" _Repository_.  To create this _Repository_ see [Connect Your Repositories](/userguide/first-steps/2-define-repositories/).
 
-**Endpoint Settings**
-Create an _Endpoint_ that is set to "localhost" for the Hostname.
+**Step 2 - Create a SalesForce _Credential_**
 
-**Set Your SalesForce _Environment_ Attributes**
+You will need a DeployHub _Credential_ to login to Salesforce for the deployment step. To create this _Credential_ see [Create Your Credentials](/userguide/first-steps/2-define-your-credentials/).
 
-| Variables | Description |
+**Step 3 - Create a SalesForce _Environment_ and _EndPoint_**
+
+You will need to create an _Endpoint_ and then an _Environment_ for your SalesForce deployment. You can create as many _Environments_ as needed based on your SalesForce Regions. See the [Define Your Endpoints](/userguide/first-steps/2-define-endpoints/) and [Build Your Environments](/userguide/first-steps/2-define-environments/) sections for more information.  The following parameters should be used when defining your _Endpoint_ and _Environment_.
+
+- **_Endpoint_ Detail Settings**
+
+Create a new _Endpoint_ using the following Detail values:
+
+| Detail Field | Value |
+| --- | ---|
+|**Endpoint Operating System**| Linux|
+|**Endpoint Type**| Application Server|
+|**Hostname**| localhost|
+|**Protocol**| ssh |
+|**Base Directory**| /tmp |
+|**Credentials** | not required |
+
+- **_Environment_ Attributes**
+
+Using the Attributes section of the _Environment_ Dashboard, add the following Attributes. Use the +Add in the Attributes section to add a row to the Attributes table.  You must use Save to commit the row to the table. 
+
+| Variables | Value | 
 |--- | --- |
-| ${SalesforceCredential}| Name of the credential that contains the Salesforce Userid and Password.
-|${ServerURL} |Salesforce URL for the target deployment.
- ${SalesforceRepo} | Local repository name pointing to the location in which the git step placed the files in.|
-| ${TestLevel} | Salesforce Test Case Level.|
+| **SalesforceCredential**| Enter the name of the _Credential_ that contains the Salesforce Userid and Password created in step 2.|
+|**ServerURL** |Enter the Salesforce URL for the target deployment.|
+ **SalesforceRepo** | Enter the name of the File System _Repository_ created in Step 1.|
+| **TestLevel** | Salesforce Test Case Level.|
 
-## Import Your SalesForce _Procedures_ from GitHub
+**Step 4 - Create Your SaleForce _Procedures_**
 
-You will need to import the most current GitCheckout, RunAnt, SalesforceCredential and SalesforceDeploy _Procedures_/_Functions_ from the Ortelius Open Source GitHub Project at:
+You will import and use pre-defined _Procedures_ to create your _Custom Action_.  Import the most current GitCheckout, RunAnt, SalesforceCredential and SalesforceDeploy _Procedures_/_Functions_ from [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/).
 
-[Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/)
+The following files need to be retrieved:
 
-The following _Procedures_ need to be retrieved:
-
-- **GitCheckout.re** - This _Procedure_ clones the repo to the _Dropzone_ and then checks out the commit, branch or tag specified.
+- **GitCheckout.re** - This _Procedure_ checks-out the files from your git repository to the deployhub eninge and then checks out the commit, branch or tag specified.
 
 - **RunAnt.re** - This _Procedure_ runs Ant
 
 - **SalesforceCredential.re** - This _Procedure_ exposes the credential for the Salesforce Deploy _Procedure_
 
-- **SalesforceDeploy.re** - This Procedure executes Ant against a dymanically created build.xml file to upload the classes to Salesforce.
+- **SalesforceDeploy.re** - This Procedure executes Ant against a dynamically created build.xml file to upload the classes to Salesforce.
 
-Once downloaded, you will need to use the "Import" option at the top of the _Func/Procs_ List View to import them into DeployHub as the Procedures. To import these Procedures login to DeployHub and select the _Func/Procs_ menu item on the left hand side of the main DeployHub panel.  From the list view select the **Import** option. Select your Domain, such as '_Global_ Domain' and upload the _Procedure_ into the DeployHub.
+Once downloaded, you will need to Import the scripts into DeployHub as _Procedures_. To import these _Procedures_ navigate to the _Func/Procs_ Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the _Functions and Procedures_ List View. From the _Functions and Procedures_ List View select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the GitCheckout.re, RunAnt.re and SalesforceCredential.re and SalesforceDeploy.re files.
 
-## Define a New SalesForce _Custom Action_
+Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub. If you select a lower level _Subdomain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
 
-Once you have imported your _Procedures_, you can define your _Action_. To create a New _Action_ see the [Customize Your Actions](/userguide/customizations/2-define-your-actions/) section.  
+**Step 5 - Create your SalesForce _Action_ using your _Procedures_**
+
+Once you have imported the SalesForce files as _Procedures_, you ready to define your _Custom Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Main Menu panel.
+
+Use the +Add option to create a new _Action_ for you _Procedure_. In the "Full Domain" field select your "Global" _Domain_. If you select a lower level _Subdomain_ you will restrict access to this _Custom Action_.  By defining it to your highest level _Domain_, all _Users_ will be able to execute the process regardless of their _SubDomain_. 
 
 Name the new Action "SalesForceAction" (no spaces).
 
-Now we are going to customize this _Action_. You will see the 'Activity Hub' on the righthand side of your screen. Navigate to your _Domain_ to find the three Procedures. Drag them onto the area under 'Start.' The order should be _GitCheckout_, _SalesforceCredential_, and _SalesforceDeploy_.  _RunAnt_ is reference by the _SalesforceDeploy_ procedure and does not need to be included in the _Action_.
+Now we are going to customize this _Action_. On the right hand side, you will see a list of _Functions_ and _Procedures_ you can choose from.  Navigate to your _Domain_ to find the files imported as _Procedures_.  Drag them onto the area under "Start". The order should be:
 
-At this point the Action is ready to be used by anyone with access (based on the _Domain's_ Access options). Each _Component_ that uses the _Action_ will need to define specific values.
-The _Action_ can now be placed into the _Custom Action field_ of a _Component_ as part of an _Application_ deployed to a Salesforce region.
+-GitCheckout
+-SalesforceCredential
+-SalesforceDeploy
+
+Note: RunAnt is reference by the SalesforceDeploy _Procedure_ and does not need to be included in the _Action_.
+
+When you drag your Ansible _Procedures_ onto the area under "Start" a pop-up dialog box will open for you to complete the following parameters:
 
 **GitCheckout Parameters**
 
 | **Field** | Value | Description |
 | --- | --- | --- |
 | **Title** | Not Required | Name of the step in your deployment workflow.  |
-| **Summary** | Not Required | Enter a summary of this step. | |
-| **Git Repo** | $GIT_URL| Git Repo containing the SalesForce Source Code.|
+| **Summary** | Not Required | Enter a summary of this step. | 
+| **Git Repo** | $GIT_URL| Git Repo containing your SalesForce Source Code.|
 | **Git Commit** | $GIT_COMMIT | The commit, tag or branch to checkout. |
 | **To Dir** | $GIT_DIR | The directory to checkout into.  Use "." for the default directory. |
 
@@ -77,7 +106,7 @@ The _Action_ can now be placed into the _Custom Action field_ of a _Component_ a
 
 | Argument | Description |
 |--- | --- |
-| Credential Name | Name of the Credential to use for the Salesforce Deployment |
+| **Credential Name** | Name of the Credential your created in step 2 above. |
 
 **SalesforceDeploy Parameters**
 
@@ -89,27 +118,27 @@ The _Action_ can now be placed into the _Custom Action field_ of a _Component_ a
 | Repo | The _Repository_ where the class and packages exist, typically a filesystem type _Repository_.|
 | TestLevel | When test cases are run, which level (All, Some, etc.). |
 
+At this point the _Custom Action_ is ready to be used by anyone with access (based on Domain and security options). Each _Component_ that uses the _Custom Action_ will need to define specific values. Because this new _Custom Action_ is reusable, no _Component_ variables are defined at the _Action_ level.
+
 ## Create Your SalesForce _Component_
 
-Now that you have defined your SalesForce _Custom Action_ you are ready to create your SalesForce _Component_.  Use the following parameters at the _Component_ detail from the _Component_ Dashboard:
+Now that you have defined your SalesForce _Custom Action_ you are ready to create your SalesForce _Component_. Define your _Component_ to use a _Custom Action_ from the _Component_ Dashboard. See [Defining Components](/userguide/publishing-components/2-define-components/) for more details on creating your new _Component_. 
+
+Update the _Custom Action_ Detail field by choosing the SalesForceAction provided in the _Custom Action_ dropdown list. You will have a single parameter to update:
 
 | **Parameter**|**Description**|
 | ---| --- |
 |**Repository**| Select your SalesForce Repository.|
 
-### Set Your _Component_ Attributes
+**Set Your _Component_ Attributes_**
 
-The following variables must be used as Attributes within any _Components_ used to deploy files to a Salesforce region:
+The following variables must be added to the Attributes Section for all  _Components_ using the SalesForceAction _Custom Action_.  The Attributes section can be found on the _Component_ Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:
 
 | Variables | Description |
 |--- | --- |
-| **${GIT_URL}** | git url for the git repository. This is used in the git check out step executed by the SalesForce _Action_.|
-|**${GIT_COMMIT}** |The commit hash for the version to be checked out from the git repository.|
-|**${GIT_DIR}**| The temporary directory is used by git to clone and checkout. This parameter should be a directory defined in a DeployHub _Repository_ for the_Component_ to find the files.|
+| **GIT_URL** | git url for the git repository. This is used in the git check out step executed by the SalesForce _Action_.|
+|**GIT_COMMIT** |The commit hash for the version to be checked out from the git repository.|
+|**GIT_DIR**| The temporary directory is used by git to clone and checkout. This parameter should be a directory defined in a DeployHub _Repository_ for the_Component_ to find the files.|
 
 You are now ready to assign your SalesForce _Component_ to an _Application_ and perform a deployment to one of the SalesForce _Environments_.
 
-For more information see:
-
-- [Customizing Actions](/userguide/first-steps/2-define-your-actions/)
-- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
