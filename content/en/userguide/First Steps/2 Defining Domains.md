@@ -8,7 +8,7 @@ description: >
 
 ## A Domain Driven Design
 
-A DeployHub _Domain_ is how DeployHub organizes and shares data across teams.  You publish your microservices to a Catalog _Domain_, you package your _Application_ in a Project _Domain_ and you track your continuous delivery pipeline with a Lifecycle _Domain_. All DeployHub objects are assigned to a _Domain_. 
+A DeployHub _Domain_ is how DeployHub organizes and shares data across teams.  You publish your microservices to a Catalog _Domain_, you package your _Application_ in a Project _Domain_ and you track your continuous delivery pipeline with a Lifecycle _Domain_. All DeployHub objects are assigned to a _Domain_.
 
 ### Domains and your Domain Driven Design
 A Domain Driven Design is critical for organizations moving from monolithic development to microservice development. In microservices, you must have a structured method for organizing microservices into "solution" spaces to facilitate reuse across siloed teams. DeployHub _Domains_ provides this organization. 

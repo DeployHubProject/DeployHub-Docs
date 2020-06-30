@@ -3,22 +3,22 @@ title: "Why Use DeployHub"
 linkTitle: "Why Use DeployHub"
 weight: 1
 description: >
-  The Need for and Benefits of...
+  DeployHub Microservice Configuration Management and Deploy
 ---
 
 ## Why Use DeployHub
 
-Migrating to microservices breaks the way we assemble and configure software.  The loss of the 'software application' is difficult though. We no longer manage a complete software solution. Instead, smaller pieces are independently deployed across multiple environments. The difficulty in managing microservices without the higher order _Application_ is that it impacts most of our standard software practices.  After all, everything is based on an _Application_ version from tracking changes request, to bill of material and difference reports and testing.
+Migrating to microservices breaks the way we assemble and configure software. With a microservice implementation, we no longer manage a complete software solution, or Application Version. Instead we manage many moving parts that communicate at run-time based on APIs.  The loss of the 'Application Version' disrupts the core of software delivery.  It impacts most of our standard software practices.  After all, everything is based on an Application Version from tracking changes request, determining differences, tracking relationships and supporting users. 
 
-While microservices are a big improvement over monolithic practices, we still need a method of tracking the collection delivered to an end-user. DeployHub allows you to move to microservices by giving you back your _Application_ but in a 'logical view.'
+While microservices are a big improvement over monolithic practices, we still need a method of tracking the collection of services delivered to an end-user. DeployHub facilitates the move to microservices by giving you back your _Application_ but in a 'logical view.'
 
 DeployHub is a SaaS based central 'hub' for cataloging, versioning, sharing and deploying microservices and other _Components_ across Kubernetes, cloud, virtual and physical _Environments_. An on-premise download is also available.
 
-DeployHub is not a 'microservice registry.' Instead, Developers interact with DeployHub to 'check-in' or publish microservices to a Domain Catalog before they are deployed to any environment. This is like an internal market place for finding, tracking and deploying microservices and relating them to the _Applications_ that consume them. The publishing catalog is based on a _Domain_ structure to support a Domain Driven Design.
+DeployHub is not a 'microservice registry' or 'API Gateway."  Instead, Developers interact with DeployHub to 'check-in' or publish microservices to a Domain Catalog before they are deployed to any cluster. DeployHub serves as an internal market place for finding, tracking and deploying microservices and relating them to the _Applications_ that consume them. The publishing catalog is based on a _Domain_ structure to support a Domain Driven Design.
 
- Microservices are now independently deployable and require a solution to support this process. Our back-end version controls the database to accurately track and deploy the many moving parts of a microservice implementation, producing _Application_ maps and _Component_ dependencies.
+Microservices are independently deployable and require a solution that can support the coordination of many independent moving parts. Our back-end version control database accurately tracks and deploys many moving parts of a microservice implementation, producing _Application_ maps and _Component_ dependencies.
 
-If you have not moved to a microservice architecture, with us, you can visualize and continuously deploy your monolithic _Application_ based on _Components_ .  A _Component_ can be anything from a microservice to a .Jar file, a DB update to an environment variable update.  So while you begin digesting a new modern architecture, DeployHub starts shifting the way you conceptualize your monolithic _Application_ and prepares you for a service based architecture.
+If you have not moved to a microservice architecture, DeployHub can help you visualize and continuously deploy your monolithic _Application_ based on _Components_.  A _Component_ can be anything from a microservice to a .Jar file, a DB update to an environment variable update.  So while you begin digesting a new modern architecture, DeployHub starts shifting the way you conceptualize your monolithic _Application_ and prepares you for a service based architecture.
 
 ## Versioning
 
@@ -34,7 +34,7 @@ DeployHub versions both microservices (_Components_) and 'logical' _Applications
 - Deployment Script (Helm Chart, Ansible Playbook, etc)
 - Any Attributes (DB Name for example)
 
-When versioning at the _Application_ level, it's based on the _Component_ versions associated to that _Application_ version. If a new version of a _Component_ is pushed out to the environment, DeployHub auto increments the _Component_ version and the consuming _Application_ version.  Dashboards are provided for each new _Application_ version showing:
+ _Application Versions_ are based on the collection of _Component Versions_ If a new version of a _Component_ is pushed out to the environment, DeployHub auto increments the _Component_ version and the consuming _Application_ version.  Dashboards are provided for each new _Application_ version showing:
 
 - A full map of all the microservices, or _Components_, the _Application_ version is consuming (your new Bill of Material - BOM report).
 - The specific changes that created the new _Application_ version (your new diff report).
@@ -49,7 +49,7 @@ Deployhub supports working in a hybrid environment, for both microservices and m
 
 ## Key Features
 
-Our four main features are critical to a successful implementation of microservices.
+Our core features are critical to a successful implementation of microservices.
 
 - First and most important is the **Domain structure for cataloging and sharing microservices**. This feature organizes your microservice in a method to facilitate reuse and sharing across development teams.
 
@@ -63,7 +63,7 @@ Our four main features are critical to a successful implementation of microservi
 
 ## The Secret Sauce
 
-DeployHub is the only configuration management and deployment solution with a built-in version control engine. This supports fully incremental releases as well as canary or blue/green deployments with fast rollbacks, roll forward, or version jumps. Our back-end version control database is designed specifically for tracking independently deployed _Components_. Every software release configuration is based upon a collection of _Components_ and their critical deployment attributes. A _Component_ is a microservice, executable, database update or configuration, and is part of a complete software _Application_. _Components_ change over time creating _Component Versions_ and therefore _Application Versions_.
+DeployHub is the only configuration management and deployment solution with a built-in version control engine. DeployHub supports fully incremental releases as well as canary or blue/green deployments with fast rollbacks, roll forward, or version jumps. Our back-end version control database is designed specifically for tracking independently deployed _Components_. Every software release configuration is based upon a collection of _Components_ and their critical deployment attributes. A _Component_ is a microservice, executable, database update or configuration, and is part of a complete software _Application_. _Components_ change over time creating _Component Versions_ and therefore _Application Versions_.
 
 DeployHub supports continuous configuration versioning of:
 
@@ -76,7 +76,7 @@ DeployHub supports continuous configuration versioning of:
 
 ## Agentless Delivery
 
-  Unlike others, DeployHub's engine for pushing _Components_ to your _Endpoints_ (Clusters, Cloud, etc.), uses an agentless architecture. The deployment engine supports mixed environments from monolithic systems to microservices and is particularly useful for database updates. No _Endpoint_ agents are required.  
+  Unlike others, DeployHub's engine for pushing _Components_ to your _Endpoints_ (Clusters, Cloud, etc.) uses an agentless architecture. The deployment engine supports mixed environments from monolithic systems to microservices and is particularly useful for database updates. No _Endpoint_ agents are required.  
 
 This agentless technology works for both cloud native and legacy architectures including:
 
@@ -98,13 +98,13 @@ This agentless technology works for both cloud native and legacy architectures i
 
 **DeployHub Team**
 
-Our free version is based upon the [Ortelius](https://www.ortelius.io/) open source project. DeployHub Team can be used from the hosted site or installed on premise. It is a strategic and fully open source microservice management solution that integrates with common continuous delivery and DevOps tools such as Spinnaker, GitHub and Jenkins. It supports unlimited endpoints, versions, deployments and users. Sign-up at [https://www.deployhub.com/free-team-sign-up/](https://www.deployhub.com/free-team-sign-up/).
+Our free version is based upon the [Ortelius](https://www.ortelius.io/) open source project. DeployHub Team can be used from the hosted site or installed on premise. It is a strategic and fully open source microservice management solution that integrates with common continuous delivery and DevOps tools. It supports unlimited endpoints, versions, deployments and users. Sign-up at [deployhub.com/](https://www.deployhub.com/).
 
 **DeployHub Pro**
 
 For additional security features and support, DeployHub Pro includes extended Users and Group access controls as well as more granular _Domains_.
 
-Unique to DeployHub Pro are "Divisional Domains." These allow you to model your environments based on your organizational top-down structure, facilitating a self-service experience for developers. It also gives you the ability to restrict microservice read/write access to only certain Groups of Users.
+Unique to DeployHub Pro are "Divisional Domains." These _Domains_ allow you to expand and model your environments based on your organizational top-down structure. It also gives you the ability to restrict microservice read/write access to only certain Groups of Users.
 
 DeployHub Pro also provides integration to tools such as Bugzilla, GitHub Issues and Jira for tracking your complete value stream from change request to final endpoint. It also includes 'smart' calendars for scheduling deployments.
 

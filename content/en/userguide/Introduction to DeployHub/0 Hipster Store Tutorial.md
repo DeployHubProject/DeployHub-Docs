@@ -8,19 +8,18 @@ description: >
 
 ## The Hipster Store Tutorial
 
-This _Hipster Store_ tutorial introduces you to the most basic concepts behind DeployHub and it allows you to run a deployment in our hosted Kubernetes cluster (Google.) In DeployHub terminology, the _Hipster Store_ is both an _Application_ and a _Domain_. We will first review the Hipster Store _Domain_ and then review the _Application_ and related _Components_.
+This _Hipster Store_ tutorial introduces you to the most basic concepts behind DeployHub and it allows you to run a deployment in our hosted Kubernetes cluster (Google.) In DeployHub terminology, the Hipster Store is both an _Application_ and a _Subdomain_. The Hipster Store belongs to a higher level _Domains_ called the "Online Store Company.  We will first review the "Online Store Company" _Domain_ structure and then review the Hipster Store _Application_ and related _Components_.
 
-## Step 1 – Review the Hipster Store Domains
+## Step 1 – Review the Online Store Company _Domains_
 
-Domains serve as the basic structure of your microservice catalog. Developers use Domains to organize microservices based on 'solution spaces' allowing them to both share their services and find others. The Hipster Store is defined using several _Domains._ The first is our high-level Company _Domain_ called "Vintage LLC".
+_Domains_ serve as the basic structure of organizing your microservice catalog. Developers use _Domains_ to catalog microservices based on 'solution spaces' allowing them to both share their services and find others. The Online Store Company's _Domains_ are defined using several _Subdomains._ The highest level Company _Domain_ is called "Online Store Company".
 
-To view the _Domains_:
+To view the _Domains_ click on the "_Domains_" Menu.  You will see the following:
 
-- Click on the "_Domains_" menu and select "Hipster Store" from the Tree view.
-- Click on the General tab.
-- You will see the following:
+The _Domain_ dashboard is displayed based a "Sun Burst" map, starting at the highest level _Domain_ with the ability to drive down into the _Subdomains_, and _Subdomains_ after that.
 
-![](RackMultipart20200511-4-zk9mjm_html_95ee7ac3d4043ec1.jpg)
+When scrolling up or down the _Domain_ hierarchy using the Sun Burst map, the detail information is re-displayed according to where you are in the map.
+
 
 The _Hipster Store Domain_ is a _Sub-Domain_ of Vintage LLC. It itself includes 6 _Subdomains_ that organize microservices by their common 'solution space' from _Ad Service_ to _Recommendation Service_. Another sibling _Domain_ called _Purchase Processing_ is also available and it includes 5 additional _Subdomains_ that organize microservices into other solution spaces. As you will see later, the Hipster Store depends on some of the _Purchase Processing_ services. In this example, all _Subdomains_ of the Vintage LLC company have full read/write access. With DeployHub Pro, you can restrict read/write access to _Domains_.
 
