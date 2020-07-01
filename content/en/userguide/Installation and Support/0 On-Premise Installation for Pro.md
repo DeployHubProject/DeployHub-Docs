@@ -45,3 +45,12 @@ See the [Docker Install Test](https://docs.docker.com/get-started/#test-docker-v
 ## Pull image from Redhat Quay Registry
 
 docker pull quay.io/deployhub/deployhub-rproxy:latest
+
+## Start the container
+
+### Linux and OS/X
+~~~bash
+docker run -v ~/deployhub/data:/var/lib/pgsql/data:Z -v ~/deployhub/logs:/opt/deployhub/logs:Z -p 7171:8080 -d –hostname docker_dh -v ~/.ssh:/keys:Z ${IMAGE}
+~~~
+
+**~/deployhub/data** is the location in which the Postgres database will be persisted.

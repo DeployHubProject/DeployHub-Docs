@@ -8,6 +8,19 @@ description: >
 
 Helm is called to replace the DeployHub default processing engine for performing container deployments. When DeployHub executes the release process, it will call the Helm Chart you have defined as your _Custom Action_ at the _Component_ level.  DeployHub includes the version of the Helm chart as part of its overall configuration data.
 
+## Connecting a DeployHub _Endpoint_ to your Kubernetes Cluster through Helm
+
+DeployHub's deployment engine comes pre-installed with Helm.  For this reason you should use the deployment engine as the "localhost" _Endpoint_ for your deployments.  This Helm install on the "localhost" _Endpoint_ needs to know how to connect to your Kubernetes Cluster.  Mount your ".kube/config" file to the DeployHub deployment engine Docker container to provide the connection.  The additional parameter to the docker run command for the DeployHub container exposes the Kubernetes config file to the Helm install in DeployHub.  The following is an example of the additional parameter:
+
+```bash
+-v ~/.kube:/home/omreleng/.kube:Z
+```
+
+For more information on starting the DeployHub Container see:
+- [SaaS Sign-up and Reverse Proxy](/userguide/installation-and-support/0-saas-and-reverse-proxy/)
+- [DeployHub Team On-Premise Installation](/userguide/installation-and-support/0-on-premise-installation-for-team/)
+- [DeployHub Pro On-Prem Installation](/userguide/installation-and-support/0-on-premise-installation-for-pro/)
+
 ## Helm and _Custom Actions_
 
 Helm is called as a DeployHub [_Custom Action_](/userguide/customizations/2-define-your-actions/). To use Helm, you will need to import two Helm files as DeployHub _Procedures_ and define them to your _Custom Action_. This Helm _Custom Action_ can then be assigned to your Container _Components_. See [_Procedures and Functions_](/userguide/customizations/2-define-your-functions-and-procedures/) and  [Customize Actions](/userguide/customizations/2-define-your-actions/) to learn more. The following steps will create your Helm _Custom Action_.

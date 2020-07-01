@@ -37,9 +37,14 @@ Requires macOS El Capitan 10.11 and newer macOS releases are supported. We recom
 
 See the [Docker Install Test](https://docs.docker.com/get-started/#test-docker-version) instructions.
 
-## Download and Install DeployHub Team
+## Start the container
 
-Once Docker is installation, you are ready to download and run the container follow [the online instructions](https://www.deployhub.com/deployhub-oss-on-prem-installation/).
+### Linux and OS/X
+~~~bash
+docker run -v ~/deployhub/data:/var/lib/pgsql/data:Z -v ~/deployhub/logs:/opt/deployhub/logs:Z -p 7171:8080 -d –hostname docker_dh -v ~/.ssh:/keys:Z ${IMAGE}
+~~~
+
+**~/deployhub/data** is the location in which the Postgres database will be persisted.
 
 ## Use Multiple Deployment Engines
 
