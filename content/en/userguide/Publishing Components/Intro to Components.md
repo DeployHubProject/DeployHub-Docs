@@ -54,3 +54,5 @@ DeployHub uses a simple versioning number schema starting at 1 and incrementing 
 ```
  Myapp;1, Myapp;2.
 ```
+
+You can use your CI/CD process to include variance in your versioning number (base name, variant, version).  See [Component Versioning Schema](/userguide/integrations/ci-cd_integrations/#_component_-versioning-schema).

@@ -98,7 +98,7 @@ This agentless technology works for both cloud native and legacy architectures i
 
 **DeployHub Team**
 
-Our free version is based upon the [Ortelius](https://www.ortelius.io/) open source project. DeployHub Team can be used from the hosted site or installed on premise. It is a strategic and fully open source microservice management solution that integrates with common continuous delivery and DevOps tools. It supports unlimited endpoints, versions, deployments and users. Sign-up at [deployhub.com/](https://www.deployhub.com/).
+Our free version is based upon the [Ortelius](https://www.ortelius.io/) open source project. DeployHub Team can be used from the hosted site or installed on premise. It is a strategic and fully open source microservice management solution that integrates with common continuous delivery and DevOps tools. It supports unlimited endpoints, versions, deployments and users. Sign-up at [deployhub.com](https://www.deployhub.com/).
 
 **DeployHub Pro**
 

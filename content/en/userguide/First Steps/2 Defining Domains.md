@@ -35,9 +35,9 @@ There are four common ways to implement _Domains_:
 
 ## Using the Domain Dashboard
 
-Access of a full view of all _Domains_ on the dashboard is based upon your User privileges. The view is displayed in a "Sun Burst" map, starting at the highest level _Domain_ with the ability to drive down into the _Subdomains_, and _Subdomains_ after that.
+Access of a full view of all _Domains_ on the dashboard is based upon your User privileges. The view is displayed in a "Sunburst" map, starting at the highest level _Domain_ with the ability to drive down into the _Subdomains_, and _Subdomains_ after that.
 
-When scrolling up or down the _Domain_ hierarchy using the Sun Burst map, the detail information is re-displayed according to where you are in the map.
+When scrolling up or down the _Domain_ hierarchy using the Sunburst map, the detail information is re-displayed according to where you are in the map.
 
 ### _Domain_ Details
 

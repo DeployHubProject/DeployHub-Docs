@@ -1,6 +1,8 @@
 ## Deployment Tasks
 
-Task are used for executing deployments, managing approvals, or staging a deployment. Tasks can be assigned to any _Domain_. However, they are most commonly associated to _Project Domains_ and _Lifecycle Domains_. The following Tasks are available as default Tasks, but you can create any type of custom Task. A custom Task will call a Custom [_Action_](/userguide/customizations/2-define-your-actions/):
+Task are used for executing deployments, managing approvals, or staging a deployment. Tasks can be assigned to any _Domain_. However, they are most commonly associated to _Project Domains_ and _Lifecycle Domains_. You can assign a Task at a higher _Domain_ level allowing any child _Domains_ to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your _Subdomains_. However, this means that a Catalog _Domain_ may include Tasks that it cannot use.
+
+The following Tasks are available as default Tasks, but you can create any type of custom Task. A custom Task will call a Custom [_Action_](/userguide/customizations/2-define-your-actions/):
 
 **DeployHub Team**:
 

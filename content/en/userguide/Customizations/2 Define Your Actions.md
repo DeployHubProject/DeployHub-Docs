@@ -109,7 +109,7 @@ Click on one of the Categories in the list to see the available _Functions_ or _
 
 The Parameter Dialog Box displays the options defined when the _Function_ or _Procedure_ was created using the Input Parameters Section from the _Functions_ and _Procedures_ Dashboard. When you add a new _Function_ or _Procedure_ to your _Action_ blueprint designer, the Parameter Dialog Box will automatically display.  If you are working on an existing _Action_ and want to view the parameters, a right click will display:
 
-- View Detials - opens the Parameter Dialog Box
+- View Details - opens the Parameter Dialog Box
 - Got to the Procedure - takes you to the Dashboard of the _Function_ or _Procedure_. Your work will be saved automatically before navigating to the _Functions_ and _Procedures_ Dashboard.
 - Delete this Activity - deletes the _Function_ or _Procedure_ from the blueprint designer.
 An editor box opens automatically to set any input values required. If the dropped item is a _Function,_ then an additional _Result_ field is presented. This needs to be the name of a _Variable_ that receives the result of the _Function_.

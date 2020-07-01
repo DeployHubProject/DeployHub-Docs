@@ -95,7 +95,7 @@ The DeployHub continuous delivery integration will automatically maintain the _A
 | Part | Explanation |
 | ---  | --- |
 |**Base name**| The static part of the _Application_ Name.  For example: webstore.|
-|** Variant** | A high level place holder for that versions are created within. The Variant can be aligned with a feature or branch. For example: 50percent-sale.  Variant is not required.|
+|**Variant** | A high level place holder for that versions are created within. The Variant can be aligned with a feature or branch. For example: 50percent-sale.  Variant is not required.|
 |**Version**| The schemantic version number. For example, 1_2_10.|
 
 DeployHub uses the <base name>;<schematic version number>;<version number> as the default format for the versioning schema.   The formatting is:
@@ -105,6 +105,8 @@ DeployHub uses the <base name>;<schematic version number>;<version number> as th
 ~~~
 
 Deploy will automatically increment the version number based on last version found. It will create a new _Application Version_ based on the last _Application Version_ and replace the old _Component Version_ with the new _Component Version_.  The new _Component Version_ will be added if an old verion was not found.
+
+You can use your CI/CD process to include variance in your versioning number (base name, variant, version).  See [Component Versioning Schema](/userguide/integrations/ci-cd_integrations/#_component_-versioning-schema).
 
 ### Deploying the _Application Version_
 
