@@ -3,22 +3,22 @@ title: "Architecture"
 linkTitle: "Architecture"
 weight: 4
 description: >
-  Understanding DeployHub Architecture and Processesing.
+  Understanding DeployHub Architecture and Processing.
 ---
 
 ## Architecture
 
-DeployHub includes a central engine that can be installed locally or accessed via the SaaS offering via a reverse proxy. The central engine connects to external repositories, CD engines, DevOps tools, data sources, transfer protocols and notification tools. With our open architecture, you plug-in the tool-set you use to define your release configurations.
+DeployHub includes a central engine that can be installed locally or accessed via the SaaS offering via a reverse proxy. The central engine connects to external repositories, Continuous Delivery (CD) engines, DevOps tools, data sources, transfer protocols and notification tools. With our open architecture, you plug-in the tool-set you use to define your release configurations.
 
 For releasing _Components_, an agentless architecture supports both a modern architecture of containers as well as legacy systems. If you use solutions like Helm or Ansible to update your cluster, great, we can call those external solutions to perform the updates and provide all the microservice configuration mapping and version information. DeployHub also has plug-ins to continuous delivery pipelines that supports continuous configuration management as part of your release process.
 
-![Architecture](/userguide/concepts/Architecture.png)
+![Architecture](/userguide/images/Architecture.png)
 
 ## Reverse Proxy and SaaS
 
-As a SaaS customer, a 'one-way' reverse proxy is used on your side of the firewall. This can be timed to submit request for deployments based on the installation parameters.
+As a SaaS customer, a 'one-way' reverse proxy is used on your side of the firewall. The proxy send requests for deployments every 60 seconds. 
 
-![SaaS Architecture](/userguide/concepts/ReverseProxy.png)
+![SaaS Architecture](/userguide/images/ReverseProxy.png)
 
 ## Deployments with Custom Actions for Cloud Native Releases
 
@@ -55,4 +55,4 @@ For example: 'c:\main\SomeFiles\SomeMoreFiles'. If the _Component_ Target Direct
 
 The following diagram shows how the deployment process works:
 
-![Deployment Process](/userguide/concepts/ProcessFlow.jpg)
+![Deployment Process](/userguide/images/ProcessFlow.jpg)

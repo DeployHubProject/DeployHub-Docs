@@ -48,7 +48,7 @@ The following are the parts of the versioning schema:
 |---|---|
 |**Base name** | is the static part of the _Component_ Name.  For example: email-service.|
 | **Variant** | is a high level place holder for the versions are created within. The Variant can be aligned with a feature or branch. For example: ssl-update.  Variant is not required.|
-|**Version**| is the schemantic version number or schemantic + Git commit.  For example: v1.5.1.0 or v1.5.1-g3d55a2 |
+|**Version**| is the schematic version number or schematic + Git commit.  For example: v1.5.1.0 or v1.5.1-g3d55a2 |
 
 By default, DeployHub uses an advanced format for the versioning schema. It will automatically increment the version number based on last version found. The advanced format is used since DeployHub has the information from Git to provide a complete version schema.  The advanced formatting is:
 ~~~
@@ -58,7 +58,7 @@ By default, DeployHub uses an advanced format for the versioning schema. It will
 The version segment is broken down further into:
  
  ~~~
-  v<schemantic number>-<number of commits>
+  v<schematic number>-<number of commits>
 ~~~  
 
 The number of commits provides an auto-increment of the last part of the schema number.  
@@ -79,7 +79,7 @@ Below is a breakdown of the individual parts of the versioning schema:
 | **ssl-update** | Variant that you supply to the DeployHub Plugin for the _Component_. |
 | **semi colon** | Separator. |
 | **v** | Indicates start of the version. |
-| **1_5_1_**| Version that you supply to the DeployHub Plugin for the _Component_. |
+| **1_5_1**| Version that you supply to the DeployHub Plugin for the _Component_. |
 | **145** | Number of Git Commits for the associated repository.  Used for auto incrementing. |
 | **-g** | Separator indicating that the Git commit is next. |
 | **3d55a2** | Git command SHA for the commit that triggered the CD process. |
@@ -96,7 +96,7 @@ The DeployHub continuous delivery integration will automatically maintain the _A
 | ---  | --- |
 |**Base name**| The static part of the _Application_ Name.  For example: webstore.|
 |**Variant** | A high level place holder for that versions are created within. The Variant can be aligned with a feature or branch. For example: 50percent-sale.  Variant is not required.|
-|**Version**| The schemantic version number. For example, 1_2_10.|
+|**Version**| The schematic version number. For example, 1_2_10.|
 
 DeployHub uses the <base name>;<schematic version number>;<version number> as the default format for the versioning schema.   The formatting is:
 
@@ -118,7 +118,7 @@ You can incorporate DeployHub's Lifecycle _Subdomain_ Tasks as follows:
 
 **Move**
 
-DeployHub will move the _Application_ from one Lifecycle _Subdomain_ to another using the DeployHub _Move Task_.  This enables the _Application_ to move through the same pipeline steps that the CD process is using. 
+DeployHub will move the _Application_ from one Lifecycle _Subdomain_ to another using the DeployHub _Move Task_.  This enables the _Application_ to move through the same pipeline steps that the CD process is using.
 
 **Approve**
 
