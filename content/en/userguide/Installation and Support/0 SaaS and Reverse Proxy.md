@@ -19,7 +19,7 @@ To begin deploying, you first install a Reverse Proxy inside your firewall. This
 
 ## What is the Reverse Proxy
 
-A Reverse Proxy queries the DeployHub SaaS every minute to determine if a deployment is needed. For SaaS users, it provides a security layer, preventing you from opening a port to the outside world. It uses standard HTTPS request on the Google GKE environment. Nothing from the external Google side of the firewall is pushed to the local DeployHub Reverse Proxy.
+A Reverse Proxy queries the DeployHub SaaS every minute to determine if a deployment is needed. For SaaS users, it provides a security layer, preventing you from opening a port to the outside world. It uses standard HTTPS requests to communicate to the DeployHub SaaS on the Google GKE environment. Nothing from the external Google side of the firewall is pushed to the local DeployHub Reverse Proxy. 
 
 Once the Reverse Proxy determines that a deployment is needed, it executes the deployment using all files on the inside of the firewall. The one-way communication initiates the deployment but all work is done local to your network. On completion of the deployment, the logs are pushed back up to the DeployHub SaaS for viewing and audit.
 
@@ -29,58 +29,46 @@ Once the Reverse Proxy determines that a deployment is needed, it executes the d
 
 The Reverse Proxy runs as docker container. In order to install it, you need to install Docker.
 
-## Docker Installation
+## Docker Installation Guides
 
-[Docker for CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
-
-Requires CentOS 64-bit 7.1 and higher on x86\_64
-
-[Docker for RedHat](https://docs.docker.com/install/linux/docker-ee/rhel/)
-
-Require RHEL 64-bit 7.1 and higher on x86\_64, s390x, or ppc64le (not ppc64)
-
-[Docker for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-
-Requires 64-bit version of one of these Ubuntu versions:
-
-Bionic 18.04 (LTS)
-
-Artful 17.10
-
-Xenial 16.04 (LTS)
-
-Trusty 14.04 (LTS)
-
-[Docker for OS/X](https://docs.docker.com/docker-for-mac/install/)
-
-Requires macOS El Capitan 10.11 and newer macOS releases are supported. We recommend upgrading to the latest version of macOS.
+- [Docker for CentOS](https://docs.docker.com/engine/install/centos/)
+- [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+- [Docker for Fedora](https://docs.docker.com/engine/install/fedora/)
+- [Docker for RedHat](https://docs.docker.com/install/linux/docker-ee/rhel/)
+- [Docker for OS/X](https://docs.docker.com/docker-for-mac/install/)
 
 ### Test your Docker Install
 
 See the [Docker Install Test](https://docs.docker.com/get-started/#test-docker-version) instructions
 
-## Installing Your Docker Reverse Proxy
+## Installing Your DeployHub Reverse Proxy Docker Image
 
-The DeployHub Reverse Proxy Docker Image is found on the DockerHub Container Catalog and the RedHat Certified Container Catalog. Follow the steps below to install the Reverse Proxy into your Docker installation.
+The DeployHub Reverse Proxy Docker Image is found on the Redhat Quay Docker Registry. Follow the steps below to install the Reverse Proxy into your Docker installation.
 
-## Pull Reverse Proxy from Redhat Quay Registry
+## Step 1 - Set your CLIENTID as environment variable
 
-docker pull quay.io/deployhub/deployhub-rproxy:latest
-
-## Set your CLIENTID as environment variable
-
-### Linux and OS/X
-
+```bash
 export CLIENTID="Client ID sent in welcome email"
+```
 
-## Start the container
+## Step 2 - Pull Reverse Proxy from Redhat Quay Registry
 
-### Linux and OS/X
+```bash
+docker pull quay.io/deployhub/deployhub-rproxy:latest
+```
 
-docker run -d --hostname `hostname` -e CLIENTID=$CLIENTID -v ~/.ssh:/keys:Z ${IMAGE}
+## Step 3 - Find your image SHA
 
-## Notes
+Find find image SHA from the third column in the output.
 
-- $​CLIENTID = client id assigned to your user id from the deployhub.com website or welcome email
-- ${IMAGE} = image id from the docker pull
-- DeployHub will see the ssh keys as /keys
+```bash
+docker images | grep deployhub-rproxy | grep latest
+```
+
+## Step 4 - Start the container for Linux and OS/X
+
+Use the image SHA from Step 4 as the last parameter <image SHA> to the docker run.
+
+```bash
+docker run -d --hostname `hostname` -e CLIENTID=$CLIENTID -v ~/.ssh:/keys:Z <image SHA>
+```
