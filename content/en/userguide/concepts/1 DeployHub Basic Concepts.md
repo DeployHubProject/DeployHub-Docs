@@ -8,7 +8,7 @@ description: >
 
 ## Introduction
 
-The core _Objects_ are _Domains_, _Applications_, _Components_ , _Environments_ and _Endpoints_. These _Objects_ catalog, track, and version independently deployable objects, map their relationships, and release them to clusters, cloud, or physical data centers.
+DeployHub's core Objects are _Domains_, _Applications_, _Components_ , _Environments_ and _Endpoints_. These Objects catalog, track, and version independently deployable objects, map their relationships, and release them to clusters, cloud, or physical data centers.
 
 _Domains_ are core to DeployHub's management of microservices.  _Domains_ are hierarchical and pass inheritance from parent to siblings. For this reason, _Components_ can be shared across the _Subdomains_. The hierarchical structure of _Domains_ provides a high-level of control and management over how microservices are shared and reused.
 
@@ -26,19 +26,19 @@ _Domains_ are core to DeployHub's management of microservices.  _Domains_ are hi
 - User
 - UserGroup (DeployHub Pro Object)
 
-These _Objects_ can be referenced using DeployHub APIs or custom DMSCripts.
+These Objects can be referenced using DeployHub APIs or custom DMSCripts.
 
-Following is a description of each _Object_ and their attributes.
+Following is a description of each Object and their attributes.
 
-## Application Object
+## _Application_ Object
 
-[_Applications_](/userguide/packaging-applications/) are a collection of _Components_ that can be deployed as a single software solution. You define an Application by associating the _Components_ it will consume. The first version is the _Application Base Version._ When you change this _Application Base Version_, you create a new _Application Version_. _Applications_ are assigned and deployed to _Environments_. _Applications_ are associated to a _Domain_.
+[_Applications_](/userguide/packaging-applications/) are a collection of _Components_ that can be deployed as a single software solution. You define an _Application_ by associating the _Components_ it will consume. The first version is the _Application Base Version._ When you change this _Application Base Version_, you create a new _Application Version_. _Applications_ are assigned and deployed to _Environments_. _Applications_ are associated to a _Domain_.
 
-- **Application Base Version** : Defines the software product in terms of _Components_, _Attributes,_ and assigned _Environments_.
+- **_Application Base Version_** : Defines the software product in terms of _Components_, _Attributes,_ and assigned _Environments_.
 
-- **Application Version** : This represents any changes madei. It s deployed like an _Application Base Version_.
+- **_Application Version_** : This represents any changes made in to the _Base Versions_.
 
-An Application has the following properties:
+An _Application_ has the following properties:
 
 | **Property** | **Description** |
 | --- | --- |
@@ -46,7 +46,7 @@ An Application has the following properties:
 | name | _Application_ name. |
 | fqdomain |Fully qualified _Domain_ name. |
 | summary | Summary of the _Domain_. |
-| owner | User or UserGroup that owns it. |
+| owner | _User_ or _Group_ that owns it. |
 | parent | The Base _Application_ .|
 | predecessor |Predecessor _Application Version_. |
 | _Release_ | Defines the _Application_Object_with more than one_Application_. |

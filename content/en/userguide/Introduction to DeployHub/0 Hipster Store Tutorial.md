@@ -18,7 +18,7 @@ _Applications_ are a collection of _Components_.  _Components_ are deployed to _
 - [Packaging _Applications_](/userguide/packaging-applications/)
 - [Publishing _Components_](/publishing-components/)
 - [Build Your _Environments_](/userguide/first-steps/2-define-environments/)
-- [Define Your _Endpoints_](/userguide/first-steps/2-define-endpoints/
+- [Define Your _Endpoints_](/userguide/first-steps/2-define-endpoints/)
 
 **Step 1 - Deploy the Hipster Store Application**
 

@@ -23,7 +23,8 @@ A Reverse Proxy queries the DeployHub SaaS every minute to determine if a deploy
 
 Once the Reverse Proxy determines that a deployment is needed, it executes the deployment using all files on the inside of the firewall. The one-way communication initiates the deployment but all work is done local to your network. On completion of the deployment, the logs are pushed back up to the DeployHub SaaS for viewing and audit.
 
-![DeployHub Architecture](/userguide/gettingstarted/reverseproxy.png)
+![DeployHub Architecture](/userguide/images/ReverseProxy.png)
+
 
 ## Reverse Proxy Installation
 
