@@ -33,7 +33,7 @@ If you want your microservice _Component_ to be shared across your teams, publis
 
 ## _Component_ Versioning
 
-DeployHub uses a back-in versioning engine to track your _Components_. Versioning tracks _Component_ attributes including low level information that is needed for other teams to reuse your _Component_ including:
+DeployHub uses a back-end versioning engine to track your _Components_. Versioning tracks _Component_ attributes including low level information that is needed for other teams to reuse your _Component_ including:
 
 - GiHub, Bugzilla, Jire Change Request (DeployHub Pro Feature)
 - Gitrepo

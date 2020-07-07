@@ -49,7 +49,7 @@ An _Application_ has the following properties:
 | owner | _User_ or _Group_ that owns it. |
 | parent | The Base _Application_ .|
 | predecessor |Predecessor _Application Version_. |
-| _Release_ | Defines the _Application_Object_with more than one_Application_. |
+| _Release_ | Defines the _Application_ Object with more than one _Application_. |
 | _Applications_ | Multiple _Applications_ used to create a _Release_.|
 | _Components_ | The objects that the _Application_ consumes. |
 | approvals | Allows a control point for progressing a change within the pipeline process. |
@@ -64,7 +64,7 @@ An _Application_ has the following properties:
 
 A [_Release_](/userguide/profeatures/5-application-releases/) is only available in **DeployHub Pro**. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a 'Release Train.'
 
-## Change Request Object
+## _Change Request_ Object
 
 The [_Change Request_](/userguide/profeatures/5-change-requests/) object represents a change request record associated with either a _Component_ or an _Application_.
 
@@ -72,10 +72,10 @@ The _Change Request_ object has the following properties:
 
 | Property | Description|
 | --- | --- |
-| id | The change request id. |
-| name | The change request description. |
-| status  | The change request status. |
-| api\_url | A URL which - if passed to restful\_get - will return an array containing the full details of the change request from the external change tracking system. Useful for getting more information than the id / description / status combination which is stored in DeployHub. |
+| id | The _Change Request_ id. |
+| name | The _Change Request_ description. |
+| status  | The _Change Request_ status. |
+| api\_url | A URL which - if passed to restful\_get - will return an array containing the full details of the _Change Request_ from the external change tracking system. Useful for getting more information than the id / description / status combination which is stored in DeployHub. |
 | html\_url | A URL which will direct a browser to the page describing the change request in the external change tracking system. |
 
 ## Component Object
@@ -86,11 +86,11 @@ If you are an API or microservice developer, this will be where you do most of y
 
 _Components_ change over time, and so DeployHub contains _Component Base Versions_ and _Component Versions_ like those of _Application Base Versions_ and _Application Versions._ And like _Applications_, _Components_ are associated to a Domain.
 
-- **Component Base Version** : Objects within DeployHub that contain the files and procedures deployed to _Endpoints_.
+- **_Component Base Version_** : Objects within DeployHub that contain the files and procedures deployed to _Endpoints_.
 
-- **Component Version** : A child of the _Component Base Version_ that represents changes.
+- **_Component Version_** : A child of the _Component Base Version_ that represents changes.
 
-A _Component_ object has the following properties:
+A _Component_ Object has the following properties:
 
 | **Property** |  **Description** |
 | --- | --- | --- |
@@ -112,15 +112,15 @@ A _Component_ object has the following properties:
 | mtime | The date/time the _Component_ was last modified. |
 | attributes | Array of Strings, keyed by Attribute Name. |
 
-### Component and Application Relationships
+### _Component_ and _Application_ Relationships
 
 There is a many-to-many relationship between _Applications_ and _Components._ An _Application_ can contain many different _Components_, and a _Component_ can be used across many different _Applications_.  _Components_ can be easily shared between _Applications_. DeployHub tracks and versions the _Component_ relationships including to which _Applications_ they have been assigned.
 
-### Component and Application Versioning
+### _Component_ and _Application_ Versioning
 
-A back-in versioning engine tracks all software deployment configurations. This is done within an _Application_. An _Application_ consists of one or more _Components_. Versioning tracks all changes in both your _Application_ and _Component_ attributes. This includes all low level information such as the _Action_ used to perform the installation, environment variables, and database schemas.
+A back-end versioning engine tracks all software deployment configurations. This is done within an _Application_. An _Application_ consists of one or more _Components_. Versioning tracks all changes in both your _Application_ and _Component_ attributes. This includes all low level information such as the _Action_ used to perform the installation, environment variables, and database schemas.
 
-When you first define your _Application_, you create an _Application_ _Base_ _Version_. Over time, as you update your code and deliver new features, each change to the _Application_ creates a new _Application Version_.  _Application Versions_ package all your _Components_ in your entire software product. Like _Application Versions_, there is an initial _Component__Base_ _Version_ and subsequent _Component Versions,_ which represent any updates . An _Application Base Version_ or _Component Base Version_ is always the first one created, and it acts as a model for subsequent _Application_ or _Component Versions_. Otherwise they are identical types of objects.
+When you first define your _Application_, you create an _Application Base Version_. Over time, as you update your code and deliver new features, each change to the _Application_ creates a new _Application Version_.  _Application Versions_ package all your _Components_ in your entire software product. Like _Application Versions_, there is an initial _Component__Base_ _Version_ and subsequent _Component Versions,_ which represent any updates . An _Application Base Version_ or _Component Base Version_ is always the first one created, and it acts as a model for subsequent _Application_ or _Component Versions_. Otherwise they are identical types of objects.
 
 When a new _Application Version_ is created from either an _Application Base Version_ or another _Application Version_, it inherits all previous _Components_ from its predecessor. That predecessor is determined when running a _Create Version Task_ for an _Application Version_. You can specify whether the new _Application Version_ inherits its _Components_ from the original _Application Base Version_, the latest _Application Version_, or a specific _Application Version_.
 
@@ -128,11 +128,11 @@ DeployHub uses a simple versioning number schema starting at 1 and incrementing 
 
 You can use your CI/CD process to include variance in your versioning number (base name, variant, version).  See [Component Versioning Schema](/userguide/integrations/ci-cd_integrations/#_component_-versioning-schema).
 
-## Credential Object
+## _Credential_ Object
 
-The [_Credential Object_](/userguide/first-steps/2-define-your-credentials/) contains the logon and password needed to access _EndPoints_ and external Repositories like Git or Quay.
+The [_Credential_ Object](/userguide/first-steps/2-define-your-credentials/) contains the logon and password needed to access _EndPoints_ and external repositories like Git or Quay.
 
-The _Credential Object_ has the following properties:
+The _Credential_ Object has the following properties:
 
 | Property | Description |
 | --- | --- |
@@ -151,28 +151,28 @@ The _Credential Object_ has the following properties:
 | mtime | The date/time the _Credential_ was last modified. |
 | kind  | _Credential_ use. |
 
-## Data Source Objects
+## _Data Source_ Objects
 
  The [_Data Source_](/userguide/customizations/2-data-sources/) object  communicates with various sources of information such as databases, HTTP servers, FTP servers, etc., and can be used to connect to other DevOps tools as needed.
 
-## Date Object
+## _Date_ Object
 
-Dates track the date/time of the creation, deletion, or update of an _Object_.
+Dates track the date/time of the creation, deletion, or update of an Object.
 
-The _Date Object_ has the following properties:
+The _Date_ has the following properties:
 
 | Property | Description |
 | --- | --- |
 | to\_int(secs) | Returns an integer representing the date as the number of seconds since midnight on January 1st 1970 (epoch). The secs parameter is optional. If needed, the specified number of seconds is added to the date/time before the new value is returned. |
 | to\_char(fmt) |  Formats the date into a string given by the passed fmt string. The fmt string should contain characters as specified below. |
 
-## Domain Object
+## _Domain_ Object
 
-The [_Domain Object_](/userguide/customizations/2-define-your-functions-and-procedures/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Subdomains_. _Subdomains_ inherit the parents properties, _Tasks_ and access.
+The [_Domain_ Object](/userguide/customizations/2-define-your-functions-and-procedures/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Subdomains_. _Subdomains_ inherit the parents properties, _Tasks_ and access.
 
 Your microservices, a type of _Component_, are cataloged based on _Domains_ and _Sub_Domains_which you define._Domains_catalog microservices that solve the same 'problem sets.' In a similar way,_Applications_are assigned to their own_Domain_._Environments_and_Endpoints_are associated to_Domains_that are managing_Applications_.
 
-The highest level _Domain_ is your _Global Domain_. With the SaaS version, your _Global Domain_ name is defined based on your Company. With the on-premise installation, you will see a Domain called _Global_.
+The highest level _Domain_ is your _Global Domain_. With the SaaS version, your _Global Domain_ name is defined based on your Company. With the on-premise installation, you will see a _Domain_ called _Global_.
 
 _Domains_ also include _Tasks_. _Tasks_ include Move, Approve, Version and Deploy. _Tasks_ can be called by external solutions via APIs for integration into your Continuous Delivery Pipeline. _Tasks_ are associated to any _Domain_ and can be defined as _Pre_ or _Post_.  _Tasks_ are normally defined to _Life Cycle Subdomains_ and support continuous configuration management in your continuous delivery process.
 
@@ -182,8 +182,8 @@ The following properties can be accessed on the _Domain_ object:
 
 | **Property** |  **Description** |
 | --- | --- | --- |
-| id |  Domain id, as used in the database. |
-| name | Domain name. |
+| id |  _Domain_ id, as used in the database. |
+| name | _Domain_ name. |
 | fqdomain | Fully qualified domain name. |
 | summary | Summary text. |
 | domain | Higher level _Domain_ to which it belongs. |
@@ -191,17 +191,17 @@ The following properties can be accessed on the _Domain_ object:
 | lifecycle | A _Domain_ that includes a pipeline and the lowest level _Subdomains_. _Lifecycle-domains_ cannot have _Subdomains_. |
 | _Applications_ | The _Application_ objects which are contained within it. |
 | _Environments_ | The _Environment_ objects which are contained within it. |
-| creator | The User Object representing the user who created it. |
-| modifier | The User Object representing the user who last modified it. |
-| ctime | Date Object representing the date/time it was created. |
-| mtime | Date Object representing the date/time it was last modified. |
-| owner | User or UserGroup that owns it. |
+| creator | The _User_ or _Group_ Object representing the user who created it. |
+| modifier | The _User_ or _Group_  Object representing the user who last modified it. |
+| ctime | _Date_ Object representing the date/time it was created. |
+| mtime | _Date_ Object representing the date/time it was last modified. |
+| owner | _User_ or _Group_ Objects that owns it. |
 
-## Dropzone Object
+## _Dropzone_ Object
 
-The _DropZone Object_ represents a local area where deployment artifacts are  manipulated before sent to the target _Endpoint_(s). A _DropZone Object_ is also present on the stack during pre and post action processing for a _Component_. In this case, the content of the _DropZone_ are the files checked out from the repository for the associated _Component_ Items.
+The _DropZone_ Object represents a local area where deployment artifacts are  manipulated before sent to the target _Endpoint_(s). A _DropZone Object_ is also present on the stack during pre and post action processing for a _Component_. In this case, the content of the _DropZone_ are the files checked out from the repository for the associated _Component_ Items.
 
-A _DropZone Object_ has the following properties:
+A _DropZone_ Object has the following properties:
 
 | Property | Description |
 | --- | --- |
@@ -209,7 +209,7 @@ A _DropZone Object_ has the following properties:
 | path | The full path of where the _DropZone_ is located. Useful for passing to external scripts that may need to manipulate files in the _DropZone_. |
 | files | An Array of _DropZone Objects_, each one of which represents a file in the _DropZone_. The array is keyed by the full path name of the file. |
 
-### DropZone File Object
+### _DropZone_ File Object
 
 The _DropZone File Object_ represents a file in the _DropZone_.
 
@@ -218,14 +218,14 @@ The _DropZone File Object_ has the following properties:
 | Property | Description |
 | --- | --- |
 | dzpath | The relative path of the file in the _DropZone_. |
-| repopath | The relative path of the file as located in the Repository (this path is relative to the base directory of the repository). |
+| repopath | The relative path of the file as located in the repository (this path is relative to the base directory of the repository). |
 | size | The size of the file in bytes. |
 | ctime | The creation time of the file. |
 | mtime | The modified time of the file. |
 
-## Environment Object
+## _Environment_ Object
 
-The [_Environment Object_](/userguide/first-steps/2-define-environments/) represents a collection of _Endpoints_ where an _Application_ is deployed. Multiple _Environments_ can represent your pipeline stages such as Development, Testing, and Production for a single _Application_.  Your _Application_ can have as many _Envrionments_ as needed.
+The [_Environment_ Object](/userguide/first-steps/2-define-environments/) represents a collection of _Endpoints_ where an _Application_ is deployed. Multiple _Environments_ can represent your pipeline stages such as Development, Testing, and Production for a single _Application_.  Your _Application_ can have as many _Envrionments_ as needed.
 
 The following properties can be accessed for an _Environment_ object:
 
@@ -233,57 +233,57 @@ The following properties can be accessed for an _Environment_ object:
 | --- | --- |
 | id |  Unique identifier as used in the database. |
 | name | _Environment_ name. |
-| fqdomain | Fully qualified domain name. |
+| fqdomain | Fully qualified _Domain_ name. |
 | summary |  Description of the _Environment_. |
-| domain |  Domain in which it is contained. |
-| owner  | User or UserGroup that owns it.|
+| domain |  _Domain_ in which it is contained. |
+| owner  | _User_ or _Group_ Objects that owns it.|
 | basedir |  Base directory for deployments. |
 | _Endpoints_ |  The _Endpoints_ assigned to it. |
 | _Applications_ | The _Applications_ associated to it. |
-| creator |  The User who created it. |
-| modifier | The User who last modified it. |
+| creator |  The _User_ or _Group_ who created it. |
+| modifier | The _User_ or _Group_ who last modified it. |
 | ctime | The date/time it was created. |
 | mtime |  The date/time it was last modified. |
 | parent | Parent _Domain_. |
 
-## Endpoint Object
+## _Endpoint_ Object
 
 The [_Endpoint_](/userguide/first-steps/2-define-endpoints/) (server, container, VM/Cloud Image) object represents where a deployment will be sent. _Endpoints_ are assigned to an _Environment_.
 
-### Endpoint Mapping
+### _Endpoint_ Mapping
 
-Each _Component_ is assigned a _Type_ attribute. You can specify which kind of _Endpoint_ is needed. For example, a Database _Component_ is installed onto an _Endpoint_ with a corresponding Database _Type_ definition. A _Component_ is assigned a single _Type_, while an _Endpoint_ can be assigned multiple _Types_. For example, if your single _Endpoint_ needed to have both a database and your application binaries installed, it would be assigned both a 'Database' and a 'Binary' _Type_ attribute.
+Each _Component_ is assigned a Type attribute. You can specify which kind of _Endpoint_ is needed. For example, a Database _Component_ is installed onto an _Endpoint_ with a corresponding Database _Type_ definition. A _Component_ is assigned a single Type, while an _Endpoint_ can be assigned multiple Types. For example, if your single _Endpoint_ needed to have both a database and your application binaries installed, it would be assigned both a 'Database' and a 'Binary' _Type_ attribute.
 
-To map a _Component_ to _Endpoints_, assign one or more _Component Types_ to each _Endpoint_. Then assign a single _Type_ attribute to that _Component._ When an _Application_ is deployed, each _Component_ within the _Application_ will be deployed to each _Endpoint_ if the _Component's Type_ attribute matches one of the _Endpoint's Type_ attributes. DeployHub ships with standard _Component_ and _Endpoint Types_ and allows you to define custom _Type_ attributes.
+To map a _Component_ to _Endpoints_, assign one or more _Component_ Types to each _Endpoint_. Then assign a single Type attribute to that _Component_. When an _Application_ is deployed, each _Component_ within the _Application_ will be deployed to each _Endpoint_ if the _Component's Type_ attribute matches one of the _Endpoint's_ Type attributes. DeployHub ships with standard _Component_ and _Endpoint_ Types and allows you to define custom Type attributes.
 
 The _Endpoint_ object has the following properties:
 
 | **Property** | **Description** |
 | --- | --- |
 | id | A unique identifier as used in the database. |
-| name | The Endpoint name. |
+| name | The _Endpoint_ name. |
 | fqdomain | Fully qualified _Domain_ name. |
 | summary | Description of the _Endpoint_. |
-| domain | Domain in which it is contained. |
-| owner | User or UserGroup that owns it. |
+| domain | _Domain_ in which it is contained. |
+| owner | _User_ or _Group_ that owns it. |
 | hostname | Hostname (if set) or name otherwise. |
 | basedir | Base Directory for Deployments. |
 | type | _Endpoint_ Type, ie: cluster, windows, cloud, etc. |
 | credential | The logon and password used to access this _Endpoint_.|
 | _Components_ | The _Components_ currently installed on it. |
-| creator |  The User who created it. |
-| modifier | The User who last modified it. |
+| creator |  The _User_ or _Group_ who created it. |
+| modifier | The _User_ or _Group_ who last modified it. |
 | ctime | The date/time it was created. |
 | mtime | The date/time it was last modified. |
 | attributes | Array of Strings, keyed by Attribute Name. |
 
-## Notifier Objects
+## _Notifier_ Objects
 
-A [_Notifier_](/userguide/customizations/2-define-notifiers/) is sent after a successful or failed deployment attempt. If these features are activated, they are also sent when deployed files have been changed, a _Request_ _Task_ has been used, or when an _Endpoint_ is down,  DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose.
+A [_Notifier_](/userguide/customizations/2-define-notifiers/) is sent after a successful or failed deployment attempt. If these features are activated, they are also sent when deployed files have been changed, a Request Task has been used, or when an _Endpoint_ is down,  DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose.
 
-## User Object
+## _User_ Object
 
-The _User object_ represents a User in DeployHub. It has the following properties:
+The _User_ Object represents a User in DeployHub. It has the following properties:
 
 | **Property** | **Return Type** | **Description** |
 | --- | --- | --- |
@@ -302,21 +302,21 @@ The _User object_ represents a User in DeployHub. It has the following propertie
 | mtime | Date | Date Object representing the date/time the User was last modified. |
 | owner | Object | User or UserGroup that owns the User |
 
-## UserGroup Object
+## _Group_ Object
 
-The _UserGroup Object_ represents a collection of _Users_ with the same _Domain_ and security access. (This is a Pro Upgrade Feature.)
+The _Group_ Object represents a collection of _Users_ with the same _Domain_ and security access. (This is a Pro Upgrade Feature.)
 
-The _UserGroup Object_ has the following properties:
+The _Group_ Object has the following properties:
 
 | Property | Description |
 | --- | --- |
-| id |  A unique identfier as used in the database. |
-| name  | _UserGroup_ Name. |
-| kind  | Identifies whether this is a _User_ or a _UserGroup_. |
-| fqdomain | Fully qualified domain name. |
-| email  | The UserGroup&#39;s email address. |
-| creator | User Object representing who created this UserGroup. |
-| modifier | User Object representing who last modified this UserGroup. |
-| ctime |  Date Object representing the date/time it was created. |
-| mtime |  Date Object representing the date/time it was last modified. |
-| owner | User or UserGroup that owns the object. |
+| id |  A unique identifier as used in the database. |
+| name  | _Group_ Name. |
+| kind  | Identifies whether this is a _User_ or a _Group_. |
+| fqdomain | Fully qualified _Domain_ name. |
+| email  | The _Group's_ email address. |
+| creator | _User_ or _Group_ Object representing who created this Group. |
+| modifier | _User_ or _Group_ Object representing who last modified this _Group_. |
+| ctime |  _Date_ Object representing the date/time it was created. |
+| mtime |  _Date_ Object representing the date/time it was last modified. |
+| owner | _User_ or _Group_ that owns the object. |
