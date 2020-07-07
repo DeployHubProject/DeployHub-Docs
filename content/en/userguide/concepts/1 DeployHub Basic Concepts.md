@@ -60,13 +60,13 @@ An _Application_ has the following properties:
 | mtime |  The date/time it was last modified. |
 | attributes |  An Array of Strings, keyed by Attribute Name. |
 
-### Release Object
+### _Release_ Object
 
 A [_Release_](/userguide/profeatures/5-application-releases/) is only available in **DeployHub Pro**. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a 'Release Train.'
 
 ## _Change Request_ Object
 
-The [_Change Request_](/userguide/profeatures/5-change-requests/) object represents a change request record associated with either a _Component_ or an _Application_.
+The [_Change Request_](/userguide/profeatures/5-change-requests/) Object represents a change request record associated with either a _Component_ or an _Application_.
 
 The _Change Request_ object has the following properties:
 
@@ -78,7 +78,7 @@ The _Change Request_ object has the following properties:
 | api\_url | A URL which - if passed to restful\_get - will return an array containing the full details of the _Change Request_ from the external change tracking system. Useful for getting more information than the id / description / status combination which is stored in DeployHub. |
 | html\_url | A URL which will direct a browser to the page describing the change request in the external change tracking system. |
 
-## Component Object
+## _Component_ Object
 
 DeployHub manages microservices and other reusable objects as [_Components_](/userguide/publishing-components/). These are assigned to an _Application_ even though they are managed independently. By assigning _Components_ to _Applications_ you track a 'logical' view of your software solution. In a monolithic approach, this happened at the software compile and link step. In microservices though, they are loosely coupled and linked at run-time. Defining _Components_ to _Applications_ puts the _Application_ back in the picture, even if it is only a 'logical' view.
 
