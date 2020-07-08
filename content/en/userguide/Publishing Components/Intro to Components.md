@@ -9,7 +9,7 @@ description: >
 
 DeployHub manages microservices and other reusable objects as _Components_.  _Components_ are assigned to an _Application_ even though they are managed independently.  Assign _Components_ to _Applications_ to track a 'logical' view of your software solution. In a monolithic approach, we performed this step during the software compile and link, or 'build' process. In microservices, they are loosely coupled and linked at run-time. Defining _Components_ to [_Applications_](/userguide/packaging-applications/buildingapplications/) puts the _Application_ in a 'logical' view.
 
-If you are an API or microservice developer, this will be where you do most of your work. However, application developers may also define _Components_ that are used only by their specific _Application_. _Components_ are microservices (containers), Database updates or files, along with Pre and Post [_Actions_](/userguide/customizations/2-define-your-actions/#intro-to-actions) that are used to control the deployment of the _Component_. By tracking the low-level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across organizational teams and _Environments_.
+If you are an API or microservice developer, this will be where you do most of your work. However, application developers may also define _Components_ that are used only by their specific _Application_. _Components_ are microservices (containers), Database updates or files, along with Pre and Post [_Actions_](/userguide/customizations/2-define-your-actions/#intro-to-actions) that are used to control the deployment of the _Component_. By tracking the low level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across organizational teams and _Environments_.
 
 _Components_ change over time, and so DeployHub contains _Component Base Versions_ and _Component Versions_.
 
@@ -33,7 +33,7 @@ If you want your microservice _Component_ to be shared across your teams, publis
 
 ## _Component_ Versioning
 
-DeployHub uses a back-end versioning engine to track your _Components_. Versioning tracks _Component_ attributes including low level information that is needed for other teams to reuse your _Component_ including:
+DeployHub uses a backend versioning engine to track your _Components_. Versioning tracks _Component_ attributes including low level information that is needed for other teams to reuse your _Component_ including:
 
 - GiHub, Bugzilla, Jire Change Request (DeployHub Pro Feature)
 - Gitrepo

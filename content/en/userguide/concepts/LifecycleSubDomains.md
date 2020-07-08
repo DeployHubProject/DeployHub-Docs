@@ -19,9 +19,9 @@ When you create a Lifecycle Subdomain, you provide a means to include lifecycle 
 
 ### Establishing the Progression Order of Your Lifecycle
 
-You can force the progression of your lifecycle process by adding a "Move" Task to the lifecycle _Subdomain_.  At the "Move" Task level, you define what Lifecycle _Subdomain_ will be the next state (the "move to _Domain_). This is how DeployHub clearly defines the order of how an _Application_ should progress through the lifecycle, i.e. first development, then test, and finally production. A "Move" Task does not perform a deployment, it just stages the _Application_ for a deployment into the _Environments_ associated with that Lifecycle _Subdomain.
+You can force the progression of your lifecycle process by adding a "Move" Task to the lifecycle _Subdomain_.  At the "Move" Task level, you define what Lifecycle _Subdomain_ will be the next state (the "move to _Domain_). This is how DeployHub clearly defines the order of how an _Application_ should progress through the lifecycle, i.e. first development, then test, and finally production. A "Move" Task does not perform a deployment, it just stages the _Application_ for a deployment into the _Environments_ associated with that Lifecycle _Subdomain_.
 
-To deploy an _Application_ into an _Environment_ make sure that the Deploy Task is assigned to the _Domain_.  The Deploy Task is the default Task for all newly created _Domains.  
+To deploy an _Application_ into an _Environment_ make sure that the Deploy Task is assigned to the _Domain_.  The Deploy Task is the default Task for all newly created _Domains_.  
 
 ### Your Lifecycle _Subdomains_ and your Continuous Delivery Engine
 

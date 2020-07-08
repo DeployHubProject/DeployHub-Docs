@@ -11,7 +11,7 @@ description: >
 - [Docker for CentOS](https://docs.docker.com/engine/install/centos/)
 - [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 - [Docker for Fedora](https://docs.docker.com/engine/install/fedora/)
-- [Docker for RedHat](https://docs.docker.com/install/linux/docker-ee/rhel/)
+- [Docker for RedHat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html-single/getting_started_with_containers/index)
 - [Docker for OS/X](https://docs.docker.com/docker-for-mac/install/)
 
 ### Test your Docker Install

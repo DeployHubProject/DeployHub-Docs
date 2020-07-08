@@ -8,21 +8,21 @@ description: >
 
 ## The Hipster Store Tutorial
 
-This _Hipster Store_ tutorial walks you through the basic concepts and objects behind DeployHub. It also allows you to run a deployment in our hosted Kubernetes cluster (Google.) In DeployHub terminology, the Hipster Store is both an _Application_ and a _Subdomain_. The Hipster Store belongs to a higher level _Domain_ called the "Online Store Company".  We will  first review and deploy an _Application_ and then we will the _Application's_ _Components_ and how they are organized under _Domains_. We will review the "Online Store Company" _Domain_ structure, and show how the Objects are organized using a _Domain_ design.
+This _Hipster Store_ tutorial walks you through the basic concepts and [Objects](/userguide/concepts/1-deployhub-basic-concepts/) behind DeployHub. It also allows you to run a deployment in our hosted Kubernetes cluster (Google.) In DeployHub terminology, the Hipster Store is both an _Application_ and a _Subdomain_. The Hipster Store belongs to a higher level _Domain_ called the "Online Store Company".  We will first review and deploy an _Application_ and then we will review the _Application's_ _Components_ and how they are organized under _Domains_. We will review the "Online Store Company" _Domain_ structure, and show how the Objects are organized using a _Domain_ design.
 
-### Learn About Applications
+## Learn About Applications
 
-An _Application_ is a collection of microservices or _Components_ that make up a complete software solution.  In monolithic, we compile/link an _Application_, but this goes away in microservices.  DeployHub puts the _Application_ back together providing a "logical view" including the _Components_ that it depends upon. 
+An _Application_ is a collection of microservices or _Components_ that make up a complete software solution.  In monolithic, we compile/link an _Application_, but this goes away in microservices.  DeployHub puts the _Application_ back together providing a "logical view" of the _Application_ including the _Components_ that it depends upon.
 
 _Applications_ are a collection of _Components_.  _Components_ are deployed to _Environments_. _Environments_ are a collection of _Endpoints_.  For more on each of these Objects see:
 - [Packaging _Applications_](/userguide/packaging-applications/)
-- [Publishing _Components_](/publishing-components/)
+- [Publishing _Components_](/userguide/publishing-components/)
 - [Build Your _Environments_](/userguide/first-steps/2-define-environments/)
 - [Define Your _Endpoints_](/userguide/first-steps/2-define-endpoints/)
 
 **Step 1 - Deploy the Hipster Store Application**
 
-To get started, you will first deploy the Hipster Store _Application Base Version_ to the Hipster Store _Environment_. 
+To get started, [sign up for DeployHub](https://www.deployhub.com/free-team-sign-up/). Once you signed up, you will first deploy the Hipster Store _Application Base Version_ to the Hipster Store _Environment_. 
 
 - Select the _Application_ Menu option from the left side of the DeployHub Home panel. This will bring you to a List View. 
 - Checkbox the "Hipster Store;July 4th Sale." This is the Hipster Store _Application Base Version_ and it has not been previously deployed.
@@ -57,42 +57,48 @@ To view the _Domains_ click on the "_Domains_" Menu.  You will see the following
 The _Domain_ dashboard is displayed based a "Sunburst" map, starting at the highest level _Domain_ with the ability to drive down into the _Subdomains_, and _Subdomains_ after that. 
 
 From our "Online Store Company" high level _Domain_, you will see several additional _Subdomains_.  The first level includes:
-Hipster Store - A Project _Subdomain_ where our Application lives
-Purchase Processing - A Catalog _Subdomain_ where microservices and other _Components_ live that handles the purchase processing services for the entire.
-Store Services - A Catalog _Subdomain_ where microservices and other _Components_ live that handles general services for the entire company.
-Load Generator - A Catalog _Subdomain_ where reusable testing _Components_ live. 
+
+- Hipster Store - A Project _Subdomain_ where our _Application_ lives.
+- Purchase Processing - A Catalog _Subdomain_ where microservices and other _Components_ live that handles the purchase processing services for the entire fictitious Online Company Store.
+- Store Services - A Catalog _Subdomain_ where microservices and other _Components_ live that handle general services for the entire company.
+- Load Generator - A Catalog _Subdomain_ where reusable testing _Components_ live. 
 
 Each of these _Subdomains_ have their own _Subdomains_.  Let's explore:
 
 **Step 1 - Explore a Catalog _Subdomain_**
+
 From the DeployHub home panel, select _Domains_ on the left hand side Main Menu. Click on the "Store Services" _Subdomain_ to see what it includes. You will see _Subdomains_ that provide services for the following "Solution Spaces":
 
-Add Services
-Email Services
-Product Catalog Services
-Recommendation Services
-Cart Services
+- Add Services
+- Email Services
+- Product Catalog Services
+- Recommendation Services
+- Cart Services
 
 These Store Services _Subdomains_ organize _Components_ that can be reused by any other team for building out custom websites for our fictitious Online Store Company.  You can also explore the Purchase Processing _Subdomain_ to see how these solution spaces are organized. You can click on the center of the starburst map to navigate back up to higher level _Domains_.
 
-**Step 2 - Explore a Project _Subdomain**
+**Step 2 - Explore a Project _Subdomain_**
+
 Now lets take a look at our Hipster Store _Subdomain_.  The Hipster Store _Subdomain_ manages our Hipster Store _Application_.  It also has _Subdomains_, but these _Subdomains_ are refereed to as "Lifecycle _Subdomains_."  Lifecycle Subdomains are defined to contain _Environments_ where your _Application_ will be deployed. Lifecycle _Subdomains_ cannot have any child _Subdomains_.  It is the lowest level of _Subdomain_ allowed.
 
 **Step 3 - Explore the Online Store _Domain_ Details and Access**
-Return to the Online Company Store _Domain_ by clicking anywhere in the center of the sunburst map. Details about this Domain is displayed to the right of the sunburst.  You will see that is belongs to the "Global" Domain, shown by the field labeled "Full Domain."  You will also see that it has the "All _Subdomains_ are Lifecycles" option set to "No" and a list of it's child _Subdomains_. There are other details as well. For a full description see [Building Your Domain Catalog](/userguide/first-steps/2-defining-domains/).
 
-The Access Control Section defines who can see this _Domain_ and it's child _Subdomains_. For this example, the "Everyone" _Group_ is defined to all Access.  The Everyone _Group_ is a default DeployHub _Group_ that includes all _Users_ and _Administrators_.  For more on _Users_ see [Managing Users](/userguide/customizations/2-users/).  To understand _Groups_ see [Modifying Default User Groups](/userguide/customizations/teamgroups/).
+Return to the Online Company Store _Domain_ by clicking anywhere in the center of the sunburst map. Details about this _Domain_ is displayed to the right of the sunburst.  You will see that is belongs to the "Global" _Domain_, shown by the field labeled "Full Domain."  You will also see that it has the "All _Subdomains_ are Lifecycles" option set to "No" and a list of it's child _Subdomains_. There are other details as well. For a full description see [Building Your Domain Catalog](/userguide/first-steps/2-defining-domains/).
+
+The Access Control Section defines who can see this _Domain_ and it's child _Subdomains_. For this example, the "Everyone" _Group_ is defined to all Access.  The Everyone _Group_ is a default DeployHub _Group_ that includes all _Users_ and _Administrators_.  For more on _Users_ see [Managing Users](/userguide/customizations/2-users/).  
 
 **Step 3 - Explore Tasks for the Online Company Store _Domain_**
+
 You used the "Deploy Version to an Environment" Task when you deployed the Hipster Store. Tasks allow you to perform steps related to deployments and are only needed by your Project _Domains_. You can assign a Task at a higher _Domain_ level allowing any child _Domains_ to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your _Subdomains_. However, this means that a Catalog _Domain_ may include Tasks that it cannot see. 
 
-You can assign Access to Tasks and customize them with Pre and Post _Actions_  For more on Tasks see [Deployment Tasks](/userguide/first-steps/2-defining-domains/#deployment-tasks).
+You can assign Access to Tasks and customize them with Pre and Post _Actions_.  For more on Tasks see [Deployment Tasks](/userguide/first-steps/2-defining-domains/#deployment-tasks).
 
 ## Learn about Components
 
 _Components_ are microservices, binaries, database SQL, files or any deployable artifact used by an _Application_.  _Components_ themselves are not deployed, they must be consumed by an _Application_ in order to be deployed to an _Environment_. With microservices, this may seem counter intuitive as microservices are independently deployable.  This is true and DeployHub takes this into account during a deployment of an _Application_. DeployHub deploys using incremental processing which means if a single  _Component_ of an _Application_ is updated, and the _Application_ is deployed, only the single _Component_ is moved.  DeployHub does incremental processing of deployable objects, but relates them to a logical _Application_.  If an _Application_ pushes a new version of a single microservice _Component_ to a cluster, it will move alone.  Subsequently, all dependent _Applications_ will have a new _Application Version_ created.
 
 **Step 1 - Review the Hipster Store _Components_**
+
 Choose the _Components_ Menu option on the left side of the DeployHub home panel. This will take you to a list view of all _Component Base Versions_ and _Component Versions_.  A _Component Base Version_ is the original _Component_. When the _Component_ is updated, a _Component Version_ is created.  
 
 Double click on the "cartservice;v1_2_2_9_gcadf581" _Component Version_ to explore the _Component_.  You will be taken to the Dashboard view. You will see in the "Full Domain" field of the Details Section to what _Domain_ the _Component_ belongs.  You will see all _Applications_ that have a dependency on this version of the _Component_, and in the "Deployed Environments for _Component_" you will see all _Environments_ where the _Component_ has been deployed. 
@@ -102,17 +108,19 @@ Double click on the "cartservice;v1_2_2_9_gcadf581" _Component Version_ to explo
 _Environments_ are collections of one or more _Endpoints_ where _Applications_ are installed.  
 
 **Step 1 - Review the Hipster Store _Environment_**
+
 Select _Environments_ from the left hand side of the DeployHub main home panel. This will take you to a list of _Environments_. Double click on the "Hipster Store Cluster". From the Dashboard view you can see how the _Environment_ was setup.  You can also see all of the _Components_ installed on this cluster. 
 
 **Step 2 - Review the Hipster Store Cluster _Endpoint_**
+
 Select _Endpoints_ from the left hand side of the DeployHub main home panel.  This will take you to a list of _Endpoints_.  Double click on the "Hipster Store Cluster Helm Host" _Endpoint_.  This _Endpoint_ defines where Helm will execute to update the cluster. This _Endpoint_ has been configured to talk to the Hipster Store Cluster.  See [Helm for Container Deployments](/userguide/integrations/helm/) for creating your Helm configuration file. 
 
 ## Conclusion
 
 There are many other features of DeployHub that we did not get to cover on this short test drive. However, you should have the basic understanding of the major Objects and concepts needed to get you started.  What we did not cover that you may want to view are:
 
-[Create Credentials](/userguide/first-steps/2-define-your-credentials/) - User names and passwords for accessing _Endpoints_ and _Repositories_.
-[Connect Repositories](/userguide/first-steps/2-define-repositories/) - Repositories for accessing artifiacts. 
+- [Create Credentials](/userguide/first-steps/2-define-your-credentials/) - User names and passwords for accessing _Endpoints_ and _Repositories_.
+- [Connect Repositories](/userguide/first-steps/2-define-repositories/) - Repositories for accessing artifiacts. 
 
 We will leave you with how to setup DeployHub for your installation.  See [First Steps](/userguide/first-steps/), for getting your setup completed. Once you have your setup complete you can start publishing _Components_, packaging _Applications_ and performing deployments. 
 

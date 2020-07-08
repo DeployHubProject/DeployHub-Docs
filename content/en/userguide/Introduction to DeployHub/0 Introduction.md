@@ -16,7 +16,7 @@ DeployHub is a SaaS based central 'hub' for cataloging, versioning, sharing and 
 
 DeployHub is not a 'microservice registry' or 'API Gateway."  Instead, Developers interact with DeployHub to 'check-in' or publish microservices to a Domain Catalog before they are deployed to any cluster. DeployHub serves as an internal market place for finding, tracking and deploying microservices and relating them to the _Applications_ that consume them. The publishing catalog is based on a _Domain_ structure to support a Domain Driven Design.
 
-Microservices are independently deployable and require a solution that can support the coordination of many independent moving parts. Our back-end version control database accurately tracks and deploys many moving parts of a microservice implementation, producing _Application_ maps and _Component_ dependencies.
+Microservices are independently deployable and require a solution that can support the coordination of many independent moving parts. Our backend version control database accurately tracks and deploys many moving parts of a microservice implementation, producing _Application_ maps and _Component_ dependencies.
 
 If you have not moved to a microservice architecture, DeployHub can help you visualize and continuously deploy your monolithic _Application_ based on _Components_.  A _Component_ can be anything from a microservice to a .Jar file, a DB update to an environment variable update.  So while you begin digesting a new modern architecture, DeployHub starts shifting the way you conceptualize your monolithic _Application_ and prepares you for a service based architecture.
 
@@ -31,10 +31,10 @@ DeployHub versions both microservices (_Components_) and 'logical' _Applications
 - Container SHA
 - Docker Registry
 - Environment Variables
-- Deployment Script (Helm Chart, Ansible Playbook, etc)
+- Deployment Script (Helm Chart, Ansible Playbook, etc.)
 - Any Attributes (DB Name for example)
 
- _Application Versions_ are based on the collection of _Component Versions_ If a new version of a _Component_ is pushed out to the environment, DeployHub auto increments the _Component_ version and the consuming _Application_ version.  Dashboards are provided for each new _Application_ version showing:
+ _Application Versions_ are based on the collection of _Component Versions_. If a new version of a _Component_ is pushed out to the environment, DeployHub auto increments the _Component_ version and the consuming _Application_ version.  Dashboards are provided for each new _Application_ version showing:
 
 - A full map of all the microservices, or _Components_, the _Application_ version is consuming (your new Bill of Material - BOM report).
 - The specific changes that created the new _Application_ version (your new diff report).
@@ -55,7 +55,7 @@ Our core features are critical to a successful implementation of microservices.
 
 - Once you begin sharing microservices, you need to track who is using the microservice.  **Dependency maps** show you the 'logical' view of your application and which microservices, or _Components_, it consumes. An _Application_ is a logical collection of _Components_ that make up an entire software solution.
 
-- **A back-end relational database versions your microservice**. A change to any of the microservice attributes (container repository SHA, Helm Chart, etc.) initiates a new version of the microservice and a new version of the _Applications_ that consumes it. Tracking these updates gives you uncompromised visibility of your _Application_ and microservice usage.  
+- **A backend relational database versions your microservice**. A change to any of the microservice attributes (container repository SHA, Helm Chart, etc.) initiates a new version of the microservice and a new version of the _Applications_ that consumes it. Tracking these updates gives you uncompromised visibility of your _Application_ and microservice usage.  
 
 - DeployHub **independently deploys microservices** and records critical release information about the end target locations. This provides DevOps and Site Reliability Engineers the ability to make data-driven decisions when something goes wrong.
 
@@ -63,7 +63,7 @@ Our core features are critical to a successful implementation of microservices.
 
 ## The Secret Sauce
 
-DeployHub is the only configuration management and deployment solution with a built-in version control engine. DeployHub supports fully incremental releases as well as canary or blue/green deployments with fast rollbacks, roll forward, or version jumps. Our back-end version control database is designed specifically for tracking independently deployed _Components_. Every software release configuration is based upon a collection of _Components_ and their critical deployment attributes. A _Component_ is a microservice, executable, database update or configuration, and is part of a complete software _Application_. _Components_ change over time creating _Component Versions_ and therefore _Application Versions_.
+DeployHub is the only configuration management and deployment solution with a built-in version control engine. DeployHub supports incremental releases as well as canary or blue/green deployments with fast rollbacks, roll forward, or version jumps. Our backend version control database is designed specifically for tracking independently deployed _Components_. Every software release configuration is based upon a collection of _Components_ and their critical deployment attributes. A _Component_ is a microservice, executable, database update or configuration, and is part of a complete software _Application_. _Components_ change over time creating _Component Versions_ and therefore _Application Versions_.
 
 DeployHub supports continuous configuration versioning of:
 

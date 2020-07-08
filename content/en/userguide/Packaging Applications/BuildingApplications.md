@@ -14,7 +14,7 @@ description: >
 
 - **Application Version** : This child of the _Application Base Version_ represents changes and can be deployed just as an _Application Base Version_ is.
 
-An _Application_ and all objects within it will be deployed to one or more _Endpoints_. (Each one represents a container, physical or virtual server in the enterprise in an _Environment_. A back-end versioning engine tracks all _Application Version_ configurations. For this reason, each new version will be given a new version number.
+An _Application_ and all objects within it will be deployed to one or more _Endpoints_. (Each one represents a container, physical or virtual server in the enterprise in an _Environment_. A backend versioning engine tracks all _Application Version_ configurations. For this reason, each new version will be given a new version number.
 
 For instance, your Application Base Version may be called MyApp;1, subsequent versions would be automatically named MyApp;2, MyApp;3, etc.
 

@@ -21,7 +21,7 @@ DeployHub Pro includes a ["smart" Calendar](/userguide/profeatures/calendar/).  
 
  You can add new Tasks from the _Domain_ Dashboard by navigating to the _Domain_ and interacting with the Tasks Section.  Select the +Add option from the Tasks Section and a pop-up displays all available Tasks. Selecting a Task will add a new row into the table.  Use the Task Detail Section to define the unique details of your new Task. You can update or remove a Task by using the Task Section table.  Using the checkbox, select the item and use the the Delete or Edit options.
 
-Once you create a Task, it is recommended that you rename that Task to more closely describe is use depending on the options selected. 
+Once you create a Task, it is recommended that you rename that Task to more closely describe its use depending on the options selected.
 
 Below is a description of all Tasks and their detailed information.
 
