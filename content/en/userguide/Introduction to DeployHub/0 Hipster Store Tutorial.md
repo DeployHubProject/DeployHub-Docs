@@ -10,23 +10,13 @@ description: >
 
 When you [signed up to use DeployHub SaaS](https://www.deployhub.com/register-for-team/?), you were asked for basic information. Your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a _Subdomain_ under your Company _Domain_.
 
-DeployHub is accessible through the following url:
+ DeployHub is accessible through the following url:
 
-~~~
-https://console.deployhub.com/dmadminweb/Home
-~~~
+[https://console.deployhub.com/dmadminweb/Home](https://console.deployhub.com/dmadminweb/Home)
 
 Login using the UserID and Password you used when you signed up for DeployHub.
 
-## Navigating through Your _Domains_
-
-You will see three levels of _Domains_:
-<ul><li>Global - the highest level Domain. This cannot be changed.</li>
-<ul><li>Online Company Store - A sample company configuration. See <a href="/userguide/introduction-to-deployhub/0-hipster-store-tutorial/">Hipster Store </a> </li>
-<li>Your Company Name - Your Company Domain Level</li>
-<ul><li>Your Project Name - A Subdomain of your Company Domain. This Domain can be defined with "Lifecycle Subdomains for managing a deployable software application using a Pipeline, or it can be used as a Catalog Domain for publishing Components such as microservices.</li></ul></ul></ul> 
-
-## The Online Company Store - Hipster Store Tutorial
+## The Online Store Company - Hipster Store Tutorial
 
 This _Hipster Store_ tutorial walks you through the basic concepts and [Objects](/userguide/concepts/1-deployhub-basic-concepts/) behind DeployHub. It also allows you to run a deployment in our hosted Kubernetes cluster (Google.) In DeployHub terminology, the Hipster Store is both an _Application_ and a _Subdomain_. The Hipster Store belongs to a higher level _Domain_ called the "Online Store Company".  We will first review and deploy an _Application_ and then we will review the _Application's_ _Components_ and how they are organized under _Domains_. We will review the "Online Store Company" _Domain_ structure, and show how the Objects are organized using a _Domain_ design.
 
@@ -68,18 +58,18 @@ Once the deployment completes and shows "success" in the results colum, double c
 
 ## Learn about Domains 
 
-_Domains_ serve as the basic structure of organizing your microservice catalog. Developers use _Domains_ to catalog microservices based on 'solution spaces' allowing them to both share their services and find others. The Online Store Company's _Domains_ are defined using several _Subdomains._ In our tutorial, the highest level Company _Domain_ is called "Online Store Company".
+_Domains_ serve as the basic structure of organizing your microservice catalog. Developers use _Domains_ to catalog microservices based on 'solution spaces' allowing them to both share their services and find others. 
+_Domains_ are not folders. They serve as a method for creating fully qualified names of Objects within DeployHub to keep things organized.  You will learn how each Object is defined to a _Domain_ and how the Object's fully qualified name is derived. _Domains_ also manage security and Tasks.  When you assign security options and Tasks at the _Domain_ level, any child _Subdomain_ inherits the value. A child _Subdomain_ can override a parent _Domain_ value. Start exploring _Domains_ from the left side main menu and selecting the _Domain_ option.  You will be brought to a sunburst map that shows the following three levels of _Domains_:
 
-_Domains_ are not folders. They serve as a method for creating fully qualified names of Objects within DeployHub to keep things organized.  You will learn how each Object is defined to a _Domain_ and how the Object's fully qualified name is derived. _Domains_ also manage security and Tasks.  When you assign security options and Tasks at the _Domain_ level, any child _Subdomain_ inherits the value. A child _Subdomain_ can override a parent _Domain_ value. 
+<ul><li>Global - the highest level Domain. This cannot be changed.</li>
+<ul><li>Online Store Company - A sample company configuration. See <a href="/userguide/introduction-to-deployhub/0-hipster-store-tutorial/">Hipster Store </a> </li>
+<li>Your Company Name - Your Company Domain Level</li>
+<ul><li>Your Project Name - A Subdomain of your Company Domain. This Domain can be defined with "Lifecycle Subdomains for managing a deployable software application using a Pipeline, or it can be used as a Catalog Domain for publishing Components such as microservices.</li></ul></ul></ul> 
 
-To view the _Domains_ click on the "_Domains_" Menu.  You will see the following:
-
-The _Domain_ dashboard is displayed based a "Sunburst" map, starting at the highest level _Domain_ with the ability to drive down into the _Subdomains_, and _Subdomains_ after that. 
-
-From our "Online Store Company" high level _Domain_, you will see several additional _Subdomains_.  The first level includes:
+For our tutorial, we will explore the Online Store Company _Subdomain_ and it's child _Subdomains_. Click on the Sunburst Online Store Company Segment to view the child _Subdomains_.  
 
 - Hipster Store - A Project _Subdomain_ where our _Application_ lives.
-- Purchase Processing - A Catalog _Subdomain_ where microservices and other _Components_ live that handles the purchase processing services for the entire fictitious Online Company Store.
+- Purchase Processing - A Catalog _Subdomain_ where microservices and other _Components_ live that handles the purchase processing services for the entire fictitious Online Store Company.
 - Store Services - A Catalog _Subdomain_ where microservices and other _Components_ live that handle general services for the entire company.
 - Load Generator - A Catalog _Subdomain_ where reusable testing _Components_ live. 
 
@@ -103,11 +93,11 @@ Now lets take a look at our Hipster Store _Subdomain_.  The Hipster Store _Subdo
 
 **Step 3 - Explore the Online Store _Domain_ Details and Access**
 
-Return to the Online Company Store _Domain_ by clicking anywhere in the center of the sunburst map. Details about this _Domain_ is displayed to the right of the sunburst.  You will see that is belongs to the "Global" _Domain_, shown by the field labeled "Full Domain."  You will also see that it has the "All _Subdomains_ are Lifecycles" option set to "No" and a list of it's child _Subdomains_. There are other details as well. For a full description see [Building Your Domain Catalog](/userguide/first-steps/2-defining-domains/).
+Return to the Online Store Company _Domain_ by clicking anywhere in the center of the sunburst map. Details about this _Domain_ is displayed to the right of the sunburst.  You will see that is belongs to the "Global" _Domain_, shown by the field labeled "Full Domain."  You will also see that it has the "All _Subdomains_ are Lifecycles" option set to "No" and a list of it's child _Subdomains_. There are other details as well. For a full description see [Building Your Domain Catalog](/userguide/first-steps/2-defining-domains/).
 
 The Access Control Section defines who can see this _Domain_ and it's child _Subdomains_. For this example, the "Everyone" _Group_ is defined to all Access.  The Everyone _Group_ is a default DeployHub _Group_ that includes all _Users_ and _Administrators_.  For more on _Users_ see [Managing Users](/userguide/customizations/2-users/).  
 
-**Step 3 - Explore Tasks for the Online Company Store _Domain_**
+**Step 3 - Explore Tasks for the Online Store Company _Domain_**
 
 You used the "Deploy Version to an Environment" Task when you deployed the Hipster Store. Tasks allow you to perform steps related to deployments and are only needed by your Project _Domains_. You can assign a Task at a higher _Domain_ level allowing any child _Domains_ to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your _Subdomains_. However, this means that a Catalog _Domain_ may include Tasks that it cannot see. 
 

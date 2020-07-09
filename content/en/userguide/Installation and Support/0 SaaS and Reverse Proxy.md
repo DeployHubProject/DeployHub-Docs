@@ -9,35 +9,21 @@ description: >
 
 When you [signed up to use DeployHub SaaS](https://www.deployhub.com/register-for-team/?), you were asked for basic information. Your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a _Subdomain_ under your Company _Domain_.
 
-~~~
-Note:  If someone else from your organization signs up, they will be informed that they must contact you as the Administrator to add them to DeployHub.
-~~~
+**Note:**  If another user signs up with the same Company name, they will be informed that they must contact the Administrator for access to the DeployHub account. The Administrator is the first person who signed up to DeployHub with that Company name.
 
  DeployHub is accessible through the following url:
 
-~~~
-https://console.deployhub.com/dmadminweb/Home
-~~~
+[https://console.deployhub.com/dmadminweb/Home](https://console.deployhub.com/dmadminweb/Home)
 
-Login using the UserID and Password you used when you Signed up for DeployHub.
+Login using the UserID and Password you used when you signed up for DeployHub.
 
-## Navigating through Your _Domains_
-
-You will see three levels of _Domains_:
-<ul><li>Global - the highest level Domain. This cannot be changed.</li>
-<ul><li>Online Company Store - A sample company configuration. See <a href="/userguide/introduction-to-deployhub/0-hipster-store-tutorial/">Hipster Store </a> </li>
-<li>Your Company Name - Your Company Domain Level</li>
-<ul><li>Your Project Name - A Subdomain of your Company Domain. This Domain can be defined with "Lifecycle Subdomains for managing a deployable software application using a Pipeline, or it can be used as a Catalog Domain for publishing Components such as microservices.</li></ul></ul></ul>
-
-You can change the name of your Company or Project as needed. You an also add new _Subdomains_ to your Company _Domain_.
-
-## The Online Company Store -  Hipster Store Tutorial
+## Take a Test Drive of the Online Store Company -  Hipster Store Tutorial
 
 The Hipster Store Tutorial is provided to give you a review of _Domains_, _Components_, and _Applications_ and will help you understand DeployHub basic concepts. See [Hipster Store Tutorial](/userguide/introduction-to-deployhub/0-hipster-store-tutorial/) for more information.  
 
 ## Installing the Reverse Proxy for Managing Deployments
 
-To begin deploying, you first install a Reverse Proxy inside your firewall. This contacts DeployHub in our SaaS environment to receive deployment requests.  The Reverse Proxy is required for deploying into your environment.
+To start deploying your _Applications_ and _Components_, you will first need to install a Reverse Proxy inside your firewall. This contacts DeployHub in our SaaS environment to receive deployment requests.  The Reverse Proxy is required for deploying into your environment.
 ~~~
 Note: You do not need to install a Reverse Proxy in order to deploy the Hipster Store Application in the Hipster Store Tutorial. This deployment is done in the DeployHub Google Cloud environment.
 ~~~
@@ -94,7 +80,7 @@ Run:
 docker pull quay.io/deployhub/deployhub-rproxy:latest
 ~~~
 
-## Step 3 - Find your image SHA
+**Step 3 - Find your image SHA**
 
 Run:
 
