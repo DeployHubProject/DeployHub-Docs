@@ -32,15 +32,13 @@ Double click on an item in the list to see the _Dashboard_ view.
 
 ## Use the _Environment_ Dashboard to View and Edit
 
-The Dashboard view displays all information related to a specific _Environment_.  
-The Dashboard view has one additional tab option - Calendars.
-Below are the Details for an _Environment_.
+The Dashboard view displays all information related to a specific _Environment_. The Dashboard view has one additional tab option - Calendars. Below are the Details for an _Environment_.
 
 ### _Environment_ Details
 
 | Field | Description |
 | --- | --- |
-|**Full _Domain_**| The fully qualified name of the _Domain_, including all parent _Domians_.
+|**Full _Domain_**| The fully qualified name of the _Domain_, including all parent _Domains_.
 | **Name**| The name of the _Environment_. Note: Duplicate Names are restricted. It is recommended that _Environments_ be named in a specific manner, such as 'DevEnv-HipsterStore.'|
 |**Owner Type**| User or Group |
 | **Owner**| The owner defaults to the _User_ or _Group_ who created it.  |
@@ -52,8 +50,6 @@ Below are the Details for an _Environment_.
 ### _Endpoint_ Access Control
 
 The Access Section allows _Users_ within designated _Groups_ to update the _Environment_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Environment_ in the following ways:
-
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
 
 | Access | Description |
 | --- | --- |

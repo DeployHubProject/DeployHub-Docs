@@ -3,7 +3,7 @@ title: "Create Your Credentials"
 linkTitle: "Create Your Credentials"
 weight: 3
 description: >
-  How to Add Credentials to Access Repositories and Deployment Endpoints.
+  How to Add _Credentials_ to Access _Repositories_ and Deployment _Endpoints_.
 ---
 
 ## Intro to Credentials
@@ -14,18 +14,18 @@ Note:  In order to define a _Repository_ or _Endpoint_ you will need to first de
 
 ## Containers and Credentials
 
-You may not need _Credentials_ if you only deploy containers. DeployHub uses Helm to perform container deployments.  Helm interacts with the Kubernetes cluster, Helm Chart Museum and the container registry to pull charts and images for the deployment. _Credentials_ are only needed to access a private container registry and private Chart Museum and are assigned to the _Endpoint_ or _Environment_.
+You may not need _Credentials_ if you only deploy containers. DeployHub uses Helm to perform container deployments.  Helm interacts with the Kubernetes cluster, Helm Chart Museum and the container registry to pull charts and images for the deployment. _Credentials_ are only needed to access private container registries and private Chart Museums and are assigned at the _Endpoint_ or _Environment_ level.
 
 ## Use the Credential List View for Adding or Deleting
 
-The _Credentials_ menu option is found under the **Setup** menu on the left of the DeployHub main panel. By selecting the _Credentials_ menu, you see a list of all _Credentials_ to which you have access. You can also use the Search bar, represented by a funnel icon, to filter _Credentials_ based on Name or Domain.
+_Credentials_ are found under the **Setup** menu on the left of the DeployHub main panel. By selecting the _Credentials_ menu, you see a list of all _Credentials_ to which you have access. You can also use the Search bar, represented by a funnel icon, to filter _Credentials_ based on Name or _Domain_.
 
 The _Credentials_ List View has the following Tabs:
 
 | Tab | Description |
 | --- | --- |
 |Refresh | Refreshes the browser. |
-| Add | Allows you to Add a new _Credential_. You will select from <ul><li>Encrypted in database</li><li>Private Key</li></ul>|
+| Add | Allows you to Add a new _Credential_. You will select from: <ul><li>Encrypted in database</li><li>Private Key</li></ul>|
 | Delete | Deletes the selected item. |
 
 By double clicking on an item in the list, you will be taken to the _Dashboard_ view.
@@ -38,10 +38,10 @@ The Dashboard view displays all information related to a specific _Credential_.
 
 | Field | Description |
 | --- | --- |
-| **Full Domain** | The fully qualified path of the Domain to which the Credential belongs. |
+| **Full Domain** | The fully qualified path of the _Domain_ to which the _Credential_ belongs. |
 | **Name** | The name of the _Credential._ |
 | **Summary** | A general description of the _Credential._ |
-| **Tyoe** | The kind of _Credential_. There are two different Types of _Credentials_:<ul style="list-style-type: none;"><li>**Encrypted in Database:** This _Credential_ Type is used to access external _Data Sources_ such as Git or SalesForce. The username/password pair resides in DeployHub's database using 3DES encryption.</li><li>**SSH Private Key:** An operating system level SSH key used to access _Endpoints_ for deployments. </li></ul> |
+| **Type** | The kind of _Credential_. There are two different Types of _Credentials_:<ul style="list-style-type: none;"><li>**Encrypted in Database:** This _Credential_ Type is used to access external _Data Sources_ such as Git or SalesForce. The username/password pair resides in DeployHub's database using 3DES encryption.</li><li>**SSH Private Key:** An operating system level SSH key used to access _Endpoints_ for deployments. </li></ul> |
 |**Owner Type**|  _User_ or _Group_.|
 |**Owner**| The _User_ name or _Group_ name who created the _Credential_.|
 | **Created** | The date and time the _Credential_ was created. |
@@ -54,7 +54,7 @@ If you are using SSH Private keys, you will find these files in your Home direct
 
 | Field | Description |
 | --- | --- |
-| **Username**| The user name who owns the key and will be used for logging in to the _Endpoint_.|
+| **Username**| The _User_ name who owns the key and will be used for logging in to the _Endpoint_.|
 | **Filename** | The fully qualified path to your SSH id_rsa or id_dsa file.|
 
 ### Encrypted in Database User and Password Pairs for Accessing External _Data Sources_
@@ -63,7 +63,7 @@ This _Credential_ can be used for accessing any external repository or tool such
 
 | Field | Description |
 | --- | --- |
-| **Username** | The username that will be used to access the object. |
+| **Username** | The _User_ name that will be used to access the object. |
 | **Password** | The password that will be used to access the object. |
 
 ## _Credential_ Access Controls
@@ -76,4 +76,3 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Cred
 | **Change** | Allows the _User_ to change the _Credential’s_ characteristics i.e. Name, Summary, etc. |
 | **Read** | Allows the _User_ to use the _Credential_ by assigning it to an object such as an _EndPoint_ or _Repository_. |
 
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your _Groups_, you will need to upgrade to **DeployHub Pro.**

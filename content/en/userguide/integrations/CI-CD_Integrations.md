@@ -112,13 +112,13 @@ You can use your CI/CD process to include variance in your versioning number (ba
 
 Once the versioning is completed, DeployHub is called to perform the deployment. The _Application Version_ and _Environment_ are required for the deployment. The deployment number will be returned to both DeployHub and the continuous delivery solution to be displayed in the output.
 
-## Lifecycle Tasks and Continuous Delivery Workflows
+## Life Cycle Tasks and Continuous Delivery Workflows
 
-You can incorporate DeployHub's Lifecycle _Subdomain_ Tasks as follows:  
+You can incorporate DeployHub's Life Cycle _Subdomain_ Tasks as follows:  
 
 **Move**
 
-DeployHub will move the _Application_ from one Lifecycle _Subdomain_ to another using the DeployHub _Move Task_.  This enables the _Application_ to move through the same pipeline steps that the CD process is using.
+DeployHub will move the _Application_ from one Life Cycle _Subdomain_ to another using the DeployHub _Move Task_.  This enables the _Application_ to move through the same pipeline steps that the CD process is using.
 
 **Approve**
 

@@ -3,7 +3,7 @@ title: "Connect Your Repositories"
 linkTitle: "Connect Your Repositories"
 weight: 5
 description: >
-  How to Connect Repositories to retrieve artifacts. 
+  How to Connect _Repositories_ to retrieve artifacts. 
 ---
 
 ## Intro to Repositories
@@ -21,7 +21,7 @@ You do not need to define a _Repository_ if you only deploy containers. Containe
 
 ## Use the Repository List View for Adding and Deleting
 
-The _Repository_ menu option is in the **Setup** menu on the left of the DeployHub main panel. Select the _Repository_ menu for a list of all _Repositories_ to which you have access. The Search bar, represented by a funnel icon, filters _Repositories_ based on Name or Domain.
+The _Repository_ menu option is in the Setup menu on the left of the DeployHub main panel. Select the _Repository_ menu for a list of all _Repositories_ to which you have access. The Search bar, represented by a funnel icon, filters _Repositories_ based on Name or Domain.
 
 The _Repository_ List View has the following Tabs:
 
@@ -35,12 +35,14 @@ Double click on an item in the list to get the _Dashboard_ view.
 
 ## Use the Repository Dashboard for Viewing and Editing
 
-The Dashboard view displays all information related to a specific _Repository_ Type.  Following are the Repository Types supported out-of-the-box:
+The Dashboard view displays all information related to a specific _Repository_ Type.  Following are the _Repository_ Types supported out-of-the-box:
 
 - HTTP
 - File System (included as a default with override and append options enabled)
 - OpenMake Meister (Build system with a binary repository)
 - SVN
+
+GitHub is also supported.  See [GitHub](/userguide/integrations/github/).
 
 ### Common Details of all _Repositories_ Types
 

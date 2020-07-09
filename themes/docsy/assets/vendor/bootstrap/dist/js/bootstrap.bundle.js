@@ -1918,7 +1918,7 @@
     offsets.marginLeft = 0;
 
     // Subtract margins of documentElement in case it's being used as parent
-    // we do this only on HTML because it's the only element that behaves
+    // we do this only on HTML because it has the only element that behaves
     // differently when margins are applied to it. The margins are included in
     // the box of the documentElement, in the other cases not.
     if (!isIE10 && isHTML) {
@@ -2658,7 +2658,7 @@
     var prefixedProperty = getSupportedPropertyName('transform');
 
     // now, let's make a step back and look at this code closely (wtf?)
-    // If the content of the popper grows once it's been positioned, it
+    // If the content of the popper grows once it has been positioned, it
     // may happen that the popper gets misplaced because of the new content
     // overflowing its reference element
     // To avoid this problem, we provide two options (x and y), which allow

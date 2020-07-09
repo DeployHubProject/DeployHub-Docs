@@ -26,7 +26,7 @@ When specifying an Object by name you can always qualify the name by pre-pending
 ~~~
     GLOBAL.USA.Development.demoenv
 
-This specifies that the "demoenv" Environment required can be found in the "Development" Sub-domain of Domain "USA" which is a Sub-domain of "GLOBAL".
+This specifies that the "demoenv" Environment required can be found in the "Development" Subdomain of Domain "USA" which is a Subdomain of "GLOBAL".
 ~~~
 
 ## Use the object's internal ID

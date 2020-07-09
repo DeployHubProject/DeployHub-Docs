@@ -183,3 +183,7 @@ The Access Section allows _Users_ within designated _Groups_ to update or view t
 ## Publish a New _Component Version_ Based on an Existing _Component Version_
 
 Create _Component Versions_ that are patterned after the _Component Base Version_ or any _Component Version_. Check the box _Component Base Version_ or _Component Versions_ from which you want to base the new version. Select the New Version Tab to access the _Component_ Dashboard and then edit the new _Component Version_. When you manually create a new _Component Version_ the name will be auto generated with a new number. You may need to provide it a unique name based on your versioning patterns.
+
+## Publish New _Component Versions_ automatically via Continuous Delivery
+
+Configure a continuous delivery system to automatically update new _Component Versions_ each time a new GitCommit triggers the workflow process.  Add DeployHub to the workflow to perform the continuous versioning of new _Components_ and their consuming _Applications_.  For more information, see [Using DeployHub with CI/CD](/userguide/integrations/ci-cd_integrations/).

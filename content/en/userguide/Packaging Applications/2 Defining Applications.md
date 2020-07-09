@@ -110,3 +110,8 @@ This tab contains all the _Components_ that make up an _Application_, linked tog
 Click and drag a _Component_ from the list on the far right side and drop it into the Assigned _Components_ area. It will appear in the area as a box containing the name of the _Component_. It automatically links to the last _Component_. Right click on the connecting line, select "Delete this Connection".Create by Click on the anchor (the green dot at the bottom of the _Component_)  to create a new connector. Then drag and drop it onto another _Component_. This determines the order in which the _Components_ will be deployed. Each _Component_ contains _Component Items_ also linked together in the order to be executed.  For a microservice implementation, they can all be linked to the "start point". This means they will be deployed in parallel.
 
 NOTE: At least one _Component_ must be connected to the "start point" or the deployment will fail.
+
+## How to Publish New _Application Versions_ Automatically via Continuous Delivery
+
+Configure a continuous delivery system to automatically update new _Application_ versions each time a new GitCommit triggers a new _Component_ to be consumed by your _Application_. DeployHub in the workflow performs this continuous versioning of new _Components_ and their consuming _Applications_.  For more information, see [Using DeployHub with CI/CD](/userguide/integrations/ci-cd_integrations/).
+

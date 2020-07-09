@@ -64,7 +64,7 @@ _Domains_ are not folders. They serve as a method for creating fully qualified n
 <ul><li>Global - the highest level Domain. This cannot be changed.</li>
 <ul><li>Online Store Company - A sample company configuration. See <a href="/userguide/introduction-to-deployhub/0-hipster-store-tutorial/">Hipster Store </a> </li>
 <li>Your Company Name - Your Company Domain Level</li>
-<ul><li>Your Project Name - A Subdomain of your Company Domain. This Domain can be defined with "Lifecycle Subdomains for managing a deployable software application using a Pipeline, or it can be used as a Catalog Domain for publishing Components such as microservices.</li></ul></ul></ul> 
+<ul><li>Your Project Name - A Subdomain of your Company Domain. This Domain can be defined with "Life Cycle Subdomains for managing a deployable software application using a Pipeline, or it can be used as a Catalog Domain for publishing Components such as microservices.</li></ul></ul></ul> 
 
 For our tutorial, we will explore the Online Store Company _Subdomain_ and it's child _Subdomains_. Click on the Sunburst Online Store Company Segment to view the child _Subdomains_.  
 
@@ -89,11 +89,11 @@ These Store Services _Subdomains_ organize _Components_ that can be reused by an
 
 **Step 2 - Explore a Project _Subdomain_**
 
-Now lets take a look at our Hipster Store _Subdomain_.  The Hipster Store _Subdomain_ manages our Hipster Store _Application_.  It also has _Subdomains_, but these _Subdomains_ are refereed to as "Lifecycle _Subdomains_."  Lifecycle Subdomains are defined to contain _Environments_ where your _Application_ will be deployed. Lifecycle _Subdomains_ cannot have any child _Subdomains_.  It is the lowest level of _Subdomain_ allowed.
+Now lets take a look at our Hipster Store _Subdomain_.  The Hipster Store _Subdomain_ manages our Hipster Store _Application_.  It also has _Subdomains_, but these _Subdomains_ are refereed to as "Life Cycle _Subdomains_."  Life Cycle Subdomains are defined to contain _Environments_ where your _Application_ will be deployed. Life Cycle _Subdomains_ cannot have any child _Subdomains_.  It is the lowest level of _Subdomain_ allowed.
 
 **Step 3 - Explore the Online Store _Domain_ Details and Access**
 
-Return to the Online Store Company _Domain_ by clicking anywhere in the center of the sunburst map. Details about this _Domain_ is displayed to the right of the sunburst.  You will see that is belongs to the "Global" _Domain_, shown by the field labeled "Full Domain."  You will also see that it has the "All _Subdomains_ are Lifecycles" option set to "No" and a list of it's child _Subdomains_. There are other details as well. For a full description see [Building Your Domain Catalog](/userguide/first-steps/2-defining-domains/).
+Return to the Online Store Company _Domain_ by clicking anywhere in the center of the sunburst map. Details about this _Domain_ is displayed to the right of the sunburst.  You will see that is belongs to the "Global" _Domain_, shown by the field labeled "Full Domain."  You will also see that it has the "All _Subdomains_ are Life Cycles" option set to "No" and a list of it's child _Subdomains_. There are other details as well. For a full description see [Building Your Domain Catalog](/userguide/first-steps/2-defining-domains/).
 
 The Access Control Section defines who can see this _Domain_ and it's child _Subdomains_. For this example, the "Everyone" _Group_ is defined to all Access.  The Everyone _Group_ is a default DeployHub _Group_ that includes all _Users_ and _Administrators_.  For more on _Users_ see [Managing Users](/userguide/customizations/2-users/).  
 

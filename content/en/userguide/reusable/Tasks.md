@@ -1,10 +1,8 @@
 ## Deployment Tasks
 
-Task are used for executing deployments, managing approvals, or staging a deployment. Tasks can be assigned to any _Domain_. However, they are most commonly associated to _Project Domains_ and _Lifecycle Domains_. You can assign a Task at a higher _Domain_ level allowing any child _Domains_ to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your _Subdomains_. However, this means that a Catalog _Domain_ may include Tasks that it cannot use.
+Task are used for executing deployments, managing approvals, or staging a deployment. Tasks can be assigned to any _Domain_. However, they are most commonly associated to _Project Domains_ and _Life Cycle Domains_. You can assign a Task at a higher _Domain_ level allowing any child _Domains_ to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your _Subdomains_. However, this means that a Catalog _Domain_ may include Tasks that it cannot use.
 
 The following Tasks are available as default Tasks, but you can create any type of custom Task. A custom Task will call a Custom [_Action_](/userguide/customizations/2-define-your-actions/):
-
-**DeployHub Team**:
 
 - Move Version to the Next or Previous Pipeline State
 - Deploy Version to _Environment_
@@ -27,7 +25,7 @@ Below is a description of all Tasks and their detailed information.
 
  **Move Version to the Next or Previous Pipeline State**
 
-Moves an _Application_ or _Release_ version from one Pipeline state (Lifecycle _Sub-Domain_) to another. This can be used as a promotion or a demotion of an _Application_ or _Release_ version between Lifecycle states. When the task is defined, the Lifecycle _Sub-Domain_ has to be specified as part of the task definition. The Approval Task must be accepted for the Move Version to succeed.
+Moves an _Application_ or _Release_ version from one Pipeline state (Life Cycle _Subdomain_) to another. This can be used as a promotion or a demotion of an _Application_ or _Release_ version between Life Cycle states. When the Task is defined, the Life Cycle _Subdomain_ has to be specified as part of the Task definition. The Approval Task must be accepted before the Move Version is to succeed.
 
 | "Move" Task Detail Fields| Description|
 |---|---|
@@ -36,7 +34,7 @@ Moves an _Application_ or _Release_ version from one Pipeline state (Lifecycle _
 |**Modified**| Auto-generated date and time the Task was updated.|
 |**Pre-Action**| Change the default behavior by assigning a custom _Action_ to execute as a Pre-processing step.    |
 |**Post-Action**| Change the default behavior by assigning a custom _Action_ to execute as a Post-processing step. |
-|**Available in _Subdomains_**| Once selected, all _Subdomains_ can access to this Task.  |
+|**Available in _Subdomains_**| Once selected, all _Subdomains_ will have access to this Task.  |
 |**Move To _Domain_**| The target _Domain_ where the version will be moved. |
 |**Success _Notify Template_**| The _Notify Template_ emailed on a successful move. You need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).  |
 |**Failure _Notify Template_**| The _Notify Template_ emailed on a failed move. You need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).  |
@@ -74,7 +72,7 @@ Runs a stand-alone _Action_. For example, if you need to interrupt a deployment 
 
 **Approve Version for Move to Next Pipeline State**
 
-Approves the _Application_ or _Release_ version so that it can be moved to a specified state in the pipeline (Lifecycle _Sub-Domain_). This works in conjunction with the Move Version Task. When the Approve Task is defined, the Target _Domain_ has to be specified. When the Approve Task is executed, the selected _Application_ or _Release_ version can either be Approved or Rejected. Only when the an _Application_ or _Release_ version is "approved" can it be "Moved" or "Deployed". 
+Approves the _Application_ or _Release_ version so that it can be moved to a specified state in the pipeline (Life Cycle _Subdomain_). This works in conjunction with the Move Version Task. When the Approve Task is defined, the Target _Domain_ has to be specified. When the Approve Task is executed, the selected _Application_ or _Release_ version can either be Approved or Rejected. Only when the an _Application_ or _Release_ version is "approved" can it be "Moved" or "Deployed". 
 
 Note: When an Approve Task has been defined for a _Domain_, it will force the use of the Approve Task before a "Move" or "Deploy" Task can be executed. If a "Move" or "Deploy" Task is attempted but has not been "Approved," an error will be displayed indicating that the Task must be Approved.
 
@@ -112,9 +110,9 @@ Once a _Task_ is defined, it must be granted execute access to a _Group_ before 
 
   _Groups_ are assigned authority on a _Task_ by _Task_ basis. It is possible for a _Domain_ to have two different _Tasks_ with the same function, one of which allows a particular _Group_ to run the _Task_, and the other which doesn't. This allows similar _Tasks_ to be created. They can have different characteristics assigned to them such as Pre-Actions and/or Post-Actions, Notification Templates, etc. Also different _User Groups_ can have the authority to run them.
 
-- Example: A _Group_ can run a "Move" Task, sending an _Application Version_ from the Test Lifecycle State to the Production Lifecycle State. A Group consisting of testers perhaps does not have the ability to run that same Task.
+- Example: A _Group_ can run a "Move" Task, sending an _Application Version_ from the Test Life Cycle State to the Production Life Cycle State. A Group consisting of testers perhaps does not have the ability to run that same Task.
 
-- Example: A Move Task is linked to a Request Task. A User in the Test Group would run the Request Task, which notifies Users in the Release Group and requests that the Application Version be moved. Users in the Production Group would then receive the Request Task through their To Do List and optionally an email (which was designated as the Request Notification Template in the Request Task). They would then run the linked Move Task to move the Application Version to the Production Lifecycle State.
+- Example: A Move Task is linked to a Request Task. A User in the Test Group would run the Request Task, which notifies Users in the Release Group and requests that the Application Version be moved. Users in the Production Group would then receive the Request Task through their To Do List and optionally an email (which was designated as the Request Notification Template in the Request Task). They would then run the linked Move Task to move the Application Version to the Production Life Cycle State.
 
 NOTE: Another way to accomplish this is to link an Approval Task to the Request Task. The User in the User Group would send the Request Task, and a User in the Admin Group would be notified. They would then run the Approve Task to allow the User in the Test Group to run the Move Task.
 

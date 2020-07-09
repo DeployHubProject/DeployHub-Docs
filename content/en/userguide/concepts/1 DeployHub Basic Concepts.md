@@ -176,7 +176,7 @@ The highest level _Domain_ is your _Global Domain_. With the SaaS version, your 
 
 _Domains_ also include _Tasks_. _Tasks_ include Move, Approve, Version and Deploy. _Tasks_ can be called by external solutions via APIs for integration into your Continuous Delivery Pipeline. _Tasks_ are associated to any _Domain_ and can be defined as _Pre_ or _Post_.  _Tasks_ are normally defined to _Life Cycle Subdomains_ and support continuous configuration management in your continuous delivery process.
 
-_Life Cycle Subdomains_ allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery engine (Jenkins, Bamboo, GitLab, CircleCI, Puppet Relay, Google CloudBuild or GitHub Actions) to perform the continuous deployment task across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign _Tasks_ to your _Life Cycle Sub-Domain_ to define a continuous deployment 'promotion' process within DeployHub.
+_Life Cycle Subdomains_ allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery engine (Jenkins, Bamboo, GitLab, CircleCI, Puppet Relay, Google CloudBuild or GitHub Actions) to perform the continuous deployment task across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign _Tasks_ to your _Life Cycle Subdomain_ to define a continuous deployment 'promotion' process within DeployHub.
 
 The following properties can be accessed on the _Domain_ object:
 
@@ -188,7 +188,7 @@ The following properties can be accessed on the _Domain_ object:
 | summary | Summary text. |
 | domain | Higher level _Domain_ to which it belongs. |
 | subdomains | List of _Domain_ objects which are contained within it. |
-| lifecycle | A _Domain_ that includes a pipeline and the lowest level _Subdomains_. _Lifecycle-domains_ cannot have _Subdomains_. |
+| Life Cycle | A _Domain_ that includes a pipeline and the lowest level _Subdomains_. _Life Cycle-domains_ cannot have _Subdomains_. |
 | _Applications_ | The _Application_ objects which are contained within it. |
 | _Environments_ | The _Environment_ objects which are contained within it. |
 | creator | The _User_ or _Group_ Object representing the user who created it. |
