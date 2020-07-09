@@ -7,17 +7,40 @@ description: >
 ---
 ## SaaS Sign-up Process and the Reverse Proxy
 
-When you [Sign-up to use the SaaS](https://www.deployhub.com/register-for-team/?) version, you will be asked for basic information. Your company and project names are unique 'Domain' and 'Project' identifiers. If someone else from your organization signs up, they will need to create another Project Name.
+When you [signed up to use DeployHub SaaS](https://www.deployhub.com/register-for-team/?), you were asked for basic information. Your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a _Subdomain_ under your Company _Domain_.
 
-A high level 'Domain' comes after your Project name, for example "Teller."
-An assigned Pipeline will be called "MyPipeline" that includes 'Dev", "Test", and "Production" stages.
-Then you define your Credentials, Repositories, and the Components of your Application.
+~~~
+Note:  If someone else from your organization signs up, they will be informed that they must contact you as the Administrator to add them to DeployHub.
+~~~
 
-You can change the name of your Application or reconfigure your Pipeline in any way needed to reflect your own life cycle process.
+ DeployHub is accessible through the following url:
 
-To begin deploying, you first install a Reverse Proxy inside your firewall. This contacts DeployHub in our SaaS environment to receive deployment requests.
+~~~
+https://console.deployhub.com/dmadminweb/Home
+~~~
 
-## What is the Reverse Proxy
+Login using the UserID and Password you used when you Signed up for DeployHub.
+
+## Navigating through Your _Domains_
+
+You will see three levels of _Domains_:
+<ul><li>Global - the highest level Domain. This cannot be changed.</li>
+<ul><li>Online Company Store - A sample company configuration. See <a href="/userguide/introduction-to-deployhub/0-hipster-store-tutorial/">Hipster Store </a> </li>
+<li>Your Company Name - Your Company Domain Level</li>
+<ul><li>Your Project Name - A Subdomain of your Company Domain. This Domain can be defined with "Lifecycle Subdomains for managing a deployable software application using a Pipeline, or it can be used as a Catalog Domain for publishing Components such as microservices.</li></ul></ul></ul>
+
+You can change the name of your Company or Project as needed. You an also add new _Subdomains_ to your Company _Domain_.
+
+## The Online Company Store -  Hipster Store Tutorial
+
+The Hipster Store Tutorial is provided to give you a review of _Domains_, _Components_, and _Applications_ and will help you understand DeployHub basic concepts. See [Hipster Store Tutorial](/userguide/introduction-to-deployhub/0-hipster-store-tutorial/) for more information.  
+
+## Installing the Reverse Proxy for Managing Deployments
+
+To begin deploying, you first install a Reverse Proxy inside your firewall. This contacts DeployHub in our SaaS environment to receive deployment requests.  The Reverse Proxy is required for deploying into your environment.
+~~~
+Note: You do not need to install a Reverse Proxy in order to deploy the Hipster Store Application in the Hipster Store Tutorial. This deployment is done in the DeployHub Google Cloud environment.
+~~~
 
 A Reverse Proxy queries the DeployHub SaaS every minute to determine if a deployment is needed. For SaaS users, it provides a security layer, preventing you from opening a port to the outside world. It uses standard HTTPS requests to communicate to the DeployHub SaaS on the Google GKE environment. Nothing from the external Google side of the firewall is pushed to the local DeployHub Reverse Proxy. 
 
@@ -26,11 +49,11 @@ Once the Reverse Proxy determines that a deployment is needed, it executes the d
 ![DeployHub Architecture](/userguide/images/ReverseProxy.png)
 
 
-## Reverse Proxy Installation
+### Reverse Proxy Installation
 
 The Reverse Proxy runs as docker container. In order to install it, you need to install Docker.
 
-## Docker Installation Guides
+### Docker Installation Guides
 
 - [Docker for CentOS](https://docs.docker.com/engine/install/centos/)
 - [Docker for Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
@@ -46,30 +69,65 @@ See the [Docker Install Test](https://docs.docker.com/get-started/#test-docker-v
 
 The DeployHub Reverse Proxy Docker Image is found on the Redhat Quay Docker Registry. Follow the steps below to install the Reverse Proxy into your Docker installation.
 
-## Step 1 - Set your CLIENTID as environment variable
+**Step 1 - Set your CLIENTID as environment variable**
 
-```bash
-export CLIENTID="Client ID sent in welcome email"
-```
+Use your Client ID that you received in your "Welcome" sign up email from DeployHub. It will be a hexadecimal number such as:
 
-## Step 2 - Pull Reverse Proxy from Redhat Quay Registry
+~~~
+Your CLIENTID is 6d961c2d-69a4-4660-8a4a-aaea11276864
+~~~
 
-```bash
+Run:
+~~~
+export CLIENTID="Your ID"
+
+For example: 
+
+export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
+~~~
+
+**Step 2 - Pull Reverse Proxy from Redhat Quay Registry**
+
+Run:
+
+~~~
 docker pull quay.io/deployhub/deployhub-rproxy:latest
-```
+~~~
 
 ## Step 3 - Find your image SHA
 
-Find find image SHA from the third column in the output.
+Run:
 
-```bash
+~~~
 docker images | grep deployhub-rproxy | grep latest
-```
+~~~
 
-## Step 4 - Start the container for Linux and OS/X
+Find the image SHA from the third column in the output. 
 
-Use the image SHA from Step 4 as the last parameter <image SHA> to the docker run.
+~~~
+quay.io/deployhub/deployhub-rproxy      v9.0.0          0114088b0b44        6 days ago          3.32GB
+~~~
+
+The SHA in the above example is 0114088b0b44.
+
+**Step 4 - Start the container for Linux and OS/X**
+
+Use the image SHA from Step 3 as the last parameter to the docker run.
 
 ```bash
-docker run -d --hostname `hostname` -e CLIENTID=$CLIENTID -v ~/.ssh:/keys:Z <image SHA>
+docker run -d --hostname `hostname` -e CLIENTID=$CLIENTID -v ~/.ssh:/keys:Z 0114088b0b44
 ```
+
+**Step 5 - Access DeployHub from your browser**
+
+ DeployHub is accessible through the following url:
+
+~~~
+https://console.deployhub.com/dmadminweb/Home
+~~~
+
+Login using the UserID and Password you used when you Signed-up for DeployHub
+
+**Step 6 - Confirm Your Reverse Proxy is Running**
+
+In the upper right hand corner you will see a message that should say "2 out of 2 Reverse Proxy Running."  There is a default proxy used to deploy into the DeployHub environment for the Hipster Store Tutorial. 

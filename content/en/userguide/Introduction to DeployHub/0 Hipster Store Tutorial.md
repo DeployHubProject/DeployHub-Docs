@@ -6,7 +6,27 @@ description: >
   The Hipster Store Test Drive.
 ---
 
-## The Hipster Store Tutorial
+## Log in and Take a Test Drive
+
+When you [signed up to use DeployHub SaaS](https://www.deployhub.com/register-for-team/?), you were asked for basic information. Your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a _Subdomain_ under your Company _Domain_.
+
+DeployHub is accessible through the following url:
+
+~~~
+https://console.deployhub.com/dmadminweb/Home
+~~~
+
+Login using the UserID and Password you used when you signed up for DeployHub.
+
+## Navigating through Your _Domains_
+
+You will see three levels of _Domains_:
+<ul><li>Global - the highest level Domain. This cannot be changed.</li>
+<ul><li>Online Company Store - A sample company configuration. See <a href="/userguide/introduction-to-deployhub/0-hipster-store-tutorial/">Hipster Store </a> </li>
+<li>Your Company Name - Your Company Domain Level</li>
+<ul><li>Your Project Name - A Subdomain of your Company Domain. This Domain can be defined with "Lifecycle Subdomains for managing a deployable software application using a Pipeline, or it can be used as a Catalog Domain for publishing Components such as microservices.</li></ul></ul></ul> 
+
+## The Online Company Store - Hipster Store Tutorial
 
 This _Hipster Store_ tutorial walks you through the basic concepts and [Objects](/userguide/concepts/1-deployhub-basic-concepts/) behind DeployHub. It also allows you to run a deployment in our hosted Kubernetes cluster (Google.) In DeployHub terminology, the Hipster Store is both an _Application_ and a _Subdomain_. The Hipster Store belongs to a higher level _Domain_ called the "Online Store Company".  We will first review and deploy an _Application_ and then we will review the _Application's_ _Components_ and how they are organized under _Domains_. We will review the "Online Store Company" _Domain_ structure, and show how the Objects are organized using a _Domain_ design.
 
