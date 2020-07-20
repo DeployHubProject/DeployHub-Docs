@@ -58,7 +58,7 @@ An _Application_ has the following properties:
 | modifier | The _User_ or _Group_ who last modified it. |
 | ctime | The date/time it was created. |
 | mtime |  The date/time it was last modified. |
-| attributes |  An Array of Strings, keyed by Attribute Name. |
+| KV Configurations |  Key Value Pairs for managing associative arrays. |
 
 ### _Release_ Object
 
@@ -110,7 +110,7 @@ A _Component_ Object has the following properties:
 | modifier | The User who last modified this _Component_. |
 | ctime | The date/time the _Component_ was created. |
 | mtime | The date/time the _Component_ was last modified. |
-| attributes | Array of Strings, keyed by Attribute Name. |
+| Key Value Configurations | Key Value Pairs for managing associative arrays. |
 
 ### _Component_ and _Application_ Relationships
 
@@ -149,7 +149,7 @@ The _Credential_ Object has the following properties:
 | modifier | The _User_ or _Group_ who last modified this _Credential_. |
 | ctime | The date/time the _Credential_ was created. |
 | mtime | The date/time the _Credential_ was last modified. |
-| kind  | _Credential_ use. |
+| Type  | _Credential_ use. |
 
 ## _Data Source_ Objects
 
@@ -275,7 +275,7 @@ The _Endpoint_ object has the following properties:
 | modifier | The _User_ or _Group_ who last modified it. |
 | ctime | The date/time it was created. |
 | mtime | The date/time it was last modified. |
-| attributes | Array of Strings, keyed by Attribute Name. |
+| Key Value Configurations | Key Value Pairs for managing associative arrays. |
 
 ## _Notifier_ Objects
 

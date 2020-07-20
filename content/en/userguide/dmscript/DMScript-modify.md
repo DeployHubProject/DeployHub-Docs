@@ -20,6 +20,6 @@ _modify_ takes a variable number of named parameters:
 | outfile | The name of the file to which the modified file is written. The original input file is left unchanged. This parameter is optional – if not specified then the changes are written back to the original input file. |
 | serverspecific | A Boolean value (true/false). If set to true then a copy of the modified file is created for each _Endpoint_ in the current _Endpoint_ set. If set to false - or not specified – then the same changed file is sent to each _Endpoint_ in the current _Endpoint_ set. |
 
-NOTE: When running modify with serverspecific set to true, an implicit _Endpoint_ loop is performed and the modify operation is performed for each _Endpoint_ in the current _Endpoint_ set. You can therefore substitute _Endpoint_-specific attributes or use _Endpoint_ properties (such as ${server.hostname}).
+NOTE: When running modify with server specific set to true, an implicit _Endpoint_ loop is performed and the modify operation is performed for each _Endpoint_ in the current _Endpoint_ set. You can therefore substitute _Endpoint_-specific attributes or use _Endpoint_ properties (such as ${server.hostname}).
 
 A copy of the modified file is made for each _Endpoint_. It is only during a subsequent deployment operation (either implicitly or with a call to _transfer_) that these modified files are transferred to their appropriate _Endpoint_.
