@@ -9,4 +9,3 @@ spec:
   ports:
     - name: hugo
       port: 1313
-  type: NodePort

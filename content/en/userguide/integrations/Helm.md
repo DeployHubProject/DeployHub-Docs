@@ -39,6 +39,64 @@ For more information on starting the DeployHub Container see:
 - [DeployHub On-Premise Installation](/userguide/installation-and-support/0-on-premise-installation-for-team/)
 - [DeployHub Pro On-Prem Installation](/userguide/installation-and-support/0-on-premise-installation-for-pro/)
 
+### Connection to a Cloud Kubernetes Cluster
+
+In order to connect to Kubernetes cluster running on a cloud provider, an authentication between DeployHub and the cloud provider must be made.  Each cloud provider has a different set of parameters used to authenticate. Once authenticated, DeployHub will execute Helm in the same across all the cloud providers enabling reuse of the Helm Charts without the need to update them.
+
+#### Connecting to a Google Kubernetes Cluster
+
+| Key | Value | Command |
+| --- | ----- | ------- |
+| gcloud.compute.zone | compute zone for the cluster | gcloud config set compute/zone <zone>|
+| gcloud.container.cluster | cluster name | gcloud config set container/cluster and gcloud container clusters get-credentials <cluster>|
+| gcloud.core.account | account name | gcloud config set core/account <account>|
+| gcloud.core.disable_usage_reporting | disable reporting | gcloud config set core/disable_usage_reporting <disable_usage_reporting>|
+| gcloud.core.project | project name | gcloud config set core/project <project> |
+| gcloud.oauth.account | service account name | gcloud auth activate-service-account <account> |
+| gcloud.oauth.keyfile | key file for service account | gcloud auth activate-service-account --key-file=<keyfile> |
+
+#### Connecting to a Amazon Kubernetes Cluster
+
+| Key | Value | Command |
+| --- | ----- | ------- |
+| eks.aws_access_key_id | access key id | aws --profile default configure set aws_access_key_id  <key_id> |
+| eks.aws_secret_access_key | secret key | aws --profile default configure set aws_secret_access_key <access_key> |
+| eks.region | region the cluster is running in | aws eks --region <region> update-kubeconfig --name <cluster> <optional> |
+| eks.cluster | cluster name | aws eks --region <region> update-kubeconfig --name <cluster> <optional> |
+| eks.optional | additional options | aws eks --region <region> update-kubeconfig --name <cluster> <optional> |
+
+#### Connecting to a Azure Kubernetes Cluster
+
+| Key | Value | Command |
+| --- | ----- | ------- |
+| aks.serviceprincipal | service principal | az login --service-principal -u <serviceprincipal> -p <certificate> --tenant <tenant> |
+| aks.certificate | certificate for the service principal | az login --service-principal -u <serviceprincipal> -p <certificate> --tenant <tenant> | 
+| aks.tenant | tenant for the service principal | az login --service-principal -u <serviceprincipal> -p <certificate> --tenant <tenant> |
+| aks.resourcegroup | resource group for the cluster | az aks get-credentials --resource-group <resourcegroup> --name <cluster> |
+| aks.cluster | cluster name | az aks get-credentials --resource-group <resourcegroup> --name <cluster> |
+
+#### Using an existing context
+
+| Key | Value | Command |
+| --- | ----- | ------- |
+| kubectl_context | context name | kubectl config use-context <kubectl_context> |
+
+## Additional Helm Key/Values
+
+| Key | Description | 
+| --- | ----- | 
+| helm_exe | use helm2 for Helm V2 executable. Default is Helm V3 |
+| helmrepo.url | url to the chart repo (from Component Definition) | 
+| helmrepo.username or helmrepouser | user name used to login into the repo with |
+| helmrepo.password or helmrepopass | password user to login into the repo with |
+| chart | chart to use (from Component Definition) |
+| chartversion | version of the chart.  Default latest (from Component Definition) |
+| chartnamespace | namespace to use for the deployment (from Component Definition) |
+| helmopts | additional options for the helm upgrade |
+| helmtemplateopts | additional options for the helm template |
+| helmcapture | y/n for uploading a hermetic version of the chart and values to DeployHub stored by deploy log # |
+
+
 ## Helm and _Custom Actions_
 
 Helm is called as a DeployHub [_Custom Action_](/userguide/customizations/2-define-your-actions/). To use Helm, you will need to import two Helm files as DeployHub _Procedures_ and define them to your _Custom Action_. This Helm _Custom Action_ can then be assigned to your Container _Components_. See [_Procedures and Functions_](/userguide/customizations/2-define-your-functions-and-procedures/) and  [Customize Actions](/userguide/customizations/2-define-your-actions/) to learn more. The following steps will create your Helm _Custom Action_.
