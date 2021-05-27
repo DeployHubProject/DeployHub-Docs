@@ -41,8 +41,8 @@ The Dashboard view displays all information related to a specific _Repository_ T
 - File System (included as a default with override and append options enabled)
 - OpenMake Meister (Build system with a binary repository)
 - SVN
+- Git (git repositories are treated as File System repositories). See [Git Repository](/userguide/first-steps/2-define-repositories/#git-_repository_-details) and [GitHub](/userguide/integrations/github/) for configuration steps.
 
-GitHub is also supported.  See [GitHub](/userguide/integrations/github/).
 
 ### Common Details of all _Repositories_ Types
 
@@ -99,6 +99,57 @@ GitHub is also supported.  See [GitHub](/userguide/integrations/github/).
 |**Version**| Allows for the auto generation of a version number based on a template that you define. Enter the template with variables, such as V${buildnumber} to create your unique version number upon deployment. This is most commonly used with DMScript. |
 |**Version Encrypted** | Select the box to indicate the Version should be hidden in the database.|
 |**Version Override** |Select the box if the Version can be replaced at the _Component_ definition.|
+
+## Git _Repository_ Details
+
+You can configure DeployHub to call out to a Git Repo to pull deployable artifacts (binaries, scripts, etc.) as part of your deployment.  The process will check out your deployable artifacts based on commit, branch or tag specified. You will need to configure DeployHub with a file system DeployHub _Repository_ that will pull the files need for the deployment.  You will also need to create a "Git Checkout" _Procedure_ and _Action_.  
+
+**Step 1 - Create a DeployHub File System _Repository_**
+
+DeployHub can use Git as a binary repository for retrieving deployable objects as part of the deployment process.  To do this you will first need to define Git as a connected _Repository_ Object from within DeployHub. This connection will be used by as part of the deployment process using a _Procedure_ and a _Action_. For information on setting up File System as a binary repository see [Connect Your Repositories](/userguide/first-steps/2-define-repositories/).
+
+Once you have completed this step, you are ready to create a new _Procedure_ that performs the check out from the Git repository.
+
+**Step 2 - Create your Git Checkout _Procedure_ for your _Action_**
+
+_Procedures_ are called by _Actions_ to execute deployment logic. A pre-defined DeployHub _Procedure__ is available from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). This where you will find the most current version of this _Procedure_. For more information on creating _Procedures see [Functions and Procedures](/userguide/customizations/2-define-your-functions-and-procedures/).
+
+From the Ortelius Git Repo, pull the file named **GitCheckout.re**
+
+Once downloaded, you will need to Import it into DeployHub from the Func/Procs List View. Navigate to the List View by selecting the Func/Procs menu option on the left hand side of the DeployHub main panel. From the Func/Procs List view select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the GitCheckout.re file.  Next, select your _Domain_ and upload the _Procedure_ into the DeployHub. You are now ready to create your _Action_.
+
+**Step 3 - Create your _Action_ for the GitHub Checkout _Procedure_**
+
+Once you have imported your GitCheckout.re _Procedure_, you can define your _Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub main panel. Use the +Add option to create a new _Action_ for you _Procedure_. Name the new _Action_ **GitCheckAction** (no spaces). See [Customize Your Actions](/userguide/customizations/2-define-your-actions/) for more information on creating _Actions_.
+
+Now we are going to customize this _Action_. On the right hand side, you will see a list of _Functions_ and _Procedures_ you can choose from.  Navigate to your _Domain_ to find the GitCheckOut _Procedure_. Drag it onto the area under _Start._ A pop-up dialog box will open for you to complete the following parameters:
+
+_GitCheckout_ Parameters
+
+| **Field** | Value | Description |
+| --- | --- | --- |
+| **Title** | Not Required | Name of the step in your deployment workflow. Use "Git Checkout." |
+| **Summary** | Not Required | Enter a summary of this step. |
+| **Git Repo** | $GIT_URL| This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level. |
+| **Git Commit** | $GIT_COMMIT | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.|
+| **To Dir** | $GIT_DIR | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
+
+At this point the _Action_ is ready to be used by anyone with access (based on _Domain_ and _Group_ options).
+Note: Because this _Action_ is reusable, no _Component_ variables are defined. This is performed at the _Component_ level.
+
+**Step 4 - Assign the GitCheckoutAction to your _Component_ to be deployed**
+
+For each _Component_ you will need to define the variable values for $GIT_URL, $GIT_COMMIT and $GIT_DIR that the GitCheckoutAction will use at the_Component_ level. The values will be passed to the GitCheckoutAction at deploy time. See [Defining _Components_](/userguide/publishing-components/2-define-components/) for more information.
+
+**Step 5 - Set Your _Component_ Attributes_**
+
+The following variables must be added to the Attributes Section for all  _Components_ using the GitCheckoutAction _Pre Action_.  The Attributes section can be found on the _Component_ Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:
+
+| Variable Name | Value Description |
+|--- | --- |
+| **GIT_URL** | This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level. |
+| **GIT_COMMIT** | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.|
+| **GIT_DIR** | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
 
 {{% include "/userguide/reusable/OpenMake Meister.md/" %}}
 
