@@ -158,7 +158,7 @@ Once stored in the DeployHub database, you can retrieve the hermetic Helm Chart,
 To re-execute a Helm deployment manually, you will retrieve all captured data in a zip file (Helm Chart, all container digest, and key values ). To retrieve the data and generate a zip file, execute the following curl command if using the SaaS:
 
 ~~~
-curl "https://console.deployhub.com/dmadminweb/API/helm/<DeploymentNumber>?format=zip"-o Helmchart.zip
+curl "https://console.deployhub.com/dmadminweb/API/helmchart/<DeploymentNumber>?format=zip"-o Helmchart.zip
 
 where:
 Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.
@@ -169,7 +169,7 @@ Helmchart.zip is the name of the zip file you want to create.
 If you are using an on premise version use the following command:
 ~~~
 
-curl "http://<myDeployHub>/dmadminweb/API/helm/<DeploymentNumber>?format=zip"-o Helmchart.zip
+curl "http://<myDeployHub>/dmadminweb/API/helmchart/<DeploymentNumber>?format=zip"-o Helmchart.zip
 
 where:
 myDeployHub is your on premise DeployHub Server.
