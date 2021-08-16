@@ -11,7 +11,7 @@ COPY . .
 # install node_modules, will be cached unless package.json has changed
 RUN npm ci; \
   apk add --update hugo git; \
-  /usr/bin/hugo -b "https://docs/deployhub.com"
+  /usr/bin/hugo 
 
 FROM wernight/alpine-nginx-pagespeed
 
