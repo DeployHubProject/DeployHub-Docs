@@ -98,9 +98,9 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Func
 
 When you create your _Function_ or _Procedure_ it will most likely need parameters. This section allows you to define the format of the parameters and display them in the _Action_ blueprint designer. When your _Function_ or _Procedure_ is added to the _Action_ blueprint designer, a Parameter Dialog Box will be automatically displayed prompting the user to enter the required values. A right mouse click on the same will open the Parameter Dialog Box. The Input Parameters, Command Line Switches and the Command Line Section work together to define how the command line call will be formatted.  You will establish how your user will enter parameter values when they use your custom _Function_ or _Procedure_ through the use of the Parameter Dialog Box. For _Functions_ and _Procedures_ that are of the Type "DM Script in Database", you will not see Command Line Switches Section or a Command Line Section. Instead you will be provided with an embedded editor for creating the DMScript that will be saved in the Database.
 
-- The Input Parameters Section defines how the dialog box is layed out and how the flags will be passed to the command line.
+- The Input Parameters Section defines how the dialog box is laid out and how the flags will be passed to the command line.
 - The Command Line Switches Section provides a table of parameter switches that can be used to construct the command line call.
-- The Command Line Section builds out what your command line call will look like using drog and drop of the Input Parameters and Switches.
+- The Command Line Section builds out what your command line call will look like using drag and drop of the Input Parameters and Switches.
 
 **Input Parameters Section**
 
