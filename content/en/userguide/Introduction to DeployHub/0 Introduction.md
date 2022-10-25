@@ -25,7 +25,7 @@ Migrating to decoupled, cloud-native architecture breaks the way we assemble and
 
 DeployHub is not a 'microservice registry' or 'API Gateway."  Instead, DeployHub interacts with the DevOps pipeline to automatically gather supply chain metadata. Tracking microservices and _Components_ in this way facilitates their sharing and reuse across teams. DeployHub serves as an internal market place for finding, tracking and versioning microservices and relating them to the _Applications_ that consume them. The publishing catalog is based on a _Domain_ structure to support a Domain Driven Design.
 
-## Versioning - DeployHub Secret Sauce
+## Versioning - DeployHub's Secret Sauce
 
 DeployHub versions both _Components_ and 'logical' _Applications_.  When versioning _Components_, DeployHub provides insights needed to determine if the service is safe for consumption including:
 
@@ -58,6 +58,7 @@ DeployHub versions both _Components_ and 'logical' _Applications_.  When version
 This level of information can also be viewed from the _Component_ level showing similar information to the _Application_, but instead showing the _Applications_ that are dependent on the microservice (_Component_).
 
 ## Other Core Features
+
 **Domain-Driven-Design:** First and most important is the DeployHub Domain structure for cataloging and sharing microservices. This feature organizes your microservice in a method that encourages reuse and sharing across development teams.
 
 **Dependency maps:** Shows you the 'logical' view of your application and which microservices, or _Components_, it consumes. Once you begin sharing microservices, you need to track who is using the microservice. An _Application_ is a logical collection of _Components_ that make up an entire software solution.
