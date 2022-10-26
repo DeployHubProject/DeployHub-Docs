@@ -5,7 +5,12 @@ weight: 1
 description: >
   What you need to get started.  
 ---
-Start by defining the following:
+## Setup DeployHub via Pipeline Automation and the CLI
+The fastest way to setup DeployHub is to use the Ortelius Command Line Interface to automate DeployHub via your CI/CD Pipeline.
+
+{{% include "/userguide/reusable/CommandLine.md/" %}}
+
+## Set Up DeployHub via the User Interface
 
 | Step | Description |
 | --- | --- |

@@ -3,7 +3,7 @@ title: "Why Use DeployHub"
 linkTitle: "Why Use DeployHub"
 weight: 1
 description: >
-  DeployHub Supply Chain Evidence Catalog
+  DeployHub - a Catalog of Supply Chain Evidence
 ---
 
 ## Why Use DeployHub
