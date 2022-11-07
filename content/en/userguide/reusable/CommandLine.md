@@ -59,7 +59,7 @@ Version = "vyour Component Version.${BUILD_NUM}-g${SHORT_SHA}"
     DockerSha = "${DIGEST}"
     DockerTag = "${IMAGE_TAG}"
     SlackChannel = "your slack channel"
-    ServiceOwner = "your Component Developer Name"
+    ServiceOwner = "${DHUSER}"
     ServiceOwnerEmail = "your Component Owner Email"
 ```
 
@@ -83,8 +83,8 @@ Version = "v1.0.0.${BUILD_NUM}-g${SHORT_SHA}"
     DockerSha = "${DIGEST}"
     DockerTag = "${IMAGE_TAG}"
     SlackChannel = "DeployHubSlack"
-    ServiceOwner= "Jane Coder"
-    ServiceOwnerEmail = "JC@DeployHub.io"
+    ServiceOwner= "${DHUSER}"
+    ServiceOwnerEmail = "stella@DeployHub.io"
 
 ```
 
