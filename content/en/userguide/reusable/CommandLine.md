@@ -58,7 +58,7 @@ Version = "vyour Component Version.${BUILD_NUM}-g${SHORT_SHA}"
     DockerRepo = "${DOCKERREPO}"
     DockerSha = "${DIGEST}"
     DockerTag = "${IMAGE_TAG}"
-    SlackChannel = "your slack channel"
+    DiscordChannel = "your Discord channel" or SlackChannel = "your Slack Channel" 
     ServiceOwner = "${DHUSER}"
     ServiceOwnerEmail = "your Component Owner Email"
 ```
@@ -67,11 +67,11 @@ For example:
 
 ```toml
 # Application Name and Version
-Application = "GLOBAL.Welcome"
-Application_Version = "1.0.0" 
+Application = "GLOBAL.Santa Fe Software.Online Store Company.Hipster Store.Prod.helloworld app"
+Application_Version = "1" 
 
 # Define Component Name, Variant and Version
-Name = "GLOBAL.hello-world"
+Name = "GLOBAL.Santa Fe Software.Online Store Company"
 Variant = "${GIT_BRANCH}"
 Version = "v1.0.0.${BUILD_NUM}-g${SHORT_SHA}"
 
@@ -82,7 +82,7 @@ Version = "v1.0.0.${BUILD_NUM}-g${SHORT_SHA}"
     DockerRepo = "${DOCKERREPO}"
     DockerSha = "${DIGEST}"
     DockerTag = "${IMAGE_TAG}"
-    SlackChannel = "DeployHubSlack"
+    DiscordChannel = "https://discord.gg/wM4b5yEFzS"
     ServiceOwner= "${DHUSER}"
     ServiceOwnerEmail = "stella@DeployHub.io"
 
@@ -138,8 +138,8 @@ dh updatecomp --rsp component.toml
 
 ## Results
 
-<img src='/userguide/images/helloworld-comp-details.png'  />
-<img src='/userguide/images/helloworld-comp-sbom.png'  />
-<img src='/userguide/images/helloworld-comp-license.png'  />
-<img src='/userguide/images/helloworld-comp-kv.png'  />
-<img src='/userguide/images/helloworld-comp-readme.png'  />
+<img src='/userguide/images/ApplicationComponentDepVersions.png'  />
+<img src='/userguide/images/ApplicationSBOMandCVE.png'  />
+<img src='/userguide/images/Componetownership.png'  />
+<img src='/userguide/images/packagesearch.png'  />
+<img src='/userguide/images/PackageSerachResults.png'  />
