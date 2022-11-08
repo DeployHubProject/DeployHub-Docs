@@ -138,8 +138,25 @@ dh updatecomp --rsp component.toml
 
 ## Results
 
+### Application to Component Dependencies
+
 <img src='/userguide/images/ApplicationComponentDepVersions.png'  />
+<div style="margin-left:20%"><b>1 - The Hello World Application shows one Dependency.</b></div>
+
+### Application Level SBOM and CVE
+
 <img src='/userguide/images/ApplicationSBOMandCVE.png'  />
+<div style="margin-left:20%"><b>2 - The HelloWorld Application Level SBOM and CVE results.</b><br><b><i>Note: CVE Results may vary depending on the time of the scan.</i></b></div>
+
+### Component Ownership
+
 <img src='/userguide/images/Componetownership.png'  />
+<div style="margin-left:20%"><b>3 - Component Ownership and Detail</b></div>
+
+### Supply Chain “Package” Search
+
 <img src='/userguide/images/packagesearch.png'  />
+<div style="margin-left:20%"><b>4 - Package Search</b></div>
+<br>
 <img src='/userguide/images/PackageSerachResults.png'  />
+<div style="margin-left:20%"><b>4 - Package Search Results</b></div>
