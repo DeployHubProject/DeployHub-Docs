@@ -1,6 +1,6 @@
 ---
-title: "SaaS Sign-up and Reverse Proxy"
-linkTitle: "SaaS Sign-up and Reverse Proxy"
+title: "SaaS Sign-up and Reverse Proxy for Deployments"
+linkTitle: "SaaS Sign-up and Reverse Proxy for Deployments"
 weight: 1
 description: >
   How to Sign up 
@@ -17,16 +17,15 @@ When you [signed up to use DeployHub SaaS](https://www.deployhub.com/register-fo
 
 Login using the UserID and Password you used when you signed up for DeployHub.
 
-## Take a Test Drive of the Online Store Company -  Hipster Store Tutorial
+### Take a Test Drive of the Online Store Company -  Hipster Store Tutorial
 
 The Hipster Store Tutorial is provided to give you a review of _Domains_, _Components_, and _Applications_ and will help you understand DeployHub basic concepts. See [Hipster Store Tutorial](/userguide/introduction-to-deployhub/0-hipster-store-tutorial/) for more information.  
 
-## Installing the Reverse Proxy for Managing Deployments
+## Installing the Reverse Proxy for Managing Deployments using DeployHub
 
-To start deploying your _Applications_ and _Components_, you will first need to install a Reverse Proxy inside your firewall. This contacts DeployHub in our SaaS environment to receive deployment requests.  The Reverse Proxy is required for deploying into your environment.
-~~~
-Note: You do not need to install a Reverse Proxy in order to deploy the Hipster Store Application in the Hipster Store Tutorial. This deployment is done in the DeployHub Google Cloud environment.
-~~~
+DeployHub includes a deployment engine that can be used to deploy your _Applications_. Alternatively you can push deployment information to DeployHub using the [Command Line Interface](/installation-and-support/0-commandlineinterface/). You will not need the Reverse Proxy if your are pushing deployment results with the CLI. 
+
+To start using DeployHub to deploy your _Applications_ and _Components_, you will first need to install a Reverse Proxy inside your firewall. This contacts DeployHub in our SaaS environment to receive deployment requests.  The Reverse Proxy is required for deploying into your environment.
 
 A Reverse Proxy queries the DeployHub SaaS every minute to determine if a deployment is needed. For SaaS users, it provides a security layer, preventing you from opening a port to the outside world. It uses standard HTTPS requests to communicate to the DeployHub SaaS on the Google GKE environment. Nothing from the external Google side of the firewall is pushed to the local DeployHub Reverse Proxy. 
 
