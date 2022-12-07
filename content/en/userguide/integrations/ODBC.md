@@ -1,7 +1,7 @@
 ---
-title: "Using an ODBC Connection"
+title: "ODBC Connection"
 linkTitle: "ODBC Connection"
-weight: 71
+weight: 314
 description: >
   Using ODBC to retrieve external data.
 ---

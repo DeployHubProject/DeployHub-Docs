@@ -1,7 +1,7 @@
 ---
 title: "CircleCI Deployment Orb"
 linkTitle: "CircleCI Deployment Orb"
-weight: 58
+weight: 302
 description: >
   Using the CircleCI Orb with DeployHub.
 ---

@@ -1,7 +1,7 @@
 ---
 title: "GitHub"
 linkTitle: "GitHub"
-weight: 62
+weight: 304
 description: >
   Integrating GitHub repository and issues with DeployHub Pro.
 ---

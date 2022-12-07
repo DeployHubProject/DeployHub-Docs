@@ -1,7 +1,7 @@
 ---
 title: "LDAP and Active Directory"
 linkTitle: "LDAP and Active Directory"
-weight: 70
+weight: 312
 description: >
   Using LDAP and Active Directory for managing Logins.
 ---

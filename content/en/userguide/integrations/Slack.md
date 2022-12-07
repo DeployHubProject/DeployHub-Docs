@@ -1,7 +1,7 @@
 ---
 title: "Slack"
 linkTitle: "Slack"
-weight: 71
+weight: 324
 description: >
   Integrating Slack with DeployHub Notifiers.
 ---

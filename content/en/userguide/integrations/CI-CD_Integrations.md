@@ -1,7 +1,7 @@
 ---
-title: "Using DeployHub with CI/CD"
-linkTitle: "Using DeployHub with CI/CD"
-weight: 49
+title: "CI/CD and DeployHub"
+linkTitle: "CI/CD and DeployHub"
+weight: 301
 description: >
   Integrating DeployHub into your CI/CD process.
 ---

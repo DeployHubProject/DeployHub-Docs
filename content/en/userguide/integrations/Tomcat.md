@@ -1,7 +1,7 @@
 ---
 title: "Tomcat"
 linkTitle: "Tomcat"
-weight: 74
+weight: 330
 description: >
   Executing deployments requiring a Tomcat Server.
 ---
