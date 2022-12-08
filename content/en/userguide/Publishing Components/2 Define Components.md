@@ -159,7 +159,7 @@ Give your users more information about your Container, Application File or Datab
  
 ## Component Swagger
 
-Publish your Swagger API definitions to provide further information about your restful APIs and the parameters needed. DeployHub takes your .json or .yaml file and renders it using [Swagger](https://swagger.io/). Use the 'Upload' option to associate your .json or .yaml file to that specific _Component Version_. You can also automate the upload - see below.
+Publish your [Swagger API](/userguide/integrations/swagger) definitions to provide further information about your restful APIs and the parameters needed. DeployHub takes your .json or .yaml file and renders it using [Swagger](https://swagger.io/). Use the 'Upload' option to associate your .json or .yaml file to that specific _Component Version_. You can also automate the upload - see below.
 
 ## Component SBOM
 
@@ -176,7 +176,7 @@ Report the license associated with your code base for your _Component_. Use the 
 
 ## Automate the Readme, SBOM, License, and Swagger Upload via Your Pipeline. 
 
-You can automatically upload you readme, SBOM, License, and Swagger data using the Command Line Interface (CLI) added to your pipeline. For more information review the [CI/CD CLI integration document](/userguide/integrations/ci-cd_integrations/). 
+You can automatically upload you readme, SBOM, License, and Swagger data using the Command Line Interface (CLI) added to your pipeline. For more information review the [CI/CD CLI details](https://github.com/Ortelius/cli/blob/main/doc/dh.md). 
 
 {{% include "userguide/reusable/Attributes.md" %}}
 
