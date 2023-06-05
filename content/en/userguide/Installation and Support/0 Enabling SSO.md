@@ -37,6 +37,8 @@ Login into your Okta Dashboard - <https://www.okta.com/>
 
 - `export IDP_METADATA=$(cat idp-metadata.xml > base64)`
 
+  ![Alt text](/deployhub-okta-saml-xml.png "DeployHub Okta Sign On")
+
 ## Step 6 - Apply the SAML Configuration to the Kubernetes Cluster using Helm
 
 - `helm upgrade my-release deployhub/deployhub --install --version 10.0.105 --set dh-ms-general.dbhost=db.example.com --set dh-ms-general.dbpass=changeme --set-string dh-ms-general.dbport=5432 --set dh-ms-nginx.ingress.type=glb --set dh-ms-general.SamlIdpMetadata=${IDP_METADATA} --set dh-ms-general.SamlLogoutRedirect=$(echo -n https://sso.example.com | base64)`
