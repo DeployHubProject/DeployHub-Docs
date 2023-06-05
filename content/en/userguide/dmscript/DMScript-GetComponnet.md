@@ -7,7 +7,7 @@ description: >
 ---
 
 
-get_Component_ takes an _Component_ Name and returns the matching _Component Object_.
+get_Component_takes an_Component_Name and returns the matching_Component Object_.
 
 **Usage:**
 

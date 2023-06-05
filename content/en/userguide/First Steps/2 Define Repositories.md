@@ -25,11 +25,11 @@ The _Repository_ menu option is in the Setup menu on the left of the DeployHub m
 
 The _Repository_ List View has the following Tabs:
 
-| Tab | Description |
-| --- | --- |
-|Refresh | Refreshes the browser. |
-| Add | Allows you to Add a new _Repository_. Select from various pre-configured _Repository_ Types. Each Type will determine the Details for that _Repository_.|
-| Delete | Deletes the selected item. |
+| Tab     | Description                                                                                                                                              |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Refresh | Refreshes the browser.                                                                                                                                   |
+| Add     | Allows you to Add a new _Repository_. Select from various pre-configured _Repository_ Types. Each Type will determine the Details for that _Repository_. |
+| Delete  | Deletes the selected item.                                                                                                                               |
 
 Double click on an item in the list to get the _Dashboard_ view.
 
@@ -46,25 +46,25 @@ The Dashboard view displays all information related to a specific _Repository_ T
 
 ### Common Details of all _Repositories_ Types
 
-| Field | Description |
-| --- | --- |
+| Field                | Description                                                                     |
+|----------------------|---------------------------------------------------------------------------------|
 | **Full Domain Name** | The fully qualified name of the _Domain_ to which the _Repository_ was defined. |
-| **Name** | The Name of the _Repository_. |
-| **Type** | The _Repository_ Type chosen when you performed the Add. |
-| **Owner Type** | User or Group. |
-| **Owner** | Name of the Owner. |
-| **Summary** | A description of the _Repository_.|
-| **Created** | Auto-generated date when the _Repository_ was added.|
-| **Modified**| Auto-generated date when the _Repository_ was updated.|
-| **Credential**| The _Credential_ used to access the _Repository_ if required. |
+| **Name**             | The Name of the _Repository_.                                                   |
+| **Type**             | The _Repository_ Type chosen when you performed the Add.                        |
+| **Owner Type**       | User or Group.                                                                  |
+| **Owner**            | Name of the Owner.                                                              |
+| **Summary**          | A description of the _Repository_.                                              |
+| **Created**          | Auto-generated date when the _Repository_ was added.                            |
+| **Modified**         | Auto-generated date when the _Repository_ was updated.                          |
+| **Credential**       | The _Credential_ used to access the _Repository_ if required.                   |
 
 ## HTTP _Repository_ Details
 
-| Field | Description |
-| --- | --- |
-|**URL** | The Universal Resource Locator used to locate the HTTP repository. |
-|**URL Encrypted** | Select the box to indicate the URL should be hidden in the database.|
-|**URL Override** |Select the box if the URL can be replaced at the _Component_ definition.|
+| Field             | Description                                                              |
+|-------------------|--------------------------------------------------------------------------|
+| **URL**           | The Universal Resource Locator used to locate the HTTP repository.       |
+| **URL Encrypted** | Select the box to indicate the URL should be hidden in the database.     |
+| **URL Override**  | Select the box if the URL can be replaced at the _Component_ definition. |
 | **Log File**|  The fully qualified file name to the logs from the HTTP get.
 | **Log File Encrypted** | Select the box to indicate the Log File name should be hidden in the database.|
 | **Log File Override** | Select the box if the Log File can be replaced at the _Component_ definition. |
@@ -86,19 +86,19 @@ The Dashboard view displays all information related to a specific _Repository_ T
 
 ## File System _Repository_ Details
 
-| Field | Description |
-| --- | --- |
-| **Filepath**|  The fully qualified directory name to the files that will need to be deployed. These files must be on a file system that the DeployHub deployment engine has access to. |
-| **Filepath Encrypted** | Select the box to indicate the Filepath name should be hidden in the database.|
-| **Filepath Override** | Select the box if the Filepath can be replaced at the _Component_ definition. |  
-|**Pattern** | This defines the file types you want to pull from the _Repository_, such as \*.exe, \*.dll, \*.war. |
-|**Pattern Encrypted** | Select the box to indicate the Pattern should be hidden in the database.|
-|**Pattern Override** |Select the box if the Pattern can be replaced at the _Component_ definition.|
-|**Recursive**| Select the box in order to cause the _Repository_ to return all of the files from directories below those designated by Filepath. |
-|**Recursive Override** |Select the box if the Recursive option can be replaced at the _Component_ definition.|
-|**Version**| Allows for the auto generation of a version number based on a template that you define. Enter the template with variables, such as V${buildnumber} to create your unique version number upon deployment. This is most commonly used with DMScript. |
-|**Version Encrypted** | Select the box to indicate the Version should be hidden in the database.|
-|**Version Override** |Select the box if the Version can be replaced at the _Component_ definition.|
+| Field                  | Description                                                                                                                                                                                                                                        |
+|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Filepath**           | The fully qualified directory name to the files that will need to be deployed. These files must be on a file system that the DeployHub deployment engine has access to.                                                                            |
+| **Filepath Encrypted** | Select the box to indicate the Filepath name should be hidden in the database.                                                                                                                                                                     |
+| **Filepath Override**  | Select the box if the Filepath can be replaced at the _Component_ definition.                                                                                                                                                                      |
+| **Pattern**            | This defines the file types you want to pull from the _Repository_, such as \*.exe, \*.dll, \*.war.                                                                                                                                                |
+| **Pattern Encrypted**  | Select the box to indicate the Pattern should be hidden in the database.                                                                                                                                                                           |
+| **Pattern Override**   | Select the box if the Pattern can be replaced at the _Component_ definition.                                                                                                                                                                       |
+| **Recursive**          | Select the box in order to cause the _Repository_ to return all of the files from directories below those designated by Filepath.                                                                                                                  |
+| **Recursive Override** | Select the box if the Recursive option can be replaced at the _Component_ definition.                                                                                                                                                              |
+| **Version**            | Allows for the auto generation of a version number based on a template that you define. Enter the template with variables, such as V${buildnumber} to create your unique version number upon deployment. This is most commonly used with DMScript. |
+| **Version Encrypted**  | Select the box to indicate the Version should be hidden in the database.                                                                                                                                                                           |
+| **Version Override**   | Select the box if the Version can be replaced at the _Component_ definition.                                                                                                                                                                       |
 
 ## Git _Repository_ Details
 
@@ -126,13 +126,13 @@ Now we are going to customize this _Action_. On the right hand side, you will se
 
 _GitCheckout_ Parameters
 
-| **Field** | Value | Description |
-| --- | --- | --- |
-| **Title** | Not Required | Name of the step in your deployment workflow. Use "Git Checkout." |
-| **Summary** | Not Required | Enter a summary of this step. |
-| **Git Repo** | $GIT_URL| This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level. |
-| **Git Commit** | $GIT_COMMIT | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.|
-| **To Dir** | $GIT_DIR | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
+| **Field**      | Value        | Description                                                                                                                                                                                     |
+|----------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Title**      | Not Required | Name of the step in your deployment workflow. Use "Git Checkout."                                                                                                                               |
+| **Summary**    | Not Required | Enter a summary of this step.                                                                                                                                                                   |
+| **Git Repo**   | $GIT_URL     | This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level.                                                                    |
+| **Git Commit** | $GIT_COMMIT  | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.                                                                       |
+| **To Dir**     | $GIT_DIR     | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
 
 At this point the _Action_ is ready to be used by anyone with access (based on _Domain_ and _Group_ options).
 Note: Because this _Action_ is reusable, no _Component_ variables are defined. This is performed at the _Component_ level.
@@ -145,11 +145,11 @@ For each _Component_ you will need to define the variable values for $GIT_URL, $
 
 The following variables must be added to the Attributes Section for all  _Components_ using the GitCheckoutAction _Pre Action_.  The Attributes section can be found on the _Component_ Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:
 
-| Variable Name | Value Description |
-|--- | --- |
-| **GIT_URL** | This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level. |
-| **GIT_COMMIT** | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.|
-| **GIT_DIR** | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
+| Variable Name  | Value Description                                                                                                                                                                               |
+|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **GIT_URL**    | This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level.                                                                    |
+| **GIT_COMMIT** | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.                                                                       |
+| **GIT_DIR**    | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
 
 {{% include "/userguide/reusable/OpenMake Meister.md/" %}}
 
@@ -159,11 +159,11 @@ The following variables must be added to the Attributes Section for all  _Compon
 
 The Access Section allows _Users_ within designated _Groups_ to update the _Repository_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Repository_ in the following ways:
 
-| Access | Description |
-| --- | --- |
-| **View** | If a _User_ belongs to a _UserGroup_ in the View Access list for the this _Repository_, the _Repository_ will be visible. |
-| **Change** | This allows a _User_ who belongs to any _UserGroup_ in the list to change the attributes of the _Repository_. |
-| **Check-out Access** | Allows Users to check out files from the _Repository_. This is inherited from the Read Access of the parent _Domain_. |
-| **Check-in Access** | Allows Users to check in files to the _Repository_. This is inherited from the Write Access of the parent _Domain_. |
+| Access               | Description                                                                                                               |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------|
+| **View**             | If a _User_ belongs to a _UserGroup_ in the View Access list for the this _Repository_, the _Repository_ will be visible. |
+| **Change**           | This allows a _User_ who belongs to any _UserGroup_ in the list to change the attributes of the _Repository_.             |
+| **Check-out Access** | Allows Users to check out files from the _Repository_. This is inherited from the Read Access of the parent _Domain_.     |
+| **Check-in Access**  | Allows Users to check in files to the _Repository_. This is inherited from the Write Access of the parent _Domain_.       |
 
 {{% include "userguide/reusable/AuditTrail.md" %}}

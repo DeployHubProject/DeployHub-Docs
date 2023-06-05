@@ -4,9 +4,9 @@ Built-in _Actions_ may already support what you need. Some Built-in _Actions_ ar
 
 ### Built-In Database Actions
 
-| Name | Description |
-|---|---|
-|**Run SQL Script (Postgres)** | Runs one or more SQL scripts against a Postgres Database. |
+| Name                          | Description                                               |
+|-------------------------------|-----------------------------------------------------------|
+| **Run SQL Script (Postgres)** | Runs one or more SQL scripts against a Postgres Database. |
 
 ### Built-In Deploy Actions
 
@@ -87,12 +87,12 @@ Built-in _Actions_ may already support what you need. Some Built-in _Actions_ ar
 
 ## Built-in _Actions_ that Support DevOps Interoperability
 
-|Action|Description|
-|---|---|
-| [Ansible](/userguide/integrations/ansible/) | Uses Ansible to perform Deployments. |
+| Action                                                  | Description                                |
+|---------------------------------------------------------|--------------------------------------------|
+| [Ansible](/userguide/integrations/ansible/)             | Uses Ansible to perform Deployments.       |
 | [Cloud Foundry](/userguide/integrations/cloud-foundry/) | Uses Cloud Foundry to perform Deployments. |
-| [Helm](/userguide/integrations/helm/) | Uses Helm to deploy Containers. |
-| [SalesForce](/userguide/integrations/salesforce/) | Deploys _Applications_ to SalesForce.   |
-| [Tomcat](/userguide/integrations/tomcat/) | Deploys to a Tomcat environment.   |
-| [WebLogic](userguide/integrations/weblogic/) | Deploys to a WebLogic Environment. |
-| [WebSphere](/userguide/integrations/websphere/) | Deploys to a WebSphere Environment.  |
+| [Helm](/userguide/integrations/helm/)                   | Uses Helm to deploy Containers.            |
+| [SalesForce](/userguide/integrations/salesforce/)       | Deploys _Applications_ to SalesForce.      |
+| [Tomcat](/userguide/integrations/tomcat/)               | Deploys to a Tomcat environment.           |
+| [WebLogic](userguide/integrations/weblogic/)            | Deploys to a WebLogic Environment.         |
+| [WebSphere](/userguide/integrations/websphere/)         | Deploys to a WebSphere Environment.        |

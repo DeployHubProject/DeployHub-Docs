@@ -12,13 +12,13 @@ _soap_ is used to make a call to an external soap-based API. It takes two mandat
 
 soap(url,payload[,soapaction[,cookiejar[,credential]]])
 
-| Parameters| Description|
-| --- | --- |
-|url | Is the URL to which the XML payload (the SOAP message) should be posted.|
-|payload| Is the XML payload, a string containing the SOAP message that represents the request body of the SOAP request.|
-|soapaction| Optional. If specified this is included as a SOAPAction in the HTTP Header.|
-|cookiejar | Optional. If specified this is an array of name/value pairs representing the cookies to be set in the request.|
-|credential| Optional. If specified, this is a credential object used for basic authentication.|
+| Parameters | Description                                                                                                    |
+|------------|----------------------------------------------------------------------------------------------------------------|
+| url        | Is the URL to which the XML payload (the SOAP message) should be posted.                                       |
+| payload    | Is the XML payload, a string containing the SOAP message that represents the request body of the SOAP request. |
+| soapaction | Optional. If specified this is included as a SOAPAction in the HTTP Header.                                    |
+| cookiejar  | Optional. If specified this is an array of name/value pairs representing the cookies to be set in the request. |
+| credential | Optional. If specified, this is a credential object used for basic authentication.                             |
 
 **Returns:**
 

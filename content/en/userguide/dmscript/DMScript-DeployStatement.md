@@ -12,8 +12,8 @@ With no parameters, deploy simply deploys the _Component_ currently on the stack
 
 _deploy_ takes the following parameter:
 
-| Parameter | Description |
-| --- | --- |
+| Parameter  | Description                                                                                                                                                                         |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | repository | Mandatory. The name of the repository to use as a source of files. The repository name can be prepended with as many domain names as necessary to uniquely identify the repository. |
 
 Additional parameters will depend on the chosen repository. The parameters specified will either override the properties defined for the repository (if the property is defined as _overridable_) or will be appended to them (if the property is defined as _appendable_). If a parameter attempts to override a property which is not defined as _overridable_ then a runtime error is thrown.

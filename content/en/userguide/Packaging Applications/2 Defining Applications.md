@@ -12,15 +12,15 @@ Use the _Application_ List View accessible from the left hand _Application_ menu
 
 The list view is organized on the following columns:
 
-| List Column | Description|
-|---|---|
-|**Version**|  The _Application Base Version_ or _Application Version_ number. |
-|**Domain**| The _Domain_ to which the _Application_ belongs.|
-|**Parent**| The _Application Base Version_ from which the _Application Version_ was created. This will be empty for the _Application Base Version_.|
-|**Environment**| The _Environment_ to which the _Application_ has been deployed. Each _Environment_ will represent a different row in the List View table.|
-|**Last Deployment to Environment**| The Deployment Log number.|
-|**Completed**|The date and time of the last deployment to the listed _Environment_.|
-|**Results**| Success or Fail.|
+| List Column                        | Description                                                                                                                               |
+|------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| **Version**                        | The _Application Base Version_ or _Application Version_ number.                                                                           |
+| **Domain**                         | The _Domain_ to which the _Application_ belongs.                                                                                          |
+| **Parent**                         | The _Application Base Version_ from which the _Application Version_ was created. This will be empty for the _Application Base Version_.   |
+| **Environment**                    | The _Environment_ to which the _Application_ has been deployed. Each _Environment_ will represent a different row in the List View table. |
+| **Last Deployment to Environment** | The Deployment Log number.                                                                                                                |
+| **Completed**                      | The date and time of the last deployment to the listed _Environment_.                                                                     |
+| **Results**                        | Success or Fail.                                                                                                                          |
 
 You can also use the Filter bar, represented by a funnel icon, to reorder your _Application_ List View by:
 
@@ -37,31 +37,31 @@ Double click on an item to see the _Dashboard_ view.
 
 The _Application_ List View has the following Tabs.
 
-| Tab | Description |
-| --- | --- |
-| **Refresh** | Refreshes the browser. |
-| **Add Base** | Allows you to Add a new _Application Base Version_. |
-| **Add Version** | Creates a copy of the selected _Application_ in the list, creating a new _Application Version_. |
-| **Delete** | Deletes the selected item. However, you must delete the _Applications_ starting from the newest to the oldest.  The _Application Base Version_ would be deleted last. Sorting by "Version" gives you the order.  |
-| **Tasks** | Displays all _Application_ Tasks available for the selected item based on the Tasks defined to the _Application_ Domain. See [Tasks](/userguide/first-steps/2-defining-domains/#tasks) for more information.   |
-| **List** | Displays the List View. |
-| **Map** | Displays a global Map of all versions of the _Application_ with _Components_. |
+| Tab             | Description                                                                                                                                                                                                     |
+|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Refresh**     | Refreshes the browser.                                                                                                                                                                                          |
+| **Add Base**    | Allows you to Add a new _Application Base Version_.                                                                                                                                                             |
+| **Add Version** | Creates a copy of the selected _Application_ in the list, creating a new _Application Version_.                                                                                                                 |
+| **Delete**      | Deletes the selected item. However, you must delete the _Applications_ starting from the newest to the oldest.  The _Application Base Version_ would be deleted last. Sorting by "Version" gives you the order. |
+| **Tasks**       | Displays all _Application_ Tasks available for the selected item based on the Tasks defined to the _Application_ Domain. See [Tasks](/userguide/first-steps/2-defining-domains/#tasks) for more information.    |
+| **List**        | Displays the List View.                                                                                                                                                                                         |
+| **Map**         | Displays a global Map of all versions of the _Application_ with _Components_.                                                                                                                                   |
 
 ## Viewing and Editing with the _Application_ Dashboard
 
 The Dashboard view displays all information related to a specific _Application Base Version_ or _Application Version_. The Dashboard view has two additional tab options - Package Components and Versions.  Below are the Details for an _Application_.
 
-| Details | Description |
-| --- | --- |
-|**Full Domain** | The fully qualified path of the _Domain_ that the _Application_ is to be associated with, showing all parent _Domains_. |
-|**Name** | The Name of your _Application_. |
-| **Description** | A short description of your software system. |
-|**Change Request DataSource** | DeployHub Pro Option - Establishes the Change Request system for the _Application_. A Change Request Data Source must be pre-defined for this field to be used. |
-|**Pre-Action**| An action executed prior to the deployment.|
-|**Post-Action**| An action executed at the completion of deployment.|
-|**Custom Action** | Overrides any Pre or Post Actions, such as calling an external solutions such as Helm.|
-|**Successful Deployment Template** | Used for success notifications. |
-|**Failed Deployment Template**| Used for failure notifications.|
+| Details                            | Description                                                                                                                                                     |
+|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Full Domain**                    | The fully qualified path of the _Domain_ that the _Application_ is to be associated with, showing all parent _Domains_.                                         |
+| **Name**                           | The Name of your _Application_.                                                                                                                                 |
+| **Description**                    | A short description of your software system.                                                                                                                    |
+| **Change Request DataSource**      | DeployHub Pro Option - Establishes the Change Request system for the _Application_. A Change Request Data Source must be pre-defined for this field to be used. |
+| **Pre-Action**                     | An action executed prior to the deployment.                                                                                                                     |
+| **Post-Action**                    | An action executed at the completion of deployment.                                                                                                             |
+| **Custom Action**                  | Overrides any Pre or Post Actions, such as calling an external solutions such as Helm.                                                                          |
+| **Successful Deployment Template** | Used for success notifications.                                                                                                                                 |
+| **Failed Deployment Template**     | Used for failure notifications.                                                                                                                                 |
 
 ### _Application_ Dependencies
 
@@ -69,9 +69,9 @@ The Dependency list shows all of your _Package Components_. This will remain emp
 
 ### Vulnerabilities
 
-Your _Application's_ vulnerabilities are derived by aggregating all of your _Package Component's_ vulnerabilities to the 'logical' _Application_ level. Vulnerabilities are displayed based on each _Component's_ SBOM. This data is automatically populated when one or more of your _Package Components_ have an SBOM that produced vulnerability data. 
+Your _Application's_ vulnerabilities are derived by aggregating all of your _Package Component's_ vulnerabilities to the 'logical' _Application_ level. Vulnerabilities are displayed based on each _Component's_ SBOM. This data is automatically populated when one or more of your _Package Components_ have an SBOM that produced vulnerability data.
 
->Note - This list may be incomplete if one or more of your _Package Components_ do not have an associated SBOM that can be used to gather vulnerability data. 
+>Note - This list may be incomplete if one or more of your _Package Components_ do not have an associated SBOM that can be used to gather vulnerability data.
 
 ### SBOM
 
@@ -91,7 +91,7 @@ The Trends graph shows the success or failure rates overtime as well at the time
 
 ### Deployed Environments
 
-Each _Application Base Version_ is assigned the _Environments_ for data aggregation. _Application Versions_ inherit the _Environments_ from the _Application Base Version_. 
+Each _Application Base Version_ is assigned the _Environments_ for data aggregation. _Application Versions_ inherit the _Environments_ from the _Application Base Version_.
 
 ### Last Deployment Difference Based on Environment
 
@@ -103,10 +103,10 @@ The Difference Graph shows what changed in the last deployment between the previ
 
  _Users_ within designated _Groups_ can update or view the _Application_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ within an Access lists will be granted access to the _Application_:
 
-| Access | Description |
-| --- | --- |
-| **View** | Any _User_ in any _Group_ within this list can see the selected _Component_ in the List View. |
-| **Change** | Any _User_ in any _Group_ within this list can make changes to the _Component_. |
+| Access     | Description                                                                                                                                        |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| **View**   | Any _User_ in any _Group_ within this list can see the selected _Component_ in the List View.                                                      |
+| **Change** | Any _User_ in any _Group_ within this list can make changes to the _Component_.                                                                    |
 | **Deploy** | Any _User_ in any _Group_ within this list can deploy the _Application_.  Restrictions are based on the Access defined at the _Environment_ level. |
 
 

@@ -8,12 +8,12 @@ description: >
 
 _Set_ assigns a variable or array element to a value. It has four possible modifiers:
 
-|Modififier| Description |
-| --- | ---|
-| -a | Appends the value. |
-| -l | Appends all values from an array or list. |
-| -g | Sets the variable in global scope. |
-| -i | Sets the nocase option. |
+| Modififier | Description                               |
+|------------|-------------------------------------------|
+| -a         | Appends the value.                        |
+| -l         | Appends all values from an array or list. |
+| -g         | Sets the variable in global scope.        |
+| -i         | Sets the nocase option.                   |
 
 The +=, -= and \*= operators perform increment, decrement and multiply on the current value. In append mode the global variable SEPARATOR can be used to act as the separator string between the values.
 

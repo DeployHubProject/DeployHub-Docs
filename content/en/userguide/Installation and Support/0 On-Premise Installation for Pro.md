@@ -8,10 +8,10 @@ description: >
 
 ## On Premise Installation Using the DeployHub Helm Chart
 
-DeployHub can be installed into your own cloud environment, or onto a hosted cloud environment.  DeployHub uses Helm to manage and perform the installation. The process includes the installation of multiple containers. 
+DeployHub can be installed into your own cloud environment, or onto a hosted cloud environment.  DeployHub uses Helm to manage and perform the installation. The process includes the installation of multiple containers.
 
 ### Step 1 - Download and Run Helm
-The DeployHub on-premise Helm chart and instructions can be found at [ArtifactHub](https://artifacthub.io/packages/helm/deployhub/deployhub). This is the location for the most up to date instructions for downloading and running the Ortelius Helm chart.    (https://artifacthub.io/packages/helm/deployhub/deployhub)
+The DeployHub on-premise Helm chart and instructions can be found at [ArtifactHub](https://artifacthub.io/packages/helm/deployhub/deployhub). This is the location for the most up to date instructions for downloading and running the Ortelius Helm chart.    (<https://artifacthub.io/packages/helm/deployhub/deployhub>)
 
 ### Step 2 - Access DeployHub from your browser
 
@@ -27,7 +27,7 @@ Access the URL from the following address:
 ```
 http://<External IP Address from above step>/dmadminweb/Home
 ```
-To log in please use userId: admin and password: admin. 
+To log in please use userId: admin and password: admin.
 
 **Note:**
 You can create your own Administrator UserID and remove the default userid and password.

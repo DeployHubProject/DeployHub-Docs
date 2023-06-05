@@ -10,9 +10,9 @@ Helm is called to replace the DeployHub default processing engine for performing
 
 ## Helm and Key Value Pairs
 
-In order to support a consistent Helm deployment across Cluster _Endpoints_ and _Environments_ (Dev, Test, Prod) Key value pair substitution is performed. When a Helm chart is used, DeployHub will pull your Helm Chart in the .tgz format from either a public or private Chart Museum. It then expands it out into a separate directory location where Helm is executed. This location is defined by the DeployHub Endpoint which you define (see "Connecting a DeployHub _Endpoint_ to your Kubernetes Cluster through Helm" below). 
+In order to support a consistent Helm deployment across Cluster _Endpoints_ and _Environments_ (Dev, Test, Prod) Key value pair substitution is performed. When a Helm chart is used, DeployHub will pull your Helm Chart in the .tgz format from either a public or private Chart Museum. It then expands it out into a separate directory location where Helm is executed. This location is defined by the DeployHub Endpoint which you define (see "Connecting a DeployHub _Endpoint_ to your Kubernetes Cluster through Helm" below).
 
-DeployHub will then create an override values file which contains all the specific key value pairs defined at the _Endpoint_, _Environment_, _Component_ or _Application_ in this order of precedence. For example, if the same key value pairs are defined at the _Endpoints_ as well as the _Application_, the _Endpoint_ key values are used. 
+DeployHub will then create an override values file which contains all the specific key value pairs defined at the _Endpoint_, _Environment_, _Component_ or _Application_ in this order of precedence. For example, if the same key value pairs are defined at the _Endpoints_ as well as the _Application_, the _Endpoint_ key values are used.
 
 The override values file passes the Key value definitions Helm 'upgrade' command.  This process allows a single Helm chart to be reused across all deployments, supporting the needed key value pairs for each deployment.
 
@@ -45,56 +45,56 @@ In order to connect to Kubernetes cluster running on a cloud provider, an authen
 
 #### Connecting to a Google Kubernetes Cluster
 
-| Key | Value | Command |
-| --- | ----- | ------- |
-| gcloud.compute.zone | compute zone for the cluster | gcloud config set compute/zone <zone>|
-| gcloud.container.cluster | cluster name | gcloud config set container/cluster and gcloud container clusters get-credentials <cluster>|
-| gcloud.core.account | account name | gcloud config set core/account <account>|
-| gcloud.core.disable_usage_reporting | disable reporting | gcloud config set core/disable_usage_reporting <disable_usage_reporting>|
-| gcloud.core.project | project name | gcloud config set core/project <project> |
-| gcloud.oauth.account | service account name | gcloud auth activate-service-account <account> |
-| gcloud.oauth.keyfile | key file for service account | gcloud auth activate-service-account --key-file=<keyfile> |
+| Key                                 | Value                        | Command                                                                                     |
+|-------------------------------------|------------------------------|---------------------------------------------------------------------------------------------|
+| gcloud.compute.zone                 | compute zone for the cluster | gcloud config set compute/zone <zone>                                                       |
+| gcloud.container.cluster            | cluster name                 | gcloud config set container/cluster and gcloud container clusters get-credentials <cluster> |
+| gcloud.core.account                 | account name                 | gcloud config set core/account <account>                                                    |
+| gcloud.core.disable_usage_reporting | disable reporting            | gcloud config set core/disable_usage_reporting <disable_usage_reporting>                    |
+| gcloud.core.project                 | project name                 | gcloud config set core/project <project>                                                    |
+| gcloud.oauth.account                | service account name         | gcloud auth activate-service-account <account>                                              |
+| gcloud.oauth.keyfile                | key file for service account | gcloud auth activate-service-account --key-file=<keyfile>                                   |
 
 #### Connecting to a Amazon Kubernetes Cluster
 
-| Key | Value | Command |
-| --- | ----- | ------- |
-| eks.aws_access_key_id | access key id | aws --profile default configure set aws_access_key_id  <key_id> |
-| eks.aws_secret_access_key | secret key | aws --profile default configure set aws_secret_access_key <access_key> |
-| eks.region | region the cluster is running in | aws eks --region <region> update-kubeconfig --name <cluster> <optional> |
-| eks.cluster | cluster name | aws eks --region <region> update-kubeconfig --name <cluster> <optional> |
-| eks.optional | additional options | aws eks --region <region> update-kubeconfig --name <cluster> <optional> |
+| Key                       | Value                            | Command                                                                 |
+|---------------------------|----------------------------------|-------------------------------------------------------------------------|
+| eks.aws_access_key_id     | access key id                    | aws --profile default configure set aws_access_key_id  <key_id>         |
+| eks.aws_secret_access_key | secret key                       | aws --profile default configure set aws_secret_access_key <access_key>  |
+| eks.region                | region the cluster is running in | aws eks --region <region> update-kubeconfig --name <cluster> <optional> |
+| eks.cluster               | cluster name                     | aws eks --region <region> update-kubeconfig --name <cluster> <optional> |
+| eks.optional              | additional options               | aws eks --region <region> update-kubeconfig --name <cluster> <optional> |
 
 #### Connecting to a Azure Kubernetes Cluster
 
-| Key | Value | Command |
-| --- | ----- | ------- |
-| aks.serviceprincipal | service principal | az login --service-principal -u <serviceprincipal> -p <certificate> --tenant <tenant> |
-| aks.certificate | certificate for the service principal | az login --service-principal -u <serviceprincipal> -p <certificate> --tenant <tenant> | 
-| aks.tenant | tenant for the service principal | az login --service-principal -u <serviceprincipal> -p <certificate> --tenant <tenant> |
-| aks.resourcegroup | resource group for the cluster | az aks get-credentials --resource-group <resourcegroup> --name <cluster> |
-| aks.cluster | cluster name | az aks get-credentials --resource-group <resourcegroup> --name <cluster> |
+| Key                  | Value                                 | Command                                                                               |
+|----------------------|---------------------------------------|---------------------------------------------------------------------------------------|
+| aks.serviceprincipal | service principal                     | az login --service-principal -u <serviceprincipal> -p <certificate> --tenant <tenant> |
+| aks.certificate      | certificate for the service principal | az login --service-principal -u <serviceprincipal> -p <certificate> --tenant <tenant> |
+| aks.tenant           | tenant for the service principal      | az login --service-principal -u <serviceprincipal> -p <certificate> --tenant <tenant> |
+| aks.resourcegroup    | resource group for the cluster        | az aks get-credentials --resource-group <resourcegroup> --name <cluster>              |
+| aks.cluster          | cluster name                          | az aks get-credentials --resource-group <resourcegroup> --name <cluster>              |
 
 #### Using an existing context
 
-| Key | Value | Command |
-| --- | ----- | ------- |
+| Key             | Value        | Command                                      |
+|-----------------|--------------|----------------------------------------------|
 | kubectl_context | context name | kubectl config use-context <kubectl_context> |
 
 ## Additional Helm Key/Values
 
-| Key | Description | 
-| --- | ----- | 
-| helm_exe | use helm2 for Helm V2 executable. Default is Helm V3 |
-| helmrepo.url | url to the chart repo (from Component Definition) | 
-| helmrepo.username or helmrepouser | user name used to login into the repo with |
-| helmrepo.password or helmrepopass | password user to login into the repo with |
-| chart | chart to use (from Component Definition) |
-| chartversion | version of the chart.  Default latest (from Component Definition) |
-| chartnamespace | namespace to use for the deployment (from Component Definition) |
-| helmopts | additional options for the helm upgrade |
-| helmtemplateopts | additional options for the helm template |
-| helmcapture | y/n for uploading a hermetic version of the chart and values to DeployHub stored by deploy log # |
+| Key                               | Description                                                                                      |
+|-----------------------------------|--------------------------------------------------------------------------------------------------|
+| helm_exe                          | use helm2 for Helm V2 executable. Default is Helm V3                                             |
+| helmrepo.url                      | url to the chart repo (from Component Definition)                                                |
+| helmrepo.username or helmrepouser | user name used to login into the repo with                                                       |
+| helmrepo.password or helmrepopass | password user to login into the repo with                                                        |
+| chart                             | chart to use (from Component Definition)                                                         |
+| chartversion                      | version of the chart.  Default latest (from Component Definition)                                |
+| chartnamespace                    | namespace to use for the deployment (from Component Definition)                                  |
+| helmopts                          | additional options for the helm upgrade                                                          |
+| helmtemplateopts                  | additional options for the helm template                                                         |
+| helmcapture                       | y/n for uploading a hermetic version of the chart and values to DeployHub stored by deploy log # |
 
 
 ## Helm and _Custom Actions_
@@ -129,9 +129,9 @@ No Parameter fields are required for _WriteEnv2File_.
 
 When you drag the HelmUpgrade _Procedure_ onto the area under "Start" a pop-up dialog box will open for you to complete the following parameters:
 
-| Field | Value | Description |
-| --- | --- | --- |
-| **Title** | Not Required | Name of the step in your deployment workflow.  |
+| Field     | Value        | Description                                   |
+|-----------|--------------|-----------------------------------------------|
+| **Title** | Not Required | Name of the step in your deployment workflow. |
 | **Summary** | Not Required | Enter a summary of this step. | |
 | **RspFile** | $RspFile | The results from the WriteEnv2Toml.re Procedure |
 | **Chart** | $(Chart) | The Helm Chart to be used during the deployment |
@@ -151,7 +151,7 @@ helmcapture=Y
 ~~~
 
 
-Once stored in the DeployHub database, you can retrieve the hermetic Helm Chart, key value pairs and all container digests to repeat the exact deployment utilizing Helm manually. 
+Once stored in the DeployHub database, you can retrieve the hermetic Helm Chart, key value pairs and all container digests to repeat the exact deployment utilizing Helm manually.
 
 ### Retrieving and Running the Helm Chart Manually
 

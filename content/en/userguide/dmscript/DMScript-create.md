@@ -10,10 +10,10 @@ description: >
 _Create_ adds a new file in the current _DropZone_. If an optional stream is specified, then the file is created from the stream content.
 
 _create_ requires named parameters:
-| Parameter | Description |
-| --- | --- |
-| file | Mandatory. The name of the file to create in the current _DropZone_. |
-| stream | Optional. The stream to use to populate the file. If the stream parameter is absent, the file is created with zero size. |
+| Parameter | Description                                                                                                              |
+|-----------|--------------------------------------------------------------------------------------------------------------------------|
+| file      | Mandatory. The name of the file to create in the current _DropZone_.                                                     |
+| stream    | Optional. The stream to use to populate the file. If the stream parameter is absent, the file is created with zero size. |
 
 Once the file is created it is marked for deployment. It will be pushed to the target _Endpoint_(s) during any subsequent _transfer_ operation.
 
@@ -49,10 +49,10 @@ Reads a file in the current _DropZone_ and writes its content into a stream.
 
 _read_ takes at most two parameters:
 
-| Parameter | Description |
-| --- | --- |
-| file | Mandatory. The name of the file to read. |
-| stream | Optional when _read_ is used inside a using stream block, mandatory otherwise. Specifies the name of an existing stream. |
+| Parameter | Description                                                                                                              |
+|-----------|--------------------------------------------------------------------------------------------------------------------------|
+| file      | Mandatory. The name of the file to read.                                                                                 |
+| stream    | Optional when _read_ is used inside a using stream block, mandatory otherwise. Specifies the name of an existing stream. |
 
 NOTE: If stream is not specified, then the file content is written into the stream used by the enclosing using stream block. If stream is not specified and read is used outside a using stream block a runtime error occurs.
 

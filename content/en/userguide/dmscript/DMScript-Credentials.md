@@ -13,17 +13,17 @@ If the credential can be read, then its attributes can be accessed:
 
 The following properties can be accessed for a credential object:
 
-| Property | Type | Description |
-| --- | --- | --- |
-| id | Integer | _Endpoint_ id, as used in the database. |
-| --- | --- | --- |
-| name | String | _Endpoint_ name. |
-| fqdomain | String | Fully qualified domain name. |
-| summary | String | Summary text. |
-| domain | Object | Domain in which the Credential is contained. |
-| owner | Object | User or UserGroup that owns the _Endpoint._ |
-| username | String | Decrypted username. |
-| password | String | Decrypted password. |
+| Property | Type    | Description                                  |
+|----------|---------|----------------------------------------------|
+| id       | Integer | _Endpoint_ id, as used in the database.      |
+| ---      | ---     | ---                                          |
+| name     | String  | _Endpoint_ name.                             |
+| fqdomain | String  | Fully qualified domain name.                 |
+| summary  | String  | Summary text.                                |
+| domain   | Object  | Domain in which the Credential is contained. |
+| owner    | Object  | User or UserGroup that owns the _Endpoint._  |
+| username | String  | Decrypted username.                          |
+| password | String  | Decrypted password.                          |
 | b64auth | String | A string representing the decrypted username and password together, with a : separator and then base64 encoded. Used for Basic Authorization for web-based APIs. See the description of restful\_post, restful\_get and soap in the high level section named Built-In _Functions_ for more information.
  |
 | creator | User | User Object representing the user who created this credential. |

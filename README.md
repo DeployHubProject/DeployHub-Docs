@@ -4,7 +4,7 @@
 
 This Docsy Example Project is hosted at [https://example.docsy.dev/](https://example.docsy.dev/).
 
-You can find detailed theme instructions in the Docsy user guide: https://docsy.dev/docs/
+You can find detailed theme instructions in the Docsy user guide: <https://docsy.dev/docs/>
 
 This is not an officially supported Google product. This project is currently maintained.
 

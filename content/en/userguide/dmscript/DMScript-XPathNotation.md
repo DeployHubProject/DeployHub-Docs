@@ -13,16 +13,16 @@ _Xpath notation_ supports subset of xpath notation to identify the elements to c
 - The "|" operator is not permitted to select multiple elements.
 
 The following are valid xpath descriptors for DeployHub:
-| Descriptor | Description|
-| --- | --- |
-| /root/branch/element | All elements under branch. |
-| /root/branch/element[2] | The 2nd element under branch. |
-| /root/branch/element[@attr] | Every element under branch containing the named attribute. |
-| /root/branch/element[@attr=val] | Every element under branch with the specified attribute set to the named value. |
-| /root/branch/element[last()] | The last element under branch. |
-| /root/branch/element[last()-1] | The penultimate element under branch. |
-| /root/branch/element[position()\>1] | Every element under branch apart from the first one. |
-| /root/branch/element[position()\<3] | The first two elements under branch. |
+| Descriptor                          | Description                                                                     |
+|-------------------------------------|---------------------------------------------------------------------------------|
+| /root/branch/element                | All elements under branch.                                                      |
+| /root/branch/element[2]             | The 2nd element under branch.                                                   |
+| /root/branch/element[@attr]         | Every element under branch containing the named attribute.                      |
+| /root/branch/element[@attr=val]     | Every element under branch with the specified attribute set to the named value. |
+| /root/branch/element[last()]        | The last element under branch.                                                  |
+| /root/branch/element[last()-1]      | The penultimate element under branch.                                           |
+| /root/branch/element[position()\>1] | Every element under branch apart from the first one.                            |
+| /root/branch/element[position()\<3] | The first two elements under branch.                                            |
 |
 
 The statements that can be included in the modify statement block are listed below:
@@ -32,11 +32,11 @@ The statements that can be included in the modify statement block are listed bel
 This statement can only be included if the modifier parameter in the parent modify statement is set to "text". It is used to replace one string with another in the file specified by the file parameter in the parent modify statement.
 
 _text\_replace_ takes two mandatory and one optional named parameter:
-| Parameter| Description|
-| --- | --- |
-| find | The string to locate in the source file. This is a _regular expression_. Mandatory. |
-| replace | The string which will replace all occurrences of the find string in the source file. Mandatory. |
-| line | Boolean (true/false). Optional - defaults to false. If present and set to true, sets _text\_replace_ into _line processing_ mode – each line of the file is read and processed individually. This is useful when using regular expressions to process beginning and ends of lines. |
+| Parameter | Description                                                                                                                                                                                                                                                                        |
+|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| find      | The string to locate in the source file. This is a _regular expression_. Mandatory.                                                                                                                                                                                                |
+| replace   | The string which will replace all occurrences of the find string in the source file. Mandatory.                                                                                                                                                                                    |
+| line      | Boolean (true/false). Optional - defaults to false. If present and set to true, sets _text\_replace_ into _line processing_ mode – each line of the file is read and processed individually. This is useful when using regular expressions to process beginning and ends of lines. |
 
 ***Example:***
 
@@ -60,7 +60,7 @@ text\_replace(find: "\_MEMORY\_", replace: "$MEMORY");
 }
 ```
 
-STACK and MEMORY are attributes held against the different target _Environment_s. This ensures that the config.txt file is changed to reflect the values specific to that _Environment_.
+STACK and MEMORY are attributes held against the different target _Environment_s. This ensures that the config.txt file is changed to reflect the values specific to that_Environment_.
 
 If STACK and MEMORY are attributes held against each _Endpoint_, you can make a _Endpoint_-specific copy of the config.txt file. In this case, each _Endpoint_ will receive its own copy of the config.txt file, modified according to its own attributes.
 
@@ -169,8 +169,8 @@ _Set\_text_ can only be included if the modifier parameter in the parent modify 
 _set\_text_ takes two named parameters:
 
 | xpath | An xpath descriptor indicating the location(s) in the XML document of the element(s) to be modified. |
-| --- | --- |
-| value | The value of the text to add to the element(s). |
+|-------|------------------------------------------------------------------------------------------------------|
+| value | The value of the text to add to the element(s).                                                      |
 
 **Examples:**
 
@@ -241,14 +241,14 @@ This statement can only be included if the modifier parameter in the parent modi
 
 _add\_element_ takes three named parameters:
 
-| Parameter | Description|
-| --- | --- |
-| xpath | An xpath descriptor indicating the location(s) in the XML document where the element is to be inserted. |
-| pos | A string indicating the position of the insert location relative to the xpath. Is one of: |
-| "before" | The specified element is added before the element identified by the xpath. |
-| "after" | The specified element is added after the element identified by the xpath. |
-| "inside" | The specified element is added inside the element identified by the xpath. |
-| element | The element to insert. Must be in XML syntax. |
+| Parameter | Description                                                                                             |
+|-----------|---------------------------------------------------------------------------------------------------------|
+| xpath     | An xpath descriptor indicating the location(s) in the XML document where the element is to be inserted. |
+| pos       | A string indicating the position of the insert location relative to the xpath. Is one of:               |
+| "before"  | The specified element is added before the element identified by the xpath.                              |
+| "after"   | The specified element is added after the element identified by the xpath.                               |
+| "inside"  | The specified element is added inside the element identified by the xpath.                              |
+| element   | The element to insert. Must be in XML syntax.                                                           |
 
 **Examples:**
 
@@ -528,10 +528,10 @@ Transferred to _Endpoint_ "fronttier1":
 This statement can only be included if the modifier parameter in the parent modify statement is set to "xml". It is used to modify or create an attribute in specified element(s) in an XML document.
 
 _set\_attribute_ takes two named parameters:
-| Parameter| Description|
-| --- | --- |
-| xpath | An xpath descriptor indicating the location(s) of the element and the attribute to modify. |
-| value | The new value for the specified attribute in the selected element(s). |
+| Parameter | Description                                                                                |
+|-----------|--------------------------------------------------------------------------------------------|
+| xpath     | An xpath descriptor indicating the location(s) of the element and the attribute to modify. |
+| value     | The new value for the specified attribute in the selected element(s).                      |
 
 NOTE:The xpath must specify an attribute using @ syntax – see examples below.
 

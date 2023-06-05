@@ -12,10 +12,10 @@ _Remotescript_ executes a script on each remote _Endpoint_ in the current server
 During the execution, there is an implicit _serverloop_ (psloop). The _Endpoint_ object is pushed onto the stack, any "pre" block is executed, the specified script is then executed on the current remote _Endpoint_ and then any "post" block is executed. In the post block, the variable $? is set to the exit status of the script.
 
 remotescript requires named parameters as follows:
-| Parameter | Description |
-| --- | --- |
-| filepath | Mandatory: A full path to the script to be executed on the remote _Endpoint_. |
-| params | Optional: A list of parameters to be passed to the script. |
+| Parameter | Description                                                                   |
+|-----------|-------------------------------------------------------------------------------|
+| filepath  | Mandatory: A full path to the script to be executed on the remote _Endpoint_. |
+| params    | Optional: A list of parameters to be passed to the script.                    |
 
 **Example:**
 

@@ -10,10 +10,10 @@ description: >
 _Delete_ removes a file or a directory from the _DropZone_. Any file or directory marked as deleted will not be transferred to the target _Endpoint_(s) in any subsequent deployment.
 
 _delete_ takes the following optional named parameters:
-| Parameter  | Description |
-| --- | --- |
-| file | Optional. The name of the file to be removed. |
-| dir | Optional. The name of the directory to be removed. |
+| Parameter | Description                                        |
+|-----------|----------------------------------------------------|
+| file      | Optional. The name of the file to be removed.      |
+| dir       | Optional. The name of the directory to be removed. |
 
 NOTE: A single file or dir parameter _must_ be specified.
 

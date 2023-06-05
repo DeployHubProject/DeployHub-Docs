@@ -6,7 +6,7 @@ description: >
   Customize any Action using Built-in Functions and Procedures with DMScript.
 ---
 
-_DMScript_ (_D_eployment _M_anagement _Script_ing) is DeployHub's own scripting language. It underpins nearly all the activities that take place during a deployment.
+_DMScript_ (_D_eployment_M_anagement _Script_ing) is DeployHub's own scripting language. It underpins nearly all the activities that take place during a deployment.
 
 Users with the appropriate permissions can create their own _DMScript Activities_ by creating custom _Procedures_ and _Functions_. _DMScripts_ can be stored in the DeployHub database (as stored procedures) or can be held in an external filesystem or even in a _Repository_. Storing _DMScript_ in a _Repository_ allows it to be version controlled.
 
@@ -26,9 +26,9 @@ DeployHub can call any external script or program (either locally on the deploym
 
 _DMScript_ has:
 
-- Knowledge of the DeployHub object model. For example, _DMScript_ allows you to find all the _Endpoint_s in an _Environment_ that have a specific attribute. Doing this in external scripts is difficult if not impossible.
+- Knowledge of the DeployHub object model. For example, _DMScript_ allows you to find all the _Endpoint_s in an_Environment_ that have a specific attribute. Doing this in external scripts is difficult if not impossible.
 
-- Full knowledge of the attributes set against the selected objects. Uses values that have been set against _Endpoint_s, _Environments_, or _Applications_.
+- Full knowledge of the attributes set against the selected objects. Uses values that have been set against _Endpoint_s,_Environments_, or_Applications_.
 
 - A RESTful and SOAP API client. Makes calls to external systems (or even DeployHub's own API) quickly and easily.
 
@@ -113,7 +113,7 @@ set myres = testfunc("Deploy", "Hub");
 echo $myres; // echoes "DeployHub"
 ```
 
-**NOTE:** The _Function_ called can also be _DMScript_ stored in the DeployHub database, _DMScript_ held in an external repository, or it can be an external script which is executed. The method used is based on the "kind" of the _Procedure_.
+__NOTE:__ The _Function_ called can also be _DMScript_ stored in the DeployHub database, _DMScript_ held in an external repository, or it can be an external script which is executed. The method used is based on the "kind" of the _Procedure_.
 
 Built-in _Functions_ can be stand-alone _Functions,_ which can be called as described above. There are also _Functions_ which are defined as methods on _DMScript_ Objects. To call a method on an object, use the following syntax:
 
@@ -151,7 +151,7 @@ echo **"** myarg2[1] = $myarg2[1]";
 }
 ```
 
-**NOTE:** When adding _Procedures_ via the DeployHub Web User Interface, the "action" header is implied. There is no need to use the syntax outlined here. However, you can use this in an external _DMScript_ file (one stored in a repository) and call it from other _Procedures_ or _Functions_ stored in the same file.
+__NOTE:__ When adding _Procedures_ via the DeployHub Web User Interface, the "action" header is implied. There is no need to use the syntax outlined here. However, you can use this in an external _DMScript_ file (one stored in a repository) and call it from other _Procedures_ or _Functions_ stored in the same file.
 
 ### Call a Procedure
 
@@ -169,7 +169,7 @@ myarg1 = value1
 myarg2[1] = list
 ```
 
-**NOTE:** The _Procedure_ called can also be _DMScript_ stored in the DeployHub database, _DMScript_ held in an external repository or it can be an external script which is executed. The method used is based on the "kind" of the _Procedure_.
+__NOTE:__ The _Procedure_ called can also be _DMScript_ stored in the DeployHub database, _DMScript_ held in an external repository or it can be an external script which is executed. The method used is based on the "kind" of the _Procedure_.
 
 If the action does not have any parameters, then the call should be made with no enclosing braces like this:
 
@@ -402,15 +402,15 @@ echo 'My name is $MYVAR'; // echoes "My name is $MYVAR"
 
 Special "escape" characters in strings are automatically expanded:
 
-| Character| Description|
-| --- | ---|
-| \t | expands to a tab. |
-| \n | expands to a newline. |
-| \r | expands to a carriage-return. |
-| \u00xx | expands to the character represented by the 2 hex digits xx (but only if the character is in the range 0x20-0x7F (32-127). |
-| \\ | expands to \ |
-| \" | expands to " |
-| \' | expands to ' |
+| Character | Description                                                                                                                |
+|-----------|----------------------------------------------------------------------------------------------------------------------------|
+| \t        | expands to a tab.                                                                                                          |
+| \n        | expands to a newline.                                                                                                      |
+| \r        | expands to a carriage-return.                                                                                              |
+| \u00xx    | expands to the character represented by the 2 hex digits xx (but only if the character is in the range 0x20-0x7F (32-127). |
+| \\        | expands to \                                                                                                               |
+| \"        | expands to "                                                                                                               |
+| \'        | expands to '                                                                                                               |
 
 You can prevent this expansion by prefixing the string with a @ character:
 
@@ -478,27 +478,27 @@ echo "statement 2";
 
 _DMScript_ has the usual operators you would expect in a conventional scripting language.
 
-| **Operator** | **Description** | **Example** |
-| --- | --- | --- |
-| + | <ul style="list-style-type: none;"><li>Integer addition</li><li>Date offset</li><li>App Version tree walk</li><li>Array/List joining</li><li>String Concatenation</li></ul> | <ul style="list-style-type: none;"><li>2 + 2 = 4</li><li>$date + 7200 = 2 hours later</li><li>$av + 1 = successor</li><li>arr3 = $arr1 + $arr2</li><li>str3 = $str1 + $str2</li></ul> |
-|-|<ul style="list-style-type: none;"><li>Integer subtraction</li><li> Date difference</li><li> Date negative offset</li><li> App Version tree walk</li></ul>|<ul style="list-style-type: none;"><li>5 - 2 = 3</li><li> $date1 - $date2 = X seconds</li><li> $date - 3600 = an hour earlier</li><li> $av - 2 = grandfather </li></ul>|
-| \* | <ul style="list-style-type: none;"><li>Integer Multiplication</li></ul>| <ul style="list-style-type: none;"><li>2 \* 2 = 4 </li></ul>|
-| / | <ul style="list-style-type: none;"><li>Integer division </li></ul>|<ul style="list-style-type: none;"><li>5 / 2 = 2</li><li>1 / 0 = \<empty\></li></ul>|
-| % | <ul style="list-style-type: none;"><li>Integer modulus </li></ul>| <ul style="list-style-type: none;"><li>5 % 2 = 1 </li></ul>|
-| & or -a | <ul style="list-style-type: none;"><li>Logical and</li></ul> |<ul style="list-style-type: none;"><li> true & true = true</li></ul> |
-| l or -o | <ul style="list-style-type: none;"><li>Logical or</li></ul> | <ul style="list-style-type: none;"><li> true & false = true</ul></li> |
-| Unary-  | <ul style="list-style-type: none;"><li>Unary minus</li></ul> | <ul style="list-style-type: none;"><li>-1 = -1</li></ul> |
-| ! | <ul style="list-style-type: none;"><li>Logical not </li><li>String set test</li><li>Object ref test</li></ul> | <ul style="list-style-type: none;"><li>!true = false</li><li> !0 = true or !"" = true</li><li>!null = true</li></ul> |
-| () | Sub-expression | Changes precedence |
-| = or -eq | Equals | Boolean, Integer, String, Object |
-| != or -ne | Not equals | Boolean, Integer, String, Object |
-| > or -gt | Greater than | Boolean, Integer, String, Object |
-| >= or -ge | Greater than or equal to | Boolean, Integer, String, Object |
-| < or -lt | Less than | Boolean, Integer, String, Object |
-| <= or -le | Less than or equals to | Boolean, Integer, String, Object |
-| ~ | Matches | Right Hand Side is regular expression. |
+| __Operator__ | __Description__                                                                                                                                                             | __Example__                                                                                                                                                                           |
+|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| +            | <ul style="list-style-type: none;"><li>Integer addition</li><li>Date offset</li><li>App Version tree walk</li><li>Array/List joining</li><li>String Concatenation</li></ul> | <ul style="list-style-type: none;"><li>2 + 2 = 4</li><li>$date + 7200 = 2 hours later</li><li>$av + 1 = successor</li><li>arr3 = $arr1 + $arr2</li><li>str3 = $str1 + $str2</li></ul> |
+| -            | <ul style="list-style-type: none;"><li>Integer subtraction</li><li> Date difference</li><li> Date negative offset</li><li> App Version tree walk</li></ul>                  | <ul style="list-style-type: none;"><li>5 - 2 = 3</li><li> $date1 - $date2 = X seconds</li><li> $date - 3600 = an hour earlier</li><li> $av - 2 = grandfather </li></ul>               |
+| \*           | <ul style="list-style-type: none;"><li>Integer Multiplication</li></ul>                                                                                                     | <ul style="list-style-type: none;"><li>2 \* 2 = 4 </li></ul>                                                                                                                          |
+| /            | <ul style="list-style-type: none;"><li>Integer division </li></ul>                                                                                                          | <ul style="list-style-type: none;"><li>5 / 2 = 2</li><li>1 / 0 = \<empty\></li></ul>                                                                                                  |
+| %            | <ul style="list-style-type: none;"><li>Integer modulus </li></ul>                                                                                                           | <ul style="list-style-type: none;"><li>5 % 2 = 1 </li></ul>                                                                                                                           |
+| & or -a      | <ul style="list-style-type: none;"><li>Logical and</li></ul>                                                                                                                | <ul style="list-style-type: none;"><li> true & true = true</li></ul>                                                                                                                  |
+| l or -o      | <ul style="list-style-type: none;"><li>Logical or</li></ul>                                                                                                                 | <ul style="list-style-type: none;"><li> true & false = true</ul></li>                                                                                                                 |
+| Unary-       | <ul style="list-style-type: none;"><li>Unary minus</li></ul>                                                                                                                | <ul style="list-style-type: none;"><li>-1 = -1</li></ul>                                                                                                                              |
+| !            | <ul style="list-style-type: none;"><li>Logical not </li><li>String set test</li><li>Object ref test</li></ul>                                                               | <ul style="list-style-type: none;"><li>!true = false</li><li> !0 = true or !"" = true</li><li>!null = true</li></ul>                                                                  |
+| ()           | Sub-expression                                                                                                                                                              | Changes precedence                                                                                                                                                                    |
+| = or -eq     | Equals                                                                                                                                                                      | Boolean, Integer, String, Object                                                                                                                                                      |
+| != or -ne    | Not equals                                                                                                                                                                  | Boolean, Integer, String, Object                                                                                                                                                      |
+| > or -gt     | Greater than                                                                                                                                                                | Boolean, Integer, String, Object                                                                                                                                                      |
+| >= or -ge    | Greater than or equal to                                                                                                                                                    | Boolean, Integer, String, Object                                                                                                                                                      |
+| < or -lt     | Less than                                                                                                                                                                   | Boolean, Integer, String, Object                                                                                                                                                      |
+| <= or -le    | Less than or equals to                                                                                                                                                      | Boolean, Integer, String, Object                                                                                                                                                      |
+| ~            | Matches                                                                                                                                                                     | Right Hand Side is regular expression.                                                                                                                                                |
 
-**Examples:**
+__Examples:__
 
 ```bash
 set a=2;
@@ -564,7 +564,7 @@ Note that key1 exists in both arrays and has been replaced with the value of key
 
 Strings can be concatenated (joined together) by using a + operator or by simply placing individual strings where a single variable would normally go.
 
-**Examples:**
+__Examples:__
 
 ```bash
 seta="hello" " " "there";
@@ -578,7 +578,7 @@ echo $a; // echoes hello there this is a test
 
 When concatenating strings in this way, do not put any white space between the strings. If you want to put whitespace, it will be necessary to enclose variables in double quotes as shown in the example above.
 
-**Example:**
+__Example:__
 
 ```bash
 set a="hello";
@@ -602,7 +602,7 @@ and
 
 :- denotes if set.
 
-**Examples:**
+__Examples:__
 
 ```bash
 set foo1 = "hello";
@@ -640,7 +640,7 @@ set list = "${list}" "," "${foo}";
 
 It is possible to evaluate expressions and return the result as a string which can then be processed. To do this use the $(…) syntax. Anything between the opening and closing braces is evaluated and the results returned as a string.
 
-**Examples:*
+*_Examples:_
 
 ```bash
 echo "Here is an expression: $(23\*72)";
@@ -690,7 +690,7 @@ set res = myfunc(10,20); // res will be 200
 echo "$res $x"; // echoes 200 20
 ```
 
-Note, the value of x is still 20, even though the _Function_myfunc contains the line set x=99. This is because the variable x in myfunc is _local_ to myfunc. Changing the value in myfunc simply changes the local version of x. The version of x in the calling _Procedure_ is not changed.
+Note, the value of x is still 20, even though the _Function_myfunc contains the line set x=99. This is because the variable x in myfunc is_local_to myfunc. Changing the value in myfunc simply changes the local version of x. The version of x in the calling_Procedure_ is not changed.
 
 You can force a variable to be declared in global scope by using set –g as follows:
 

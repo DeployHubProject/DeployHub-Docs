@@ -10,26 +10,26 @@ description: >
 
 _assert_ takes a number of named parameters:
 
-| Expression | Description |
-| --- | --- |
-| expr | Specifies an expression to execute. The expression must return true in order for the assertion to succeed. If the expression returns false an exception is thrown. |
-| expr1 | Specifies an expression to execute. The result is compared to the result of the expression specified by expr2. |
-| expr2 | Specifies an expression to execute. The result is compared to the result of the expression specified by expr1. |
-| str1 | A String to compare to str2. |
-| str2 | A String to compare to str1. If str1 and str2 differ then an exception is thrown. |
-| obj1 | An object to compare to obj2. |
-| obj2 | An object to compare to obj1. If the two objects differ then an exception is thrown. |
+| Expression | Description                                                                                                                                                        |
+|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| expr       | Specifies an expression to execute. The expression must return true in order for the assertion to succeed. If the expression returns false an exception is thrown. |
+| expr1      | Specifies an expression to execute. The result is compared to the result of the expression specified by expr2.                                                     |
+| expr2      | Specifies an expression to execute. The result is compared to the result of the expression specified by expr1.                                                     |
+| str1       | A String to compare to str2.                                                                                                                                       |
+| str2       | A String to compare to str1. If str1 and str2 differ then an exception is thrown.                                                                                  |
+| obj1       | An object to compare to obj2.                                                                                                                                      |
+| obj2       | An object to compare to obj1. If the two objects differ then an exception is thrown.                                                                               |
 
 Note, only the following combinations of arguments are permitted:
 
 _assert_ takes a number of named parameters:
 
-| **Expression**  |  **Description** |
-| --- | --- |
-| expr | expr on its own is checked for true/false. |
+| **Expression**  | **Description**                                  |
+|-----------------|--------------------------------------------------|
+| expr            | expr on its own is checked for true/false.       |
 | expr1 and expr2 | The results of the two expressions are compared. |
-| str1 and str2 | The two strings are compared for equality. |
-| obj1 and obj2 | The two objects are compared for equality. |
+| str1 and str2   | The two strings are compared for equality.       |
+| obj1 and obj2   | The two objects are compared for equality.       |
 
 Any other combination of arguments is invalid and will result in an error.
 

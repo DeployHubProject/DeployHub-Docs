@@ -18,7 +18,7 @@ You will need to create a SalesForce _Custom Action_ that will support your Sale
 - [Customizing Actions](/userguide/customizations/2-define-your-actions/)
 - [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
 
-The following steps will take you through the process: 
+The following steps will take you through the process:
 
 **Step 1 - Create a SalesForce _Repository_**
 
@@ -36,23 +36,23 @@ You will need to create an _Endpoint_ and then an _Environment_ for your SalesFo
 
 Create a new _Endpoint_ using the following Detail values:
 
-| Detail Field | Value |
-| --- | ---|
-|**Endpoint Operating System**| Linux|
-|**Endpoint Type**| Application Server|
-|**Hostname**| localhost|
-|**Protocol**| ssh |
-|**Base Directory**| /tmp |
-|**Credentials** | not required |
+| Detail Field                  | Value              |
+|-------------------------------|--------------------|
+| **Endpoint Operating System** | Linux              |
+| **Endpoint Type**             | Application Server |
+| **Hostname**                  | localhost          |
+| **Protocol**                  | ssh                |
+| **Base Directory**            | /tmp               |
+| **Credentials**               | not required       |
 
 - **_Environment_ Attributes**
 
-Using the Attributes section of the _Environment_ Dashboard, add the following Attributes. Use the +Add in the Attributes section to add a row to the Attributes table.  You must use Save to commit the row to the table. 
+Using the Attributes section of the _Environment_ Dashboard, add the following Attributes. Use the +Add in the Attributes section to add a row to the Attributes table.  You must use Save to commit the row to the table.
 
-| Variables | Value | 
-|--- | --- |
-| **SalesforceCredential**| Enter the name of the _Credential_ that contains the Salesforce Userid and Password created in step 2.|
-|**ServerURL** |Enter the Salesforce URL for the target deployment.|
+| Variables                | Value                                                                                                  |
+|--------------------------|--------------------------------------------------------------------------------------------------------|
+| **SalesforceCredential** | Enter the name of the _Credential_ that contains the Salesforce Userid and Password created in step 2. |
+| **ServerURL**            | Enter the Salesforce URL for the target deployment.                                                    |
  **SalesforceRepo** | Enter the name of the File System _Repository_ created in Step 1.|
 | **TestLevel** | Salesforce Test Case Level.|
 
@@ -78,7 +78,7 @@ Next, select your "Global," or highest level, _Domain_ and upload the _Procedure
 
 Once you have imported the SalesForce files as _Procedures_, you ready to define your _Custom Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Main Menu panel.
 
-Use the +Add option to create a new _Action_ for you _Procedure_. In the "Full Domain" field select your "Global" _Domain_. If you select a lower level _Subdomain_ you will restrict access to this _Custom Action_.  By defining it to your highest level _Domain_, all _Users_ will be able to execute the process regardless of their _SubDomain_. 
+Use the +Add option to create a new _Action_ for you _Procedure_. In the "Full Domain" field select your "Global" _Domain_. If you select a lower level _Subdomain_ you will restrict access to this _Custom Action_.  By defining it to your highest level _Domain_, all _Users_ will be able to execute the process regardless of their _SubDomain_.
 
 Name the new Action "SalesForceAction" (no spaces).
 
@@ -94,50 +94,50 @@ When you drag your Ansible _Procedures_ onto the area under "Start" a pop-up dia
 
 **GitCheckout Parameters**
 
-| **Field** | Value | Description |
-| --- | --- | --- |
-| **Title** | Not Required | Name of the step in your deployment workflow.  |
-| **Summary** | Not Required | Enter a summary of this step. | 
-| **Git Repo** | $GIT_URL| Git Repo containing your SalesForce Source Code.|
-| **Git Commit** | $GIT_COMMIT | The commit, tag or branch to checkout. |
-| **To Dir** | $GIT_DIR | The directory to checkout into.  Use "." for the default directory. |
+| **Field**      | Value        | Description                                                         |
+|----------------|--------------|---------------------------------------------------------------------|
+| **Title**      | Not Required | Name of the step in your deployment workflow.                       |
+| **Summary**    | Not Required | Enter a summary of this step.                                       |
+| **Git Repo**   | $GIT_URL     | Git Repo containing your SalesForce Source Code.                    |
+| **Git Commit** | $GIT_COMMIT  | The commit, tag or branch to checkout.                              |
+| **To Dir**     | $GIT_DIR     | The directory to checkout into.  Use "." for the default directory. |
 
 **SalesforceCredential Parameters**
 
-| Argument | Description |
-|--- | --- |
+| Argument            | Description                                          |
+|---------------------|------------------------------------------------------|
 | **Credential Name** | Name of the Credential your created in step 2 above. |
 
 **SalesforceDeploy Parameters**
 
-| Argument | Description |
-|--- | --- |
-| User | Taken from the SalesForceCredential _Procedure_.|
-| Password | Taken from the SalesForceCredential _Procedure_|
-| ServerUrl | The Salesforce region to be deployed to. |
-| Repo | The _Repository_ where the class and packages exist, typically a filesystem type _Repository_.|
-| TestLevel | When test cases are run, which level (All, Some, etc.). |
+| Argument  | Description                                                                                    |
+|-----------|------------------------------------------------------------------------------------------------|
+| User      | Taken from the SalesForceCredential _Procedure_.                                               |
+| Password  | Taken from the SalesForceCredential _Procedure_                                                |
+| ServerUrl | The Salesforce region to be deployed to.                                                       |
+| Repo      | The _Repository_ where the class and packages exist, typically a filesystem type _Repository_. |
+| TestLevel | When test cases are run, which level (All, Some, etc.).                                        |
 
 At this point the _Custom Action_ is ready to be used by anyone with access (based on Domain and security options). Each _Component_ that uses the _Custom Action_ will need to define specific values. Because this new _Custom Action_ is reusable, no _Component_ variables are defined at the _Action_ level.
 
 **Step 6 - Create Your SalesForce _Component_**
 
-Now that you have defined your SalesForce _Custom Action_ you are ready to create your SalesForce _Component_. Define your _Component_ to use a _Custom Action_ from the _Component_ Dashboard. See [Defining Components](/userguide/publishing-components/2-define-components/) for more details on creating your new _Component_. 
+Now that you have defined your SalesForce _Custom Action_ you are ready to create your SalesForce _Component_. Define your _Component_ to use a _Custom Action_ from the _Component_ Dashboard. See [Defining Components](/userguide/publishing-components/2-define-components/) for more details on creating your new _Component_.
 
 Update the _Custom Action_ Detail field by choosing the SalesForceAction provided in the _Custom Action_ dropdown list. You will have a single parameter to update:
 
-| **Parameter**|**Description**|
-| ---| --- |
-|**Repository**| Select your SalesForce Repository.|
+| **Parameter**  | **Description**                    |
+|----------------|------------------------------------|
+| **Repository** | Select your SalesForce Repository. |
 
 **Step 7 - Set Your _Component_ Attributes_**
 
 The following variables must be added to the Attributes Section for all  _Components_ using the SalesForceAction _Custom Action_.  The Attributes section can be found on the _Component_ Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:
 
-| Variables | Description |
-|--- | --- |
-| **GIT_URL** | git url for the git repository. This is used in the git check out step executed by the SalesForce _Action_.|
-|**GIT_COMMIT** |The commit hash for the version to be checked out from the git repository.|
-|**GIT_DIR**| The temporary directory is used by git to clone and checkout. This parameter should be a directory defined in a DeployHub _Repository_ for the_Component_ to find the files.|
+| Variables      | Description                                                                                                                                                                  |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **GIT_URL**    | git url for the git repository. This is used in the git check out step executed by the SalesForce _Action_.                                                                  |
+| **GIT_COMMIT** | The commit hash for the version to be checked out from the git repository.                                                                                                   |
+| **GIT_DIR**    | The temporary directory is used by git to clone and checkout. This parameter should be a directory defined in a DeployHub _Repository_ for the_Component_ to find the files. |
 
 You are now ready to assign your SalesForce _Component_ to an _Application_ and perform a deployment to one of the SalesForce _Environments_.

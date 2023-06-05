@@ -8,14 +8,14 @@ To support LDAP integration, you must create an LDAP  _Credential_ whose Usernam
 
 The Data Source has specific parameters used to validate a User:
 
-| Field | Description |
-| --- | --- |
-|**LDAP Server** | I.P. address or hostname of the LDAP Server. The address of the LDAP server, which can include the port (i.e., ldap://ldap.forumsys.com:389). If the port isn't included, it can be put separately into the Port Number parameter.|
-|**LDAP Server Encrypted** | Select the box to indicate if the LDAP Server should be hidden in the database.|
-|**LDAP Server Override** |Select the box if the LDAP Server can be changed.|
-|**Active Directory Domain**| Enter the name of the Active Directory Domain within the LDAP Server. |
-|**Active Directory Encrypted** | Select the box to indicate if the Active Directory Domain Name should be hidden in the database.|
-|**Active Directory Override** |Select the box if the Active Directory Domain Name can be changed.|
+| Field                          | Description                                                                                                                                                                                                                        |
+|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **LDAP Server**                | I.P. address or hostname of the LDAP Server. The address of the LDAP server, which can include the port (i.e., ldap://ldap.forumsys.com:389). If the port isn't included, it can be put separately into the Port Number parameter. |
+| **LDAP Server Encrypted**      | Select the box to indicate if the LDAP Server should be hidden in the database.                                                                                                                                                    |
+| **LDAP Server Override**       | Select the box if the LDAP Server can be changed.                                                                                                                                                                                  |
+| **Active Directory Domain**    | Enter the name of the Active Directory Domain within the LDAP Server.                                                                                                                                                              |
+| **Active Directory Encrypted** | Select the box to indicate if the Active Directory Domain Name should be hidden in the database.                                                                                                                                   |
+| **Active Directory Override**  | Select the box if the Active Directory Domain Name can be changed.                                                                                                                                                                 |
 |**Port Number** | The port on which the LDAP server is listening.
 |**Port Number Encrypted** | Select the box to indicate if the Port Number should be hidden in the database.|
 |**Port Number Override** |Select the box if the Port Number can be changed.|

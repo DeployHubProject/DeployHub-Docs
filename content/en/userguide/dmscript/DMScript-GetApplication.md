@@ -6,7 +6,7 @@ description: >
   Get the Application object based on Application Name. 
 ---
 
-get_Application_ takes an _Application_ Name and returns the matching _Application Object_.
+get_Application_takes an_Application_Name and returns the matching_Application Object_.
 
 **Usage:**
 

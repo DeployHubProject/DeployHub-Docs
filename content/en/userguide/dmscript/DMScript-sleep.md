@@ -10,9 +10,9 @@ _Sleep_ pauses _DMScript_ execution for the specified number of seconds. If used
 
 _sleep_ takes a single named parameter:
 
-|Parameter| Description |
-|---|---|
-|delay |The number of seconds to wait|
+| Parameter | Description                   |
+|-----------|-------------------------------|
+| delay     | The number of seconds to wait |
 
 **Example**
 

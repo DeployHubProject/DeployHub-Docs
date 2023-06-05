@@ -31,11 +31,11 @@ _Notifiers_ are defined to a _Domain_ and will be displayed based on your access
 
 The _Notifiers_ List View has the following Tabs.
 
-| Tab | Description |
-| --- | --- |
-|Refresh | Refreshes the browser. |
-| Add | Allows you to Add a new _Notifier_ of a particular type. |
-| Delete | Deletes the selected item. |
+| Tab     | Description                                              |
+|---------|----------------------------------------------------------|
+| Refresh | Refreshes the browser.                                   |
+| Add     | Allows you to Add a new _Notifier_ of a particular type. |
+| Delete  | Deletes the selected item.                               |
 
 From the _Notifier_ List View, double click on the _Notifier_ which you would like to view to see all Details.  
 
@@ -47,43 +47,43 @@ The Dashboard view displays all information related to a specific _Notifier_.
 
 The following details are common to all _Notifiers_ types:
 
-| Field | Description |
-| --- | --- |
+| Field           | Description                                                                   |
+|-----------------|-------------------------------------------------------------------------------|
 | **Full Domain** | The fully qualified name of the _Domain_ to which the _Notifier_ was defined. |
-| **Name** | The Name of the _Notifier_. |
-| **Type** | The _Notifier_ Type chosen when you performed the Add. |
-| **Owner Type** | User or Group. |
-| **Owner** | Name of the Owner. |
-| **Summary** | A description of the _Notifier_.|
-| **Created** | Auto generated date when the _Notifier_ was added.|
-| **Modified**| Auto generated date when the _Notifier_ was updated.|
-| **Credential**| The _Credential_ used to access the _Notifier_ if required. |
+| **Name**        | The Name of the _Notifier_.                                                   |
+| **Type**        | The _Notifier_ Type chosen when you performed the Add.                        |
+| **Owner Type**  | User or Group.                                                                |
+| **Owner**       | Name of the Owner.                                                            |
+| **Summary**     | A description of the _Notifier_.                                              |
+| **Created**     | Auto generated date when the _Notifier_ was added.                            |
+| **Modified**    | Auto generated date when the _Notifier_ was updated.                          |
+| **Credential**  | The _Credential_ used to access the _Notifier_ if required.                   |
 
 ## Email Details
 
-| Field | Description |
-| --- | --- |
-|**HTML**| If checked, will send email in HTML format.|
-|**HTML Override** |If checked will indicate the value can be overrode. This is used for 'scripted' notifications where the action editor includes a 'notify' action. This allows the notify action to override the value, for example, of the username or hostname of the _Notifier_.|
-|**SSL**|If checked, Secure Sockets Layer for sending email will be used.|
-|**SSL Override**| If checked, the SSL can be changed.|
-|**From**|The email address of the sender. Typically, this is a shared address accessible to users who push deployments. |
-|**From  Encrypted**| The From name can be hidden in the DeployHub database. |
-|**From  Override**| The From name can be changed. |
-|**Logfile**| The location of the log results between DeployHub and the Mail Server.|
-|**Logfile Encrypted**| The Logfile can be hidden in the DeployHub database. |
-|**Logfile Override**| The Logfile location can be changed. |
-|**Mailport**| The port that receives email on the mail server. Typically 26, but it could be different.|
-|**Mailport Encrypted**| The Mailport can be hidden in the DeployHub database. |
-|**Mailport Override**| The Mailport can be changed. |
+| Field                  | Description                                                                                                                                                                                                                                                        |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **HTML**               | If checked, will send email in HTML format.                                                                                                                                                                                                                        |
+| **HTML Override**      | If checked will indicate the value can be overrode. This is used for 'scripted' notifications where the action editor includes a 'notify' action. This allows the notify action to override the value, for example, of the username or hostname of the _Notifier_. |
+| **SSL**                | If checked, Secure Sockets Layer for sending email will be used.                                                                                                                                                                                                   |
+| **SSL Override**       | If checked, the SSL can be changed.                                                                                                                                                                                                                                |
+| **From**               | The email address of the sender. Typically, this is a shared address accessible to users who push deployments.                                                                                                                                                     |
+| **From  Encrypted**    | The From name can be hidden in the DeployHub database.                                                                                                                                                                                                             |
+| **From  Override**     | The From name can be changed.                                                                                                                                                                                                                                      |
+| **Logfile**            | The location of the log results between DeployHub and the Mail Server.                                                                                                                                                                                             |
+| **Logfile Encrypted**  | The Logfile can be hidden in the DeployHub database.                                                                                                                                                                                                               |
+| **Logfile Override**   | The Logfile location can be changed.                                                                                                                                                                                                                               |
+| **Mailport**           | The port that receives email on the mail server. Typically 26, but it could be different.                                                                                                                                                                          |
+| **Mailport Encrypted** | The Mailport can be hidden in the DeployHub database.                                                                                                                                                                                                              |
+| **Mailport Override**  | The Mailport can be changed.                                                                                                                                                                                                                                       |
 
 ## SMS Details
 
-| Field | Description |
-| --- | --- |
-|**From**|The address of the sender. Typically, this is a shared address accessible to users who push deployments. |
-|**From  Encrypted**| The From name can be hidden in the DeployHub database. |
-|**From  Override**| The From name can be changed. |
+| Field               | Description                                                                                              |
+|---------------------|----------------------------------------------------------------------------------------------------------|
+| **From**            | The address of the sender. Typically, this is a shared address accessible to users who push deployments. |
+| **From  Encrypted** | The From name can be hidden in the DeployHub database.                                                   |
+| **From  Override**  | The From name can be changed.                                                                            |
 
 {{% include "/userguide/reusable/Hipchat.md/" %}}
 
@@ -93,11 +93,11 @@ The following details are common to all _Notifiers_ types:
 
 The Access Section allows _Users_ within designated _Groups_ to update the _Notifier_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Notifier_ in the following ways:
 
-| Access | Description |
-| --- | --- |
-| **View** | Allows _Users_ to see the _Notifier_. If the _User_ does not belong to a _Group_ in the View Access list, the _Notifier_ will not appear in the List View. |
-| **Change** | This allows a _User_ who belongs to any _UserGroup_ in the list to change the attributes of the _Notifier_. |
-| **Send** | Allows _Users_ to send an email. |
+| Access     | Description                                                                                                                                                |
+|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **View**   | Allows _Users_ to see the _Notifier_. If the _User_ does not belong to a _Group_ in the View Access list, the _Notifier_ will not appear in the List View. |
+| **Change** | This allows a _User_ who belongs to any _UserGroup_ in the list to change the attributes of the _Notifier_.                                                |
+| **Send**   | Allows _Users_ to send an email.                                                                                                                           |
 
 NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
 

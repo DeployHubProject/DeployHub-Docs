@@ -41,7 +41,7 @@ DeployHub uses a backend versioning engine to track your _Components_. Versionin
 - CD Build / Workflow Number
 - Container SHA
 - Docker Registry
-- Enviornment Vairaibles
+- Environment Vairaibles
 - Deployment script (Hlem Chart, Ansible Playbook, etc.)
 - Any Attributes (DB Name for example) such as the _Action_ used to perform the deployment, environment variables, and database schemas.
 

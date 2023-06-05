@@ -26,11 +26,11 @@ _Notifiers Templates_ are defined to a _Domain_ and will be displayed based on y
 
 The _Notifier Templates_ List View has the following Tabs.
 
-| Tab | Description |
-| --- | --- |
-|Refresh | Refreshes the browser. |
-| Add | Allows you to Add a new _Notifier Template_. |
-| Delete | Deletes the selected item. |
+| Tab     | Description                                  |
+|---------|----------------------------------------------|
+| Refresh | Refreshes the browser.                       |
+| Add     | Allows you to Add a new _Notifier Template_. |
+| Delete  | Deletes the selected item.                   |
 
 From the _Notifier Template_ List View, double click on the _Notifier Template_ which you would like to view to see all Details.  
 
@@ -40,28 +40,28 @@ The Dashboard view displays all information related to a specific _Notifier_.
 
 ### Notifier Details
 
-| Field | Description |
-| --- | --- |
-|**Notifier**| The _Notifier_ that will use this _Notifier Template_.|
-| **Name** | A unique name for the  _Notifier Template._ |
-| **Summary** | A short text field to describe the _Notifier Template_ and its use. |
-| **Created** | The date and time the _Notifier Template_ was created. |
-| **Modified** | The date and time the _Notifier Template_ was last changed. |
-|**Subject**| The email subject line. |
-|**Body**| The email message.|
+| Field        | Description                                                         |
+|--------------|---------------------------------------------------------------------|
+| **Notifier** | The _Notifier_ that will use this _Notifier Template_.              |
+| **Name**     | A unique name for the  _Notifier Template._                         |
+| **Summary**  | A short text field to describe the _Notifier Template_ and its use. |
+| **Created**  | The date and time the _Notifier Template_ was created.              |
+| **Modified** | The date and time the _Notifier Template_ was last changed.         |
+| **Subject**  | The email subject line.                                             |
+| **Body**     | The email message.                                                  |
 
 ## Recipients Section
 
 This section contains the list of email _Users_ that will receive the notification. Clicking on the +Add sign will add a row to the Recipient table with a drop-down entry field. Select "Save" once you have choose the Recipients from the drop-down entry field.
 
-| List | Description |
-| --- | --- |
-| **${environment.owner}** | The owner of the _Environment_ that was used in the deployment.|
-|**${server.owner}**| The owner of the _Endpoint_ that was used in the deployment |
-|**${version.owner}**| The owner of the Version that was deployed. |
-| **Everyone** | All of the individual _Users_ in the DeployHub installation. |
-| **Administrators** | All of the _Users_ in the Administrator _Group_.  |
-| **Groups** | All defined _Groups_ will appear in this list, allowing you to select a specific _Group_|
+| List                     | Description                                                                              |
+|--------------------------|------------------------------------------------------------------------------------------|
+| **${environment.owner}** | The owner of the _Environment_ that was used in the deployment.                          |
+| **${server.owner}**      | The owner of the _Endpoint_ that was used in the deployment                              |
+| **${version.owner}**     | The owner of the Version that was deployed.                                              |
+| **Everyone**             | All of the individual _Users_ in the DeployHub installation.                             |
+| **Administrators**       | All of the _Users_ in the Administrator _Group_.                                         |
+| **Groups**               | All defined _Groups_ will appear in this list, allowing you to select a specific _Group_ |
 
 You can Delete a Recipient by using the Trash Can Icon next to the item in the table.
 

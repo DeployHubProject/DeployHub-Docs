@@ -21,11 +21,11 @@ The _Environment_ menu is on the left of the main panel. Select the _Environment
 
 The _Environments_ List View has the following Tabs.
 
-| Tab | Description |
-| --- | --- |
-|**Refresh** | Refreshes the browser. |
-| **Add** | Allows you to Add a new _Environment_. |
-| **Delete** | Deletes the selected item. |
+| Tab         | Description                                                                                                                                                                                                                                                          |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Refresh** | Refreshes the browser.                                                                                                                                                                                                                                               |
+| **Add**     | Allows you to Add a new _Environment_.                                                                                                                                                                                                                               |
+| **Delete**  | Deletes the selected item.                                                                                                                                                                                                                                           |
 | **Reports** | Success or Failed Report:  This report shows an ongoing list of all deployments to all _Environments_, regardless of _Domain_ or _Application_ with success or fail status. This report can be sorted based on the column for easy viewing. It can also be exported. |
 
 Double click on an item in the list to see the _Dashboard_ view.
@@ -51,12 +51,12 @@ The Dashboard view displays all information related to a specific _Environment_.
 
 The Access Section allows _Users_ within designated _Groups_ to update the _Environment_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Environment_ in the following ways:
 
-| Access | Description |
-| --- | --- |
-| **View** | Allows the _User_ to see the _Environment_. If the _User_ does not belong to a _Group_ in the View Access list, the _Environment_ will not appear in the List View. |
-| **Change** | Allows the _User_ to change the _Environment's_ characteristics i.e. Name, Summary, etc. |
-| **Create Calendar Entries** | Allows _Users_ to control the Calendar for the selected _Environment_. NOTE: Securing Environment Calendars is only available in DeployHub Pro.|
-| **Deploy** | Allows _Users_ to deploy  _Applications_ into the selected _Environment_. |
+| Access                      | Description                                                                                                                                                         |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **View**                    | Allows the _User_ to see the _Environment_. If the _User_ does not belong to a _Group_ in the View Access list, the _Environment_ will not appear in the List View. |
+| **Change**                  | Allows the _User_ to change the _Environment's_ characteristics i.e. Name, Summary, etc.                                                                            |
+| **Create Calendar Entries** | Allows _Users_ to control the Calendar for the selected _Environment_. NOTE: Securing Environment Calendars is only available in DeployHub Pro.                     |
+| **Deploy**                  | Allows _Users_ to deploy  _Applications_ into the selected _Environment_.                                                                                           |
 
 {{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
 

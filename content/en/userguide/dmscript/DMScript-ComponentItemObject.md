@@ -11,17 +11,17 @@ The _Component Item_ object represents a _Component_ item within a _Component_. 
 
 The following properties can be accessed for a _Component_ item object:
 
-| **Property** | **Type** | **Description** |
-| --- | --- | --- |
-| id | Integer | _Component_ Item id, as used in the database. |
-| name | String | _Component_ Item name. |
-| summary | String | Summary text. |
-| parent | Object | The _Component_ to which this Item belongs. |
-| repository | String | The Name of the Repository from which this _Component_ Item pulls files. |
-| target | String | The target directory to which the files should be deployed. |
-| rollup | Boolean | Whether this _Component_ Item should be deployed during a roll forward operation. |
-| rollback | Boolean | Whether this _Component_ Item should be deployed during a roll back operation. |
-| properties | Array | An array of Strings representing the values for the Repository Attributes |
+| **Property** | **Type** | **Description**                                                                   |
+|--------------|----------|-----------------------------------------------------------------------------------|
+| id           | Integer  | _Component_ Item id, as used in the database.                                     |
+| name         | String   | _Component_ Item name.                                                            |
+| summary      | String   | Summary text.                                                                     |
+| parent       | Object   | The _Component_ to which this Item belongs.                                       |
+| repository   | String   | The Name of the Repository from which this _Component_ Item pulls files.          |
+| target       | String   | The target directory to which the files should be deployed.                       |
+| rollup       | Boolean  | Whether this _Component_ Item should be deployed during a roll forward operation. |
+| rollback     | Boolean  | Whether this _Component_ Item should be deployed during a roll back operation.    |
+| properties   | Array    | An array of Strings representing the values for the Repository Attributes         |
 
 **Example:**
 

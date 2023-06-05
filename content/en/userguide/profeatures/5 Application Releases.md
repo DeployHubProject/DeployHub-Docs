@@ -15,15 +15,15 @@ Use the _Release_ List View accessible from the left hand _Release_ menu option.
 
 The list view is organized on the following columns:
 
-| List Column | Description|
-|---|---|
-|**Version**|  The _Release Base Version_ or _Release Version_ number. |
-|**Domain**| The _Domain_ to which the _Release_ belongs.|
-|**Parent**| The _Release Base Version_ from which the _Release Version_ was created. This will be empty for the _Release Base Version_.|
-|**Environment**| The _Environment_ to which the _Release_ has been deployed. Each _Environment_ will represent a different row in the List View table.|
-|**Last Deployment to Environment**| The Deployment Log number.|
-|**Completed**|The date and time of the last deployment to the listed _Environment_.|
-|**Results**| Success or Fail.|
+| List Column                        | Description                                                                                                                           |
+|------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| **Version**                        | The _Release Base Version_ or _Release Version_ number.                                                                               |
+| **Domain**                         | The _Domain_ to which the _Release_ belongs.                                                                                          |
+| **Parent**                         | The _Release Base Version_ from which the _Release Version_ was created. This will be empty for the _Release Base Version_.           |
+| **Environment**                    | The _Environment_ to which the _Release_ has been deployed. Each _Environment_ will represent a different row in the List View table. |
+| **Last Deployment to Environment** | The Deployment Log number.                                                                                                            |
+| **Completed**                      | The date and time of the last deployment to the listed _Environment_.                                                                 |
+| **Results**                        | Success or Fail.                                                                                                                      |
 
 You can also use the Filter bar, represented by a funnel icon, to reorder your _Release_ List View.  You can filter on:
 
@@ -40,29 +40,29 @@ By double clicking on an item in the list, you will be taken to the _Dashboard_ 
 
 The _Release_ List View has the following Tabs.
 
-| Tab | Description |
-| --- | --- |
-| **Refresh** | Refreshes the browser. |
-| **Add Base** | Allows you to Add a new _Release Base Version_. |
-| **Add Version** | Creates a copy of the selected _Release_ in the list, creating a new _Release Version_. |
-| **Delete** | Deletes the selected item. However, you must delete the _Release_ starting from the newest to the oldest.  The _Release Base Version_ would be deleted last. Sorting by "Version" gives you the order.  |
-| **Tasks** | Displays all _Release_ Tasks defined to this _Domain_ and available for the selected Item. See [Tasks](/userguide/first-steps/2-defining-domains/#tasks) for more information.  |
+| Tab             | Description                                                                                                                                                                                            |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Refresh**     | Refreshes the browser.                                                                                                                                                                                 |
+| **Add Base**    | Allows you to Add a new _Release Base Version_.                                                                                                                                                        |
+| **Add Version** | Creates a copy of the selected _Release_ in the list, creating a new _Release Version_.                                                                                                                |
+| **Delete**      | Deletes the selected item. However, you must delete the _Release_ starting from the newest to the oldest.  The _Release Base Version_ would be deleted last. Sorting by "Version" gives you the order. |
+| **Tasks**       | Displays all _Release_ Tasks defined to this _Domain_ and available for the selected Item. See [Tasks](/userguide/first-steps/2-defining-domains/#tasks) for more information.                         |
 
 ## Viewing and Editing with the _Release_ Dashboard
 
 The Dashboard view displays all information related to a specific _Release Base Version_ or _Release Version_.  Below are the Details for a _Release_.
 
-| Details | Description |
-| --- | --- |
-|**Full Domain** | The fully qualified path of the _Domain_ that the _Release_ is to be associated, showing all parent _Domains_. |
-|**Name** | The Name of your _Release_. |
-|**Owner Type**| Owned by a User or Group. |
-|**Owner** | Name of User or Group. |
-|**Summary** | Description of the _Release_. |
-|**Created** | Auto generated based on the date the _Release_ was added. |
-|**Modified** | Auto generated based on the date the _Release_ was updated. |  
-|**Successful Deployment Template** | The template that should be used for success notifications. |
-|**Failed Deployment Template**| The template that should be used for failure notifications.|
+| Details                            | Description                                                                                                    |
+|------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| **Full Domain**                    | The fully qualified path of the _Domain_ that the _Release_ is to be associated, showing all parent _Domains_. |
+| **Name**                           | The Name of your _Release_.                                                                                    |
+| **Owner Type**                     | Owned by a User or Group.                                                                                      |
+| **Owner**                          | Name of User or Group.                                                                                         |
+| **Summary**                        | Description of the _Release_.                                                                                  |
+| **Created**                        | Auto generated based on the date the _Release_ was added.                                                      |
+| **Modified**                       | Auto generated based on the date the _Release_ was updated.                                                    |
+| **Successful Deployment Template** | The template that should be used for success notifications.                                                    |
+| **Failed Deployment Template**     | The template that should be used for failure notifications.                                                    |
 
 ### Assigned Applications
 
@@ -88,10 +88,10 @@ The Trends graph shows you your success or failure rates overtime as well at the
 
 The Access Section allows _Users_ within designated _Groups_ to update or view the _Release_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Release_:
 
-| Access | Description |
-| --- | --- |
-| **View** | This allows any _User_ that belongs to any _Group_ in this list to see the selected _Component_ in the List View. |
-| **Change** | This allows any _User_ that belongs to any _Group_ in this list to make changes to the _Component_. |
+| Access     | Description                                                                                                                                                                      |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **View**   | This allows any _User_ that belongs to any _Group_ in this list to see the selected _Component_ in the List View.                                                                |
+| **Change** | This allows any _User_ that belongs to any _Group_ in this list to make changes to the _Component_.                                                                              |
 | **Deploy** | This allows any _User_ that belongs to any _Group_ in this list to deploy the _Application_.  This is further restricted based on the Access defined at the _Environment_ level. |
 
 {{% include "userguide/reusable/ChangeRequest.md" %}}

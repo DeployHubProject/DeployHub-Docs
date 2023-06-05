@@ -23,11 +23,11 @@ The Hipster Store Tutorial is provided to give you a review of _Domains_, _Compo
 
 ## Installing the Reverse Proxy for Managing Deployments using DeployHub
 
-DeployHub includes a deployment engine that can be used to deploy your _Applications_. Alternatively you can push deployment information to DeployHub using the [Command Line Interface](/installation-and-support/0-commandlineinterface/). You will not need the Reverse Proxy if your are pushing deployment results with the CLI. 
+DeployHub includes a deployment engine that can be used to deploy your _Applications_. Alternatively you can push deployment information to DeployHub using the [Command Line Interface](/installation-and-support/0-commandlineinterface/). You will not need the Reverse Proxy if your are pushing deployment results with the CLI.
 
 To start using DeployHub to deploy your _Applications_ and _Components_, you will first need to install a Reverse Proxy inside your firewall. This contacts DeployHub in our SaaS environment to receive deployment requests.  The Reverse Proxy is required for deploying into your environment.
 
-A Reverse Proxy queries the DeployHub SaaS every minute to determine if a deployment is needed. For SaaS users, it provides a security layer, preventing you from opening a port to the outside world. It uses standard HTTPS requests to communicate to the DeployHub SaaS on the Google GKE environment. Nothing from the external Google side of the firewall is pushed to the local DeployHub Reverse Proxy. 
+A Reverse Proxy queries the DeployHub SaaS every minute to determine if a deployment is needed. For SaaS users, it provides a security layer, preventing you from opening a port to the outside world. It uses standard HTTPS requests to communicate to the DeployHub SaaS on the Google GKE environment. Nothing from the external Google side of the firewall is pushed to the local DeployHub Reverse Proxy.
 
 Once the Reverse Proxy determines that a deployment is needed, it executes the deployment using all files on the inside of the firewall. The one-way communication initiates the deployment but all work is done local to your network. On completion of the deployment, the logs are pushed back up to the DeployHub SaaS for viewing and audit.
 
@@ -87,7 +87,7 @@ Run:
 docker images | grep deployhub-rproxy | grep latest
 ~~~
 
-Find the image SHA from the third column in the output. 
+Find the image SHA from the third column in the output.
 
 ~~~
 quay.io/deployhub/deployhub-rproxy      v9.0.0          0114088b0b44        6 days ago          3.32GB
@@ -115,4 +115,4 @@ Login using the UserID and Password you used when you Signed-up for DeployHub
 
 **Step 6 - Confirm Your Reverse Proxy is Running**
 
-In the upper right hand corner you will see a message that should say "2 out of 2 Reverse Proxy Running."  There is a default proxy used to deploy into the DeployHub environment for the Hipster Store Tutorial. 
+In the upper right hand corner you will see a message that should say "2 out of 2 Reverse Proxy Running."  There is a default proxy used to deploy into the DeployHub environment for the Hipster Store Tutorial.
