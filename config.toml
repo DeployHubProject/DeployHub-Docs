@@ -1,7 +1,7 @@
 baseURL = "/"
 title = "DeployHub User Guide and API Reference"
 
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
 theme = ["github.com/google/docsy", "github.com/google/docsy/dependencies"]
