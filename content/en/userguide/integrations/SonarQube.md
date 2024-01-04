@@ -21,11 +21,11 @@ Restful API calls are needed in your pipeline to grab the metrics from Sonar.  S
 
 #### SonarQube Project Status
 
-| Variable  | Value  | 
-|-----------|--------|
-| SONAR_ID  | Userid used to login to SonarQube  |
-| SONAR_PASS | Password for the userid  |
-| PROJECTKEY | Name of the project in SonarQube  |
+| Variable       | Value                                                                                                                   |
+|----------------|-------------------------------------------------------------------------------------------------------------------------|
+| SONAR_ID       | Userid used to login to SonarQube                                                                                       |
+| SONAR_PASS     | Password for the userid                                                                                                 |
+| PROJECTKEY     | Name of the project in SonarQube                                                                                        |
 | COMPONENT_TOML | The DeployHub Component TOML file that defined the _Component Version_ to DeployHub.  Typically called `component.toml` |
 
 
@@ -49,12 +49,12 @@ echo '    SonarProjectStatus = "$Check"' >> ${COMPONENT_TOML}
 
 #### SonarQube Bugs
 
-| Variable  | Value  | 
-|-----------|--------|
-| SONAR_ID  | Userid used to login to SonarQube  |
-| SONAR_PASS | Password for the userid  |
-| COMPONENT_NAME | Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube.  |
-| COMPONENT_TOML | The DeployHub Component TOML file that defined the _Component Version_ to DeployHub.  Typically called `component.toml` |
+| Variable       | Value                                                                                                                                                                                                     |
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SONAR_ID       | Userid used to login to SonarQube                                                                                                                                                                         |
+| SONAR_PASS     | Password for the userid                                                                                                                                                                                   |
+| COMPONENT_NAME | Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube. |
+| COMPONENT_TOML | The DeployHub Component TOML file that defined the _Component Version_ to DeployHub.  Typically called `component.toml`                                                                                   |
 
 
 ```bash
@@ -65,12 +65,12 @@ echo '    SonarBugs = "%{SONAR_BUGS}"'  >> ${COMPONENT_TOML}
 
 #### SonarQube Code Smells
 
-| Variable  | Value  | 
-|-----------|--------|
-| SONAR_ID  | Userid used to login to SonarQube  |
-| SONAR_PASS | Password for the userid  |
-| COMPONENT_NAME | Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube.  |
-| COMPONENT_TOML | The DeployHub Component TOML file that defined the _Component Version_ to DeployHub.  Typically called `component.toml` |
+| Variable       | Value                                                                                                                                                                                                     |
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SONAR_ID       | Userid used to login to SonarQube                                                                                                                                                                         |
+| SONAR_PASS     | Password for the userid                                                                                                                                                                                   |
+| COMPONENT_NAME | Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube. |
+| COMPONENT_TOML | The DeployHub Component TOML file that defined the _Component Version_ to DeployHub.  Typically called `component.toml`                                                                                   |
 
 
 ```bash
@@ -81,12 +81,12 @@ echo '    SonarCodeSmells = "%{SONAR_CODESMELLS}"'  >> ${COMPONENT_TOML}
 
 #### SonarQube Violations
 
-| Variable  | Value  | 
-|-----------|--------|
-| SONAR_ID  | Userid used to login to SonarQube  |
-| SONAR_PASS | Password for the userid  |
-| COMPONENT_NAME | Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube.  |
-| COMPONENT_TOML | The DeployHub Component TOML file that defined the _Component Version_ to DeployHub.  Typically called `component.toml` |
+| Variable       | Value                                                                                                                                                                                                     |
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SONAR_ID       | Userid used to login to SonarQube                                                                                                                                                                         |
+| SONAR_PASS     | Password for the userid                                                                                                                                                                                   |
+| COMPONENT_NAME | Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube. |
+| COMPONENT_TOML | The DeployHub Component TOML file that defined the _Component Version_ to DeployHub.  Typically called `component.toml`                                                                                   |
 
 
 ```bash

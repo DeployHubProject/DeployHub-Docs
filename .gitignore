@@ -134,3 +134,4 @@ dmypy.json
 
 # MegaLinter
 megalinter-reports/
+resources/

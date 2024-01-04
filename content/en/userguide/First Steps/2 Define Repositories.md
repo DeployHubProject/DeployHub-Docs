@@ -112,7 +112,7 @@ Once you have completed this step, you are ready to create a new _Procedure_ tha
 
 **Step 2 - Create your Git Checkout _Procedure_ for your _Action_**
 
-_Procedures_ are called by _Actions_ to execute deployment logic. A pre-defined DeployHub _Procedure__ is available from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). This where you will find the most current version of this _Procedure_. For more information on creating _Procedures see [Functions and Procedures](/userguide/customizations/2-define-your-functions-and-procedures/).
+_Procedures_ are called by _Actions_ to execute deployment logic. A pre-defined DeployHub _Procedure__is available from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). This where you will find the most current version of this _Procedure_. For more information on creating_Procedures see [Functions and Procedures](/userguide/customizations/2-define-your-functions-and-procedures/).
 
 From the Ortelius Git Repo, pull the file named **GitCheckout.re**
 

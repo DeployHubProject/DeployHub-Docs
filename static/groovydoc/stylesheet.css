@@ -147,7 +147,6 @@ input[type="checkbox"], input[type="radio"] {
 
 input[type="search"] {
     appearance: textfield;
-    box-sizing: content-box;
     box-sizing: content-box
 }
 
@@ -1463,9 +1462,6 @@ th.visible-print, td.visible-print {
     border: 1px solid transparent;
     border-radius: 0;
     white-space: nowrap;
-    user-select: none;
-    user-select: none;
-    user-select: none;
     user-select: none
 }
 
