@@ -1,0 +1,209 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeployHub User Guide and API Reference – Welcome</title>
+    <link>/userguide/introduction-to-deployhub/</link>
+    <description>Recent content in Welcome on DeployHub User Guide and API Reference</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/userguide/introduction-to-deployhub/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Userguide: Why Use DeployHub</title>
+      <link>/userguide/introduction-to-deployhub/0-introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/introduction-to-deployhub/0-introduction/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;why-use-deployhub&#34;&gt;Why Use DeployHub&lt;/h2&gt;
+&lt;p&gt;DeployHub is supply chain evidence catalog for publishing, versioning and sharing microservices and other &lt;em&gt;Components&lt;/em&gt; such as DB objects and file objects. DeployHub centralizes everything you need to know about a component-driven architecture including &lt;em&gt;Component level&lt;/em&gt; ownership, SBOMs, vulnerabilities, dependency relationships, key values, deployment metadata, consuming applications and versions. DeployHub harvests information from the DevOps pipeline centralizing supply chain data across tools and teams.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/userguide/images/supplychaincatalog.png/&#34; alt=&#34;Supply Chain Catalog&#34;&gt;&lt;/p&gt;
+&lt;p&gt;DeployHub visualizes ‘logical’ application versions in a cloud-native architecture providing a clear view of the software supply chain and their consumers. With this &lt;em&gt;Component&lt;/em&gt; level information, DeployHub can easily aggregate metadata up to the &amp;rsquo;logical&amp;rsquo; application producing application level SBOMs, CVEs, audit reports, deployment inventory and status.&lt;/p&gt;
+&lt;p&gt;DeployHub is particularly suited for a microservice architecture where hundreds of artifacts and repos are used, and a central view of the entire supply chain from a usage, security, and inventory perspective is required. When you outgrow your excel spreadsheet, its time to consider DeployHub.&lt;/p&gt;
+&lt;p&gt;DeployHub is based on the open-source Continuous Delivery Foundation project, &lt;a href=&#34;https://ortelius.io&#34;&gt;Ortelius.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decoupled Environments are Complex&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Migrating to decoupled, cloud-native architecture breaks the way we assemble and configure software. With a decoupled implementation, we no longer build a complete software solution, or Application Version. Instead we manage many moving parts that communicate at run-time based on APIs.  The loss of the &amp;lsquo;Application Version&amp;rsquo; disrupts the core of software delivery.  It impacts most of our standard software practices including the generation of application security level reports.  After all, everything is based on an Application Version from tracking changes request, determining differences, tracking relationships and supporting users. Without a method of tracking the logical &lt;em&gt;Application&lt;/em&gt;, IT teams struggle to confirm that the software they deliver to end users is safe.&lt;/p&gt;
+&lt;p&gt;DeployHub is not a &amp;lsquo;microservice registry&amp;rsquo; or &amp;lsquo;API Gateway.&amp;quot;  Instead, DeployHub interacts with the DevOps pipeline to automatically gather supply chain metadata. Tracking microservices and &lt;em&gt;Components&lt;/em&gt; in this way facilitates their sharing and reuse across teams. DeployHub serves as an internal market place for finding, tracking and versioning microservices and relating them to the &lt;em&gt;Applications&lt;/em&gt; that consume them. The publishing catalog is based on a &lt;em&gt;Domain&lt;/em&gt; structure to support a Domain Driven Design.&lt;/p&gt;
+&lt;h2 id=&#34;versioning---deployhubs-secret-sauce&#34;&gt;Versioning - DeployHub&amp;rsquo;s Secret Sauce&lt;/h2&gt;
+&lt;p&gt;DeployHub versions both &lt;em&gt;Components&lt;/em&gt; and &amp;rsquo;logical&amp;rsquo; &lt;em&gt;Applications&lt;/em&gt;.  When versioning &lt;em&gt;Components&lt;/em&gt;, DeployHub provides insights needed to determine if the service is safe for consumption including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Software Bill of Material&lt;/li&gt;
+&lt;li&gt;Common Vulnerabilities and Exposures (CVE)&lt;/li&gt;
+&lt;li&gt;Swagger Details&lt;/li&gt;
+&lt;li&gt;Readme and Licensing&lt;/li&gt;
+&lt;li&gt;Consuming Applications&lt;/li&gt;
+&lt;li&gt;Ownership&lt;/li&gt;
+&lt;li&gt;Git repo&lt;/li&gt;
+&lt;li&gt;Git Commit (Tag and branch)&lt;/li&gt;
+&lt;li&gt;CI/CD Build Number&lt;/li&gt;
+&lt;li&gt;Container SHA&lt;/li&gt;
+&lt;li&gt;Docker Registry&lt;/li&gt;
+&lt;li&gt;Key Values&lt;/li&gt;
+&lt;li&gt;Deployment Script (Helm Chart, Ansible Playbook, etc.)&lt;/li&gt;
+&lt;li&gt;Any Attributes (DB Name for example)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Application Versions&lt;/em&gt; are based on a collection of &lt;em&gt;Component Versions&lt;/em&gt;. If a new version of a &lt;em&gt;Component&lt;/em&gt; is built or registered, DeployHub auto increments the &lt;em&gt;Component&lt;/em&gt; version and the consuming &lt;em&gt;Application&lt;/em&gt; version.  Dashboards are provided for each new &lt;em&gt;Application&lt;/em&gt; version showing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A full map of all the microservices, or &lt;em&gt;Components&lt;/em&gt;, the &lt;em&gt;Application&lt;/em&gt; version is consuming.&lt;/li&gt;
+&lt;li&gt;An Application Level SBOM, based on all &lt;em&gt;Component&lt;/em&gt; SBOMs&lt;/li&gt;
+&lt;li&gt;An Application Level CVE&lt;/li&gt;
+&lt;li&gt;The specific changes that created the new &lt;em&gt;Application&lt;/em&gt; version (your new diff report)&lt;/li&gt;
+&lt;li&gt;The audit history&lt;/li&gt;
+&lt;li&gt;Log history&lt;/li&gt;
+&lt;li&gt;Where it is running&lt;/li&gt;
+&lt;li&gt;Trends (Deployment time, success failure rates)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This level of information can also be viewed from the &lt;em&gt;Component&lt;/em&gt; level showing similar information to the &lt;em&gt;Application&lt;/em&gt;, but instead showing the &lt;em&gt;Applications&lt;/em&gt; that are dependent on the microservice (&lt;em&gt;Component&lt;/em&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;other-core-features&#34;&gt;Other Core Features&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Domain-Driven-Design:&lt;/strong&gt; First and most important is the DeployHub Domain structure for cataloging and sharing microservices. This feature organizes your microservice in a method that encourages reuse and sharing across development teams.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dependency maps:&lt;/strong&gt; Shows you the &amp;rsquo;logical&amp;rsquo; view of your application and which microservices, or &lt;em&gt;Components&lt;/em&gt;, it consumes. Once you begin sharing microservices, you need to track who is using the microservice. An &lt;em&gt;Application&lt;/em&gt; is a logical collection of &lt;em&gt;Components&lt;/em&gt; that make up an entire software solution.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Application Level SBOMs and CVE:&lt;/strong&gt; DeployHub aggregates all &lt;em&gt;Component&lt;/em&gt; level data up to the logical &lt;em&gt;Application Version&lt;/em&gt; making it easy to provide security reporting on a complete software system, even when it is decoupled.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Blast Radius:&lt;/strong&gt; Know your service impact before you ever deploy. DeployHub can provide predictive insights showing what &lt;em&gt;Applications&lt;/em&gt; will be impacted by an updated service. DeployHub provides this data in clear maps of dependent &lt;em&gt;Applications&lt;/em&gt; and services.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Improved incident response:&lt;/strong&gt; DeployHub makes it easy to find the owner of microservice or common &lt;em&gt;Component&lt;/em&gt;, and contact them through PagerDuty, HipChat, Discord, Slack, email or phone.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Integrates into your CD pipeline:&lt;/strong&gt; DeployHub is automated via your CD Pipeline to continuously version your decoupled architecture with changes, including where they are deployed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Agentless Software Releases:&lt;/strong&gt; If you do not currently use an automated deployment solution, DeployHub includes an agentless release engine for deploying &lt;em&gt;Components&lt;/em&gt; and &lt;em&gt;Applications&lt;/em&gt; across your &lt;em&gt;Environments&lt;/em&gt;. Alternatively, DeployHub can integrate with your existing deployment solutions such as Helm, Spinnaker or any release solution with APIs or CLIs.&lt;/p&gt;
+&lt;h2 id=&#34;agentless-delivery&#34;&gt;Agentless Delivery&lt;/h2&gt;
+&lt;p&gt;If you do not have a centralized solution for automating deployments, DeployHub can help. DeployHub Pro includes a deployment engine for pushing &lt;em&gt;Components&lt;/em&gt; to your &lt;em&gt;Endpoints&lt;/em&gt; (Clusters, Cloud, etc.) using an agentless architecture. The deployment engine can support containers, DB Updates. and file updates (.dll, .jar, Apex files, Lamda functions, Terraform, z/OS objects, etc.)&lt;/p&gt;
+&lt;p&gt;This agentless technology works for both cloud native and legacy architectures including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS, Google Compute, Azure&lt;/li&gt;
+&lt;li&gt;Cloud Foundry&lt;/li&gt;
+&lt;li&gt;Kubernetes, Docker&lt;/li&gt;
+&lt;li&gt;SalesForce&lt;/li&gt;
+&lt;li&gt;Windows 2008, Windows 2012&lt;/li&gt;
+&lt;li&gt;Solaris, HP-UX, AIX, Linux&lt;/li&gt;
+&lt;li&gt;Microsoft Azure&lt;/li&gt;
+&lt;li&gt;Ubantu, Redhat, SuSe, Debina&lt;/li&gt;
+&lt;li&gt;Tandem, Stratus, IBM iSeries, OpenVMS, Unisys, IBM 4690&lt;/li&gt;
+&lt;li&gt;z/OS&lt;/li&gt;
+&lt;li&gt;Jetty, Tomcat, WebSphere&lt;/li&gt;
+&lt;li&gt;Microsoft IIS, Microsoft SQL Server, Oracle&lt;/li&gt;
+&lt;li&gt;Request Routers and Appliances&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;free-version-with-optional-pro-upgrade&#34;&gt;Free Version with Optional Pro Upgrade&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;DeployHub Team&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Our free version is based upon the &lt;a href=&#34;https://www.Ortelius.io/&#34;&gt;Ortleius&lt;/a&gt; open source project. DeployHub Team can be used from the hosted site or installed on premise. It is a strategic and fully open source supply chain catalog that integrates with your DevOps tools. It supports unlimited endpoints, versions, deployments and users. Sign-up at &lt;a href=&#34;https://www.deployhub.com/microservice-dashboard/&#34;&gt;deployhub.com&lt;/a&gt;. This version does not include the agentless deployment engine or Group access controls.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DeployHub Pro&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For additional security features, agentless deployments and support, DeployHub Pro includes extended Users and Group access controls as well as more granular &lt;em&gt;Domains&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Unique to DeployHub Pro are &amp;ldquo;Divisional Domains.&amp;rdquo; These &lt;em&gt;Domains&lt;/em&gt; allow you to expand and model your environments based on your organizational top-down structure. It also gives you the ability to restrict microservice read/write access to only certain Groups of Users.&lt;/p&gt;
+&lt;p&gt;DeployHub Pro also provides integration to tools such as Bugzilla, GitHub Issues and Jira for tracking your complete value stream from change request to final endpoint. It also includes &amp;lsquo;smart&amp;rsquo; calendars for scheduling deployments.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Hipster Store Tutorial</title>
+      <link>/userguide/introduction-to-deployhub/0-hipster-store-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/introduction-to-deployhub/0-hipster-store-tutorial/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;log-in-and-take-a-test-drive&#34;&gt;Log in and Take a Test Drive&lt;/h2&gt;
+&lt;p&gt;When you &lt;a href=&#34;https://www.deployhub.com/register-for-team/?&#34;&gt;signed up to use DeployHub SaaS&lt;/a&gt;, you were asked for basic information. Your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a &lt;em&gt;Subdomain&lt;/em&gt; under your Company &lt;em&gt;Domain&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;DeployHub is accessible through the following url:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://console.deployhub.com/dmadminweb/Home&#34;&gt;https://console.deployhub.com/dmadminweb/Home&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Login using the UserID and Password you used when you signed up for DeployHub.&lt;/p&gt;
+&lt;h2 id=&#34;the-online-store-company---hipster-store-tutorial&#34;&gt;The Online Store Company - Hipster Store Tutorial&lt;/h2&gt;
+&lt;p&gt;This &lt;em&gt;Hipster Store&lt;/em&gt; tutorial walks you through the basic concepts and &lt;a href=&#34;/userguide/concepts/1-deployhub-basic-concepts/&#34;&gt;Objects&lt;/a&gt; behind DeployHub. It also allows you to run a deployment in our hosted Kubernetes cluster (Google.) In DeployHub terminology, the Hipster Store is both an &lt;em&gt;Application&lt;/em&gt; and a &lt;em&gt;Subdomain&lt;/em&gt;. The Hipster Store belongs to a higher level &lt;em&gt;Domain&lt;/em&gt; called the &amp;ldquo;Online Store Company&amp;rdquo;.  We will first review and deploy an &lt;em&gt;Application&lt;/em&gt; and then we will review the &lt;em&gt;Application&amp;rsquo;s&lt;/em&gt; &lt;em&gt;Components&lt;/em&gt; and how they are organized under &lt;em&gt;Domains&lt;/em&gt;. We will review the &amp;ldquo;Online Store Company&amp;rdquo; &lt;em&gt;Domain&lt;/em&gt; structure, and show how the Objects are organized using a &lt;em&gt;Domain&lt;/em&gt; design.&lt;/p&gt;
+&lt;h2 id=&#34;learn-about-applications&#34;&gt;Learn About Applications&lt;/h2&gt;
+&lt;p&gt;An &lt;em&gt;Application&lt;/em&gt; is a collection of microservices or &lt;em&gt;Components&lt;/em&gt; that make up a complete software solution.  In monolithic, we compile/link an &lt;em&gt;Application&lt;/em&gt;, but this goes away in microservices.  DeployHub puts the &lt;em&gt;Application&lt;/em&gt; back together providing a &amp;ldquo;logical view&amp;rdquo; of the &lt;em&gt;Application&lt;/em&gt; including the &lt;em&gt;Components&lt;/em&gt; that it depends upon.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Applications&lt;/em&gt; are a collection of &lt;em&gt;Components&lt;/em&gt;.  &lt;em&gt;Components&lt;/em&gt; are deployed to &lt;em&gt;Environments&lt;/em&gt;. &lt;em&gt;Environments&lt;/em&gt; are a collection of &lt;em&gt;Endpoints&lt;/em&gt;.  For more on each of these Objects see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/packaging-applications/&#34;&gt;Packaging &lt;em&gt;Applications&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/publishing-components/&#34;&gt;Publishing &lt;em&gt;Components&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-environments/&#34;&gt;Build Your &lt;em&gt;Environments&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;Define Your &lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Step 1 - Deploy the Hipster Store Application&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To get started, &lt;a href=&#34;https://www.deployhub.com/free-team-sign-up/&#34;&gt;sign up for DeployHub&lt;/a&gt;. Once you signed up, you will first deploy the Hipster Store &lt;em&gt;Application Base Version&lt;/em&gt; to the Hipster Store &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select the &lt;em&gt;Application&lt;/em&gt; Menu option from the left side of the DeployHub Home panel. This will bring you to a List View.&lt;/li&gt;
+&lt;li&gt;Checkbox the &amp;ldquo;Hipster Store;July 4th Sale.&amp;rdquo; This is the Hipster Store &lt;em&gt;Application Base Version&lt;/em&gt; and it has not been previously deployed.&lt;/li&gt;
+&lt;li&gt;Select the Tasks option at the top of the List View and choose &amp;ldquo;Deploy Version to Environment.&amp;rdquo;  This will bring you to a pop-up dialog box that allows you to select an &lt;em&gt;Environment&lt;/em&gt; for the manual deployment.  Select &amp;ldquo;Hipster Store Cluster.&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This process will deploy the &lt;em&gt;Application&lt;/em&gt; to the cluster.  Once the deployment completes and shows &amp;ldquo;success&amp;rdquo; in the results colum, double click on the &amp;ldquo;Hipster Store; July 4th Sale&amp;rdquo; to view the Dashboard.  Take a look at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Dependency Map - this shows all of the &lt;em&gt;Component Versions&lt;/em&gt; the &amp;ldquo;Hipste Store;July 4th Sale&amp;rdquo; consumes.&lt;/li&gt;
+&lt;li&gt;Log History - a list of deployment logs for this version of the Hipster Store.&lt;/li&gt;
+&lt;li&gt;Deployed Environments for &lt;em&gt;Components&lt;/em&gt; - shows everything that was deployed for the cluster selected in the drop down box. For this base version, you deployed all &lt;em&gt;Components&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Select the &amp;ldquo;Package Component&amp;rdquo; tab at the top of the Dashboard. This will take you to a blueprint designer. This designer is how you define your &lt;em&gt;Application Base Version&lt;/em&gt;. The blueprint show which &lt;em&gt;Components&lt;/em&gt; are being consumed by this &lt;em&gt;Base Version&lt;/em&gt;.  Notice on the right hand side there is a &lt;em&gt;Component Selector&lt;/em&gt;.  If you navigate through the tree view, you will see &lt;em&gt;Domains&lt;/em&gt; where &lt;em&gt;Components&lt;/em&gt; like microservices have been published.  The Hipster Store reuses microservices from the &amp;ldquo;Purchase Processing&amp;rdquo; and &amp;ldquo;Store Service&amp;rdquo; as well as the &amp;ldquo;Front End&amp;rdquo; service from its own Hipster Store &lt;em&gt;Domain&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now lets do a second deployment by selecting a new version of the Hipster Store:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select the &lt;em&gt;Application&lt;/em&gt; Menu option from the left side of the DeployHub Home panel. This will bring you to a List View.&lt;/li&gt;
+&lt;li&gt;Checkbox the &amp;ldquo;Hipster Store;July 4th Sale;1_2_9_1.&amp;rdquo; This is a new version of the Hipster Store, called an_Application Version_ and it has not been previously deployed.&lt;/li&gt;
+&lt;li&gt;Select the Tasks option at the top of the List View and choose &amp;ldquo;Deploy Version to Environment.&amp;rdquo;  This will bring you to a pop-up dialog box that allows you to select an &lt;em&gt;Environment&lt;/em&gt; for the manual deployment.  Select &amp;ldquo;Hipster Store Cluster.&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once the deployment completes and shows &amp;ldquo;success&amp;rdquo; in the results colum, double click on the &amp;ldquo;Hipster Store; July 4th Sale;1_2_9_1&amp;rdquo; to view the Dashboard.  Take a look at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Log History - a list of deployment logs for this version of the Hipster Store. A new log will be available.&lt;/li&gt;
+&lt;li&gt;Deployed Environments for &lt;em&gt;Components&lt;/em&gt; - This will show that only two microservices were deployed -  new Facebook &lt;em&gt;Component&lt;/em&gt; and a new version of the Currency Service &lt;em&gt;Component&lt;/em&gt;.  DeployHub used its versioning engine to determine which &lt;em&gt;Components&lt;/em&gt; were already deployed to the cluster and only updated what changed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;learn-about-domains&#34;&gt;Learn about Domains&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Domains&lt;/em&gt; serve as the basic structure of organizing your microservice catalog. Developers use &lt;em&gt;Domains&lt;/em&gt; to catalog microservices based on &amp;lsquo;solution spaces&amp;rsquo; allowing them to both share their services and find others.
+&lt;em&gt;Domains&lt;/em&gt; are not folders. They serve as a method for creating fully qualified names of Objects within DeployHub to keep things organized.  You will learn how each Object is defined to a &lt;em&gt;Domain&lt;/em&gt; and how the Object&amp;rsquo;s fully qualified name is derived. &lt;em&gt;Domains&lt;/em&gt; also manage security and Tasks.  When you assign security options and Tasks at the &lt;em&gt;Domain&lt;/em&gt; level, any child &lt;em&gt;Subdomain&lt;/em&gt; inherits the value. A child &lt;em&gt;Subdomain&lt;/em&gt; can override a parent &lt;em&gt;Domain&lt;/em&gt; value. Start exploring &lt;em&gt;Domains&lt;/em&gt; from the left side main menu and selecting the &lt;em&gt;Domain&lt;/em&gt; option.  You will be brought to a sunburst map that shows the following three levels of &lt;em&gt;Domains&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Global - the highest level Domain. This cannot be changed.&lt;/li&gt;
+&lt;ul&gt;&lt;li&gt;Online Store Company - A sample company configuration. See &lt;a href=&#34;/userguide/introduction-to-deployhub/0-hipster-store-tutorial/&#34;&gt;Hipster Store &lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;Your Company Name - Your Company Domain Level&lt;/li&gt;
+&lt;ul&gt;&lt;li&gt;Your Project Name - A Subdomain of your Company Domain. This Domain can be defined with &#34;Life Cycle Subdomains for managing a deployable software application using a Pipeline, or it can be used as a Catalog Domain for publishing Components such as microservices.&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;
+&lt;p&gt;For our tutorial, we will explore the Online Store Company &lt;em&gt;Subdomain&lt;/em&gt; and it&amp;rsquo;s child &lt;em&gt;Subdomains&lt;/em&gt;. Click on the Sunburst Online Store Company Segment to view the child &lt;em&gt;Subdomains&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hipster Store - A Project &lt;em&gt;Subdomain&lt;/em&gt; where our &lt;em&gt;Application&lt;/em&gt; lives.&lt;/li&gt;
+&lt;li&gt;Purchase Processing - A Catalog &lt;em&gt;Subdomain&lt;/em&gt; where microservices and other &lt;em&gt;Components&lt;/em&gt; live that handles the purchase processing services for the entire fictitious Online Store Company.&lt;/li&gt;
+&lt;li&gt;Store Services - A Catalog &lt;em&gt;Subdomain&lt;/em&gt; where microservices and other &lt;em&gt;Components&lt;/em&gt; live that handle general services for the entire company.&lt;/li&gt;
+&lt;li&gt;Load Generator - A Catalog &lt;em&gt;Subdomain&lt;/em&gt; where reusable testing &lt;em&gt;Components&lt;/em&gt; live.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each of these &lt;em&gt;Subdomains&lt;/em&gt; have their own &lt;em&gt;Subdomains&lt;/em&gt;.  Let&amp;rsquo;s explore:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1 - Explore a Catalog &lt;em&gt;Subdomain&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;From the DeployHub home panel, select &lt;em&gt;Domains&lt;/em&gt; on the left hand side Main Menu. Click on the &amp;ldquo;Store Services&amp;rdquo; &lt;em&gt;Subdomain&lt;/em&gt; to see what it includes. You will see &lt;em&gt;Subdomains&lt;/em&gt; that provide services for the following &amp;ldquo;Solution Spaces&amp;rdquo;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add Services&lt;/li&gt;
+&lt;li&gt;Email Services&lt;/li&gt;
+&lt;li&gt;Product Catalog Services&lt;/li&gt;
+&lt;li&gt;Recommendation Services&lt;/li&gt;
+&lt;li&gt;Cart Services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These Store Services &lt;em&gt;Subdomains&lt;/em&gt; organize &lt;em&gt;Components&lt;/em&gt; that can be reused by any other team for building out custom websites for our fictitious Online Store Company.  You can also explore the Purchase Processing &lt;em&gt;Subdomain&lt;/em&gt; to see how these solution spaces are organized. You can click on the center of the starburst map to navigate back up to higher level &lt;em&gt;Domains&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 2 - Explore a Project &lt;em&gt;Subdomain&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now lets take a look at our Hipster Store &lt;em&gt;Subdomain&lt;/em&gt;.  The Hipster Store &lt;em&gt;Subdomain&lt;/em&gt; manages our Hipster Store &lt;em&gt;Application&lt;/em&gt;.  It also has &lt;em&gt;Subdomains&lt;/em&gt;, but these &lt;em&gt;Subdomains&lt;/em&gt; are refereed to as &amp;ldquo;Life Cycle &lt;em&gt;Subdomains&lt;/em&gt;.&amp;rdquo;  Life Cycle Subdomains are defined to contain &lt;em&gt;Environments&lt;/em&gt; where your &lt;em&gt;Application&lt;/em&gt; will be deployed. Life Cycle &lt;em&gt;Subdomains&lt;/em&gt; cannot have any child &lt;em&gt;Subdomains&lt;/em&gt;.  It is the lowest level of &lt;em&gt;Subdomain&lt;/em&gt; allowed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 3 - Explore the Online Store &lt;em&gt;Domain&lt;/em&gt; Details and Access&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Return to the Online Store Company &lt;em&gt;Domain&lt;/em&gt; by clicking anywhere in the center of the sunburst map. Details about this &lt;em&gt;Domain&lt;/em&gt; is displayed to the right of the sunburst.  You will see that is belongs to the &amp;ldquo;Global&amp;rdquo; &lt;em&gt;Domain&lt;/em&gt;, shown by the field labeled &amp;ldquo;Full Domain.&amp;rdquo;  You will also see that it has the &amp;ldquo;All &lt;em&gt;Subdomains&lt;/em&gt; are Life Cycles&amp;rdquo; option set to &amp;ldquo;No&amp;rdquo; and a list of it&amp;rsquo;s child &lt;em&gt;Subdomains&lt;/em&gt;. There are other details as well. For a full description see &lt;a href=&#34;/userguide/first-steps/2-defining-domains/&#34;&gt;Building Your Domain Catalog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Access Control Section defines who can see this &lt;em&gt;Domain&lt;/em&gt; and it&amp;rsquo;s child &lt;em&gt;Subdomains&lt;/em&gt;. For this example, the &amp;ldquo;Everyone&amp;rdquo; &lt;em&gt;Group&lt;/em&gt; is defined to all Access.  The Everyone &lt;em&gt;Group&lt;/em&gt; is a default DeployHub &lt;em&gt;Group&lt;/em&gt; that includes all &lt;em&gt;Users&lt;/em&gt; and &lt;em&gt;Administrators&lt;/em&gt;.  For more on &lt;em&gt;Users&lt;/em&gt; see &lt;a href=&#34;/userguide/customizations/2-users/&#34;&gt;Managing Users&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 3 - Explore Tasks for the Online Store Company &lt;em&gt;Domain&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You used the &amp;ldquo;Deploy Version to an Environment&amp;rdquo; Task when you deployed the Hipster Store. Tasks allow you to perform steps related to deployments and are only needed by your Project &lt;em&gt;Domains&lt;/em&gt;. You can assign a Task at a higher &lt;em&gt;Domain&lt;/em&gt; level allowing any child &lt;em&gt;Domains&lt;/em&gt; to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your &lt;em&gt;Subdomains&lt;/em&gt;. However, this means that a Catalog &lt;em&gt;Domain&lt;/em&gt; may include Tasks that it cannot see.&lt;/p&gt;
+&lt;p&gt;You can assign Access to Tasks and customize them with Pre and Post &lt;em&gt;Actions&lt;/em&gt;.  For more on Tasks see &lt;a href=&#34;/userguide/first-steps/2-defining-domains/#deployment-tasks&#34;&gt;Deployment Tasks&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;learn-about-components&#34;&gt;Learn about Components&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Components&lt;/em&gt; are microservices, binaries, database SQL, files or any deployable artifact used by an &lt;em&gt;Application&lt;/em&gt;.  &lt;em&gt;Components&lt;/em&gt; themselves are not deployed, they must be consumed by an &lt;em&gt;Application&lt;/em&gt; in order to be deployed to an &lt;em&gt;Environment&lt;/em&gt;. With microservices, this may seem counter intuitive as microservices are independently deployable.  This is true and DeployHub takes this into account during a deployment of an &lt;em&gt;Application&lt;/em&gt;. DeployHub deploys using incremental processing which means if a single  &lt;em&gt;Component&lt;/em&gt; of an &lt;em&gt;Application&lt;/em&gt; is updated, and the &lt;em&gt;Application&lt;/em&gt; is deployed, only the single &lt;em&gt;Component&lt;/em&gt; is moved.  DeployHub does incremental processing of deployable objects, but relates them to a logical &lt;em&gt;Application&lt;/em&gt;.  If an &lt;em&gt;Application&lt;/em&gt; pushes a new version of a single microservice &lt;em&gt;Component&lt;/em&gt; to a cluster, it will move alone.  Subsequently, all dependent &lt;em&gt;Applications&lt;/em&gt; will have a new &lt;em&gt;Application Version&lt;/em&gt; created.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1 - Review the Hipster Store &lt;em&gt;Components&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Choose the &lt;em&gt;Components&lt;/em&gt; Menu option on the left side of the DeployHub home panel. This will take you to a list view of all &lt;em&gt;Component Base Versions&lt;/em&gt; and &lt;em&gt;Component Versions&lt;/em&gt;.  A &lt;em&gt;Component Base Version&lt;/em&gt; is the original &lt;em&gt;Component&lt;/em&gt;. When the &lt;em&gt;Component&lt;/em&gt; is updated, a &lt;em&gt;Component Version&lt;/em&gt; is created.&lt;/p&gt;
+&lt;p&gt;Double click on the &amp;ldquo;cartservice;v1_2_2_9_gcadf581&amp;rdquo; &lt;em&gt;Component Version&lt;/em&gt; to explore the &lt;em&gt;Component&lt;/em&gt;.  You will be taken to the Dashboard view. You will see in the &amp;ldquo;Full Domain&amp;rdquo; field of the Details Section to what &lt;em&gt;Domain&lt;/em&gt; the &lt;em&gt;Component&lt;/em&gt; belongs.  You will see all &lt;em&gt;Applications&lt;/em&gt; that have a dependency on this version of the &lt;em&gt;Component&lt;/em&gt;, and in the &amp;ldquo;Deployed Environments for &lt;em&gt;Component&lt;/em&gt;&amp;rdquo; you will see all &lt;em&gt;Environments&lt;/em&gt; where the &lt;em&gt;Component&lt;/em&gt; has been deployed.&lt;/p&gt;
+&lt;h2 id=&#34;learn-about-_environment_-and-_endpoints_&#34;&gt;Learn about &lt;em&gt;Environment&lt;/em&gt; and &lt;em&gt;Endpoints&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Environments&lt;/em&gt; are collections of one or more &lt;em&gt;Endpoints&lt;/em&gt; where &lt;em&gt;Applications&lt;/em&gt; are installed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1 - Review the Hipster Store &lt;em&gt;Environment&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;em&gt;Environments&lt;/em&gt; from the left hand side of the DeployHub main home panel. This will take you to a list of &lt;em&gt;Environments&lt;/em&gt;. Double click on the &amp;ldquo;Hipster Store Cluster&amp;rdquo;. From the Dashboard view you can see how the &lt;em&gt;Environment&lt;/em&gt; was setup.  You can also see all of the &lt;em&gt;Components&lt;/em&gt; installed on this cluster.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 2 - Review the Hipster Store Cluster &lt;em&gt;Endpoint&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;em&gt;Endpoints&lt;/em&gt; from the left hand side of the DeployHub main home panel.  This will take you to a list of &lt;em&gt;Endpoints&lt;/em&gt;.  Double click on the &amp;ldquo;Hipster Store Cluster Helm Host&amp;rdquo; &lt;em&gt;Endpoint&lt;/em&gt;.  This &lt;em&gt;Endpoint&lt;/em&gt; defines where Helm will execute to update the cluster. This &lt;em&gt;Endpoint&lt;/em&gt; has been configured to talk to the Hipster Store Cluster.  See &lt;a href=&#34;/userguide/integrations/helm/&#34;&gt;Helm for Container Deployments&lt;/a&gt; for creating your Helm configuration file.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;There are many other features of DeployHub that we did not get to cover on this short test drive. However, you should have the basic understanding of the major Objects and concepts needed to get you started.  What we did not cover that you may want to view are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-your-credentials/&#34;&gt;Create Credentials&lt;/a&gt; - User names and passwords for accessing &lt;em&gt;Endpoints&lt;/em&gt; and &lt;em&gt;Repositories&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-repositories/&#34;&gt;Connect Repositories&lt;/a&gt; - Repositories for accessing artifiacts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We will leave you with how to setup DeployHub for your installation.  See &lt;a href=&#34;/userguide/first-steps/&#34;&gt;First Steps&lt;/a&gt;, for getting your setup completed. Once you have your setup complete you can start publishing &lt;em&gt;Components&lt;/em&gt;, packaging &lt;em&gt;Applications&lt;/em&gt; and performing deployments.&lt;/p&gt;
+&lt;p&gt;Another important topic is integrating with your CD pipeline.  See &lt;a href=&#34;/userguide/integrations/ci-cd_integrations/&#34;&gt;Using DeployHub with CI/CD&lt;/a&gt; for how you can include continuous configuration management and continuous deployments into your CD pipeline.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

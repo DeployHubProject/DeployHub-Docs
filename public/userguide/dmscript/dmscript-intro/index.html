@@ -1,0 +1,1239 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.121.1">
+<meta name="robots" content="noindex, nofollow">
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Intro to Customizing Actions with DMScript | DeployHub User Guide and API Reference</title>
+<meta name="description" content="Customize any Action using Built-in Functions and Procedures with DMScript.
+">
+<meta property="og:title" content="Intro to Customizing Actions with DMScript" />
+<meta property="og:description" content="Customize any Action using Built-in Functions and Procedures with DMScript.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/userguide/dmscript/dmscript-intro/" /><meta property="article:section" content="userguide" />
+
+<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+
+<meta itemprop="name" content="Intro to Customizing Actions with DMScript">
+<meta itemprop="description" content="Customize any Action using Built-in Functions and Procedures with DMScript.
+">
+<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
+<meta itemprop="wordCount" content="3980">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Intro to Customizing Actions with DMScript"/>
+<meta name="twitter:description" content="Customize any Action using Built-in Functions and Procedures with DMScript.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.e342d8b86550cad37574beb3643141eaeaf3ae26299df624d6200bee95e55056.css" as="style">
+<link href="/scss/main.min.e342d8b86550cad37574beb3643141eaeaf3ae26299df624d6200bee95e55056.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="navbar-brand__name">DeployHub User Guide and API Reference</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-userguide-li">
+  <a href="/userguide/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-userguide"><span class="">Userguides</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideintroduction-to-deployhub-li">
+  <a href="/userguide/introduction-to-deployhub/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideintroduction-to-deployhub"><span class="">Welcome</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintroduction-to-deployhub0-introduction-li">
+  <a href="/userguide/introduction-to-deployhub/0-introduction/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintroduction-to-deployhub0-introduction"><span class="">Why Use DeployHub</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintroduction-to-deployhub0-hipster-store-tutorial-li">
+  <a href="/userguide/introduction-to-deployhub/0-hipster-store-tutorial/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintroduction-to-deployhub0-hipster-store-tutorial"><span class="">Hipster Store Tutorial</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideinstallation-and-support-li">
+  <a href="/userguide/installation-and-support/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideinstallation-and-support"><span class="">Installation and Support</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-saas-and-reverse-proxy-li">
+  <a href="/userguide/installation-and-support/0-saas-and-reverse-proxy/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-saas-and-reverse-proxy"><span class="">SaaS Sign-up and Reverse Proxy for Deployments</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-on-premise-installation-for-pro-li">
+  <a href="/userguide/installation-and-support/0-on-premise-installation-for-pro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-on-premise-installation-for-pro"><span class="">DeployHub On-Prem Installation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-commandlineinterface-li">
+  <a href="/userguide/installation-and-support/0-commandlineinterface/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-commandlineinterface"><span class="">Command Line Interface Installation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-enabling-sso-li">
+  <a href="/userguide/installation-and-support/0-enabling-sso/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-enabling-sso"><span class="">Single Sign On using Okta and SAML</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-contactsupport-li">
+  <a href="/userguide/installation-and-support/0-contactsupport/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-contactsupport"><span class="">Contact Support</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-terms-of-use-agreement-li">
+  <a href="/userguide/installation-and-support/0-terms-of-use-agreement/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-terms-of-use-agreement"><span class="">Terms of Use Agreement</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideconcepts-li">
+  <a href="/userguide/concepts/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideconcepts"><span class="">Key Concepts</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideconcepts1-deployhub-basic-concepts-li">
+  <a href="/userguide/concepts/1-deployhub-basic-concepts/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideconcepts1-deployhub-basic-concepts"><span class="">DeployHub 101</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideconcepts1-deployhub-processing-li">
+  <a href="/userguide/concepts/1-deployhub-processing/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideconcepts1-deployhub-processing"><span class="">Architecture</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideconcepts3-executing-deployments-li">
+  <a href="/userguide/concepts/3-executing-deployments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideconcepts3-executing-deployments"><span class="">Executing Deployments</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideconceptslifecyclesubdomains-li">
+  <a href="/userguide/concepts/lifecyclesubdomains/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideconceptslifecyclesubdomains"><span class="">DeployHub and Continuous Delivery</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguidefirst-steps-li">
+  <a href="/userguide/first-steps/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguidefirst-steps"><span class="">First Steps</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidefirst-steps2-intro-to-setting-up-deployhub-li">
+  <a href="/userguide/first-steps/2-intro-to-setting-up-deployhub/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidefirst-steps2-intro-to-setting-up-deployhub"><span class="">Setting up DeployHub</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidefirst-steps2-defining-domains-li">
+  <a href="/userguide/first-steps/2-defining-domains/" title="Building Your Domain Catalog" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidefirst-steps2-defining-domains"><span class="">Building your Domain Catalog</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidefirst-steps2-define-your-credentials-li">
+  <a href="/userguide/first-steps/2-define-your-credentials/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidefirst-steps2-define-your-credentials"><span class="">Create Your Credentials</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidefirst-steps2-define-repositories-li">
+  <a href="/userguide/first-steps/2-define-repositories/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidefirst-steps2-define-repositories"><span class="">Connect Your Repositories</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidefirst-steps2-define-endpoints-li">
+  <a href="/userguide/first-steps/2-define-endpoints/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidefirst-steps2-define-endpoints"><span class="">Define Your Endpoints</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidefirst-steps2-define-environments-li">
+  <a href="/userguide/first-steps/2-define-environments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidefirst-steps2-define-environments"><span class="">Build Your Environments</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguidepublishing-components-li">
+  <a href="/userguide/publishing-components/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguidepublishing-components"><span class="">Publishing Components</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidepublishing-componentsintro-to-components-li">
+  <a href="/userguide/publishing-components/intro-to-components/" title="Intro to  Components" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidepublishing-componentsintro-to-components"><span class="">Intro to Components</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidepublishing-components2-define-components-li">
+  <a href="/userguide/publishing-components/2-define-components/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidepublishing-components2-define-components"><span class="">Defining Components</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguidepackaging-applications-li">
+  <a href="/userguide/packaging-applications/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguidepackaging-applications"><span class="">Packaging Applications</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidepackaging-applicationsbuildingapplications-li">
+  <a href="/userguide/packaging-applications/buildingapplications/" title="Intro to Applications" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidepackaging-applicationsbuildingapplications"><span class="">Intro Applications</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidepackaging-applications2-defining-applications-li">
+  <a href="/userguide/packaging-applications/2-defining-applications/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidepackaging-applications2-defining-applications"><span class="">Defining Your Application Baseline</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideintegrations-li">
+  <a href="/userguide/integrations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideintegrations"><span class="">Integrations</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsintro-to-integrations-li">
+  <a href="/userguide/integrations/intro-to-integrations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsintro-to-integrations"><span class="">Custom DeployHub Actions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsci-cd_integrations-li">
+  <a href="/userguide/integrations/ci-cd_integrations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsci-cd_integrations"><span class="">CI/CD and DeployHub</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationscircleci-li">
+  <a href="/userguide/integrations/circleci/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationscircleci"><span class="">CircleCI Deployment Orb</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsgithub-li">
+  <a href="/userguide/integrations/github/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsgithub"><span class="">GitHub</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationshelm-li">
+  <a href="/userguide/integrations/helm/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationshelm"><span class="">Helm for Container Deployments</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationshipchat-li">
+  <a href="/userguide/integrations/hipchat/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationshipchat"><span class="">HipChat</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsjira-bugzilla-and-git-issues-li">
+  <a href="/userguide/integrations/jira-bugzilla-and-git-issues/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsjira-bugzilla-and-git-issues"><span class="">Jira, Bugzilla and GitHub Issues</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsldap-and-active-directory-li">
+  <a href="/userguide/integrations/ldap-and-active-directory/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsldap-and-active-directory"><span class="">LDAP and Active Directory</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsodbc-li">
+  <a href="/userguide/integrations/odbc/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsodbc"><span class="">ODBC Connection</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsopenmake-meister-li">
+  <a href="/userguide/integrations/openmake-meister/" title="OpenMake Meister Binary Repository" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsopenmake-meister"><span class="">OpenMake Meister</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsosvdev-li">
+  <a href="/userguide/integrations/osvdev/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsosvdev"><span class="">OSV.Dev CVE Integration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationssonarqube-li">
+  <a href="/userguide/integrations/sonarqube/" title="SonarQube Code Quality and Security Solution Integration" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationssonarqube"><span class="">SonarQube Integration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationssalesforce-li">
+  <a href="/userguide/integrations/salesforce/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationssalesforce"><span class="">SalesForce</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsslack-li">
+  <a href="/userguide/integrations/slack/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsslack"><span class="">Slack</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsspdx-syft-cyclonedx-li">
+  <a href="/userguide/integrations/spdx-syft-cyclonedx/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsspdx-syft-cyclonedx"><span class="">SPDX, CycloneDX and Syft</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationssvn-li">
+  <a href="/userguide/integrations/svn/" title="SVN as a Repository" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationssvn"><span class="">SVN</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsswagger-li">
+  <a href="/userguide/integrations/swagger/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsswagger"><span class="">Swagger Integration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationstomcat-li">
+  <a href="/userguide/integrations/tomcat/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationstomcat"><span class="">Tomcat</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsweblogic-li">
+  <a href="/userguide/integrations/weblogic/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsweblogic"><span class="">Weblogic</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationswebsphere-li">
+  <a href="/userguide/integrations/websphere/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationswebsphere"><span class="">WebSphere</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguidecustomizations-li">
+  <a href="/userguide/customizations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguidecustomizations"><span class="">Customizations</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizations2-define-notifiers-li">
+  <a href="/userguide/customizations/2-define-notifiers/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizations2-define-notifiers"><span class="">Using Notifiers for Messaging</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizations2-notifier-templates-li">
+  <a href="/userguide/customizations/2-notifier-templates/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizations2-notifier-templates"><span class="">Using Notifier Templates</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizations2-define-your-actions-li">
+  <a href="/userguide/customizations/2-define-your-actions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizations2-define-your-actions"><span class="">Customize Your Actions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizations2-define-your-functions-and-procedures-li">
+  <a href="/userguide/customizations/2-define-your-functions-and-procedures/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizations2-define-your-functions-and-procedures"><span class="">Procedures and Functions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizations2-users-li">
+  <a href="/userguide/customizations/2-users/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizations2-users"><span class="">Managing Users</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizationscustomtypes-li">
+  <a href="/userguide/customizations/customtypes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizationscustomtypes"><span class="">Custom Types</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizationsteamgroups-li">
+  <a href="/userguide/customizations/teamgroups/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizationsteamgroups"><span class="">Modifying the Default User Groups</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideprofeatures-li">
+  <a href="/userguide/profeatures/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideprofeatures"><span class="">Pro Features</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideprofeatures2-data-sources-li">
+  <a href="/userguide/profeatures/2-data-sources/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideprofeatures2-data-sources"><span class="">Managing Data Sources</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideprofeatures5-application-releases-li">
+  <a href="/userguide/profeatures/5-application-releases/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideprofeatures5-application-releases"><span class="">Creating Releases</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideprofeatures5-pro-groups-li">
+  <a href="/userguide/profeatures/5-pro-groups/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideprofeatures5-pro-groups"><span class="">Creating Pro User Groups</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideprofeaturescalendar-li">
+  <a href="/userguide/profeatures/calendar/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideprofeaturescalendar"><span class="">DeployHub Pro Smart Calendars</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguiderestapi-li">
+  <a href="/userguide/restapi/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguiderestapi"><span class="">RESTfull API</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapiintro-and-logging-in-li">
+  <a href="/userguide/restapi/intro-and-logging-in/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapiintro-and-logging-in"><span class="">Intro to APIs and Logging In</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapiapplications-li">
+  <a href="/userguide/restapi/applications/" title="Application APIs" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapiapplications"><span class="">Applications APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapicomponents-li">
+  <a href="/userguide/restapi/components/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapicomponents"><span class="">Component APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapicredentials-li">
+  <a href="/userguide/restapi/credentials/" title="Credential APIs" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapicredentials"><span class="">Credentials APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapideployment-li">
+  <a href="/userguide/restapi/deployment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapideployment"><span class="">Deployment APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapideployment-log-li">
+  <a href="/userguide/restapi/deployment-log/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapideployment-log"><span class="">Deployment Log APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapiendpoints-li">
+  <a href="/userguide/restapi/endpoints/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapiendpoints"><span class="">Endpoint APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapienvironments-li">
+  <a href="/userguide/restapi/environments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapienvironments"><span class="">Environment APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapicalendar-li">
+  <a href="/userguide/restapi/calendar/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapicalendar"><span class="">Environment Calendar API</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapiusers-li">
+  <a href="/userguide/restapi/users/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapiusers"><span class="">User APIs</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-userguidedmscript-li">
+  <a href="/userguide/dmscript/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguidedmscript"><span class="">DM Script</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-userguidedmscriptdmscript-intro-li">
+  <a href="/userguide/dmscript/dmscript-intro/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-intro"><span class="td-sidebar-nav-active-item">Intro to Customizing Actions with DMScript</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-workingwithobjects-li">
+  <a href="/userguide/dmscript/dmscript-workingwithobjects/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-workingwithobjects"><span class="">Working with Objects</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-abort-li">
+  <a href="/userguide/dmscript/dmscript-abort/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-abort"><span class="">Abort</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-append-li">
+  <a href="/userguide/dmscript/dmscript-append/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-append"><span class="">Append</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-appendstd-li">
+  <a href="/userguide/dmscript/dmscript-appendstd/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-appendstd"><span class="">Appendstd</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-assert-li">
+  <a href="/userguide/dmscript/dmscript-assert/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-assert"><span class="">Assert</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-attachment-li">
+  <a href="/userguide/dmscript/dmscript-attachment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-attachment"><span class="">Attachment</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-avloop-li">
+  <a href="/userguide/dmscript/dmscript-avloop/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-avloop"><span class="">AVLoop</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-base64decode-li">
+  <a href="/userguide/dmscript/dmscript-base64decode/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-base64decode"><span class="">base64decode</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-base64encode-li">
+  <a href="/userguide/dmscript/dmscript-base64encode/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-base64encode"><span class="">base64encode</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-basename-li">
+  <a href="/userguide/dmscript/dmscript-basename/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-basename"><span class="">basename</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-breakcontinue-li">
+  <a href="/userguide/dmscript/dmscript-breakcontinue/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-breakcontinue"><span class="">Break/Continue</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-changerequestobject-li">
+  <a href="/userguide/dmscript/dmscript-changerequestobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-changerequestobject"><span class="">Change Request</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-checkout-li">
+  <a href="/userguide/dmscript/dmscript-checkout/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-checkout"><span class="">Check Out</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-comploop-li">
+  <a href="/userguide/dmscript/dmscript-comploop/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-comploop"><span class="">CompLoop</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-componentitemobject-li">
+  <a href="/userguide/dmscript/dmscript-componentitemobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-componentitemobject"><span class="">Component Item Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-conditionalstatements-li">
+  <a href="/userguide/dmscript/dmscript-conditionalstatements/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-conditionalstatements"><span class="">Conditionals</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-create-li">
+  <a href="/userguide/dmscript/dmscript-create/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-create"><span class="">Create and Read</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-credentials-li">
+  <a href="/userguide/dmscript/dmscript-credentials/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-credentials"><span class="">Credentials</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-date-li">
+  <a href="/userguide/dmscript/dmscript-date/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-date"><span class="">Date</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-dateobject-li">
+  <a href="/userguide/dmscript/dmscript-dateobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-dateobject"><span class="">Date Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-decimal-li">
+  <a href="/userguide/dmscript/dmscript-decimal/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-decimal"><span class="">Decimal</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-delete-li">
+  <a href="/userguide/dmscript/dmscript-delete/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-delete"><span class="">Delete</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-deploystatement-li">
+  <a href="/userguide/dmscript/dmscript-deploystatement/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-deploystatement"><span class="">Deploy Statement</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-dirname-li">
+  <a href="/userguide/dmscript/dmscript-dirname/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-dirname"><span class="">Directory Name</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-domainobjectt-li">
+  <a href="/userguide/dmscript/dmscript-domainobjectt/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-domainobjectt"><span class="">Domain Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-dropzone-li">
+  <a href="/userguide/dmscript/dmscript-dropzone/" title="DropZone Physicl Path" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-dropzone"><span class="">DropZone Physical Path</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-dropzonefileobject-li">
+  <a href="/userguide/dmscript/dmscript-dropzonefileobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-dropzonefileobject"><span class="">DropZone File Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-dropzoneobject-li">
+  <a href="/userguide/dmscript/dmscript-dropzoneobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-dropzoneobject"><span class="">DropZone Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-echo-li">
+  <a href="/userguide/dmscript/dmscript-echo/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-echo"><span class="">Echo</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-eval-li">
+  <a href="/userguide/dmscript/dmscript-eval/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-eval"><span class="">Eval</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-filter-li">
+  <a href="/userguide/dmscript/dmscript-filter/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-filter"><span class="">Filter</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-flatten-li">
+  <a href="/userguide/dmscript/dmscript-flatten/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-flatten"><span class="">Flatten</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-foreachstatement-li">
+  <a href="/userguide/dmscript/dmscript-foreachstatement/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-foreachstatement"><span class="">For Each Statement</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getapplication-li">
+  <a href="/userguide/dmscript/dmscript-getapplication/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getapplication"><span class="">Get Application</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getcomponnet-li">
+  <a href="/userguide/dmscript/dmscript-getcomponnet/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getcomponnet"><span class="">Get Components</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getcredential-li">
+  <a href="/userguide/dmscript/dmscript-getcredential/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getcredential"><span class="">Get Credentials</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getenvironment-li">
+  <a href="/userguide/dmscript/dmscript-getenvironment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getenvironment"><span class="">Get Environment</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-gethex-li">
+  <a href="/userguide/dmscript/dmscript-gethex/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-gethex"><span class="">Get Hex</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getserver-li">
+  <a href="/userguide/dmscript/dmscript-getserver/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getserver"><span class="">Get Server</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getuser-li">
+  <a href="/userguide/dmscript/dmscript-getuser/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getuser"><span class="">Get User</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getusergroup-li">
+  <a href="/userguide/dmscript/dmscript-getusergroup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getusergroup"><span class="">Get UserGroup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-increment-li">
+  <a href="/userguide/dmscript/dmscript-increment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-increment"><span class="">Increment or Decrement</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-instr-li">
+  <a href="/userguide/dmscript/dmscript-instr/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-instr"><span class="">Instr</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-iterate-li">
+  <a href="/userguide/dmscript/dmscript-iterate/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-iterate"><span class="">Iterate</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-length-li">
+  <a href="/userguide/dmscript/dmscript-length/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-length"><span class="">Length</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-lower-li">
+  <a href="/userguide/dmscript/dmscript-lower/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-lower"><span class="">Lower</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-me-li">
+  <a href="/userguide/dmscript/dmscript-me/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-me"><span class="">Me</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-modify-li">
+  <a href="/userguide/dmscript/dmscript-modify/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-modify"><span class="">Modify</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-notify-li">
+  <a href="/userguide/dmscript/dmscript-notify/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-notify"><span class="">Notify</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableapplication-and-release-tasks-li">
+  <a href="/userguide/reusable/application-and-release-tasks/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableapplication-and-release-tasks"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableattributes-li">
+  <a href="/userguide/reusable/attributes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableattributes"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableaudittrail-withdeployments-li">
+  <a href="/userguide/reusable/audittrail-withdeployments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableaudittrail-withdeployments"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableaudittrail-li">
+  <a href="/userguide/reusable/audittrail/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableaudittrail"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablechangerequest-li">
+  <a href="/userguide/reusable/changerequest/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablechangerequest"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablecommandline-li">
+  <a href="/userguide/reusable/commandline/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablecommandline"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablegit-li">
+  <a href="/userguide/reusable/git/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablegit"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablehipchat-li">
+  <a href="/userguide/reusable/hipchat/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablehipchat"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableldap-datasource-li">
+  <a href="/userguide/reusable/ldap-datasource/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableldap-datasource"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablelistofactions-li">
+  <a href="/userguide/reusable/listofactions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablelistofactions"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-predecessor-li">
+  <a href="/userguide/reusable/model-application-predecessor/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-predecessor"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-result-li">
+  <a href="/userguide/reusable/model-application-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-version-full-li">
+  <a href="/userguide/reusable/model-application-version-full/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-version-full"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-version-result-li">
+  <a href="/userguide/reusable/model-application-version-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-version-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-version-li">
+  <a href="/userguide/reusable/model-application-version/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-version"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-li">
+  <a href="/userguide/reusable/model-application/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-approve-or-reject-li">
+  <a href="/userguide/reusable/model-approve-or-reject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-approve-or-reject"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-attribute-result-li">
+  <a href="/userguide/reusable/model-attribute-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-attribute-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-attribute-li">
+  <a href="/userguide/reusable/model-attribute/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-attribute"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-calendar-event-result-li">
+  <a href="/userguide/reusable/model-calendar-event-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-calendar-event-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-calendar-event-li">
+  <a href="/userguide/reusable/model-calendar-event/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-calendar-event"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-predecessor-li">
+  <a href="/userguide/reusable/model-component-predecessor/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-predecessor"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-result-li">
+  <a href="/userguide/reusable/model-component-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-version-full-li">
+  <a href="/userguide/reusable/model-component-version-full/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-version-full"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-version-result-li">
+  <a href="/userguide/reusable/model-component-version-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-version-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-version-li">
+  <a href="/userguide/reusable/model-component-version/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-version"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-li">
+  <a href="/userguide/reusable/model-component/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-comptype-li">
+  <a href="/userguide/reusable/model-comptype/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-comptype"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-deployment-log-result-li">
+  <a href="/userguide/reusable/model-deployment-log-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-deployment-log-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-deployment-log-li">
+  <a href="/userguide/reusable/model-deployment-log/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-deployment-log"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-deployment-result-li">
+  <a href="/userguide/reusable/model-deployment-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-deployment-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-endpoint-result-li">
+  <a href="/userguide/reusable/model-endpoint-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-endpoint-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-endpoints-result-li">
+  <a href="/userguide/reusable/model-endpoints-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-endpoints-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-endpoints-li">
+  <a href="/userguide/reusable/model-endpoints/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-endpoints"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-environment-result-li">
+  <a href="/userguide/reusable/model-environment-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-environment-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-environment-li">
+  <a href="/userguide/reusable/model-environment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-environment"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-environments-result-li">
+  <a href="/userguide/reusable/model-environments-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-environments-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-event-creator-li">
+  <a href="/userguide/reusable/model-event-creator/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-event-creator"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-event-environment-li">
+  <a href="/userguide/reusable/model-event-environment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-event-environment"><span class=""></span></a>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#why-use-dmscript">Why Use DMScript</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#define-a-function">Define a Function</a></li>
+        <li><a href="#call-a-function">Call a Function</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#call-a-procedure">Call a Procedure</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#dmscript-interpreter">DMScript Interpreter</a></li>
+    <li><a href="#statements">Statements</a></li>
+    <li><a href="#comments">Comments</a></li>
+    <li><a href="#variables">Variables</a></li>
+    <li><a href="#variable-expansion">Variable Expansion</a></li>
+    <li><a href="#statement-blocks">Statement Blocks</a></li>
+    <li><a href="#operators">Operators</a></li>
+    <li><a href="#string-concatenation">String Concatenation</a></li>
+    <li><a href="#variable-substitution">Variable Substitution</a></li>
+    <li><a href="#expression-substitution">Expression Substitution</a></li>
+    <li><a href="#scope">Scope</a></li>
+  </ul>
+</nav>
+      </div>
+    
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/userguide/">Userguides</a></li>
+  <li class="breadcrumb-item">
+    <a href="/userguide/dmscript/">DM Script</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Intro to Customizing Actions with DMScript</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Intro to Customizing Actions with DMScript</h1>
+	<div class="lead">Customize any Action using Built-in Functions and Procedures with DMScript.</div>
+	<header class="article-meta">
+		
+</header>
+	<p><em>DMScript</em> (_D_eployment_M_anagement _Script_ing) is DeployHub&rsquo;s own scripting language. It underpins nearly all the activities that take place during a deployment.</p>
+<p>Users with the appropriate permissions can create their own <em>DMScript Activities</em> by creating custom <em>Procedures</em> and <em>Functions</em>. <em>DMScripts</em> can be stored in the DeployHub database (as stored procedures) or can be held in an external filesystem or even in a <em>Repository</em>. Storing <em>DMScript</em> in a <em>Repository</em> allows it to be version controlled.</p>
+<p><em>Actions</em> are a set of <em>Functions</em> and <em>Procedures</em> that define your deployment <em>Workflow</em> logic. You use the action editor by dragging and dropping <em>Functions</em> and <em>Procedures</em> onto the design pallet, connecting the order in which they execute. When you run the <em>Action</em>, DeployHub parses the <em>Functions</em> and <em>Procedures</em> in the <em>Action Workflow</em>, generates one big <em>DMScript</em> which is then passed to the deployment engine for deployment execution.</p>
+<p>Although it is not necessary to understand <em>DMScript</em> in order to use DeployHub, doing so will allow you to create more sophisticated and highly custom deployments. It is also useful to understand the Stack Architecture which underpins <em>DMScript</em>. Doing so will allow you to understand variable scoping and inheritance which is useful even if you generate all custom activities via the <em>Action Workflow Editor</em>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Some scripting or programming experience (in any other scripting or programming language) is assumed. <em>DMScript</em> is object-orientated and has a similar syntax to Javascript but has features from other scripting languages.</p>
+<p>Knowledge of DeployHub and its various objects (<em>Environments, Endpoints, Applications, Components</em> etc.) and how they interact is also assumed. Web Based API calls assume some knowledge of SOAP and RESTful interfaces.</p>
+<h2 id="why-use-dmscript">Why Use DMScript</h2>
+<p>DeployHub can call any external script or program (either locally on the deployment engine or remotely on the target <em>Endpoint</em> during a deployment). Given that fact, why would you need to use <em>DMScript</em>?</p>
+<p><em>DMScript</em> has:</p>
+<ul>
+<li>
+<p>Knowledge of the DeployHub object model. For example, <em>DMScript</em> allows you to find all the <em>Endpoint_s in an_Environment</em> that have a specific attribute. Doing this in external scripts is difficult if not impossible.</p>
+</li>
+<li>
+<p>Full knowledge of the attributes set against the selected objects. Uses values that have been set against <em>Endpoint_s,<em>Environments</em>, or_Applications</em>.</p>
+</li>
+<li>
+<p>A RESTful and SOAP API client. Makes calls to external systems (or even DeployHub&rsquo;s own API) quickly and easily.</p>
+</li>
+<li>
+<p>A built-in JSON/XML parser. This means the results of RESTful and SOAP API calls are available as variables within <em>DMScript</em> without the need for complex parsing.</p>
+</li>
+<li>
+<p>A built in ODBC tool. You can query (or update) databases and have the results available in your <em>DMScript</em>. This means you can query a database as part of a deployment activity and perform different steps dependent on the results of the query.</p>
+</li>
+<li>
+<p>A built-in LDAP query tool. Query LDAP _Endpoint_s and use the results in your scripts.</p>
+</li>
+<li>
+<p>A built-in mail client. You can construct your own emails (with attachments) and control when they are sent and to whom. This is useful if the normal DeployHub &ldquo;template&rdquo; mechanism is insufficient for your needs.</p>
+</li>
+<li>
+<p>A built-in base64 encoder/decoder.</p>
+</li>
+<li>
+<p>Built-in support for parallel execution. Run scripts on different _Endpoint_s in parallel.</p>
+</li>
+<li>
+<p>Fine control over the deployment scheme. If you want to change the default deployment mechanism, use <em>DMScript</em>.</p>
+</li>
+</ul>
+<p>If you need to do any of these things, either as part of a deployment activity or as part of an integration (for example, notifying an external system when an <em>Application Version</em> has been moved or deployed) then use <em>DMScript</em>.
+You can customize any <em>Action</em> using DM Script. DeployHub has <em>built-in Functions</em> and <em>Procedures</em> ready for you to call when you need customization. <em>Actions</em> call <em>Activities</em> that are <em>Functions</em> or <em>Procedures</em>. <em>Function</em> performs an <em>Activity</em> and returns an <em>Object</em>. A <em>Procedure</em> performs an <em>Activity</em> and returns only &lsquo;success&rsquo;or &lsquo;fail.&rsquo;</p>
+<h1 id="storing-dmscripts">Storing DMScripts</h1>
+<p>When you write your own DMScripts for <em>Procedures</em> and <em>Functions</em>, you can set the &ldquo;kind&rdquo; to either &ldquo;<em>DMScript <strong>Procedure</strong> in Database</em>&rdquo; or &ldquo;<em>DMScript <strong>Procedure</strong> in Repository</em>&rdquo;.</p>
+<p>DMScript Procedure in Database</p>
+<p>If the &ldquo;kind&rdquo; is &ldquo;<em>DMScript <strong>Procedure</strong> in Database</em>&rdquo; then a &ldquo;Body&rdquo; tab will appear. This will show the text of the <em>DMScript</em>. Clicking the pencil icon will open a pop-up editor. This editor has syntax highlighting, search and replace options (including searching for regular expressions) and other editor <em>Functions</em>. When the edited <em>DMScript</em> is saved (by clicking the OK button or the save icon) a syntax check is performed automatically. If the <em>DMScript</em> fails, then the line in error is highlighted and the dialog stays open.</p>
+<p>DMScript in Repository</p>
+<p>If the &ldquo;kind&rdquo; is &ldquo;<em>DMScript in Repository</em>&rdquo; then you will be asked to specify the repository in which the <em>DMScript</em> file is located and the name of the file containing the <em>DMScript</em>.</p>
+<p>NOTE: You can only specify the name of the file containing the <em>DMScript</em>, so the repository definition <em>must</em> include all the other details required to locate the file in the repository. It may therefore be necessary to define a new repository specifically for <em>DMScript</em>.</p>
+<h1 id="functions">Functions</h1>
+<p><em>Functions</em> return a new object (such as <em>getApplication</em> or <em>getcredential</em>), perform a conversion (such as <em>xmlparse</em>), or can make calls to external web-based APIs and return structured results (such as <em>soap</em> or <em>restful_post</em>). Some <em>Functions</em> act as object <em>methods</em>. For example <em>length()</em> can be called on a string (to return its length in characters) or on an array (to return the number of elements). In these cases, the <em>Function</em> can be called directly from the object itself like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">str</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Hello There&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">len</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">${</span><span style="color:#000">str</span><span style="color:#000;font-weight:bold">.length()</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;length is </span><span style="color:#000">$len</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // echoes length is <span style="color:#0000cf;font-weight:bold">11</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Or one can call the _Function_ <span style="color:#4e9a06">&#34;stand-alone&#34;</span> passing it the object as the first parameter:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">str</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Hello There&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">len</span><span style="color:#ce5c00;font-weight:bold">=</span>length<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$str</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;len is </span><span style="color:#000">$len</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // echoes len is <span style="color:#0000cf;font-weight:bold">11</span>
+</span></span></code></pre></div><p>When a <em>Function</em> relates to an object, this will be indicated.</p>
+<h3 id="define-a-function">Define a Function</h3>
+<p>A <em>Function</em> can be defined simply by using the keyword <em>Function</em> followed by the <em>Function</em> name, its parameters and the code that makes up the <em>Procedure</em> in braces.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>_Function_ testfunc<span style="color:#ce5c00;font-weight:bold">(</span>arg1, arg2<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">return</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$arg1</span><span style="color:#4e9a06"> </span><span style="color:#000">$arg2</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><p>When adding <em>Functions</em> via the DeployHub Web User Interface, the &ldquo;<em>Function</em>&rdquo; header is implied. The argument names are taken from the Arguments tab. There is no need to use the syntax outlined here. However, you can use this in an external <em>DMScript</em> file (one stored in a repository) and call it from other <em>Procedures</em> or <em>Functions</em> stored in the same file.</p>
+<h3 id="call-a-function">Call a Function</h3>
+<p><em>Functions</em> can be called as a simple statement. For example, using the testfunc_Function_ which we defined previously:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">myres</span> <span style="color:#ce5c00;font-weight:bold">=</span> testfunc<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Deploy&#34;</span>, <span style="color:#4e9a06">&#34;Hub&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$myres</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;DeployHub&#34;</span>
+</span></span></code></pre></div><p><strong>NOTE:</strong> The <em>Function</em> called can also be <em>DMScript</em> stored in the DeployHub database, <em>DMScript</em> held in an external repository, or it can be an external script which is executed. The method used is based on the &ldquo;kind&rdquo; of the <em>Procedure</em>.</p>
+<p>Built-in <em>Functions</em> can be stand-alone <em>Functions,</em> which can be called as described above. There are also <em>Functions</em> which are defined as methods on <em>DMScript</em> Objects. To call a method on an object, use the following syntax:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">res</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">object</span><span style="color:#000;font-weight:bold">.method(p1,p2)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Where:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>object is the DMScript object.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>method is the name of the method that the object provides
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p1,p2 are the parameters passed to the method.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>A _Function_ with no parameters can be called like this:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">res</span> <span style="color:#ce5c00;font-weight:bold">=</span> myfunc<span style="color:#ce5c00;font-weight:bold">()</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><h1 id="procedures">Procedures</h1>
+<p>A <em>Procedure</em> can be defined in <em>DMScript</em> by using the keyword <em>Action</em> followed by the <em>Procedure</em> name and the code that makes up the <em>Procedure</em> in braces.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>actionmyaction
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> **<span style="color:#4e9a06">&#34;** myarg1 **= </span><span style="color:#000">$*</span><span style="color:#4e9a06">* myarg1 **&#34;</span><span style="color:#000;font-weight:bold">;</span>**
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> **<span style="color:#4e9a06">&#34;** myarg2[1] = </span><span style="color:#000">$myarg2</span><span style="color:#4e9a06">[1]&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><p><strong>NOTE:</strong> When adding <em>Procedures</em> via the DeployHub Web User Interface, the &ldquo;action&rdquo; header is implied. There is no need to use the syntax outlined here. However, you can use this in an external <em>DMScript</em> file (one stored in a repository) and call it from other <em>Procedures</em> or <em>Functions</em> stored in the same file.</p>
+<h3 id="call-a-procedure">Call a Procedure</h3>
+<p><em>Procedures</em> can be called as a simple statement. A new scope is pushed for the called <em>Procedure</em> and populated with the parameters, which are essentially name value pairs. e.g.</p>
+<p>myaction(myarg1: &ldquo;value1&rdquo;, myarg2: { &ldquo;some&rdquo;, &ldquo;list&rdquo;, &ldquo;value&rdquo; } );</p>
+<p>The <em>Action</em> scope being populated with the values from the invocation means that the called <em>Action</em> can read its parameters just by accessing the variable name. In other words, myaction can simply read $myarg1 and $myarg2.</p>
+<p>When the above action is called, the <em>Procedure</em> defined above will echo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#000">myarg1</span> <span style="color:#ce5c00;font-weight:bold">=</span> value1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>myarg2<span style="color:#ce5c00;font-weight:bold">[</span>1<span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> list
+</span></span></code></pre></div><p><strong>NOTE:</strong> The <em>Procedure</em> called can also be <em>DMScript</em> stored in the DeployHub database, <em>DMScript</em> held in an external repository or it can be an external script which is executed. The method used is based on the &ldquo;kind&rdquo; of the <em>Procedure</em>.</p>
+<p>If the action does not have any parameters, then the call should be made with no enclosing braces like this:</p>
+<p>myaction;</p>
+<p>This is to allow <em>DMScript</em> to differentiate between <em>Procedures</em> and <em>Functions</em>.</p>
+<h1 id="dmscript-syntax">DMScript Syntax</h1>
+<p><em>DMScript</em> is an object-orientated scripting language. It uses a fairly broad syntax with elements of Java, Perl, and Shell Script. Any developer should be able to become proficient in <em>DMScript</em> fairly quickly.</p>
+<p><em>DMScript</em> has knowledge of the DeployHub object model. Each object (<em>Endpoint</em>, <em>Environment</em>, <em>Application</em>, <em>Component</em> etc) has a corresponding object in <em>DMScript</em>. Thus, you can use ${<em>Environment</em>.name} to get the current <em>Environment</em> name (deployment target) and ${<em>Application</em>.name} to get the name of the <em>Application</em> being deployed. Other objects (such as <em>Endpoint</em> and <em>Component</em>) only become &ldquo;in scope&rdquo; when they are pushed onto the <em>Stack</em> during a deployment operation.</p>
+<p>This knowledge of the object model allows <em>DMScript</em> to use fairly sophisticated operations. For example if you have an <em>Application Version</em> object:</p>
+<pre tabindex="0"><code>$app
+
+Then
+
+$app-1
+
+is the version immediately preceding this _Version_.
+
+$app-2
+
+is two revisions of this Version. Similarly,
+
+$app+1
+
+is the revision immediately after this _Version_.
+</code></pre><p>NOTE: this operation will not work if the version has two or more child versions (due to branching).</p>
+<h2 id="dmscript-interpreter">DMScript Interpreter</h2>
+<p><em>DMScript</em> is an interpreted language. It is not compiled either to machine language or to any intermediate p-code.</p>
+<p>In DeployHub, <em>Procedures</em> and <em>Functions</em> can be external scripts (written in any language) which are then executed either on the local deployment engine or on the target <em>Endpoint</em> during a deployment. You can also create <em>Procedures</em> and <em>Functions</em> in <em>DMScript</em> and invoke them as part of a deployment. <em>DMScript</em> can call other <em>Functions</em> and <em>Procedures</em> and these can be written in <em>DMScript</em> or can be external scripts written in any language.</p>
+<p>Actions are created by dragging and dropping <em>Functions</em>, <em>Procedures</em> and workflow directives onto the action editor. When the action is invoked (as part of a deployment or as a stand-alone action), DeployHub generates <em>DMScript</em> from the action flow and then executes it using the built-in <em>DMScript</em> interpreter.</p>
+<p>NOTE: To see the <em>DMScript</em> generated from an action, right-click in the action editor flow and select &ldquo;Show Generated <em>DMScript</em>&rdquo;.</p>
+<h2 id="statements">Statements</h2>
+<p>Statements should always end with a semi-colon to indicate the end of the statement. White space (spaces, tabs, newlines) are usually ignored by the <em>DMScript</em> interpreter so you are free to layout your script as you see fit. There are some restrictions on this – these will be highlighted where necessary.</p>
+<h2 id="comments">Comments</h2>
+<p>Comments begin with a double forward-slash like this:</p>
+<p>// this is a comment</p>
+<p>Everything after the // is ignored by the <em>DMScript</em> interpreter.</p>
+<p>You can also comment over multiple lines by using /* to start a comment and */ to end it.</p>
+<p>/* This comment</p>
+<p>* runs over several lines</p>
+<p>*/</p>
+<h2 id="variables">Variables</h2>
+<p>Variables in <em>DMScript</em> are not typed. It is not necessary to explicitly declare the variable as being a string, an integer or an object. Rather, the variable is declared and set using the set keyword and <em>DMScript</em> implies the type of the variable from what it is set to.</p>
+<p>Variables can be either simple <em>Scalar Variables</em> (i.e. variables that hold either a number or a string), an <em>Object</em> (such as an <em>Environment</em> or an <em>Application</em>) or can be <em>Arrays</em> or <em>Lists</em>. In <em>DMScript</em>, arrays are <em>associative</em>. This simply means that an array subscript can be text as well as a number.</p>
+<p>NOTE: <em>DMScript</em> does not support floating point variables.</p>
+<p>Objects have <em>Properties</em> and <em>Methods</em> associated with them. Nearly every object has a name property (which returns the object&rsquo;s name) and an id property (which returns the object&rsquo;s unique internal ID).</p>
+<p>Properties are returned by appending the property name to the object variable name with an intervening period. To reference the entire property, the complete variable name must be enclosed with braces.</p>
+<p>For example, here is how to get the name property for the current target <em>Environment</em>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">envname</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">Environment</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;Target Environment is </span><span style="color:#000">$envname</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>Methods differ from Properties in that they normally require one or more (possibly optional) parameters. These parameters should be enclosed in parenthesis after the method name.</p>
+<p>For example, here is how you use the latest method of an <em>Application</em> object to get the latest version of an <em>Application</em> on a branch identified by the variable mybranch:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">latestapp</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Application_</span><span style="color:#000;font-weight:bold">.latest(</span><span style="color:#000">$mybranch</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;latest app on branch </span><span style="color:#000">$mybranch</span><span style="color:#4e9a06"> is </span><span style="color:#4e9a06">${</span><span style="color:#000">latestapp</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>The following is an example of setting and using a Scalar Variable</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">MYVAR</span> <span style="color:#ce5c00;font-weight:bold">=</span> 1<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$MYVAR</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">MYVAR</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">$MYVAR</span> + 1<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$MYVAR</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;2&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>incr MYVAR<span style="color:#000;font-weight:bold">;</span> // Increments MYVAR <span style="color:#ce5c00;font-weight:bold">(</span>same as <span style="color:#204a87">set</span> <span style="color:#000">MYVAR</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">$MYVAR</span>+1<span style="color:#000;font-weight:bold">;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$MYVAR</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;3&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>And here<span style="color:#4e9a06">&#39;s how you set and use arrays:
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">set myarray[1] = &#34;one&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">set myarray[2] = &#34;two&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">echo $myarray[1]; // echoes &#34;one&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">echo $myarray[2]; // echoes &#34;two&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">// Array subscripts don&#39;</span>t need to be numeric…
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> myarray<span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;testone&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> 1<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> myarray<span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;testtwo&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> 2<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$myarray</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;testone&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$myarray</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;testtwo&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;2&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">a</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;testtwo&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$myarray</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#000">$a</span><span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;2&#34;</span>
+</span></span></code></pre></div><p>You can also set associative array members by using { &hellip; } syntax and using =&gt; to specify the subscript and the value:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">myarray</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;testone&#34;</span> <span style="color:#ce5c00;font-weight:bold">=</span>&gt; <span style="color:#4e9a06">&#34;ONE&#34;</span>, <span style="color:#4e9a06">&#34;testtwo&#34;</span> <span style="color:#ce5c00;font-weight:bold">=</span>&gt; <span style="color:#4e9a06">&#34;TWO&#34;</span> <span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$myarray</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;testone&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;ONE&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$myarray</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;testtwo&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;TWO&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Arrays can also be assigned using JSON syntax:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">myarray</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span> <span style="color:#4e9a06">&#34;one&#34;</span>: <span style="color:#4e9a06">&#34;val one&#34;</span>,
+</span></span><span style="display:flex;"><span> <span style="color:#4e9a06">&#34;two&#34;</span>: <span style="color:#4e9a06">&#34;val two&#34;</span>,
+</span></span><span style="display:flex;"><span> <span style="color:#4e9a06">&#34;three&#34;</span>: 3,
+</span></span><span style="display:flex;"><span> <span style="color:#4e9a06">&#34;four&#34;</span>: true,
+</span></span><span style="display:flex;"><span> <span style="color:#4e9a06">&#34;five&#34;</span>: null
+</span></span><span style="display:flex;"><span> <span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$myarray</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;one&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;val one&#34;</span>
+</span></span></code></pre></div><p>Since array members (like any other variable in <em>DMScript</em>) are not <em>typed</em>, array members can contain values of different types. In the example above, there are two strings (&ldquo;val one&rdquo; and &ldquo;val two&rdquo;), one integer (3), one Boolean (true) and a null indicator.</p>
+<p>This lack of typing means that an array member can contain other arrays or lists.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">myarray</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#4e9a06">&#34;one&#34;</span>: <span style="color:#4e9a06">&#34;val one&#34;</span>,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#4e9a06">&#34;two&#34;</span>: <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#4e9a06">&#34;x&#34;</span>: 3,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#4e9a06">&#34;y&#34;</span>: <span style="color:#0000cf;font-weight:bold">4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>In this example, the array member identified by the subscript &ldquo;two&rdquo; actually contains another array with subscripts &ldquo;x&rdquo; and &ldquo;y&rdquo;.</p>
+<p>As well as the quoted subscript syntax, <em>DMScript</em> also supports <em>dot notation</em>. This means you can &ldquo;dereference&rdquo; array members by specifying the subscript by name with a dot after the array name:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">myarray</span><span style="color:#000;font-weight:bold">.one</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;val one&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">myarray</span><span style="color:#000;font-weight:bold">.two.y</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;4&#34;</span>
+</span></span></code></pre></div><p>NOTE: When using dot notation it is necessary to use enclosing braces as shown. The dot notation is also only available should the subscript name not include spaces.</p>
+<p>You can convert an array into a JSON format string by using the .to_json method on the array:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">myarray</span><span style="color:#000;font-weight:bold">.to</span><span style="color:#4e9a06">\_</span><span style="color:#000">json</span><span style="color:#000;font-weight:bold">()</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#4e9a06">&#34;one&#34;</span>:<span style="color:#4e9a06">&#34;val one&#34;</span>,<span style="color:#4e9a06">&#34;two&#34;</span>:<span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#4e9a06">&#34;x&#34;</span>:<span style="color:#4e9a06">&#34;3&#34;</span>,<span style="color:#4e9a06">&#34;y&#34;</span>:<span style="color:#4e9a06">&#34;4&#34;</span><span style="color:#ce5c00;font-weight:bold">}}</span>
+</span></span></code></pre></div><p>A <em>List</em> is simply an array with implied numeric keys. You can set a list like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>**set** <span style="color:#000">mylist</span><span style="color:#ce5c00;font-weight:bold">={</span><span style="color:#4e9a06">&#34;a&#34;</span>,<span style="color:#4e9a06">&#34;b&#34;</span>,<span style="color:#4e9a06">&#34;c&#34;</span><span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>And reference the individual members by using numeric subscripts like a conventional array:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$mylist</span><span style="color:#ce5c00;font-weight:bold">[</span>1<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;b&#34;</span>
+</span></span></code></pre></div><p>NOTE: In common with most other languages, list subscripts start at 0, not 1.</p>
+<p>This array and list mechanism allows <em>DMScript</em> to easily parse the results of calls to external RESTful and SOAP based APIs. When the result of such a call is a JSON or XML encoded string, <em>DMScript</em> will parse this into an associative array. The values can then easily be retrieved using the dot notation as described above.</p>
+<h2 id="variable-expansion">Variable Expansion</h2>
+<p>Variables are automatically expanded to their value if:</p>
+<ul>
+<li>They are preceded by a $ character (as in the examples above).</li>
+<li>They are not enclosed by single quotes (&rsquo;).</li>
+</ul>
+<p>For the most part, both double-quotes and single-quotes can be used to delimit character strings. However, if a variable name is preceded by a $ character in a double-quote delimited string then it is expanded normally. If the variable name is enclosed in single-quotes then it is not.</p>
+<p>For example:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">MYVAR</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;James&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;My name is </span><span style="color:#000">$MYVAR</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;My name is James&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#39;My name is $MYVAR&#39;</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;My name is </span><span style="color:#000">$MYVAR</span><span style="color:#4e9a06">&#34;</span>
+</span></span></code></pre></div><p>Special &ldquo;escape&rdquo; characters in strings are automatically expanded:</p>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\t</td>
+<td>expands to a tab.</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>expands to a newline.</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>expands to a carriage-return.</td>
+</tr>
+<tr>
+<td>\u00xx</td>
+<td>expands to the character represented by the 2 hex digits xx (but only if the character is in the range 0x20-0x7F (32-127).</td>
+</tr>
+<tr>
+<td>\</td>
+<td>expands to \</td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>expands to &quot;</td>
+</tr>
+<tr>
+<td>'</td>
+<td>expands to '</td>
+</tr>
+</tbody>
+</table>
+<p>You can prevent this expansion by prefixing the string with a @ character:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#000">seta</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;hello\there&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">setb</span><span style="color:#ce5c00;font-weight:bold">=</span>@<span style="color:#4e9a06">&#34;hello\there&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo<span style="color:#000">$a</span><span style="color:#000;font-weight:bold">;</span> // echoes hello<span style="color:#4e9a06">\h</span>ere
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo<span style="color:#000">$b</span><span style="color:#000;font-weight:bold">;</span> // echoes hello<span style="color:#4e9a06">\t</span>here
+</span></span></code></pre></div><p>If the variable being referenced contains a period (dot) – for example if you&rsquo;re dereferencing an array member – then you must enclose the variable name in braces:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#4e9a06">${</span><span style="color:#000">array</span><span style="color:#000;font-weight:bold">.member</span><span style="color:#4e9a06">}</span>
+</span></span></code></pre></div><p>As described above, this also applies when referencing properties or methods in <em>DMScript</em> objects.</p>
+<p>You can always use braces around variable names. For example:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#000">$myvar</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>and
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#4e9a06">${</span><span style="color:#000">myvar</span><span style="color:#4e9a06">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>are equivalent.
+</span></span></code></pre></div><p>Use braces to tell <em>DMScript</em> when the variable name ends when it is not otherwise obvious. For example:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">myvar1</span> <span style="color:#ce5c00;font-weight:bold">=</span> 12<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">myvar1a</span> <span style="color:#ce5c00;font-weight:bold">=</span> 24<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$myvar1a</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#0000cf;font-weight:bold">24</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">${</span><span style="color:#000">myvar1</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">a&#34;</span><span style="color:#000;font-weight:bold">;</span> // echoes 12a
+</span></span></code></pre></div><h2 id="statement-blocks">Statement Blocks</h2>
+<p>Statements can be grouped together in blocks by surrounding the statements with braces.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$x</span><span style="color:#ce5c00;font-weight:bold">=</span>1<span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// these statements all execute <span style="color:#204a87;font-weight:bold">if</span> x equals <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;statement 1&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;statement 2&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="operators">Operators</h2>
+<p><em>DMScript</em> has the usual operators you would expect in a conventional scripting language.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Operator</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td><ul style="list-style-type: none;"><li>Integer addition</li><li>Date offset</li><li>App Version tree walk</li><li>Array/List joining</li><li>String Concatenation</li></ul></td>
+<td><ul style="list-style-type: none;"><li>2 + 2 = 4</li><li>$date + 7200 = 2 hours later</li><li>$av + 1 = successor</li><li>arr3 = $arr1 + $arr2</li><li>str3 = $str1 + $str2</li></ul></td>
+</tr>
+<tr>
+<td>-</td>
+<td><ul style="list-style-type: none;"><li>Integer subtraction</li><li> Date difference</li><li> Date negative offset</li><li> App Version tree walk</li></ul></td>
+<td><ul style="list-style-type: none;"><li>5 - 2 = 3</li><li> $date1 - $date2 = X seconds</li><li> $date - 3600 = an hour earlier</li><li> $av - 2 = grandfather </li></ul></td>
+</tr>
+<tr>
+<td>*</td>
+<td><ul style="list-style-type: none;"><li>Integer Multiplication</li></ul></td>
+<td><ul style="list-style-type: none;"><li>2 * 2 = 4 </li></ul></td>
+</tr>
+<tr>
+<td>/</td>
+<td><ul style="list-style-type: none;"><li>Integer division </li></ul></td>
+<td><ul style="list-style-type: none;"><li>5 / 2 = 2</li><li>1 / 0 = &lt;empty&gt;</li></ul></td>
+</tr>
+<tr>
+<td>%</td>
+<td><ul style="list-style-type: none;"><li>Integer modulus </li></ul></td>
+<td><ul style="list-style-type: none;"><li>5 % 2 = 1 </li></ul></td>
+</tr>
+<tr>
+<td>&amp; or -a</td>
+<td><ul style="list-style-type: none;"><li>Logical and</li></ul></td>
+<td><ul style="list-style-type: none;"><li> true &amp; true = true</li></ul></td>
+</tr>
+<tr>
+<td>l or -o</td>
+<td><ul style="list-style-type: none;"><li>Logical or</li></ul></td>
+<td><ul style="list-style-type: none;"><li> true &amp; false = true</ul></li></td>
+</tr>
+<tr>
+<td>Unary-</td>
+<td><ul style="list-style-type: none;"><li>Unary minus</li></ul></td>
+<td><ul style="list-style-type: none;"><li>-1 = -1</li></ul></td>
+</tr>
+<tr>
+<td>!</td>
+<td><ul style="list-style-type: none;"><li>Logical not </li><li>String set test</li><li>Object ref test</li></ul></td>
+<td><ul style="list-style-type: none;"><li>!true = false</li><li> !0 = true or !&quot;&quot; = true</li><li>!null = true</li></ul></td>
+</tr>
+<tr>
+<td>()</td>
+<td>Sub-expression</td>
+<td>Changes precedence</td>
+</tr>
+<tr>
+<td>= or -eq</td>
+<td>Equals</td>
+<td>Boolean, Integer, String, Object</td>
+</tr>
+<tr>
+<td>!= or -ne</td>
+<td>Not equals</td>
+<td>Boolean, Integer, String, Object</td>
+</tr>
+<tr>
+<td>&gt; or -gt</td>
+<td>Greater than</td>
+<td>Boolean, Integer, String, Object</td>
+</tr>
+<tr>
+<td>&gt;= or -ge</td>
+<td>Greater than or equal to</td>
+<td>Boolean, Integer, String, Object</td>
+</tr>
+<tr>
+<td>&lt; or -lt</td>
+<td>Less than</td>
+<td>Boolean, Integer, String, Object</td>
+</tr>
+<tr>
+<td>&lt;= or -le</td>
+<td>Less than or equals to</td>
+<td>Boolean, Integer, String, Object</td>
+</tr>
+<tr>
+<td>~</td>
+<td>Matches</td>
+<td>Right Hand Side is regular expression.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">a</span><span style="color:#ce5c00;font-weight:bold">=</span>2<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">b</span><span style="color:#ce5c00;font-weight:bold">=</span>5<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">c</span><span style="color:#ce5c00;font-weight:bold">=</span>7<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$a</span>+<span style="color:#000">$b</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#0000cf;font-weight:bold">7</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$c</span>-<span style="color:#000">$a</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#0000cf;font-weight:bold">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$b</span><span style="color:#4e9a06">\*</span><span style="color:#000">$c</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#0000cf;font-weight:bold">35</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$c</span>/<span style="color:#000">$b</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$c</span>%<span style="color:#000">$b</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$a</span><span style="color:#4e9a06">\*</span><span style="color:#000">$b</span>+<span style="color:#000">$c</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#0000cf;font-weight:bold">17</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$a</span><span style="color:#4e9a06">\*</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$b</span>+<span style="color:#000">$c</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#0000cf;font-weight:bold">24</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">app</span> <span style="color:#ce5c00;font-weight:bold">=</span> get_Application_<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;ITGuys;2&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> // gets an _Application_
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">app</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">$app</span>-1<span style="color:#000;font-weight:bold">;</span> // get the predecessor
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">${</span><span style="color:#000">app</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // echoes ITGuys<span style="color:#000;font-weight:bold">;</span><span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">a</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;hello&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">b</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;there&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$a</span>+<span style="color:#000">$b</span><span style="color:#000;font-weight:bold">;</span> // echoes hellothere
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">list1</span><span style="color:#ce5c00;font-weight:bold">={</span><span style="color:#4e9a06">&#34;hello&#34;</span>,<span style="color:#4e9a06">&#34;from&#34;</span><span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">list2</span><span style="color:#ce5c00;font-weight:bold">={</span><span style="color:#4e9a06">&#34;Deploy&#34;</span>,<span style="color:#4e9a06">&#34;Hub&#34;</span><span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">list3</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">$list1</span> + <span style="color:#000">$list2</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$list3</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;hello&#34;</span>,<span style="color:#4e9a06">&#34;from&#34;</span>,<span style="color:#4e9a06">&#34;Deploy&#34;</span>,<span style="color:#4e9a06">&#34;Hub&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span></code></pre></div><p>When adding associative arrays, the keys are merged and values from the 2nd array replace the ones in the first:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">arr1</span><span style="color:#ce5c00;font-weight:bold">={</span><span style="color:#4e9a06">&#34;key1&#34;</span>: 1, <span style="color:#4e9a06">&#34;list1&#34;</span>: <span style="color:#ce5c00;font-weight:bold">[</span>1,2,3<span style="color:#ce5c00;font-weight:bold">]</span>, <span style="color:#4e9a06">&#34;key2&#34;</span>: 2<span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">arr2</span><span style="color:#ce5c00;font-weight:bold">={</span><span style="color:#4e9a06">&#34;key1&#34;</span>: 9, <span style="color:#4e9a06">&#34;list2&#34;</span>: <span style="color:#ce5c00;font-weight:bold">[</span>4,5,6<span style="color:#ce5c00;font-weight:bold">]</span>, <span style="color:#4e9a06">&#34;key3&#34;</span>: 3<span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">arr3</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">$arr1</span>+<span style="color:#000">$arr2</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$arr3</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>This will echo:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#4e9a06">&#34;key3&#34;</span>:3,<span style="color:#4e9a06">&#34;list1&#34;</span>:<span style="color:#ce5c00;font-weight:bold">[</span>1,2,3<span style="color:#ce5c00;font-weight:bold">]</span>,<span style="color:#4e9a06">&#34;list2&#34;</span>:<span style="color:#ce5c00;font-weight:bold">[</span>4,5,6<span style="color:#ce5c00;font-weight:bold">]</span>,<span style="color:#4e9a06">&#34;key1&#34;</span>:9,<span style="color:#4e9a06">&#34;key2&#34;</span>:2<span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that key1 exists in both arrays and has been replaced with the value of key1 from arr2.</p>
+<h2 id="string-concatenation">String Concatenation</h2>
+<p>Strings can be concatenated (joined together) by using a + operator or by simply placing individual strings where a single variable would normally go.</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#000">seta</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;hello&#34;</span> <span style="color:#4e9a06">&#34; &#34;</span> <span style="color:#4e9a06">&#34;there&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo<span style="color:#000">$a</span><span style="color:#000;font-weight:bold">;</span> // echoes hello there
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">a</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;</span><span style="color:#000">$a</span><span style="color:#4e9a06">&#34;</span> <span style="color:#4e9a06">&#34; this is a test&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$a</span><span style="color:#000;font-weight:bold">;</span> // echoes hello there this is a <span style="color:#204a87">test</span>
+</span></span></code></pre></div><p>When concatenating strings in this way, do not put any white space between the strings. If you want to put whitespace, it will be necessary to enclose variables in double quotes as shown in the example above.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">a</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;hello&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">b</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">$a$a</span><span style="color:#000;font-weight:bold">;</span> // correct <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">b</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;hellohello&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">b</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">$a</span> <span style="color:#000">$a</span><span style="color:#000;font-weight:bold">;</span> // syntax error
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">b</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$a</span><span style="color:#4e9a06">&#34;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$a</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // correct <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">b</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;hellohello&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">b</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$a</span><span style="color:#4e9a06"> </span><span style="color:#000">$a</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // correct <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">b</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;hello hello&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span></code></pre></div><h2 id="variable-substitution">Variable Substitution</h2>
+<p>It is possible to set a value for a variable only if the variable is not currently defined. Similarly, it is possible to only set a value for the variable if it is already set to another value. This is similar to the way Korn shell operates and uses identical syntax:</p>
+<p>:+ denotes if unset</p>
+<p>and</p>
+<p>:- denotes if set.</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">foo1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;hello&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">foo1</span><span style="color:#204a87;font-weight:bold">:-</span><span style="color:#4e9a06">&#39;defval&#39;</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;hello&#34;</span> <span style="color:#ce5c00;font-weight:bold">(</span>since foo1 is <span style="color:#204a87">set</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">foo2</span><span style="color:#204a87;font-weight:bold">:-</span><span style="color:#4e9a06">&#39;defval&#39;</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;defval&#34;</span> <span style="color:#ce5c00;font-weight:bold">(</span>since foo2 is <span style="color:#204a87">unset</span><span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">foo1</span><span style="color:#000;font-weight:bold">:+</span><span style="color:#4e9a06">&#39;defval&#39;</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#4e9a06">&#34;defval&#34;</span> <span style="color:#ce5c00;font-weight:bold">(</span>since foo1 is <span style="color:#204a87">set</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">foo2</span><span style="color:#000;font-weight:bold">:+</span><span style="color:#4e9a06">&#39;defval&#39;</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span> // echoes blank <span style="color:#ce5c00;font-weight:bold">(</span>since foo2 is <span style="color:#204a87">unset</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>This can be used when concatenating values into a string:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">list</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">list</span><span style="color:#4e9a06">}${</span><span style="color:#000">list</span><span style="color:#000;font-weight:bold">:+</span><span style="color:#4e9a06">&#39;,&#39;</span><span style="color:#4e9a06">}${</span><span style="color:#000">foo</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>The first time this is called (withlistnot set) thenlistwill be set to the value of foo. This is because${list:+&rsquo;,&rsquo;}is substituted with a null string sincelist is not set. This is the equivalent of:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">list</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">list</span><span style="color:#4e9a06">}${</span><span style="color:#000">foo</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>The second time this is called (withlistset) then${list:+&rsquo;,&rsquo;}will expand to &ldquo;,&quot;(sincelistis set). This is the equivalent of:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">list</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">${</span><span style="color:#000">list</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span> <span style="color:#4e9a06">&#34;,&#34;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">${</span><span style="color:#000">foo</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><h2 id="expression-substitution">Expression Substitution</h2>
+<p>It is possible to evaluate expressions and return the result as a string which can then be processed. To do this use the $(…) syntax. Anything between the opening and closing braces is evaluated and the results returned as a string.</p>
+<p>*<em>Examples:</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;Here is an expression: </span><span style="color:#204a87;font-weight:bold">$(</span>23<span style="color:#4e9a06">\*</span>72<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Will echo:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Here is an expression: <span style="color:#0000cf;font-weight:bold">1656</span>
+</span></span></code></pre></div><p>You can use this to call external <em>Functions</em> or <em>Procedures</em> and capture the results back into a <em>DMScript</em> variable. For example, suppose you had a &ldquo;local external script or program&rdquo; <em>Procedure</em> called testscript containing the following code:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>@echo off
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;hello from myscript.bat!&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>This DMScript:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;here&#39;s the result of testscript: </span><span style="color:#204a87;font-weight:bold">$(</span>testscript<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">)&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Will echo:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>here<span style="color:#a40000">&#39;</span>s the result of testscript: hello from myscript.bat
+</span></span></code></pre></div><h2 id="scope">Scope</h2>
+<p>Variables exist in the <em>Function</em> or <em>Procedure</em> in which they are defined. When the <em>Function</em> or <em>Procedure</em> exits, the variable is no longer in scope and cannot be accessed.</p>
+<p>As an example, suppose you have created a <em>Function</em> in a domain called &ldquo;myfunc&rdquo;. This <em>Function</em> takes two parameters (arg1 and arg2) and simply multiplies them together and returns the result.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>myfunc:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">x</span><span style="color:#ce5c00;font-weight:bold">=</span>99<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">$arg1</span><span style="color:#4e9a06">\*</span><span style="color:#000">$arg2</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>This <em>Function</em> can be called like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">x</span><span style="color:#ce5c00;font-weight:bold">=</span>20<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">res</span> <span style="color:#ce5c00;font-weight:bold">=</span> myfunc<span style="color:#ce5c00;font-weight:bold">(</span>10,20<span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> // res will be <span style="color:#0000cf;font-weight:bold">200</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$res</span><span style="color:#4e9a06"> </span><span style="color:#000">$x</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#0000cf;font-weight:bold">20</span>
+</span></span></code></pre></div><p>Note, the value of x is still 20, even though the <em>Function_myfunc contains the line set x=99. This is because the variable x in myfunc is_local_to myfunc. Changing the value in myfunc simply changes the local version of x. The version of x in the calling_Procedure</em> is not changed.</p>
+<p>You can force a variable to be declared in global scope by using set –g as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>myfunc:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> –g <span style="color:#000">x</span><span style="color:#ce5c00;font-weight:bold">=</span>99<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">$arg</span><span style="color:#4e9a06">\*</span><span style="color:#000">$arg2</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>However, the calling <em>Procedure</em> needs to specify a global version of x as well. Otherwise, the version of x that is used in the calling <em>Procedure</em> is local to that <em>Procedure</em>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> –g <span style="color:#000">x</span><span style="color:#ce5c00;font-weight:bold">=</span>20<span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">res</span> <span style="color:#ce5c00;font-weight:bold">=</span> myfunc<span style="color:#ce5c00;font-weight:bold">(</span>10,20<span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> // res will be <span style="color:#0000cf;font-weight:bold">200</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$res</span><span style="color:#4e9a06"> </span><span style="color:#000">$x</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // echoes <span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#0000cf;font-weight:bold">99</span>
+</span></span></code></pre></div><p>By using the –g option to set in both the calling <em>Procedure</em> and the called <em>Function</em>, the version of x that both use is the same global variable.</p>
+
+	<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/DeployHubProject/DeployHub-Docs/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/DeployHubProject/DeployHub-Docs/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'page_helpful', {
+      'event_category': 'Helpful',
+      'event_label': window.location.pathname,
+      'value': value
+    });
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback( 100 );
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+<br />
+<div class="text-muted mt-5 pt-3 border-top">
+  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+</div>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Twitter" aria-label="Twitter">
+    <a target="_blank" rel="noopener" href="https://twitter.com/@deployhubproj" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Facebook" aria-label="Facebook">
+    <a target="_blank" rel="noopener" href="https://www.facebook.com/groups/DeployHubProject/?ref=bookmarks" aria-label="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="LinkedIn" aria-label="LinkedIn">
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/deployhubproj/" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="YouTube" aria-label="YouTube">
+    <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UC7jomcQ2D4VgjGV2ePtKWfA" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/DeployHubProject/DeployHub-Pro" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
+        <span>&copy; 2024 DeployHub, Inc All Rights Reserved</span>
+        <span class="ms-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></span>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <script src="/js/main.min.5f003f0f44f67457bc9ed9ed0dc55152c7f7d98fa81308468cb8b7fead157dc0.js" integrity="sha256-XwA/D0T2dFe8ntntDcVRUsf32Y&#43;oEwhGjLi3/q0VfcA=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

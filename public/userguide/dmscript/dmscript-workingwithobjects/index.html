@@ -1,0 +1,2012 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.121.1">
+<meta name="robots" content="noindex, nofollow">
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Working with Objects | DeployHub User Guide and API Reference</title>
+<meta name="description" content="Working with Objects using DMScript.
+">
+<meta property="og:title" content="Working with Objects" />
+<meta property="og:description" content="Working with Objects using DMScript.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/userguide/dmscript/dmscript-workingwithobjects/" /><meta property="article:section" content="userguide" />
+
+<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+
+<meta itemprop="name" content="Working with Objects">
+<meta itemprop="description" content="Working with Objects using DMScript.
+">
+<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
+<meta itemprop="wordCount" content="4605">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Working with Objects"/>
+<meta name="twitter:description" content="Working with Objects using DMScript.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.e342d8b86550cad37574beb3643141eaeaf3ae26299df624d6200bee95e55056.css" as="style">
+<link href="/scss/main.min.e342d8b86550cad37574beb3643141eaeaf3ae26299df624d6200bee95e55056.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="navbar-brand__name">DeployHub User Guide and API Reference</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-userguide-li">
+  <a href="/userguide/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-userguide"><span class="">Userguides</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideintroduction-to-deployhub-li">
+  <a href="/userguide/introduction-to-deployhub/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideintroduction-to-deployhub"><span class="">Welcome</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintroduction-to-deployhub0-introduction-li">
+  <a href="/userguide/introduction-to-deployhub/0-introduction/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintroduction-to-deployhub0-introduction"><span class="">Why Use DeployHub</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintroduction-to-deployhub0-hipster-store-tutorial-li">
+  <a href="/userguide/introduction-to-deployhub/0-hipster-store-tutorial/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintroduction-to-deployhub0-hipster-store-tutorial"><span class="">Hipster Store Tutorial</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideinstallation-and-support-li">
+  <a href="/userguide/installation-and-support/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideinstallation-and-support"><span class="">Installation and Support</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-saas-and-reverse-proxy-li">
+  <a href="/userguide/installation-and-support/0-saas-and-reverse-proxy/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-saas-and-reverse-proxy"><span class="">SaaS Sign-up and Reverse Proxy for Deployments</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-on-premise-installation-for-pro-li">
+  <a href="/userguide/installation-and-support/0-on-premise-installation-for-pro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-on-premise-installation-for-pro"><span class="">DeployHub On-Prem Installation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-commandlineinterface-li">
+  <a href="/userguide/installation-and-support/0-commandlineinterface/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-commandlineinterface"><span class="">Command Line Interface Installation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-enabling-sso-li">
+  <a href="/userguide/installation-and-support/0-enabling-sso/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-enabling-sso"><span class="">Single Sign On using Okta and SAML</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-contactsupport-li">
+  <a href="/userguide/installation-and-support/0-contactsupport/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-contactsupport"><span class="">Contact Support</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-terms-of-use-agreement-li">
+  <a href="/userguide/installation-and-support/0-terms-of-use-agreement/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-terms-of-use-agreement"><span class="">Terms of Use Agreement</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideconcepts-li">
+  <a href="/userguide/concepts/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideconcepts"><span class="">Key Concepts</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideconcepts1-deployhub-basic-concepts-li">
+  <a href="/userguide/concepts/1-deployhub-basic-concepts/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideconcepts1-deployhub-basic-concepts"><span class="">DeployHub 101</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideconcepts1-deployhub-processing-li">
+  <a href="/userguide/concepts/1-deployhub-processing/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideconcepts1-deployhub-processing"><span class="">Architecture</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideconcepts3-executing-deployments-li">
+  <a href="/userguide/concepts/3-executing-deployments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideconcepts3-executing-deployments"><span class="">Executing Deployments</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideconceptslifecyclesubdomains-li">
+  <a href="/userguide/concepts/lifecyclesubdomains/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideconceptslifecyclesubdomains"><span class="">DeployHub and Continuous Delivery</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguidefirst-steps-li">
+  <a href="/userguide/first-steps/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguidefirst-steps"><span class="">First Steps</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidefirst-steps2-intro-to-setting-up-deployhub-li">
+  <a href="/userguide/first-steps/2-intro-to-setting-up-deployhub/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidefirst-steps2-intro-to-setting-up-deployhub"><span class="">Setting up DeployHub</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidefirst-steps2-defining-domains-li">
+  <a href="/userguide/first-steps/2-defining-domains/" title="Building Your Domain Catalog" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidefirst-steps2-defining-domains"><span class="">Building your Domain Catalog</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidefirst-steps2-define-your-credentials-li">
+  <a href="/userguide/first-steps/2-define-your-credentials/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidefirst-steps2-define-your-credentials"><span class="">Create Your Credentials</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidefirst-steps2-define-repositories-li">
+  <a href="/userguide/first-steps/2-define-repositories/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidefirst-steps2-define-repositories"><span class="">Connect Your Repositories</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidefirst-steps2-define-endpoints-li">
+  <a href="/userguide/first-steps/2-define-endpoints/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidefirst-steps2-define-endpoints"><span class="">Define Your Endpoints</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidefirst-steps2-define-environments-li">
+  <a href="/userguide/first-steps/2-define-environments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidefirst-steps2-define-environments"><span class="">Build Your Environments</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguidepublishing-components-li">
+  <a href="/userguide/publishing-components/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguidepublishing-components"><span class="">Publishing Components</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidepublishing-componentsintro-to-components-li">
+  <a href="/userguide/publishing-components/intro-to-components/" title="Intro to  Components" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidepublishing-componentsintro-to-components"><span class="">Intro to Components</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidepublishing-components2-define-components-li">
+  <a href="/userguide/publishing-components/2-define-components/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidepublishing-components2-define-components"><span class="">Defining Components</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguidepackaging-applications-li">
+  <a href="/userguide/packaging-applications/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguidepackaging-applications"><span class="">Packaging Applications</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidepackaging-applicationsbuildingapplications-li">
+  <a href="/userguide/packaging-applications/buildingapplications/" title="Intro to Applications" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidepackaging-applicationsbuildingapplications"><span class="">Intro Applications</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidepackaging-applications2-defining-applications-li">
+  <a href="/userguide/packaging-applications/2-defining-applications/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidepackaging-applications2-defining-applications"><span class="">Defining Your Application Baseline</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideintegrations-li">
+  <a href="/userguide/integrations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideintegrations"><span class="">Integrations</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsintro-to-integrations-li">
+  <a href="/userguide/integrations/intro-to-integrations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsintro-to-integrations"><span class="">Custom DeployHub Actions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsci-cd_integrations-li">
+  <a href="/userguide/integrations/ci-cd_integrations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsci-cd_integrations"><span class="">CI/CD and DeployHub</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationscircleci-li">
+  <a href="/userguide/integrations/circleci/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationscircleci"><span class="">CircleCI Deployment Orb</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsgithub-li">
+  <a href="/userguide/integrations/github/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsgithub"><span class="">GitHub</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationshelm-li">
+  <a href="/userguide/integrations/helm/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationshelm"><span class="">Helm for Container Deployments</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationshipchat-li">
+  <a href="/userguide/integrations/hipchat/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationshipchat"><span class="">HipChat</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsjira-bugzilla-and-git-issues-li">
+  <a href="/userguide/integrations/jira-bugzilla-and-git-issues/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsjira-bugzilla-and-git-issues"><span class="">Jira, Bugzilla and GitHub Issues</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsldap-and-active-directory-li">
+  <a href="/userguide/integrations/ldap-and-active-directory/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsldap-and-active-directory"><span class="">LDAP and Active Directory</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsodbc-li">
+  <a href="/userguide/integrations/odbc/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsodbc"><span class="">ODBC Connection</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsopenmake-meister-li">
+  <a href="/userguide/integrations/openmake-meister/" title="OpenMake Meister Binary Repository" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsopenmake-meister"><span class="">OpenMake Meister</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsosvdev-li">
+  <a href="/userguide/integrations/osvdev/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsosvdev"><span class="">OSV.Dev CVE Integration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationssonarqube-li">
+  <a href="/userguide/integrations/sonarqube/" title="SonarQube Code Quality and Security Solution Integration" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationssonarqube"><span class="">SonarQube Integration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationssalesforce-li">
+  <a href="/userguide/integrations/salesforce/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationssalesforce"><span class="">SalesForce</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsslack-li">
+  <a href="/userguide/integrations/slack/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsslack"><span class="">Slack</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsspdx-syft-cyclonedx-li">
+  <a href="/userguide/integrations/spdx-syft-cyclonedx/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsspdx-syft-cyclonedx"><span class="">SPDX, CycloneDX and Syft</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationssvn-li">
+  <a href="/userguide/integrations/svn/" title="SVN as a Repository" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationssvn"><span class="">SVN</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsswagger-li">
+  <a href="/userguide/integrations/swagger/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsswagger"><span class="">Swagger Integration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationstomcat-li">
+  <a href="/userguide/integrations/tomcat/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationstomcat"><span class="">Tomcat</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsweblogic-li">
+  <a href="/userguide/integrations/weblogic/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsweblogic"><span class="">Weblogic</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationswebsphere-li">
+  <a href="/userguide/integrations/websphere/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationswebsphere"><span class="">WebSphere</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguidecustomizations-li">
+  <a href="/userguide/customizations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguidecustomizations"><span class="">Customizations</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizations2-define-notifiers-li">
+  <a href="/userguide/customizations/2-define-notifiers/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizations2-define-notifiers"><span class="">Using Notifiers for Messaging</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizations2-notifier-templates-li">
+  <a href="/userguide/customizations/2-notifier-templates/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizations2-notifier-templates"><span class="">Using Notifier Templates</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizations2-define-your-actions-li">
+  <a href="/userguide/customizations/2-define-your-actions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizations2-define-your-actions"><span class="">Customize Your Actions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizations2-define-your-functions-and-procedures-li">
+  <a href="/userguide/customizations/2-define-your-functions-and-procedures/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizations2-define-your-functions-and-procedures"><span class="">Procedures and Functions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizations2-users-li">
+  <a href="/userguide/customizations/2-users/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizations2-users"><span class="">Managing Users</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizationscustomtypes-li">
+  <a href="/userguide/customizations/customtypes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizationscustomtypes"><span class="">Custom Types</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguidecustomizationsteamgroups-li">
+  <a href="/userguide/customizations/teamgroups/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidecustomizationsteamgroups"><span class="">Modifying the Default User Groups</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideprofeatures-li">
+  <a href="/userguide/profeatures/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideprofeatures"><span class="">Pro Features</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideprofeatures2-data-sources-li">
+  <a href="/userguide/profeatures/2-data-sources/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideprofeatures2-data-sources"><span class="">Managing Data Sources</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideprofeatures5-application-releases-li">
+  <a href="/userguide/profeatures/5-application-releases/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideprofeatures5-application-releases"><span class="">Creating Releases</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideprofeatures5-pro-groups-li">
+  <a href="/userguide/profeatures/5-pro-groups/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideprofeatures5-pro-groups"><span class="">Creating Pro User Groups</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideprofeaturescalendar-li">
+  <a href="/userguide/profeatures/calendar/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideprofeaturescalendar"><span class="">DeployHub Pro Smart Calendars</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguiderestapi-li">
+  <a href="/userguide/restapi/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguiderestapi"><span class="">RESTfull API</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapiintro-and-logging-in-li">
+  <a href="/userguide/restapi/intro-and-logging-in/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapiintro-and-logging-in"><span class="">Intro to APIs and Logging In</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapiapplications-li">
+  <a href="/userguide/restapi/applications/" title="Application APIs" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapiapplications"><span class="">Applications APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapicomponents-li">
+  <a href="/userguide/restapi/components/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapicomponents"><span class="">Component APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapicredentials-li">
+  <a href="/userguide/restapi/credentials/" title="Credential APIs" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapicredentials"><span class="">Credentials APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapideployment-li">
+  <a href="/userguide/restapi/deployment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapideployment"><span class="">Deployment APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapideployment-log-li">
+  <a href="/userguide/restapi/deployment-log/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapideployment-log"><span class="">Deployment Log APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapiendpoints-li">
+  <a href="/userguide/restapi/endpoints/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapiendpoints"><span class="">Endpoint APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapienvironments-li">
+  <a href="/userguide/restapi/environments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapienvironments"><span class="">Environment APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapicalendar-li">
+  <a href="/userguide/restapi/calendar/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapicalendar"><span class="">Environment Calendar API</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguiderestapiusers-li">
+  <a href="/userguide/restapi/users/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguiderestapiusers"><span class="">User APIs</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-userguidedmscript-li">
+  <a href="/userguide/dmscript/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguidedmscript"><span class="">DM Script</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-intro-li">
+  <a href="/userguide/dmscript/dmscript-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-intro"><span class="">Intro to Customizing Actions with DMScript</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-userguidedmscriptdmscript-workingwithobjects-li">
+  <a href="/userguide/dmscript/dmscript-workingwithobjects/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-workingwithobjects"><span class="td-sidebar-nav-active-item">Working with Objects</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-abort-li">
+  <a href="/userguide/dmscript/dmscript-abort/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-abort"><span class="">Abort</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-append-li">
+  <a href="/userguide/dmscript/dmscript-append/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-append"><span class="">Append</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-appendstd-li">
+  <a href="/userguide/dmscript/dmscript-appendstd/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-appendstd"><span class="">Appendstd</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-assert-li">
+  <a href="/userguide/dmscript/dmscript-assert/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-assert"><span class="">Assert</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-attachment-li">
+  <a href="/userguide/dmscript/dmscript-attachment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-attachment"><span class="">Attachment</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-avloop-li">
+  <a href="/userguide/dmscript/dmscript-avloop/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-avloop"><span class="">AVLoop</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-base64decode-li">
+  <a href="/userguide/dmscript/dmscript-base64decode/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-base64decode"><span class="">base64decode</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-base64encode-li">
+  <a href="/userguide/dmscript/dmscript-base64encode/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-base64encode"><span class="">base64encode</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-basename-li">
+  <a href="/userguide/dmscript/dmscript-basename/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-basename"><span class="">basename</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-breakcontinue-li">
+  <a href="/userguide/dmscript/dmscript-breakcontinue/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-breakcontinue"><span class="">Break/Continue</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-changerequestobject-li">
+  <a href="/userguide/dmscript/dmscript-changerequestobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-changerequestobject"><span class="">Change Request</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-checkout-li">
+  <a href="/userguide/dmscript/dmscript-checkout/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-checkout"><span class="">Check Out</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-comploop-li">
+  <a href="/userguide/dmscript/dmscript-comploop/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-comploop"><span class="">CompLoop</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-componentitemobject-li">
+  <a href="/userguide/dmscript/dmscript-componentitemobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-componentitemobject"><span class="">Component Item Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-conditionalstatements-li">
+  <a href="/userguide/dmscript/dmscript-conditionalstatements/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-conditionalstatements"><span class="">Conditionals</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-create-li">
+  <a href="/userguide/dmscript/dmscript-create/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-create"><span class="">Create and Read</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-credentials-li">
+  <a href="/userguide/dmscript/dmscript-credentials/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-credentials"><span class="">Credentials</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-date-li">
+  <a href="/userguide/dmscript/dmscript-date/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-date"><span class="">Date</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-dateobject-li">
+  <a href="/userguide/dmscript/dmscript-dateobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-dateobject"><span class="">Date Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-decimal-li">
+  <a href="/userguide/dmscript/dmscript-decimal/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-decimal"><span class="">Decimal</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-delete-li">
+  <a href="/userguide/dmscript/dmscript-delete/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-delete"><span class="">Delete</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-deploystatement-li">
+  <a href="/userguide/dmscript/dmscript-deploystatement/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-deploystatement"><span class="">Deploy Statement</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-dirname-li">
+  <a href="/userguide/dmscript/dmscript-dirname/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-dirname"><span class="">Directory Name</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-domainobjectt-li">
+  <a href="/userguide/dmscript/dmscript-domainobjectt/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-domainobjectt"><span class="">Domain Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-dropzone-li">
+  <a href="/userguide/dmscript/dmscript-dropzone/" title="DropZone Physicl Path" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-dropzone"><span class="">DropZone Physical Path</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-dropzonefileobject-li">
+  <a href="/userguide/dmscript/dmscript-dropzonefileobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-dropzonefileobject"><span class="">DropZone File Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-dropzoneobject-li">
+  <a href="/userguide/dmscript/dmscript-dropzoneobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-dropzoneobject"><span class="">DropZone Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-echo-li">
+  <a href="/userguide/dmscript/dmscript-echo/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-echo"><span class="">Echo</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-eval-li">
+  <a href="/userguide/dmscript/dmscript-eval/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-eval"><span class="">Eval</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-filter-li">
+  <a href="/userguide/dmscript/dmscript-filter/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-filter"><span class="">Filter</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-flatten-li">
+  <a href="/userguide/dmscript/dmscript-flatten/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-flatten"><span class="">Flatten</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-foreachstatement-li">
+  <a href="/userguide/dmscript/dmscript-foreachstatement/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-foreachstatement"><span class="">For Each Statement</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getapplication-li">
+  <a href="/userguide/dmscript/dmscript-getapplication/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getapplication"><span class="">Get Application</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getcomponnet-li">
+  <a href="/userguide/dmscript/dmscript-getcomponnet/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getcomponnet"><span class="">Get Components</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getcredential-li">
+  <a href="/userguide/dmscript/dmscript-getcredential/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getcredential"><span class="">Get Credentials</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getenvironment-li">
+  <a href="/userguide/dmscript/dmscript-getenvironment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getenvironment"><span class="">Get Environment</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-gethex-li">
+  <a href="/userguide/dmscript/dmscript-gethex/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-gethex"><span class="">Get Hex</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getserver-li">
+  <a href="/userguide/dmscript/dmscript-getserver/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getserver"><span class="">Get Server</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getuser-li">
+  <a href="/userguide/dmscript/dmscript-getuser/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getuser"><span class="">Get User</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-getusergroup-li">
+  <a href="/userguide/dmscript/dmscript-getusergroup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-getusergroup"><span class="">Get UserGroup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-increment-li">
+  <a href="/userguide/dmscript/dmscript-increment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-increment"><span class="">Increment or Decrement</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-instr-li">
+  <a href="/userguide/dmscript/dmscript-instr/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-instr"><span class="">Instr</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-iterate-li">
+  <a href="/userguide/dmscript/dmscript-iterate/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-iterate"><span class="">Iterate</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-length-li">
+  <a href="/userguide/dmscript/dmscript-length/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-length"><span class="">Length</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-lower-li">
+  <a href="/userguide/dmscript/dmscript-lower/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-lower"><span class="">Lower</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-me-li">
+  <a href="/userguide/dmscript/dmscript-me/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-me"><span class="">Me</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-modify-li">
+  <a href="/userguide/dmscript/dmscript-modify/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-modify"><span class="">Modify</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidedmscriptdmscript-notify-li">
+  <a href="/userguide/dmscript/dmscript-notify/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidedmscriptdmscript-notify"><span class="">Notify</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableapplication-and-release-tasks-li">
+  <a href="/userguide/reusable/application-and-release-tasks/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableapplication-and-release-tasks"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableattributes-li">
+  <a href="/userguide/reusable/attributes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableattributes"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableaudittrail-withdeployments-li">
+  <a href="/userguide/reusable/audittrail-withdeployments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableaudittrail-withdeployments"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableaudittrail-li">
+  <a href="/userguide/reusable/audittrail/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableaudittrail"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablechangerequest-li">
+  <a href="/userguide/reusable/changerequest/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablechangerequest"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablecommandline-li">
+  <a href="/userguide/reusable/commandline/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablecommandline"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablegit-li">
+  <a href="/userguide/reusable/git/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablegit"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablehipchat-li">
+  <a href="/userguide/reusable/hipchat/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablehipchat"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableldap-datasource-li">
+  <a href="/userguide/reusable/ldap-datasource/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableldap-datasource"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablelistofactions-li">
+  <a href="/userguide/reusable/listofactions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablelistofactions"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-predecessor-li">
+  <a href="/userguide/reusable/model-application-predecessor/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-predecessor"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-result-li">
+  <a href="/userguide/reusable/model-application-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-version-full-li">
+  <a href="/userguide/reusable/model-application-version-full/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-version-full"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-version-result-li">
+  <a href="/userguide/reusable/model-application-version-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-version-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-version-li">
+  <a href="/userguide/reusable/model-application-version/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-version"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-li">
+  <a href="/userguide/reusable/model-application/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-approve-or-reject-li">
+  <a href="/userguide/reusable/model-approve-or-reject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-approve-or-reject"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-attribute-result-li">
+  <a href="/userguide/reusable/model-attribute-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-attribute-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-attribute-li">
+  <a href="/userguide/reusable/model-attribute/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-attribute"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-calendar-event-result-li">
+  <a href="/userguide/reusable/model-calendar-event-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-calendar-event-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-calendar-event-li">
+  <a href="/userguide/reusable/model-calendar-event/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-calendar-event"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-predecessor-li">
+  <a href="/userguide/reusable/model-component-predecessor/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-predecessor"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-result-li">
+  <a href="/userguide/reusable/model-component-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-version-full-li">
+  <a href="/userguide/reusable/model-component-version-full/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-version-full"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-version-result-li">
+  <a href="/userguide/reusable/model-component-version-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-version-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-version-li">
+  <a href="/userguide/reusable/model-component-version/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-version"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-li">
+  <a href="/userguide/reusable/model-component/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-comptype-li">
+  <a href="/userguide/reusable/model-comptype/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-comptype"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-deployment-log-result-li">
+  <a href="/userguide/reusable/model-deployment-log-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-deployment-log-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-deployment-log-li">
+  <a href="/userguide/reusable/model-deployment-log/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-deployment-log"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-deployment-result-li">
+  <a href="/userguide/reusable/model-deployment-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-deployment-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-endpoint-result-li">
+  <a href="/userguide/reusable/model-endpoint-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-endpoint-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-endpoints-result-li">
+  <a href="/userguide/reusable/model-endpoints-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-endpoints-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-endpoints-li">
+  <a href="/userguide/reusable/model-endpoints/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-endpoints"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-environment-result-li">
+  <a href="/userguide/reusable/model-environment-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-environment-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-environment-li">
+  <a href="/userguide/reusable/model-environment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-environment"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-environments-result-li">
+  <a href="/userguide/reusable/model-environments-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-environments-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-event-creator-li">
+  <a href="/userguide/reusable/model-event-creator/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-event-creator"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-event-environment-li">
+  <a href="/userguide/reusable/model-event-environment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-event-environment"><span class=""></span></a>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#attributes">Attributes</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#component-object">Component Object</a></li>
+    <li><a href="#component-item">Component Item</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#date-format-characters">Date Format Characters</a></li>
+        <li><a href="#alternate-format-modifiers">Alternate Format Modifiers</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#dropzone">DropZone</a></li>
+    <li><a href="#dropzone-file">DropZone File</a></li>
+  </ul>
+</nav>
+      </div>
+    
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/userguide/">Userguides</a></li>
+  <li class="breadcrumb-item">
+    <a href="/userguide/dmscript/">DM Script</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Working with Objects</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Working with Objects</h1>
+	<div class="lead">Working with Objects using DMScript.</div>
+	<header class="article-meta">
+		
+</header>
+	<p><em>DMScript</em> is an object-orientated scripting language. As such, it understands each object in the DeployHub model. You can access each object either by selecting it off the stack (e.g.: $<em>Environment</em>), by retrieving a reference to the object from some other object, or by calling a built-in <em>Function</em> to retrieve it. Each object has accessible properties. Some objects also have methods that can be called.</p>
+<p>The following is a list of the objects that you can reference in <em>DMScript</em>.</p>
+<ul>
+<li>Application</li>
+<li>Change Request</li>
+<li>Components</li>
+<li>Component Items</li>
+<li>Credentials</li>
+<li>Date</li>
+<li>Domain</li>
+<li>DropZone</li>
+<li>DropZone File</li>
+<li>Environment</li>
+<li>Endpoint</li>
+<li>User</li>
+<li>UserGroup</li>
+</ul>
+<h2 id="attributes">Attributes</h2>
+<p>Attributes set against DeployHub objects are accessible as variables in <em>DMScript</em>.</p>
+<p>For example, suppose QUEUE_NAME is queue1 in &ldquo;Test <em>Environment</em> A&rdquo; and queue2 in &ldquo;Test <em>Environment</em> B&rdquo;. When deploying to &ldquo;Test <em>Environment</em> A&rdquo; the value of $QUEUE_NAME will be queue1. When deploying to &ldquo;Test <em>Environment</em> B&rdquo; the value of $QUEUE_NAME will be queue2.</p>
+<p>You do not need to use any specific syntax to access an Object variable. Whenever a variable is accessed, <em>DMScript</em> will navigate up the <em>Stack</em>, looking for the first scope in which the variable is declared. When a variable with a matching name is found, the value at that point is returned. This means that variable values can be overwritten with other values declared higher in the stack. See the high-level section named The Stack for further discussion on this.</p>
+<h1 id="application-object">Application Object</h1>
+<p>The <em>Application</em> object represents either a Base <em>Application</em>, an <em>Application Version,</em> or a Release. In <strong>DeployHub Pro</strong> there is always an <em>Application</em> on the stack representing the <em>Application</em>/<em>Release</em> being deployed referenced by $<em>Application</em>. You can also retrieve an <em>Application</em> using the get_Application__Function_ or push an <em>Application</em> onto the Stack via using <em>Application</em>.</p>
+<p>NOTE: A <em>Release</em> is a DeployHub Pro Object. It is of the <em>type__Application</em>. The release property indicates if the object represents a Release.</p>
+<p>The following properties can be accessed for an <em>Application</em> object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td><em>Application</em> id, as used in the database.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td><em>Application</em> name.</td>
+</tr>
+<tr>
+<td>fqdomain</td>
+<td>String</td>
+<td>Fully qualified domain name.</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>String</td>
+<td>Summary text.</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>Object</td>
+<td>Domain in which the <em>Application</em> is contained.</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>Object</td>
+<td>User or UserGroup that owns the <em>Application.</em></td>
+</tr>
+<tr>
+<td>parent</td>
+<td>Object</td>
+<td>The Base <em>Application.</em></td>
+</tr>
+<tr>
+<td>predecessor</td>
+<td>Object</td>
+<td>Predecessor <em>Application Version</em> (the version on which this version is based).</td>
+</tr>
+<tr>
+<td><em>Release</em></td>
+<td>Boolean</td>
+<td>true if object is a <em>Release</em>, false otherwise.</td>
+</tr>
+<tr>
+<td><em>Applications</em></td>
+<td>Array</td>
+<td>Array of <em>Application</em> objects if the object is a <em>Release</em>  a list of the consituent <em>Applications</em>. If the object is not a <em>Release</em>, this returns null.</td>
+</tr>
+<tr>
+<td><em>Components</em></td>
+<td>Array</td>
+<td>Array of <em>Component</em> objects (keyed by <em>Component</em> name) which make up this <em>Application.</em></td>
+</tr>
+<tr>
+<td>approvals</td>
+<td>Array</td>
+<td>Array of strings (approved/rejected) keyed by domain name for which the <em>Application</em> is approved/rejected.</td>
+</tr>
+<tr>
+<td>requests</td>
+<td>Array</td>
+<td>Array of <em>Change Request</em> objects associated with this <em>Application</em>.</td>
+</tr>
+<tr>
+<td>creator</td>
+<td>User</td>
+<td>User Object representing the user who created this <em>Application</em>.</td>
+</tr>
+<tr>
+<td>modifier</td>
+<td>User</td>
+<td>User Object representing the user who last modified this <em>Application</em>.</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the <em>Application</em> was created.</td>
+</tr>
+<tr>
+<td>mtime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the <em>Application</em> was last modified.</td>
+</tr>
+<tr>
+<td>attributes</td>
+<td>Array</td>
+<td>Array of Strings, keyed by Attribute Name</td>
+</tr>
+</tbody>
+</table>
+<p>The following methods can be called on the <em>Application</em> object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Method</strong></th>
+<th><strong>Return Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>children(all)</td>
+<td>Array</td>
+<td>Returns an array of <em>Application</em> objects representing the descendants of this <em>Application</em>. If the parameter <em>all</em> is passed as true then the returned array includes all the descendants of the immediate descendants recursively. If the parameter <em>all</em> is omitted or passed as false then the return array only includes the immedate descendants.</td>
+</tr>
+<tr>
+<td>versions(all)</td>
+<td>Array</td>
+<td>Synonym for children. Works identically.</td>
+</tr>
+<tr>
+<td>getatt(attname)</td>
+<td>String</td>
+<td>Returns the value of the specified attribute held against the <em>Application</em>. Parameter is the attribute name.</td>
+</tr>
+<tr>
+<td>requests(onlyForApp)</td>
+<td>Array</td>
+<td>Returns an Array of <em>Change Request</em> objects. If onlyForApp is not specified or passed as false then this is identical to accessing the requests attribute. If onlyForApp is specfied as true then only the change request records associated with the <em>Application</em> itself are returned Note: No change request which is only associated with a consituent <em>Component</em> is returned. This allows you to differentiate between change requests associated with the <em>Application</em> and any of its <em>Components</em>.</td>
+</tr>
+<tr>
+<td>latest(branchname)</td>
+<td>Object</td>
+<td>Returns the latest <em>Application Version</em> of this <em>Application</em>. If branchname is specified then the returned <em>Application</em> Object is the latest version on the specified branch.</td>
+</tr>
+</tbody>
+</table>
+<p>Attributes such as <em>owner</em> and <em>parent</em> return <em>Objects</em>. These objects have their own attributes. So, for example, one can get the owner name of an <em>Application</em> by writing:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">owner</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Application_</span><span style="color:#000;font-weight:bold">.owner</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">owner</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>or, more simply:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Application_</span><span style="color:#000;font-weight:bold">.owner.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Get _Application_ Approval Status:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">approvals</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Application_</span><span style="color:#000;font-weight:bold">.approvals</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>foreach<span style="color:#ce5c00;font-weight:bold">(</span>a: <span style="color:#000">$approvals</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$a</span><span style="color:#4e9a06"> : </span><span style="color:#4e9a06">${</span><span style="color:#000">approvals</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">$a</span><span style="color:#000;font-weight:bold">]</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// e.g.:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// Test : approved
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// Prod : rejected
+</span></span></code></pre></div><p>Since the array is keyed on the domain name, you can easily check if the app is approved for a particular domain:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">approvals</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Application_</span><span style="color:#000;font-weight:bold">.approvals</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">${</span><span style="color:#000">approvals</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;Test&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#4e9a06">}</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;approved&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// _Application_ is approved <span style="color:#204a87;font-weight:bold">for</span> Test Domain
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Or you can use dot notation (assuming the target domain name does not contain spaces):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">approvals</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Application_</span><span style="color:#000;font-weight:bold">.approvals</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">${</span><span style="color:#000">approvals</span><span style="color:#000;font-weight:bold">.Test</span><span style="color:#4e9a06">}</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;approved&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// _Application_ is approved <span style="color:#204a87;font-weight:bold">for</span> Test Domain
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><p>To iterate through the <em>Component_s that make up the_Application</em>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">Components</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">Application</span><span style="color:#000;font-weight:bold">.Components</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;This Application has </span><span style="color:#4e9a06">${</span><span style="color:#000">Components</span><span style="color:#000;font-weight:bold">.length()</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06"> Components&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>iterate<span style="color:#ce5c00;font-weight:bold">(</span>c: <span style="color:#000">$Components</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;Component </span><span style="color:#4e9a06">${</span><span style="color:#000">c</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06"> (id </span><span style="color:#4e9a06">${</span><span style="color:#000">c</span><span style="color:#000;font-weight:bold">.id</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">)&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h1 id="change-request-object">Change Request Object</h1>
+<p>The <em>Change Request</em> object represents a change request record associated with either a <em>Component</em> or an <em>Application</em>. Arrays of <em>Change Request</em> objects are returned by accessing the requests property of an <em>Application</em> or <em>Component</em> object or the requests() method of an <em>Application</em>.</p>
+<p>The following properties can be accessed for a <em>Change Request</em> object:</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>String</th>
+<th>The change request id.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The change request description.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>String</td>
+<td>The change request status.</td>
+</tr>
+<tr>
+<td>api_url</td>
+<td>String</td>
+<td>A URL which - if passed to restful_get - will return an array containing the full details of the change request from the external change tracking system. Useful for getting more information than the id / description / status combination which is stored in DeployHub.</td>
+</tr>
+<tr>
+<td>html_url</td>
+<td>String</td>
+<td>A URL which will direct a browser to the page describing the change request in the external change tracking system.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="the-component-and-component-item-objects">The Component and Component Item Objects</h1>
+<h2 id="component-object">Component Object</h2>
+<p>The <em>Component</em> object represents either a <em>Base Component</em> or a <em>Component</em> Version. When deploying an <em>Application</em>, <em>Components</em> are pushed onto the stack after each <em>Endpoint</em>. They can also be pushed onto the stack by using a comploop, retrieved from an <em>Application</em> by using ${<em>Application</em>.<em>Components</em>} or retrieved by calling <em>get_Component</em>.</p>
+<p>The following properties can be accessed for a <em>Component</em> object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td><em>Component</em> id, as used in the database.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td><em>Component</em> name.</td>
+</tr>
+<tr>
+<td>fqdomain</td>
+<td>String</td>
+<td>Fully qualified domain name.</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>String</td>
+<td>Summary text.</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>Object</td>
+<td>Domain in which the <em>Component</em> is contained.</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>Object</td>
+<td>User or UserGroup that owns the <em>Component.</em></td>
+</tr>
+<tr>
+<td>parent</td>
+<td>Object</td>
+<td>The Base <em>Component.</em></td>
+</tr>
+<tr>
+<td>predecessor</td>
+<td>Object</td>
+<td>Predecessor <em>Component</em> Version (the version on which this version is based).</td>
+</tr>
+<tr>
+<td>items</td>
+<td>Array</td>
+<td>An array of <em>Component</em> Item objects. These represent the items that make up this <em>Component</em>.</td>
+</tr>
+<tr>
+<td>servers</td>
+<td>Array</td>
+<td>An array of <em>Endpoint</em> objects. These are the <em>Endpoints</em> to which this <em>Component</em> has been deployed.</td>
+</tr>
+<tr>
+<td>requests</td>
+<td>Array</td>
+<td>Array of <em>Change Request</em> objects – the change requests associated with this <em>Component</em>.</td>
+</tr>
+<tr>
+<td>lastbuild</td>
+<td>Integer</td>
+<td>The last build number for this <em>Component</em>. 0 if never built.</td>
+</tr>
+<tr>
+<td>creator</td>
+<td>User</td>
+<td>User Object representing the user who created this <em>Component</em>.</td>
+</tr>
+<tr>
+<td>modifier</td>
+<td>User</td>
+<td>User Object representing the user who last modified this <em>Component</em>.</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the <em>Component</em> was created.</td>
+</tr>
+<tr>
+<td>mtime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the <em>Component</em> was last modified.</td>
+</tr>
+<tr>
+<td>attributes</td>
+<td>Array</td>
+<td>Array of Strings, keyed by Attribute Name</td>
+</tr>
+</tbody>
+</table>
+<p>Attributes such as <em>owner</em> and <em>parent</em> return <em>Objects</em>. These objects have their own attributes. So, for example, one can get the owner name of a <em>Component</em> by writing:</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">owner</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Component_</span><span style="color:#000;font-weight:bold">.owner</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">owner</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>or, more simply:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Component_</span><span style="color:#000;font-weight:bold">.owner.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><h2 id="component-item">Component Item</h2>
+<p>The <em>Component Item</em> object represents a <em>Component</em> item within a <em>Component</em>. Access to a <em>Component</em> item is only possible by retrieving the array of <em>Component</em> Item objects from the <em>Component</em> Object.</p>
+<p>The following properties can be accessed for a <em>Component</em> item object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td><em>Component</em> Item id, as used in the database.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td><em>Component</em> Item name.</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>String</td>
+<td>Summary text.</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>Object</td>
+<td>The <em>Component</em> to which this Item belongs.</td>
+</tr>
+<tr>
+<td>repository</td>
+<td>String</td>
+<td>The Name of the Repository from which this <em>Component</em> Item pulls files.</td>
+</tr>
+<tr>
+<td>target</td>
+<td>String</td>
+<td>The target directory to which the files should be deployed.</td>
+</tr>
+<tr>
+<td>rollup</td>
+<td>Boolean</td>
+<td>Whether this <em>Component</em> Item should be deployed during a roll forward operation.</td>
+</tr>
+<tr>
+<td>rollback</td>
+<td>Boolean</td>
+<td>Whether this <em>Component</em> Item should be deployed during a roll back operation.</td>
+</tr>
+<tr>
+<td>properties</td>
+<td>Array</td>
+<td>An array of Strings representing the values for the Repository Attributes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Iterate through the _Component_ items <span style="color:#204a87;font-weight:bold">for</span> a _Component_:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>iterate<span style="color:#ce5c00;font-weight:bold">(</span>ci: <span style="color:#4e9a06">${</span><span style="color:#000">Component</span><span style="color:#000;font-weight:bold">.items</span><span style="color:#4e9a06">}</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;name=</span><span style="color:#4e9a06">${</span><span style="color:#000">ci</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // Component Item Name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;repository=</span><span style="color:#4e9a06">${</span><span style="color:#000">ci</span><span style="color:#000;font-weight:bold">.repository</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // Repository Name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;target=</span><span style="color:#4e9a06">${</span><span style="color:#000">ci</span><span style="color:#000;font-weight:bold">.target</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // Target Directory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;rollup=</span><span style="color:#4e9a06">${</span><span style="color:#000">ci</span><span style="color:#000;font-weight:bold">.rollup</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // rollup <span style="color:#ce5c00;font-weight:bold">(</span>true/false<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;rollback=</span><span style="color:#4e9a06">${</span><span style="color:#000">ci</span><span style="color:#000;font-weight:bold">.rollback</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // rollback <span style="color:#ce5c00;font-weight:bold">(</span>true/false<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">props</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">ci</span><span style="color:#000;font-weight:bold">.properties</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span> // Other Properties
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;properties:&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>foreach<span style="color:#ce5c00;font-weight:bold">(</span>p: <span style="color:#000">$props</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span> // Properties Specific
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$p</span><span style="color:#4e9a06"> = </span><span style="color:#4e9a06">${</span><span style="color:#000">props</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">$p</span><span style="color:#000;font-weight:bold">]</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // to the Repository
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span> // <span style="color:#204a87;font-weight:bold">for</span> this Comp Item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h1 id="credentials">Credentials</h1>
+<p>The <em>Credential  Object</em> can be accessed with the built-in getcredential_Function_but only if the user executing the <em>DMScript</em> has read access to it.</p>
+<p>If the <em>Credential</em> can be read, then its attributes can be accessed:</p>
+<p>The following properties can be accessed for a <em>Credential Object</em>:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td><em>Credential</em> id, as used in the database.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td><em>Credential</em> name.</td>
+</tr>
+<tr>
+<td>fqdomain</td>
+<td>String</td>
+<td>Fully qualified <em>Domain</em> name.</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>String</td>
+<td>Summary text.</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>Object</td>
+<td>Domain in which the <em>Credential</em> is associated.</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>Object</td>
+<td>User or UserGroup that owns the <em>Credential</em></td>
+</tr>
+<tr>
+<td>username</td>
+<td>String</td>
+<td>Decrypted username.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>Decrypted password.</td>
+</tr>
+<tr>
+<td>b64auth</td>
+<td>String</td>
+<td>A string representing the decrypted username and password together, with a : separator and then base64 encoded. Used for Basic Authorization for web-based APIs. See the description of restful_post, restful_get and soap in the high level section named Built-In <em>Functions</em> for more information.</td>
+</tr>
+<tr>
+<td>creator</td>
+<td>User</td>
+<td>User Object representing the user who created this <em>Credential</em>.</td>
+</tr>
+<tr>
+<td>modifier</td>
+<td>User</td>
+<td>User Object representing the user who last modified this <em>Credential</em>.</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the <em>Credential</em> was created.</td>
+</tr>
+<tr>
+<td>mtime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the <em>Credential</em> was last modified.</td>
+</tr>
+<tr>
+<td>kind</td>
+<td>String</td>
+<td><em>Credential</em> use.</td>
+</tr>
+</tbody>
+</table>
+<p>You can use the <em>Credential Object</em> to access external systems in a secure and controlled manner. The user executing the <em>DMScript</em> must have read access to the <em>Credential</em>. However, having read access does not allow the username/password to be viewed or modified using the Web UI. (The username is only displayed for the <em>Credential</em> owner, the username and password can only be changed if the User has update access to the <em>Credential</em>).</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">db2creds</span> <span style="color:#ce5c00;font-weight:bold">=</span> getcredential<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;db2cred&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">username</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">db2creds</span><span style="color:#000;font-weight:bold">.username</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">password</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">db2creds</span><span style="color:#000;font-weight:bold">.password</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// username and password can now be used to access external system
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>b64authcan be used to generate an authorization string <span style="color:#204a87;font-weight:bold">for</span> Basic authentication <span style="color:#204a87;font-weight:bold">for</span> web- based APIs. For example:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">webcreds</span> <span style="color:#ce5c00;font-weight:bold">=</span> getcredential<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;mydomain.webcred&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">auth</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">webcreds</span><span style="color:#000;font-weight:bold">.b64auth</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">header</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Authorization&#34;</span>: <span style="color:#4e9a06">&#34;Basic </span><span style="color:#000">$auth</span><span style="color:#4e9a06">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">res</span> <span style="color:#ce5c00;font-weight:bold">=</span> restful<span style="color:#4e9a06">\_</span>get<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;https://myurl&#34;</span>,null,null,<span style="color:#000">$header</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>NOTE: See the description of restful_get for more information.</p>
+<p>NOTE: If you wish to prevent the credential from being decrypted, then you ensure that the right to create <em>DMScript</em> is only granted to power users. Otherwise, a user could create a <em>DMScript</em> to decrypt a credential to which they only have read access.</p>
+<h1 id="date-object">Date Object</h1>
+<p>The <em>date object</em> represents a date/time in <em>DMScript</em>. Dates can be created (with the date() or now()<em>Functions</em>) or can be retrieved from a <em>DropZoneFile</em> object (which represents a file in the <em>DropZone</em>).</p>
+<p>The following methods can be called on the <em>date object</em>:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Method</strong></th>
+<th><strong>Return Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>to_int(secs)</td>
+<td>Integer</td>
+<td>Returns an integer representing the date as the number of seconds since midnight on January 1st 1970 (epoch). The secs parameter is optional. If specified, the specified number of seconds is added to the date/time before the new value is returned.</td>
+</tr>
+<tr>
+<td>to_char(fmt)</td>
+<td>String</td>
+<td>Formats the date into a string given by the passed fmt string. The fmt string should contain characters as specified below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="date-format-characters">Date Format Characters</h3>
+<p>The to_char() method returns a string which is identical to the passed fmt string with the exception of the special character sequences described below. Where these are present in the fmt string, they are replaced with the relevant <em>Component</em> from the date/time as described below:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Sequence</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%a</td>
+<td>The abbreviated name of the day of the week according to the current locale.</td>
+</tr>
+<tr>
+<td>%A</td>
+<td>The full name of the day of the week according to the current locale.</td>
+</tr>
+<tr>
+<td>%b</td>
+<td>The abbreviated month name according to the current locale.</td>
+</tr>
+<tr>
+<td>%B</td>
+<td>The full month name according to the current locale.</td>
+</tr>
+<tr>
+<td>%c</td>
+<td>The preferred date and time representation for the current locale.</td>
+</tr>
+<tr>
+<td>%C</td>
+<td>The century number (year/100) as a 2-digit integer.</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>The day of the month as a decimal number (range 01 to 31).</td>
+</tr>
+<tr>
+<td>%e</td>
+<td>Like %d, the day of the month as a decimal number, but a leading zero is replaced by a space.</td>
+</tr>
+<tr>
+<td>%E</td>
+<td>Modifier: use alternative format, see below.</td>
+</tr>
+<tr>
+<td>%F</td>
+<td>Equivalent to %Y-%m-%d (the ISO 8601 date format).</td>
+</tr>
+<tr>
+<td>%G</td>
+<td>The ISO 8601 week-based year with century as a decimal number. The 4-digit year corresponding to the ISO week number (see %V). This has the same format and value as %Y, except that if the ISO week number belongs to the previous or next year, that year is used instead.</td>
+</tr>
+<tr>
+<td>%g</td>
+<td>Like %G, but without century, that is, with a 2-digit year (00-99).</td>
+</tr>
+<tr>
+<td>%h</td>
+<td>Equivalent to %b.</td>
+</tr>
+<tr>
+<td>%H</td>
+<td>The hour as a decimal number using a 24-hour clock (range 00 to 23).</td>
+</tr>
+<tr>
+<td>%I</td>
+<td>The hour as a decimal number using a 12-hour clock (range 01 to 12).</td>
+</tr>
+<tr>
+<td>%j</td>
+<td>The day of the year as a decimal number (range 001 to 366).</td>
+</tr>
+<tr>
+<td>%k</td>
+<td>The hour (24-hour clock) as a decimal number (range 0 to 23); single digits are preceded by a blank. (See also %H.)</td>
+</tr>
+<tr>
+<td>%l</td>
+<td>The hour (12-hour clock) as a decimal number (range 1 to 12); single digits are preceded by a blank. (See also %I.)</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>The month as a decimal number (range 01 to 12).</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>The minute as a decimal number (range 00 to 59).</td>
+</tr>
+<tr>
+<td>%n</td>
+<td>A newline character.</td>
+</tr>
+<tr>
+<td>%O</td>
+<td>Modifier: use alternative format, see below.</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>Either &ldquo;AM&rdquo; or &ldquo;PM&rdquo; according to the given time value, or the corresponding strings for the current locale. Noon is treated as &ldquo;PM&rdquo; and midnight as &ldquo;AM&rdquo;.</td>
+</tr>
+<tr>
+<td>%P</td>
+<td>Like %p but in lowercase: &ldquo;am&rdquo; or &ldquo;pm&rdquo; or a corresponding string for the current locale.</td>
+</tr>
+<tr>
+<td>%r</td>
+<td>The time in a.m. or p.m. notation. In the POSIX locale this is equivalent to %I:%M:%S %p.</td>
+</tr>
+<tr>
+<td>%R</td>
+<td>The time in 24-hour notation (%H:%M). For a version including the seconds, see %T below.</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>The number of seconds since the Epoch, 1970-01-01 00:00:00 +0000 (UTC).</td>
+</tr>
+<tr>
+<td>%S</td>
+<td>The second as a decimal number (range 00 to 60). (The range is up to 60 to allow for occasional leap seconds).</td>
+</tr>
+<tr>
+<td>%t</td>
+<td>A tab character.</td>
+</tr>
+<tr>
+<td>%T</td>
+<td>The time in 24-hour notation (%H:%M:%S).</td>
+</tr>
+<tr>
+<td>%u</td>
+<td>The day of the week as a decimal, range 1 to 7, Monday being 1. (See also %w.)</td>
+</tr>
+<tr>
+<td>%U</td>
+<td>The week number of the current year as a decimal number, range 00 to 53, starting with the first Sunday as the first day ofweek 01. (See also %V and %W.)</td>
+</tr>
+<tr>
+<td>%V</td>
+<td>The ISO 8601 week number of the current year as a decimal number, range 01 to 53, where week 1 is the first week that has at least 4 days in the new year. (See also %U and %W. (Calculated from tm_year, tm_yday, and tm_wday.)</td>
+</tr>
+<tr>
+<td>%w</td>
+<td>The day of the week as a decimal, range 0 to 6, Sunday being 0. See also %u.</td>
+</tr>
+<tr>
+<td>%W</td>
+<td>The week number of the current year as a decimal number, range 00 to 53, starting with the first Monday as the first day of week 01.</td>
+</tr>
+<tr>
+<td>%x</td>
+<td>The preferred date representation for the current locale without the time.</td>
+</tr>
+<tr>
+<td>%X</td>
+<td>The preferred time representation for the current locale without the date.</td>
+</tr>
+<tr>
+<td>%y</td>
+<td>The year as a decimal number without a century (range 00 to 99).</td>
+</tr>
+<tr>
+<td>%Y</td>
+<td>The year as a decimal number including the century.</td>
+</tr>
+<tr>
+<td>%z</td>
+<td>The +hhmm or -hhmm numeric timezone (that is, the hour and minute offset from UTC).</td>
+</tr>
+<tr>
+<td>%Z</td>
+<td>The timezone name or abbreviation.</td>
+</tr>
+<tr>
+<td>%%</td>
+<td>A literal '%' character.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alternate-format-modifiers">Alternate Format Modifiers</h3>
+<p>Some conversion specifications can be modified by preceding the conversion specifier character by the E or O modifier to indicate that an alternative format should be used. If the alternative format or specification does not exist for the current locale, the behavior will be as if the unmodified conversion specification were used. (SU) The Single UNIX Specification mentions %Ec, %EC, %Ex, %EX, %Ey, %EY, %Od, %Oe, %OH, %OI, %Om, %OM, %OS, %Ou, %OU, %OV, %Ow, %OW, %Oy, where the effect of the O modifier is to use alternative numeric symbols (say, roman numerals), and that of the E modifier is to use a locale-dependent alternative representation.</p>
+<p>NOTE: The date is formatted by to_char using the C _Function_strftime.</p>
+<h1 id="domain-object">Domain Object</h1>
+<p>The <em>Domain</em> object represents a domain in <em>DMScript</em>. Domain objects can be retrieved from other objects (such as <em>Endpoints</em>, <em>Environments</em>, <em>Applications</em> etc). The calling user&rsquo;s home domain can be retrieved via ${me.domain}</p>
+<p>The following properties can be accessed on the <em>Domain</em> object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Return Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>Domain id, as used in the database.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Domain name.</td>
+</tr>
+<tr>
+<td>fqdomain</td>
+<td>String</td>
+<td>Fully qualified domain name.</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>String</td>
+<td>Summary text.</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>Object</td>
+<td>Domain in which the Domain is contained</td>
+</tr>
+<tr>
+<td>subdomains</td>
+<td>Array</td>
+<td>List of <em>Domain</em> objects which are contained within this Domain.</td>
+</tr>
+<tr>
+<td>Life Cycle</td>
+<td>Boolean</td>
+<td>true if the Domain contains a Life Cycle, false otherwise.</td>
+</tr>
+<tr>
+<td><em>Applications</em></td>
+<td>Array</td>
+<td>List of <em>Application</em> objects which are contained within this domain.</td>
+</tr>
+<tr>
+<td><em>Environments</em></td>
+<td>Array</td>
+<td>List of <em>Environment</em> objects which are contained within this domain.</td>
+</tr>
+<tr>
+<td>creator</td>
+<td>User</td>
+<td>User Object representing the user who created this domain.</td>
+</tr>
+<tr>
+<td>modifier</td>
+<td>User</td>
+<td>User Object representing the user who last modified this domain.</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the domain was created.</td>
+</tr>
+<tr>
+<td>mtime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the domain was last modified.</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>Object</td>
+<td>User or UserGroup that owns the Domain.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="dropzone-and-dropzone-file-object">Dropzone and DropZone File Object</h1>
+<h2 id="dropzone">DropZone</h2>
+<p>The <em>DropZone Object</em> represents a <em>DropZone</em>. A <em>DropZone</em> is an area on disk on the DeployHub Server where deployment artifacts are stored and manipulated before onward transmission to the target <em>Endpoint</em>(s). A <em>DropZone</em> is placed onto the stack during a using <em>DropZone</em> statement – all operations within this block have access to this <em>DropZone</em> via the <em>DropZone Object</em>. A <em>DropZone Object</em> is also present on the stack during pre and post action processing for a <em>Component</em>. In this case, the content of the <em>DropZone</em> are the files checked out from the repository for the associated <em>Component</em> Items.</p>
+<p>The following properties can be accessed for a <em>DropZone</em> object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td><em>DropZone</em> name.</td>
+</tr>
+<tr>
+<td>path</td>
+<td>String</td>
+<td>The full path of the location on disk where the <em>DropZone</em> is located. Useful for passing to external scripts that may need to manipulate files in the <em>DropZone</em>.</td>
+</tr>
+<tr>
+<td>files</td>
+<td>Array</td>
+<td>An Array of <em>DropZone Objects</em>, each one of which represents a file in the <em>DropZone</em>. The array is keyed by the full path name of the file.</td>
+</tr>
+</tbody>
+</table>
+<p>The following methods can be called on the <em>DropZone</em> object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Method</strong></th>
+<th><strong>Return Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>find(pattern)</td>
+<td>Array</td>
+<td>Returns an Array of <em>DropZone Object</em>, each one of which represents a file in the <em>DropZone</em>. The Array is restricted to files whose file name matches the specified pattern. The array is keyed by the full path name of the file.</td>
+</tr>
+<tr>
+<td>dir()</td>
+<td>String</td>
+<td>The full path of the location on disk where the <em>DropZone</em> is located. Equivalent to the path attribute.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dropzone-file">DropZone File</h2>
+<p>The <em>DropZone File Object</em> represents a file in the <em>DropZone</em>. It can be retrieved from the <em>DropZone</em> object via the files property or the find method. Both of these calls return an array of <em>DropZone File Objects</em>, keyed on the filename. You can also call dir() on a <em>DropZone File Object</em> that represents a zipfile to get an array of <em>DropZone File Objects</em> representing the zipfile content.</p>
+<p>The following properties can be accessed for a <em>DropZone File Object</em>:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dzpath</td>
+<td>String</td>
+<td>The relative path of the file in the <em>DropZone</em>.</td>
+</tr>
+<tr>
+<td>repopath</td>
+<td>String</td>
+<td>The relative path of the file as located in the Repository (this path is relative to the base directory of the repository).</td>
+</tr>
+<tr>
+<td>size</td>
+<td>Integer</td>
+<td>The size of the file in bytes.</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>Date</td>
+<td>The creation time of the file.</td>
+</tr>
+<tr>
+<td>mtime</td>
+<td>Date</td>
+<td>The modified time of the file.</td>
+</tr>
+</tbody>
+</table>
+<p>The following methods can be called on the _DropZone_File object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Method</strong></th>
+<th><strong>Return Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delete()</td>
+<td>Integer</td>
+<td>Removes the file represented by the <em>DropZone File Object</em> from the <em>DropZone</em>. After this operation the file will no longer be transferred to the target server in any subsequent transfer operation. Returns 1 (true) if the file was successfully removed, 0 otherwise.</td>
+</tr>
+<tr>
+<td>dir()</td>
+<td>Array</td>
+<td>If the <em>DropZone File Object</em> refers to a zipfile (including web archive files such as WAR, JAR, EAR) then dir() will return an array of <em>DropZone File Objects</em> which represent the content of the zipfile. The array is keyed by the filename and can be used as input to the zipget and zipdel statements.</td>
+</tr>
+</tbody>
+</table>
+<p>NOTE: See also the description for zipadd, zipget and zipdel.</p>
+<h1 id="environment-object">Environment Object</h1>
+<p>The <em>Environment Object</em> represents a deployment target <em>Environment</em>. During a deployment, there is always an <em>Environment  Object</em> on the stack representing the current deployment target <em>Environment</em>. This can be referenced by $<em>Environment</em>. An <em>Environment Object</em> can also be retrieved using the <em>Get Environment Function</em>.</p>
+<p>The following properties can be accessed for an <em>Environment</em> object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td><em>Environment</em> id, as used in the database.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td><em>Environment</em> name.</td>
+</tr>
+<tr>
+<td>fqdomain</td>
+<td>String</td>
+<td>Fully qualified domain name.</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>String</td>
+<td>Summary text.</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>Object</td>
+<td>Domain in which the <em>Environment</em> is contained.</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>Object</td>
+<td>User or UserGroup that owns the <em>Environment.</em></td>
+</tr>
+<tr>
+<td>basedir</td>
+<td>String</td>
+<td>Base directory for deployments.</td>
+</tr>
+<tr>
+<td><em>Endpoints</em></td>
+<td>Array</td>
+<td>Array of <em>Endpoint</em> objects keyed by name.</td>
+</tr>
+<tr>
+<td><em>Applications</em></td>
+<td>Array</td>
+<td>Array of <em>Application</em> Objects (<em>Application_s present in this_Environment</em>).</td>
+</tr>
+<tr>
+<td>creator</td>
+<td>User</td>
+<td>User Object representing the user who created this <em>Environment</em>.</td>
+</tr>
+<tr>
+<td>modifier</td>
+<td>User</td>
+<td>User Object representing the user who last modified this <em>Environment</em>.</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the <em>Environment</em> was created.</td>
+</tr>
+<tr>
+<td>mtime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the <em>Environment</em> was last modified.</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>Object</td>
+<td>Parent domain.</td>
+</tr>
+</tbody>
+</table>
+<p>The following methods can be called on the <em>Environment</em> object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Method</strong></th>
+<th><strong>Return Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getatt(attname)</td>
+<td>String</td>
+<td>Returns the value of the specified attribute held against the <em>Environment</em>. Parameter is the attribute name.</td>
+</tr>
+<tr>
+<td>deptime(<em>Application</em>)</td>
+<td>Date</td>
+<td>Returns a Date object representing the last time the specified <em>Application</em> was deployed to the <em>Environment</em>. Returns null if the specified <em>Application</em> is not currently on the <em>Endpoint</em>.</td>
+</tr>
+</tbody>
+</table>
+<p>Note, that attributes such as <em>owner</em> and <em>parent</em> return other <em>Objects</em>. These objects have their own attributes. So, for example, one can get the owner name of an <em>Environment</em> by writing:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">owner</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Environment_</span><span style="color:#000;font-weight:bold">.owner</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">owner</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>or, more simply:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Environment_</span><span style="color:#000;font-weight:bold">.owner.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>Here is an example of retrieving the <em>Endpoints</em> in the <em>Environment</em>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">servers</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Environment_</span><span style="color:#000;font-weight:bold">.servers</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>iterate<span style="color:#ce5c00;font-weight:bold">(</span>s: <span style="color:#000">$servers</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;server is </span><span style="color:#4e9a06">${</span><span style="color:#000">s</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;hostname is </span><span style="color:#4e9a06">${</span><span style="color:#000">s</span><span style="color:#000;font-weight:bold">.hostname</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h1 id="endpoint-object">Endpoint Object</h1>
+<p>The <em>Endpoint</em> (<em>server, container, VM/Cloud Image</em>) object represents where a deployment will be sent. An <em>Endpoint</em> object can be retrieved by accessing the servers array from an <em>Environment</em> or more typically by running a psloop. This iterates through the current <em>Endpoint</em> list, pushing an <em>Endpoint</em> object onto the stack each time through the loop. This <em>Endpoint</em> object can be referenced by $server.</p>
+<p>The following properties can be accessed for an <em>Endpoint</em> object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td><em>Endpoint</em> id, as used in the database.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td><em>Endpoints</em> name.</td>
+</tr>
+<tr>
+<td>fqdomain</td>
+<td>String</td>
+<td>Fully qualified <em>Domain</em> name.</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>String</td>
+<td>Summary text.</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>Object</td>
+<td><em>Domain</em> in which the <em>Endpoint</em> is contained.</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>Object</td>
+<td>User or UserGroup that owns the <em>Endpoint.</em></td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>String</td>
+<td>Hostname (if set) or name otherwise.</td>
+</tr>
+<tr>
+<td>basedir</td>
+<td>String</td>
+<td>Base Directory for Deployments.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td><em>Endpoint</em> Type, ie: windows, unix, cluster, etc.</td>
+</tr>
+<tr>
+<td>credential</td>
+<td>Object</td>
+<td>The Credential Object used to access this <em>Endpoint</em>.</td>
+</tr>
+<tr>
+<td><em>Components</em></td>
+<td>Array</td>
+<td>An Array of <em>Component</em> Objects – the <em>Components currently installed on this_Endpoint</em>.</td>
+</tr>
+<tr>
+<td>creator</td>
+<td>User</td>
+<td>User Object representing the user who created this <em>Endpoint</em>.</td>
+</tr>
+<tr>
+<td>modifier</td>
+<td>User</td>
+<td>User Object representing the user who last modified this <em>Endpoint</em>.</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the <em>Endpoint</em> was created.</td>
+</tr>
+<tr>
+<td>mtime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the <em>Endpoint</em> was last modified.</td>
+</tr>
+<tr>
+<td>attributes</td>
+<td>Array</td>
+<td>Array of Strings, keyed by Attribute Name.</td>
+</tr>
+</tbody>
+</table>
+<p>The following methods can be called on the <em>Endpoint</em> object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Method</strong></th>
+<th><strong>Return Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>append(path1,path2)</td>
+<td>String</td>
+<td>Appends path2 to path1, returning the combined path formatted according to the <em>Endpoint</em> type. See append in the previous section for more information.</td>
+</tr>
+<tr>
+<td>appendstd(path1,path2)</td>
+<td>String</td>
+<td>Appends path2 to path1, returning the combined path formatted according to the <em>Endpoint</em> type. See appendstd in the previous section for more information.</td>
+</tr>
+<tr>
+<td>basename(path)</td>
+<td>String</td>
+<td>Returns the filename <em>Component</em> of the specified path. The structure of the path is based on the <em>Endpoint</em> type.</td>
+</tr>
+<tr>
+<td>dirname(path)</td>
+<td>String</td>
+<td>Returns the directory path <em>Component</em> of the specified path. The structure of the path (and the returned String) is based on the <em>Endpoint</em> type.</td>
+</tr>
+<tr>
+<td>getatt(attname)</td>
+<td>String</td>
+<td>Returns the value of the specified attribute held against the <em>Endpoint</em>. Parameter is the attribute name.</td>
+</tr>
+<tr>
+<td>deptime(<em>Component</em>)</td>
+<td>Date</td>
+<td>Returns a Date object representing the last time the specified <em>Component</em> was deployed to the <em>Endpoint</em>. Returns null if the <em>Component</em> is not currently on the <em>Endpoint</em>.</td>
+</tr>
+</tbody>
+</table>
+<p>Note, that the <em>owner</em> attribute returns an <em>Object</em>. Such objects have their own attributes.</p>
+<p>So, for example, one can get the owner name of an <em>Endpoint</em> by writing:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">owner</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">server</span><span style="color:#000;font-weight:bold">.owner</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">owner</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>or, more simply:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">server</span><span style="color:#000;font-weight:bold">.owner.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><h1 id="user-object">User Object</h1>
+<p>The <em>User object</em> represents a user in <em>DMScript</em>. <em>User objects</em> can be retrieved as the owner from other objects (such as <em>Endpoints</em>, <em>Environments</em>, <em>Applications</em> etc.). They can also be returned from a <em>getuser</em> call.</p>
+<p>The following properties can be accessed on the User object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Return Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>User id, as used in the database.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>User Name.</td>
+</tr>
+<tr>
+<td>kind</td>
+<td>String</td>
+<td>Returns &ldquo;user&rdquo;. Used to differentiate between users and groups where retrieving an owner object.</td>
+</tr>
+<tr>
+<td>fqdomain</td>
+<td>String</td>
+<td>Fully qualified domain name.</td>
+</tr>
+<tr>
+<td>realname</td>
+<td>String</td>
+<td>The User's full name.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>The User's email address.</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>String</td>
+<td>The User's telephone number.</td>
+</tr>
+<tr>
+<td>groups</td>
+<td>Array</td>
+<td>Array of UserGroup Objects – the UserGroups to which this user belongs.</td>
+</tr>
+<tr>
+<td>lastlogin</td>
+<td>Date</td>
+<td>The date/time the user last logged into DeployHub.</td>
+</tr>
+<tr>
+<td>creator</td>
+<td>User</td>
+<td>User Object representing the user who created this user.</td>
+</tr>
+<tr>
+<td>modifier</td>
+<td>User</td>
+<td>User Object representing the user who last modified this user.</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the user was created.</td>
+</tr>
+<tr>
+<td>mtime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the user was last modified.</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>Object</td>
+<td>User or UserGroup that owns the User</td>
+</tr>
+</tbody>
+</table>
+<h1 id="usergroup-object">UserGroup Object</h1>
+<p>The <em>UserGroup object</em> represents a UserGroup in <em>DMScript</em>. UserGroup objects can be retrieved as the owner from other objects (such as <em>Endpoints</em>, <em>Environments</em>, <em>Applications</em> etc.). They can also be returned from a getusergroup call or from a <em>User</em> object (as a list of groups to which the user belongs).</p>
+<p>The following properties can be accessed on the UserGroup object:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Return Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td><em>UserGroup</em> id, as used in the database.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td><em>UserGroup</em> Name.</td>
+</tr>
+<tr>
+<td>kind</td>
+<td>String</td>
+<td>Returns &ldquo;group&rdquo;. Used to differentiate between users and groups where retrieving an owner object.</td>
+</tr>
+<tr>
+<td>fqdomain</td>
+<td>String</td>
+<td>Fully qualified <em>Domain</em> name.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>The <em>UserGroup&rsquo;s</em> email address.</td>
+</tr>
+<tr>
+<td>creator</td>
+<td>User</td>
+<td>User Object representing the user who created this UserGroup.</td>
+</tr>
+<tr>
+<td>modifier</td>
+<td>User</td>
+<td>User Object representing the user who last modified this UserGroup.</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the UserGroup was created.</td>
+</tr>
+<tr>
+<td>mtime</td>
+<td>Date</td>
+<td>Date Object representing the date/time the UserGroup was last modified.</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>Object</td>
+<td>User or UserGroup that owns the UserGroup.</td>
+</tr>
+</tbody>
+</table>
+
+	<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/DeployHubProject/DeployHub-Docs/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/DeployHubProject/DeployHub-Docs/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'page_helpful', {
+      'event_category': 'Helpful',
+      'event_label': window.location.pathname,
+      'value': value
+    });
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback( 100 );
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+<br />
+<div class="text-muted mt-5 pt-3 border-top">
+  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+</div>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Twitter" aria-label="Twitter">
+    <a target="_blank" rel="noopener" href="https://twitter.com/@deployhubproj" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Facebook" aria-label="Facebook">
+    <a target="_blank" rel="noopener" href="https://www.facebook.com/groups/DeployHubProject/?ref=bookmarks" aria-label="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="LinkedIn" aria-label="LinkedIn">
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/deployhubproj/" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="YouTube" aria-label="YouTube">
+    <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UC7jomcQ2D4VgjGV2ePtKWfA" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/DeployHubProject/DeployHub-Pro" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
+        <span>&copy; 2024 DeployHub, Inc All Rights Reserved</span>
+        <span class="ms-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></span>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <script src="/js/main.min.5f003f0f44f67457bc9ed9ed0dc55152c7f7d98fa81308468cb8b7fead157dc0.js" integrity="sha256-XwA/D0T2dFe8ntntDcVRUsf32Y&#43;oEwhGjLi3/q0VfcA=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>
