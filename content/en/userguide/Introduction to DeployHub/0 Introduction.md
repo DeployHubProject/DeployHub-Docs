@@ -18,7 +18,7 @@ DeployHub is particularly suited for a microservice architecture where hundreds 
 
 DeployHub is based on the open-source Continuous Delivery Foundation project, [Ortelius.io](https://ortelius.io)
 
-**Decoupled Environments are Complex**
+### Decoupled Environments are Complex
 
 Migrating to decoupled, cloud-native architecture breaks the way we assemble and configure software. With a decoupled implementation, we no longer build a complete software solution, or Application Version. Instead we manage many moving parts that communicate at run-time based on APIs.  The loss of the 'Application Version' disrupts the core of software delivery.  It impacts most of our standard software practices including the generation of application security level reports.  After all, everything is based on an Application Version from tracking changes request, determining differences, tracking relationships and supporting users. Without a method of tracking the logical _Application_, IT teams struggle to confirm that the software they deliver to end users is safe.
 
@@ -94,11 +94,11 @@ This agentless technology works for both cloud native and legacy architectures i
 
 ## Free Version with Optional Pro Upgrade
 
-**DeployHub Team**
+### DeployHub Team
 
 Our free version is based upon the [Ortleius](https://www.Ortelius.io/) open source project. DeployHub Team can be used from the hosted site or installed on premise. It is a strategic and fully open source supply chain catalog that integrates with your DevOps tools. It supports unlimited endpoints, versions, deployments and users. Sign-up at [deployhub.com](https://www.deployhub.com/microservice-dashboard/). This version does not include the agentless deployment engine or Group access controls.
 
-**DeployHub Pro**
+### DeployHub Pro
 
 For additional security features, agentless deployments and support, DeployHub Pro includes extended Users and Group access controls as well as more granular _Domains_.
 

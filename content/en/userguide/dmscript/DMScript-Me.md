@@ -6,25 +6,27 @@ description: >
   Get the User Object based on the logged in User. 
 ---
 
+## me()
+
 me returns a _User Object_ representing the current logged in user.
 
-**Usage:**
+### Usage
 
 me()
 
-**Returns:**
+### Returns
 
 User Object
 
-**Examples:**
+### Examples
 
-~~~
+```bash
 set me = me();
 
 echo "Hello ${me.name}";
-~~~
+```
 
-**See Also:**
+### See Also
 
 User()
 UserGroup()

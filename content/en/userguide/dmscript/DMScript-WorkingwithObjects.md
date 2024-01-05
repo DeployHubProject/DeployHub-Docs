@@ -6,6 +6,8 @@ description: >
   Working with Objects using DMScript.
 ---
 
+## DMScript
+
 _DMScript_ is an object-orientated scripting language. As such, it understands each object in the DeployHub model. You can access each object either by selecting it off the stack (e.g.: $_Environment_), by retrieving a reference to the object from some other object, or by calling a built-in _Function_ to retrieve it. Each object has accessible properties. Some objects also have methods that can be called.
 
 The following is a list of the objects that you can reference in _DMScript_.
@@ -24,7 +26,7 @@ The following is a list of the objects that you can reference in _DMScript_.
 - User
 - UserGroup
 
-## Attributes
+### Attributes
 
 Attributes set against DeployHub objects are accessible as variables in _DMScript_.
 
@@ -32,7 +34,7 @@ For example, suppose QUEUE\_NAME is queue1 in "Test _Environment_ A" and queue2 
 
 You do not need to use any specific syntax to access an Object variable. Whenever a variable is accessed, _DMScript_ will navigate up the _Stack_, looking for the first scope in which the variable is declared. When a variable with a matching name is found, the value at that point is returned. This means that variable values can be overwritten with other values declared higher in the stack. See the high-level section named The Stack for further discussion on this.
 
-# Application Object
+### Application Object
 
 The _Application_ object represents either a Base _Application_, an _Application Version,_ or a Release. In **DeployHub Pro** there is always an _Application_ on the stack representing the _Application_/_Release_ being deployed referenced by $_Application_. You can also retrieve an _Application_ using the get_Application__Function_ or push an _Application_ onto the Stack via using _Application_.
 
@@ -138,7 +140,7 @@ echo "Component ${c.name} (id ${c.id})";
 }
 ```
 
-# Change Request Object
+### Change Request Object
 
 The _Change Request_ object represents a change request record associated with either a _Component_ or an _Application_. Arrays of _Change Request_ objects are returned by accessing the requests property of an _Application_ or _Component_ object or the requests() method of an _Application_.
 
@@ -151,9 +153,7 @@ The following properties can be accessed for a _Change Request_ object:
 | api\_url  | String | A URL which - if passed to restful\_get - will return an array containing the full details of the change request from the external change tracking system. Useful for getting more information than the id / description / status combination which is stored in DeployHub. |
 | html\_url | String | A URL which will direct a browser to the page describing the change request in the external change tracking system.                                                                                                                                                         |
 
-# The Component and Component Item Objects
-
-## Component Object
+### Component Object
 
 The _Component_ object represents either a _Base Component_ or a _Component_ Version. When deploying an _Application_, _Components_ are pushed onto the stack after each _Endpoint_. They can also be pushed onto the stack by using a comploop, retrieved from an _Application_ by using ${_Application_._Components_} or retrieved by calling _get_Component_.
 
@@ -181,19 +181,21 @@ The following properties can be accessed for a _Component_ object:
 
 Attributes such as _owner_ and _parent_ return _Objects_. These objects have their own attributes. So, for example, one can get the owner name of a _Component_ by writing:
 
-**Examples:**
+#### Component Object Example
 
 ```bash
 set owner = ${_Component_.owner};
 
 echo ${owner.name};
+```
 
 or, more simply:
 
+```bash
 echo ${_Component_.owner.name};
 ```
 
-## Component Item
+### Component Item
 
 The _Component Item_ object represents a _Component_ item within a _Component_. Access to a _Component_ item is only possible by retrieving the array of _Component_ Item objects from the _Component_ Object.
 
@@ -211,11 +213,11 @@ The following properties can be accessed for a _Component_ item object:
 | rollback     | Boolean  | Whether this _Component_ Item should be deployed during a roll back operation.    |
 | properties   | Array    | An array of Strings representing the values for the Repository Attributes         |
 
-**Example:**
+#### Component Item Example
 
-```bash
 Iterate through the _Component_ items for a _Component_:
 
+```bash
 iterate(ci: ${Component.items}) {
 
 echo "name=${ci.name}"; // Component Item Name
@@ -241,7 +243,7 @@ echo "$p = ${props[$p]}"; // to the Repository
 }
 ```
 
-# Credentials
+### Credentials
 
 The _Credential  Object_ can be accessed with the built-in getcredential_Function_but only if the user executing the _DMScript_ has read access to it.
 
@@ -268,7 +270,7 @@ The following properties can be accessed for a _Credential Object_:
 
 You can use the _Credential Object_ to access external systems in a secure and controlled manner. The user executing the _DMScript_ must have read access to the _Credential_. However, having read access does not allow the username/password to be viewed or modified using the Web UI. (The username is only displayed for the _Credential_ owner, the username and password can only be changed if the User has update access to the _Credential_).
 
-**Example**
+#### Credential Example
 
 ```bash
 set db2creds = getcredential("db2cred");
@@ -298,7 +300,7 @@ NOTE: See the description of restful\_get for more information.
 
 NOTE: If you wish to prevent the credential from being decrypted, then you ensure that the right to create _DMScript_ is only granted to power users. Otherwise, a user could create a _DMScript_ to decrypt a credential to which they only have read access.
 
-# Date Object
+### Date Object
 
 The _date object_ represents a date/time in _DMScript_. Dates can be created (with the date() or now()_Functions_) or can be retrieved from a _DropZoneFile_ object (which represents a file in the _DropZone_).
 
@@ -358,13 +360,13 @@ The to\_char() method returns a string which is identical to the passed fmt stri
 | %Z           | The timezone name or abbreviation.                                                                                                                                                                                                                                           |
 | %%           | A literal &#39;%&#39; character.                                                                                                                                                                                                                                             |
 
-### Alternate Format Modifiers
+#### Alternate Format Modifiers
 
 Some conversion specifications can be modified by preceding the conversion specifier character by the E or O modifier to indicate that an alternative format should be used. If the alternative format or specification does not exist for the current locale, the behavior will be as if the unmodified conversion specification were used. (SU) The Single UNIX Specification mentions %Ec, %EC, %Ex, %EX, %Ey, %EY, %Od, %Oe, %OH, %OI, %Om, %OM, %OS, %Ou, %OU, %OV, %Ow, %OW, %Oy, where the effect of the O modifier is to use alternative numeric symbols (say, roman numerals), and that of the E modifier is to use a locale-dependent alternative representation.
 
 NOTE: The date is formatted by to\_char using the C _Function_strftime.
 
-# Domain Object
+### Domain Object
 
 The _Domain_ object represents a domain in _DMScript_. Domain objects can be retrieved from other objects (such as _Endpoints_, _Environments_, _Applications_ etc). The calling user's home domain can be retrieved via ${me.domain}
 
@@ -387,9 +389,9 @@ The following properties can be accessed on the _Domain_ object:
 | mtime          | Date            | Date Object representing the date/time the domain was last modified.  |
 | owner          | Object          | User or UserGroup that owns the Domain.                               |
 
-# Dropzone and DropZone File Object
+### Dropzone and DropZone File Object
 
-## DropZone
+#### DropZone
 
 The _DropZone Object_ represents a _DropZone_. A _DropZone_ is an area on disk on the DeployHub Server where deployment artifacts are stored and manipulated before onward transmission to the target _Endpoint_(s). A _DropZone_ is placed onto the stack during a using _DropZone_ statement – all operations within this block have access to this _DropZone_ via the _DropZone Object_. A _DropZone Object_ is also present on the stack during pre and post action processing for a _Component_. In this case, the content of the _DropZone_ are the files checked out from the repository for the associated _Component_ Items.
 
@@ -408,7 +410,7 @@ The following methods can be called on the _DropZone_ object:
 | find(pattern) | Array           | Returns an Array of _DropZone Object_, each one of which represents a file in the _DropZone_. The Array is restricted to files whose file name matches the specified pattern. The array is keyed by the full path name of the file. |
 | dir()         | String          | The full path of the location on disk where the _DropZone_ is located. Equivalent to the path attribute.                                                                                                                            |
 
-## DropZone File
+#### DropZone File
 
 The _DropZone File Object_ represents a file in the _DropZone_. It can be retrieved from the _DropZone_ object via the files property or the find method. Both of these calls return an array of _DropZone File Objects_, keyed on the filename. You can also call dir() on a _DropZone File Object_ that represents a zipfile to get an array of _DropZone File Objects_ representing the zipfile content.
 
@@ -431,7 +433,7 @@ The following methods can be called on the _DropZone_File object:
 
 NOTE: See also the description for zipadd, zipget and zipdel.
 
-# Environment Object
+### Environment Object
 
 The _Environment Object_ represents a deployment target _Environment_. During a deployment, there is always an _Environment  Object_ on the stack representing the current deployment target _Environment_. This can be referenced by $_Environment_. An _Environment Object_ can also be retrieved using the _Get Environment Function_.
 
@@ -487,7 +489,7 @@ echo "hostname is ${s.hostname}";
 }
 ```
 
-# Endpoint Object
+### Endpoint Object
 
 The _Endpoint_ (_server, container, VM/Cloud Image_) object represents where a deployment will be sent. An _Endpoint_ object can be retrieved by accessing the servers array from an _Environment_ or more typically by running a psloop. This iterates through the current _Endpoint_ list, pushing an _Endpoint_ object onto the stack each time through the loop. This _Endpoint_ object can be referenced by $server.
 
@@ -537,7 +539,7 @@ or, more simply:
 echo ${server.owner.name};
 ```
 
-# User Object
+### User Object
 
 The _User object_ represents a user in _DMScript_. _User objects_ can be retrieved as the owner from other objects (such as _Endpoints_, _Environments_, _Applications_ etc.). They can also be returned from a _getuser_ call.
 
@@ -560,7 +562,7 @@ The following properties can be accessed on the User object:
 | mtime        | Date            | Date Object representing the date/time the user was last modified.                               |
 | owner        | Object          | User or UserGroup that owns the User                                                             |
 
-# UserGroup Object
+### UserGroup Object
 
 The _UserGroup object_ represents a UserGroup in _DMScript_. UserGroup objects can be retrieved as the owner from other objects (such as _Endpoints_, _Environments_, _Applications_ etc.). They can also be returned from a getusergroup call or from a _User_ object (as a list of groups to which the user belongs).
 

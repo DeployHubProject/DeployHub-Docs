@@ -23,7 +23,7 @@ The following properties can be accessed for a _Component_ item object:
 | rollback     | Boolean  | Whether this _Component_ Item should be deployed during a roll back operation.    |
 | properties   | Array    | An array of Strings representing the values for the Repository Attributes         |
 
-**Example:**
+### Example
 
 ```bash
 Iterate through the _Component_ items for a _Component_:

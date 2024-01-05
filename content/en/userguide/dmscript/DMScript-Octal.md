@@ -8,7 +8,7 @@ description: >
 
 octal converts any value that can be converted into an integer (boolean, integer, a string containing only numeric characters or a date) into an octal representation. An optional base parameter specifies the base to be used when converting the string. If no base parameter is given, base defaults to 10.
 
-**Usage:**
+### Usage
 
 value.octal([base])
 
@@ -20,11 +20,11 @@ Where:
 
 base is the base to be used when performing the conversion.
 
-**Returns:**
+### Returns
 
 String.
 
-**Examples:**
+### Examples
 
 Convert a Unix file permission mask (-rwxrwxrwx) into its Octal equivalent suitable for a chmod operation.
 
@@ -48,6 +48,6 @@ perms is -rwxr-xr-x
 
 chmod 755
 
-**See Also:**
+### See Also
 
 hex(), decimal()

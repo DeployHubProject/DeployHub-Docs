@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD041 -->
 ## Deployment Tasks
 
 Task are used for executing deployments, managing approvals, or staging a deployment. Tasks can be assigned to any _Domain_. However, they are most commonly associated to _Project Domains_ and _Life Cycle Domains_. You can assign a Task at a higher _Domain_ level allowing any child _Domains_ to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your _Subdomains_. However, this means that a Catalog _Domain_ may include Tasks that it cannot use.
@@ -8,7 +9,7 @@ The following Tasks are available as default Tasks, but you can create any type 
 - Deploy Version to _Environment_
 - Manually Trigger _Action_ to be executed
 
-**DeployHub Pro**:
+### DeployHub Pro
 
 DeployHub Pro includes a ["smart" Calendar](/userguide/profeatures/calendar/).  The following Task are used to interact with the DeployHub Smart Calendar for Requesting and Approving deployments.
 
@@ -23,7 +24,7 @@ Once you create a Task, it is recommended that you rename that Task to more clos
 
 Below is a description of all Tasks and their detailed information.
 
- **Move Version to the Next or Previous Pipeline State**
+### Move Version to the Next or Previous Pipeline State
 
 Moves an _Application_ or _Release_ version from one Pipeline state (Life Cycle _Subdomain_) to another. This can be used as a promotion or a demotion of an _Application_ or _Release_ version between Life Cycle states. When the Task is defined, the Life Cycle _Subdomain_ has to be specified as part of the Task definition. The Approval Task must be accepted before the Move Version is to succeed.
 
@@ -39,7 +40,7 @@ Moves an _Application_ or _Release_ version from one Pipeline state (Life Cycle 
 | **Success _Notify Template_** | The _Notify Template_ emailed on a successful move. You need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/). |
 | **Failure _Notify Template_** | The _Notify Template_ emailed on a failed move. You need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).     |
 
-**Deploy Version to _Environment_**
+### Deploy Version to _Environment_
 
 Deploys an _Application_ or _Release_ version to an _Environment_. Select the target _Environment_ via a drop-down list.
 
@@ -52,7 +53,7 @@ Deploys an _Application_ or _Release_ version to an _Environment_. Select the ta
 | **Post-Action**               | Change the default behavior by assigning a custom _Action_ to execute as a Post-processing step. |
 | **Available in _Subdomains_** | If selected, all _Subdomains_ will have access to this Task.                                     |
 
-**Manually Trigger _Action_ to be executed**
+### Manually Trigger _Action_ to be executed
 
 Runs a stand-alone _Action_. For example, if you need to interrupt a deployment process, this Task allows you to execute the steps manually. The manually triggered _Action_ will be placed in the "To do" list of the _User_ or _Group_ that executed the Deploy Task.
 
@@ -68,7 +69,7 @@ Runs a stand-alone _Action_. For example, if you need to interrupt a deployment 
 | **Success _Notify Template_**         | The _Notify Template_ that will be emailed on a successful _Action_. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/). |
 | **Failure _Notify Template_**         | The _Notify Template_ that will be emailed on a failed _Action_. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).     |
 
-**Approve Version for Move to Next Pipeline State**
+### Approve Version for Move to Next Pipeline State
 
 Approves the _Application_ or _Release_ version so that it can be moved to a specified state in the pipeline (Life Cycle _Subdomain_). This works in conjunction with the Move Version Task. When the Approve Task is defined, the Target _Domain_ has to be specified. When the Approve Task is executed, the selected _Application_ or _Release_ version can either be Approved or Rejected. Only when the an _Application_ or _Release_ version is "approved" can it be "Moved" or "Deployed".
 
@@ -86,7 +87,7 @@ Note: When an Approve Task has been defined for a _Domain_, it will force the us
 | **Approval _Notify Template_** | The _Notify Template_ that will be emailed on approval. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).  |
 | **Rejected _Notify Template_** | The _Notify Template_ that will be emailed on rejection. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/). |
 
-**Request Calendar Entry for Deployment to an _Environment_**
+### Request Calendar Entry for Deployment to an _Environment_
 
 DeployHub Pro feature. Sends a request from a _User_ to add a time slot to the calendar for a deployment. The request is sent to _Group_ who has the authority to manage a particular _Environment's_ Calendar. When the Request Task is defined it is linked to the task to be requested. When the Request Task is executed an entry is placed into the "To Do" list of all the _Users_ who are members of the _Group_ with the calendar access. The Request Task can have a Request Notification Template defined which can send out a notification to the appropriate _Groups_.
 
@@ -101,7 +102,7 @@ DeployHub Pro feature. Sends a request from a _User_ to add a time slot to the c
 | **Linked Task**               | The target _Domain_ where the version will be moved.                                                                                                                                                  |
 | **Request _Notify Template_** | The _Notify Template_ emailed for the request. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/). |
 
-**Task Execute Access**
+### Task Execute Access
 
 Once a _Task_ is defined, it must be granted execute access to a _Group_ before it can be invoked. Select the _Task_ using the check box. Drag the desired  _Group_ from the _Available Groups_ column to the _Group Access_ area. _Users_ of the _Group_ can then execute the specified task.
 
@@ -113,7 +114,7 @@ Once a _Task_ is defined, it must be granted execute access to a _Group_ before 
 
 NOTE: Another way to accomplish this is to link an Approval Task to the Request Task. The User in the User Group would send the Request Task, and a User in the Admin Group would be notified. They would then run the Approve Task to allow the User in the Test Group to run the Move Task.
 
-**Additional Task Parameters**
+### Additional Task Parameters
 
 Additional parameters can be added to a Task. These additional parameters will set Global Variable at execution time. To add them, select the Task from the Task Section. Use +Add to create a new entry into the Parameters table for the selected task. It will have two columns:
 

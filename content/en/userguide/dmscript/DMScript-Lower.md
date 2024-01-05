@@ -8,7 +8,7 @@ description: >
 
 lower returns a lowercase version of the passed string.
 
-**Usage:**
+### Usage
 
 String.lower()
 
@@ -16,11 +16,11 @@ Or
 
 lower(String)
 
-**Returns:**
+### Returns
 
 String
 
-**Examples:**
+### Examples
 
 set a = "Hello There";
 
@@ -30,6 +30,6 @@ Result:
 
 hello there
 
-**See Also:**
+### See Also
 
 upper()

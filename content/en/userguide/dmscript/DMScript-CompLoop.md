@@ -11,7 +11,7 @@ _Comploop_ creates a _Component_ loop through all the _Component_s that make up 
 
 For each iteration through the loop, DeployHub pushes the _Component_ onto the stack. It also filters the current _Endpoint_ list to only include those targeted _Endpoints_. It then executes the code in the body of the loop. When the body has finished executing, the _Component_ is popped off the stack and the _Endpoint_ list is restored. On the subsequent iteration, the next _Component_ is pushed onto the stack and the _Endpoint_ list is re-filtered before the body of the loop is executed again.
 
-**Example:**
+### Example
 
 ```bash
 

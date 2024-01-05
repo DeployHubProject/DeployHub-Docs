@@ -18,9 +18,9 @@ The override values file passes the Key value definitions Helm 'upgrade' command
 
 If you would like to create a hermetic Helm Chart stored in the DeployHub database, use the following key value:
 
-~~~
+```bash
 helmcapture=Y
-~~~
+```
 
 This must be defined at any level, i.e., _Endpoint_, _Environment_, _Component_ or _Application_.
 
@@ -147,9 +147,9 @@ Create your new _Component_ from the _Component_ Dashboard. See [Defining _Compo
 
 In order to create an 'airtight' Helm deployment, DeployHub takes the generated Helm overrides file created during a Helm deployment and executes the Helm template command to find the container images that were referenced. All container image digests are captured and stored in the DeployHub database along with the Helm Chart and all key values used in a specific deployment.  To turn on this option, the following key value pair must be defined at  any level, i.e., _Endpoint_, _Environment_, _Component_ or _Application_.
 
-~~~
+```bash
 helmcapture=Y
-~~~
+```
 
 Once stored in the DeployHub database, you can retrieve the hermetic Helm Chart, key value pairs and all container digests to repeat the exact deployment utilizing Helm manually.
 
@@ -157,20 +157,20 @@ Once stored in the DeployHub database, you can retrieve the hermetic Helm Chart,
 
 To re-execute a Helm deployment manually, you will retrieve all captured data in a zip file (Helm Chart, all container digest, and key values ). To retrieve the data and generate a zip file, execute the following curl command if using the SaaS:
 
-~~~
+```bash
 curl "https://console.deployhub.com/dmadminweb/API/helmchart/<DeploymentNumber>?format=zip"-o Helmchart.zip
+```
 
 where:
 Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.
 
 Helmchart.zip is the name of the zip file you want to create.
-~~~
 
 If you are using an on premise version use the following command:
 
-~~~
-
+```bash
 curl "http://<myDeployHub>/dmadminweb/API/helmchart/<DeploymentNumber>?format=zip"-o Helmchart.zip
+```
 
 where:
 myDeployHub is your on premise DeployHub Server.
@@ -178,4 +178,3 @@ myDeployHub is your on premise DeployHub Server.
 Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.
 
 Helmchart.zip is the name of the zip file you want to create.
-~~~

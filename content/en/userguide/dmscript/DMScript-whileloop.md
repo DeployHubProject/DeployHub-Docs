@@ -6,6 +6,7 @@ description: >
  Repeatedly execute a condition. 
 ---
 
+## While
 
 The _While Loops_ condition is evaluated in the same way as if, but the body is executed repeatedly until the condition evaluates to false. Braces are mandatory. _Break_ may be used to exit the loop early.
 
@@ -49,7 +50,7 @@ for (var = expression1; expression2; var = expression3) {
  // loop-body
  }
 
-***Examples:***
+### Example
 
 ```bash
 for (n = 0; $n < 6; n = $n + 1) {

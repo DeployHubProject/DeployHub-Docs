@@ -17,7 +17,7 @@ _rename_ takes three named parameters:
 | to             | Mandatory. The new name for the file.                                                                                                                                                                                              |
 | serverspecific | Optional. A Boolean value (true/false) that indicates that the file should be renamed for each target _Endpoint_. Defaults to false. Set this parameter to true should the new name include a value associated with an _Endpoint_. |
 
-**Example:**
+### Example
 
 ```bash
 Rename a file before it's deployed:

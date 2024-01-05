@@ -1,4 +1,5 @@
-**_Event Timestamp_ Object**
+<!-- markdownlint-disable MD041 -->
+#### _Event Timestamp_ Object
 
 datetime and epoc
 

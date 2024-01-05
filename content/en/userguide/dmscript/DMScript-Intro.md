@@ -49,7 +49,7 @@ _DMScript_ has:
 If you need to do any of these things, either as part of a deployment activity or as part of an integration (for example, notifying an external system when an _Application Version_ has been moved or deployed) then use _DMScript_.
 You can customize any _Action_ using DM Script. DeployHub has _built-in Functions_ and _Procedures_ ready for you to call when you need customization. _Actions_ call _Activities_ that are _Functions_ or _Procedures_. _Function_ performs an _Activity_ and returns an _Object_. A _Procedure_ performs an _Activity_ and returns only 'success'or 'fail.'
 
-# Storing DMScripts
+## Storing DMScripts
 
 When you write your own DMScripts for _Procedures_ and _Functions_, you can set the "kind" to either "_DMScript __Procedure__ in Database_" or "_DMScript __Procedure__ in Repository_".
 
@@ -63,7 +63,7 @@ If the "kind" is "_DMScript in Repository_" then you will be asked to specify th
 
 NOTE: You can only specify the name of the file containing the _DMScript_, so the repository definition _must_ include all the other details required to locate the file in the repository. It may therefore be necessary to define a new repository specifically for _DMScript_.
 
-# Functions
+## Functions
 
 _Functions_ return a new object (such as _getApplication_ or _getcredential_), perform a conversion (such as _xmlparse_), or can make calls to external web-based APIs and return structured results (such as _soap_ or _restful\_post_). Some _Functions_ act as object _methods_. For example _length()_ can be called on a string (to return its length in characters) or on an array (to return the number of elements). In these cases, the _Function_ can be called directly from the object itself like this:
 
@@ -133,7 +133,7 @@ A _Function_ with no parameters can be called like this:
 set res = myfunc();
 ```
 
-# Procedures
+## Procedures
 
 A _Procedure_ can be defined in _DMScript_ by using the keyword _Action_ followed by the _Procedure_ name and the code that makes up the _Procedure_ in braces.
 
@@ -177,7 +177,7 @@ myaction;
 
 This is to allow _DMScript_ to differentiate between _Procedures_ and _Functions_.
 
-# DMScript Syntax
+## DMScript Syntax
 
 _DMScript_ is an object-orientated scripting language. It uses a fairly broad syntax with elements of Java, Perl, and Shell Script. Any developer should be able to become proficient in _DMScript_ fairly quickly.
 
@@ -185,7 +185,7 @@ _DMScript_ has knowledge of the DeployHub object model. Each object (_Endpoint_,
 
 This knowledge of the object model allows _DMScript_ to use fairly sophisticated operations. For example if you have an _Application Version_ object:
 
-~~~
+```text
 $app
 
 Then
@@ -201,7 +201,7 @@ is two revisions of this Version. Similarly,
 $app+1
 
 is the revision immediately after this _Version_.
-~~~
+```
 
 NOTE: this operation will not work if the version has two or more child versions (due to branching).
 

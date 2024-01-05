@@ -8,7 +8,7 @@ description: >
 
 regsub converts the value to a string and then replaces all the occurrences of the given regular expression with the specified substitute string.
 
-**Usage:**
+### Usage
 
 String.regsub(regexp,substitute)
 
@@ -22,7 +22,7 @@ regexp Is a regular expression to find in the String.
 
 substitute Is a String to replace for the located regular expression.
 
-**Returns:**
+### Returns
 
 String: The result of substituting each occurrence of the matched regular expression with the substitute string.
 
@@ -34,6 +34,6 @@ echo ${a.regsub("^.e","x")};
 
 // echoes "xllo there";
 
-**See Also:**
+### See Also
 
 substr(), length()

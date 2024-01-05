@@ -21,13 +21,13 @@ If a requested object does not have "read" permission then it cannot be accessed
 
 When specifying an Object by name you can always qualify the name by pre-pending it with the name of the _Domain_ in which it is contained. The name of the _Domain_ should be separated from the name of the object by a period.
 
-**Example:**
+### Example
 
-~~~
+```text
     GLOBAL.USA.Development.demoenv
+```
 
 This specifies that the "demoenv" Environment required can be found in the "Development" Subdomain of Domain "USA" which is a Subdomain of "GLOBAL".
-~~~
 
 ## Use the object's internal ID
 
@@ -45,36 +45,36 @@ _Do not create objects with fully numeric names - DeployHub will not be able to 
 
   First, we need to login. This operation will return a session ID. We use cURL's --cookie-jar option to store this session ID in the file C:\temp\session.txt
 
-  ~~~
+  ```bash
     curl --data "user=omadmin&pass=ompassword" --cookie-jar c:\temp\session.txt http://mac:8080/dmadminweb/API/login
-~~~
+```
 
   If the username/password combination is correct, the user is logged in and the success indication is returned. Now we can call any of the other API interfaces by specifying the same file in which we stored the session ID returned from the login call.
   
   For example, this will return a JSON array containing all the servers in our home and _Subdomains_ to which we have view access.
 
-  ~~~
+  ```bash
     curl --data "all=Y" --cookie c:\temp\session.txt http://mac:8080/dmadminweb/API/servers
-~~~
+```
 
 ## Login
 
 When issuing calls to the API, the client application must either first issue a "login" call, specifying the username and password or must specify the username and password in each individual call to the API.
 
-**REST Api Endpoint**
+### REST Api Endpoint /dmadminweb/API/login
 
 | HTTP Verb | URL                   |
 |-----------|-----------------------|
 | GET       | /dmadminweb/API/login |
 
-**Parameters**
+### Parameters for /dmadminweb/API/login
 
 | Name | Located in | Value             | Required | Schema |
 |------|------------|-------------------|----------|--------|
 | user | query      | User Id           | Yes      | string |
 | pass | query      | Password for User | Yes      | string |
 
-**Responses**
+### Response
 
 | Code | Description                                                                         | Schema                                        |
 |------|-------------------------------------------------------------------------------------|-----------------------------------------------|

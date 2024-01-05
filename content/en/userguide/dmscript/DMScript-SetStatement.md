@@ -29,7 +29,7 @@ set variable -= expression;
 set array[expression] = expression;
 ```
 
-**Examples:**
+### Examples
 
 ```bash
 **set** foo = "bar";

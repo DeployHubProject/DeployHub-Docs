@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 -->
+
 ## Built-In _Actions_
 
 Built-in _Actions_ may already support what you need. Some Built-in _Actions_ are _Functions_ or _Procedures_ that can  delete files in a DropZone, or run a PostGres script. Other Built-in _Actions_ integrate with specific DevOps tools such as Ansible, Helm, Slack or GitHub.

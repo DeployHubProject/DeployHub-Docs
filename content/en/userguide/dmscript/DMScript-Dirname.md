@@ -10,7 +10,7 @@ Returns the directory part of a full directory path, calculating the directory p
 
 _dirname_ is also a method that can be called on a _Endpoint_ object. In this case, the system type is taken from the _Endpoint_ itself.
 
-**Usage:**
+### Usage
 
 ```bash
 dirname(path [,systemtype])
@@ -24,7 +24,7 @@ Returns:
 String: The directory part of the passed path.
 ```
 
-**Example:**
+### Example
 
 ```bash
 set res = dirname("C:\temp\myfolder\myfile.txt, 'windows'");
@@ -44,6 +44,6 @@ set res = dirname('$2$DKA200:[FERDU01.TEST]vmsfile.txt', 'vms');
 //
 ```
 
-**See Also:**
+### See Also
 
 basename()

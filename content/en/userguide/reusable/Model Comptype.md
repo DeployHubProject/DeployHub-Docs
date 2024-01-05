@@ -1,4 +1,5 @@
-**Responses for Component Type**
+<!-- markdownlint-disable MD041 -->
+#### Responses for Component Type
 
 _Component_ Type used  to map _Components_ to _Endpoints_.
 

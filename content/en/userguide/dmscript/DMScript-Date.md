@@ -9,7 +9,7 @@ description: >
 
 Constructs and returns a Date Object from the given values.
 
-**Usage:**
+### Usage
 
 ```bash
 date(Year,Month,Day[,Hour[,Min[,Sec]]])
@@ -39,7 +39,7 @@ Returns:
 Date Object
 ```
 
-**Example:**
+### Example
 
 ```bash
 

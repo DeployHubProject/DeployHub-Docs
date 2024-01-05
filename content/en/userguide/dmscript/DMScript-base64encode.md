@@ -9,7 +9,7 @@ description: >
 
 _base64encode_ operates on a stream. It converts the stream content (which may contain binary data) into a base64 encoded string and returns it.
 
-**Usage:**
+### Usage
 
 Stream.base64encode()
 
@@ -17,11 +17,11 @@ or
 
 base64encode(stream)
 
-**Returns:**
+### Returns
 
 String: The base64 encoded representation of the passed stream data.
 
-**Examples:**
+### Examples
 
 ```bash
 1. _Create a string and convert it to Base64:_
@@ -70,6 +70,6 @@ set b64 = ${configzip.base64encode()};
 }
 ```
 
-**See Also:**
+### See Also
 
 base64decode()

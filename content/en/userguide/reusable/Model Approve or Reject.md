@@ -1,4 +1,6 @@
-**Approval Results**
+<!-- markdownlint-disable MD041 -->
+
+#### Approval Results
 
 | Name      | Type    | Description                         | Required |
 |-----------|---------|-------------------------------------|----------|
@@ -7,7 +9,7 @@
 | timestamp | integer | When the approval was preformed.    | No       |
 | user      | string  | Userid that did the approval.       | No       |
 
-**Rejection Results**
+#### Rejection Results
 
 | Name      | Type    | Description                          | Required |
 |-----------|---------|--------------------------------------|----------|

@@ -8,13 +8,13 @@ description: >
 
 Retrieve deployment log. This call returns a JSON object representing the specified deployment log.
 
-**REST Api Endpoint**
+## REST Api Endpoint /dmadminweb/API/log/{lognumber}
 
 | HTTP Verb | URL                             |
 |-----------|---------------------------------|
 | GET       | /dmadminweb/API/log/{lognumber} |
 
-**Parameters**
+## Parameters for /dmadminweb/API/log/{lognumber}
 
 | Name      | Located in | Description                                                                                                                                                                                                               | Required | Schema  |
 |-----------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|---------|

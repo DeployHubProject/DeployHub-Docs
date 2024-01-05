@@ -1,4 +1,5 @@
-**_Component_ Predecessor**
+<!-- markdownlint-disable MD041 -->
+#### _Component_ Predecessor
 
 Only returned for _Component Versions_. A JSON Object represents the predecessor of this _Component_.
 

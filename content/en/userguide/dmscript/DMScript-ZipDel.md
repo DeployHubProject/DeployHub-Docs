@@ -18,7 +18,7 @@ _zipdel_ takes a mandatory named parameter. Other parameters can be specified de
 
 NOTE: You can call dir() on a _DropZone_File object representing a zipfile to return an array of_DropZone_File objects that you can then pass to zipdel.
 
-**Examples:**
+### Examples
 
 ```bash
 Remove an unused library from a WAR file:

@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 -->
+
 ### Audit Trail
 
 The Audit Trail displays audit entries for any changes or deployments that impact this object. It includes all changes in the object including _User_ date and time, and deployments with unique numbers.

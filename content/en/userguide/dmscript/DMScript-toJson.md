@@ -9,7 +9,7 @@ description: >
 
 to\_json operates on an Array. It returns a String representing the contents of the array in JSON notation.
 
-**Usage:**
+### Usage
 
 _Array_.to\_json()
 
@@ -17,11 +17,11 @@ or
 
 to\_json(array)
 
-**Returns:**
+### Returns
 
 String: A representation of the array content in JSON syntax.
 
-**Example:**
+### Example
 
 ```bash
 set myarray = {
@@ -43,6 +43,6 @@ echo ${myarray.to\_json()};
 // echoes {"one":"val one","two":{"x":"3","y":"4"}}
 ```
 
-**See Also:**
+### See Also
 
 filter(), sum()

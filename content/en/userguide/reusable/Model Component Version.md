@@ -1,4 +1,5 @@
-**Responses for _Component Version_**
+<!-- markdownlint-disable MD041 -->
+#### Responses for _Component Version_
 
 | Name    | Type    | Description                                                    | Required |
 |---------|---------|----------------------------------------------------------------|----------|

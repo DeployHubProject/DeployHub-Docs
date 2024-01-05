@@ -53,49 +53,51 @@ See the [Docker Install Test](https://docs.docker.com/get-started/#test-docker-v
 
 The DeployHub Reverse Proxy Docker Image is found on the Redhat Quay Docker Registry. Follow the steps below to install the Reverse Proxy into your Docker installation.
 
-**Step 1 - Set your CLIENTID as environment variable**
+### Step 1 - Set your CLIENTID as environment variable
 
 Use your Client ID that you received in your "Welcome" sign up email from DeployHub. It will be a hexadecimal number such as:
 
-~~~
+```text
 Your CLIENTID is 6d961c2d-69a4-4660-8a4a-aaea11276864
-~~~
+```
 
 Run:
 
-~~~
+```bash
 export CLIENTID="Your ID"
+```
 
-For example: 
+For example:
 
+```nash
 export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
-~~~
+```
 
-**Step 2 - Pull Reverse Proxy from Redhat Quay Registry**
+### Step 2 - Pull Reverse Proxy from Redhat Quay Registry
 
 Run:
 
-~~~
+```bash
 docker pull quay.io/deployhub/deployhub-rproxy:latest
-~~~
+```
 
-**Step 3 - Find your image SHA**
+### Step 3 - Find your image SHA
 
 Run:
 
-~~~
+```bash
 docker images | grep deployhub-rproxy | grep latest
-~~~
+```
 
 Find the image SHA from the third column in the output.
 
-~~~
+```bash
 quay.io/deployhub/deployhub-rproxy      v9.0.0          0114088b0b44        6 days ago          3.32GB
-~~~
+```
 
 The SHA in the above example is 0114088b0b44.
 
-**Step 4 - Start the container for Linux and OS/X**
+### Step 4 - Start the container for Linux and OS/X
 
 Use the image SHA from Step 3 as the last parameter to the docker run.
 
@@ -103,16 +105,16 @@ Use the image SHA from Step 3 as the last parameter to the docker run.
 docker run -d --hostname `hostname` -e CLIENTID=$CLIENTID -v ~/.ssh:/keys:Z 0114088b0b44
 ```
 
-**Step 5 - Access DeployHub from your browser**
+### Step 5 - Access DeployHub from your browser
 
  DeployHub is accessible through the following url:
 
-~~~
+```text
 https://console.deployhub.com/dmadminweb/Home
-~~~
+```
 
 Login using the UserID and Password you used when you Signed-up for DeployHub
 
-**Step 6 - Confirm Your Reverse Proxy is Running**
+### Step 6 - Confirm Your Reverse Proxy is Running
 
 In the upper right hand corner you will see a message that should say "2 out of 2 Reverse Proxy Running."  There is a default proxy used to deploy into the DeployHub environment for the Hipster Store Tutorial.

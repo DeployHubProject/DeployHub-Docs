@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 -->
+
 ## Git _Repository_ Details
 
 You can pull files from a Git Repository to be used by your _Components_.  The following details are required for defining your Git Repository connection.

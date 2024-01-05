@@ -1,4 +1,6 @@
-**Responses for _Application_ Predecessor**
+<!-- markdownlint-disable MD041 -->
+
+#### Responses for _Application_ Predecessor
 
 Only returned for _Application Versions_. A JSON Object represents the predecessor of this _Application_.
 

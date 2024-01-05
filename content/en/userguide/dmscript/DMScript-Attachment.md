@@ -6,6 +6,7 @@ description: >
   Add an attachement to your email via SMTP Notifiers.
 ---
 
+## Attachments
 
 An _attachment_ statement can only be included in a notify block. It is used to add an attachment into an outgoing email (via SMTP notifiers). It allows much finer control over the attachment content than that provided by the attachment parameter to the notify statement.
 
@@ -19,7 +20,7 @@ _attachment_ takes a number of named parameters:
 
 _attachment_ can optionally open a code block. If body is not specified then the content of the attachment is taken from the output created by this code block.
 
-**Example**
+### Example 1
 
 ```bash
  Checkout a file and include it as an attachment in an email:
@@ -56,7 +57,7 @@ attachment(name: "myfile.txt", body: $myfile);
 
 ```
 
-**Example**
+### Example 2
 
 ```bash
 Create an attachment with a script and include it in an email:
@@ -84,7 +85,7 @@ testaction(arg1: 'hello', arg2: 'world');
 }
 ```
 
-**Example:**
+### Example 3
 
 ```bash
 Send an email containing the Change Requests associated with the Application.

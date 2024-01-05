@@ -1,4 +1,6 @@
-**_Application Version_ Results Full Detail**
+<!-- markdownlint-disable MD041 -->
+
+#### _Application Version_ Results Full Detail
 
 | Name                 | Type                                   | Description                                                                                                                                       | Required |
 |----------------------|----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|----------|

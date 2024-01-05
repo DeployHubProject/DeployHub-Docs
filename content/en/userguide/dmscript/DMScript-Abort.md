@@ -12,9 +12,9 @@ msg: The message to print on abort. If msg is not specified, the msg defaults to
 
 It can be caught with a try/catch block so you can break out of a block of code whilst still allowing the script to execute.
 
-**Example:**
+### Example
 
-```
+```javascript
 abort(msg: "Something went wrong");
 
 This will end the script with the message "Something went wrong".

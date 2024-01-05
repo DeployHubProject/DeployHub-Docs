@@ -6,6 +6,8 @@ description: >
    Execute each statement within a block simultaneously.
 ---
 
+## Parallel
+
 _Parallel_ executes each statement within the block simultaneously. Waits for all the statements started as part of this parallel block to finish before continuing.
 
 ```bash
@@ -15,7 +17,7 @@ parallel {
  }
 ```
 
-**Example**
+### Example
 
 In this example, action1 and action2 are executed simultaneously.
 

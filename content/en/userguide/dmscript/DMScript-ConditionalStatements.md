@@ -6,9 +6,11 @@ description: >
   Use Conditional Expressions to evaluate true or false. 
 ---
 
+## Conditional Expressions
+
 Use the _Conditional Expressions_ "if" and "else" as a general expression evaluator to see if it equates to true (non-zero) or false (zero). If the expression equates to true, then the block associated with the "if" is executed. If the expression equates to false, then the block associated with the "else" is executed. The "else" part of the expression is optional.
 
-**Example:**
+### Example 1
 
 ```bash
 set a=10;
@@ -51,7 +53,7 @@ _If_ can also be used to filter the current _Endpoint list_. For example, an _En
 
 When using an _if_ expression in this way, both the _then_ and _else_ parts can be executed with different server sets in each block.
 
-***Example:***
+### Example 2
 
 ```bash
 if ($HAS\_MY\_SERVICE = "Y") {

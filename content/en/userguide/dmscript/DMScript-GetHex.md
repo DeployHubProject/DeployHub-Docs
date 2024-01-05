@@ -8,7 +8,7 @@ description: >
 
 hex converts any value that can be converted into an integer (boolean, integer, a string containing only numeric characters or a date) into a lowercase hexadecimal representation. An optional base parameter specifies the base to be used when converting the string. If no base parameter is given, base defaults to 10.
 
-**Usage:**
+### Usage
 
 value.hex([base])
 
@@ -20,11 +20,11 @@ Where:
 
 base is the base to be used when performing the conversion.
 
-**Returns:**
+### Returns
 
 String.
 
-**Examples:**
+### Examples
 
 set a = 255;
 
@@ -38,6 +38,6 @@ ff which is 255 (base 10) in hexadecimal notation
 
 ad which is 255 (base 8) = 173 decimal which is "ad" in hexadecimal notation.
 
-**See Also:**
+### See Also
 
 octal, decimal

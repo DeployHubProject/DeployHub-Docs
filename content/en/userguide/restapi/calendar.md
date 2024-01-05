@@ -8,13 +8,13 @@ description: >
 
 Retrieves a calendar event for an _Environment_. This call returns a JSON object representing the events in the _Environment_ calendar. Events can be filtered based on the _Environment_ to which the calendar belongs, the _Application_ associated with the event, a date/time range or a combination of all of these.
 
-**REST Api Endpoint**
+## REST Api Endpoint /dmadminweb/API/calendar
 
 | HTTP Verb | URL                      |
 |-----------|--------------------------|
 | GET       | /dmadminweb/API/calendar |
 
-**Parameters**
+## Parameters for /dmadminweb/API/calendar
 
 | Name      | Located in | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Required | Schema |
 |-----------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|--------|

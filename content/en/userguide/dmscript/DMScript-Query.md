@@ -21,7 +21,7 @@ The parameters are:
 | searchbase | Optional. LDAP _Data Sources_ only: The starting point of the search in the LDAP hierarchy.                                                                                                                       |
 | sql        | Optional. ODBC _Data Sources_ only: The SQL to execute against the specified _Data Source_. If the SQL is a query (SELECT) then the resulting rows are returned into the array specified by the result parameter. |
 
-**Example:**
+### Example
 
 In the following examples, assume there is a table called "customers" defined as follows:
 

@@ -51,7 +51,7 @@ When you first define your _Component_ DeployHub tracks it as the _Component Bas
 
 DeployHub uses a simple versioning number schema starting at 1 and incrementing over time, for example:
 
-```
+```text
  Myapp;1, Myapp;2.
 ```
 

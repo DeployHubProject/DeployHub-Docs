@@ -8,7 +8,7 @@ description: >
 
 _soap_ is used to make a call to an external soap-based API. It takes two mandatory parameters: the URL to which the message should be sent and string containing the XML message body. There are three optional parameters which allow for the SOAP action to be specified, for cookies to be passed (or received if the cookie parameter is a string) and for a credential object to be passed for basic authentication.
 
-**Usage:**
+### Usage
 
 soap(url,payload[,soapaction[,cookiejar[,credential]]])
 
@@ -20,11 +20,12 @@ soap(url,payload[,soapaction[,cookiejar[,credential]]])
 | cookiejar  | Optional. If specified this is an array of name/value pairs representing the cookies to be set in the request. |
 | credential | Optional. If specified, this is a credential object used for basic authentication.                             |
 
-**Returns:**
+### Returns
 
 Array: An associate array which is a decoded version of the XML reply from the SOAP call. See xmlparse above for more information on the rules employed to do this.
 
-**Example:**
+### Example
+
 Call an external SOAP service to list cities in a specified country:
 
 ```bash
@@ -140,6 +141,6 @@ echo "City=${jsonvals.NewDataSet.Table[$i].City}";
 }
 ```
 
-**See Also:**
+### See Also
 
 restful\_get(), restful\_post()

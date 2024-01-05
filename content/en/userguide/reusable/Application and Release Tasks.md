@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 -->
+
 ## Task
 
 Tasks define a life cycle process associated to _Applications_ and _Releases_, deploy Versions, and make calendar request. Task are defined at the _Domain_ level and cannot be overridden by any other object. All Tasks defined to the _Domain_ are available for all _Applications_ and _Releases_. The following Tasks are available:

@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 -->
+
 ## Automating Your CD Pipeline with DeployHub
 
 In order to continuously gather pipeline intelligence, DeployHub must become part of your pipeline. DeployHub integrates into your CI/CD process using the Ortelius Open-Source Command Line (CLI). The Ortelius CLI gathers supply chain data based on a single pipeline workflow at the build and deploy steps. The build step gathers Swagger, SBOM, Readme, licenses, Git data, Docker image, and other build output. The deploy step records when a release occurs, what was sent and where the objects were sent to.
@@ -145,23 +147,23 @@ dh updatecomp --rsp component.toml
 
 ### Application to Component Dependencies
 
-<img src='/userguide/images/ApplicationComponentDepVersions.png'  />
+<img src='/userguide/images/ApplicationComponentDepVersions.png' alt="Application Component Dependencies" />
 <div style="margin-left:20%"><b>1 - The Hello World Application shows one Dependency.</b></div>
 
 ### Application Level SBOM and CVE
 
-<img src='/userguide/images/ApplicationSBOMandCVE.png'  />
+<img src='/userguide/images/ApplicationSBOMandCVE.png' alt="Application Level SBOM and CVEs" />
 <div style="margin-left:20%"><b>2 - The HelloWorld Application Level SBOM and CVE results.</b><br><b><i>Note: CVE Results may vary depending on the time of the scan.</i></b></div>
 
 ### Component Ownership
 
-<img src='/userguide/images/Componetownership.png'  />
+<img src='/userguide/images/Componetownership.png'  alt="Component Ownership" />
 <div style="margin-left:20%"><b>3 - Component Ownership and Detail</b></div>
 
 ### Supply Chain “Package” Search
 
-<img src='/userguide/images/packagesearch.png'  />
+<img src='/userguide/images/packagesearch.png' alt="Package Search" />
 <div style="margin-left:20%"><b>4 - Package Search</b></div>
 <br>
-<img src='/userguide/images/PackageSerachResults.png'  />
+<img src='/userguide/images/PackageSerachResults.png' alt="Package Search Results"  />
 <div style="margin-left:20%"><b>4 - Package Search Results</b></div>

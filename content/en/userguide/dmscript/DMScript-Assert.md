@@ -33,7 +33,7 @@ _assert_ takes a number of named parameters:
 
 Any other combination of arguments is invalid and will result in an error.
 
-**Example:**
+### Example
 
 ```bash
  Use a Pre Action to an _Application_ to prevent an _Application Version_ from being deployed if it is not the latest version.

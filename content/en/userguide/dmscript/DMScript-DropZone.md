@@ -8,7 +8,7 @@ description: >
 
 Returns the physical path to the named _DropZone_ on the deployment engine _Endpoint_. This is useful if an external script is going to be called which processes files in the _DropZone_.
 
-**Usage:**
+### Usage
 
 ```bash
 DropZone (dzname)
@@ -22,7 +22,7 @@ Returns:
 String: The full path to the DropZone location.
 ```
 
-**Example:**
+### Example
 
 ```bash
 checkout(DropZone: "meta14", repository: "rep1", pattern: '\*.java');

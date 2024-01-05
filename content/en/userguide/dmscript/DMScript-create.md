@@ -6,6 +6,7 @@ description: >
   Create or Read a new file in the DropZone. 
 ---
 
+## Create
 
 _Create_ adds a new file in the current _DropZone_. If an optional stream is specified, then the file is created from the stream content.
 
@@ -17,11 +18,11 @@ _create_ requires named parameters:
 
 Once the file is created it is marked for deployment. It will be pushed to the target _Endpoint_(s) during any subsequent _transfer_ operation.
 
-**Example:**
+### Create Example
 
-```bash
 Creates a config file and push it to the target _Endpoint_s. This should be placed into a Custom Action in a _Component_:
 
+```bash
 using DropZone 'demozone1' {
 
 using stream $demostream {
@@ -56,10 +57,11 @@ _read_ takes at most two parameters:
 
 NOTE: If stream is not specified, then the file content is written into the stream used by the enclosing using stream block. If stream is not specified and read is used outside a using stream block a runtime error occurs.
 
-**Example:**
+### Example 1
+
+Checkout a file from a repository, read its content into a stream, convert it to base64, create a new file containing the base64 encoded file and transfer it to the target _Endpoint_(s). This should be placed into a _Component_ as a Custom Action.
 
 ```bash
-Checkout a file from a repository, read its content into a stream, convert it to base64, create a new file containing the base64 encoded file and transfer it to the target _Endpoint_(s). This should be placed into a _Component_ as a Custom Action.
 
 using DropZone 'dp' {
 
@@ -82,17 +84,17 @@ transfer; // transfer demo2.b64 to target
 }
 ```
 
-**Example:**
+### Example 2
 
-```bash
 Create new users in DeployHub from a file. Assume the file is constructed like this:
 
-jdoe|John Doe|jdoe@mycompany.com
+jdoe|John Doe|<jdoe@mycompany.com>
 
 bsmith|Bill [Smith|bsmith@mycompany.com](mailto:Smith%7Cbsmith@mycompany.com)
 
 The following code, when executed, will read this file and call DeployHub's own API in order to add the users to the database:
 
+```bash
 set APIURL="http://mac:8080/dmadminweb/API/new/user/";
 
 set session={"JSESSIONID": "$JSESSIONID"};
@@ -134,10 +136,9 @@ echo "${res.error}";
 }
 
 }
+```
 
-Result:
+#### Result
 
 Added user jdoe okay
-
 Added user bsmith okay
-```

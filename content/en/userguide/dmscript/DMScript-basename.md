@@ -10,7 +10,7 @@ _basename_ returns the base filename of a specified full directory path. You can
 
 _basename_ is also a method that can be called on an _Endpoint_ object. In this case, the system type is taken from the _Endpoint_ itself.
 
-**Usage:**
+### Usage
 
 basename(path [,systemtype])
 
@@ -18,11 +18,11 @@ or
 
 _Server_.basename(path)
 
-**Returns:**
+### Returns
 
 String: The filename taken from the specified path.
 
-**Example:**
+### Example
 
 ```bash
 
@@ -49,6 +49,6 @@ set res = ${unixserv.basename("/opt/myapp/mylib.so")};
 // res is mylib.so
 ```
 
-**See Also:**
+### See Also
 
 dirname()

@@ -8,7 +8,7 @@ description: >
 
 _rtrim_ turns the given value into a String and removes any trailing whitespace characters before returning the result.
 
-**Usage:**
+### Usage
 
 String.rtrim()
 
@@ -16,11 +16,11 @@ Or
 
 rtrim(String)
 
-**Returns:**
+### Returns
 
 String: The passed string with any trailing whitespace removed.
 
-**Example:**
+### Example
 
 ```bash
 set a = "Hello From ";

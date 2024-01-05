@@ -18,7 +18,7 @@ _zipadd_ takes a mandatory named parameter. Other parameters can be specified de
 | delete:   | Optional. A Boolean flag indicating whether the specified file(s) should be removed from the _DropZone_ after they have been added to the zipfile. Defaults to false. If the delete flag is specified and is set to true then the file(s) are deleted from the _DropZone_ after they have been added to the zipfile. They will no longer be deployed to the _Endpoint_ in any subsequent transfer operation.                                                                                                                                                                                                                                                                                                        |
 | stream:   | Optional. Only valid along with the file parameter. If specified, the file parameter should be a string and need not refer to a file in the _DropZone_. Instead, the file is created within the zipfile (with the name given by the file parameter) and its content is taken from the contents of the specified stream.                                                                                                                                                                                                                                                                                                                                                                                             |
 
-**Examples***
+### Examples*
 
 Zip all the files in the _DropZone_ into a zip archive and remove them from the _DropZone_. If this is done as a pre-action to a _Component_ then the _Component_ will deploy a single zipfile and not the individual files that were checked out for the _Component_ items.
 
@@ -28,7 +28,7 @@ set dzfiles = ${_DropZone_.files};
 zipadd(zipfile: "myapp.war", files: $dzfiles, delete: true);
 ```
 
-**Examples:**
+### Examples
 
 Create a "readme.txt" file and include it in the web archive to be deployed:
 
