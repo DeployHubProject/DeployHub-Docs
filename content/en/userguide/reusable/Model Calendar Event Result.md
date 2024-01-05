@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD041 -->
+
 #### Responses for Calendar Event Result
 
 | Name    | Type                                | Description                                                                                                                                                            | Required |

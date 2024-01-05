@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-length/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-15T10:20:11-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Length">
 <meta itemprop="description" content="Get the length of the associated object.  
 ">
-<meta itemprop="dateModified" content="2020-06-15T10:20:11-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="153">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Length"/>
 <meta name="twitter:description" content="Get the length of the associated object.  
@@ -449,7 +449,21 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#see-also">See Also</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -473,7 +487,7 @@
 		
 </header>
 	<p>length returns a number indicating the length of the associated object. When called with a String it returns the number of characters in the string. When called from an Array it returns the number of elements in the Array. When called with a Stream it returns the size of the Stream in bytes.</p>
-<p><strong>Usage:</strong></p>
+<h3 id="usage">Usage</h3>
 <p>String.length()</p>
 <p>Or</p>
 <p>length(String)</p>
@@ -483,9 +497,9 @@
 <p>Stream.length()</p>
 <p>Or</p>
 <p>length(Stream)</p>
-<p><strong>Returns:</strong></p>
+<h3 id="returns">Returns</h3>
 <p>Integer representing the number of characters (String), elements (Array) or bytes (Stream) in the passed object.</p>
-<p><strong>Examples:</strong></p>
+<h3 id="examples">Examples</h3>
 <p>set mystr=&ldquo;Hello There&rdquo;;</p>
 <p>echo &ldquo;String length is ${mystr.length()}&rdquo;;</p>
 <p>set list={&ldquo;a&rdquo;, &ldquo;b&rdquo;, &ldquo;c&rdquo;};</p>
@@ -505,7 +519,7 @@
 <p>INFO: Checked out demo1.zip;0</p>
 <p>file size = 36675</p>
 <p>stream size is 36675</p>
-<p><strong>See Also:</strong></p>
+<h3 id="see-also">See Also</h3>
 <p>substr(), regsub(), sum()</p>
 
 	<style>
@@ -565,7 +579,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 15, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/102cb1abc9a119dc45ffe0452c007961490d86e9">Remove extra headers in DMScript (102cb1a)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

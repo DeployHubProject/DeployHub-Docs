@@ -1,4 +1,3 @@
-<!-- markdownlint-disable MD041 -->
 
 #### _Application_ Result Object
 

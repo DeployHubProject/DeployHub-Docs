@@ -58,8 +58,8 @@
 &lt;p&gt;This information is collected when you define your &lt;em&gt;Component&lt;/em&gt; to the DeployHub catalog. You can use the DeployHub APIs to automatically update this information via your CD Pipeline once you have defined your &lt;em&gt;Component Base Version&lt;/em&gt;. When your CD engine initiates a workflow for the &lt;em&gt;Component&lt;/em&gt;, it indicates that a new version of the &lt;em&gt;Component&lt;/em&gt; is being pushed across the Pipeline causing all consuming &lt;em&gt;Applications&lt;/em&gt; to be automatically incremented to a new version number.  If a &lt;em&gt;Component&lt;/em&gt; changes, the consuming &lt;em&gt;Application&lt;/em&gt; also changes.  Both get a new version number. For more information see &lt;a href=&#34;/userguide/pipeline/2-define-your-build-engines/&#34;&gt;CD Engines&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;When you first define your &lt;em&gt;Component&lt;/em&gt; DeployHub tracks it as the &lt;em&gt;Component Base Version&lt;/em&gt;. Subsequent updates to that &lt;em&gt;Component&lt;/em&gt; creates a new &lt;em&gt;Component Version&lt;/em&gt; which represent the updates over time. A &lt;em&gt;Component Base Version&lt;/em&gt; is always the first one created, and it acts as a model for subsequent &lt;em&gt;Component Versions&lt;/em&gt;. Otherwise they are identical types of objects.&lt;/p&gt;
 &lt;p&gt;DeployHub uses a simple versioning number schema starting at 1 and incrementing over time, for example:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; Myapp;1, Myapp;2.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can use your CI/CD process to include variance in your versioning number (base name, variant, version).  See &lt;a href=&#34;/userguide/integrations/ci-cd_integrations/#_component_-versioning-schema&#34;&gt;Component Versioning Schema&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; Myapp;1, Myapp;2.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can use your CI/CD process to include variance in your versioning number (base name, variant, version).  See &lt;a href=&#34;/userguide/integrations/ci-cd_integrations/#_component_-versioning-schema&#34;&gt;Component Versioning Schema&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
@@ -117,14 +117,14 @@
 &lt;/ul&gt;
 &lt;p&gt;If you need to do any of these things, either as part of a deployment activity or as part of an integration (for example, notifying an external system when an &lt;em&gt;Application Version&lt;/em&gt; has been moved or deployed) then use &lt;em&gt;DMScript&lt;/em&gt;.
 You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has &lt;em&gt;built-in Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; ready for you to call when you need customization. &lt;em&gt;Actions&lt;/em&gt; call &lt;em&gt;Activities&lt;/em&gt; that are &lt;em&gt;Functions&lt;/em&gt; or &lt;em&gt;Procedures&lt;/em&gt;. &lt;em&gt;Function&lt;/em&gt; performs an &lt;em&gt;Activity&lt;/em&gt; and returns an &lt;em&gt;Object&lt;/em&gt;. A &lt;em&gt;Procedure&lt;/em&gt; performs an &lt;em&gt;Activity&lt;/em&gt; and returns only &amp;lsquo;success&amp;rsquo;or &amp;lsquo;fail.&amp;rsquo;&lt;/p&gt;
-&lt;h1 id=&#34;storing-dmscripts&#34;&gt;Storing DMScripts&lt;/h1&gt;
+&lt;h2 id=&#34;storing-dmscripts&#34;&gt;Storing DMScripts&lt;/h2&gt;
 &lt;p&gt;When you write your own DMScripts for &lt;em&gt;Procedures&lt;/em&gt; and &lt;em&gt;Functions&lt;/em&gt;, you can set the &amp;ldquo;kind&amp;rdquo; to either &amp;ldquo;&lt;em&gt;DMScript &lt;strong&gt;Procedure&lt;/strong&gt; in Database&lt;/em&gt;&amp;rdquo; or &amp;ldquo;&lt;em&gt;DMScript &lt;strong&gt;Procedure&lt;/strong&gt; in Repository&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;DMScript Procedure in Database&lt;/p&gt;
 &lt;p&gt;If the &amp;ldquo;kind&amp;rdquo; is &amp;ldquo;&lt;em&gt;DMScript &lt;strong&gt;Procedure&lt;/strong&gt; in Database&lt;/em&gt;&amp;rdquo; then a &amp;ldquo;Body&amp;rdquo; tab will appear. This will show the text of the &lt;em&gt;DMScript&lt;/em&gt;. Clicking the pencil icon will open a pop-up editor. This editor has syntax highlighting, search and replace options (including searching for regular expressions) and other editor &lt;em&gt;Functions&lt;/em&gt;. When the edited &lt;em&gt;DMScript&lt;/em&gt; is saved (by clicking the OK button or the save icon) a syntax check is performed automatically. If the &lt;em&gt;DMScript&lt;/em&gt; fails, then the line in error is highlighted and the dialog stays open.&lt;/p&gt;
 &lt;p&gt;DMScript in Repository&lt;/p&gt;
 &lt;p&gt;If the &amp;ldquo;kind&amp;rdquo; is &amp;ldquo;&lt;em&gt;DMScript in Repository&lt;/em&gt;&amp;rdquo; then you will be asked to specify the repository in which the &lt;em&gt;DMScript&lt;/em&gt; file is located and the name of the file containing the &lt;em&gt;DMScript&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;NOTE: You can only specify the name of the file containing the &lt;em&gt;DMScript&lt;/em&gt;, so the repository definition &lt;em&gt;must&lt;/em&gt; include all the other details required to locate the file in the repository. It may therefore be necessary to define a new repository specifically for &lt;em&gt;DMScript&lt;/em&gt;.&lt;/p&gt;
-&lt;h1 id=&#34;functions&#34;&gt;Functions&lt;/h1&gt;
+&lt;h2 id=&#34;functions&#34;&gt;Functions&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Functions&lt;/em&gt; return a new object (such as &lt;em&gt;getApplication&lt;/em&gt; or &lt;em&gt;getcredential&lt;/em&gt;), perform a conversion (such as &lt;em&gt;xmlparse&lt;/em&gt;), or can make calls to external web-based APIs and return structured results (such as &lt;em&gt;soap&lt;/em&gt; or &lt;em&gt;restful_post&lt;/em&gt;). Some &lt;em&gt;Functions&lt;/em&gt; act as object &lt;em&gt;methods&lt;/em&gt;. For example &lt;em&gt;length()&lt;/em&gt; can be called on a string (to return its length in characters) or on an array (to return the number of elements). In these cases, the &lt;em&gt;Function&lt;/em&gt; can be called directly from the object itself like this:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;str&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Hello There&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -171,7 +171,7 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;A _Function_ with no parameters can be called like this:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;res&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; myfunc&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;procedures&#34;&gt;Procedures&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;procedures&#34;&gt;Procedures&lt;/h2&gt;
 &lt;p&gt;A &lt;em&gt;Procedure&lt;/em&gt; can be defined in &lt;em&gt;DMScript&lt;/em&gt; by using the keyword &lt;em&gt;Action&lt;/em&gt; followed by the &lt;em&gt;Procedure&lt;/em&gt; name and the code that makes up the &lt;em&gt;Procedure&lt;/em&gt; in braces.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;actionmyaction
@@ -196,26 +196,26 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
 &lt;p&gt;If the action does not have any parameters, then the call should be made with no enclosing braces like this:&lt;/p&gt;
 &lt;p&gt;myaction;&lt;/p&gt;
 &lt;p&gt;This is to allow &lt;em&gt;DMScript&lt;/em&gt; to differentiate between &lt;em&gt;Procedures&lt;/em&gt; and &lt;em&gt;Functions&lt;/em&gt;.&lt;/p&gt;
-&lt;h1 id=&#34;dmscript-syntax&#34;&gt;DMScript Syntax&lt;/h1&gt;
+&lt;h2 id=&#34;dmscript-syntax&#34;&gt;DMScript Syntax&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;DMScript&lt;/em&gt; is an object-orientated scripting language. It uses a fairly broad syntax with elements of Java, Perl, and Shell Script. Any developer should be able to become proficient in &lt;em&gt;DMScript&lt;/em&gt; fairly quickly.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;DMScript&lt;/em&gt; has knowledge of the DeployHub object model. Each object (&lt;em&gt;Endpoint&lt;/em&gt;, &lt;em&gt;Environment&lt;/em&gt;, &lt;em&gt;Application&lt;/em&gt;, &lt;em&gt;Component&lt;/em&gt; etc) has a corresponding object in &lt;em&gt;DMScript&lt;/em&gt;. Thus, you can use ${&lt;em&gt;Environment&lt;/em&gt;.name} to get the current &lt;em&gt;Environment&lt;/em&gt; name (deployment target) and ${&lt;em&gt;Application&lt;/em&gt;.name} to get the name of the &lt;em&gt;Application&lt;/em&gt; being deployed. Other objects (such as &lt;em&gt;Endpoint&lt;/em&gt; and &lt;em&gt;Component&lt;/em&gt;) only become &amp;ldquo;in scope&amp;rdquo; when they are pushed onto the &lt;em&gt;Stack&lt;/em&gt; during a deployment operation.&lt;/p&gt;
 &lt;p&gt;This knowledge of the object model allows &lt;em&gt;DMScript&lt;/em&gt; to use fairly sophisticated operations. For example if you have an &lt;em&gt;Application Version&lt;/em&gt; object:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$app
-
-Then
-
-$app-1
-
-is the version immediately preceding this _Version_.
-
-$app-2
-
-is two revisions of this Version. Similarly,
-
-$app+1
-
-is the revision immediately after this _Version_.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;NOTE: this operation will not work if the version has two or more child versions (due to branching).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$app
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Then
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$app-1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;is the version immediately preceding this _Version_.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$app-2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;is two revisions of this Version. Similarly,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$app+1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;is the revision immediately after this _Version_.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;NOTE: this operation will not work if the version has two or more child versions (due to branching).&lt;/p&gt;
 &lt;h2 id=&#34;dmscript-interpreter&#34;&gt;DMScript Interpreter&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;DMScript&lt;/em&gt; is an interpreted language. It is not compiled either to machine language or to any intermediate p-code.&lt;/p&gt;
 &lt;p&gt;In DeployHub, &lt;em&gt;Procedures&lt;/em&gt; and &lt;em&gt;Functions&lt;/em&gt; can be external scripts (written in any language) which are then executed either on the local deployment engine or on the target &lt;em&gt;Endpoint&lt;/em&gt; during a deployment. You can also create &lt;em&gt;Procedures&lt;/em&gt; and &lt;em&gt;Functions&lt;/em&gt; in &lt;em&gt;DMScript&lt;/em&gt; and invoke them as part of a deployment. &lt;em&gt;DMScript&lt;/em&gt; can call other &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; and these can be written in &lt;em&gt;DMScript&lt;/em&gt; or can be external scripts written in any language.&lt;/p&gt;
@@ -702,32 +702,30 @@ is the revision immediately after this _Version_.
 &lt;p&gt;See the &lt;a href=&#34;https://docs.docker.com/get-started/#test-docker-version&#34;&gt;Docker Install Test&lt;/a&gt; instructions&lt;/p&gt;
 &lt;h2 id=&#34;installing-your-deployhub-reverse-proxy-docker-image&#34;&gt;Installing Your DeployHub Reverse Proxy Docker Image&lt;/h2&gt;
 &lt;p&gt;The DeployHub Reverse Proxy Docker Image is found on the Redhat Quay Docker Registry. Follow the steps below to install the Reverse Proxy into your Docker installation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 1 - Set your CLIENTID as environment variable&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-1---set-your-clientid-as-environment-variable&#34;&gt;Step 1 - Set your CLIENTID as environment variable&lt;/h3&gt;
 &lt;p&gt;Use your Client ID that you received in your &amp;ldquo;Welcome&amp;rdquo; sign up email from DeployHub. It will be a hexadecimal number such as:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Your CLIENTID is 6d961c2d-69a4-4660-8a4a-aaea11276864
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Run:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;export CLIENTID=&amp;#34;Your ID&amp;#34;
-
-For example: 
-
-export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Step 2 - Pull Reverse Proxy from Redhat Quay Registry&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Your CLIENTID is 6d961c2d-69a4-4660-8a4a-aaea11276864
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;CLIENTID&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Your ID&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nash&#34; data-lang=&#34;nash&#34;&gt;export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;step-2---pull-reverse-proxy-from-redhat-quay-registry&#34;&gt;Step 2 - Pull Reverse Proxy from Redhat Quay Registry&lt;/h3&gt;
 &lt;p&gt;Run:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker pull quay.io/deployhub/deployhub-rproxy:latest
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Step 3 - Find your image SHA&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker pull quay.io/deployhub/deployhub-rproxy:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-3---find-your-image-sha&#34;&gt;Step 3 - Find your image SHA&lt;/h3&gt;
 &lt;p&gt;Run:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker images | grep deployhub-rproxy | grep latest
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Find the image SHA from the third column in the output.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;quay.io/deployhub/deployhub-rproxy      v9.0.0          0114088b0b44        6 days ago          3.32GB
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The SHA in the above example is 0114088b0b44.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 4 - Start the container for Linux and OS/X&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker images &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep deployhub-rproxy &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Find the image SHA from the third column in the output.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;quay.io/deployhub/deployhub-rproxy      v9.0.0          0114088b0b44        &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt; days ago          3.32GB
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The SHA in the above example is 0114088b0b44.&lt;/p&gt;
+&lt;h3 id=&#34;step-4---start-the-container-for-linux-and-osx&#34;&gt;Step 4 - Start the container for Linux and OS/X&lt;/h3&gt;
 &lt;p&gt;Use the image SHA from Step 3 as the last parameter to the docker run.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -d --hostname &lt;span style=&#34;color:#4e9a06&#34;&gt;`&lt;/span&gt;hostname&lt;span style=&#34;color:#4e9a06&#34;&gt;`&lt;/span&gt; -e &lt;span style=&#34;color:#000&#34;&gt;CLIENTID&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$CLIENTID&lt;/span&gt; -v ~/.ssh:/keys:Z 0114088b0b44
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Step 5 - Access DeployHub from your browser&lt;/strong&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-5---access-deployhub-from-your-browser&#34;&gt;Step 5 - Access DeployHub from your browser&lt;/h3&gt;
 &lt;p&gt;DeployHub is accessible through the following url:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://console.deployhub.com/dmadminweb/Home
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Login using the UserID and Password you used when you Signed-up for DeployHub&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 6 - Confirm Your Reverse Proxy is Running&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;https://console.deployhub.com/dmadminweb/Home
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Login using the UserID and Password you used when you Signed-up for DeployHub&lt;/p&gt;
+&lt;h3 id=&#34;step-6---confirm-your-reverse-proxy-is-running&#34;&gt;Step 6 - Confirm Your Reverse Proxy is Running&lt;/h3&gt;
 &lt;p&gt;In the upper right hand corner you will see a message that should say &amp;ldquo;2 out of 2 Reverse Proxy Running.&amp;rdquo;  There is a default proxy used to deploy into the DeployHub environment for the Hipster Store Tutorial.&lt;/p&gt;
 
       </description>
@@ -874,19 +872,19 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh updatecomp --rsp component.toml 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
 &lt;h3 id=&#34;application-to-component-dependencies&#34;&gt;Application to Component Dependencies&lt;/h3&gt;
-&lt;img src=&#39;/userguide/images/ApplicationComponentDepVersions.png&#39;  /&gt;
+&lt;img src=&#39;/userguide/images/ApplicationComponentDepVersions.png&#39; alt=&#34;Application Component Dependencies&#34; /&gt;
 &lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;1 - The Hello World Application shows one Dependency.&lt;/b&gt;&lt;/div&gt;
 &lt;h3 id=&#34;application-level-sbom-and-cve&#34;&gt;Application Level SBOM and CVE&lt;/h3&gt;
-&lt;img src=&#39;/userguide/images/ApplicationSBOMandCVE.png&#39;  /&gt;
+&lt;img src=&#39;/userguide/images/ApplicationSBOMandCVE.png&#39; alt=&#34;Application Level SBOM and CVEs&#34; /&gt;
 &lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;2 - The HelloWorld Application Level SBOM and CVE results.&lt;/b&gt;&lt;br&gt;&lt;b&gt;&lt;i&gt;Note: CVE Results may vary depending on the time of the scan.&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;
 &lt;h3 id=&#34;component-ownership&#34;&gt;Component Ownership&lt;/h3&gt;
-&lt;img src=&#39;/userguide/images/Componetownership.png&#39;  /&gt;
+&lt;img src=&#39;/userguide/images/Componetownership.png&#39;  alt=&#34;Component Ownership&#34; /&gt;
 &lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;3 - Component Ownership and Detail&lt;/b&gt;&lt;/div&gt;
 &lt;h3 id=&#34;supply-chain-package-search&#34;&gt;Supply Chain “Package” Search&lt;/h3&gt;
-&lt;img src=&#39;/userguide/images/packagesearch.png&#39;  /&gt;
+&lt;img src=&#39;/userguide/images/packagesearch.png&#39; alt=&#34;Package Search&#34; /&gt;
 &lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;4 - Package Search&lt;/b&gt;&lt;/div&gt;
 &lt;br&gt;
-&lt;img src=&#39;/userguide/images/PackageSerachResults.png&#39;  /&gt;
+&lt;img src=&#39;/userguide/images/PackageSerachResults.png&#39; alt=&#34;Package Search Results&#34;  /&gt;
 &lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;4 - Package Search Results&lt;/b&gt;&lt;/div&gt;
 &lt;h2 id=&#34;set-up-deployhub-via-the-user-interface&#34;&gt;Set Up DeployHub via the User Interface&lt;/h2&gt;
 &lt;table&gt;
@@ -944,7 +942,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;p&gt;DeployHub visualizes ‘logical’ application versions in a cloud-native architecture providing a clear view of the software supply chain and their consumers. With this &lt;em&gt;Component&lt;/em&gt; level information, DeployHub can easily aggregate metadata up to the &amp;rsquo;logical&amp;rsquo; application producing application level SBOMs, CVEs, audit reports, deployment inventory and status.&lt;/p&gt;
 &lt;p&gt;DeployHub is particularly suited for a microservice architecture where hundreds of artifacts and repos are used, and a central view of the entire supply chain from a usage, security, and inventory perspective is required. When you outgrow your excel spreadsheet, its time to consider DeployHub.&lt;/p&gt;
 &lt;p&gt;DeployHub is based on the open-source Continuous Delivery Foundation project, &lt;a href=&#34;https://ortelius.io&#34;&gt;Ortelius.io&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Decoupled Environments are Complex&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;decoupled-environments-are-complex&#34;&gt;Decoupled Environments are Complex&lt;/h3&gt;
 &lt;p&gt;Migrating to decoupled, cloud-native architecture breaks the way we assemble and configure software. With a decoupled implementation, we no longer build a complete software solution, or Application Version. Instead we manage many moving parts that communicate at run-time based on APIs.  The loss of the &amp;lsquo;Application Version&amp;rsquo; disrupts the core of software delivery.  It impacts most of our standard software practices including the generation of application security level reports.  After all, everything is based on an Application Version from tracking changes request, determining differences, tracking relationships and supporting users. Without a method of tracking the logical &lt;em&gt;Application&lt;/em&gt;, IT teams struggle to confirm that the software they deliver to end users is safe.&lt;/p&gt;
 &lt;p&gt;DeployHub is not a &amp;lsquo;microservice registry&amp;rsquo; or &amp;lsquo;API Gateway.&amp;quot;  Instead, DeployHub interacts with the DevOps pipeline to automatically gather supply chain metadata. Tracking microservices and &lt;em&gt;Components&lt;/em&gt; in this way facilitates their sharing and reuse across teams. DeployHub serves as an internal market place for finding, tracking and versioning microservices and relating them to the &lt;em&gt;Applications&lt;/em&gt; that consume them. The publishing catalog is based on a &lt;em&gt;Domain&lt;/em&gt; structure to support a Domain Driven Design.&lt;/p&gt;
 &lt;h2 id=&#34;versioning---deployhubs-secret-sauce&#34;&gt;Versioning - DeployHub&amp;rsquo;s Secret Sauce&lt;/h2&gt;
@@ -1004,9 +1002,9 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;li&gt;Request Routers and Appliances&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;free-version-with-optional-pro-upgrade&#34;&gt;Free Version with Optional Pro Upgrade&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;DeployHub Team&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deployhub-team&#34;&gt;DeployHub Team&lt;/h3&gt;
 &lt;p&gt;Our free version is based upon the &lt;a href=&#34;https://www.Ortelius.io/&#34;&gt;Ortleius&lt;/a&gt; open source project. DeployHub Team can be used from the hosted site or installed on premise. It is a strategic and fully open source supply chain catalog that integrates with your DevOps tools. It supports unlimited endpoints, versions, deployments and users. Sign-up at &lt;a href=&#34;https://www.deployhub.com/microservice-dashboard/&#34;&gt;deployhub.com&lt;/a&gt;. This version does not include the agentless deployment engine or Group access controls.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;DeployHub Pro&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deployhub-pro&#34;&gt;DeployHub Pro&lt;/h3&gt;
 &lt;p&gt;For additional security features, agentless deployments and support, DeployHub Pro includes extended Users and Group access controls as well as more granular &lt;em&gt;Domains&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Unique to DeployHub Pro are &amp;ldquo;Divisional Domains.&amp;rdquo; These &lt;em&gt;Domains&lt;/em&gt; allow you to expand and model your environments based on your organizational top-down structure. It also gives you the ability to restrict microservice read/write access to only certain Groups of Users.&lt;/p&gt;
 &lt;p&gt;DeployHub Pro also provides integration to tools such as Bugzilla, GitHub Issues and Jira for tracking your complete value stream from change request to final endpoint. It also includes &amp;lsquo;smart&amp;rsquo; calendars for scheduling deployments.&lt;/p&gt;
@@ -1154,7 +1152,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;li&gt;Deploy Version to &lt;em&gt;Environment&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Manually Trigger &lt;em&gt;Action&lt;/em&gt; to be executed&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;DeployHub Pro&lt;/strong&gt;:&lt;/p&gt;
+&lt;h3 id=&#34;deployhub-pro&#34;&gt;DeployHub Pro&lt;/h3&gt;
 &lt;p&gt;DeployHub Pro includes a &lt;a href=&#34;/userguide/profeatures/calendar/&#34;&gt;&amp;ldquo;smart&amp;rdquo; Calendar&lt;/a&gt;.  The following Task are used to interact with the DeployHub Smart Calendar for Requesting and Approving deployments.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Request Calendar Entry for Deployment to an &lt;em&gt;Environment&lt;/em&gt;&lt;/li&gt;
@@ -1164,7 +1162,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;p&gt;You can add new Tasks from the &lt;em&gt;Domain&lt;/em&gt; Dashboard by navigating to the &lt;em&gt;Domain&lt;/em&gt; and interacting with the Tasks Section.  Select the +Add option from the Tasks Section and a pop-up displays all available Tasks. Selecting a Task will add a new row into the table.  Use the Task Detail Section to define the unique details of your new Task. You can update or remove a Task by using the Task Section table.  Using the checkbox, select the item and use the the Delete or Edit options.&lt;/p&gt;
 &lt;p&gt;Once you create a Task, it is recommended that you rename that Task to more closely describe its use depending on the options selected.&lt;/p&gt;
 &lt;p&gt;Below is a description of all Tasks and their detailed information.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Move Version to the Next or Previous Pipeline State&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;move-version-to-the-next-or-previous-pipeline-state&#34;&gt;Move Version to the Next or Previous Pipeline State&lt;/h3&gt;
 &lt;p&gt;Moves an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version from one Pipeline state (Life Cycle &lt;em&gt;Subdomain&lt;/em&gt;) to another. This can be used as a promotion or a demotion of an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version between Life Cycle states. When the Task is defined, the Life Cycle &lt;em&gt;Subdomain&lt;/em&gt; has to be specified as part of the Task definition. The Approval Task must be accepted before the Move Version is to succeed.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1212,7 +1210,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Deploy Version to &lt;em&gt;Environment&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deploy-version-to-_environment_&#34;&gt;Deploy Version to &lt;em&gt;Environment&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Deploys an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version to an &lt;em&gt;Environment&lt;/em&gt;. Select the target &lt;em&gt;Environment&lt;/em&gt; via a drop-down list.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1248,7 +1246,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Manually Trigger &lt;em&gt;Action&lt;/em&gt; to be executed&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;manually-trigger-_action_-to-be-executed&#34;&gt;Manually Trigger &lt;em&gt;Action&lt;/em&gt; to be executed&lt;/h3&gt;
 &lt;p&gt;Runs a stand-alone &lt;em&gt;Action&lt;/em&gt;. For example, if you need to interrupt a deployment process, this Task allows you to execute the steps manually. The manually triggered &lt;em&gt;Action&lt;/em&gt; will be placed in the &amp;ldquo;To do&amp;rdquo; list of the &lt;em&gt;User&lt;/em&gt; or &lt;em&gt;Group&lt;/em&gt; that executed the Deploy Task.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1296,7 +1294,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Approve Version for Move to Next Pipeline State&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;approve-version-for-move-to-next-pipeline-state&#34;&gt;Approve Version for Move to Next Pipeline State&lt;/h3&gt;
 &lt;p&gt;Approves the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version so that it can be moved to a specified state in the pipeline (Life Cycle &lt;em&gt;Subdomain&lt;/em&gt;). This works in conjunction with the Move Version Task. When the Approve Task is defined, the Target &lt;em&gt;Domain&lt;/em&gt; has to be specified. When the Approve Task is executed, the selected &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version can either be Approved or Rejected. Only when the an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version is &amp;ldquo;approved&amp;rdquo; can it be &amp;ldquo;Moved&amp;rdquo; or &amp;ldquo;Deployed&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Note: When an Approve Task has been defined for a &lt;em&gt;Domain&lt;/em&gt;, it will force the use of the Approve Task before a &amp;ldquo;Move&amp;rdquo; or &amp;ldquo;Deploy&amp;rdquo; Task can be executed. If a &amp;ldquo;Move&amp;rdquo; or &amp;ldquo;Deploy&amp;rdquo; Task is attempted but has not been &amp;ldquo;Approved,&amp;rdquo; an error will be displayed indicating that the Task must be Approved.&lt;/p&gt;
 &lt;table&gt;
@@ -1345,7 +1343,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Request Calendar Entry for Deployment to an &lt;em&gt;Environment&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;request-calendar-entry-for-deployment-to-an-_environment_&#34;&gt;Request Calendar Entry for Deployment to an &lt;em&gt;Environment&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;DeployHub Pro feature. Sends a request from a &lt;em&gt;User&lt;/em&gt; to add a time slot to the calendar for a deployment. The request is sent to &lt;em&gt;Group&lt;/em&gt; who has the authority to manage a particular &lt;em&gt;Environment&amp;rsquo;s&lt;/em&gt; Calendar. When the Request Task is defined it is linked to the task to be requested. When the Request Task is executed an entry is placed into the &amp;ldquo;To Do&amp;rdquo; list of all the &lt;em&gt;Users&lt;/em&gt; who are members of the &lt;em&gt;Group&lt;/em&gt; with the calendar access. The Request Task can have a Request Notification Template defined which can send out a notification to the appropriate &lt;em&gt;Groups&lt;/em&gt;.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1389,7 +1387,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Task Execute Access&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;task-execute-access&#34;&gt;Task Execute Access&lt;/h3&gt;
 &lt;p&gt;Once a &lt;em&gt;Task&lt;/em&gt; is defined, it must be granted execute access to a &lt;em&gt;Group&lt;/em&gt; before it can be invoked. Select the &lt;em&gt;Task&lt;/em&gt; using the check box. Drag the desired  &lt;em&gt;Group&lt;/em&gt; from the &lt;em&gt;Available Groups&lt;/em&gt; column to the &lt;em&gt;Group Access&lt;/em&gt; area. &lt;em&gt;Users&lt;/em&gt; of the &lt;em&gt;Group&lt;/em&gt; can then execute the specified task.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Groups&lt;/em&gt; are assigned authority on a &lt;em&gt;Task&lt;/em&gt; by &lt;em&gt;Task&lt;/em&gt; basis. It is possible for a &lt;em&gt;Domain&lt;/em&gt; to have two different &lt;em&gt;Tasks&lt;/em&gt; with the same function, one of which allows a particular &lt;em&gt;Group&lt;/em&gt; to run the &lt;em&gt;Task&lt;/em&gt;, and the other which doesn&amp;rsquo;t. This allows similar &lt;em&gt;Tasks&lt;/em&gt; to be created. They can have different characteristics assigned to them such as Pre-Actions and/or Post-Actions, Notification Templates, etc. Also different &lt;em&gt;User Groups&lt;/em&gt; can have the authority to run them.&lt;/p&gt;
 &lt;ul&gt;
@@ -1401,7 +1399,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;NOTE: Another way to accomplish this is to link an Approval Task to the Request Task. The User in the User Group would send the Request Task, and a User in the Admin Group would be notified. They would then run the Approve Task to allow the User in the Test Group to run the Move Task.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Additional Task Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;additional-task-parameters&#34;&gt;Additional Task Parameters&lt;/h3&gt;
 &lt;p&gt;Additional parameters can be added to a Task. These additional parameters will set Global Variable at execution time. To add them, select the Task from the Task Section. Use +Add to create a new entry into the Parameters table for the selected task. It will have two columns:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1925,8 +1923,6 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Key Value Pairs can be given any Name and a Value. Use +Add to add Key Value Pairs to the table. Use Save to confirm.  Use the checkbox to Delete or Edit a Key Value Pair.&lt;/p&gt;
-&lt;h3 id=&#34;consuming-_applications_-1&#34;&gt;Consuming &lt;em&gt;Applications&lt;/em&gt;&lt;/h3&gt;
-&lt;p&gt;This section shows a list of all &lt;em&gt;Applications&lt;/em&gt; that are consuming this &lt;em&gt;Component&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;_endpoints_&#34;&gt;&lt;em&gt;Endpoints&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;This section lists all &lt;em&gt;Endpoints&lt;/em&gt; that the &lt;em&gt;Component&lt;/em&gt; has been installed to with its Deployment Number. The Deployment Number is generated by DeployHub for each unique deployment.  You can also use this section to stop incremental deployments and force a specific version to be deployed to the &lt;em&gt;Endpoint&lt;/em&gt;. By manually adding a specific &lt;em&gt;Component Version&lt;/em&gt; to the &lt;em&gt;Endpoint&lt;/em&gt;, you bypass the incremental deployment logic of the deployment engine.  For example, if you would like to deploy a particular container without accepting any intermediate updates, you would go to the intermediate &lt;em&gt;Component Versions&lt;/em&gt; and manually add them to the &lt;em&gt;Endpoints&lt;/em&gt;, causing the deployment engine to believe that it was previously deployed. When you manually add an &lt;em&gt;Endpoint&lt;/em&gt;, the Deployment Number will show &amp;ldquo;manually deployed.&amp;rdquo; To manually add a &lt;em&gt;Component&lt;/em&gt; to an &lt;em&gt;Endpoint&lt;/em&gt;, use the +Add option. You will be provided a list of available &lt;em&gt;Endpoints&lt;/em&gt;. Use Save to commit the change to the table. You can select multiple &lt;em&gt;Endpoints&lt;/em&gt;.  To Edit or Delete an &lt;em&gt;Endpoint&lt;/em&gt;, select the &lt;em&gt;Endpoint&lt;/em&gt; and use the Edit or Delete option.&lt;/p&gt;
 &lt;h3 id=&#34;audit-trail&#34;&gt;Audit Trail&lt;/h3&gt;
@@ -2812,7 +2808,8 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
       <description>
         
         
-        &lt;p&gt;&lt;em&gt;DMScript&lt;/em&gt; is an object-orientated scripting language. As such, it understands each object in the DeployHub model. You can access each object either by selecting it off the stack (e.g.: $&lt;em&gt;Environment&lt;/em&gt;), by retrieving a reference to the object from some other object, or by calling a built-in &lt;em&gt;Function&lt;/em&gt; to retrieve it. Each object has accessible properties. Some objects also have methods that can be called.&lt;/p&gt;
+        &lt;h2 id=&#34;dmscript&#34;&gt;DMScript&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;DMScript&lt;/em&gt; is an object-orientated scripting language. As such, it understands each object in the DeployHub model. You can access each object either by selecting it off the stack (e.g.: $&lt;em&gt;Environment&lt;/em&gt;), by retrieving a reference to the object from some other object, or by calling a built-in &lt;em&gt;Function&lt;/em&gt; to retrieve it. Each object has accessible properties. Some objects also have methods that can be called.&lt;/p&gt;
 &lt;p&gt;The following is a list of the objects that you can reference in &lt;em&gt;DMScript&lt;/em&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Application&lt;/li&gt;
@@ -2829,11 +2826,11 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;li&gt;User&lt;/li&gt;
 &lt;li&gt;UserGroup&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;attributes&#34;&gt;Attributes&lt;/h2&gt;
+&lt;h3 id=&#34;attributes&#34;&gt;Attributes&lt;/h3&gt;
 &lt;p&gt;Attributes set against DeployHub objects are accessible as variables in &lt;em&gt;DMScript&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;For example, suppose QUEUE_NAME is queue1 in &amp;ldquo;Test &lt;em&gt;Environment&lt;/em&gt; A&amp;rdquo; and queue2 in &amp;ldquo;Test &lt;em&gt;Environment&lt;/em&gt; B&amp;rdquo;. When deploying to &amp;ldquo;Test &lt;em&gt;Environment&lt;/em&gt; A&amp;rdquo; the value of $QUEUE_NAME will be queue1. When deploying to &amp;ldquo;Test &lt;em&gt;Environment&lt;/em&gt; B&amp;rdquo; the value of $QUEUE_NAME will be queue2.&lt;/p&gt;
 &lt;p&gt;You do not need to use any specific syntax to access an Object variable. Whenever a variable is accessed, &lt;em&gt;DMScript&lt;/em&gt; will navigate up the &lt;em&gt;Stack&lt;/em&gt;, looking for the first scope in which the variable is declared. When a variable with a matching name is found, the value at that point is returned. This means that variable values can be overwritten with other values declared higher in the stack. See the high-level section named The Stack for further discussion on this.&lt;/p&gt;
-&lt;h1 id=&#34;application-object&#34;&gt;Application Object&lt;/h1&gt;
+&lt;h3 id=&#34;application-object&#34;&gt;Application Object&lt;/h3&gt;
 &lt;p&gt;The &lt;em&gt;Application&lt;/em&gt; object represents either a Base &lt;em&gt;Application&lt;/em&gt;, an &lt;em&gt;Application Version,&lt;/em&gt; or a Release. In &lt;strong&gt;DeployHub Pro&lt;/strong&gt; there is always an &lt;em&gt;Application&lt;/em&gt; on the stack representing the &lt;em&gt;Application&lt;/em&gt;/&lt;em&gt;Release&lt;/em&gt; being deployed referenced by $&lt;em&gt;Application&lt;/em&gt;. You can also retrieve an &lt;em&gt;Application&lt;/em&gt; using the get_Application__Function_ or push an &lt;em&gt;Application&lt;/em&gt; onto the Stack via using &lt;em&gt;Application&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;NOTE: A &lt;em&gt;Release&lt;/em&gt; is a DeployHub Pro Object. It is of the &lt;em&gt;type__Application&lt;/em&gt;. The release property indicates if the object represents a Release.&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed for an &lt;em&gt;Application&lt;/em&gt; object:&lt;/p&gt;
@@ -3026,7 +3023,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Component &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.name&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt; (id &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.id&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;)&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;change-request-object&#34;&gt;Change Request Object&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;change-request-object&#34;&gt;Change Request Object&lt;/h3&gt;
 &lt;p&gt;The &lt;em&gt;Change Request&lt;/em&gt; object represents a change request record associated with either a &lt;em&gt;Component&lt;/em&gt; or an &lt;em&gt;Application&lt;/em&gt;. Arrays of &lt;em&gt;Change Request&lt;/em&gt; objects are returned by accessing the requests property of an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; object or the requests() method of an &lt;em&gt;Application&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed for a &lt;em&gt;Change Request&lt;/em&gt; object:&lt;/p&gt;
 &lt;table&gt;
@@ -3060,8 +3057,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h1 id=&#34;the-component-and-component-item-objects&#34;&gt;The Component and Component Item Objects&lt;/h1&gt;
-&lt;h2 id=&#34;component-object&#34;&gt;Component Object&lt;/h2&gt;
+&lt;h3 id=&#34;component-object&#34;&gt;Component Object&lt;/h3&gt;
 &lt;p&gt;The &lt;em&gt;Component&lt;/em&gt; object represents either a &lt;em&gt;Base Component&lt;/em&gt; or a &lt;em&gt;Component&lt;/em&gt; Version. When deploying an &lt;em&gt;Application&lt;/em&gt;, &lt;em&gt;Components&lt;/em&gt; are pushed onto the stack after each &lt;em&gt;Endpoint&lt;/em&gt;. They can also be pushed onto the stack by using a comploop, retrieved from an &lt;em&gt;Application&lt;/em&gt; by using ${&lt;em&gt;Application&lt;/em&gt;.&lt;em&gt;Components&lt;/em&gt;} or retrieved by calling &lt;em&gt;get_Component&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed for a &lt;em&gt;Component&lt;/em&gt; object:&lt;/p&gt;
 &lt;table&gt;
@@ -3161,15 +3157,13 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Attributes such as &lt;em&gt;owner&lt;/em&gt; and &lt;em&gt;parent&lt;/em&gt; return &lt;em&gt;Objects&lt;/em&gt;. These objects have their own attributes. So, for example, one can get the owner name of a &lt;em&gt;Component&lt;/em&gt; by writing:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;component-object-example&#34;&gt;Component Object Example&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;owner&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;_Component_&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.owner&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;owner&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.name&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;or, more simply:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;_Component_&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.owner.name&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;component-item&#34;&gt;Component Item&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or, more simply:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;_Component_&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.owner.name&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;component-item&#34;&gt;Component Item&lt;/h3&gt;
 &lt;p&gt;The &lt;em&gt;Component Item&lt;/em&gt; object represents a &lt;em&gt;Component&lt;/em&gt; item within a &lt;em&gt;Component&lt;/em&gt;. Access to a &lt;em&gt;Component&lt;/em&gt; item is only possible by retrieving the array of &lt;em&gt;Component&lt;/em&gt; Item objects from the &lt;em&gt;Component&lt;/em&gt; Object.&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed for a &lt;em&gt;Component&lt;/em&gt; item object:&lt;/p&gt;
 &lt;table&gt;
@@ -3228,10 +3222,9 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Iterate through the _Component_ items &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; a _Component_:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iterate&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;ci: &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Component&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.items&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;h4 id=&#34;component-item-example&#34;&gt;Component Item Example&lt;/h4&gt;
+&lt;p&gt;Iterate through the &lt;em&gt;Component&lt;/em&gt; items for a &lt;em&gt;Component&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iterate&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;ci: &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Component&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.items&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;name=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ci&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.name&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt; // Component Item Name
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -3254,7 +3247,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt; // &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; this Comp Item
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;credentials&#34;&gt;Credentials&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;credentials&#34;&gt;Credentials&lt;/h3&gt;
 &lt;p&gt;The &lt;em&gt;Credential  Object&lt;/em&gt; can be accessed with the built-in getcredential_Function_but only if the user executing the &lt;em&gt;DMScript&lt;/em&gt; has read access to it.&lt;/p&gt;
 &lt;p&gt;If the &lt;em&gt;Credential&lt;/em&gt; can be read, then its attributes can be accessed:&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed for a &lt;em&gt;Credential Object&lt;/em&gt;:&lt;/p&gt;
@@ -3340,7 +3333,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;You can use the &lt;em&gt;Credential Object&lt;/em&gt; to access external systems in a secure and controlled manner. The user executing the &lt;em&gt;DMScript&lt;/em&gt; must have read access to the &lt;em&gt;Credential&lt;/em&gt;. However, having read access does not allow the username/password to be viewed or modified using the Web UI. (The username is only displayed for the &lt;em&gt;Credential&lt;/em&gt; owner, the username and password can only be changed if the User has update access to the &lt;em&gt;Credential&lt;/em&gt;).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;credential-example&#34;&gt;Credential Example&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;db2creds&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; getcredential&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;db2cred&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;username&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;db2creds&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.username&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
@@ -3364,7 +3357,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;res&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; restful&lt;span style=&#34;color:#4e9a06&#34;&gt;\_&lt;/span&gt;get&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://myurl&amp;#34;&lt;/span&gt;,null,null,&lt;span style=&#34;color:#000&#34;&gt;$header&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;NOTE: See the description of restful_get for more information.&lt;/p&gt;
 &lt;p&gt;NOTE: If you wish to prevent the credential from being decrypted, then you ensure that the right to create &lt;em&gt;DMScript&lt;/em&gt; is only granted to power users. Otherwise, a user could create a &lt;em&gt;DMScript&lt;/em&gt; to decrypt a credential to which they only have read access.&lt;/p&gt;
-&lt;h1 id=&#34;date-object&#34;&gt;Date Object&lt;/h1&gt;
+&lt;h3 id=&#34;date-object&#34;&gt;Date Object&lt;/h3&gt;
 &lt;p&gt;The &lt;em&gt;date object&lt;/em&gt; represents a date/time in &lt;em&gt;DMScript&lt;/em&gt;. Dates can be created (with the date() or now()&lt;em&gt;Functions&lt;/em&gt;) or can be retrieved from a &lt;em&gt;DropZoneFile&lt;/em&gt; object (which represents a file in the &lt;em&gt;DropZone&lt;/em&gt;).&lt;/p&gt;
 &lt;p&gt;The following methods can be called on the &lt;em&gt;date object&lt;/em&gt;:&lt;/p&gt;
 &lt;table&gt;
@@ -3568,10 +3561,10 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;alternate-format-modifiers&#34;&gt;Alternate Format Modifiers&lt;/h3&gt;
+&lt;h4 id=&#34;alternate-format-modifiers&#34;&gt;Alternate Format Modifiers&lt;/h4&gt;
 &lt;p&gt;Some conversion specifications can be modified by preceding the conversion specifier character by the E or O modifier to indicate that an alternative format should be used. If the alternative format or specification does not exist for the current locale, the behavior will be as if the unmodified conversion specification were used. (SU) The Single UNIX Specification mentions %Ec, %EC, %Ex, %EX, %Ey, %EY, %Od, %Oe, %OH, %OI, %Om, %OM, %OS, %Ou, %OU, %OV, %Ow, %OW, %Oy, where the effect of the O modifier is to use alternative numeric symbols (say, roman numerals), and that of the E modifier is to use a locale-dependent alternative representation.&lt;/p&gt;
 &lt;p&gt;NOTE: The date is formatted by to_char using the C _Function_strftime.&lt;/p&gt;
-&lt;h1 id=&#34;domain-object&#34;&gt;Domain Object&lt;/h1&gt;
+&lt;h3 id=&#34;domain-object&#34;&gt;Domain Object&lt;/h3&gt;
 &lt;p&gt;The &lt;em&gt;Domain&lt;/em&gt; object represents a domain in &lt;em&gt;DMScript&lt;/em&gt;. Domain objects can be retrieved from other objects (such as &lt;em&gt;Endpoints&lt;/em&gt;, &lt;em&gt;Environments&lt;/em&gt;, &lt;em&gt;Applications&lt;/em&gt; etc). The calling user&amp;rsquo;s home domain can be retrieved via ${me.domain}&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed on the &lt;em&gt;Domain&lt;/em&gt; object:&lt;/p&gt;
 &lt;table&gt;
@@ -3655,8 +3648,8 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h1 id=&#34;dropzone-and-dropzone-file-object&#34;&gt;Dropzone and DropZone File Object&lt;/h1&gt;
-&lt;h2 id=&#34;dropzone&#34;&gt;DropZone&lt;/h2&gt;
+&lt;h3 id=&#34;dropzone-and-dropzone-file-object&#34;&gt;Dropzone and DropZone File Object&lt;/h3&gt;
+&lt;h4 id=&#34;dropzone&#34;&gt;DropZone&lt;/h4&gt;
 &lt;p&gt;The &lt;em&gt;DropZone Object&lt;/em&gt; represents a &lt;em&gt;DropZone&lt;/em&gt;. A &lt;em&gt;DropZone&lt;/em&gt; is an area on disk on the DeployHub Server where deployment artifacts are stored and manipulated before onward transmission to the target &lt;em&gt;Endpoint&lt;/em&gt;(s). A &lt;em&gt;DropZone&lt;/em&gt; is placed onto the stack during a using &lt;em&gt;DropZone&lt;/em&gt; statement – all operations within this block have access to this &lt;em&gt;DropZone&lt;/em&gt; via the &lt;em&gt;DropZone Object&lt;/em&gt;. A &lt;em&gt;DropZone Object&lt;/em&gt; is also present on the stack during pre and post action processing for a &lt;em&gt;Component&lt;/em&gt;. In this case, the content of the &lt;em&gt;DropZone&lt;/em&gt; are the files checked out from the repository for the associated &lt;em&gt;Component&lt;/em&gt; Items.&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed for a &lt;em&gt;DropZone&lt;/em&gt; object:&lt;/p&gt;
 &lt;table&gt;
@@ -3707,7 +3700,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;dropzone-file&#34;&gt;DropZone File&lt;/h2&gt;
+&lt;h4 id=&#34;dropzone-file&#34;&gt;DropZone File&lt;/h4&gt;
 &lt;p&gt;The &lt;em&gt;DropZone File Object&lt;/em&gt; represents a file in the &lt;em&gt;DropZone&lt;/em&gt;. It can be retrieved from the &lt;em&gt;DropZone&lt;/em&gt; object via the files property or the find method. Both of these calls return an array of &lt;em&gt;DropZone File Objects&lt;/em&gt;, keyed on the filename. You can also call dir() on a &lt;em&gt;DropZone File Object&lt;/em&gt; that represents a zipfile to get an array of &lt;em&gt;DropZone File Objects&lt;/em&gt; representing the zipfile content.&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed for a &lt;em&gt;DropZone File Object&lt;/em&gt;:&lt;/p&gt;
 &lt;table&gt;
@@ -3769,7 +3762,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;NOTE: See also the description for zipadd, zipget and zipdel.&lt;/p&gt;
-&lt;h1 id=&#34;environment-object&#34;&gt;Environment Object&lt;/h1&gt;
+&lt;h3 id=&#34;environment-object&#34;&gt;Environment Object&lt;/h3&gt;
 &lt;p&gt;The &lt;em&gt;Environment Object&lt;/em&gt; represents a deployment target &lt;em&gt;Environment&lt;/em&gt;. During a deployment, there is always an &lt;em&gt;Environment  Object&lt;/em&gt; on the stack representing the current deployment target &lt;em&gt;Environment&lt;/em&gt;. This can be referenced by $&lt;em&gt;Environment&lt;/em&gt;. An &lt;em&gt;Environment Object&lt;/em&gt; can also be retrieved using the &lt;em&gt;Get Environment Function&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed for an &lt;em&gt;Environment&lt;/em&gt; object:&lt;/p&gt;
 &lt;table&gt;
@@ -3893,7 +3886,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;hostname is &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;s&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.hostname&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;endpoint-object&#34;&gt;Endpoint Object&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;endpoint-object&#34;&gt;Endpoint Object&lt;/h3&gt;
 &lt;p&gt;The &lt;em&gt;Endpoint&lt;/em&gt; (&lt;em&gt;server, container, VM/Cloud Image&lt;/em&gt;) object represents where a deployment will be sent. An &lt;em&gt;Endpoint&lt;/em&gt; object can be retrieved by accessing the servers array from an &lt;em&gt;Environment&lt;/em&gt; or more typically by running a psloop. This iterates through the current &lt;em&gt;Endpoint&lt;/em&gt; list, pushing an &lt;em&gt;Endpoint&lt;/em&gt; object onto the stack each time through the loop. This &lt;em&gt;Endpoint&lt;/em&gt; object can be referenced by $server.&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed for an &lt;em&gt;Endpoint&lt;/em&gt; object:&lt;/p&gt;
 &lt;table&gt;
@@ -4038,7 +4031,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;or, more simply:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;server&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.owner.name&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;user-object&#34;&gt;User Object&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;user-object&#34;&gt;User Object&lt;/h3&gt;
 &lt;p&gt;The &lt;em&gt;User object&lt;/em&gt; represents a user in &lt;em&gt;DMScript&lt;/em&gt;. &lt;em&gt;User objects&lt;/em&gt; can be retrieved as the owner from other objects (such as &lt;em&gt;Endpoints&lt;/em&gt;, &lt;em&gt;Environments&lt;/em&gt;, &lt;em&gt;Applications&lt;/em&gt; etc.). They can also be returned from a &lt;em&gt;getuser&lt;/em&gt; call.&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed on the User object:&lt;/p&gt;
 &lt;table&gt;
@@ -4122,7 +4115,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h1 id=&#34;usergroup-object&#34;&gt;UserGroup Object&lt;/h1&gt;
+&lt;h3 id=&#34;usergroup-object&#34;&gt;UserGroup Object&lt;/h3&gt;
 &lt;p&gt;The &lt;em&gt;UserGroup object&lt;/em&gt; represents a UserGroup in &lt;em&gt;DMScript&lt;/em&gt;. UserGroup objects can be retrieved as the owner from other objects (such as &lt;em&gt;Endpoints&lt;/em&gt;, &lt;em&gt;Environments&lt;/em&gt;, &lt;em&gt;Applications&lt;/em&gt; etc.). They can also be returned from a getusergroup call or from a &lt;em&gt;User&lt;/em&gt; object (as a list of groups to which the user belongs).&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed on the UserGroup object:&lt;/p&gt;
 &lt;table&gt;
@@ -4202,31 +4195,31 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
         &lt;p&gt;&lt;em&gt;abort&lt;/em&gt; throws an exception, which would normally end a script execution. It can take an optional message which DeployHub will issue when the script ends. &lt;em&gt;abort&lt;/em&gt; is typically used when a condition prevents the rest of the script from executing correctly. &lt;em&gt;abort&lt;/em&gt; takes a single, named parameter:&lt;/p&gt;
 &lt;p&gt;msg: The message to print on abort. If msg is not specified, the msg defaults to ABORT.&lt;/p&gt;
 &lt;p&gt;It can be caught with a try/catch block so you can break out of a block of code whilst still allowing the script to execute.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;abort(msg: &amp;#34;Something went wrong&amp;#34;);
-
-This will end the script with the message &amp;#34;Something went wrong&amp;#34;.
-
-abort;
-
-This will end the script with the message &amp;#34;ABORT&amp;#34;
-
-try {
-
-echo &amp;#34;About to abort&amp;#34;;
-
-abort(msg: &amp;#34;Custom Message&amp;#34;);
-
-echo &amp;#34;This will never execute&amp;#34;;
-
-} catch (ex) {
-
-echo &amp;#34;Error: $ex&amp;#34;;
-
-}
-
-echo &amp;#34;Carry on&amp;#34;;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;abort&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;msg&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Something went wrong&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;This&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;will&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;with&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Something went wrong&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;abort&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;This&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;will&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;with&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ABORT&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;try&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;About to abort&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;abort&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;msg&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Custom Message&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;This will never execute&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ex&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Error: $ex&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Carry on&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;About to abort
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: Custom Message
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Carry on
@@ -4430,7 +4423,7 @@ If you are using SSH Private keys, you will find these files in your Home direct
 &lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-environments/&#34;&gt;Build Your &lt;em&gt;Environments&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;Define Your &lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Step 1 - Deploy the Hipster Store Application&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-1---deploy-the-hipster-store-application&#34;&gt;Step 1 - Deploy the Hipster Store Application&lt;/h3&gt;
 &lt;p&gt;To get started, &lt;a href=&#34;https://www.deployhub.com/free-team-sign-up/&#34;&gt;sign up for DeployHub&lt;/a&gt;. Once you signed up, you will first deploy the Hipster Store &lt;em&gt;Application Base Version&lt;/em&gt; to the Hipster Store &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Select the &lt;em&gt;Application&lt;/em&gt; Menu option from the left side of the DeployHub Home panel. This will bring you to a List View.&lt;/li&gt;
@@ -4470,7 +4463,7 @@ If you are using SSH Private keys, you will find these files in your Home direct
 &lt;li&gt;Load Generator - A Catalog &lt;em&gt;Subdomain&lt;/em&gt; where reusable testing &lt;em&gt;Components&lt;/em&gt; live.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Each of these &lt;em&gt;Subdomains&lt;/em&gt; have their own &lt;em&gt;Subdomains&lt;/em&gt;.  Let&amp;rsquo;s explore:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 1 - Explore a Catalog &lt;em&gt;Subdomain&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-1---explore-a-catalog-_subdomain_&#34;&gt;Step 1 - Explore a Catalog &lt;em&gt;Subdomain&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;From the DeployHub home panel, select &lt;em&gt;Domains&lt;/em&gt; on the left hand side Main Menu. Click on the &amp;ldquo;Store Services&amp;rdquo; &lt;em&gt;Subdomain&lt;/em&gt; to see what it includes. You will see &lt;em&gt;Subdomains&lt;/em&gt; that provide services for the following &amp;ldquo;Solution Spaces&amp;rdquo;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Add Services&lt;/li&gt;
@@ -4480,24 +4473,24 @@ If you are using SSH Private keys, you will find these files in your Home direct
 &lt;li&gt;Cart Services&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;These Store Services &lt;em&gt;Subdomains&lt;/em&gt; organize &lt;em&gt;Components&lt;/em&gt; that can be reused by any other team for building out custom websites for our fictitious Online Store Company.  You can also explore the Purchase Processing &lt;em&gt;Subdomain&lt;/em&gt; to see how these solution spaces are organized. You can click on the center of the starburst map to navigate back up to higher level &lt;em&gt;Domains&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 2 - Explore a Project &lt;em&gt;Subdomain&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-2---explore-a-project-_subdomain_&#34;&gt;Step 2 - Explore a Project &lt;em&gt;Subdomain&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Now lets take a look at our Hipster Store &lt;em&gt;Subdomain&lt;/em&gt;.  The Hipster Store &lt;em&gt;Subdomain&lt;/em&gt; manages our Hipster Store &lt;em&gt;Application&lt;/em&gt;.  It also has &lt;em&gt;Subdomains&lt;/em&gt;, but these &lt;em&gt;Subdomains&lt;/em&gt; are refereed to as &amp;ldquo;Life Cycle &lt;em&gt;Subdomains&lt;/em&gt;.&amp;rdquo;  Life Cycle Subdomains are defined to contain &lt;em&gt;Environments&lt;/em&gt; where your &lt;em&gt;Application&lt;/em&gt; will be deployed. Life Cycle &lt;em&gt;Subdomains&lt;/em&gt; cannot have any child &lt;em&gt;Subdomains&lt;/em&gt;.  It is the lowest level of &lt;em&gt;Subdomain&lt;/em&gt; allowed.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 3 - Explore the Online Store &lt;em&gt;Domain&lt;/em&gt; Details and Access&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-3---explore-the-online-store-_domain_-details-and-access&#34;&gt;Step 3 - Explore the Online Store &lt;em&gt;Domain&lt;/em&gt; Details and Access&lt;/h3&gt;
 &lt;p&gt;Return to the Online Store Company &lt;em&gt;Domain&lt;/em&gt; by clicking anywhere in the center of the sunburst map. Details about this &lt;em&gt;Domain&lt;/em&gt; is displayed to the right of the sunburst.  You will see that is belongs to the &amp;ldquo;Global&amp;rdquo; &lt;em&gt;Domain&lt;/em&gt;, shown by the field labeled &amp;ldquo;Full Domain.&amp;rdquo;  You will also see that it has the &amp;ldquo;All &lt;em&gt;Subdomains&lt;/em&gt; are Life Cycles&amp;rdquo; option set to &amp;ldquo;No&amp;rdquo; and a list of it&amp;rsquo;s child &lt;em&gt;Subdomains&lt;/em&gt;. There are other details as well. For a full description see &lt;a href=&#34;/userguide/first-steps/2-defining-domains/&#34;&gt;Building Your Domain Catalog&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The Access Control Section defines who can see this &lt;em&gt;Domain&lt;/em&gt; and it&amp;rsquo;s child &lt;em&gt;Subdomains&lt;/em&gt;. For this example, the &amp;ldquo;Everyone&amp;rdquo; &lt;em&gt;Group&lt;/em&gt; is defined to all Access.  The Everyone &lt;em&gt;Group&lt;/em&gt; is a default DeployHub &lt;em&gt;Group&lt;/em&gt; that includes all &lt;em&gt;Users&lt;/em&gt; and &lt;em&gt;Administrators&lt;/em&gt;.  For more on &lt;em&gt;Users&lt;/em&gt; see &lt;a href=&#34;/userguide/customizations/2-users/&#34;&gt;Managing Users&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 3 - Explore Tasks for the Online Store Company &lt;em&gt;Domain&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-4---explore-tasks-for-the-online-store-company-_domain_&#34;&gt;Step 4 - Explore Tasks for the Online Store Company &lt;em&gt;Domain&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;You used the &amp;ldquo;Deploy Version to an Environment&amp;rdquo; Task when you deployed the Hipster Store. Tasks allow you to perform steps related to deployments and are only needed by your Project &lt;em&gt;Domains&lt;/em&gt;. You can assign a Task at a higher &lt;em&gt;Domain&lt;/em&gt; level allowing any child &lt;em&gt;Domains&lt;/em&gt; to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your &lt;em&gt;Subdomains&lt;/em&gt;. However, this means that a Catalog &lt;em&gt;Domain&lt;/em&gt; may include Tasks that it cannot see.&lt;/p&gt;
 &lt;p&gt;You can assign Access to Tasks and customize them with Pre and Post &lt;em&gt;Actions&lt;/em&gt;.  For more on Tasks see &lt;a href=&#34;/userguide/first-steps/2-defining-domains/#deployment-tasks&#34;&gt;Deployment Tasks&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;learn-about-components&#34;&gt;Learn about Components&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Components&lt;/em&gt; are microservices, binaries, database SQL, files or any deployable artifact used by an &lt;em&gt;Application&lt;/em&gt;.  &lt;em&gt;Components&lt;/em&gt; themselves are not deployed, they must be consumed by an &lt;em&gt;Application&lt;/em&gt; in order to be deployed to an &lt;em&gt;Environment&lt;/em&gt;. With microservices, this may seem counter intuitive as microservices are independently deployable.  This is true and DeployHub takes this into account during a deployment of an &lt;em&gt;Application&lt;/em&gt;. DeployHub deploys using incremental processing which means if a single  &lt;em&gt;Component&lt;/em&gt; of an &lt;em&gt;Application&lt;/em&gt; is updated, and the &lt;em&gt;Application&lt;/em&gt; is deployed, only the single &lt;em&gt;Component&lt;/em&gt; is moved.  DeployHub does incremental processing of deployable objects, but relates them to a logical &lt;em&gt;Application&lt;/em&gt;.  If an &lt;em&gt;Application&lt;/em&gt; pushes a new version of a single microservice &lt;em&gt;Component&lt;/em&gt; to a cluster, it will move alone.  Subsequently, all dependent &lt;em&gt;Applications&lt;/em&gt; will have a new &lt;em&gt;Application Version&lt;/em&gt; created.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 1 - Review the Hipster Store &lt;em&gt;Components&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-1---review-the-hipster-store-_components_&#34;&gt;Step 1 - Review the Hipster Store &lt;em&gt;Components&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Choose the &lt;em&gt;Components&lt;/em&gt; Menu option on the left side of the DeployHub home panel. This will take you to a list view of all &lt;em&gt;Component Base Versions&lt;/em&gt; and &lt;em&gt;Component Versions&lt;/em&gt;.  A &lt;em&gt;Component Base Version&lt;/em&gt; is the original &lt;em&gt;Component&lt;/em&gt;. When the &lt;em&gt;Component&lt;/em&gt; is updated, a &lt;em&gt;Component Version&lt;/em&gt; is created.&lt;/p&gt;
 &lt;p&gt;Double click on the &amp;ldquo;cartservice;v1_2_2_9_gcadf581&amp;rdquo; &lt;em&gt;Component Version&lt;/em&gt; to explore the &lt;em&gt;Component&lt;/em&gt;.  You will be taken to the Dashboard view. You will see in the &amp;ldquo;Full Domain&amp;rdquo; field of the Details Section to what &lt;em&gt;Domain&lt;/em&gt; the &lt;em&gt;Component&lt;/em&gt; belongs.  You will see all &lt;em&gt;Applications&lt;/em&gt; that have a dependency on this version of the &lt;em&gt;Component&lt;/em&gt;, and in the &amp;ldquo;Deployed Environments for &lt;em&gt;Component&lt;/em&gt;&amp;rdquo; you will see all &lt;em&gt;Environments&lt;/em&gt; where the &lt;em&gt;Component&lt;/em&gt; has been deployed.&lt;/p&gt;
 &lt;h2 id=&#34;learn-about-_environment_-and-_endpoints_&#34;&gt;Learn about &lt;em&gt;Environment&lt;/em&gt; and &lt;em&gt;Endpoints&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Environments&lt;/em&gt; are collections of one or more &lt;em&gt;Endpoints&lt;/em&gt; where &lt;em&gt;Applications&lt;/em&gt; are installed.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 1 - Review the Hipster Store &lt;em&gt;Environment&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-1---review-the-hipster-store-_environment_&#34;&gt;Step 1 - Review the Hipster Store &lt;em&gt;Environment&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Select &lt;em&gt;Environments&lt;/em&gt; from the left hand side of the DeployHub main home panel. This will take you to a list of &lt;em&gt;Environments&lt;/em&gt;. Double click on the &amp;ldquo;Hipster Store Cluster&amp;rdquo;. From the Dashboard view you can see how the &lt;em&gt;Environment&lt;/em&gt; was setup.  You can also see all of the &lt;em&gt;Components&lt;/em&gt; installed on this cluster.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 2 - Review the Hipster Store Cluster &lt;em&gt;Endpoint&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-2---review-the-hipster-store-cluster-_endpoint_&#34;&gt;Step 2 - Review the Hipster Store Cluster &lt;em&gt;Endpoint&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Select &lt;em&gt;Endpoints&lt;/em&gt; from the left hand side of the DeployHub main home panel.  This will take you to a list of &lt;em&gt;Endpoints&lt;/em&gt;.  Double click on the &amp;ldquo;Hipster Store Cluster Helm Host&amp;rdquo; &lt;em&gt;Endpoint&lt;/em&gt;.  This &lt;em&gt;Endpoint&lt;/em&gt; defines where Helm will execute to update the cluster. This &lt;em&gt;Endpoint&lt;/em&gt; has been configured to talk to the Hipster Store Cluster.  See &lt;a href=&#34;/userguide/integrations/helm/&#34;&gt;Helm for Container Deployments&lt;/a&gt; for creating your Helm configuration file.&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;There are many other features of DeployHub that we did not get to cover on this short test drive. However, you should have the basic understanding of the major Objects and concepts needed to get you started.  What we did not cover that you may want to view are:&lt;/p&gt;
@@ -4528,7 +4521,7 @@ If you are using SSH Private keys, you will find these files in your Home direct
 &lt;p&gt;Server.append(path1,path2)&lt;/p&gt;
 &lt;h3 id=&#34;returns&#34;&gt;Returns&lt;/h3&gt;
 &lt;p&gt;String: The result of appending path2 to path1, formatted according to the specified systemtype or the system type of the &lt;em&gt;Endpoint&lt;/em&gt; object.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;res&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; append&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;/tmp&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;file.txt&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;unix&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -5553,11 +5546,10 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
 &lt;p&gt;When issuing calls to the API, the client application must either first issue a &amp;ldquo;login&amp;rdquo; call, specifying the username and password or must specify the username and password in each individual call to the API.&lt;/p&gt;
 &lt;h2 id=&#34;qualify-the-name-of-the-object&#34;&gt;Qualify the Name of the Object&lt;/h2&gt;
 &lt;p&gt;When specifying an Object by name you can always qualify the name by pre-pending it with the name of the &lt;em&gt;Domain&lt;/em&gt; in which it is contained. The name of the &lt;em&gt;Domain&lt;/em&gt; should be separated from the name of the object by a period.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    GLOBAL.USA.Development.demoenv
-
-This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be found in the &amp;#34;Development&amp;#34; Subdomain of Domain &amp;#34;USA&amp;#34; which is a Subdomain of &amp;#34;GLOBAL&amp;#34;.
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;use-the-objects-internal-id&#34;&gt;Use the object&amp;rsquo;s internal ID&lt;/h2&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    GLOBAL.USA.Development.demoenv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This specifies that the &amp;ldquo;demoenv&amp;rdquo; Environment required can be found in the &amp;ldquo;Development&amp;rdquo; Subdomain of Domain &amp;ldquo;USA&amp;rdquo; which is a Subdomain of &amp;ldquo;GLOBAL&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;use-the-objects-internal-id&#34;&gt;Use the object&amp;rsquo;s internal ID&lt;/h2&gt;
 &lt;p&gt;Every Object has a unique ID. This is used internally in the database as a primary/foreign key. An Object is given an ID when it is first created and that ID never changes or is re-used, even if the object itself is deleted. Therefore, if you know the ID of the object you can specify that in the API and RE will know which to object you&amp;rsquo;re referring to, even if the name is not unique.&lt;/p&gt;
 &lt;p&gt;The query tools in the API return the object&amp;rsquo;s internal ID as well as its name. Once you know the ID you can use it in subsequent calls to the API.&lt;/p&gt;
 &lt;p&gt;To use the ID, just place it where you would normally place the object&amp;rsquo;s name. The APIs will assume you&amp;rsquo;re specifying an ID if the name given is fully-numeric.&lt;/p&gt;
@@ -5565,13 +5557,13 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;h2 id=&#34;using-curl-to-access-the-api&#34;&gt;Using cURL to access the API&lt;/h2&gt;
 &lt;p&gt;Here is an example of how to use cURL to access the API.&lt;/p&gt;
 &lt;p&gt;First, we need to login. This operation will return a session ID. We use cURL&amp;rsquo;s &amp;ndash;cookie-jar option to store this session ID in the file C:\temp\session.txt&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  curl --data &amp;#34;user=omadmin&amp;amp;pass=ompassword&amp;#34; --cookie-jar c:\temp\session.txt http://mac:8080/dmadminweb/API/login
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If the username/password combination is correct, the user is logged in and the success indication is returned. Now we can call any of the other API interfaces by specifying the same file in which we stored the session ID returned from the login call.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  curl --data &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user=omadmin&amp;amp;pass=ompassword&amp;#34;&lt;/span&gt; --cookie-jar c:&lt;span style=&#34;color:#4e9a06&#34;&gt;\t&lt;/span&gt;emp&lt;span style=&#34;color:#4e9a06&#34;&gt;\s&lt;/span&gt;ession.txt http://mac:8080/dmadminweb/API/login
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If the username/password combination is correct, the user is logged in and the success indication is returned. Now we can call any of the other API interfaces by specifying the same file in which we stored the session ID returned from the login call.&lt;/p&gt;
 &lt;p&gt;For example, this will return a JSON array containing all the servers in our home and &lt;em&gt;Subdomains&lt;/em&gt; to which we have view access.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  curl --data &amp;#34;all=Y&amp;#34; --cookie c:\temp\session.txt http://mac:8080/dmadminweb/API/servers
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;login&#34;&gt;Login&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  curl --data &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;all=Y&amp;#34;&lt;/span&gt; --cookie c:&lt;span style=&#34;color:#4e9a06&#34;&gt;\t&lt;/span&gt;emp&lt;span style=&#34;color:#4e9a06&#34;&gt;\s&lt;/span&gt;ession.txt http://mac:8080/dmadminweb/API/servers
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;login&#34;&gt;Login&lt;/h2&gt;
 &lt;p&gt;When issuing calls to the API, the client application must either first issue a &amp;ldquo;login&amp;rdquo; call, specifying the username and password or must specify the username and password in each individual call to the API.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapilogin&#34;&gt;REST Api Endpoint /dmadminweb/API/login&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -5586,7 +5578,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapilogin&#34;&gt;Parameters for /dmadminweb/API/login&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -5614,7 +5606,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Responses&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;response&#34;&gt;Response&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -5647,13 +5639,13 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
         &lt;p&gt;&lt;em&gt;appendstd&lt;/em&gt; appends one path to another formatting the resulting path according to the optional systemtype parameter. If the systemtype is not specified then the system type is taken from the &lt;em&gt;Endpoint&lt;/em&gt; currently on the stack. If no &lt;em&gt;Endpoint&lt;/em&gt; is on the stack, an exception is thrown.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;appendstd&lt;/em&gt; is also a method that can be called on an &lt;em&gt;Endpoint&lt;/em&gt; object. In this case, the system type is taken from the &lt;em&gt;Endpoint&lt;/em&gt; itself.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;appendstd&lt;/em&gt; differs from append since it ensures that the directory separator chars are appropriate to the system type regardless of how they are formatted in the passed paths.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
 &lt;p&gt;appendstd(path1, path2 [, systemtype])&lt;/p&gt;
 &lt;p&gt;or&lt;/p&gt;
 &lt;p&gt;Server.appendstd(path1,path2)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;returns&#34;&gt;Returns&lt;/h3&gt;
 &lt;p&gt;String: The result of appending path2 to path1, formatted according to the specified systemtype or the system type of the &lt;em&gt;Endpoint&lt;/em&gt; object.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;res&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; appendstd&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;@&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;C:\Temp&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;folder/file.txt&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;windows&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;//
@@ -5671,7 +5663,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;// res is &lt;span style=&#34;color:#000&#34;&gt;$2$DKA200&lt;/span&gt;:&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;FERDU01.TEST&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;file.txt
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;//
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;See Also:&lt;/strong&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See Also&lt;/h3&gt;
 &lt;p&gt;append()&lt;/p&gt;
 
       </description>
@@ -5730,7 +5722,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;li&gt;Deploy Version to &lt;em&gt;Environment&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Manually Trigger &lt;em&gt;Action&lt;/em&gt; to be executed&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;DeployHub Pro&lt;/strong&gt;:&lt;/p&gt;
+&lt;h3 id=&#34;deployhub-pro&#34;&gt;DeployHub Pro&lt;/h3&gt;
 &lt;p&gt;DeployHub Pro includes a &lt;a href=&#34;/userguide/profeatures/calendar/&#34;&gt;&amp;ldquo;smart&amp;rdquo; Calendar&lt;/a&gt;.  The following Task are used to interact with the DeployHub Smart Calendar for Requesting and Approving deployments.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Request Calendar Entry for Deployment to an &lt;em&gt;Environment&lt;/em&gt;&lt;/li&gt;
@@ -5740,7 +5732,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;p&gt;You can add new Tasks from the &lt;em&gt;Domain&lt;/em&gt; Dashboard by navigating to the &lt;em&gt;Domain&lt;/em&gt; and interacting with the Tasks Section.  Select the +Add option from the Tasks Section and a pop-up displays all available Tasks. Selecting a Task will add a new row into the table.  Use the Task Detail Section to define the unique details of your new Task. You can update or remove a Task by using the Task Section table.  Using the checkbox, select the item and use the the Delete or Edit options.&lt;/p&gt;
 &lt;p&gt;Once you create a Task, it is recommended that you rename that Task to more closely describe its use depending on the options selected.&lt;/p&gt;
 &lt;p&gt;Below is a description of all Tasks and their detailed information.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Move Version to the Next or Previous Pipeline State&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;move-version-to-the-next-or-previous-pipeline-state&#34;&gt;Move Version to the Next or Previous Pipeline State&lt;/h3&gt;
 &lt;p&gt;Moves an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version from one Pipeline state (Life Cycle &lt;em&gt;Subdomain&lt;/em&gt;) to another. This can be used as a promotion or a demotion of an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version between Life Cycle states. When the Task is defined, the Life Cycle &lt;em&gt;Subdomain&lt;/em&gt; has to be specified as part of the Task definition. The Approval Task must be accepted before the Move Version is to succeed.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -5788,7 +5780,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Deploy Version to &lt;em&gt;Environment&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deploy-version-to-_environment_&#34;&gt;Deploy Version to &lt;em&gt;Environment&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Deploys an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version to an &lt;em&gt;Environment&lt;/em&gt;. Select the target &lt;em&gt;Environment&lt;/em&gt; via a drop-down list.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -5824,7 +5816,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Manually Trigger &lt;em&gt;Action&lt;/em&gt; to be executed&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;manually-trigger-_action_-to-be-executed&#34;&gt;Manually Trigger &lt;em&gt;Action&lt;/em&gt; to be executed&lt;/h3&gt;
 &lt;p&gt;Runs a stand-alone &lt;em&gt;Action&lt;/em&gt;. For example, if you need to interrupt a deployment process, this Task allows you to execute the steps manually. The manually triggered &lt;em&gt;Action&lt;/em&gt; will be placed in the &amp;ldquo;To do&amp;rdquo; list of the &lt;em&gt;User&lt;/em&gt; or &lt;em&gt;Group&lt;/em&gt; that executed the Deploy Task.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -5872,7 +5864,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Approve Version for Move to Next Pipeline State&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;approve-version-for-move-to-next-pipeline-state&#34;&gt;Approve Version for Move to Next Pipeline State&lt;/h3&gt;
 &lt;p&gt;Approves the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version so that it can be moved to a specified state in the pipeline (Life Cycle &lt;em&gt;Subdomain&lt;/em&gt;). This works in conjunction with the Move Version Task. When the Approve Task is defined, the Target &lt;em&gt;Domain&lt;/em&gt; has to be specified. When the Approve Task is executed, the selected &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version can either be Approved or Rejected. Only when the an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version is &amp;ldquo;approved&amp;rdquo; can it be &amp;ldquo;Moved&amp;rdquo; or &amp;ldquo;Deployed&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Note: When an Approve Task has been defined for a &lt;em&gt;Domain&lt;/em&gt;, it will force the use of the Approve Task before a &amp;ldquo;Move&amp;rdquo; or &amp;ldquo;Deploy&amp;rdquo; Task can be executed. If a &amp;ldquo;Move&amp;rdquo; or &amp;ldquo;Deploy&amp;rdquo; Task is attempted but has not been &amp;ldquo;Approved,&amp;rdquo; an error will be displayed indicating that the Task must be Approved.&lt;/p&gt;
 &lt;table&gt;
@@ -5921,7 +5913,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Request Calendar Entry for Deployment to an &lt;em&gt;Environment&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;request-calendar-entry-for-deployment-to-an-_environment_&#34;&gt;Request Calendar Entry for Deployment to an &lt;em&gt;Environment&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;DeployHub Pro feature. Sends a request from a &lt;em&gt;User&lt;/em&gt; to add a time slot to the calendar for a deployment. The request is sent to &lt;em&gt;Group&lt;/em&gt; who has the authority to manage a particular &lt;em&gt;Environment&amp;rsquo;s&lt;/em&gt; Calendar. When the Request Task is defined it is linked to the task to be requested. When the Request Task is executed an entry is placed into the &amp;ldquo;To Do&amp;rdquo; list of all the &lt;em&gt;Users&lt;/em&gt; who are members of the &lt;em&gt;Group&lt;/em&gt; with the calendar access. The Request Task can have a Request Notification Template defined which can send out a notification to the appropriate &lt;em&gt;Groups&lt;/em&gt;.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -5965,7 +5957,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Task Execute Access&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;task-execute-access&#34;&gt;Task Execute Access&lt;/h3&gt;
 &lt;p&gt;Once a &lt;em&gt;Task&lt;/em&gt; is defined, it must be granted execute access to a &lt;em&gt;Group&lt;/em&gt; before it can be invoked. Select the &lt;em&gt;Task&lt;/em&gt; using the check box. Drag the desired  &lt;em&gt;Group&lt;/em&gt; from the &lt;em&gt;Available Groups&lt;/em&gt; column to the &lt;em&gt;Group Access&lt;/em&gt; area. &lt;em&gt;Users&lt;/em&gt; of the &lt;em&gt;Group&lt;/em&gt; can then execute the specified task.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Groups&lt;/em&gt; are assigned authority on a &lt;em&gt;Task&lt;/em&gt; by &lt;em&gt;Task&lt;/em&gt; basis. It is possible for a &lt;em&gt;Domain&lt;/em&gt; to have two different &lt;em&gt;Tasks&lt;/em&gt; with the same function, one of which allows a particular &lt;em&gt;Group&lt;/em&gt; to run the &lt;em&gt;Task&lt;/em&gt;, and the other which doesn&amp;rsquo;t. This allows similar &lt;em&gt;Tasks&lt;/em&gt; to be created. They can have different characteristics assigned to them such as Pre-Actions and/or Post-Actions, Notification Templates, etc. Also different &lt;em&gt;User Groups&lt;/em&gt; can have the authority to run them.&lt;/p&gt;
 &lt;ul&gt;
@@ -5977,7 +5969,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;NOTE: Another way to accomplish this is to link an Approval Task to the Request Task. The User in the User Group would send the Request Task, and a User in the Admin Group would be notified. They would then run the Approve Task to allow the User in the Test Group to run the Move Task.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Additional Task Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;additional-task-parameters&#34;&gt;Additional Task Parameters&lt;/h3&gt;
 &lt;p&gt;Additional parameters can be added to a Task. These additional parameters will set Global Variable at execution time. To add them, select the Task from the Task Section. Use +Add to create a new entry into the Parameters table for the selected task. It will have two columns:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -6433,7 +6425,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
         &lt;h2 id=&#34;get-a-list-_applications_&#34;&gt;Get a List &lt;em&gt;Applications&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;This call returns an array of JSON objects representing each &lt;em&gt;Application&lt;/em&gt; to which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;p&gt;If the &amp;ldquo;all&amp;rdquo; parameters is not specified then only the &lt;em&gt;Applications&lt;/em&gt; associated with the &lt;em&gt;User&amp;rsquo;s&lt;/em&gt; home &lt;em&gt;Domain&lt;/em&gt; are listed. If the &amp;ldquo;all&amp;rdquo; parameter is specified by setting it to &amp;ldquo;y&amp;rdquo; then the result includes the &lt;em&gt;Applications&lt;/em&gt; in all accessible &lt;em&gt;Subdomains&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapiapplications&#34;&gt;REST Api Endpoint /dmadminweb/API/applications&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6448,7 +6440,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapiapplications&#34;&gt;Parameters for /dmadminweb/API/applications&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6469,7 +6461,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Application&lt;/em&gt; Result Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_application_-result-object&#34;&gt;&lt;em&gt;Application&lt;/em&gt; Result Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6494,7 +6486,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Application&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_application_-object&#34;&gt;&lt;em&gt;Application&lt;/em&gt; Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6555,7 +6547,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Application Version&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_application-version_-object&#34;&gt;&lt;em&gt;Application Version&lt;/em&gt; Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6588,7 +6580,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/table&gt;
 &lt;h2 id=&#34;retrieve-specific-_application_-or-_application-version_&#34;&gt;Retrieve specific &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Application Version&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;This call returns a JSON object representing the specified &lt;em&gt;Application&lt;/em&gt;. The resulting JSON will vary slightly depending on whether the specified &lt;em&gt;Application&lt;/em&gt; is an &lt;em&gt;Application Base Version&lt;/em&gt; or an &lt;em&gt;Application Version&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapiapplicationidentifier&#34;&gt;REST Api Endpoint /dmadminweb/API/application/{identifier}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6603,7 +6595,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapiapplicationidentifier&#34;&gt;Parameters for /dmadminweb/API/application/{identifier}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6638,7 +6630,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Application Version&lt;/em&gt; Result Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_application-version_-result-object&#34;&gt;&lt;em&gt;Application Version&lt;/em&gt; Result Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6663,7 +6655,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Application Version&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_application-version_-object-1&#34;&gt;&lt;em&gt;Application Version&lt;/em&gt; Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6697,7 +6689,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;h2 id=&#34;create-new-application-version&#34;&gt;Create New Application Version&lt;/h2&gt;
 &lt;p&gt;This call creates a new &lt;em&gt;Application Version&lt;/em&gt;. The new &lt;em&gt;Application Version&lt;/em&gt; inherits all the attributes of the predecessor &lt;em&gt;Application&lt;/em&gt;. In order for this to work through the permission model, there has to be a &lt;em&gt;Create Version Task&lt;/em&gt; either in the &lt;em&gt;Domain&lt;/em&gt; in which the specified &lt;em&gt;Application&lt;/em&gt; is located or in any of the parent &lt;em&gt;Domains&lt;/em&gt; as long as the &lt;em&gt;Create Version Task&lt;/em&gt; is set to be &amp;ldquo;available&amp;rdquo; to &lt;em&gt;Subdomains&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;This mechanism ensures that the invoking user has permission to create a new version of the &lt;em&gt;Application&lt;/em&gt; (since the permissions are checked against the &lt;em&gt;Task&lt;/em&gt;) and also the target &lt;em&gt;Domain&lt;/em&gt; (i.e. the &lt;em&gt;Domain&lt;/em&gt; in which the new &lt;em&gt;Application&lt;/em&gt; is created) is determined from the &lt;em&gt;Task&lt;/em&gt;. Also, by specifying the &lt;em&gt;Task&lt;/em&gt; to execute, any pre and post link &lt;em&gt;Actions&lt;/em&gt; are executed just as if the &lt;em&gt;Task&lt;/em&gt; had been invoked via the Web UI.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapinewappverapp_id&#34;&gt;REST Api Endpoint /dmadminweb/API/new/appver/{app_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6712,7 +6704,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapinewappverapp_id&#34;&gt;Parameters for /dmadminweb/API/new/appver/{app_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6740,7 +6732,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;response-success-object&#34;&gt;Response Success Object&lt;/h4&gt;
 &lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -6768,7 +6760,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/table&gt;
 &lt;h2 id=&#34;replace-component&#34;&gt;Replace Component&lt;/h2&gt;
 &lt;p&gt;Replace a &lt;em&gt;Component&lt;/em&gt; within an &lt;em&gt;Application&lt;/em&gt;. This call replaces a specific &lt;em&gt;Component&lt;/em&gt; within an &lt;em&gt;Application&lt;/em&gt;. You can use this to update the version of a &lt;em&gt;Component&lt;/em&gt; within an &lt;em&gt;Application&lt;/em&gt; by replacing the old &lt;em&gt;Component Version&lt;/em&gt; with the new.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapinewreplaceapp_idold_comp_idnew_comp_id&#34;&gt;REST Api Endpoint /dmadminweb/API/new/replace/{app_id}/{old_comp_id}/{new_comp_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6783,7 +6775,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapinewreplaceapp_idold_comp_idnew_comp_id&#34;&gt;Parameters for /dmadminweb/API/new/replace/{app_id}/{old_comp_id}/{new_comp_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6818,7 +6810,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;response-success-object-1&#34;&gt;Response Success Object&lt;/h4&gt;
 &lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -6848,7 +6840,7 @@ This specifies that the &amp;#34;demoenv&amp;#34; Environment required can be fo
 &lt;p&gt;This call allows the API to approve/reject an &lt;em&gt;Application&lt;/em&gt; for a specified &lt;em&gt;Domain&lt;/em&gt;.
 In order for this to work through the permission model, there has to be an &lt;em&gt;Approve Task&lt;/em&gt; either in the &lt;em&gt;Domain&lt;/em&gt; in which the specified &lt;em&gt;Application&lt;/em&gt; is located or in any of the parent &lt;em&gt;Domains&lt;/em&gt; as long as the &lt;em&gt;Approve Task&lt;/em&gt; is set to be &amp;ldquo;available&amp;rdquo; to &lt;em&gt;Subdomains&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;This mechanism ensures that the invoking user has permission to approve the &lt;em&gt;Application&lt;/em&gt; (since the permissions are checked against the named &lt;em&gt;Task&lt;/em&gt;) and also the target &lt;em&gt;Domain&lt;/em&gt; (i.e. the &lt;em&gt;Domain&lt;/em&gt; to which the &lt;em&gt;Application&lt;/em&gt; is being approved/rejected) is determined from the &lt;em&gt;Task&lt;/em&gt;. Also, by specifying the &lt;em&gt;Task&lt;/em&gt; to execute, any Pre and Post &lt;em&gt;Actions&lt;/em&gt; are executed just as if the &lt;em&gt;Task&lt;/em&gt; had been invoked via the Web UI.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapiapproveapp_id&#34;&gt;REST Api Endpoint /dmadminweb/API/approve/{app_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6863,7 +6855,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapiapproveapp_id&#34;&gt;Parameters for /dmadminweb/API/approve/{app_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6905,7 +6897,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;response-success-object-2&#34;&gt;Response Success Object&lt;/h4&gt;
 &lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -6933,7 +6925,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/table&gt;
 &lt;h2 id=&#34;associate-an-_application_-to-an-_environment_&#34;&gt;Associate an &lt;em&gt;Application&lt;/em&gt; to an &lt;em&gt;Environment&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;This call associates an existing &lt;em&gt;Application&lt;/em&gt; with an &lt;em&gt;Environment&lt;/em&gt;. This association allows the &lt;em&gt;Application&lt;/em&gt; (or any of its Versions) to be deployed to that &lt;em&gt;Environment&lt;/em&gt;. An &lt;em&gt;Application&lt;/em&gt; needs to be assigned to an &lt;em&gt;Environment&lt;/em&gt; before it can be deployed to that &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapiassignapplicationapp_idenv_id&#34;&gt;REST Api Endpoint /dmadminweb/API/assign/application/{app_id}/{env_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6944,11 +6936,11 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;GET&lt;/td&gt;
-&lt;td&gt;/dmadminweb/API/approve/{app_id}&lt;/td&gt;
+&lt;td&gt;/dmadminweb/API/assign/application/{app_id}/{env_id}&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapiassignapplicationapp_idenv_id&#34;&gt;Parameters for /dmadminweb/API/assign/application/{app_id}/{env_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6976,7 +6968,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;response-success-object-3&#34;&gt;Response Success Object&lt;/h4&gt;
 &lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -7005,7 +6997,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;h2 id=&#34;disassociates-an-_application_-from-an-_environment_&#34;&gt;Disassociates an &lt;em&gt;Application&lt;/em&gt; from an &lt;em&gt;Environment&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;This call removes, or disassociates, an &lt;em&gt;Application&lt;/em&gt; from an &lt;em&gt;Environment&lt;/em&gt;. Once the &lt;em&gt;Application&lt;/em&gt; has been disassociated from the &lt;em&gt;Environment&lt;/em&gt; neither it nor any of its Versions can be deployed to that &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Disassociating an &lt;em&gt;Application&lt;/em&gt; from an &lt;em&gt;Environment&lt;/em&gt; does not physically remove the &lt;em&gt;Application&lt;/em&gt; from the &lt;em&gt;Environment&lt;/em&gt;. It simply prevents deploying any Version of the &lt;em&gt;Application&lt;/em&gt; to the &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapiunassignapplicationapp_idenv_id&#34;&gt;REST Api Endpoint /dmadminweb/API/unassign/application/{app_id}/{env_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7020,7 +7012,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapiunassignapplicationapp_idenv_id&#34;&gt;Parameters for /dmadminweb/API/unassign/application/{app_id}/{env_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7048,7 +7040,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;response-success-object-4&#34;&gt;Response Success Object&lt;/h4&gt;
 &lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -7156,7 +7148,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Any other combination of arguments is invalid and will result in an error.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; Use a Pre Action to an _Application_ to prevent an _Application Version_ from being deployed &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; it is not the latest version.
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;latest&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;_Application_&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.parent.latest()&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
@@ -7184,7 +7176,8 @@ In order for this to work through the permission model, there has to be an &lt;e
       <description>
         
         
-        &lt;p&gt;An &lt;em&gt;attachment&lt;/em&gt; statement can only be included in a notify block. It is used to add an attachment into an outgoing email (via SMTP notifiers). It allows much finer control over the attachment content than that provided by the attachment parameter to the notify statement.&lt;/p&gt;
+        &lt;h2 id=&#34;attachments&#34;&gt;Attachments&lt;/h2&gt;
+&lt;p&gt;An &lt;em&gt;attachment&lt;/em&gt; statement can only be included in a notify block. It is used to add an attachment into an outgoing email (via SMTP notifiers). It allows much finer control over the attachment content than that provided by the attachment parameter to the notify statement.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;attachment&lt;/em&gt; takes a number of named parameters:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -7209,7 +7202,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;em&gt;attachment&lt;/em&gt; can optionally open a code block. If body is not specified then the content of the attachment is taken from the output created by this code block.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;example-1&#34;&gt;Example 1&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; Checkout a file and include it as an attachment in an email:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;// Checkout &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;myfile.txt&amp;#34;&lt;/span&gt; and &lt;span style=&#34;color:#204a87&#34;&gt;read&lt;/span&gt; it into the stream &lt;span style=&#34;color:#000&#34;&gt;$myfile&lt;/span&gt;.
@@ -7241,7 +7234,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;attachment&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;name: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;myfile.txt&amp;#34;&lt;/span&gt;, body: &lt;span style=&#34;color:#000&#34;&gt;$myfile&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;example-2&#34;&gt;Example 2&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Create an attachment with a script and include it in an email:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;me&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;me&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
@@ -7265,7 +7258,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;example-3&#34;&gt;Example 3&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Send an email containing the Change Requests associated with the Application.
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;me&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;me&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;()&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
@@ -7493,7 +7486,7 @@ In order for this to work through the permission model, there has to be an &lt;e
         
         &lt;h2 id=&#34;retrieve-a-_component_&#34;&gt;Retrieve a &lt;em&gt;Component&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;Retrieve specific &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; version. This call returns a JSON Object representing the specified &lt;em&gt;Component&lt;/em&gt;. It is useful to determine the &lt;em&gt;Application&lt;/em&gt;(s) which include the &lt;em&gt;Component&lt;/em&gt;, whether the &lt;em&gt;Application&lt;/em&gt; is approved, which other &lt;em&gt;Components&lt;/em&gt; are used alongside the specified &lt;em&gt;Component&lt;/em&gt; and so on.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapi_component_identifier&#34;&gt;REST Api Endpoint /dmadminweb/API/&lt;em&gt;Component&lt;/em&gt;/{identifier}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7504,11 +7497,11 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;GET&lt;/td&gt;
-&lt;td&gt;dmadminweb/API/&lt;em&gt;Component&lt;/em&gt;/{identifier}&lt;/td&gt;
+&lt;td&gt;/dmadminweb/API/&lt;em&gt;Component&lt;/em&gt;/{identifier}&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapi_component_identifier&#34;&gt;Parameters for /dmadminweb/API/&lt;em&gt;Component&lt;/em&gt;/{identifier}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7543,7 +7536,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Component&lt;/em&gt; Result Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_component_-result-object&#34;&gt;&lt;em&gt;Component&lt;/em&gt; Result Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7568,7 +7561,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Component&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_component_-object&#34;&gt;&lt;em&gt;Component&lt;/em&gt; Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7641,7 +7634,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Component&lt;/em&gt; Predecessor&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_component_-predecessor&#34;&gt;&lt;em&gt;Component&lt;/em&gt; Predecessor&lt;/h4&gt;
 &lt;p&gt;Only returned for &lt;em&gt;Component Versions&lt;/em&gt;. A JSON Object represents the predecessor of this &lt;em&gt;Component&lt;/em&gt;.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -7679,7 +7672,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Component Version&lt;/em&gt; Result&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_component-version_-result&#34;&gt;&lt;em&gt;Component Version&lt;/em&gt; Result&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7704,7 +7697,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Component Version&lt;/em&gt; Full Detail&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_component-version_-full-detail&#34;&gt;&lt;em&gt;Component Version&lt;/em&gt; Full Detail&lt;/h4&gt;
 &lt;p&gt;A JSON  object represents the &lt;em&gt;Component&lt;/em&gt; being retrieved.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -7790,7 +7783,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Application Version&lt;/em&gt; Results Full Detail&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_application-version_-results-full-detail&#34;&gt;&lt;em&gt;Application Version&lt;/em&gt; Results Full Detail&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7845,7 +7838,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Application Version&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_application-version_-object&#34;&gt;&lt;em&gt;Application Version&lt;/em&gt; Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7876,7 +7869,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;change-request&#34;&gt;Change Request&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7919,7 +7912,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Approval Results&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;approval-results&#34;&gt;Approval Results&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7956,7 +7949,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Rejection Results&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;rejection-results&#34;&gt;Rejection Results&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7995,7 +7988,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/table&gt;
 &lt;h2 id=&#34;create-new-_component-version_&#34;&gt;Create New &lt;em&gt;Component Version&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;This call creates a new &lt;em&gt;Component Version&lt;/em&gt;. The new &lt;em&gt;Component&lt;/em&gt; inherits all the attributes of the predecessor &lt;em&gt;Component&lt;/em&gt; including its &lt;em&gt;Domain&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapinewcompvercomp_id&#34;&gt;REST Api Endpoint /dmadminweb/API/new/compver/{comp_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -8010,7 +8003,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapinewcompvercomp_id&#34;&gt;Parameters for /dmadminweb/API/new/compver/{comp_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -8031,7 +8024,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Component&lt;/em&gt; Result Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_component_-result-object-1&#34;&gt;&lt;em&gt;Component&lt;/em&gt; Result Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -8056,7 +8049,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;response-success-object&#34;&gt;Response Success Object&lt;/h4&gt;
 &lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -8085,7 +8078,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;h2 id=&#34;associate-a-build-with-a-_component_&#34;&gt;Associate a Build with a &lt;em&gt;Component&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;This call associates a build number with a specified &lt;em&gt;Component&lt;/em&gt;. It is typically used with &lt;em&gt;CD Engines&lt;/em&gt; to notify that a new build has been performed. If the &lt;em&gt;Component&lt;/em&gt; is associated with an approved &lt;em&gt;Application&lt;/em&gt; then a new version of the &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Application&lt;/em&gt; is created automatically and the new &lt;em&gt;Component&lt;/em&gt; version replaces the old &lt;em&gt;Component&lt;/em&gt; version in the newly created &lt;em&gt;Application&lt;/em&gt; version.&lt;/p&gt;
 &lt;p&gt;In order for this to work through the permission model, the associated &amp;ldquo;Create &lt;em&gt;Application&lt;/em&gt; Version&amp;rdquo; Task needs to be specified. This ensures that the invoking user has permission to create a new version of the &lt;em&gt;Application&lt;/em&gt; (since the permissions are checked against the named Task) and also the target &lt;em&gt;Domain&lt;/em&gt; (i.e. the domain in which the new &lt;em&gt;Application&lt;/em&gt; is created) is determined from the Task. Also, by specifying the Task to execute, any Pre and Post link &lt;em&gt;Actions&lt;/em&gt; are executed just as if the Task had been invoked via the Web UI.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapibuildidcomp_idbuild_id&#34;&gt;REST Api Endpoint /dmadminweb/API/buildid/{comp_id}/{build_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -8100,7 +8093,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapibuildidcomp_idbuild_id&#34;&gt;Parameters for /dmadminweb/API/buildid/{comp_id}/{build_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -8170,7 +8163,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Component&lt;/em&gt; Result Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_component_-result-object-2&#34;&gt;&lt;em&gt;Component&lt;/em&gt; Result Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -8195,7 +8188,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;response-success-object-1&#34;&gt;Response Success Object&lt;/h4&gt;
 &lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -8235,15 +8228,15 @@ In order for this to work through the permission model, there has to be an &lt;e
         
         
         &lt;p&gt;&lt;em&gt;base64decode&lt;/em&gt; converts a string of base64 encoded data into a stream and returns the number of bytes written to the stream. The stream needs to be passed as an optional parameter. If the stream is not specified, &lt;em&gt;base64decode&lt;/em&gt; needs to be called within a using stream block. If &lt;em&gt;base64decode&lt;/em&gt; is called outside of a using stream block and no stream parameter is passed, an error occurs.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;String&lt;/em&gt;.base64decode([stream])&lt;/p&gt;
 &lt;p&gt;or&lt;/p&gt;
 &lt;p&gt;base64decode(string[,stream])&lt;/p&gt;
 &lt;p&gt;Where:&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;stream&lt;/em&gt; is the name of an existing stream. If the stream does not currently exist, an error occurs. If stream is not specified, base64decode will write the decoded output to the stream identified in the enclosing using stream block.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;returns&#34;&gt;Returns&lt;/h3&gt;
 &lt;p&gt;Integer: The length of the decoded data. The decoded data is written to the stream identified by the outer using stream statement.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;1. Convert a base64 encoded string into a stream:_
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -8313,7 +8306,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;res is Hello DeployHub!
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;len is &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;23&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;See Also:&lt;/strong&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See Also&lt;/h3&gt;
 &lt;p&gt;base64encode()&lt;/p&gt;
 
       </description>
@@ -8328,9 +8321,9 @@ In order for this to work through the permission model, there has to be an &lt;e
       <description>
         
         
-        &lt;h2 id=&#34;create-a-_credential_&#34;&gt;Create a &lt;em&gt;Credential&lt;/em&gt;&lt;/h2&gt;
+        &lt;h2 id=&#34;create-or-modify-a-_credential_&#34;&gt;Create or Modify a &lt;em&gt;Credential&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;This call creates a new credential. All of the attributes of the new &lt;em&gt;Credential&lt;/em&gt; are set through parameters to the API. If &amp;ldquo;&lt;em&gt;Domain&lt;/em&gt;&amp;rdquo; is not specified then the &lt;em&gt;Environment&lt;/em&gt; is created in the logged in &lt;em&gt;User&amp;rsquo;s&lt;/em&gt; home &lt;em&gt;Domain&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapinewcredentialcred_id&#34;&gt;REST Api Endpoint /dmadminweb/API/new/credential/{cred_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -8345,7 +8338,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapinewcredentialcred_id&#34;&gt;Parameters for /dmadminweb/API/new/credential/{cred_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -8415,120 +8408,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Boolean Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;success&lt;/td&gt;
-&lt;td&gt;boolean&lt;/td&gt;
-&lt;td&gt;Success or Failure.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;error&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td&gt;Error message returned from API.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;modify-a-_credential_&#34;&gt;Modify a &lt;em&gt;Credential&lt;/em&gt;&lt;/h2&gt;
-&lt;p&gt;This call modifies an existing &lt;em&gt;Credential&lt;/em&gt;. The attributes of the &lt;em&gt;Credential&lt;/em&gt; are modified through parameters to the API.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;HTTP Verb&lt;/th&gt;
-&lt;th&gt;URL&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;GET&lt;/td&gt;
-&lt;td&gt;/dmadminweb/API/new/credential/{cred_id}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Located in&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;th&gt;Schema&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;cred_id&lt;/td&gt;
-&lt;td&gt;path&lt;/td&gt;
-&lt;td&gt;Is the ID of the_Credential_ to be modified. Either its name, its qualified name (i.e. with its parent domain(s) included in dot notation) or its internal ID.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;domain&lt;/td&gt;
-&lt;td&gt;query&lt;/td&gt;
-&lt;td&gt;Is the identifier of the &lt;em&gt;Domain&lt;/em&gt; in which the &lt;em&gt;Credential&lt;/em&gt; is to be created. Either its name, its qualified name with its parent &lt;em&gt;Domains&lt;/em&gt; included in dot notation (i.e. GLOBAL.Products) or its internal ID.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;summary&lt;/td&gt;
-&lt;td&gt;query&lt;/td&gt;
-&lt;td&gt;Is the summary text for the &lt;em&gt;Credential&lt;/em&gt;.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;kind&lt;/td&gt;
-&lt;td&gt;query&lt;/td&gt;
-&lt;td&gt;The type of &lt;em&gt;Credential&lt;/em&gt; to create. Must be one of -&lt;li&gt;encrypted - The username and password are held encrypted in the database.&lt;/li&gt;&lt;li&gt;vars - The username and password contain variable names to be expanded when the &lt;em&gt;Credential&lt;/em&gt; is used. Held un-encrypted in the database.&lt;/li&gt;&lt;li&gt;ppk - Public/Private Key file.&lt;/li&gt;&lt;li&gt;dfo- DFO filename for use with CA Harvest.&lt;/li&gt;&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;username&lt;/td&gt;
-&lt;td&gt;query&lt;/td&gt;
-&lt;td&gt;Required for &lt;em&gt;Credential&lt;/em&gt; of kind encrypted, vars or ppk. The username to be stored against the credential.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;password&lt;/td&gt;
-&lt;td&gt;query&lt;/td&gt;
-&lt;td&gt;Required for &lt;em&gt;Credential&lt;/em&gt; of kind encrypted and vars. The password to be stored against the credential.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;keyfile&lt;/td&gt;
-&lt;td&gt;query&lt;/td&gt;
-&lt;td&gt;Required for &lt;em&gt;Credential&lt;/em&gt; of kind ppk. The path of the private keyfile to be used by the credential.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;filename&lt;/td&gt;
-&lt;td&gt;query&lt;/td&gt;
-&lt;td&gt;Required for &lt;em&gt;Credential&lt;/em&gt; of kind dfo. The path of the Harvest DFO file containing the encrypted username/password.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;response-success-object&#34;&gt;Response Success Object&lt;/h4&gt;
 &lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -8556,7 +8436,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/table&gt;
 &lt;h2 id=&#34;deleting-a-credential&#34;&gt;Deleting a Credential&lt;/h2&gt;
 &lt;p&gt;This call deletes a &lt;em&gt;Credential&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapidelcredentialcred_id&#34;&gt;REST Api Endpoint /dmadminweb/API/del/credential/{cred_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -8571,7 +8451,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapidelcredentialcred_id&#34;&gt;Parameters for /dmadminweb/API/del/credential/{cred_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -8592,7 +8472,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;response-success-object-1&#34;&gt;Response Success Object&lt;/h4&gt;
 &lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -8632,13 +8512,13 @@ In order for this to work through the permission model, there has to be an &lt;e
         
         
         &lt;p&gt;&lt;em&gt;base64encode&lt;/em&gt; operates on a stream. It converts the stream content (which may contain binary data) into a base64 encoded string and returns it.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
 &lt;p&gt;Stream.base64encode()&lt;/p&gt;
 &lt;p&gt;or&lt;/p&gt;
 &lt;p&gt;base64encode(stream)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;returns&#34;&gt;Returns&lt;/h3&gt;
 &lt;p&gt;String: The base64 encoded representation of the passed stream data.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;1. _Create a string and convert it to Base64:_
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Hello DeployHub!&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; &lt;span style=&#34;color:#000&#34;&gt;$teststream&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
@@ -8683,7 +8563,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;// b64 is now a base64 encoded version of the file &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;demo1.zip&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;See Also:&lt;/strong&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See Also&lt;/h3&gt;
 &lt;p&gt;base64decode()&lt;/p&gt;
 
       </description>
@@ -8702,7 +8582,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;p&gt;This call starts a deployment of the specified &lt;em&gt;Application&lt;/em&gt; into the specified &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;In order for API deployments to work through the permission model, there has to be a Deploy task either in the &lt;em&gt;Domain&lt;/em&gt; in which the specified &lt;em&gt;Application&lt;/em&gt; is located or in any of the parent &lt;em&gt;Domains&lt;/em&gt; if the Deploy task is set to be available to &lt;em&gt;Subdomains&lt;/em&gt;. This mechanism ensures that the invoking user has permission to deploy the &lt;em&gt;Application&lt;/em&gt; (since the permissions are checked against the Task). Also, by specifying the Task to execute, any Pre and Post link &lt;em&gt;Actions&lt;/em&gt; are executed just as if the task had been invoked via the Web UI.&lt;/p&gt;
 &lt;p&gt;Note - Any additional parameters are created as Global Variables accessible with a url_prefix. For example, if you passed &amp;ldquo;myparam=123&amp;rdquo; as a parameter in the &amp;ldquo;deploy&amp;rdquo; api call, it would be available as $url_myparam.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapideployapp_idenv_id&#34;&gt;REST Api Endpoint /dmadminweb/API/deploy/{app_id}/{env_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -8717,7 +8597,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapideployapp_idenv_id&#34;&gt;Parameters for /dmadminweb/API/deploy/{app_id}/{env_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -8759,7 +8639,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Deployment Result&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;deployment-result&#34;&gt;Deployment Result&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9176,13 +9056,13 @@ In order for this to work through the permission model, there has to be an &lt;e
         
         &lt;p&gt;&lt;em&gt;basename&lt;/em&gt; returns the base filename of a specified full directory path. You can specify an optional systemtype parameter to identify the type of system the path represents. If the systemtype is not specified then the system type is taken from the &lt;em&gt;Endpoint&lt;/em&gt; currently on the stack. If no &lt;em&gt;Endpoint&lt;/em&gt; is on the stack, an exception is thrown.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;basename&lt;/em&gt; is also a method that can be called on an &lt;em&gt;Endpoint&lt;/em&gt; object. In this case, the system type is taken from the &lt;em&gt;Endpoint&lt;/em&gt; itself.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
 &lt;p&gt;basename(path [,systemtype])&lt;/p&gt;
 &lt;p&gt;or&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Server&lt;/em&gt;.basename(path)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;returns&#34;&gt;Returns&lt;/h3&gt;
 &lt;p&gt;String: The filename taken from the specified path.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;res&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; basename&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;C:\temp\myfolder\myfile.txt,&amp;#39;windows&amp;#39;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -9205,7 +9085,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;res&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;unixserv&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.basename(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;/opt/myapp/mylib.so&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;// res is mylib.so
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;See Also:&lt;/strong&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See Also&lt;/h3&gt;
 &lt;p&gt;dirname()&lt;/p&gt;
 
       </description>
@@ -9221,7 +9101,7 @@ In order for this to work through the permission model, there has to be an &lt;e
         
         
         &lt;p&gt;Retrieve deployment log. This call returns a JSON object representing the specified deployment log.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rest-api-endpoint-dmadminwebapiloglognumber&#34;&gt;REST Api Endpoint /dmadminweb/API/log/{lognumber}&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9236,7 +9116,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;parameters-for-dmadminwebapiloglognumber&#34;&gt;Parameters for /dmadminweb/API/log/{lognumber}&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9257,7 +9137,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Deployment Log Result&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;deployment-log-result&#34;&gt;Deployment Log Result&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9282,7 +9162,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Deployment Log&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;deployment-log&#34;&gt;Deployment Log&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9439,7 +9319,7 @@ In order for this to work through the permission model, there has to be an &lt;e
         &lt;h2 id=&#34;get-a-list-of-_endpoints_&#34;&gt;Get a List of &lt;em&gt;EndPoints&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;This call returns an array of JSON objects representing each &lt;em&gt;Endpoint&lt;/em&gt; to which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;p&gt;If the all parameter is not specified then only the &lt;em&gt;Endpoint&lt;/em&gt; associated with the &lt;em&gt;User&amp;rsquo;s&lt;/em&gt; home &lt;em&gt;Domain&lt;/em&gt; are listed. If the &amp;ldquo;all&amp;rdquo; parameter is specified and is set to &amp;ldquo;y&amp;rdquo;, for Yes, then the result includes the &lt;em&gt;Applications&lt;/em&gt; included in any accessible _Subdomains.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapiservers&#34;&gt;REST Api Endpoint /dmadminweb/API/servers&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9454,7 +9334,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapiservers&#34;&gt;Parameters for /dmadminweb/API/servers&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9475,7 +9355,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Endpoints&lt;/em&gt; Result&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_endpoints_-result&#34;&gt;&lt;em&gt;Endpoints&lt;/em&gt; Result&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9500,7 +9380,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Endpoint&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_endpoint_-object&#34;&gt;&lt;em&gt;Endpoint&lt;/em&gt; Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9623,7 +9503,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/table&gt;
 &lt;h2 id=&#34;retrieve-specific-_endpoint_&#34;&gt;Retrieve Specific &lt;em&gt;Endpoint&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;This call returns a JSON object representing the specified &lt;em&gt;Endpoint&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapiserveridentifier&#34;&gt;REST Api Endpoint /dmadminweb/API/server/{identifier}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9638,7 +9518,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapiserveridentifier&#34;&gt;Parameters for /dmadminweb/API/server/{identifier}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9659,7 +9539,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Responses for &lt;em&gt;Endpoint&lt;/em&gt; Result&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;responses-for-_endpoint_-result&#34;&gt;Responses for &lt;em&gt;Endpoint&lt;/em&gt; Result&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9684,7 +9564,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Endpoint&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_endpoint_-object-1&#34;&gt;&lt;em&gt;Endpoint&lt;/em&gt; Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9808,7 +9688,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;h2 id=&#34;assign-an-_endpoint_-to-an-_environment_&#34;&gt;Assign an &lt;em&gt;Endpoint&lt;/em&gt; to an &lt;em&gt;Environment&lt;/em&gt;**&lt;/h2&gt;
 &lt;p&gt;This call allows an existing &lt;em&gt;Endpoint&lt;/em&gt; to be associated with an existing &lt;em&gt;Environment&lt;/em&gt;. Once the &lt;em&gt;Endpoint&lt;/em&gt; is associated with an &lt;em&gt;Environment&lt;/em&gt; it can receive &lt;em&gt;Components&lt;/em&gt; during a deployment.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Endpoint&lt;/em&gt; can be associated with more than one &lt;em&gt;Environment&lt;/em&gt;. Assigning an &lt;em&gt;Endpoint&lt;/em&gt; to an &lt;em&gt;Environment&lt;/em&gt; will not disassociate the &lt;em&gt;Endpoint&lt;/em&gt; from any other &lt;em&gt;Environment&lt;/em&gt; with which it may be already associated. To move an &lt;em&gt;Endpoint&lt;/em&gt; between &lt;em&gt;Environments&lt;/em&gt; see  the &amp;ldquo;Disassociate an &lt;em&gt;Endpoint&lt;/em&gt; from and &lt;em&gt;Environment&lt;/em&gt;&amp;rdquo; below to remove the &lt;em&gt;Endpoint&lt;/em&gt; from the original &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapiassignserverserver_idenv_id&#34;&gt;REST Api Endpoint /dmadminweb/API/assign/server/{server_id}/{env_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9823,7 +9703,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h5 id=&#34;parameters&#34;&gt;Parameters&lt;/h5&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapiassignserverserver_idenv_id&#34;&gt;Parameters for /dmadminweb/API/assign/server/{server_id}/{env_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9851,7 +9731,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;response-success-object&#34;&gt;Response Success Object&lt;/h4&gt;
 &lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -9878,10 +9758,9 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;disassociate-a-_endpoint_-from-an-_environment_&#34;&gt;Disassociate a &lt;em&gt;Endpoint&lt;/em&gt; from an &lt;em&gt;Environment&lt;/em&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This call disassociates a server from an environment. When the server is disassociated from the environment then any subsequent deployments to that environment will not result in any files or operations being directed at the server.&lt;/p&gt;
 &lt;p&gt;This call does not delete the server - it simply disassociates it from the environment. To delete a server use the API/del/server call.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapiunassignserverserver_idenv_id&#34;&gt;REST Api Endpoint /dmadminweb/API/unassign/server/{server_id}/{env_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9896,7 +9775,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapiunassignserverserver_idenv_id&#34;&gt;Parameters for /dmadminweb/API/unassign/server/{server_id}/{env_id}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9924,7 +9803,7 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;response-success-object-1&#34;&gt;Response Success Object&lt;/h4&gt;
 &lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -10010,11 +9889,10 @@ In order for this to work through the permission model, there has to be an &lt;e
         
         
         &lt;h2 id=&#34;list-environments&#34;&gt;List Environments&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This call returns an array of JSON objects representing each &lt;em&gt;Environment&lt;/em&gt; to
 which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;p&gt;If the all parameter is not specified then only the &lt;em&gt;Environments&lt;/em&gt; associated with the &lt;em&gt;User&amp;rsquo;s&lt;/em&gt; home &lt;em&gt;Domain&lt;/em&gt; are listed. If the all parameter is specified and is set to &amp;ldquo;y&amp;rdquo;, for yes, then the result includes the &lt;em&gt;Environments&lt;/em&gt; included in any accessible &lt;em&gt;Subdomains&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapienvironments&#34;&gt;REST Api Endpoint /dmadminweb/API/environments&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10029,7 +9907,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapienvironments&#34;&gt;Parameters for /dmadminweb/API/environments&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10050,7 +9928,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Environments&lt;/em&gt; Result&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_environments_-result&#34;&gt;&lt;em&gt;Environments&lt;/em&gt; Result&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10075,7 +9953,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Environment&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_environment_-object&#34;&gt;&lt;em&gt;Environment&lt;/em&gt; Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10132,7 +10010,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;retrieve-specific-_environment_&#34;&gt;Retrieve specific &lt;em&gt;Environment&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;This call returns a JSON object representing the specified &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rest-api-endpoint-dmadminwebapienvironmentidentifier&#34;&gt;REST Api Endpoint /dmadminweb/API/environment/{identifier}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10147,7 +10025,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;parameters-for-dmadminwebapienvironmentidentifier&#34;&gt;Parameters for /dmadminweb/API/environment/{identifier}&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10168,7 +10046,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Response Success Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;response-success-object&#34;&gt;Response Success Object&lt;/h4&gt;
 &lt;p&gt;This Object contains the success/failed return code and an error message.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -10194,7 +10072,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Environments&lt;/em&gt; Result&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_environments_-result-1&#34;&gt;&lt;em&gt;Environments&lt;/em&gt; Result&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10251,7 +10129,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;The remaining parameters will depend on the chosen repository. The parameters specified will either override the defined properties (if the property is defined as &lt;em&gt;overridable&lt;/em&gt;) or will be appended to them (if the property is defined as &lt;em&gt;appendable&lt;/em&gt;). If a parameter attempts to override a property which is not defined as &lt;em&gt;overridable&lt;/em&gt; then a runtime error is thrown.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;A custom action &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; a _Component_ to post a configuration change to a DataPower web appliance:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;using stream &lt;span style=&#34;color:#000&#34;&gt;$config&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt; // create streams
@@ -10304,7 +10182,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
         
         
         &lt;p&gt;Retrieves a calendar event for an &lt;em&gt;Environment&lt;/em&gt;. This call returns a JSON object representing the events in the &lt;em&gt;Environment&lt;/em&gt; calendar. Events can be filtered based on the &lt;em&gt;Environment&lt;/em&gt; to which the calendar belongs, the &lt;em&gt;Application&lt;/em&gt; associated with the event, a date/time range or a combination of all of these.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;REST Api Endpoint&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rest-api-endpoint-dmadminwebapicalendar&#34;&gt;REST Api Endpoint /dmadminweb/API/calendar&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10319,7 +10197,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;parameters-for-dmadminwebapicalendar&#34;&gt;Parameters for /dmadminweb/API/calendar&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10361,7 +10239,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Responses for Calendar Event Result&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;responses-for-calendar-event-result&#34;&gt;Responses for Calendar Event Result&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10386,7 +10264,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Calendar Event&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_calendar-event_-object&#34;&gt;&lt;em&gt;Calendar Event&lt;/em&gt; Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10477,7 +10355,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Application&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_application_-object&#34;&gt;&lt;em&gt;Application&lt;/em&gt; Object&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10538,7 +10416,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Event Timestamp&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_event-timestamp_-object&#34;&gt;&lt;em&gt;Event Timestamp&lt;/em&gt; Object&lt;/h4&gt;
 &lt;p&gt;datetime and epoc&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -10564,7 +10442,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Event Creator&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_event-creator_-object&#34;&gt;&lt;em&gt;Event Creator&lt;/em&gt; Object&lt;/h4&gt;
 &lt;p&gt;Is an Object representing the user who created the Event.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -10590,7 +10468,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Environment Event&lt;/em&gt; Object&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_environment-event_-object&#34;&gt;&lt;em&gt;Environment Event&lt;/em&gt; Object&lt;/h4&gt;
 &lt;p&gt;Is an object representing the &lt;em&gt;Environment&lt;/em&gt;  for the Event.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -10631,7 +10509,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
         
         &lt;p&gt;&lt;em&gt;Comploop&lt;/em&gt; creates a &lt;em&gt;Component&lt;/em&gt; loop through all the &lt;em&gt;Component_s that make up the_Application&lt;/em&gt; currently on the stack.&lt;/p&gt;
 &lt;p&gt;For each iteration through the loop, DeployHub pushes the &lt;em&gt;Component&lt;/em&gt; onto the stack. It also filters the current &lt;em&gt;Endpoint&lt;/em&gt; list to only include those targeted &lt;em&gt;Endpoints&lt;/em&gt;. It then executes the code in the body of the loop. When the body has finished executing, the &lt;em&gt;Component&lt;/em&gt; is popped off the stack and the &lt;em&gt;Endpoint&lt;/em&gt; list is restored. On the subsequent iteration, the next &lt;em&gt;Component&lt;/em&gt; is pushed onto the stack and the &lt;em&gt;Endpoint&lt;/em&gt; list is re-filtered before the body of the loop is executed again.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;// Print out the _Component_s that make up the current _Application_
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -11040,7 +10918,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Iterate through the _Component_ items &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; a _Component_:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iterate&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;ci: &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Component&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.items&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;
@@ -11310,7 +11188,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Category&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Categories are used to arrange &lt;em&gt;Actions&lt;/em&gt; in an orderly manner. Assigning a Category to an &lt;em&gt;Action&lt;/em&gt; allows lists of Categories to be used throughout DeployHub. Clicking on an individual Category expands the list and shows all &lt;em&gt;Actions&lt;/em&gt; that belong to that Category. You can add a new Category by simply adding it to the list using the entry field. Pre-defined Categories include: &lt;li&gt;Build - &lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; for calling ANT (SalesForce integration).&lt;/li&gt;&lt;li&gt;Database - &lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; for database updates.&lt;/li&gt;&lt;li&gt;Deploy-&lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; for Deployments.&lt;/li&gt;&lt;li&gt;Dropzone- &lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; for interacting with the Dropzone.&lt;/li&gt;&lt;li&gt;File Logic-&lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; related to File manipulation.&lt;/li&gt;&lt;li&gt;Flow Logic-&lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; for if then else in DMScrit.&lt;/li&gt;&lt;li&gt;Loops-&lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and _Procedures_for file looping.&lt;/li&gt;&lt;li&gt;General-Non-categorized Objects (default).&lt;/li&gt;&lt;li&gt;WebLogic-&lt;em&gt;Actions&lt;/em&gt;,_Functions_and_Procedures_for deploying to WebLogic.&lt;/li&gt;&lt;li&gt;WebSphere-&lt;em&gt;Actions&lt;/em&gt;,_Functions_and_Procedures_for deploying to WebSphere.&lt;/li&gt;&lt;li&gt;Windows-&lt;em&gt;Actions, Functions_and_Procedures&lt;/em&gt; used for Windows deployments.&lt;/li&gt;&lt;/td&gt;
+&lt;td&gt;Categories are used to arrange &lt;em&gt;Actions&lt;/em&gt; in an orderly manner. Assigning a Category to an &lt;em&gt;Action&lt;/em&gt; allows lists of Categories to be used throughout DeployHub. Clicking on an individual Category expands the list and shows all &lt;em&gt;Actions&lt;/em&gt; that belong to that Category. You can add a new Category by simply adding it to the list using the entry field. Pre-defined Categories include: &lt;ul&gt;&lt;li&gt;Build - &lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; for calling ANT (SalesForce integration).&lt;/li&gt;&lt;li&gt;Database - &lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; for database updates.&lt;/li&gt;&lt;li&gt;Deploy-&lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; for Deployments.&lt;/li&gt;&lt;li&gt;Dropzone- &lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; for interacting with the Dropzone.&lt;/li&gt;&lt;li&gt;File Logic-&lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; related to File manipulation.&lt;/li&gt;&lt;li&gt;Flow Logic-&lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; for if then else in DMScript.&lt;/li&gt;&lt;li&gt;Loops-&lt;em&gt;Actions&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt; and _Procedures_for file looping.&lt;/li&gt;&lt;li&gt;General-Non-categorized Objects (default).&lt;/li&gt;&lt;li&gt;WebLogic-&lt;em&gt;Actions&lt;/em&gt;,_Functions_and_Procedures_for deploying to WebLogic.&lt;/li&gt;&lt;li&gt;WebSphere-&lt;em&gt;Actions&lt;/em&gt;,_Functions_and_Procedures_for deploying to WebSphere.&lt;/li&gt;&lt;li&gt;Windows-&lt;em&gt;Actions, Functions_and_Procedures&lt;/em&gt; used for Windows deployments.&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Owner Type&lt;/strong&gt;&lt;/td&gt;

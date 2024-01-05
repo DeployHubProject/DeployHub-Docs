@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-parallel/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-05-19T20:43:18-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Parallel">
 <meta itemprop="description" content="Execute each statement within a block simultaneously.
 ">
-<meta itemprop="dateModified" content="2020-05-19T20:43:18-06:00" />
-<meta itemprop="wordCount" content="138">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="139">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Parallel"/>
 <meta name="twitter:description" content="Execute each statement within a block simultaneously.
 "/>
@@ -449,7 +449,18 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#parallel">Parallel</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -472,12 +483,13 @@
 	<header class="article-meta">
 		
 </header>
-	<p><em>Parallel</em> executes each statement within the block simultaneously. Waits for all the statements started as part of this parallel block to finish before continuing.</p>
+	<h2 id="parallel">Parallel</h2>
+<p><em>Parallel</em> executes each statement within the block simultaneously. Waits for all the statements started as part of this parallel block to finish before continuing.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>parallel <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span> action1<span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span> action2<span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span> <span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><p><strong>Example</strong></p>
+</span></span></code></pre></div><h3 id="example">Example</h3>
 <p>In this example, action1 and action2 are executed simultaneously.</p>
 <p>Sequential</p>
 <p>Each statement within the block is executed sequentially. Within a sequential block, <em>DMScript</em> waits for each statement to complete before executing the next. Note, this is normal DeployHub operation. Sequential is usually only needed to organize sequential blocks within a parallel option.</p>
@@ -556,7 +568,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified May 19, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/aa9d9aeadf0a81214c86ed95159da4ece59f9d34">after dmscript (aa9d9ae)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/restapi/environments/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Environment APIs">
 <meta itemprop="description" content="Get a list of Environments.
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="403">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="408">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Environment APIs"/>
 <meta name="twitter:description" content="Get a list of Environments.
 "/>
@@ -452,8 +452,18 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#list-environments">List Environments</a></li>
-    <li><a href="#retrieve-specific-_environment_">Retrieve specific <em>Environment</em></a></li>
+    <li><a href="#list-environments">List Environments</a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapienvironments">REST Api Endpoint /dmadminweb/API/environments</a></li>
+        <li><a href="#parameters-for-dmadminwebapienvironments">Parameters for /dmadminweb/API/environments</a></li>
+      </ul>
+    </li>
+    <li><a href="#retrieve-specific-_environment_">Retrieve specific <em>Environment</em></a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapienvironmentidentifier">REST Api Endpoint /dmadminweb/API/environment/{identifier}</a></li>
+        <li><a href="#parameters-for-dmadminwebapienvironmentidentifier">Parameters for /dmadminweb/API/environment/{identifier}</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -481,11 +491,10 @@
 		
 </header>
 	<h2 id="list-environments">List Environments</h2>
-<p><strong>Description</strong></p>
 <p>This call returns an array of JSON objects representing each <em>Environment</em> to
 which the logged-in <em>User</em> has access.</p>
 <p>If the all parameter is not specified then only the <em>Environments</em> associated with the <em>User&rsquo;s</em> home <em>Domain</em> are listed. If the all parameter is specified and is set to &ldquo;y&rdquo;, for yes, then the result includes the <em>Environments</em> included in any accessible <em>Subdomains</em>.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapienvironments">REST Api Endpoint /dmadminweb/API/environments</h3>
 <table>
 <thead>
 <tr>
@@ -500,7 +509,7 @@ which the logged-in <em>User</em> has access.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapienvironments">Parameters for /dmadminweb/API/environments</h3>
 <table>
 <thead>
 <tr>
@@ -521,7 +530,7 @@ which the logged-in <em>User</em> has access.</p>
 </tr>
 </tbody>
 </table>
-<p><strong><em>Environments</em> Result</strong></p>
+<h4 id="_environments_-result"><em>Environments</em> Result</h4>
 <table>
 <thead>
 <tr>
@@ -546,7 +555,7 @@ which the logged-in <em>User</em> has access.</p>
 </tr>
 </tbody>
 </table>
-<p><strong><em>Environment</em> Object</strong></p>
+<h4 id="_environment_-object"><em>Environment</em> Object</h4>
 <table>
 <thead>
 <tr>
@@ -603,7 +612,7 @@ which the logged-in <em>User</em> has access.</p>
 </table>
 <h2 id="retrieve-specific-_environment_">Retrieve specific <em>Environment</em></h2>
 <p>This call returns a JSON object representing the specified <em>Environment</em>.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapienvironmentidentifier">REST Api Endpoint /dmadminweb/API/environment/{identifier}</h3>
 <table>
 <thead>
 <tr>
@@ -618,7 +627,7 @@ which the logged-in <em>User</em> has access.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapienvironmentidentifier">Parameters for /dmadminweb/API/environment/{identifier}</h3>
 <table>
 <thead>
 <tr>
@@ -639,7 +648,7 @@ which the logged-in <em>User</em> has access.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Response Success Object</strong></p>
+<h4 id="response-success-object">Response Success Object</h4>
 <p>This Object contains the success/failed return code and an error message.</p>
 <table>
 <thead>
@@ -665,7 +674,7 @@ which the logged-in <em>User</em> has access.</p>
 </tr>
 </tbody>
 </table>
-<p><strong><em>Environments</em> Result</strong></p>
+<h4 id="_environments_-result-1"><em>Environments</em> Result</h4>
 <table>
 <thead>
 <tr>
@@ -748,7 +757,7 @@ which the logged-in <em>User</em> has access.</p>
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

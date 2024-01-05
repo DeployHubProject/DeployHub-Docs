@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-instr/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-15T10:20:11-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Instr">
 <meta itemprop="description" content="Search a string looking for the first instance of the specified string. 
 ">
-<meta itemprop="dateModified" content="2020-06-15T10:20:11-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="94">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Instr"/>
 <meta name="twitter:description" content="Search a string looking for the first instance of the specified string. 
@@ -449,7 +449,21 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#example">Example</a></li>
+        <li><a href="#see-also">See Also</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -473,16 +487,16 @@
 		
 </header>
 	<p>instr searches a string looking for the first instance of the specified search string. If the search string is located in the source string, then its starting position is returned. The first character in a string is position 0. If the search string cannot be found within the source string, instr returns -1.</p>
-<p><strong>Usage:</strong></p>
+<h3 id="usage">Usage</h3>
 <p>String.instr(searchString)</p>
 <p>or</p>
 <p>instr(String,searchString)</p>
-<p><strong>Returns:</strong></p>
+<h3 id="returns">Returns</h3>
 <p>Integer: An index position (starting at 0) representing the location of searchString within String. -1 if searchString does not appear in String.</p>
-<p><strong>Example:</strong></p>
+<h3 id="example">Example</h3>
 <p>set a=&ldquo;Hello There&rdquo;;</p>
 <p>echo ${a.instr(&ldquo;The&rdquo;)}; // echoes 6</p>
-<p><strong>See Also:</strong></p>
+<h3 id="see-also">See Also</h3>
 <p>substr(), regsub(), length()</p>
 
 	<style>
@@ -542,7 +556,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 15, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/102cb1abc9a119dc45ffe0452c007961490d86e9">Remove extra headers in DMScript (102cb1a)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

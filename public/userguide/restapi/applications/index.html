@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/restapi/applications/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Application APIs">
 <meta itemprop="description" content="APIs for Applications.
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="1727">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="1748">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Application APIs"/>
 <meta name="twitter:description" content="APIs for Applications.
 "/>
@@ -452,13 +452,48 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#get-a-list-_applications_">Get a List <em>Applications</em></a></li>
-    <li><a href="#retrieve-specific-_application_-or-_application-version_">Retrieve specific <em>Application</em> or <em>Application Version</em></a></li>
-    <li><a href="#create-new-application-version">Create New Application Version</a></li>
-    <li><a href="#replace-component">Replace Component</a></li>
-    <li><a href="#approving-an-application">Approving an Application</a></li>
-    <li><a href="#associate-an-_application_-to-an-_environment_">Associate an <em>Application</em> to an <em>Environment</em></a></li>
-    <li><a href="#disassociates-an-_application_-from-an-_environment_">Disassociates an <em>Application</em> from an <em>Environment</em></a></li>
+    <li><a href="#get-a-list-_applications_">Get a List <em>Applications</em></a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapiapplications">REST Api Endpoint /dmadminweb/API/applications</a></li>
+        <li><a href="#parameters-for-dmadminwebapiapplications">Parameters for /dmadminweb/API/applications</a></li>
+      </ul>
+    </li>
+    <li><a href="#retrieve-specific-_application_-or-_application-version_">Retrieve specific <em>Application</em> or <em>Application Version</em></a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapiapplicationidentifier">REST Api Endpoint /dmadminweb/API/application/{identifier}</a></li>
+        <li><a href="#parameters-for-dmadminwebapiapplicationidentifier">Parameters for /dmadminweb/API/application/{identifier}</a></li>
+      </ul>
+    </li>
+    <li><a href="#create-new-application-version">Create New Application Version</a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapinewappverapp_id">REST Api Endpoint /dmadminweb/API/new/appver/{app_id}</a></li>
+        <li><a href="#parameters-for-dmadminwebapinewappverapp_id">Parameters for /dmadminweb/API/new/appver/{app_id}</a></li>
+      </ul>
+    </li>
+    <li><a href="#replace-component">Replace Component</a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapinewreplaceapp_idold_comp_idnew_comp_id">REST Api Endpoint /dmadminweb/API/new/replace/{app_id}/{old_comp_id}/{new_comp_id}</a></li>
+        <li><a href="#parameters-for-dmadminwebapinewreplaceapp_idold_comp_idnew_comp_id">Parameters for /dmadminweb/API/new/replace/{app_id}/{old_comp_id}/{new_comp_id}</a></li>
+      </ul>
+    </li>
+    <li><a href="#approving-an-application">Approving an Application</a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapiapproveapp_id">REST Api Endpoint /dmadminweb/API/approve/{app_id}</a></li>
+        <li><a href="#parameters-for-dmadminwebapiapproveapp_id">Parameters for /dmadminweb/API/approve/{app_id}</a></li>
+      </ul>
+    </li>
+    <li><a href="#associate-an-_application_-to-an-_environment_">Associate an <em>Application</em> to an <em>Environment</em></a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapiassignapplicationapp_idenv_id">REST Api Endpoint /dmadminweb/API/assign/application/{app_id}/{env_id}</a></li>
+        <li><a href="#parameters-for-dmadminwebapiassignapplicationapp_idenv_id">Parameters for /dmadminweb/API/assign/application/{app_id}/{env_id}</a></li>
+      </ul>
+    </li>
+    <li><a href="#disassociates-an-_application_-from-an-_environment_">Disassociates an <em>Application</em> from an <em>Environment</em></a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapiunassignapplicationapp_idenv_id">REST Api Endpoint /dmadminweb/API/unassign/application/{app_id}/{env_id}</a></li>
+        <li><a href="#parameters-for-dmadminwebapiunassignapplicationapp_idenv_id">Parameters for /dmadminweb/API/unassign/application/{app_id}/{env_id}</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -488,7 +523,7 @@
 	<h2 id="get-a-list-_applications_">Get a List <em>Applications</em></h2>
 <p>This call returns an array of JSON objects representing each <em>Application</em> to which the logged-in <em>User</em> has access.</p>
 <p>If the &ldquo;all&rdquo; parameters is not specified then only the <em>Applications</em> associated with the <em>User&rsquo;s</em> home <em>Domain</em> are listed. If the &ldquo;all&rdquo; parameter is specified by setting it to &ldquo;y&rdquo; then the result includes the <em>Applications</em> in all accessible <em>Subdomains</em>.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapiapplications">REST Api Endpoint /dmadminweb/API/applications</h3>
 <table>
 <thead>
 <tr>
@@ -503,7 +538,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapiapplications">Parameters for /dmadminweb/API/applications</h3>
 <table>
 <thead>
 <tr>
@@ -524,7 +559,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Application</em> Result Object</strong></p>
+<h4 id="_application_-result-object"><em>Application</em> Result Object</h4>
 <table>
 <thead>
 <tr>
@@ -549,7 +584,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Application</em> Object</strong></p>
+<h4 id="_application_-object"><em>Application</em> Object</h4>
 <table>
 <thead>
 <tr>
@@ -610,7 +645,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Application Version</em> Object</strong></p>
+<h4 id="_application-version_-object"><em>Application Version</em> Object</h4>
 <table>
 <thead>
 <tr>
@@ -643,7 +678,7 @@
 </table>
 <h2 id="retrieve-specific-_application_-or-_application-version_">Retrieve specific <em>Application</em> or <em>Application Version</em></h2>
 <p>This call returns a JSON object representing the specified <em>Application</em>. The resulting JSON will vary slightly depending on whether the specified <em>Application</em> is an <em>Application Base Version</em> or an <em>Application Version</em>.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapiapplicationidentifier">REST Api Endpoint /dmadminweb/API/application/{identifier}</h3>
 <table>
 <thead>
 <tr>
@@ -658,7 +693,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapiapplicationidentifier">Parameters for /dmadminweb/API/application/{identifier}</h3>
 <table>
 <thead>
 <tr>
@@ -693,7 +728,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Application Version</em> Result Object</strong></p>
+<h4 id="_application-version_-result-object"><em>Application Version</em> Result Object</h4>
 <table>
 <thead>
 <tr>
@@ -718,7 +753,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Application Version</em> Object</strong></p>
+<h4 id="_application-version_-object-1"><em>Application Version</em> Object</h4>
 <table>
 <thead>
 <tr>
@@ -752,7 +787,7 @@
 <h2 id="create-new-application-version">Create New Application Version</h2>
 <p>This call creates a new <em>Application Version</em>. The new <em>Application Version</em> inherits all the attributes of the predecessor <em>Application</em>. In order for this to work through the permission model, there has to be a <em>Create Version Task</em> either in the <em>Domain</em> in which the specified <em>Application</em> is located or in any of the parent <em>Domains</em> as long as the <em>Create Version Task</em> is set to be &ldquo;available&rdquo; to <em>Subdomains</em>.</p>
 <p>This mechanism ensures that the invoking user has permission to create a new version of the <em>Application</em> (since the permissions are checked against the <em>Task</em>) and also the target <em>Domain</em> (i.e. the <em>Domain</em> in which the new <em>Application</em> is created) is determined from the <em>Task</em>. Also, by specifying the <em>Task</em> to execute, any pre and post link <em>Actions</em> are executed just as if the <em>Task</em> had been invoked via the Web UI.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapinewappverapp_id">REST Api Endpoint /dmadminweb/API/new/appver/{app_id}</h3>
 <table>
 <thead>
 <tr>
@@ -767,7 +802,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapinewappverapp_id">Parameters for /dmadminweb/API/new/appver/{app_id}</h3>
 <table>
 <thead>
 <tr>
@@ -795,7 +830,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Response Success Object</strong></p>
+<h4 id="response-success-object">Response Success Object</h4>
 <p>This Object contains the success/failed return code and an error message.</p>
 <table>
 <thead>
@@ -823,7 +858,7 @@
 </table>
 <h2 id="replace-component">Replace Component</h2>
 <p>Replace a <em>Component</em> within an <em>Application</em>. This call replaces a specific <em>Component</em> within an <em>Application</em>. You can use this to update the version of a <em>Component</em> within an <em>Application</em> by replacing the old <em>Component Version</em> with the new.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapinewreplaceapp_idold_comp_idnew_comp_id">REST Api Endpoint /dmadminweb/API/new/replace/{app_id}/{old_comp_id}/{new_comp_id}</h3>
 <table>
 <thead>
 <tr>
@@ -838,7 +873,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapinewreplaceapp_idold_comp_idnew_comp_id">Parameters for /dmadminweb/API/new/replace/{app_id}/{old_comp_id}/{new_comp_id}</h3>
 <table>
 <thead>
 <tr>
@@ -873,7 +908,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Response Success Object</strong></p>
+<h4 id="response-success-object-1">Response Success Object</h4>
 <p>This Object contains the success/failed return code and an error message.</p>
 <table>
 <thead>
@@ -903,7 +938,7 @@
 <p>This call allows the API to approve/reject an <em>Application</em> for a specified <em>Domain</em>.
 In order for this to work through the permission model, there has to be an <em>Approve Task</em> either in the <em>Domain</em> in which the specified <em>Application</em> is located or in any of the parent <em>Domains</em> as long as the <em>Approve Task</em> is set to be &ldquo;available&rdquo; to <em>Subdomains</em>.</p>
 <p>This mechanism ensures that the invoking user has permission to approve the <em>Application</em> (since the permissions are checked against the named <em>Task</em>) and also the target <em>Domain</em> (i.e. the <em>Domain</em> to which the <em>Application</em> is being approved/rejected) is determined from the <em>Task</em>. Also, by specifying the <em>Task</em> to execute, any Pre and Post <em>Actions</em> are executed just as if the <em>Task</em> had been invoked via the Web UI.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapiapproveapp_id">REST Api Endpoint /dmadminweb/API/approve/{app_id}</h3>
 <table>
 <thead>
 <tr>
@@ -918,7 +953,7 @@ In order for this to work through the permission model, there has to be an <em>A
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapiapproveapp_id">Parameters for /dmadminweb/API/approve/{app_id}</h3>
 <table>
 <thead>
 <tr>
@@ -960,7 +995,7 @@ In order for this to work through the permission model, there has to be an <em>A
 </tr>
 </tbody>
 </table>
-<p><strong>Response Success Object</strong></p>
+<h4 id="response-success-object-2">Response Success Object</h4>
 <p>This Object contains the success/failed return code and an error message.</p>
 <table>
 <thead>
@@ -988,7 +1023,7 @@ In order for this to work through the permission model, there has to be an <em>A
 </table>
 <h2 id="associate-an-_application_-to-an-_environment_">Associate an <em>Application</em> to an <em>Environment</em></h2>
 <p>This call associates an existing <em>Application</em> with an <em>Environment</em>. This association allows the <em>Application</em> (or any of its Versions) to be deployed to that <em>Environment</em>. An <em>Application</em> needs to be assigned to an <em>Environment</em> before it can be deployed to that <em>Environment</em>.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapiassignapplicationapp_idenv_id">REST Api Endpoint /dmadminweb/API/assign/application/{app_id}/{env_id}</h3>
 <table>
 <thead>
 <tr>
@@ -999,11 +1034,11 @@ In order for this to work through the permission model, there has to be an <em>A
 <tbody>
 <tr>
 <td>GET</td>
-<td>/dmadminweb/API/approve/{app_id}</td>
+<td>/dmadminweb/API/assign/application/{app_id}/{env_id}</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapiassignapplicationapp_idenv_id">Parameters for /dmadminweb/API/assign/application/{app_id}/{env_id}</h3>
 <table>
 <thead>
 <tr>
@@ -1031,7 +1066,7 @@ In order for this to work through the permission model, there has to be an <em>A
 </tr>
 </tbody>
 </table>
-<p><strong>Response Success Object</strong></p>
+<h4 id="response-success-object-3">Response Success Object</h4>
 <p>This Object contains the success/failed return code and an error message.</p>
 <table>
 <thead>
@@ -1060,7 +1095,7 @@ In order for this to work through the permission model, there has to be an <em>A
 <h2 id="disassociates-an-_application_-from-an-_environment_">Disassociates an <em>Application</em> from an <em>Environment</em></h2>
 <p>This call removes, or disassociates, an <em>Application</em> from an <em>Environment</em>. Once the <em>Application</em> has been disassociated from the <em>Environment</em> neither it nor any of its Versions can be deployed to that <em>Environment</em>.</p>
 <p>Disassociating an <em>Application</em> from an <em>Environment</em> does not physically remove the <em>Application</em> from the <em>Environment</em>. It simply prevents deploying any Version of the <em>Application</em> to the <em>Environment</em>.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapiunassignapplicationapp_idenv_id">REST Api Endpoint /dmadminweb/API/unassign/application/{app_id}/{env_id}</h3>
 <table>
 <thead>
 <tr>
@@ -1075,7 +1110,7 @@ In order for this to work through the permission model, there has to be an <em>A
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapiunassignapplicationapp_idenv_id">Parameters for /dmadminweb/API/unassign/application/{app_id}/{env_id}</h3>
 <table>
 <thead>
 <tr>
@@ -1103,7 +1138,7 @@ In order for this to work through the permission model, there has to be an <em>A
 </tr>
 </tbody>
 </table>
-<p><strong>Response Success Object</strong></p>
+<h4 id="response-success-object-4">Response Success Object</h4>
 <p>This Object contains the success/failed return code and an error message.</p>
 <table>
 <thead>
@@ -1187,7 +1222,7 @@ In order for this to work through the permission model, there has to be an <em>A
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

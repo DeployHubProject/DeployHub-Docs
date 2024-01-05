@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-octal/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-15T10:20:11-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Octal">
 <meta itemprop="description" content="Convert any value into an octal representation. 
 ">
-<meta itemprop="dateModified" content="2020-06-15T10:20:11-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="141">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Octal"/>
 <meta name="twitter:description" content="Convert any value into an octal representation. 
@@ -449,7 +449,21 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#see-also">See Also</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -473,15 +487,15 @@
 		
 </header>
 	<p>octal converts any value that can be converted into an integer (boolean, integer, a string containing only numeric characters or a date) into an octal representation. An optional base parameter specifies the base to be used when converting the string. If no base parameter is given, base defaults to 10.</p>
-<p><strong>Usage:</strong></p>
+<h3 id="usage">Usage</h3>
 <p>value.octal([base])</p>
 <p>or</p>
 <p>octal($value[,base])</p>
 <p>Where:</p>
 <p>base is the base to be used when performing the conversion.</p>
-<p><strong>Returns:</strong></p>
+<h3 id="returns">Returns</h3>
 <p>String.</p>
-<p><strong>Examples:</strong></p>
+<h3 id="examples">Examples</h3>
 <p>Convert a Unix file permission mask (-rwxrwxrwx) into its Octal equivalent suitable for a chmod operation.</p>
 <p>set perms=&quot;-rwxr-xr-x&quot;;</p>
 <p>echo &ldquo;perms is $perms&rdquo;;</p>
@@ -493,7 +507,7 @@
 <p>Result:</p>
 <p>perms is -rwxr-xr-x</p>
 <p>chmod 755</p>
-<p><strong>See Also:</strong></p>
+<h3 id="see-also">See Also</h3>
 <p>hex(), decimal()</p>
 
 	<style>
@@ -553,7 +567,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 15, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/102cb1abc9a119dc45ffe0452c007961490d86e9">Remove extra headers in DMScript (102cb1a)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

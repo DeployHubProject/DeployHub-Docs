@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-xpathnotation/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Xpath Notation">
 <meta itemprop="description" content="Identify the elements to change in an XML document.  
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="2015">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="2057">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Xpath Notation"/>
 <meta name="twitter:description" content="Identify the elements to change in an XML document.  
 "/>
@@ -452,11 +452,47 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#text_replace">Text_replace</a></li>
-    <li><a href="#set_text">Set_Text</a></li>
-    <li><a href="#add_element">Add_element</a></li>
-    <li><a href="#set_attribute">Set_attribute</a></li>
-    <li><a href="#remove_element">Remove_element</a></li>
+    <li><a href="#xpath">XPath</a></li>
+    <li><a href="#text_replace">Text_replace</a>
+      <ul>
+        <li><a href="#example-1">Example 1</a></li>
+        <li><a href="#example-2">Example 2</a></li>
+        <li><a href="#example-3">Example 3</a></li>
+      </ul>
+    </li>
+    <li><a href="#set_text">Set_Text</a>
+      <ul>
+        <li><a href="#example-4">Example 4</a></li>
+        <li><a href="#example-5">Example 5</a></li>
+      </ul>
+    </li>
+    <li><a href="#add_element">Add_element</a>
+      <ul>
+        <li><a href="#example-6">Example 6</a></li>
+        <li><a href="#example-6-result">Example 6 Result</a></li>
+        <li><a href="#example-7">Example 7</a></li>
+        <li><a href="#example-8">Example 8</a></li>
+        <li><a href="#example-9">Example 9</a></li>
+        <li><a href="#example-10">Example 10</a></li>
+        <li><a href="#example-11">Example 11</a></li>
+        <li><a href="#example-12">Example 12</a></li>
+        <li><a href="#example-13">Example 13</a></li>
+      </ul>
+    </li>
+    <li><a href="#set_attribute">Set_attribute</a>
+      <ul>
+        <li><a href="#example-14">Example 14</a></li>
+        <li><a href="#example-15">Example 15</a></li>
+        <li><a href="#example-16">Example 16</a></li>
+      </ul>
+    </li>
+    <li><a href="#remove_element">Remove_element</a>
+      <ul>
+        <li><a href="#example-17">Example 17</a></li>
+        <li><a href="#example-18">Example 18</a></li>
+        <li><a href="#example-19">Example 19</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -483,7 +519,8 @@
 	<header class="article-meta">
 		
 </header>
-	<p><em>Xpath notation</em> supports subset of xpath notation to identify the elements to change in an XML document. The following restrictions apply:</p>
+	<h2 id="xpath">XPath</h2>
+<p><em>Xpath notation</em> supports subset of xpath notation to identify the elements to change in an XML document. The following restrictions apply:</p>
 <ul>
 <li>All parent elements must be identified using a full path, starting from the root node.</li>
 <li>Wildcards are not permitted.</li>
@@ -562,7 +599,7 @@
 </tr>
 </tbody>
 </table>
-<p><em><strong>Example:</strong></em></p>
+<h3 id="example-1">Example 1</h3>
 <p>Assuming we have a file called &ldquo;config.txt&rdquo; which looks like this:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Stack: <span style="color:#4e9a06">\_</span>STACK<span style="color:#4e9a06">\_</span>
 </span></span><span style="display:flex;"><span>
@@ -589,7 +626,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
 </span></span></code></pre></div><p>In this case, an implicit loop is performed for each <em>Endpoint</em> in the current <em>Endpoint</em> list. This pushes each <em>Endpoint</em> in turn (along with its <em>Endpoint</em> attributes STACK and MEMORY) onto the stack. The file is then modified and a copy taken for each <em>Endpoint</em>. During a subsequent deployment, the version of the file specific to each <em>Endpoint</em> is deployed, so each <em>Endpoint</em> gets its own copy of the file with STACK and MEMORY set appropriately.</p>
-<p><strong>Examples:</strong></p>
+<h3 id="example-2">Example 2</h3>
 <p>Add an extra line to the end of the file:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;config.txt&#39;</span>, modifier: <span style="color:#4e9a06">&#34;text&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -609,7 +646,7 @@
 </span></span><span style="display:flex;"><span>Restart: Yes
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>MaxDisk: 20G
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span></code></pre></div><h3 id="example-3">Example 3</h3>
 <p>Add an entry to the start of the file:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;trans.txt&#39;</span>, modifier: <span style="color:#4e9a06">&#34;text&#34;</span>, serverspecific:true<span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -622,16 +659,12 @@
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
 </span></span></code></pre></div><p>As we have not specified line processing mode, the regular expression ^ refers to the beginning of the file. The new config directive is then added at the end of the file.</p>
 <p>Assuming MAXDISK is set to 20G in the targeted <em>Environment</em> the result will be something like:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>MaxDisk: 20G
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Stack: 128M
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Memory: 1024M
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Restart: Yes
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Example: Use line processing mode to add an automatic comment to every line. This uses the regular expression substitution markers <span style="color:#4e9a06">&#34;(&#34;</span> and <span style="color:#4e9a06">&#34;)&#34;</span> and replaces them in the target string by using <span style="color:#4e9a06">\1</span>, <span style="color:#4e9a06">\2</span> etc.
-</span></span><span style="display:flex;"><span>
+<p>MaxDisk: 20G
+Stack: 128M
+Memory: 1024M
+Restart: Yes</p>
+<p>Example: Use line processing mode to add an automatic comment to every line. This uses the regular expression substitution markers &ldquo;(&rdquo; and &ldquo;)&rdquo; and replaces them in the target string by using \1, \2 etc.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;config.txt&#39;</span>, modifier: <span style="color:#4e9a06">&#34;text&#34;</span>, serverspecific: <span style="color:#204a87">true</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>text<span style="color:#4e9a06">\_</span>replace<span style="color:#ce5c00;font-weight:bold">(</span>find: <span style="color:#4e9a06">&#34;\_STACK\_&#34;</span>, replace: <span style="color:#4e9a06">&#34;</span><span style="color:#000">$STACK</span><span style="color:#4e9a06">&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
@@ -647,14 +680,10 @@
 </span></span><span style="display:flex;"><span>line: <span style="color:#204a87">true</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Stack: 128M // <span style="color:#204a87">set</span> Stack to 128M
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Memory: 1024M // <span style="color:#204a87">set</span> Memory to 1024M
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Restart: Yes // <span style="color:#204a87">set</span> Restarts to Yes
+</span></span></code></pre></div><h4 id="result">Result</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Stack: 128M // set Stack to 128M
+</span></span><span style="display:flex;"><span>Memory: 1024M // set Memory to 1024M
+</span></span><span style="display:flex;"><span>Restart: Yes // set Restarts to Yes
 </span></span></code></pre></div><h2 id="set_text">Set_Text</h2>
 <p><em>Set_text</em> can only be included if the modifier parameter in the parent modify statement is set to &ldquo;xml&rdquo;. It is used to set the text of the specified XML element(s).</p>
 <p><em>set_text</em> takes two named parameters:</p>
@@ -672,7 +701,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Examples:</strong></p>
+<h3 id="example-4">Example 4</h3>
 <p>Given an input file &ldquo;servers.xml&rdquo; that looks like this:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
 </span></span><span style="display:flex;"><span>
@@ -703,13 +732,9 @@
 </span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span><span style="color:#4e9a06">\&gt;</span>server<span style="color:#4e9a06">\_</span>text<span style="color:#4e9a06">\&lt;</span>/server<span style="color:#4e9a06">\&gt;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">```</span>~
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>NOTE: If the selected element<span style="color:#ce5c00;font-weight:bold">(</span>s<span style="color:#ce5c00;font-weight:bold">)</span> already have text, <span style="color:#204a87;font-weight:bold">then</span> that text is replaced by the _set<span style="color:#4e9a06">\_</span>text_ operation.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>### Examples
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">```</span>bash
-</span></span><span style="display:flex;"><span>Set text <span style="color:#204a87;font-weight:bold">for</span> _Endpoints_ of <span style="color:#204a87">type</span> <span style="color:#4e9a06">&#34;windows&#34;</span>:
+</span></span></code></pre></div><p>NOTE: If the selected element(s) already have text, then that text is replaced by the <em>set_text</em> operation.</p>
+<h3 id="example-5">Example 5</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Set text <span style="color:#204a87;font-weight:bold">for</span> _Endpoints_ of <span style="color:#204a87">type</span> <span style="color:#4e9a06">&#34;windows&#34;</span>:
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;testfile.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -718,18 +743,17 @@
 </span></span><span style="display:flex;"><span>value: <span style="color:#4e9a06">&#34;server\_text&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="example-5-result">Example 5 Result</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server1&#34; type=&#34;unix&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server2&#34; type=&#34;windows&#34;\&gt;server\_text\&lt;/server\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server2&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span><span style="color:#4e9a06">\&gt;</span>server<span style="color:#4e9a06">\_</span>text<span style="color:#4e9a06">\&lt;</span>/server<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;/deployhub\&gt;
 </span></span></code></pre></div><h2 id="add_element">Add_element</h2>
 <p>This statement can only be included if the modifier parameter in the parent modify statement is set to &ldquo;xml&rdquo;. It is used to add an XML element into an XML document.</p>
 <p><em>add_element</em> takes three named parameters:</p>
@@ -767,7 +791,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Examples:</strong></p>
+<h3 id="example-6">Example 6</h3>
 <p>Given an input file &ldquo;servers.xml&rdquo; that looks like this:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
 </span></span><span style="display:flex;"><span>
@@ -778,41 +802,38 @@
 </span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Add a <span style="color:#4e9a06">&#34;_Component_&#34;</span> element to each _Endpoint_:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span></code></pre></div><p>Add a &ldquo;<em>Component</em>&rdquo; element to each <em>Endpoint</em>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>add<span style="color:#4e9a06">\_</span>element<span style="color:#ce5c00;font-weight:bold">(</span>xpath: <span style="color:#4e9a06">&#34;/deployhub/server&#34;</span>,
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>pos: <span style="color:#4e9a06">&#34;inside&#34;</span>, value: <span style="color:#4e9a06">&#39;\&lt;_Component_ name=&#34;mycomp&#34; /\&gt;&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="example-6-result">Example 6 Result</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server1&#34; type=&#34;unix&#34;\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;_Component_ name=&#34;mycomp&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span><span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;/server\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>_Component_ <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;mycomp&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server2&#34; type=&#34;windows&#34;\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/server<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;_Component_ name=&#34;mycomp&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server2&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span><span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;/server\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>_Component_ <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;mycomp&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34;\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/server<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;_Component_ name=&#34;mycomp&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span><span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;/server\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>_Component_ <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;mycomp&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/server<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span><span style="display:flex;"><span>\&lt;/deployhub\&gt;
+</span></span></code></pre></div><h3 id="example-7">Example 7</h3>
 <p>Add a &ldquo;<em>Component</em>&rdquo; element to the second &ldquo;server&rdquo; element:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -821,23 +842,21 @@
 </span></span><span style="display:flex;"><span>pos: <span style="color:#4e9a06">&#34;inside&#34;</span>, value: <span style="color:#4e9a06">&#39;\&lt;_Component_ name=&#34;mycomp&#34; /\&gt;&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="example-7-result">Example 7 Result</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server1&#34; type=&#34;unix&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server2&#34; type=&#34;windows&#34;\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;_Component_ name=&#34;mycomp&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server2&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span><span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;/server\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>_Component_ <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;mycomp&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/server<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span><span style="display:flex;"><span>\&lt;/deployhub\&gt;
+</span></span></code></pre></div><h3 id="example-8">Example 8</h3>
 <p>Add a &ldquo;<em>Component</em>&rdquo; element to each server of type &ldquo;unix&rdquo;:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -846,23 +865,21 @@
 </span></span><span style="display:flex;"><span>pos: <span style="color:#4e9a06">&#34;inside&#34;</span>, value: <span style="color:#4e9a06">&#39;\&lt;_Component_ name=&#34;mycomp&#34; /\&gt;&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="example-8-result">Example 8 Result</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server1&#34; type=&#34;unix&#34;\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;_Component_ name=&#34;mycomp&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span><span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;/server\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>_Component_ <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;mycomp&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server2&#34; type=&#34;windows&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/server<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server2&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span><span style="display:flex;"><span>\&lt;/deployhub\&gt;
+</span></span></code></pre></div><h3 id="example-9">Example 9</h3>
 <p>Add different <em>Component</em> elements to <em>Endpoints</em> of specific types:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -875,27 +892,25 @@
 </span></span><span style="display:flex;"><span>pos: <span style="color:#4e9a06">&#34;inside&#34;</span>, value: <span style="color:#4e9a06">&#39;\&lt;_Component_ name=&#34;mycomp2&#34; /\&gt;&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="example-9-result">Example 9 Result</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server1&#34; type=&#34;unix&#34;\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;_Component_ name=&#34;mycomp1&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span><span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;/server\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>_Component_ <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;mycomp1&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server2&#34; type=&#34;windows&#34;\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/server<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;_Component_ name=&#34;mycomp2&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server2&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span><span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;/server\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>_Component_ <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;mycomp2&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/server<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/ deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span><span style="display:flex;"><span>\&lt;/ deployhub\&gt;
+</span></span></code></pre></div><h3 id="example-10">Example 10</h3>
 <p>Add a new &ldquo;server&rdquo; element:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -906,21 +921,20 @@
 </span></span><span style="display:flex;"><span>value: <span style="color:#4e9a06">&#39;\&lt;server name=&#34;server4&#34; type=&#34;windows&#34; /\&gt;&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="example-10-result">Example 10 Result</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server1&#34; type=&#34;unix&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server2&#34; type=&#34;windows&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server2&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server4&#34; type=&#34;windows&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server4&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span><span style="display:flex;"><span>\&lt;/deployhub\&gt;
+</span></span></code></pre></div><h3 id="example-11">Example 11</h3>
 <p>Add a &ldquo;<em>Component</em>&rdquo; element to every <em>Endpoint</em> apart from the first one.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -929,27 +943,25 @@
 </span></span><span style="display:flex;"><span>pos: <span style="color:#4e9a06">&#34;inside&#34;</span>, value: <span style="color:#4e9a06">&#39;\&lt;_Component_ name=&#34;mycomp&#34; /\&gt;&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="example-11-result">Example 11 Result</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server1&#34; type=&#34;unix&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server2&#34; type=&#34;windows&#34;\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;_Component_ name=&#34;mycomp&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server2&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span><span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;/server\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>_Component_ <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;mycomp&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34;\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/server<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;_Component_ name=&#34;mycomp&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span><span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;/server\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>_Component_ <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;mycomp&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/server<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span><span style="display:flex;"><span>\&lt;/deployhub\&gt;
+</span></span></code></pre></div><h3 id="example-12">Example 12</h3>
 <p>Create an entry specific for each <em>Endpoint</em> in the targeted <em>Environment</em>.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span>, serverspecific: <span style="color:#204a87">true</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -962,7 +974,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#4e9a06">&#34; type=&#39;</span><span style="color:#4e9a06">${</span><span style="color:#000">server</span><span style="color:#000;font-weight:bold">.type</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#39; /\&gt;&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span></code></pre></div><h3 id="example-13">Example 13</h3>
 <p>This example shows several techniques:</p>
 <ol>
 <li>The serverspecific flag performs an implicit loop through all the <em>Endpoints</em> in the current <em>Endpoint</em> list.</li>
@@ -971,35 +983,33 @@
 <li>Note the value string is made up of two concatenated strings.</li>
 <li>The value string is surrounded by double quotes in order that variable expansion (of the $server attributes name and type) can occur. To ensure the XML is syntactically correct, the values are surrounded by single quotes. This will not prevent variable expansion because the single quotes are effectively &ldquo;escaped&rdquo; by the surrounding double quotes (this is identical to the way Linux/Unix shells perform expansion). The XML parser will substitute double quotes.</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Result:
+<h4 id="example-13-result">Example 13 Result</h4>
+<p>Transferred to <em>Endpoint</em> &ldquo;midtier1&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Transferred to _Endpoint_ <span style="color:#4e9a06">&#34;midtier1&#34;</span>:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server1&#34; type=&#34;unix&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server2&#34; type=&#34;windows&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server2&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;midtier1&#34; type=&#34;unix&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;/deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;midtier1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>Transferred to _Endpoint_ &#34;fronttier1&#34;:
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Transferred to _Endpoint_ <span style="color:#4e9a06">&#34;fronttier1&#34;</span>:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server1&#34; type=&#34;unix&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server2&#34; type=&#34;windows&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server2&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;fronttier1&#34; type=&#34;windows&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;fronttier1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;/deployhub\&gt;
 </span></span></code></pre></div><h2 id="set_attribute">Set_attribute</h2>
 <p>This statement can only be included if the modifier parameter in the parent modify statement is set to &ldquo;xml&rdquo;. It is used to modify or create an attribute in specified element(s) in an XML document.</p>
 <p><em>set_attribute</em> takes two named parameters:</p>
@@ -1022,7 +1032,7 @@
 </tbody>
 </table>
 <p>NOTE:The xpath must specify an attribute using @ syntax – see examples below.</p>
-<p><strong>Examples:</strong></p>
+<h3 id="example-14">Example 14</h3>
 <p>Given an input file &ldquo;servers.xml&rdquo; that looks like this:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
 </span></span><span style="display:flex;"><span>
@@ -1033,29 +1043,26 @@
 </span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Change server2 to be of <span style="color:#204a87">type</span> <span style="color:#4e9a06">&#34;unix&#34;</span>:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span></code></pre></div><p>Change server2 to be of type &ldquo;unix&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>set<span style="color:#4e9a06">\_</span>attribute<span style="color:#ce5c00;font-weight:bold">(</span>xpath: <span style="color:#4e9a06">&#34;/deployhub/server[@name=server2]/@type&#34;</span>,
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>value: <span style="color:#4e9a06">&#34;unix&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="example-14-result">Example 14 Result</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server1&#34; type=&#34;unix&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server2&#34; type=&#34;unix&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server2&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span><span style="display:flex;"><span>\&lt;/deployhub\&gt;
+</span></span></code></pre></div><h3 id="example-15">Example 15</h3>
 <p>Add a new attribute to every <em>Endpoint</em> apart from the first one.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -1064,19 +1071,17 @@
 </span></span><span style="display:flex;"><span>value: <span style="color:#4e9a06">&#34;newval&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="example-15-result">Example 15 Result</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server1&#34; type=&#34;unix&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server2&#34; type=&#34;windows&#34; newattr=&#34;newval&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34; newattr=&#34;newval&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server2&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span> <span style="color:#000">newattr</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;newval&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> <span style="color:#000">newattr</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;newval&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span><span style="display:flex;"><span>\&lt;/deployhub\&gt;
+</span></span></code></pre></div><h3 id="example-16">Example 16</h3>
 <p>Add an attribute specific for each <em>Endpoint</em>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>psloop <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -1106,7 +1111,7 @@
 <p>This statement can only be included if the modifier parameter in the parent modify statement is set to &ldquo;xml&rdquo;. It is used to remove an XML element from an XML document.</p>
 <p><em>remove_element</em> takes a single named parameter:</p>
 <p>xpath An xpath descriptor indicating the elements(s) in the XML document to be removed.</p>
-<p><strong>Examples:</strong></p>
+<h3 id="example-17">Example 17</h3>
 <p>Given an input file &ldquo;servers.xml&rdquo; that looks like this:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
 </span></span><span style="display:flex;"><span>
@@ -1117,42 +1122,37 @@
 </span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Remove server2:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span></code></pre></div><p>Remove server2:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>remove<span style="color:#4e9a06">\_</span>element<span style="color:#ce5c00;font-weight:bold">(</span>xpath: <span style="color:#4e9a06">&#34;/deployhub/server[@name=server2]&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="example-17-result">Example 17 Result</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server1&#34; type=&#34;unix&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server1&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;unix&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span><span style="display:flex;"><span>\&lt;/deployhub\&gt;
+</span></span></code></pre></div><h3 id="example-18">Example 18</h3>
 <p>Remove all Unix <em>Endpoints</em>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>remove<span style="color:#4e9a06">\_</span>element<span style="color:#ce5c00;font-weight:bold">(</span>xpath: <span style="color:#4e9a06">&#34;/deployhub/server[@type=unix]&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="example-18-result">Example 18 Result</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>\&lt;deployhub\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server2&#34; type=&#34;windows&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span>
+</span></span><span style="display:flex;"><span>\&lt;server name=&#34;server3&#34; type=&#34;as400&#34; /\&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server2&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;windows&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>server <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;server3&#34;</span> <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;as400&#34;</span> /<span style="color:#4e9a06">\&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>/deployhub<span style="color:#4e9a06">\&gt;</span>
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span><span style="display:flex;"><span>\&lt;/deployhub\&gt;
+</span></span></code></pre></div><h3 id="example-19">Example 19</h3>
 <p>Ensure each <em>Endpoint</em> gets its own copy of the file with its own entry removed.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modify<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#39;servers.xml&#39;</span>, modifier: <span style="color:#4e9a06">&#34;xml&#34;</span>, serverspecific: <span style="color:#204a87">true</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -1217,7 +1217,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

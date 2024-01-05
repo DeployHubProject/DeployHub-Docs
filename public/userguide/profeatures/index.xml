@@ -842,7 +842,7 @@
 &lt;li&gt;Open a timeframe to auto-approve an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; deployment.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;When viewing a &lt;em&gt;Calendar&lt;/em&gt; by Month, Week, or Day you can click on a place within a selected day and drag the mouse pointer down in order to select the time span for the event. A light blue area appears, covering the selected time. Right click on this area and select &amp;ldquo;&lt;em&gt;Create New Event&lt;/em&gt;.&amp;rdquo; A pop-up window appears with buttons that are used to set the selected time period to one of the three types listed above.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Availability Field&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;availability-field&#34;&gt;Availability Field&lt;/h3&gt;
 &lt;p&gt;The &amp;ldquo;Availability&amp;rdquo; field controls access to the &lt;em&gt;Environments.&lt;/em&gt; You either close or open the Calendar for deployment events.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -852,11 +852,11 @@
 &lt;p&gt;&lt;em&gt;Always UnAvailable Unless Allowed by Calendar&lt;/em&gt; – Selecting this option &lt;strong&gt;closes&lt;/strong&gt; the Calendar for deployments. To open a period for deployment, you would add an &amp;ldquo;Available&amp;rdquo; Event for a specified period.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;AutoDeploy&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;autodeploy&#34;&gt;AutoDeploy&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;DeployHub Pro&lt;/strong&gt; allows for a scheduled deployment using the &lt;em&gt;Environment&amp;rsquo;s Calendar&lt;/em&gt;, which is referred to as an &amp;ldquo;&lt;em&gt;AutoDeploy&lt;/em&gt;.&amp;rdquo; If &lt;em&gt;AutoDeploy&lt;/em&gt; is selected, a drop-down list allows the selection of an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; to be deployed beginning at the designated Start Time. Not only does the &lt;em&gt;Calendar&lt;/em&gt; automatically run the deployment at the designated Start Time, it also keeps any other deployments from taking place in the designated Environment during that time period.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Reserved&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;reserved&#34;&gt;Reserved&lt;/h3&gt;
 &lt;p&gt;If Reserved is selected, only the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; that is selected via the drop-down list can be deployed to the &lt;em&gt;Environment&lt;/em&gt; between the Start Time and End Time. No other deployments can take place in the &lt;em&gt;Environment&lt;/em&gt; during this period. After a Reserved event has been created, a Task within a &lt;em&gt;Domain&lt;/em&gt; in the tree structure can be used to run the deployment using a Deploy Task.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Unavailable&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;unavailable&#34;&gt;Unavailable&lt;/h3&gt;
 &lt;p&gt;If Unavailable is selected, no deployments can take place in the &lt;em&gt;Environment&lt;/em&gt; between the Start Time and End Time. This can be used to block out time to perform administrative duties such as backups, restores, etc.&lt;/p&gt;
 &lt;h2 id=&#34;calendar-at-continuous-deployment-availability&#34;&gt;Calendar at Continuous Deployment Availability&lt;/h2&gt;
 &lt;p&gt;You can auto-approve deployments for your continuous delivery pipeline by setting your &amp;ldquo;Availability&amp;rdquo; field to &amp;ldquo;&lt;em&gt;Always Available Unless Denied by Calendar.&lt;/em&gt;&amp;rdquo; When your CI/CD engine pushes the deployment, DeployHub will first check the Calendar to see if it is available. If not, the deployment will fail and send a message. The next time around, if the Calendar is open, the deployment will execute, jumping versions to the correct state.&lt;/p&gt;

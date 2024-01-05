@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD041 -->
+
 #### _Component_ Object
 
 | Name           | Type                | Description                                                                                              | Required |

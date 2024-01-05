@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/integrations/helm/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2024-01-04T17:35:37-07:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Helm for Container Deployments">
 <meta itemprop="description" content="Using Helm to execute deployments as an _Action_.
 ">
-<meta itemprop="dateModified" content="2024-01-04T17:35:37-07:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="1647">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Helm for Container Deployments"/>
 <meta name="twitter:description" content="Using Helm to execute deployments as an _Action_.
@@ -504,8 +504,8 @@
 <p>DeployHub will then create an override values file which contains all the specific key value pairs defined at the <em>Endpoint</em>, <em>Environment</em>, <em>Component</em> or <em>Application</em> in this order of precedence. For example, if the same key value pairs are defined at the <em>Endpoints</em> as well as the <em>Application</em>, the <em>Endpoint</em> key values are used.</p>
 <p>The override values file passes the Key value definitions Helm &lsquo;upgrade&rsquo; command.  This process allows a single Helm chart to be reused across all deployments, supporting the needed key value pairs for each deployment.</p>
 <p>If you would like to create a hermetic Helm Chart stored in the DeployHub database, use the following key value:</p>
-<pre tabindex="0"><code>helmcapture=Y
-</code></pre><p>This must be defined at any level, i.e., <em>Endpoint</em>, <em>Environment</em>, <em>Component</em> or <em>Application</em>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#000">helmcapture</span><span style="color:#ce5c00;font-weight:bold">=</span>Y
+</span></span></code></pre></div><p>This must be defined at any level, i.e., <em>Endpoint</em>, <em>Environment</em>, <em>Component</em> or <em>Application</em>.</p>
 <h2 id="connecting-a-deployhub-_endpoint_-to-your-kubernetes-cluster-through-helm">Connecting a DeployHub <em>Endpoint</em> to your Kubernetes Cluster through Helm</h2>
 <p>DeployHub&rsquo; deployment engine comes pre-installed with Helm.  For this reason you should use the deployment engine as the &ldquo;localhost&rdquo; <em>Endpoint</em> for your deployments.  This Helm install on the &ldquo;localhost&rdquo; <em>Endpoint</em> needs to know how to connect to your Kubernetes Cluster.</p>
 <p>Mount your &ldquo;.kube/config&rdquo; file to the DeployHub deployment engine Docker container to provide the connection.  The additional parameter to the docker run command for the DeployHub container exposes the Kubernetes config file to the Helm install in DeployHub.  The following is an example of the additional parameter:</p>
@@ -770,27 +770,21 @@
 <p>Create your new <em>Component</em> from the <em>Component</em> Dashboard. See <a href="/userguide/publishing-components/2-define-components/">Defining <em>Components</em></a>.  For each container <em>Component</em> you will need to define the variable values. Values are specified when you create a new container <em>Component.</em> Values will override those defined at the <em>Application</em> or <em>Environment</em> level. The values from DeployHub will be passed along to Helm&rsquo;s values.yml file at execution time. For more information on defining your container <em>Component</em> see <a href="/userguide/publishing-components/2-define-components/#container-specific-data-definition">Container Specific Data Definition</a>.</p>
 <h2 id="storing-and-retrieving-a-hermetic-helm-chart">Storing and Retrieving a Hermetic Helm Chart</h2>
 <p>In order to create an &lsquo;airtight&rsquo; Helm deployment, DeployHub takes the generated Helm overrides file created during a Helm deployment and executes the Helm template command to find the container images that were referenced. All container image digests are captured and stored in the DeployHub database along with the Helm Chart and all key values used in a specific deployment.  To turn on this option, the following key value pair must be defined at  any level, i.e., <em>Endpoint</em>, <em>Environment</em>, <em>Component</em> or <em>Application</em>.</p>
-<pre tabindex="0"><code>helmcapture=Y
-</code></pre><p>Once stored in the DeployHub database, you can retrieve the hermetic Helm Chart, key value pairs and all container digests to repeat the exact deployment utilizing Helm manually.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#000">helmcapture</span><span style="color:#ce5c00;font-weight:bold">=</span>Y
+</span></span></code></pre></div><p>Once stored in the DeployHub database, you can retrieve the hermetic Helm Chart, key value pairs and all container digests to repeat the exact deployment utilizing Helm manually.</p>
 <h3 id="retrieving-and-running-the-helm-chart-manually">Retrieving and Running the Helm Chart Manually</h3>
 <p>To re-execute a Helm deployment manually, you will retrieve all captured data in a zip file (Helm Chart, all container digest, and key values ). To retrieve the data and generate a zip file, execute the following curl command if using the SaaS:</p>
-<pre tabindex="0"><code>curl &#34;https://console.deployhub.com/dmadminweb/API/helmchart/&lt;DeploymentNumber&gt;?format=zip&#34;-o Helmchart.zip
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl <span style="color:#4e9a06">&#34;https://console.deployhub.com/dmadminweb/API/helmchart/&lt;DeploymentNumber&gt;?format=zip&#34;</span>-o Helmchart.zip
+</span></span></code></pre></div><p>where:
+Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.</p>
+<p>Helmchart.zip is the name of the zip file you want to create.</p>
+<p>If you are using an on premise version use the following command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl <span style="color:#4e9a06">&#34;http://&lt;myDeployHub&gt;/dmadminweb/API/helmchart/&lt;DeploymentNumber&gt;?format=zip&#34;</span>-o Helmchart.zip
+</span></span></code></pre></div><p>where:
+myDeployHub is your on premise DeployHub Server.</p>
+<p>Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.</p>
+<p>Helmchart.zip is the name of the zip file you want to create.</p>
 
-where:
-Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.
-
-Helmchart.zip is the name of the zip file you want to create.
-</code></pre><p>If you are using an on premise version use the following command:</p>
-<pre tabindex="0"><code>
-curl &#34;http://&lt;myDeployHub&gt;/dmadminweb/API/helmchart/&lt;DeploymentNumber&gt;?format=zip&#34;-o Helmchart.zip
-
-where:
-myDeployHub is your on premise DeployHub Server.
-
-Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.
-
-Helmchart.zip is the name of the zip file you want to create.
-</code></pre>
 	<style>
   .feedback--answer {
     display: inline-block;
@@ -848,7 +842,7 @@ Helmchart.zip is the name of the zip file you want to create.
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified January 4, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/5f770e29c0f0064a8109bc5357127c32d95cecb7">lint updates (5f770e2)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

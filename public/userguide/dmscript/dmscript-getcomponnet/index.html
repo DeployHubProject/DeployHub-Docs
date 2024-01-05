@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-getcomponnet/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Get Components">
 <meta itemprop="description" content="Get a Component object based on the Component Name. 
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="145">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Get Components"/>
 <meta name="twitter:description" content="Get a Component object based on the Component Name. 
@@ -449,7 +449,21 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#see-also">See Also</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -473,21 +487,21 @@
 		
 </header>
 	<p>get_Component_takes an_Component_Name and returns the matching_Component Object_.</p>
-<p><strong>Usage:</strong></p>
+<h3 id="usage">Usage</h3>
 <p>get_Component_(FQN)</p>
 <p>Where:</p>
 <p>FQN: Is the qualified name of the <em>Component</em> to be retrieved.</p>
-<p><strong>Returns:</strong></p>
+<h3 id="returns">Returns</h3>
 <p><em>Component</em> Object</p>
 <p>A qualified name can include as many Domain names as is necessary to uniquely identify the <em>Component</em>. If the <em>Component</em> name is unique within the Domains to which the invoking user has access then no qualification is necessary. Only if there is more than one <em>Component</em> with the same name (in different accessible domains) will it be necessary to qualify the <em>Component</em> name with the domain in which it is located.</p>
-<p><strong>Examples:</strong></p>
+<h3 id="examples">Examples</h3>
 <p><em>1) Retrieve a Component.</em></p>
 <p>set compobject = get_Component_(&ldquo;WarFile1&rdquo;);</p>
 <p><em>2) Retrieve a Component specifying the enclosing domain:</em></p>
 <p>set compobject = get_Component_(&ldquo;Project1.WarFile1&rdquo;);</p>
 <p>|
 Further descriptions of <em>Component</em> Objects are found in the high level section named <em>DMScript</em> Objects, in the section named <em>Component</em>.</p>
-<p><strong>See Also:</strong></p>
+<h3 id="see-also">See Also</h3>
 <p>get_Application_(), getcredential(), get_Environment_(), getserver(), getuser(), getusergroup()</p>
 
 	<style>
@@ -547,7 +561,7 @@ Further descriptions of <em>Component</em> Objects are found in the high level s
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

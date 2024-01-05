@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-foreachstatement/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-05-19T20:43:18-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="For Each Statement">
 <meta itemprop="description" content="Use a generic iterator for string tokenization. 
 ">
-<meta itemprop="dateModified" content="2020-05-19T20:43:18-06:00" />
-<meta itemprop="wordCount" content="342">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="346">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="For Each Statement"/>
 <meta name="twitter:description" content="Use a generic iterator for string tokenization. 
 "/>
@@ -449,7 +449,20 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#foreach">foreach</a>
+      <ul>
+        <li><a href="#example-1">Example 1</a></li>
+        <li><a href="#example-2">Example 2</a></li>
+        <li><a href="#example-3">Example 3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -472,7 +485,8 @@
 	<header class="article-meta">
 		
 </header>
-	<p><em>foreach</em> is a generic iterator for string tokenization, array/list member access and stream manipulation. Braces are mandatory. <em>break</em> and <em>continue</em> may be used – break to terminate the loop (as previously described) and continue to restart the loop from the beginning with the next value.</p>
+	<h2 id="foreach">foreach</h2>
+<p><em>foreach</em> is a generic iterator for string tokenization, array/list member access and stream manipulation. Braces are mandatory. <em>break</em> and <em>continue</em> may be used – break to terminate the loop (as previously described) and continue to restart the loop from the beginning with the next value.</p>
 <p>There are two syntaxes for foreach – both operate in the same way, use whichever you prefer:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>foreach<span style="color:#ce5c00;font-weight:bold">(</span>name: expression<span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span> // loop-body
@@ -481,39 +495,37 @@
 </span></span><span style="display:flex;"><span>foreach name in expression <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span> // loop-body
 </span></span><span style="display:flex;"><span> <span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><p><strong>Example:</strong></p>
+</span></span></code></pre></div><h3 id="example-1">Example 1</h3>
 <p>Here is an example of a <em>String iterator</em> – this splits the specified string using the global variable IFS as a separator. If IFS is not set, the default is &quot; \t&quot; (space or tab). The iterator can also remove quotes if the global variable DEQUOTE is true. e.g.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">IFS</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;|&#39;</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">DEQUOTE</span> <span style="color:#ce5c00;font-weight:bold">=</span> true<span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>foreach<span style="color:#ce5c00;font-weight:bold">(</span>bar:<span style="color:#4e9a06">&#39;alpha|&#34;beta&#34;|gamma|delta&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$bar</span><span style="color:#000;font-weight:bold">;</span> // alpha, beta, gamma, delta.
 </span></span><span style="display:flex;"><span> <span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>### Example
-</span></span><span style="display:flex;"><span>Here is an example of an _Array iterator_ – this iterates over all the keys in the specified array <span style="color:#ce5c00;font-weight:bold">(</span>i.e.: the subscripts<span style="color:#ce5c00;font-weight:bold">)</span>. e.g.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">arr</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#4e9a06">&#39;a&#39;</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span><span style="color:#4e9a06">&#39;1&#39;</span>,<span style="color:#4e9a06">&#39;b&#39;</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span><span style="color:#4e9a06">&#39;2&#39;</span>,<span style="color:#4e9a06">&#39;c&#39;</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span><span style="color:#4e9a06">&#39;3&#39;</span> <span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><h3 id="example-2">Example 2</h3>
+<p>Here is an example of an <em>Array iterator</em> – this iterates over all the keys in the specified array (i.e.: the subscripts). e.g.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">arr</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#4e9a06">&#39;a&#39;</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span><span style="color:#4e9a06">&#39;1&#39;</span>,<span style="color:#4e9a06">&#39;b&#39;</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span><span style="color:#4e9a06">&#39;2&#39;</span>,<span style="color:#4e9a06">&#39;c&#39;</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span><span style="color:#4e9a06">&#39;3&#39;</span> <span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>foreach<span style="color:#ce5c00;font-weight:bold">(</span>k: <span style="color:#000">$arr</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>// <span style="color:#000">$k</span> will iterate through the subscripts <span style="color:#4e9a06">&#34;a&#34;</span>, <span style="color:#4e9a06">&#34;b&#34;</span> and <span style="color:#4e9a06">&#34;c&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$k</span><span style="color:#4e9a06"> =\&gt; </span><span style="color:#4e9a06">${</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">$k</span><span style="color:#000;font-weight:bold">]</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // output will be <span style="color:#000">a</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span> <span style="color:#0000cf;font-weight:bold">1</span> etc
 </span></span><span style="display:flex;"><span> <span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><p><strong>Example:</strong></p>
+</span></span></code></pre></div><h3 id="example-3">Example 3</h3>
 <p>Here is an example of a <em>Stream iterator</em> – this splits a stream on newlines (and/or carriage returns) e.g.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo<span style="color:#4e9a06">&#34;Hello\nWorld&#34;</span> <span style="color:#4e9a06">\&gt;\&gt;</span> <span style="color:#000">$stream1</span><span style="color:#000;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>foreach<span style="color:#ce5c00;font-weight:bold">(</span>line: <span style="color:#000">$stream1</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#000">$line</span><span style="color:#000;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span> <span style="color:#ce5c00;font-weight:bold">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#000">echo</span><span style="color:#4e9a06">&#34;Hello\nWorld&#34;</span> <span style="color:#a40000">\</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#a40000">\</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">$stream1</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">foreach</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">line</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">$stream1</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">echo</span> <span style="color:#000">$line</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>// output is
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// output is
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Hello
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// World
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#000">This</span> <span style="color:#000">can</span> <span style="color:#000">be</span> <span style="color:#000">used</span> <span style="color:#000">to</span> <span style="color:#000">set</span> <span style="color:#000">_DMScript_</span> <span style="color:#000">variables</span> <span style="color:#000">from</span> <span style="color:#000">a</span> <span style="color:#000">file</span><span style="color:#000;font-weight:bold">.</span> <span style="color:#000">Assume</span> <span style="color:#000">we</span> <span style="color:#000">have</span> <span style="color:#000">a</span> <span style="color:#000">file</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">a</span> <span style="color:#000">repository</span> <span style="color:#000">called</span> <span style="color:#4e9a06">&#34;myfile.txt&#34;</span> <span style="color:#000">containing</span> <span style="color:#000">the</span> <span style="color:#000">following</span><span style="color:#ce5c00;font-weight:bold">:</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>// Hello
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>// World
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>This can be used to <span style="color:#204a87">set</span> _DMScript_ variables from a file. Assume we have a file in a repository called <span style="color:#4e9a06">&#34;myfile.txt&#34;</span> containing the following:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># example file containing variables to set</span>
+</span></span><span style="display:flex;"><span><span style="color:#a40000">#</span> <span style="color:#000">example</span> <span style="color:#000">file</span> <span style="color:#000">containing</span> <span style="color:#000">variables</span> <span style="color:#000">to</span> <span style="color:#000">set</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000">var1</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">23</span>
 </span></span><span style="display:flex;"><span>
@@ -523,47 +535,45 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000">var4</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">90</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>You can <span style="color:#204a87">set</span> these variables in _DMScript_ by using the following code:
+</span></span><span style="display:flex;"><span><span style="color:#000">You</span> <span style="color:#000">can</span> <span style="color:#000">set</span> <span style="color:#000">these</span> <span style="color:#000">variables</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">_DMScript_</span> <span style="color:#000">by</span> <span style="color:#000">using</span> <span style="color:#000">the</span> <span style="color:#000">following</span> <span style="color:#000">code</span><span style="color:#ce5c00;font-weight:bold">:</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>using stream <span style="color:#000">$varfile</span><span style="color:#000;font-weight:bold">;</span> // create the stream
+</span></span><span style="display:flex;"><span><span style="color:#000">using</span> <span style="color:#000">stream</span> <span style="color:#000">$varfile</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#8f5902;font-style:italic">// create the stream
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#000">using</span> <span style="color:#000">_DropZone_</span> <span style="color:#4e9a06">&#34;tdz&#34;</span> <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>using _DropZone_ <span style="color:#4e9a06">&#34;tdz&#34;</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">checkout</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">repository</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Openmake\_Demo.demorep2&#34;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">pattern</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;myfile.txt&#34;</span><span style="color:#000;font-weight:bold">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>checkout<span style="color:#ce5c00;font-weight:bold">(</span>repository: <span style="color:#4e9a06">&#34;Openmake\_Demo.demorep2&#34;</span>,pattern: <span style="color:#4e9a06">&#34;myfile.txt&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">read</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">file</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;myfile.txt&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">stream</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">$varfile</span><span style="color:#000;font-weight:bold">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>read<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#4e9a06">&#34;myfile.txt&#34;</span>, stream: <span style="color:#000">$varfile</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">foreach</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">line</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">$varfile</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>foreach<span style="color:#ce5c00;font-weight:bold">(</span>line: <span style="color:#000">$varfile</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">set</span> <span style="color:#000">line</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">line</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">regsub</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;#.\*$&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">)};</span> <span style="color:#8f5902;font-style:italic">// remove comments
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">line</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">length</span><span style="color:#000;font-weight:bold">()}</span><span style="color:#a40000">\</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">amp</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">$</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">line</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">instr</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;=&#34;</span><span style="color:#000;font-weight:bold">)}</span><span style="color:#a40000">\</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">line</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">${</span><span style="color:#000">line</span><span style="color:#000;font-weight:bold">.regsub(</span><span style="color:#4e9a06">&#39;#.\*$&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span> // remove comments
+</span></span><span style="display:flex;"><span><span style="color:#204a87">eval</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;set ${line};&#34;</span><span style="color:#000;font-weight:bold">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">${</span><span style="color:#000">line</span><span style="color:#000;font-weight:bold">.length()</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">\&gt;</span><span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#000;font-weight:bold">&amp;</span>amp<span style="color:#000;font-weight:bold">;</span> <span style="color:#4e9a06">${</span><span style="color:#000">line</span><span style="color:#000;font-weight:bold">.instr(</span><span style="color:#4e9a06">&#34;=&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">\&gt;</span>0<span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>eval<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;set </span><span style="color:#4e9a06">${</span><span style="color:#000">line</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">;&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">echo</span> <span style="color:#4e9a06">&#34;var1=$var1&#34;</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">echo</span> <span style="color:#4e9a06">&#34;var2=$var2&#34;</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;var1=</span><span style="color:#000">$var1</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">echo</span> <span style="color:#4e9a06">&#34;var3=$var3&#34;</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;var2=</span><span style="color:#000">$var2</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">echo</span> <span style="color:#4e9a06">&#34;var4=$var4&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><h4 id="result">Result</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>var1=23
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;var3=</span><span style="color:#000">$var3</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>var2=hello there
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;var4=</span><span style="color:#000">$var4</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>var3=this is a test
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Result:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">var1</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">23</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">var2</span><span style="color:#ce5c00;font-weight:bold">=</span>hello there
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">var3</span><span style="color:#ce5c00;font-weight:bold">=</span>this is a <span style="color:#204a87">test</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">var4</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">90</span>
+</span></span><span style="display:flex;"><span>var4=90
 </span></span></code></pre></div>
 	<style>
   .feedback--answer {
@@ -622,7 +632,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified May 19, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/aa9d9aeadf0a81214c86ed95159da4ece59f9d34">after dmscript (aa9d9ae)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

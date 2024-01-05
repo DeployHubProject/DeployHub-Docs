@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/introduction-to-deployhub/0-introduction/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2024-01-04T17:35:37-07:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Why Use DeployHub">
 <meta itemprop="description" content="DeployHub - a Catalog of Supply Chain Evidence
 ">
-<meta itemprop="dateModified" content="2024-01-04T17:35:37-07:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="1096">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Why Use DeployHub"/>
 <meta name="twitter:description" content="DeployHub - a Catalog of Supply Chain Evidence
@@ -452,11 +452,20 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#why-use-deployhub">Why Use DeployHub</a></li>
+    <li><a href="#why-use-deployhub">Why Use DeployHub</a>
+      <ul>
+        <li><a href="#decoupled-environments-are-complex">Decoupled Environments are Complex</a></li>
+      </ul>
+    </li>
     <li><a href="#versioning---deployhubs-secret-sauce">Versioning - DeployHub&rsquo;s Secret Sauce</a></li>
     <li><a href="#other-core-features">Other Core Features</a></li>
     <li><a href="#agentless-delivery">Agentless Delivery</a></li>
-    <li><a href="#free-version-with-optional-pro-upgrade">Free Version with Optional Pro Upgrade</a></li>
+    <li><a href="#free-version-with-optional-pro-upgrade">Free Version with Optional Pro Upgrade</a>
+      <ul>
+        <li><a href="#deployhub-team">DeployHub Team</a></li>
+        <li><a href="#deployhub-pro">DeployHub Pro</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -489,7 +498,7 @@
 <p>DeployHub visualizes ‘logical’ application versions in a cloud-native architecture providing a clear view of the software supply chain and their consumers. With this <em>Component</em> level information, DeployHub can easily aggregate metadata up to the &rsquo;logical&rsquo; application producing application level SBOMs, CVEs, audit reports, deployment inventory and status.</p>
 <p>DeployHub is particularly suited for a microservice architecture where hundreds of artifacts and repos are used, and a central view of the entire supply chain from a usage, security, and inventory perspective is required. When you outgrow your excel spreadsheet, its time to consider DeployHub.</p>
 <p>DeployHub is based on the open-source Continuous Delivery Foundation project, <a href="https://ortelius.io">Ortelius.io</a></p>
-<p><strong>Decoupled Environments are Complex</strong></p>
+<h3 id="decoupled-environments-are-complex">Decoupled Environments are Complex</h3>
 <p>Migrating to decoupled, cloud-native architecture breaks the way we assemble and configure software. With a decoupled implementation, we no longer build a complete software solution, or Application Version. Instead we manage many moving parts that communicate at run-time based on APIs.  The loss of the &lsquo;Application Version&rsquo; disrupts the core of software delivery.  It impacts most of our standard software practices including the generation of application security level reports.  After all, everything is based on an Application Version from tracking changes request, determining differences, tracking relationships and supporting users. Without a method of tracking the logical <em>Application</em>, IT teams struggle to confirm that the software they deliver to end users is safe.</p>
 <p>DeployHub is not a &lsquo;microservice registry&rsquo; or &lsquo;API Gateway.&quot;  Instead, DeployHub interacts with the DevOps pipeline to automatically gather supply chain metadata. Tracking microservices and <em>Components</em> in this way facilitates their sharing and reuse across teams. DeployHub serves as an internal market place for finding, tracking and versioning microservices and relating them to the <em>Applications</em> that consume them. The publishing catalog is based on a <em>Domain</em> structure to support a Domain Driven Design.</p>
 <h2 id="versioning---deployhubs-secret-sauce">Versioning - DeployHub&rsquo;s Secret Sauce</h2>
@@ -549,9 +558,9 @@
 <li>Request Routers and Appliances</li>
 </ul>
 <h2 id="free-version-with-optional-pro-upgrade">Free Version with Optional Pro Upgrade</h2>
-<p><strong>DeployHub Team</strong></p>
+<h3 id="deployhub-team">DeployHub Team</h3>
 <p>Our free version is based upon the <a href="https://www.Ortelius.io/">Ortleius</a> open source project. DeployHub Team can be used from the hosted site or installed on premise. It is a strategic and fully open source supply chain catalog that integrates with your DevOps tools. It supports unlimited endpoints, versions, deployments and users. Sign-up at <a href="https://www.deployhub.com/microservice-dashboard/">deployhub.com</a>. This version does not include the agentless deployment engine or Group access controls.</p>
-<p><strong>DeployHub Pro</strong></p>
+<h3 id="deployhub-pro">DeployHub Pro</h3>
 <p>For additional security features, agentless deployments and support, DeployHub Pro includes extended Users and Group access controls as well as more granular <em>Domains</em>.</p>
 <p>Unique to DeployHub Pro are &ldquo;Divisional Domains.&rdquo; These <em>Domains</em> allow you to expand and model your environments based on your organizational top-down structure. It also gives you the ability to restrict microservice read/write access to only certain Groups of Users.</p>
 <p>DeployHub Pro also provides integration to tools such as Bugzilla, GitHub Issues and Jira for tracking your complete value stream from change request to final endpoint. It also includes &lsquo;smart&rsquo; calendars for scheduling deployments.</p>
@@ -613,7 +622,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified January 4, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/5f770e29c0f0064a8109bc5357127c32d95cecb7">lint updates (5f770e2)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/restapi/components/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Component APIs">
 <meta itemprop="description" content="APIs for _Components_.
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="1749">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="1759">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Component APIs"/>
 <meta name="twitter:description" content="APIs for _Components_.
 "/>
@@ -452,9 +452,24 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#retrieve-a-_component_">Retrieve a <em>Component</em></a></li>
-    <li><a href="#create-new-_component-version_">Create New <em>Component Version</em></a></li>
-    <li><a href="#associate-a-build-with-a-_component_">Associate a Build with a <em>Component</em></a></li>
+    <li><a href="#retrieve-a-_component_">Retrieve a <em>Component</em></a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapi_component_identifier">REST Api Endpoint /dmadminweb/API/<em>Component</em>/{identifier}</a></li>
+        <li><a href="#parameters-for-dmadminwebapi_component_identifier">Parameters for /dmadminweb/API/<em>Component</em>/{identifier}</a></li>
+      </ul>
+    </li>
+    <li><a href="#create-new-_component-version_">Create New <em>Component Version</em></a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapinewcompvercomp_id">REST Api Endpoint /dmadminweb/API/new/compver/{comp_id}</a></li>
+        <li><a href="#parameters-for-dmadminwebapinewcompvercomp_id">Parameters for /dmadminweb/API/new/compver/{comp_id}</a></li>
+      </ul>
+    </li>
+    <li><a href="#associate-a-build-with-a-_component_">Associate a Build with a <em>Component</em></a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapibuildidcomp_idbuild_id">REST Api Endpoint /dmadminweb/API/buildid/{comp_id}/{build_id}</a></li>
+        <li><a href="#parameters-for-dmadminwebapibuildidcomp_idbuild_id">Parameters for /dmadminweb/API/buildid/{comp_id}/{build_id}</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -483,7 +498,7 @@
 </header>
 	<h2 id="retrieve-a-_component_">Retrieve a <em>Component</em></h2>
 <p>Retrieve specific <em>Component</em> or <em>Component</em> version. This call returns a JSON Object representing the specified <em>Component</em>. It is useful to determine the <em>Application</em>(s) which include the <em>Component</em>, whether the <em>Application</em> is approved, which other <em>Components</em> are used alongside the specified <em>Component</em> and so on.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapi_component_identifier">REST Api Endpoint /dmadminweb/API/<em>Component</em>/{identifier}</h3>
 <table>
 <thead>
 <tr>
@@ -494,11 +509,11 @@
 <tbody>
 <tr>
 <td>GET</td>
-<td>dmadminweb/API/<em>Component</em>/{identifier}</td>
+<td>/dmadminweb/API/<em>Component</em>/{identifier}</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapi_component_identifier">Parameters for /dmadminweb/API/<em>Component</em>/{identifier}</h3>
 <table>
 <thead>
 <tr>
@@ -533,7 +548,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Component</em> Result Object</strong></p>
+<h4 id="_component_-result-object"><em>Component</em> Result Object</h4>
 <table>
 <thead>
 <tr>
@@ -558,7 +573,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Component</em> Object</strong></p>
+<h4 id="_component_-object"><em>Component</em> Object</h4>
 <table>
 <thead>
 <tr>
@@ -631,7 +646,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Component</em> Predecessor</strong></p>
+<h4 id="_component_-predecessor"><em>Component</em> Predecessor</h4>
 <p>Only returned for <em>Component Versions</em>. A JSON Object represents the predecessor of this <em>Component</em>.</p>
 <table>
 <thead>
@@ -669,7 +684,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Component Version</em> Result</strong></p>
+<h4 id="_component-version_-result"><em>Component Version</em> Result</h4>
 <table>
 <thead>
 <tr>
@@ -694,7 +709,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Component Version</em> Full Detail</strong></p>
+<h4 id="_component-version_-full-detail"><em>Component Version</em> Full Detail</h4>
 <p>A JSON  object represents the <em>Component</em> being retrieved.</p>
 <table>
 <thead>
@@ -780,7 +795,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Application Version</em> Results Full Detail</strong></p>
+<h4 id="_application-version_-results-full-detail"><em>Application Version</em> Results Full Detail</h4>
 <table>
 <thead>
 <tr>
@@ -835,7 +850,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Application Version</em> Object</strong></p>
+<h4 id="_application-version_-object"><em>Application Version</em> Object</h4>
 <table>
 <thead>
 <tr>
@@ -866,7 +881,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Request</strong></p>
+<h4 id="change-request">Change Request</h4>
 <table>
 <thead>
 <tr>
@@ -909,7 +924,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Approval Results</strong></p>
+<h4 id="approval-results">Approval Results</h4>
 <table>
 <thead>
 <tr>
@@ -946,7 +961,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Rejection Results</strong></p>
+<h4 id="rejection-results">Rejection Results</h4>
 <table>
 <thead>
 <tr>
@@ -985,7 +1000,7 @@
 </table>
 <h2 id="create-new-_component-version_">Create New <em>Component Version</em></h2>
 <p>This call creates a new <em>Component Version</em>. The new <em>Component</em> inherits all the attributes of the predecessor <em>Component</em> including its <em>Domain</em>.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapinewcompvercomp_id">REST Api Endpoint /dmadminweb/API/new/compver/{comp_id}</h3>
 <table>
 <thead>
 <tr>
@@ -1000,7 +1015,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapinewcompvercomp_id">Parameters for /dmadminweb/API/new/compver/{comp_id}</h3>
 <table>
 <thead>
 <tr>
@@ -1021,7 +1036,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Component</em> Result Object</strong></p>
+<h4 id="_component_-result-object-1"><em>Component</em> Result Object</h4>
 <table>
 <thead>
 <tr>
@@ -1046,7 +1061,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Response Success Object</strong></p>
+<h4 id="response-success-object">Response Success Object</h4>
 <p>This Object contains the success/failed return code and an error message.</p>
 <table>
 <thead>
@@ -1075,7 +1090,7 @@
 <h2 id="associate-a-build-with-a-_component_">Associate a Build with a <em>Component</em></h2>
 <p>This call associates a build number with a specified <em>Component</em>. It is typically used with <em>CD Engines</em> to notify that a new build has been performed. If the <em>Component</em> is associated with an approved <em>Application</em> then a new version of the <em>Component</em> and <em>Application</em> is created automatically and the new <em>Component</em> version replaces the old <em>Component</em> version in the newly created <em>Application</em> version.</p>
 <p>In order for this to work through the permission model, the associated &ldquo;Create <em>Application</em> Version&rdquo; Task needs to be specified. This ensures that the invoking user has permission to create a new version of the <em>Application</em> (since the permissions are checked against the named Task) and also the target <em>Domain</em> (i.e. the domain in which the new <em>Application</em> is created) is determined from the Task. Also, by specifying the Task to execute, any Pre and Post link <em>Actions</em> are executed just as if the Task had been invoked via the Web UI.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapibuildidcomp_idbuild_id">REST Api Endpoint /dmadminweb/API/buildid/{comp_id}/{build_id}</h3>
 <table>
 <thead>
 <tr>
@@ -1090,7 +1105,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapibuildidcomp_idbuild_id">Parameters for /dmadminweb/API/buildid/{comp_id}/{build_id}</h3>
 <table>
 <thead>
 <tr>
@@ -1160,7 +1175,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Component</em> Result Object</strong></p>
+<h4 id="_component_-result-object-2"><em>Component</em> Result Object</h4>
 <table>
 <thead>
 <tr>
@@ -1185,7 +1200,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Response Success Object</strong></p>
+<h4 id="response-success-object-1">Response Success Object</h4>
 <p>This Object contains the success/failed return code and an error message.</p>
 <table>
 <thead>
@@ -1269,7 +1284,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

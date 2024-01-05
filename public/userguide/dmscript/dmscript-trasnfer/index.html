@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-trasnfer/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="To Json">
 <meta itemprop="description" content="Push files in the current DropZone to all Endpoints. 
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="119">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="To Json"/>
 <meta name="twitter:description" content="Push files in the current DropZone to all Endpoints. 
@@ -449,7 +449,18 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -474,8 +485,8 @@
 </header>
 	<p><em>transfer</em> pushes the files in the current <em>DropZone</em> to all the <em>Endpoint_s in the current_Endpoint_set. transfer takes no parameters – all the files in the_DropZone_are pushed to every_Endpoint_in the current_Endpoint_set. You can limit the_Endpoint_set by placing the transfer in an if block to reduce the_Endpoint_set to those matching the specified expression. You can also use remove to remove files from the_DropZone</em> before calling transfer.</p>
 <p><em>transfer</em> is generally only required when writing custom actions. It is called implicitly during a conventional deployment. A pre action on a <em>Component</em> can be used to modify the drop zone before the <em>Component</em> is deployed.</p>
-<p><strong>Example:</strong>
-Checkout files and transfer them to all the <em>Endpoint_s in the current_Endpoint</em> set.</p>
+<h3 id="example">Example</h3>
+<p>Checkout files and transfer them to all the <em>Endpoint_s in the current_Endpoint</em> set.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>checkout<span style="color:#ce5c00;font-weight:bold">(</span>repository: <span style="color:#4e9a06">&#34;myrep&#34;</span>, pattern: <span style="color:#4e9a06">&#34;\*.exe&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>transfer<span style="color:#000;font-weight:bold">;</span>
 </span></span></code></pre></div>
@@ -536,7 +547,7 @@ Checkout files and transfer them to all the <em>Endpoint_s in the current_Endpoi
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

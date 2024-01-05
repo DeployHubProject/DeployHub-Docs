@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-attachment/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Attachment">
 <meta itemprop="description" content="Add an attachement to your email via SMTP Notifiers.
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="304">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="308">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Attachment"/>
 <meta name="twitter:description" content="Add an attachement to your email via SMTP Notifiers.
 "/>
@@ -449,7 +449,20 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#attachments">Attachments</a>
+      <ul>
+        <li><a href="#example-1">Example 1</a></li>
+        <li><a href="#example-2">Example 2</a></li>
+        <li><a href="#example-3">Example 3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -472,7 +485,8 @@
 	<header class="article-meta">
 		
 </header>
-	<p>An <em>attachment</em> statement can only be included in a notify block. It is used to add an attachment into an outgoing email (via SMTP notifiers). It allows much finer control over the attachment content than that provided by the attachment parameter to the notify statement.</p>
+	<h2 id="attachments">Attachments</h2>
+<p>An <em>attachment</em> statement can only be included in a notify block. It is used to add an attachment into an outgoing email (via SMTP notifiers). It allows much finer control over the attachment content than that provided by the attachment parameter to the notify statement.</p>
 <p><em>attachment</em> takes a number of named parameters:</p>
 <table>
 <thead>
@@ -497,7 +511,7 @@
 </tbody>
 </table>
 <p><em>attachment</em> can optionally open a code block. If body is not specified then the content of the attachment is taken from the output created by this code block.</p>
-<p><strong>Example</strong></p>
+<h3 id="example-1">Example 1</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> Checkout a file and include it as an attachment in an email:
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>// Checkout <span style="color:#4e9a06">&#34;myfile.txt&#34;</span> and <span style="color:#204a87">read</span> it into the stream <span style="color:#000">$myfile</span>.
@@ -529,7 +543,7 @@
 </span></span><span style="display:flex;"><span>attachment<span style="color:#ce5c00;font-weight:bold">(</span>name: <span style="color:#4e9a06">&#34;myfile.txt&#34;</span>, body: <span style="color:#000">$myfile</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><p><strong>Example</strong></p>
+</span></span></code></pre></div><h3 id="example-2">Example 2</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Create an attachment with a script and include it in an email:
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">me</span><span style="color:#ce5c00;font-weight:bold">=</span>me<span style="color:#ce5c00;font-weight:bold">()</span><span style="color:#000;font-weight:bold">;</span>
@@ -553,7 +567,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><p><strong>Example:</strong></p>
+</span></span></code></pre></div><h3 id="example-3">Example 3</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Send an email containing the Change Requests associated with the Application.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">me</span><span style="color:#ce5c00;font-weight:bold">=</span>me<span style="color:#ce5c00;font-weight:bold">()</span><span style="color:#000;font-weight:bold">;</span>
@@ -637,7 +651,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

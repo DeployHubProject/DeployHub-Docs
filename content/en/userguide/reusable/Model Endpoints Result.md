@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD041 -->
+
 #### _Endpoints_ Result
 
 | Name    | Type                     | Description                                                                                                                                                             | Required |

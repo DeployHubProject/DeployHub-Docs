@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/profeatures/calendar/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="DeployHub Pro Smart Calendars">
 <meta itemprop="description" content="Control deployments to _Environments_ with Smart Calendars.
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="1066">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="DeployHub Pro Smart Calendars"/>
 <meta name="twitter:description" content="Control deployments to _Environments_ with Smart Calendars.
@@ -452,7 +452,14 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#smart-_environment_-calendars">Smart <em>Environment</em> Calendars</a></li>
+    <li><a href="#smart-_environment_-calendars">Smart <em>Environment</em> Calendars</a>
+      <ul>
+        <li><a href="#availability-field">Availability Field</a></li>
+        <li><a href="#autodeploy">AutoDeploy</a></li>
+        <li><a href="#reserved">Reserved</a></li>
+        <li><a href="#unavailable">Unavailable</a></li>
+      </ul>
+    </li>
     <li><a href="#calendar-at-continuous-deployment-availability">Calendar at Continuous Deployment Availability</a></li>
     <li><a href="#scheduling-a-deployment">Scheduling a Deployment</a></li>
     <li><a href="#calendar-color-grid">Calendar Color Grid</a></li>
@@ -491,7 +498,7 @@
 <li>Open a timeframe to auto-approve an <em>Application</em> or <em>Release</em> deployment.</li>
 </ul>
 <p>When viewing a <em>Calendar</em> by Month, Week, or Day you can click on a place within a selected day and drag the mouse pointer down in order to select the time span for the event. A light blue area appears, covering the selected time. Right click on this area and select &ldquo;<em>Create New Event</em>.&rdquo; A pop-up window appears with buttons that are used to set the selected time period to one of the three types listed above.</p>
-<p><strong>Availability Field</strong></p>
+<h3 id="availability-field">Availability Field</h3>
 <p>The &ldquo;Availability&rdquo; field controls access to the <em>Environments.</em> You either close or open the Calendar for deployment events.</p>
 <ul>
 <li>
@@ -501,11 +508,11 @@
 <p><em>Always UnAvailable Unless Allowed by Calendar</em> – Selecting this option <strong>closes</strong> the Calendar for deployments. To open a period for deployment, you would add an &ldquo;Available&rdquo; Event for a specified period.</p>
 </li>
 </ul>
-<p><strong>AutoDeploy</strong></p>
+<h3 id="autodeploy">AutoDeploy</h3>
 <p><strong>DeployHub Pro</strong> allows for a scheduled deployment using the <em>Environment&rsquo;s Calendar</em>, which is referred to as an &ldquo;<em>AutoDeploy</em>.&rdquo; If <em>AutoDeploy</em> is selected, a drop-down list allows the selection of an <em>Application</em> or <em>Release</em> to be deployed beginning at the designated Start Time. Not only does the <em>Calendar</em> automatically run the deployment at the designated Start Time, it also keeps any other deployments from taking place in the designated Environment during that time period.</p>
-<p><strong>Reserved</strong></p>
+<h3 id="reserved">Reserved</h3>
 <p>If Reserved is selected, only the <em>Application</em> or <em>Release</em> that is selected via the drop-down list can be deployed to the <em>Environment</em> between the Start Time and End Time. No other deployments can take place in the <em>Environment</em> during this period. After a Reserved event has been created, a Task within a <em>Domain</em> in the tree structure can be used to run the deployment using a Deploy Task.</p>
-<p><strong>Unavailable</strong></p>
+<h3 id="unavailable">Unavailable</h3>
 <p>If Unavailable is selected, no deployments can take place in the <em>Environment</em> between the Start Time and End Time. This can be used to block out time to perform administrative duties such as backups, restores, etc.</p>
 <h2 id="calendar-at-continuous-deployment-availability">Calendar at Continuous Deployment Availability</h2>
 <p>You can auto-approve deployments for your continuous delivery pipeline by setting your &ldquo;Availability&rdquo; field to &ldquo;<em>Always Available Unless Denied by Calendar.</em>&rdquo; When your CI/CD engine pushes the deployment, DeployHub will first check the Calendar to see if it is available. If not, the deployment will fail and send a message. The next time around, if the Calendar is open, the deployment will execute, jumping versions to the correct state.</p>
@@ -649,7 +656,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/introduction-to-deployhub/0-hipster-store-tutorial/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2024-01-04T17:35:37-07:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Hipster Store Tutorial">
 <meta itemprop="description" content="The Hipster Store Test Drive.
 ">
-<meta itemprop="dateModified" content="2024-01-04T17:35:37-07:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="2066">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Hipster Store Tutorial"/>
 <meta name="twitter:description" content="The Hipster Store Test Drive.
@@ -454,10 +454,30 @@
   <ul>
     <li><a href="#log-in-and-take-a-test-drive">Log in and Take a Test Drive</a></li>
     <li><a href="#the-online-store-company---hipster-store-tutorial">The Online Store Company - Hipster Store Tutorial</a></li>
-    <li><a href="#learn-about-applications">Learn About Applications</a></li>
-    <li><a href="#learn-about-domains">Learn about Domains</a></li>
-    <li><a href="#learn-about-components">Learn about Components</a></li>
-    <li><a href="#learn-about-_environment_-and-_endpoints_">Learn about <em>Environment</em> and <em>Endpoints</em></a></li>
+    <li><a href="#learn-about-applications">Learn About Applications</a>
+      <ul>
+        <li><a href="#step-1---deploy-the-hipster-store-application">Step 1 - Deploy the Hipster Store Application</a></li>
+      </ul>
+    </li>
+    <li><a href="#learn-about-domains">Learn about Domains</a>
+      <ul>
+        <li><a href="#step-1---explore-a-catalog-_subdomain_">Step 1 - Explore a Catalog <em>Subdomain</em></a></li>
+        <li><a href="#step-2---explore-a-project-_subdomain_">Step 2 - Explore a Project <em>Subdomain</em></a></li>
+        <li><a href="#step-3---explore-the-online-store-_domain_-details-and-access">Step 3 - Explore the Online Store <em>Domain</em> Details and Access</a></li>
+        <li><a href="#step-4---explore-tasks-for-the-online-store-company-_domain_">Step 4 - Explore Tasks for the Online Store Company <em>Domain</em></a></li>
+      </ul>
+    </li>
+    <li><a href="#learn-about-components">Learn about Components</a>
+      <ul>
+        <li><a href="#step-1---review-the-hipster-store-_components_">Step 1 - Review the Hipster Store <em>Components</em></a></li>
+      </ul>
+    </li>
+    <li><a href="#learn-about-_environment_-and-_endpoints_">Learn about <em>Environment</em> and <em>Endpoints</em></a>
+      <ul>
+        <li><a href="#step-1---review-the-hipster-store-_environment_">Step 1 - Review the Hipster Store <em>Environment</em></a></li>
+        <li><a href="#step-2---review-the-hipster-store-cluster-_endpoint_">Step 2 - Review the Hipster Store Cluster <em>Endpoint</em></a></li>
+      </ul>
+    </li>
     <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
@@ -501,7 +521,7 @@
 <li><a href="/userguide/first-steps/2-define-environments/">Build Your <em>Environments</em></a></li>
 <li><a href="/userguide/first-steps/2-define-endpoints/">Define Your <em>Endpoints</em></a></li>
 </ul>
-<p><strong>Step 1 - Deploy the Hipster Store Application</strong></p>
+<h3 id="step-1---deploy-the-hipster-store-application">Step 1 - Deploy the Hipster Store Application</h3>
 <p>To get started, <a href="https://www.deployhub.com/free-team-sign-up/">sign up for DeployHub</a>. Once you signed up, you will first deploy the Hipster Store <em>Application Base Version</em> to the Hipster Store <em>Environment</em>.</p>
 <ul>
 <li>Select the <em>Application</em> Menu option from the left side of the DeployHub Home panel. This will bring you to a List View.</li>
@@ -541,7 +561,7 @@
 <li>Load Generator - A Catalog <em>Subdomain</em> where reusable testing <em>Components</em> live.</li>
 </ul>
 <p>Each of these <em>Subdomains</em> have their own <em>Subdomains</em>.  Let&rsquo;s explore:</p>
-<p><strong>Step 1 - Explore a Catalog <em>Subdomain</em></strong></p>
+<h3 id="step-1---explore-a-catalog-_subdomain_">Step 1 - Explore a Catalog <em>Subdomain</em></h3>
 <p>From the DeployHub home panel, select <em>Domains</em> on the left hand side Main Menu. Click on the &ldquo;Store Services&rdquo; <em>Subdomain</em> to see what it includes. You will see <em>Subdomains</em> that provide services for the following &ldquo;Solution Spaces&rdquo;:</p>
 <ul>
 <li>Add Services</li>
@@ -551,24 +571,24 @@
 <li>Cart Services</li>
 </ul>
 <p>These Store Services <em>Subdomains</em> organize <em>Components</em> that can be reused by any other team for building out custom websites for our fictitious Online Store Company.  You can also explore the Purchase Processing <em>Subdomain</em> to see how these solution spaces are organized. You can click on the center of the starburst map to navigate back up to higher level <em>Domains</em>.</p>
-<p><strong>Step 2 - Explore a Project <em>Subdomain</em></strong></p>
+<h3 id="step-2---explore-a-project-_subdomain_">Step 2 - Explore a Project <em>Subdomain</em></h3>
 <p>Now lets take a look at our Hipster Store <em>Subdomain</em>.  The Hipster Store <em>Subdomain</em> manages our Hipster Store <em>Application</em>.  It also has <em>Subdomains</em>, but these <em>Subdomains</em> are refereed to as &ldquo;Life Cycle <em>Subdomains</em>.&rdquo;  Life Cycle Subdomains are defined to contain <em>Environments</em> where your <em>Application</em> will be deployed. Life Cycle <em>Subdomains</em> cannot have any child <em>Subdomains</em>.  It is the lowest level of <em>Subdomain</em> allowed.</p>
-<p><strong>Step 3 - Explore the Online Store <em>Domain</em> Details and Access</strong></p>
+<h3 id="step-3---explore-the-online-store-_domain_-details-and-access">Step 3 - Explore the Online Store <em>Domain</em> Details and Access</h3>
 <p>Return to the Online Store Company <em>Domain</em> by clicking anywhere in the center of the sunburst map. Details about this <em>Domain</em> is displayed to the right of the sunburst.  You will see that is belongs to the &ldquo;Global&rdquo; <em>Domain</em>, shown by the field labeled &ldquo;Full Domain.&rdquo;  You will also see that it has the &ldquo;All <em>Subdomains</em> are Life Cycles&rdquo; option set to &ldquo;No&rdquo; and a list of it&rsquo;s child <em>Subdomains</em>. There are other details as well. For a full description see <a href="/userguide/first-steps/2-defining-domains/">Building Your Domain Catalog</a>.</p>
 <p>The Access Control Section defines who can see this <em>Domain</em> and it&rsquo;s child <em>Subdomains</em>. For this example, the &ldquo;Everyone&rdquo; <em>Group</em> is defined to all Access.  The Everyone <em>Group</em> is a default DeployHub <em>Group</em> that includes all <em>Users</em> and <em>Administrators</em>.  For more on <em>Users</em> see <a href="/userguide/customizations/2-users/">Managing Users</a>.</p>
-<p><strong>Step 3 - Explore Tasks for the Online Store Company <em>Domain</em></strong></p>
+<h3 id="step-4---explore-tasks-for-the-online-store-company-_domain_">Step 4 - Explore Tasks for the Online Store Company <em>Domain</em></h3>
 <p>You used the &ldquo;Deploy Version to an Environment&rdquo; Task when you deployed the Hipster Store. Tasks allow you to perform steps related to deployments and are only needed by your Project <em>Domains</em>. You can assign a Task at a higher <em>Domain</em> level allowing any child <em>Domains</em> to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your <em>Subdomains</em>. However, this means that a Catalog <em>Domain</em> may include Tasks that it cannot see.</p>
 <p>You can assign Access to Tasks and customize them with Pre and Post <em>Actions</em>.  For more on Tasks see <a href="/userguide/first-steps/2-defining-domains/#deployment-tasks">Deployment Tasks</a>.</p>
 <h2 id="learn-about-components">Learn about Components</h2>
 <p><em>Components</em> are microservices, binaries, database SQL, files or any deployable artifact used by an <em>Application</em>.  <em>Components</em> themselves are not deployed, they must be consumed by an <em>Application</em> in order to be deployed to an <em>Environment</em>. With microservices, this may seem counter intuitive as microservices are independently deployable.  This is true and DeployHub takes this into account during a deployment of an <em>Application</em>. DeployHub deploys using incremental processing which means if a single  <em>Component</em> of an <em>Application</em> is updated, and the <em>Application</em> is deployed, only the single <em>Component</em> is moved.  DeployHub does incremental processing of deployable objects, but relates them to a logical <em>Application</em>.  If an <em>Application</em> pushes a new version of a single microservice <em>Component</em> to a cluster, it will move alone.  Subsequently, all dependent <em>Applications</em> will have a new <em>Application Version</em> created.</p>
-<p><strong>Step 1 - Review the Hipster Store <em>Components</em></strong></p>
+<h3 id="step-1---review-the-hipster-store-_components_">Step 1 - Review the Hipster Store <em>Components</em></h3>
 <p>Choose the <em>Components</em> Menu option on the left side of the DeployHub home panel. This will take you to a list view of all <em>Component Base Versions</em> and <em>Component Versions</em>.  A <em>Component Base Version</em> is the original <em>Component</em>. When the <em>Component</em> is updated, a <em>Component Version</em> is created.</p>
 <p>Double click on the &ldquo;cartservice;v1_2_2_9_gcadf581&rdquo; <em>Component Version</em> to explore the <em>Component</em>.  You will be taken to the Dashboard view. You will see in the &ldquo;Full Domain&rdquo; field of the Details Section to what <em>Domain</em> the <em>Component</em> belongs.  You will see all <em>Applications</em> that have a dependency on this version of the <em>Component</em>, and in the &ldquo;Deployed Environments for <em>Component</em>&rdquo; you will see all <em>Environments</em> where the <em>Component</em> has been deployed.</p>
 <h2 id="learn-about-_environment_-and-_endpoints_">Learn about <em>Environment</em> and <em>Endpoints</em></h2>
 <p><em>Environments</em> are collections of one or more <em>Endpoints</em> where <em>Applications</em> are installed.</p>
-<p><strong>Step 1 - Review the Hipster Store <em>Environment</em></strong></p>
+<h3 id="step-1---review-the-hipster-store-_environment_">Step 1 - Review the Hipster Store <em>Environment</em></h3>
 <p>Select <em>Environments</em> from the left hand side of the DeployHub main home panel. This will take you to a list of <em>Environments</em>. Double click on the &ldquo;Hipster Store Cluster&rdquo;. From the Dashboard view you can see how the <em>Environment</em> was setup.  You can also see all of the <em>Components</em> installed on this cluster.</p>
-<p><strong>Step 2 - Review the Hipster Store Cluster <em>Endpoint</em></strong></p>
+<h3 id="step-2---review-the-hipster-store-cluster-_endpoint_">Step 2 - Review the Hipster Store Cluster <em>Endpoint</em></h3>
 <p>Select <em>Endpoints</em> from the left hand side of the DeployHub main home panel.  This will take you to a list of <em>Endpoints</em>.  Double click on the &ldquo;Hipster Store Cluster Helm Host&rdquo; <em>Endpoint</em>.  This <em>Endpoint</em> defines where Helm will execute to update the cluster. This <em>Endpoint</em> has been configured to talk to the Hipster Store Cluster.  See <a href="/userguide/integrations/helm/">Helm for Container Deployments</a> for creating your Helm configuration file.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>There are many other features of DeployHub that we did not get to cover on this short test drive. However, you should have the basic understanding of the major Objects and concepts needed to get you started.  What we did not cover that you may want to view are:</p>
@@ -636,7 +656,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified January 4, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/5f770e29c0f0064a8109bc5357127c32d95cecb7">lint updates (5f770e2)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

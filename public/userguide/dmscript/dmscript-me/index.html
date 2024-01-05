@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-me/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-15T10:20:11-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Me">
 <meta itemprop="description" content="Get the User Object based on the logged in User. 
 ">
-<meta itemprop="dateModified" content="2020-06-15T10:20:11-06:00" />
-<meta itemprop="wordCount" content="29">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="30">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Me"/>
 <meta name="twitter:description" content="Get the User Object based on the logged in User. 
 "/>
@@ -449,7 +449,21 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#me">me()</a>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#see-also">See Also</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -472,16 +486,17 @@
 	<header class="article-meta">
 		
 </header>
-	<p>me returns a <em>User Object</em> representing the current logged in user.</p>
-<p><strong>Usage:</strong></p>
+	<h2 id="me">me()</h2>
+<p>me returns a <em>User Object</em> representing the current logged in user.</p>
+<h3 id="usage">Usage</h3>
 <p>me()</p>
-<p><strong>Returns:</strong></p>
+<h3 id="returns">Returns</h3>
 <p>User Object</p>
-<p><strong>Examples:</strong></p>
-<pre tabindex="0"><code>set me = me();
-
-echo &#34;Hello ${me.name}&#34;;
-</code></pre><p><strong>See Also:</strong></p>
+<h3 id="examples">Examples</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">me</span> <span style="color:#ce5c00;font-weight:bold">=</span> me<span style="color:#ce5c00;font-weight:bold">()</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;Hello </span><span style="color:#4e9a06">${</span><span style="color:#000">me</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><h3 id="see-also">See Also</h3>
 <p>User()
 UserGroup()
 UserObject()</p>
@@ -543,7 +558,7 @@ UserObject()</p>
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 15, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/102cb1abc9a119dc45ffe0452c007961490d86e9">Remove extra headers in DMScript (102cb1a)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

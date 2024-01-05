@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-zipget/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Zip Get">
 <meta itemprop="description" content="Get a file or group of files from a zip archive for the current DropZone.  
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="590">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="593">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Zip Get"/>
 <meta name="twitter:description" content="Get a file or group of files from a zip archive for the current DropZone.  
 "/>
@@ -449,7 +449,19 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#zipget">ZipGet</a>
+      <ul>
+        <li><a href="#example-1">Example 1</a></li>
+        <li><a href="#example-2">Example 2</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -472,7 +484,8 @@
 	<header class="article-meta">
 		
 </header>
-	<p><em>zipget</em> extracts a file from the specified zipfile and places it into the current <em>DropZone</em>. Unless it is subsequently removed, the file will be deployed to the appropriate <em>Endpoint</em>(s) in any subsequent transfer operation. WAR, JAR and EAR files are simply ZIP files with a different extension. You can thus use <em>zipget</em> (and <em>zipadd</em> and <em>zipdel</em>) with WAR, JAR and EAR files as well as with ZIP archives. This provides a powerful way of manipulating WAR, JAR and EAR files in the <em>DropZone</em> before onward deployment to the target <em>Endpoints</em>.</p>
+	<h2 id="zipget">ZipGet</h2>
+<p><em>zipget</em> extracts a file from the specified zipfile and places it into the current <em>DropZone</em>. Unless it is subsequently removed, the file will be deployed to the appropriate <em>Endpoint</em>(s) in any subsequent transfer operation. WAR, JAR and EAR files are simply ZIP files with a different extension. You can thus use <em>zipget</em> (and <em>zipadd</em> and <em>zipdel</em>) with WAR, JAR and EAR files as well as with ZIP archives. This provides a powerful way of manipulating WAR, JAR and EAR files in the <em>DropZone</em> before onward deployment to the target <em>Endpoints</em>.</p>
 <p><em>zipget</em> is useful for extracting a file from a zip archive, modifying the file and then replacing the original version of the file in the archive with <em>zipadd</em>. You can use a combination of <em>zipget</em> and <em>zipadd</em> to manipulate XML configuration files that are embedded in a web archive.</p>
 <p><em>zipget</em> takes a mandatory named parameter. Other parameters can be specified depending on what is being extracted from the zipfile:</p>
 <table>
@@ -498,7 +511,7 @@
 </tbody>
 </table>
 <p>NOTE: You can call dir() on a <em>DropZone File</em> object representing a zipfile to return an array of <em>DropZone File</em> objects that you can then pass to zipget.</p>
-<p><strong>Examples:</strong></p>
+<h3 id="example-1">Example 1</h3>
 <p>Extract all the files in a zipfile:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>// get a list of myapp.war files in the _DropZone_ <span style="color:#ce5c00;font-weight:bold">(</span>probably only one<span style="color:#ce5c00;font-weight:bold">)</span>
 </span></span><span style="display:flex;"><span>
@@ -519,7 +532,7 @@
 </span></span><span style="display:flex;"><span>zipget<span style="color:#ce5c00;font-weight:bold">(</span>zipfile: <span style="color:#4e9a06">&#34;myapp.war&#34;</span>, files: <span style="color:#000">$files</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><p><strong>Examples:</strong></p>
+</span></span></code></pre></div><h3 id="example-2">Example 2</h3>
 <p>Modify a configuration file within a WAR file</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>// Step <span style="color:#0000cf;font-weight:bold">1</span> – extract web.xml from the WAR file
 </span></span><span style="display:flex;"><span>
@@ -610,7 +623,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

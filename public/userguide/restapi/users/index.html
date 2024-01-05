@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/restapi/users/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="User APIs">
 <meta itemprop="description" content="Associate a User to a UserGroup (Pro Feature).
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="298">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="304">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="User APIs"/>
 <meta name="twitter:description" content="Associate a User to a UserGroup (Pro Feature).
 "/>
@@ -452,10 +452,16 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#associate-a-user-with-a-usergroup">Associate a User with a UserGroup</a></li>
+    <li><a href="#associate-a-user-with-a-usergroup">Associate a User with a UserGroup</a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapiassignuseruser_idgroup_id">REST Api Endpoint /dmadminweb/API/assign/user/{user_id}/{group_id}</a></li>
+        <li><a href="#parameters-for-dmadminwebapiassignuseruser_idgroup_id">Parameters for /dmadminweb/API/assign/user/{user_id}/{group_id}</a></li>
+      </ul>
+    </li>
     <li><a href="#disassociate-a-user-from-a-user-group">Disassociate a User from a User Group</a>
       <ul>
-        <li></li>
+        <li><a href="#rest-api-endpoint-dmadminwebapiunassignuseruser_idgroup_id">REST Api Endpoint /dmadminweb/API/unassign/user/{user_id}/{group_id}</a></li>
+        <li><a href="#parameters-for-dmadminwebapiunassignuseruser_idgroup_id">Parameters for /dmadminweb/API/unassign/user/{user_id}/{group_id}</a></li>
       </ul>
     </li>
   </ul>
@@ -486,7 +492,7 @@
 </header>
 	<h2 id="associate-a-user-with-a-usergroup">Associate a User with a UserGroup</h2>
 <p>This call assigns an existing <em>User</em> to a <em>Group</em>. Once a user has been assigned to the group then the <em>User</em> will have access to any object to which the <em>Group</em> has been granted appropriate access.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapiassignuseruser_idgroup_id">REST Api Endpoint /dmadminweb/API/assign/user/{user_id}/{group_id}</h3>
 <table>
 <thead>
 <tr>
@@ -501,7 +507,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapiassignuseruser_idgroup_id">Parameters for /dmadminweb/API/assign/user/{user_id}/{group_id}</h3>
 <table>
 <thead>
 <tr>
@@ -529,7 +535,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Response Success Object</strong></p>
+<h4 id="response-success-object">Response Success Object</h4>
 <p>This Object contains the success/failed return code and an error message.</p>
 <table>
 <thead>
@@ -557,7 +563,7 @@
 </table>
 <h2 id="disassociate-a-user-from-a-user-group">Disassociate a User from a User Group</h2>
 <p>This call disassociates a <em>User</em> from a <em>Group</em>. Once a <em>User</em> has been removed from the <em>Group</em> they no longer have access to any object to which access has been granted through the <em>Group</em>.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapiunassignuseruser_idgroup_id">REST Api Endpoint /dmadminweb/API/unassign/user/{user_id}/{group_id}</h3>
 <table>
 <thead>
 <tr>
@@ -572,7 +578,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="parameters">Parameters</h5>
+<h3 id="parameters-for-dmadminwebapiunassignuseruser_idgroup_id">Parameters for /dmadminweb/API/unassign/user/{user_id}/{group_id}</h3>
 <table>
 <thead>
 <tr>
@@ -600,7 +606,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Response Success Object</strong></p>
+<h4 id="response-success-object-1">Response Success Object</h4>
 <p>This Object contains the success/failed return code and an error message.</p>
 <table>
 <thead>
@@ -684,7 +690,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

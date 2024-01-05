@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-intro/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Intro to Customizing Actions with DMScript">
 <meta itemprop="description" content="Customize any Action using Built-in Functions and Procedures with DMScript.
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="3980">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Intro to Customizing Actions with DMScript"/>
 <meta name="twitter:description" content="Customize any Action using Built-in Functions and Procedures with DMScript.
@@ -454,26 +454,19 @@
   <ul>
     <li><a href="#prerequisites">Prerequisites</a></li>
     <li><a href="#why-use-dmscript">Why Use DMScript</a></li>
-  </ul>
-
-  <ul>
-    <li>
+    <li><a href="#storing-dmscripts">Storing DMScripts</a></li>
+    <li><a href="#functions">Functions</a>
       <ul>
         <li><a href="#define-a-function">Define a Function</a></li>
         <li><a href="#call-a-function">Call a Function</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li>
+    <li><a href="#procedures">Procedures</a>
       <ul>
         <li><a href="#call-a-procedure">Call a Procedure</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
+    <li><a href="#dmscript-syntax">DMScript Syntax</a></li>
     <li><a href="#dmscript-interpreter">DMScript Interpreter</a></li>
     <li><a href="#statements">Statements</a></li>
     <li><a href="#comments">Comments</a></li>
@@ -555,14 +548,14 @@
 </ul>
 <p>If you need to do any of these things, either as part of a deployment activity or as part of an integration (for example, notifying an external system when an <em>Application Version</em> has been moved or deployed) then use <em>DMScript</em>.
 You can customize any <em>Action</em> using DM Script. DeployHub has <em>built-in Functions</em> and <em>Procedures</em> ready for you to call when you need customization. <em>Actions</em> call <em>Activities</em> that are <em>Functions</em> or <em>Procedures</em>. <em>Function</em> performs an <em>Activity</em> and returns an <em>Object</em>. A <em>Procedure</em> performs an <em>Activity</em> and returns only &lsquo;success&rsquo;or &lsquo;fail.&rsquo;</p>
-<h1 id="storing-dmscripts">Storing DMScripts</h1>
+<h2 id="storing-dmscripts">Storing DMScripts</h2>
 <p>When you write your own DMScripts for <em>Procedures</em> and <em>Functions</em>, you can set the &ldquo;kind&rdquo; to either &ldquo;<em>DMScript <strong>Procedure</strong> in Database</em>&rdquo; or &ldquo;<em>DMScript <strong>Procedure</strong> in Repository</em>&rdquo;.</p>
 <p>DMScript Procedure in Database</p>
 <p>If the &ldquo;kind&rdquo; is &ldquo;<em>DMScript <strong>Procedure</strong> in Database</em>&rdquo; then a &ldquo;Body&rdquo; tab will appear. This will show the text of the <em>DMScript</em>. Clicking the pencil icon will open a pop-up editor. This editor has syntax highlighting, search and replace options (including searching for regular expressions) and other editor <em>Functions</em>. When the edited <em>DMScript</em> is saved (by clicking the OK button or the save icon) a syntax check is performed automatically. If the <em>DMScript</em> fails, then the line in error is highlighted and the dialog stays open.</p>
 <p>DMScript in Repository</p>
 <p>If the &ldquo;kind&rdquo; is &ldquo;<em>DMScript in Repository</em>&rdquo; then you will be asked to specify the repository in which the <em>DMScript</em> file is located and the name of the file containing the <em>DMScript</em>.</p>
 <p>NOTE: You can only specify the name of the file containing the <em>DMScript</em>, so the repository definition <em>must</em> include all the other details required to locate the file in the repository. It may therefore be necessary to define a new repository specifically for <em>DMScript</em>.</p>
-<h1 id="functions">Functions</h1>
+<h2 id="functions">Functions</h2>
 <p><em>Functions</em> return a new object (such as <em>getApplication</em> or <em>getcredential</em>), perform a conversion (such as <em>xmlparse</em>), or can make calls to external web-based APIs and return structured results (such as <em>soap</em> or <em>restful_post</em>). Some <em>Functions</em> act as object <em>methods</em>. For example <em>length()</em> can be called on a string (to return its length in characters) or on an array (to return the number of elements). In these cases, the <em>Function</em> can be called directly from the object itself like this:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">str</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Hello There&#34;</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
@@ -609,7 +602,7 @@ You can customize any <em>Action</em> using DM Script. DeployHub has <em>built-i
 </span></span><span style="display:flex;"><span>A _Function_ with no parameters can be called like this:
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">res</span> <span style="color:#ce5c00;font-weight:bold">=</span> myfunc<span style="color:#ce5c00;font-weight:bold">()</span><span style="color:#000;font-weight:bold">;</span>
-</span></span></code></pre></div><h1 id="procedures">Procedures</h1>
+</span></span></code></pre></div><h2 id="procedures">Procedures</h2>
 <p>A <em>Procedure</em> can be defined in <em>DMScript</em> by using the keyword <em>Action</em> followed by the <em>Procedure</em> name and the code that makes up the <em>Procedure</em> in braces.</p>
 <p>Example:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>actionmyaction
@@ -634,26 +627,26 @@ You can customize any <em>Action</em> using DM Script. DeployHub has <em>built-i
 <p>If the action does not have any parameters, then the call should be made with no enclosing braces like this:</p>
 <p>myaction;</p>
 <p>This is to allow <em>DMScript</em> to differentiate between <em>Procedures</em> and <em>Functions</em>.</p>
-<h1 id="dmscript-syntax">DMScript Syntax</h1>
+<h2 id="dmscript-syntax">DMScript Syntax</h2>
 <p><em>DMScript</em> is an object-orientated scripting language. It uses a fairly broad syntax with elements of Java, Perl, and Shell Script. Any developer should be able to become proficient in <em>DMScript</em> fairly quickly.</p>
 <p><em>DMScript</em> has knowledge of the DeployHub object model. Each object (<em>Endpoint</em>, <em>Environment</em>, <em>Application</em>, <em>Component</em> etc) has a corresponding object in <em>DMScript</em>. Thus, you can use ${<em>Environment</em>.name} to get the current <em>Environment</em> name (deployment target) and ${<em>Application</em>.name} to get the name of the <em>Application</em> being deployed. Other objects (such as <em>Endpoint</em> and <em>Component</em>) only become &ldquo;in scope&rdquo; when they are pushed onto the <em>Stack</em> during a deployment operation.</p>
 <p>This knowledge of the object model allows <em>DMScript</em> to use fairly sophisticated operations. For example if you have an <em>Application Version</em> object:</p>
-<pre tabindex="0"><code>$app
-
-Then
-
-$app-1
-
-is the version immediately preceding this _Version_.
-
-$app-2
-
-is two revisions of this Version. Similarly,
-
-$app+1
-
-is the revision immediately after this _Version_.
-</code></pre><p>NOTE: this operation will not work if the version has two or more child versions (due to branching).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>$app
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Then
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$app-1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>is the version immediately preceding this _Version_.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$app-2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>is two revisions of this Version. Similarly,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$app+1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>is the revision immediately after this _Version_.
+</span></span></code></pre></div><p>NOTE: this operation will not work if the version has two or more child versions (due to branching).</p>
 <h2 id="dmscript-interpreter">DMScript Interpreter</h2>
 <p><em>DMScript</em> is an interpreted language. It is not compiled either to machine language or to any intermediate p-code.</p>
 <p>In DeployHub, <em>Procedures</em> and <em>Functions</em> can be external scripts (written in any language) which are then executed either on the local deployment engine or on the target <em>Endpoint</em> during a deployment. You can also create <em>Procedures</em> and <em>Functions</em> in <em>DMScript</em> and invoke them as part of a deployment. <em>DMScript</em> can call other <em>Functions</em> and <em>Procedures</em> and these can be written in <em>DMScript</em> or can be external scripts written in any language.</p>
@@ -1157,7 +1150,7 @@ is the revision immediately after this _Version_.
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

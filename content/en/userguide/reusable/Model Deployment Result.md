@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD041 -->
+
 #### Deployment Result
 
 | Name         | Type    | Description                                                                                                                                                             | Required |

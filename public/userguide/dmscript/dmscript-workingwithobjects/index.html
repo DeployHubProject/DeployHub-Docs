@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-workingwithobjects/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Working with Objects">
 <meta itemprop="description" content="Working with Objects using DMScript.
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="4605">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Working with Objects"/>
 <meta name="twitter:description" content="Working with Objects using DMScript.
@@ -452,26 +452,24 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#attributes">Attributes</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#component-object">Component Object</a></li>
-    <li><a href="#component-item">Component Item</a></li>
-  </ul>
-
-  <ul>
-    <li>
+    <li><a href="#dmscript">DMScript</a>
       <ul>
+        <li><a href="#attributes">Attributes</a></li>
+        <li><a href="#application-object">Application Object</a></li>
+        <li><a href="#change-request-object">Change Request Object</a></li>
+        <li><a href="#component-object">Component Object</a></li>
+        <li><a href="#component-item">Component Item</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#date-object">Date Object</a></li>
         <li><a href="#date-format-characters">Date Format Characters</a></li>
-        <li><a href="#alternate-format-modifiers">Alternate Format Modifiers</a></li>
+        <li><a href="#domain-object">Domain Object</a></li>
+        <li><a href="#dropzone-and-dropzone-file-object">Dropzone and DropZone File Object</a></li>
+        <li><a href="#environment-object">Environment Object</a></li>
+        <li><a href="#endpoint-object">Endpoint Object</a></li>
+        <li><a href="#user-object">User Object</a></li>
+        <li><a href="#usergroup-object">UserGroup Object</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#dropzone">DropZone</a></li>
-    <li><a href="#dropzone-file">DropZone File</a></li>
   </ul>
 </nav>
       </div>
@@ -498,7 +496,8 @@
 	<header class="article-meta">
 		
 </header>
-	<p><em>DMScript</em> is an object-orientated scripting language. As such, it understands each object in the DeployHub model. You can access each object either by selecting it off the stack (e.g.: $<em>Environment</em>), by retrieving a reference to the object from some other object, or by calling a built-in <em>Function</em> to retrieve it. Each object has accessible properties. Some objects also have methods that can be called.</p>
+	<h2 id="dmscript">DMScript</h2>
+<p><em>DMScript</em> is an object-orientated scripting language. As such, it understands each object in the DeployHub model. You can access each object either by selecting it off the stack (e.g.: $<em>Environment</em>), by retrieving a reference to the object from some other object, or by calling a built-in <em>Function</em> to retrieve it. Each object has accessible properties. Some objects also have methods that can be called.</p>
 <p>The following is a list of the objects that you can reference in <em>DMScript</em>.</p>
 <ul>
 <li>Application</li>
@@ -515,11 +514,11 @@
 <li>User</li>
 <li>UserGroup</li>
 </ul>
-<h2 id="attributes">Attributes</h2>
+<h3 id="attributes">Attributes</h3>
 <p>Attributes set against DeployHub objects are accessible as variables in <em>DMScript</em>.</p>
 <p>For example, suppose QUEUE_NAME is queue1 in &ldquo;Test <em>Environment</em> A&rdquo; and queue2 in &ldquo;Test <em>Environment</em> B&rdquo;. When deploying to &ldquo;Test <em>Environment</em> A&rdquo; the value of $QUEUE_NAME will be queue1. When deploying to &ldquo;Test <em>Environment</em> B&rdquo; the value of $QUEUE_NAME will be queue2.</p>
 <p>You do not need to use any specific syntax to access an Object variable. Whenever a variable is accessed, <em>DMScript</em> will navigate up the <em>Stack</em>, looking for the first scope in which the variable is declared. When a variable with a matching name is found, the value at that point is returned. This means that variable values can be overwritten with other values declared higher in the stack. See the high-level section named The Stack for further discussion on this.</p>
-<h1 id="application-object">Application Object</h1>
+<h3 id="application-object">Application Object</h3>
 <p>The <em>Application</em> object represents either a Base <em>Application</em>, an <em>Application Version,</em> or a Release. In <strong>DeployHub Pro</strong> there is always an <em>Application</em> on the stack representing the <em>Application</em>/<em>Release</em> being deployed referenced by $<em>Application</em>. You can also retrieve an <em>Application</em> using the get_Application__Function_ or push an <em>Application</em> onto the Stack via using <em>Application</em>.</p>
 <p>NOTE: A <em>Release</em> is a DeployHub Pro Object. It is of the <em>type__Application</em>. The release property indicates if the object represents a Release.</p>
 <p>The following properties can be accessed for an <em>Application</em> object:</p>
@@ -712,7 +711,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;Component </span><span style="color:#4e9a06">${</span><span style="color:#000">c</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06"> (id </span><span style="color:#4e9a06">${</span><span style="color:#000">c</span><span style="color:#000;font-weight:bold">.id</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">)&#34;</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><h1 id="change-request-object">Change Request Object</h1>
+</span></span></code></pre></div><h3 id="change-request-object">Change Request Object</h3>
 <p>The <em>Change Request</em> object represents a change request record associated with either a <em>Component</em> or an <em>Application</em>. Arrays of <em>Change Request</em> objects are returned by accessing the requests property of an <em>Application</em> or <em>Component</em> object or the requests() method of an <em>Application</em>.</p>
 <p>The following properties can be accessed for a <em>Change Request</em> object:</p>
 <table>
@@ -746,8 +745,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="the-component-and-component-item-objects">The Component and Component Item Objects</h1>
-<h2 id="component-object">Component Object</h2>
+<h3 id="component-object">Component Object</h3>
 <p>The <em>Component</em> object represents either a <em>Base Component</em> or a <em>Component</em> Version. When deploying an <em>Application</em>, <em>Components</em> are pushed onto the stack after each <em>Endpoint</em>. They can also be pushed onto the stack by using a comploop, retrieved from an <em>Application</em> by using ${<em>Application</em>.<em>Components</em>} or retrieved by calling <em>get_Component</em>.</p>
 <p>The following properties can be accessed for a <em>Component</em> object:</p>
 <table>
@@ -847,15 +845,13 @@
 </tbody>
 </table>
 <p>Attributes such as <em>owner</em> and <em>parent</em> return <em>Objects</em>. These objects have their own attributes. So, for example, one can get the owner name of a <em>Component</em> by writing:</p>
-<p><strong>Examples:</strong></p>
+<h4 id="component-object-example">Component Object Example</h4>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">owner</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Component_</span><span style="color:#000;font-weight:bold">.owner</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">owner</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>or, more simply:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Component_</span><span style="color:#000;font-weight:bold">.owner.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
-</span></span></code></pre></div><h2 id="component-item">Component Item</h2>
+</span></span></code></pre></div><p>or, more simply:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">_Component_</span><span style="color:#000;font-weight:bold">.owner.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><h3 id="component-item">Component Item</h3>
 <p>The <em>Component Item</em> object represents a <em>Component</em> item within a <em>Component</em>. Access to a <em>Component</em> item is only possible by retrieving the array of <em>Component</em> Item objects from the <em>Component</em> Object.</p>
 <p>The following properties can be accessed for a <em>Component</em> item object:</p>
 <table>
@@ -914,10 +910,9 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Iterate through the _Component_ items <span style="color:#204a87;font-weight:bold">for</span> a _Component_:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>iterate<span style="color:#ce5c00;font-weight:bold">(</span>ci: <span style="color:#4e9a06">${</span><span style="color:#000">Component</span><span style="color:#000;font-weight:bold">.items</span><span style="color:#4e9a06">}</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<h4 id="component-item-example">Component Item Example</h4>
+<p>Iterate through the <em>Component</em> items for a <em>Component</em>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iterate<span style="color:#ce5c00;font-weight:bold">(</span>ci: <span style="color:#4e9a06">${</span><span style="color:#000">Component</span><span style="color:#000;font-weight:bold">.items</span><span style="color:#4e9a06">}</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;name=</span><span style="color:#4e9a06">${</span><span style="color:#000">ci</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span> // Component Item Name
 </span></span><span style="display:flex;"><span>
@@ -940,7 +935,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span> // <span style="color:#204a87;font-weight:bold">for</span> this Comp Item
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><h1 id="credentials">Credentials</h1>
+</span></span></code></pre></div><h3 id="credentials">Credentials</h3>
 <p>The <em>Credential  Object</em> can be accessed with the built-in getcredential_Function_but only if the user executing the <em>DMScript</em> has read access to it.</p>
 <p>If the <em>Credential</em> can be read, then its attributes can be accessed:</p>
 <p>The following properties can be accessed for a <em>Credential Object</em>:</p>
@@ -1026,7 +1021,7 @@
 </tbody>
 </table>
 <p>You can use the <em>Credential Object</em> to access external systems in a secure and controlled manner. The user executing the <em>DMScript</em> must have read access to the <em>Credential</em>. However, having read access does not allow the username/password to be viewed or modified using the Web UI. (The username is only displayed for the <em>Credential</em> owner, the username and password can only be changed if the User has update access to the <em>Credential</em>).</p>
-<p><strong>Example</strong></p>
+<h4 id="credential-example">Credential Example</h4>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">db2creds</span> <span style="color:#ce5c00;font-weight:bold">=</span> getcredential<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;db2cred&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">username</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">db2creds</span><span style="color:#000;font-weight:bold">.username</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
@@ -1050,7 +1045,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">res</span> <span style="color:#ce5c00;font-weight:bold">=</span> restful<span style="color:#4e9a06">\_</span>get<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;https://myurl&#34;</span>,null,null,<span style="color:#000">$header</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span></code></pre></div><p>NOTE: See the description of restful_get for more information.</p>
 <p>NOTE: If you wish to prevent the credential from being decrypted, then you ensure that the right to create <em>DMScript</em> is only granted to power users. Otherwise, a user could create a <em>DMScript</em> to decrypt a credential to which they only have read access.</p>
-<h1 id="date-object">Date Object</h1>
+<h3 id="date-object">Date Object</h3>
 <p>The <em>date object</em> represents a date/time in <em>DMScript</em>. Dates can be created (with the date() or now()<em>Functions</em>) or can be retrieved from a <em>DropZoneFile</em> object (which represents a file in the <em>DropZone</em>).</p>
 <p>The following methods can be called on the <em>date object</em>:</p>
 <table>
@@ -1254,10 +1249,10 @@
 </tr>
 </tbody>
 </table>
-<h3 id="alternate-format-modifiers">Alternate Format Modifiers</h3>
+<h4 id="alternate-format-modifiers">Alternate Format Modifiers</h4>
 <p>Some conversion specifications can be modified by preceding the conversion specifier character by the E or O modifier to indicate that an alternative format should be used. If the alternative format or specification does not exist for the current locale, the behavior will be as if the unmodified conversion specification were used. (SU) The Single UNIX Specification mentions %Ec, %EC, %Ex, %EX, %Ey, %EY, %Od, %Oe, %OH, %OI, %Om, %OM, %OS, %Ou, %OU, %OV, %Ow, %OW, %Oy, where the effect of the O modifier is to use alternative numeric symbols (say, roman numerals), and that of the E modifier is to use a locale-dependent alternative representation.</p>
 <p>NOTE: The date is formatted by to_char using the C _Function_strftime.</p>
-<h1 id="domain-object">Domain Object</h1>
+<h3 id="domain-object">Domain Object</h3>
 <p>The <em>Domain</em> object represents a domain in <em>DMScript</em>. Domain objects can be retrieved from other objects (such as <em>Endpoints</em>, <em>Environments</em>, <em>Applications</em> etc). The calling user&rsquo;s home domain can be retrieved via ${me.domain}</p>
 <p>The following properties can be accessed on the <em>Domain</em> object:</p>
 <table>
@@ -1341,8 +1336,8 @@
 </tr>
 </tbody>
 </table>
-<h1 id="dropzone-and-dropzone-file-object">Dropzone and DropZone File Object</h1>
-<h2 id="dropzone">DropZone</h2>
+<h3 id="dropzone-and-dropzone-file-object">Dropzone and DropZone File Object</h3>
+<h4 id="dropzone">DropZone</h4>
 <p>The <em>DropZone Object</em> represents a <em>DropZone</em>. A <em>DropZone</em> is an area on disk on the DeployHub Server where deployment artifacts are stored and manipulated before onward transmission to the target <em>Endpoint</em>(s). A <em>DropZone</em> is placed onto the stack during a using <em>DropZone</em> statement – all operations within this block have access to this <em>DropZone</em> via the <em>DropZone Object</em>. A <em>DropZone Object</em> is also present on the stack during pre and post action processing for a <em>Component</em>. In this case, the content of the <em>DropZone</em> are the files checked out from the repository for the associated <em>Component</em> Items.</p>
 <p>The following properties can be accessed for a <em>DropZone</em> object:</p>
 <table>
@@ -1393,7 +1388,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="dropzone-file">DropZone File</h2>
+<h4 id="dropzone-file">DropZone File</h4>
 <p>The <em>DropZone File Object</em> represents a file in the <em>DropZone</em>. It can be retrieved from the <em>DropZone</em> object via the files property or the find method. Both of these calls return an array of <em>DropZone File Objects</em>, keyed on the filename. You can also call dir() on a <em>DropZone File Object</em> that represents a zipfile to get an array of <em>DropZone File Objects</em> representing the zipfile content.</p>
 <p>The following properties can be accessed for a <em>DropZone File Object</em>:</p>
 <table>
@@ -1455,7 +1450,7 @@
 </tbody>
 </table>
 <p>NOTE: See also the description for zipadd, zipget and zipdel.</p>
-<h1 id="environment-object">Environment Object</h1>
+<h3 id="environment-object">Environment Object</h3>
 <p>The <em>Environment Object</em> represents a deployment target <em>Environment</em>. During a deployment, there is always an <em>Environment  Object</em> on the stack representing the current deployment target <em>Environment</em>. This can be referenced by $<em>Environment</em>. An <em>Environment Object</em> can also be retrieved using the <em>Get Environment Function</em>.</p>
 <p>The following properties can be accessed for an <em>Environment</em> object:</p>
 <table>
@@ -1579,7 +1574,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;hostname is </span><span style="color:#4e9a06">${</span><span style="color:#000">s</span><span style="color:#000;font-weight:bold">.hostname</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><h1 id="endpoint-object">Endpoint Object</h1>
+</span></span></code></pre></div><h3 id="endpoint-object">Endpoint Object</h3>
 <p>The <em>Endpoint</em> (<em>server, container, VM/Cloud Image</em>) object represents where a deployment will be sent. An <em>Endpoint</em> object can be retrieved by accessing the servers array from an <em>Environment</em> or more typically by running a psloop. This iterates through the current <em>Endpoint</em> list, pushing an <em>Endpoint</em> object onto the stack each time through the loop. This <em>Endpoint</em> object can be referenced by $server.</p>
 <p>The following properties can be accessed for an <em>Endpoint</em> object:</p>
 <table>
@@ -1724,7 +1719,7 @@
 </span></span><span style="display:flex;"><span>or, more simply:
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">server</span><span style="color:#000;font-weight:bold">.owner.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
-</span></span></code></pre></div><h1 id="user-object">User Object</h1>
+</span></span></code></pre></div><h3 id="user-object">User Object</h3>
 <p>The <em>User object</em> represents a user in <em>DMScript</em>. <em>User objects</em> can be retrieved as the owner from other objects (such as <em>Endpoints</em>, <em>Environments</em>, <em>Applications</em> etc.). They can also be returned from a <em>getuser</em> call.</p>
 <p>The following properties can be accessed on the User object:</p>
 <table>
@@ -1808,7 +1803,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="usergroup-object">UserGroup Object</h1>
+<h3 id="usergroup-object">UserGroup Object</h3>
 <p>The <em>UserGroup object</em> represents a UserGroup in <em>DMScript</em>. UserGroup objects can be retrieved as the owner from other objects (such as <em>Endpoints</em>, <em>Environments</em>, <em>Applications</em> etc.). They can also be returned from a getusergroup call or from a <em>User</em> object (as a list of groups to which the user belongs).</p>
 <p>The following properties can be accessed on the UserGroup object:</p>
 <table>
@@ -1930,7 +1925,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

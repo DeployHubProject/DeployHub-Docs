@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD041 -->
+
 ## SVN _Repository_ Details
 
 Files and binaries can be pulled from SVN when defining your _Component_.  Below are the details needed to connect SVN as a _Repository_ in DeployHub:

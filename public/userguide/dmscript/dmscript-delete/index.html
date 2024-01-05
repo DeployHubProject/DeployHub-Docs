@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-delete/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Delete">
 <meta itemprop="description" content="Remove a file or a directory from the DropZone. 
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="287">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="290">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Delete"/>
 <meta name="twitter:description" content="Remove a file or a directory from the DropZone. 
 "/>
@@ -449,7 +449,19 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#delete">Delete</a>
+      <ul>
+        <li><a href="#example-1">Example 1</a></li>
+        <li><a href="#example-2">Example 2</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -472,7 +484,8 @@
 	<header class="article-meta">
 		
 </header>
-	<p><em>Delete</em> removes a file or a directory from the <em>DropZone</em>. Any file or directory marked as deleted will not be transferred to the target <em>Endpoint</em>(s) in any subsequent deployment.</p>
+	<h2 id="delete">Delete</h2>
+<p><em>Delete</em> removes a file or a directory from the <em>DropZone</em>. Any file or directory marked as deleted will not be transferred to the target <em>Endpoint</em>(s) in any subsequent deployment.</p>
 <p><em>delete</em> takes the following optional named parameters:</p>
 <table>
 <thead>
@@ -493,10 +506,9 @@
 </tbody>
 </table>
 <p>NOTE: A single file or dir parameter <em>must</em> be specified.</p>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Remove all files of zero length from the _DropZone_. If this is <span style="color:#204a87;font-weight:bold">done</span> in a pre-action to a _Component_, <span style="color:#204a87;font-weight:bold">then</span> no zero length file will be deployed to the _Endpoint_ even <span style="color:#204a87;font-weight:bold">if</span> they have been checked out from the repository:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">filelist</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">DropZone</span><span style="color:#000;font-weight:bold">.files</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+<h3 id="example-1">Example 1</h3>
+<p>Remove all files of zero length from the <em>DropZone</em>. If this is done in a pre-action to a <em>Component</em>, then no zero length file will be deployed to the <em>Endpoint</em> even if they have been checked out from the repository:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">filelist</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">DropZone</span><span style="color:#000;font-weight:bold">.files</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>iterate<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#000">$filelist</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -513,50 +525,48 @@
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><p><strong>Example:</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> _Pre Action_ to a _Component_:
+</span></span></code></pre></div><h3 id="example-2">Example 2</h3>
+<p><em>Pre Action</em> to a <em>Component</em>:</p>
+<p>Remove all files with a modification time prior to the time the <em>Component</em> was last deployed to the <em>Endpoint</em>. If this removes all files, the <em>Component</em> will not be deployed (since there are no files left in the <em>DropZone</em>). This allows you to set a <em>Component</em> to &ldquo;Deploy Always&rdquo; and only push files that have been added to the <em>Component</em> since it was last deployed.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">dep</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">same</span><span style="color:#000;font-weight:bold">})</span> <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  Remove all files with a modification <span style="color:#204a87">time</span> prior to the <span style="color:#204a87">time</span> the _Component_ was last deployed to the _Endpoint_. If this removes all files, the _Component_ will not be deployed <span style="color:#ce5c00;font-weight:bold">(</span>since there are no files left in the _DropZone_<span style="color:#ce5c00;font-weight:bold">)</span>. This allows you to <span style="color:#204a87">set</span> a _Component_ to <span style="color:#4e9a06">&#34;Deploy Always&#34;</span> and only push files that have been added to the _Component_ since it was last deployed.
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// We&#39;re deploying the same version of Application as currently
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// on the Target Environment
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#000">psloop</span> <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">${</span><span style="color:#000">dep</span><span style="color:#000;font-weight:bold">.same</span><span style="color:#4e9a06">}</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// for each Endpoint in the Environment…
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#000">set</span> <span style="color:#000">dt</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">$</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">server</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">deptime</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$Component</span><span style="color:#000;font-weight:bold">)};</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>// We<span style="color:#a40000">&#39;</span>re deploying the same version of Application as currently
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">$dt</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>// on the Target Environment
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// This Component has previously been deployed to
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// this Endpoint. Check the files and remove any
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// that predate this deployment time
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#000">set</span> <span style="color:#000">filelist</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">$</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">DropZone</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">files</span><span style="color:#000;font-weight:bold">};</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>psloop <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">iterate</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">file</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">$filelist</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>// <span style="color:#204a87;font-weight:bold">for</span> each Endpoint in the Environment…
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">file</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">mtime</span><span style="color:#000;font-weight:bold">}</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span> <span style="color:#000">$dt</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">dt</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">server</span><span style="color:#000;font-weight:bold">.deptime(</span><span style="color:#000">$Component</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">echo</span> <span style="color:#4e9a06">&#34;Removing file $file&#34;</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$dt</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">delete</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">file</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">$file</span><span style="color:#000;font-weight:bold">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>// This Component has previously been deployed to
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>// this Endpoint. Check the files and remove any
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>// that predate this deployment <span style="color:#204a87">time</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">filelist</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">DropZone</span><span style="color:#000;font-weight:bold">.files</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>iterate<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#000">$filelist</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">${</span><span style="color:#000">file</span><span style="color:#000;font-weight:bold">.mtime</span><span style="color:#4e9a06">}</span> &lt; <span style="color:#000">$dt</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;Removing file </span><span style="color:#000">$file</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>delete<span style="color:#ce5c00;font-weight:bold">(</span>file: <span style="color:#000">$file</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
 </span></span></code></pre></div>
 	<style>
   .feedback--answer {
@@ -615,7 +625,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

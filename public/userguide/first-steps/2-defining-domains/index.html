@@ -466,7 +466,15 @@
     </li>
     <li><a href="#deployment-tasks">Deployment Tasks</a>
       <ul>
+        <li><a href="#deployhub-pro">DeployHub Pro</a></li>
         <li><a href="#adding-editing-and-deleting-tasks">Adding, Editing and Deleting Tasks</a></li>
+        <li><a href="#move-version-to-the-next-or-previous-pipeline-state">Move Version to the Next or Previous Pipeline State</a></li>
+        <li><a href="#deploy-version-to-_environment_">Deploy Version to <em>Environment</em></a></li>
+        <li><a href="#manually-trigger-_action_-to-be-executed">Manually Trigger <em>Action</em> to be executed</a></li>
+        <li><a href="#approve-version-for-move-to-next-pipeline-state">Approve Version for Move to Next Pipeline State</a></li>
+        <li><a href="#request-calendar-entry-for-deployment-to-an-_environment_">Request Calendar Entry for Deployment to an <em>Environment</em></a></li>
+        <li><a href="#task-execute-access">Task Execute Access</a></li>
+        <li><a href="#additional-task-parameters">Additional Task Parameters</a></li>
       </ul>
     </li>
   </ul>
@@ -626,7 +634,7 @@
 <li>Deploy Version to <em>Environment</em></li>
 <li>Manually Trigger <em>Action</em> to be executed</li>
 </ul>
-<p><strong>DeployHub Pro</strong>:</p>
+<h3 id="deployhub-pro">DeployHub Pro</h3>
 <p>DeployHub Pro includes a <a href="/userguide/profeatures/calendar/">&ldquo;smart&rdquo; Calendar</a>.  The following Task are used to interact with the DeployHub Smart Calendar for Requesting and Approving deployments.</p>
 <ul>
 <li>Request Calendar Entry for Deployment to an <em>Environment</em></li>
@@ -636,7 +644,7 @@
 <p>You can add new Tasks from the <em>Domain</em> Dashboard by navigating to the <em>Domain</em> and interacting with the Tasks Section.  Select the +Add option from the Tasks Section and a pop-up displays all available Tasks. Selecting a Task will add a new row into the table.  Use the Task Detail Section to define the unique details of your new Task. You can update or remove a Task by using the Task Section table.  Using the checkbox, select the item and use the the Delete or Edit options.</p>
 <p>Once you create a Task, it is recommended that you rename that Task to more closely describe its use depending on the options selected.</p>
 <p>Below is a description of all Tasks and their detailed information.</p>
-<p><strong>Move Version to the Next or Previous Pipeline State</strong></p>
+<h3 id="move-version-to-the-next-or-previous-pipeline-state">Move Version to the Next or Previous Pipeline State</h3>
 <p>Moves an <em>Application</em> or <em>Release</em> version from one Pipeline state (Life Cycle <em>Subdomain</em>) to another. This can be used as a promotion or a demotion of an <em>Application</em> or <em>Release</em> version between Life Cycle states. When the Task is defined, the Life Cycle <em>Subdomain</em> has to be specified as part of the Task definition. The Approval Task must be accepted before the Move Version is to succeed.</p>
 <table>
 <thead>
@@ -684,7 +692,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Deploy Version to <em>Environment</em></strong></p>
+<h3 id="deploy-version-to-_environment_">Deploy Version to <em>Environment</em></h3>
 <p>Deploys an <em>Application</em> or <em>Release</em> version to an <em>Environment</em>. Select the target <em>Environment</em> via a drop-down list.</p>
 <table>
 <thead>
@@ -720,7 +728,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Manually Trigger <em>Action</em> to be executed</strong></p>
+<h3 id="manually-trigger-_action_-to-be-executed">Manually Trigger <em>Action</em> to be executed</h3>
 <p>Runs a stand-alone <em>Action</em>. For example, if you need to interrupt a deployment process, this Task allows you to execute the steps manually. The manually triggered <em>Action</em> will be placed in the &ldquo;To do&rdquo; list of the <em>User</em> or <em>Group</em> that executed the Deploy Task.</p>
 <table>
 <thead>
@@ -768,7 +776,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Approve Version for Move to Next Pipeline State</strong></p>
+<h3 id="approve-version-for-move-to-next-pipeline-state">Approve Version for Move to Next Pipeline State</h3>
 <p>Approves the <em>Application</em> or <em>Release</em> version so that it can be moved to a specified state in the pipeline (Life Cycle <em>Subdomain</em>). This works in conjunction with the Move Version Task. When the Approve Task is defined, the Target <em>Domain</em> has to be specified. When the Approve Task is executed, the selected <em>Application</em> or <em>Release</em> version can either be Approved or Rejected. Only when the an <em>Application</em> or <em>Release</em> version is &ldquo;approved&rdquo; can it be &ldquo;Moved&rdquo; or &ldquo;Deployed&rdquo;.</p>
 <p>Note: When an Approve Task has been defined for a <em>Domain</em>, it will force the use of the Approve Task before a &ldquo;Move&rdquo; or &ldquo;Deploy&rdquo; Task can be executed. If a &ldquo;Move&rdquo; or &ldquo;Deploy&rdquo; Task is attempted but has not been &ldquo;Approved,&rdquo; an error will be displayed indicating that the Task must be Approved.</p>
 <table>
@@ -817,7 +825,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Request Calendar Entry for Deployment to an <em>Environment</em></strong></p>
+<h3 id="request-calendar-entry-for-deployment-to-an-_environment_">Request Calendar Entry for Deployment to an <em>Environment</em></h3>
 <p>DeployHub Pro feature. Sends a request from a <em>User</em> to add a time slot to the calendar for a deployment. The request is sent to <em>Group</em> who has the authority to manage a particular <em>Environment&rsquo;s</em> Calendar. When the Request Task is defined it is linked to the task to be requested. When the Request Task is executed an entry is placed into the &ldquo;To Do&rdquo; list of all the <em>Users</em> who are members of the <em>Group</em> with the calendar access. The Request Task can have a Request Notification Template defined which can send out a notification to the appropriate <em>Groups</em>.</p>
 <table>
 <thead>
@@ -861,7 +869,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Task Execute Access</strong></p>
+<h3 id="task-execute-access">Task Execute Access</h3>
 <p>Once a <em>Task</em> is defined, it must be granted execute access to a <em>Group</em> before it can be invoked. Select the <em>Task</em> using the check box. Drag the desired  <em>Group</em> from the <em>Available Groups</em> column to the <em>Group Access</em> area. <em>Users</em> of the <em>Group</em> can then execute the specified task.</p>
 <p><em>Groups</em> are assigned authority on a <em>Task</em> by <em>Task</em> basis. It is possible for a <em>Domain</em> to have two different <em>Tasks</em> with the same function, one of which allows a particular <em>Group</em> to run the <em>Task</em>, and the other which doesn&rsquo;t. This allows similar <em>Tasks</em> to be created. They can have different characteristics assigned to them such as Pre-Actions and/or Post-Actions, Notification Templates, etc. Also different <em>User Groups</em> can have the authority to run them.</p>
 <ul>
@@ -873,7 +881,7 @@
 </li>
 </ul>
 <p>NOTE: Another way to accomplish this is to link an Approval Task to the Request Task. The User in the User Group would send the Request Task, and a User in the Admin Group would be notified. They would then run the Approve Task to allow the User in the Test Group to run the Move Task.</p>
-<p><strong>Additional Task Parameters</strong></p>
+<h3 id="additional-task-parameters">Additional Task Parameters</h3>
 <p>Additional parameters can be added to a Task. These additional parameters will set Global Variable at execution time. To add them, select the Task from the Task Section. Use +Add to create a new entry into the Parameters table for the selected task. It will have two columns:</p>
 <ul>
 <li>

@@ -1,4 +1,3 @@
-<!-- markdownlint-disable MD041 -->
 
 ## Using a LDAP or Active Directory _Data Source_ for Single Sign-on
 

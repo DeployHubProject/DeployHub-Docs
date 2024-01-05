@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/integrations/salesforce/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2024-01-04T17:35:37-07:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="SalesForce">
 <meta itemprop="description" content="Deploying SalesForce objects with DeployHub.
 ">
-<meta itemprop="dateModified" content="2024-01-04T17:35:37-07:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="1280">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="SalesForce"/>
 <meta name="twitter:description" content="Deploying SalesForce objects with DeployHub.
@@ -453,7 +453,16 @@
         <nav id="TableOfContents">
   <ul>
     <li><a href="#using-a-_custom-action_-for-salesforce-deployments">Using a <em>Custom Action</em> for SalesForce Deployments</a></li>
-    <li><a href="#steps-for-creating-your-salesforce-_custom-action_">Steps for Creating Your SalesForce <em>Custom Action</em></a></li>
+    <li><a href="#steps-for-creating-your-salesforce-_custom-action_">Steps for Creating Your SalesForce <em>Custom Action</em></a>
+      <ul>
+        <li><a href="#step-1---create-a-salesforce-_repository_">Step 1 - Create a SalesForce <em>Repository</em></a></li>
+        <li><a href="#step-2---create-a-salesforce-_credential_">Step 2 - Create a SalesForce <em>Credential</em></a></li>
+        <li><a href="#step-3---create-a-salesforce-_environment_-and-_endpoint_">Step 3 - Create a SalesForce <em>Environment</em> and <em>EndPoint</em></a></li>
+        <li><a href="#step-5---create-your-salesforce-_action_-using-your-_procedures_">Step 5 - Create your SalesForce <em>Action</em> using your <em>Procedures</em></a></li>
+        <li><a href="#step-6---create-your-salesforce-_component_">Step 6 - Create Your SalesForce <em>Component</em></a></li>
+        <li><a href="#step-7---set-your-_component_-attributes_">Step 7 - Set Your <em>Component</em> Attributes_</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -490,11 +499,11 @@
 <li><a href="/userguide/customizations/2-define-your-functions-and-procedures/">Procedures and Functions</a></li>
 </ul>
 <p>The following steps will take you through the process:</p>
-<p><strong>Step 1 - Create a SalesForce <em>Repository</em></strong></p>
+<h3 id="step-1---create-a-salesforce-_repository_">Step 1 - Create a SalesForce <em>Repository</em></h3>
 <p>A <em>Repository</em> of the type &ldquo;File System&rdquo; is used to reference files pulled from Git.  For this reason, you will need to create a DeployHub &ldquo;File System&rdquo; <em>Repository</em>.  To create this <em>Repository</em> see <a href="/userguide/first-steps/2-define-repositories/">Connect Your Repositories</a>.</p>
-<p><strong>Step 2 - Create a SalesForce <em>Credential</em></strong></p>
+<h3 id="step-2---create-a-salesforce-_credential_">Step 2 - Create a SalesForce <em>Credential</em></h3>
 <p>You will need a DeployHub <em>Credential</em> to login to Salesforce for the deployment step. To create this <em>Credential</em> see <a href="/userguide/first-steps/2-define-your-credentials/">Create Your Credentials</a>.</p>
-<p><strong>Step 3 - Create a SalesForce <em>Environment</em> and <em>EndPoint</em></strong></p>
+<h3 id="step-3---create-a-salesforce-_environment_-and-_endpoint_">Step 3 - Create a SalesForce <em>Environment</em> and <em>EndPoint</em></h3>
 <p>You will need to create an <em>Endpoint</em> and then an <em>Environment</em> for your SalesForce deployment. You can create as many <em>Environments</em> as needed based on your SalesForce Regions. See the <a href="/userguide/first-steps/2-define-endpoints/">Define Your Endpoints</a> and <a href="/userguide/first-steps/2-define-environments/">Build Your Environments</a> sections for more information.  The following parameters should be used when defining your <em>Endpoint</em> and <em>Environment</em>.</p>
 <ul>
 <li><strong><em>Endpoint</em> Detail Settings</strong></li>
@@ -583,7 +592,7 @@
 </ul>
 <p>Once downloaded, you will need to Import the scripts into DeployHub as <em>Procedures</em>. To import these <em>Procedures</em> navigate to the <em>Func/Procs</em> Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the <em>Functions and Procedures</em> List View. From the <em>Functions and Procedures</em> List View select the <strong>Import</strong> option. The Import will bring you to your operating system &ldquo;file open&rdquo; dialog box for selecting the GitCheckout.re, RunAnt.re and SalesforceCredential.re and SalesforceDeploy.re files.</p>
 <p>Next, select your &ldquo;Global,&rdquo; or highest level, <em>Domain</em> and upload the <em>Procedure</em> into DeployHub. If you select a lower level <em>Subdomain</em> you will restrict access.  By defining it to your highest level <em>Domain</em>, all <em>Users</em> will be able to see the <em>Procedures</em>. Once you have both imported, you are now ready to create your <em>Action</em>.</p>
-<p><strong>Step 5 - Create your SalesForce <em>Action</em> using your <em>Procedures</em></strong></p>
+<h3 id="step-5---create-your-salesforce-_action_-using-your-_procedures_">Step 5 - Create your SalesForce <em>Action</em> using your <em>Procedures</em></h3>
 <p>Once you have imported the SalesForce files as <em>Procedures</em>, you ready to define your <em>Custom Action</em>. Navigate to the <em>Actions</em> list view from the <em>Actions</em> menu option on the left hand side of the DeployHub Main Menu panel.</p>
 <p>Use the +Add option to create a new <em>Action</em> for you <em>Procedure</em>. In the &ldquo;Full Domain&rdquo; field select your &ldquo;Global&rdquo; <em>Domain</em>. If you select a lower level <em>Subdomain</em> you will restrict access to this <em>Custom Action</em>.  By defining it to your highest level <em>Domain</em>, all <em>Users</em> will be able to execute the process regardless of their <em>SubDomain</em>.</p>
 <p>Name the new Action &ldquo;SalesForceAction&rdquo; (no spaces).</p>
@@ -593,7 +602,7 @@
 -SalesforceDeploy</p>
 <p>Note: RunAnt is reference by the SalesforceDeploy <em>Procedure</em> and does not need to be included in the <em>Action</em>.</p>
 <p>When you drag your Ansible <em>Procedures</em> onto the area under &ldquo;Start&rdquo; a pop-up dialog box will open for you to complete the following parameters:</p>
-<p><strong>GitCheckout Parameters</strong></p>
+<h4 id="gitcheckout-parameters">GitCheckout Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -630,7 +639,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>SalesforceCredential Parameters</strong></p>
+<h4 id="salesforcecredential-parameters">SalesforceCredential Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -645,7 +654,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>SalesforceDeploy Parameters</strong></p>
+<h4 id="salesforcedeploy-parameters">SalesforceDeploy Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -677,7 +686,7 @@
 </tbody>
 </table>
 <p>At this point the <em>Custom Action</em> is ready to be used by anyone with access (based on Domain and security options). Each <em>Component</em> that uses the <em>Custom Action</em> will need to define specific values. Because this new <em>Custom Action</em> is reusable, no <em>Component</em> variables are defined at the <em>Action</em> level.</p>
-<p><strong>Step 6 - Create Your SalesForce <em>Component</em></strong></p>
+<h3 id="step-6---create-your-salesforce-_component_">Step 6 - Create Your SalesForce <em>Component</em></h3>
 <p>Now that you have defined your SalesForce <em>Custom Action</em> you are ready to create your SalesForce <em>Component</em>. Define your <em>Component</em> to use a <em>Custom Action</em> from the <em>Component</em> Dashboard. See <a href="/userguide/publishing-components/2-define-components/">Defining Components</a> for more details on creating your new <em>Component</em>.</p>
 <p>Update the <em>Custom Action</em> Detail field by choosing the SalesForceAction provided in the <em>Custom Action</em> dropdown list. You will have a single parameter to update:</p>
 <table>
@@ -694,7 +703,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Step 7 - Set Your <em>Component</em> Attributes_</strong></p>
+<h3 id="step-7---set-your-_component_-attributes_">Step 7 - Set Your <em>Component</em> Attributes_</h3>
 <p>The following variables must be added to the Attributes Section for all  <em>Components</em> using the SalesForceAction <em>Custom Action</em>.  The Attributes section can be found on the <em>Component</em> Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:</p>
 <table>
 <thead>
@@ -777,7 +786,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified January 4, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/5f770e29c0f0064a8109bc5357127c32d95cecb7">lint updates (5f770e2)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

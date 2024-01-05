@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD041 -->
+
 #### Responses for Attribute Result
 
 | Name       | Type                                        | Description                                                                                                                                                             | Required |

@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD041 -->
+
 #### _Component Version_ Full Detail
 
 A JSON  object represents the _Component_ being retrieved.

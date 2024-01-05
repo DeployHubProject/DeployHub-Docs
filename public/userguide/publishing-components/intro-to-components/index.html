@@ -26,11 +26,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/publishing-components/intro-to-components/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2024-01-04T17:35:37-07:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Intro to  Components">
 <meta itemprop="description" content="Intro to Components DeployHub manages microservices and other reusable objects as Components. Components are assigned to an Application even though they are managed independently. Assign Components to Applications to track a &rsquo;logical&rsquo; view of your software solution. In a monolithic approach, we performed this step during the software compile and link, or &lsquo;build&rsquo; process. In microservices, they are loosely coupled and linked at run-time. Defining Components to Applications puts the Application in a &rsquo;logical&rsquo; view.">
-<meta itemprop="dateModified" content="2024-01-04T17:35:37-07:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="683">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Intro to  Components"/>
 <meta name="twitter:description" content="Intro to Components DeployHub manages microservices and other reusable objects as Components. Components are assigned to an Application even though they are managed independently. Assign Components to Applications to track a &rsquo;logical&rsquo; view of your software solution. In a monolithic approach, we performed this step during the software compile and link, or &lsquo;build&rsquo; process. In microservices, they are loosely coupled and linked at run-time. Defining Components to Applications puts the Application in a &rsquo;logical&rsquo; view."/>
@@ -514,8 +514,8 @@
 <p>This information is collected when you define your <em>Component</em> to the DeployHub catalog. You can use the DeployHub APIs to automatically update this information via your CD Pipeline once you have defined your <em>Component Base Version</em>. When your CD engine initiates a workflow for the <em>Component</em>, it indicates that a new version of the <em>Component</em> is being pushed across the Pipeline causing all consuming <em>Applications</em> to be automatically incremented to a new version number.  If a <em>Component</em> changes, the consuming <em>Application</em> also changes.  Both get a new version number. For more information see <a href="/userguide/pipeline/2-define-your-build-engines/">CD Engines</a>.</p>
 <p>When you first define your <em>Component</em> DeployHub tracks it as the <em>Component Base Version</em>. Subsequent updates to that <em>Component</em> creates a new <em>Component Version</em> which represent the updates over time. A <em>Component Base Version</em> is always the first one created, and it acts as a model for subsequent <em>Component Versions</em>. Otherwise they are identical types of objects.</p>
 <p>DeployHub uses a simple versioning number schema starting at 1 and incrementing over time, for example:</p>
-<pre tabindex="0"><code> Myapp;1, Myapp;2.
-</code></pre><p>You can use your CI/CD process to include variance in your versioning number (base name, variant, version).  See <a href="/userguide/integrations/ci-cd_integrations/#_component_-versioning-schema">Component Versioning Schema</a>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span> Myapp;1, Myapp;2.
+</span></span></code></pre></div><p>You can use your CI/CD process to include variance in your versioning number (base name, variant, version).  See <a href="/userguide/integrations/ci-cd_integrations/#_component_-versioning-schema">Component Versioning Schema</a>.</p>
 
 	<style>
   .feedback--answer {
@@ -574,7 +574,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified January 4, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/5f770e29c0f0064a8109bc5357127c32d95cecb7">lint updates (5f770e2)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

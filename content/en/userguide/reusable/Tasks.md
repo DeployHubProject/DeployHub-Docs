@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD041 -->
+
 ## Deployment Tasks
 
 Task are used for executing deployments, managing approvals, or staging a deployment. Tasks can be assigned to any _Domain_. However, they are most commonly associated to _Project Domains_ and _Life Cycle Domains_. You can assign a Task at a higher _Domain_ level allowing any child _Domains_ to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your _Subdomains_. However, this means that a Catalog _Domain_ may include Tasks that it cannot use.

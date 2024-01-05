@@ -936,7 +936,7 @@
 &lt;li&gt;Deploy Version to &lt;em&gt;Environment&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Manually Trigger &lt;em&gt;Action&lt;/em&gt; to be executed&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;DeployHub Pro&lt;/strong&gt;:&lt;/p&gt;
+&lt;h3 id=&#34;deployhub-pro&#34;&gt;DeployHub Pro&lt;/h3&gt;
 &lt;p&gt;DeployHub Pro includes a &lt;a href=&#34;/userguide/profeatures/calendar/&#34;&gt;&amp;ldquo;smart&amp;rdquo; Calendar&lt;/a&gt;.  The following Task are used to interact with the DeployHub Smart Calendar for Requesting and Approving deployments.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Request Calendar Entry for Deployment to an &lt;em&gt;Environment&lt;/em&gt;&lt;/li&gt;
@@ -946,7 +946,7 @@
 &lt;p&gt;You can add new Tasks from the &lt;em&gt;Domain&lt;/em&gt; Dashboard by navigating to the &lt;em&gt;Domain&lt;/em&gt; and interacting with the Tasks Section.  Select the +Add option from the Tasks Section and a pop-up displays all available Tasks. Selecting a Task will add a new row into the table.  Use the Task Detail Section to define the unique details of your new Task. You can update or remove a Task by using the Task Section table.  Using the checkbox, select the item and use the the Delete or Edit options.&lt;/p&gt;
 &lt;p&gt;Once you create a Task, it is recommended that you rename that Task to more closely describe its use depending on the options selected.&lt;/p&gt;
 &lt;p&gt;Below is a description of all Tasks and their detailed information.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Move Version to the Next or Previous Pipeline State&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;move-version-to-the-next-or-previous-pipeline-state&#34;&gt;Move Version to the Next or Previous Pipeline State&lt;/h3&gt;
 &lt;p&gt;Moves an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version from one Pipeline state (Life Cycle &lt;em&gt;Subdomain&lt;/em&gt;) to another. This can be used as a promotion or a demotion of an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version between Life Cycle states. When the Task is defined, the Life Cycle &lt;em&gt;Subdomain&lt;/em&gt; has to be specified as part of the Task definition. The Approval Task must be accepted before the Move Version is to succeed.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -994,7 +994,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Deploy Version to &lt;em&gt;Environment&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deploy-version-to-_environment_&#34;&gt;Deploy Version to &lt;em&gt;Environment&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Deploys an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version to an &lt;em&gt;Environment&lt;/em&gt;. Select the target &lt;em&gt;Environment&lt;/em&gt; via a drop-down list.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1030,7 +1030,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Manually Trigger &lt;em&gt;Action&lt;/em&gt; to be executed&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;manually-trigger-_action_-to-be-executed&#34;&gt;Manually Trigger &lt;em&gt;Action&lt;/em&gt; to be executed&lt;/h3&gt;
 &lt;p&gt;Runs a stand-alone &lt;em&gt;Action&lt;/em&gt;. For example, if you need to interrupt a deployment process, this Task allows you to execute the steps manually. The manually triggered &lt;em&gt;Action&lt;/em&gt; will be placed in the &amp;ldquo;To do&amp;rdquo; list of the &lt;em&gt;User&lt;/em&gt; or &lt;em&gt;Group&lt;/em&gt; that executed the Deploy Task.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1078,7 +1078,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Approve Version for Move to Next Pipeline State&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;approve-version-for-move-to-next-pipeline-state&#34;&gt;Approve Version for Move to Next Pipeline State&lt;/h3&gt;
 &lt;p&gt;Approves the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version so that it can be moved to a specified state in the pipeline (Life Cycle &lt;em&gt;Subdomain&lt;/em&gt;). This works in conjunction with the Move Version Task. When the Approve Task is defined, the Target &lt;em&gt;Domain&lt;/em&gt; has to be specified. When the Approve Task is executed, the selected &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version can either be Approved or Rejected. Only when the an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; version is &amp;ldquo;approved&amp;rdquo; can it be &amp;ldquo;Moved&amp;rdquo; or &amp;ldquo;Deployed&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Note: When an Approve Task has been defined for a &lt;em&gt;Domain&lt;/em&gt;, it will force the use of the Approve Task before a &amp;ldquo;Move&amp;rdquo; or &amp;ldquo;Deploy&amp;rdquo; Task can be executed. If a &amp;ldquo;Move&amp;rdquo; or &amp;ldquo;Deploy&amp;rdquo; Task is attempted but has not been &amp;ldquo;Approved,&amp;rdquo; an error will be displayed indicating that the Task must be Approved.&lt;/p&gt;
 &lt;table&gt;
@@ -1127,7 +1127,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Request Calendar Entry for Deployment to an &lt;em&gt;Environment&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;request-calendar-entry-for-deployment-to-an-_environment_&#34;&gt;Request Calendar Entry for Deployment to an &lt;em&gt;Environment&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;DeployHub Pro feature. Sends a request from a &lt;em&gt;User&lt;/em&gt; to add a time slot to the calendar for a deployment. The request is sent to &lt;em&gt;Group&lt;/em&gt; who has the authority to manage a particular &lt;em&gt;Environment&amp;rsquo;s&lt;/em&gt; Calendar. When the Request Task is defined it is linked to the task to be requested. When the Request Task is executed an entry is placed into the &amp;ldquo;To Do&amp;rdquo; list of all the &lt;em&gt;Users&lt;/em&gt; who are members of the &lt;em&gt;Group&lt;/em&gt; with the calendar access. The Request Task can have a Request Notification Template defined which can send out a notification to the appropriate &lt;em&gt;Groups&lt;/em&gt;.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1171,7 +1171,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Task Execute Access&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;task-execute-access&#34;&gt;Task Execute Access&lt;/h3&gt;
 &lt;p&gt;Once a &lt;em&gt;Task&lt;/em&gt; is defined, it must be granted execute access to a &lt;em&gt;Group&lt;/em&gt; before it can be invoked. Select the &lt;em&gt;Task&lt;/em&gt; using the check box. Drag the desired  &lt;em&gt;Group&lt;/em&gt; from the &lt;em&gt;Available Groups&lt;/em&gt; column to the &lt;em&gt;Group Access&lt;/em&gt; area. &lt;em&gt;Users&lt;/em&gt; of the &lt;em&gt;Group&lt;/em&gt; can then execute the specified task.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Groups&lt;/em&gt; are assigned authority on a &lt;em&gt;Task&lt;/em&gt; by &lt;em&gt;Task&lt;/em&gt; basis. It is possible for a &lt;em&gt;Domain&lt;/em&gt; to have two different &lt;em&gt;Tasks&lt;/em&gt; with the same function, one of which allows a particular &lt;em&gt;Group&lt;/em&gt; to run the &lt;em&gt;Task&lt;/em&gt;, and the other which doesn&amp;rsquo;t. This allows similar &lt;em&gt;Tasks&lt;/em&gt; to be created. They can have different characteristics assigned to them such as Pre-Actions and/or Post-Actions, Notification Templates, etc. Also different &lt;em&gt;User Groups&lt;/em&gt; can have the authority to run them.&lt;/p&gt;
 &lt;ul&gt;
@@ -1183,7 +1183,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;NOTE: Another way to accomplish this is to link an Approval Task to the Request Task. The User in the User Group would send the Request Task, and a User in the Admin Group would be notified. They would then run the Approve Task to allow the User in the Test Group to run the Move Task.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Additional Task Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;additional-task-parameters&#34;&gt;Additional Task Parameters&lt;/h3&gt;
 &lt;p&gt;Additional parameters can be added to a Task. These additional parameters will set Global Variable at execution time. To add them, select the Task from the Task Section. Use +Add to create a new entry into the Parameters table for the selected task. It will have two columns:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;

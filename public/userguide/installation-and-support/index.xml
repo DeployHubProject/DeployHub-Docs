@@ -51,32 +51,30 @@
 &lt;p&gt;See the &lt;a href=&#34;https://docs.docker.com/get-started/#test-docker-version&#34;&gt;Docker Install Test&lt;/a&gt; instructions&lt;/p&gt;
 &lt;h2 id=&#34;installing-your-deployhub-reverse-proxy-docker-image&#34;&gt;Installing Your DeployHub Reverse Proxy Docker Image&lt;/h2&gt;
 &lt;p&gt;The DeployHub Reverse Proxy Docker Image is found on the Redhat Quay Docker Registry. Follow the steps below to install the Reverse Proxy into your Docker installation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 1 - Set your CLIENTID as environment variable&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-1---set-your-clientid-as-environment-variable&#34;&gt;Step 1 - Set your CLIENTID as environment variable&lt;/h3&gt;
 &lt;p&gt;Use your Client ID that you received in your &amp;ldquo;Welcome&amp;rdquo; sign up email from DeployHub. It will be a hexadecimal number such as:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Your CLIENTID is 6d961c2d-69a4-4660-8a4a-aaea11276864
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Run:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;export CLIENTID=&amp;#34;Your ID&amp;#34;
-
-For example: 
-
-export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Step 2 - Pull Reverse Proxy from Redhat Quay Registry&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Your CLIENTID is 6d961c2d-69a4-4660-8a4a-aaea11276864
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;CLIENTID&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Your ID&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nash&#34; data-lang=&#34;nash&#34;&gt;export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;step-2---pull-reverse-proxy-from-redhat-quay-registry&#34;&gt;Step 2 - Pull Reverse Proxy from Redhat Quay Registry&lt;/h3&gt;
 &lt;p&gt;Run:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker pull quay.io/deployhub/deployhub-rproxy:latest
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Step 3 - Find your image SHA&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker pull quay.io/deployhub/deployhub-rproxy:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-3---find-your-image-sha&#34;&gt;Step 3 - Find your image SHA&lt;/h3&gt;
 &lt;p&gt;Run:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker images | grep deployhub-rproxy | grep latest
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Find the image SHA from the third column in the output.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;quay.io/deployhub/deployhub-rproxy      v9.0.0          0114088b0b44        6 days ago          3.32GB
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The SHA in the above example is 0114088b0b44.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 4 - Start the container for Linux and OS/X&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker images &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep deployhub-rproxy &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Find the image SHA from the third column in the output.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;quay.io/deployhub/deployhub-rproxy      v9.0.0          0114088b0b44        &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt; days ago          3.32GB
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The SHA in the above example is 0114088b0b44.&lt;/p&gt;
+&lt;h3 id=&#34;step-4---start-the-container-for-linux-and-osx&#34;&gt;Step 4 - Start the container for Linux and OS/X&lt;/h3&gt;
 &lt;p&gt;Use the image SHA from Step 3 as the last parameter to the docker run.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -d --hostname &lt;span style=&#34;color:#4e9a06&#34;&gt;`&lt;/span&gt;hostname&lt;span style=&#34;color:#4e9a06&#34;&gt;`&lt;/span&gt; -e &lt;span style=&#34;color:#000&#34;&gt;CLIENTID&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$CLIENTID&lt;/span&gt; -v ~/.ssh:/keys:Z 0114088b0b44
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Step 5 - Access DeployHub from your browser&lt;/strong&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-5---access-deployhub-from-your-browser&#34;&gt;Step 5 - Access DeployHub from your browser&lt;/h3&gt;
 &lt;p&gt;DeployHub is accessible through the following url:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://console.deployhub.com/dmadminweb/Home
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Login using the UserID and Password you used when you Signed-up for DeployHub&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 6 - Confirm Your Reverse Proxy is Running&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;https://console.deployhub.com/dmadminweb/Home
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Login using the UserID and Password you used when you Signed-up for DeployHub&lt;/p&gt;
+&lt;h3 id=&#34;step-6---confirm-your-reverse-proxy-is-running&#34;&gt;Step 6 - Confirm Your Reverse Proxy is Running&lt;/h3&gt;
 &lt;p&gt;In the upper right hand corner you will see a message that should say &amp;ldquo;2 out of 2 Reverse Proxy Running.&amp;rdquo;  There is a default proxy used to deploy into the DeployHub environment for the Hipster Store Tutorial.&lt;/p&gt;
 
       </description>

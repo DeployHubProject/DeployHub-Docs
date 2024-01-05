@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-conditionalstatements/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Conditionals">
 <meta itemprop="description" content="Use Conditional Expressions to evaluate true or false. 
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="308">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="312">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Conditionals"/>
 <meta name="twitter:description" content="Use Conditional Expressions to evaluate true or false. 
 "/>
@@ -449,7 +449,19 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#conditional-expressions">Conditional Expressions</a>
+      <ul>
+        <li><a href="#example-1">Example 1</a></li>
+        <li><a href="#example-2">Example 2</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -472,8 +484,9 @@
 	<header class="article-meta">
 		
 </header>
-	<p>Use the <em>Conditional Expressions</em> &ldquo;if&rdquo; and &ldquo;else&rdquo; as a general expression evaluator to see if it equates to true (non-zero) or false (zero). If the expression equates to true, then the block associated with the &ldquo;if&rdquo; is executed. If the expression equates to false, then the block associated with the &ldquo;else&rdquo; is executed. The &ldquo;else&rdquo; part of the expression is optional.</p>
-<p><strong>Example:</strong></p>
+	<h2 id="conditional-expressions">Conditional Expressions</h2>
+<p>Use the <em>Conditional Expressions</em> &ldquo;if&rdquo; and &ldquo;else&rdquo; as a general expression evaluator to see if it equates to true (non-zero) or false (zero). If the expression equates to true, then the block associated with the &ldquo;if&rdquo; is executed. If the expression equates to false, then the block associated with the &ldquo;else&rdquo; is executed. The &ldquo;else&rdquo; part of the expression is optional.</p>
+<h3 id="example-1">Example 1</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">a</span><span style="color:#ce5c00;font-weight:bold">=</span>10<span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$a</span>&lt;10<span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
@@ -508,7 +521,7 @@
 </span></span></code></pre></div><p>NOTE: in <em>DMScript</em> the braces are mandatory when constructing a conditional expression, even if there is only one statement to execute.</p>
 <p><em>If</em> can also be used to filter the current <em>Endpoint list</em>. For example, an <em>Environment</em> may contain 10 <em>Endpoint_s. The_Endpoint list_is this complete list of_Endpoint_associated with the_Component_on the stack. You can use the_if_expression to reduce this list to_Endpoints_matching the specified criteria. For example, if you use_IF_with an expression of ATVAL=&lsquo;Y&rsquo; then any code attached to the_then_part of the if will operate only on_Endpoints_with an attribute of ATVAL that is equal to Y. Similarly, any actions attached to the_else_part of the_if_statement will operate only on_Endpoints__without</em> an attribute of ATVAL or with an ATVAL attribute that is not equal to Y.</p>
 <p>When using an <em>if</em> expression in this way, both the <em>then</em> and <em>else</em> parts can be executed with different server sets in each block.</p>
-<p><em><strong>Example:</strong></em></p>
+<h3 id="example-2">Example 2</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$HAS</span><span style="color:#4e9a06">\_</span>MY<span style="color:#4e9a06">\_</span>SERVICE <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;Y&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span> // this block only executes <span style="color:#204a87;font-weight:bold">for</span> Endpoints
 </span></span><span style="display:flex;"><span>
@@ -574,7 +587,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

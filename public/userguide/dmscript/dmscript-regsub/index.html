@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-regsub/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-15T10:20:11-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Regsub">
 <meta itemprop="description" content="Convert a value to a string and replace all occurrences. 
 ">
-<meta itemprop="dateModified" content="2020-06-15T10:20:11-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="82">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Regsub"/>
 <meta name="twitter:description" content="Convert a value to a string and replace all occurrences. 
@@ -449,7 +449,20 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#see-also">See Also</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -473,20 +486,20 @@
 		
 </header>
 	<p>regsub converts the value to a string and then replaces all the occurrences of the given regular expression with the specified substitute string.</p>
-<p><strong>Usage:</strong></p>
+<h3 id="usage">Usage</h3>
 <p>String.regsub(regexp,substitute)</p>
 <p>Or</p>
 <p>regsub(String,regexp,substitute)</p>
 <p>Where:</p>
 <p>regexp Is a regular expression to find in the String.</p>
 <p>substitute Is a String to replace for the located regular expression.</p>
-<p><strong>Returns:</strong></p>
+<h3 id="returns">Returns</h3>
 <p>String: The result of substituting each occurrence of the matched regular expression with the substitute string.</p>
 <p>Examples:</p>
 <p>set a = &ldquo;Hello There&rdquo;;</p>
 <p>echo ${a.regsub(&quot;^.e&quot;,&ldquo;x&rdquo;)};</p>
 <p>// echoes &ldquo;xllo there&rdquo;;</p>
-<p><strong>See Also:</strong></p>
+<h3 id="see-also">See Also</h3>
 <p>substr(), length()</p>
 
 	<style>
@@ -546,7 +559,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 15, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/102cb1abc9a119dc45ffe0452c007961490d86e9">Remove extra headers in DMScript (102cb1a)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-iterate/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-17T14:59:15-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Iterate">
 <meta itemprop="description" content="Loop through a list of Objects. 
 ">
-<meta itemprop="dateModified" content="2020-06-17T14:59:15-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="238">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Iterate"/>
 <meta name="twitter:description" content="Loop through a list of Objects. 
@@ -449,7 +449,18 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -484,8 +495,8 @@
 </span></span><span style="display:flex;"><span> // loop-body
 </span></span><span style="display:flex;"><span> <span style="color:#ce5c00;font-weight:bold">}</span>
 </span></span></code></pre></div><p>NOTE: Unlike <em>foreach</em>, iterate only operates with Arrays/Lists. Because it sets the variable to the content of each array element, the key value is not available in the body of the loop.</p>
-<p><strong>Example:</strong>
-Here is an example of an <em>Array iterator</em> – this iterates over all the values in the specified array (i.e.: the subscripts). e.g.</p>
+<h3 id="example">Example</h3>
+<p>Here is an example of an <em>Array iterator</em> – this iterates over all the values in the specified array (i.e.: the subscripts). e.g.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">arr</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span> <span style="color:#4e9a06">&#39;;a&#39;</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span> <span style="color:#4e9a06">&#39;;1&#39;</span><span style="color:#000;font-weight:bold">;</span>, <span style="color:#4e9a06">&#39;;b&#39;</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span> <span style="color:#4e9a06">&#39;;2&#39;</span><span style="color:#000;font-weight:bold">;</span>, <span style="color:#4e9a06">&#39;;c&#39;</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span> <span style="color:#4e9a06">&#39;;3&#39;</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>iterate<span style="color:#ce5c00;font-weight:bold">(</span>k: <span style="color:#000">$arr</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -572,7 +583,7 @@ Here is an example of an <em>Array iterator</em> – this iterates over all the 
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 17, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/e989440475d980e6e4004e933ae312e9b30b16fb">cleanup (e989440)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

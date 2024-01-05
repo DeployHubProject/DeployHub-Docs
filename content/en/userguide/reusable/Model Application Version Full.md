@@ -1,4 +1,3 @@
-<!-- markdownlint-disable MD041 -->
 
 #### _Application Version_ Results Full Detail
 

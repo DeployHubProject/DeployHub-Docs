@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-remotescript/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Remote Script">
 <meta itemprop="description" content="Execute a script on each remote Endpoint. 
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="375">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="381">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Remote Script"/>
 <meta name="twitter:description" content="Execute a script on each remote Endpoint. 
 "/>
@@ -449,7 +449,21 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#remote-script">Remote Script</a>
+      <ul>
+        <li><a href="#example-1">Example 1</a></li>
+        <li><a href="#example-2">Example 2</a></li>
+        <li><a href="#example-3">Example 3</a></li>
+        <li><a href="#example-4">Example 4</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -472,7 +486,8 @@
 	<header class="article-meta">
 		
 </header>
-	<p><em>Remotescript</em> executes a script on each remote <em>Endpoint</em> in the current server list. There are blocks that execute before and after the script is executed respectively. These blocks execute once for each <em>Endpoint</em> in the current <em>Endpoint</em> list.</p>
+	<h2 id="remote-script">Remote Script</h2>
+<p><em>Remotescript</em> executes a script on each remote <em>Endpoint</em> in the current server list. There are blocks that execute before and after the script is executed respectively. These blocks execute once for each <em>Endpoint</em> in the current <em>Endpoint</em> list.</p>
 <p>During the execution, there is an implicit <em>serverloop</em> (psloop). The <em>Endpoint</em> object is pushed onto the stack, any &ldquo;pre&rdquo; block is executed, the specified script is then executed on the current remote <em>Endpoint</em> and then any &ldquo;post&rdquo; block is executed. In the post block, the variable $? is set to the exit status of the script.</p>
 <p>remotescript requires named parameters as follows:</p>
 <table>
@@ -493,10 +508,10 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Example:</strong></p>
+<h3 id="example-1">Example 1</h3>
 <p>Execute a script on each <em>Endpoint</em> in the current target <em>Environment</em>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>remotescript<span style="color:#ce5c00;font-weight:bold">(</span>filepath: <span style="color:#4e9a06">&#34;/path/to/file&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
-</span></span></code></pre></div><p><strong>Example:</strong></p>
+</span></span></code></pre></div><h3 id="example-2">Example 2</h3>
 <p>Execute a script on each <em>Endpoint</em> which has the attribute &ldquo;ATT1&rdquo; set to &ldquo;Y&rdquo;:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$ATT1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;Y&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -505,7 +520,7 @@
 </span></span><span style="display:flex;"><span>remotescript<span style="color:#ce5c00;font-weight:bold">(</span>filepath: <span style="color:#4e9a06">&#34;/path/to/file&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><p><strong>Example:</strong></p>
+</span></span></code></pre></div><h3 id="example-3">Example 3</h3>
 <p>Execute a script specific to each <em>Endpoint</em> type within the <em>Environment</em>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">${</span><span style="color:#000">server</span><span style="color:#000;font-weight:bold">.type</span><span style="color:#4e9a06">}</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;windows&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
@@ -522,7 +537,7 @@
 </span></span><span style="display:flex;"><span>remotescript<span style="color:#ce5c00;font-weight:bold">(</span>filepath: <span style="color:#4e9a06">&#34;/opt/scripts/myscript.sh&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><p><strong>Example:</strong></p>
+</span></span></code></pre></div><h3 id="example-4">Example 4</h3>
 <p>Execute a script on each <em>Endpoint</em> in the <em>Environment</em>, passing parameters:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#4e9a06">&#34;first\_param&#34;</span>,<span style="color:#4e9a06">&#34;</span><span style="color:#000">$ATT</span><span style="color:#4e9a06">&#34;</span><span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
@@ -610,7 +625,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-abort/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-04T17:28:49-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Abort">
 <meta itemprop="description" content="Using _abort_ to end a script execution.
 ">
-<meta itemprop="dateModified" content="2020-06-04T17:28:49-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="149">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Abort"/>
 <meta name="twitter:description" content="Using _abort_ to end a script execution.
@@ -449,7 +449,18 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -475,31 +486,31 @@
 	<p><em>abort</em> throws an exception, which would normally end a script execution. It can take an optional message which DeployHub will issue when the script ends. <em>abort</em> is typically used when a condition prevents the rest of the script from executing correctly. <em>abort</em> takes a single, named parameter:</p>
 <p>msg: The message to print on abort. If msg is not specified, the msg defaults to ABORT.</p>
 <p>It can be caught with a try/catch block so you can break out of a block of code whilst still allowing the script to execute.</p>
-<p><strong>Example:</strong></p>
-<pre tabindex="0"><code>abort(msg: &#34;Something went wrong&#34;);
-
-This will end the script with the message &#34;Something went wrong&#34;.
-
-abort;
-
-This will end the script with the message &#34;ABORT&#34;
-
-try {
-
-echo &#34;About to abort&#34;;
-
-abort(msg: &#34;Custom Message&#34;);
-
-echo &#34;This will never execute&#34;;
-
-} catch (ex) {
-
-echo &#34;Error: $ex&#34;;
-
-}
-
-echo &#34;Carry on&#34;;
-</code></pre><p>Result:</p>
+<h3 id="example">Example</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#000">abort</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Something went wrong&#34;</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">This</span> <span style="color:#000">will</span> <span style="color:#000">end</span> <span style="color:#000">the</span> <span style="color:#000">script</span> <span style="color:#204a87;font-weight:bold">with</span> <span style="color:#000">the</span> <span style="color:#000">message</span> <span style="color:#4e9a06">&#34;Something went wrong&#34;</span><span style="color:#000;font-weight:bold">.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">abort</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">This</span> <span style="color:#000">will</span> <span style="color:#000">end</span> <span style="color:#000">the</span> <span style="color:#000">script</span> <span style="color:#204a87;font-weight:bold">with</span> <span style="color:#000">the</span> <span style="color:#000">message</span> <span style="color:#4e9a06">&#34;ABORT&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">try</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">echo</span> <span style="color:#4e9a06">&#34;About to abort&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">abort</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Custom Message&#34;</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">echo</span> <span style="color:#4e9a06">&#34;This will never execute&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">catch</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">ex</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">echo</span> <span style="color:#4e9a06">&#34;Error: $ex&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">echo</span> <span style="color:#4e9a06">&#34;Carry on&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div><p>Result:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>About to abort
 </span></span><span style="display:flex;"><span>Error: Custom Message
 </span></span><span style="display:flex;"><span>Carry on
@@ -561,7 +572,7 @@ echo &#34;Carry on&#34;;
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 4, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/5d29805e46bccf47579cd766f0e8a164a6c1a6c0">repositories (5d29805)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

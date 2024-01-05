@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/restapi/intro-and-logging-in/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Intro to APIs and Logging In">
 <meta itemprop="description" content="Introduction and the Login API
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="638">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="641">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Intro to APIs and Logging In"/>
 <meta name="twitter:description" content="Introduction and the Login API
 "/>
@@ -454,10 +454,20 @@
   <ul>
     <li><a href="#object-accessibility">Object Accessibility</a></li>
     <li><a href="#logging-in-to-establishing-a-connection">Logging in to Establishing a Connection</a></li>
-    <li><a href="#qualify-the-name-of-the-object">Qualify the Name of the Object</a></li>
+    <li><a href="#qualify-the-name-of-the-object">Qualify the Name of the Object</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
     <li><a href="#use-the-objects-internal-id">Use the object&rsquo;s internal ID</a></li>
     <li><a href="#using-curl-to-access-the-api">Using cURL to access the API</a></li>
-    <li><a href="#login">Login</a></li>
+    <li><a href="#login">Login</a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapilogin">REST Api Endpoint /dmadminweb/API/login</a></li>
+        <li><a href="#parameters-for-dmadminwebapilogin">Parameters for /dmadminweb/API/login</a></li>
+        <li><a href="#response">Response</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -492,11 +502,10 @@
 <p>When issuing calls to the API, the client application must either first issue a &ldquo;login&rdquo; call, specifying the username and password or must specify the username and password in each individual call to the API.</p>
 <h2 id="qualify-the-name-of-the-object">Qualify the Name of the Object</h2>
 <p>When specifying an Object by name you can always qualify the name by pre-pending it with the name of the <em>Domain</em> in which it is contained. The name of the <em>Domain</em> should be separated from the name of the object by a period.</p>
-<p><strong>Example:</strong></p>
-<pre tabindex="0"><code>    GLOBAL.USA.Development.demoenv
-
-This specifies that the &#34;demoenv&#34; Environment required can be found in the &#34;Development&#34; Subdomain of Domain &#34;USA&#34; which is a Subdomain of &#34;GLOBAL&#34;.
-</code></pre><h2 id="use-the-objects-internal-id">Use the object&rsquo;s internal ID</h2>
+<h3 id="example">Example</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>    GLOBAL.USA.Development.demoenv
+</span></span></code></pre></div><p>This specifies that the &ldquo;demoenv&rdquo; Environment required can be found in the &ldquo;Development&rdquo; Subdomain of Domain &ldquo;USA&rdquo; which is a Subdomain of &ldquo;GLOBAL&rdquo;.</p>
+<h2 id="use-the-objects-internal-id">Use the object&rsquo;s internal ID</h2>
 <p>Every Object has a unique ID. This is used internally in the database as a primary/foreign key. An Object is given an ID when it is first created and that ID never changes or is re-used, even if the object itself is deleted. Therefore, if you know the ID of the object you can specify that in the API and RE will know which to object you&rsquo;re referring to, even if the name is not unique.</p>
 <p>The query tools in the API return the object&rsquo;s internal ID as well as its name. Once you know the ID you can use it in subsequent calls to the API.</p>
 <p>To use the ID, just place it where you would normally place the object&rsquo;s name. The APIs will assume you&rsquo;re specifying an ID if the name given is fully-numeric.</p>
@@ -504,13 +513,13 @@ This specifies that the &#34;demoenv&#34; Environment required can be found in t
 <h2 id="using-curl-to-access-the-api">Using cURL to access the API</h2>
 <p>Here is an example of how to use cURL to access the API.</p>
 <p>First, we need to login. This operation will return a session ID. We use cURL&rsquo;s &ndash;cookie-jar option to store this session ID in the file C:\temp\session.txt</p>
-<pre tabindex="0"><code>  curl --data &#34;user=omadmin&amp;pass=ompassword&#34; --cookie-jar c:\temp\session.txt http://mac:8080/dmadminweb/API/login
-</code></pre><p>If the username/password combination is correct, the user is logged in and the success indication is returned. Now we can call any of the other API interfaces by specifying the same file in which we stored the session ID returned from the login call.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  curl --data <span style="color:#4e9a06">&#34;user=omadmin&amp;pass=ompassword&#34;</span> --cookie-jar c:<span style="color:#4e9a06">\t</span>emp<span style="color:#4e9a06">\s</span>ession.txt http://mac:8080/dmadminweb/API/login
+</span></span></code></pre></div><p>If the username/password combination is correct, the user is logged in and the success indication is returned. Now we can call any of the other API interfaces by specifying the same file in which we stored the session ID returned from the login call.</p>
 <p>For example, this will return a JSON array containing all the servers in our home and <em>Subdomains</em> to which we have view access.</p>
-<pre tabindex="0"><code>  curl --data &#34;all=Y&#34; --cookie c:\temp\session.txt http://mac:8080/dmadminweb/API/servers
-</code></pre><h2 id="login">Login</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  curl --data <span style="color:#4e9a06">&#34;all=Y&#34;</span> --cookie c:<span style="color:#4e9a06">\t</span>emp<span style="color:#4e9a06">\s</span>ession.txt http://mac:8080/dmadminweb/API/servers
+</span></span></code></pre></div><h2 id="login">Login</h2>
 <p>When issuing calls to the API, the client application must either first issue a &ldquo;login&rdquo; call, specifying the username and password or must specify the username and password in each individual call to the API.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapilogin">REST Api Endpoint /dmadminweb/API/login</h3>
 <table>
 <thead>
 <tr>
@@ -525,7 +534,7 @@ This specifies that the &#34;demoenv&#34; Environment required can be found in t
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapilogin">Parameters for /dmadminweb/API/login</h3>
 <table>
 <thead>
 <tr>
@@ -553,7 +562,7 @@ This specifies that the &#34;demoenv&#34; Environment required can be found in t
 </tr>
 </tbody>
 </table>
-<p><strong>Responses</strong></p>
+<h3 id="response">Response</h3>
 <table>
 <thead>
 <tr>
@@ -628,7 +637,7 @@ This specifies that the &#34;demoenv&#34; Environment required can be found in t
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

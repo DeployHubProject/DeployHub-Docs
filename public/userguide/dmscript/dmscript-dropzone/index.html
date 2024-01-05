@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-dropzone/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-15T10:20:11-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="DropZone Physicl Path">
 <meta itemprop="description" content="Get the DropZone physical path. 
 ">
-<meta itemprop="dateModified" content="2020-06-15T10:20:11-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="142">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="DropZone Physicl Path"/>
 <meta name="twitter:description" content="Get the DropZone physical path. 
@@ -449,7 +449,19 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -473,7 +485,7 @@
 		
 </header>
 	<p>Returns the physical path to the named <em>DropZone</em> on the deployment engine <em>Endpoint</em>. This is useful if an external script is going to be called which processes files in the <em>DropZone</em>.</p>
-<p><strong>Usage:</strong></p>
+<h3 id="usage">Usage</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>DropZone <span style="color:#ce5c00;font-weight:bold">(</span>dzname<span style="color:#ce5c00;font-weight:bold">)</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Where:
@@ -483,7 +495,7 @@
 </span></span><span style="display:flex;"><span>Returns:
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>String: The full path to the DropZone location.
-</span></span></code></pre></div><p><strong>Example:</strong></p>
+</span></span></code></pre></div><h3 id="example">Example</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>checkout<span style="color:#ce5c00;font-weight:bold">(</span>DropZone: <span style="color:#4e9a06">&#34;meta14&#34;</span>, repository: <span style="color:#4e9a06">&#34;rep1&#34;</span>, pattern: <span style="color:#4e9a06">&#39;\*.java&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">dzloc</span> <span style="color:#ce5c00;font-weight:bold">=</span> DropZone<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;metal4&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
@@ -554,7 +566,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 15, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/102cb1abc9a119dc45ffe0452c007961490d86e9">Remove extra headers in DMScript (102cb1a)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

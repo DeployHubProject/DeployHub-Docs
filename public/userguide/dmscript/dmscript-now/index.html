@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-now/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-15T10:20:11-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Now">
 <meta itemprop="description" content="Get the current data and time. 
 ">
-<meta itemprop="dateModified" content="2020-06-15T10:20:11-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="69">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Now"/>
 <meta name="twitter:description" content="Get the current data and time. 
@@ -449,7 +449,21 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#example">Example</a></li>
+        <li><a href="#see-also">See Also</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -473,18 +487,18 @@
 		
 </header>
 	<p>Returns a Date object representing the current date and time. Note, the current date and time is taken from that of the executing deployment engine, not of the <em>Endpoint</em> running the web interface.</p>
-<p><strong>Usage:</strong></p>
+<h3 id="usage">Usage</h3>
 <p>now()</p>
-<p><strong>Returns:</strong></p>
+<h3 id="returns">Returns</h3>
 <p>Date Object</p>
-<p><strong>Example:</strong></p>
+<h3 id="example">Example</h3>
 <p>set d = now();</p>
 <p>echo &ldquo;The time now is $d&rdquo;;</p>
 <p>echo &ldquo;Epoch is ${d.to_int()}&rdquo;;</p>
 <p>Result:</p>
 <p>The time now is Wednesday, April 06, 2016 15:41:50</p>
 <p>Epoch is 1459953710</p>
-<p><strong>See Also:</strong></p>
+<h3 id="see-also">See Also</h3>
 <p>date()</p>
 
 	<style>
@@ -544,7 +558,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 15, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/102cb1abc9a119dc45ffe0452c007961490d86e9">Remove extra headers in DMScript (102cb1a)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

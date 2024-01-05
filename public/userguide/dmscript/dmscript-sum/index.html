@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-sum/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-15T10:20:11-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Sum">
 <meta itemprop="description" content="Interate through each arry element. 
 ">
-<meta itemprop="dateModified" content="2020-06-15T10:20:11-06:00" />
-<meta itemprop="wordCount" content="261">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="262">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Sum"/>
 <meta name="twitter:description" content="Interate through each arry element. 
 "/>
@@ -449,7 +449,19 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sum">Sum</a>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#examples">Examples</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -472,9 +484,10 @@
 	<header class="article-meta">
 		
 </header>
-	<p><em>sum</em> operates on an array, iterating through each array element. The specified expression is passed to the totalizer and each value is added before the result is returned.</p>
+	<h2 id="sum">Sum</h2>
+<p><em>sum</em> operates on an array, iterating through each array element. The specified expression is passed to the totalizer and each value is added before the result is returned.</p>
 <p>Expression can be $key in which case for each iteration the expression is set to the Array key (subscript) and this is the value that is passed to the totalizer. Expression can also be $value in which case the expression is set to the content of the Array element. If the Array element is an object then $value is the object itself. In this case, you can set expression to ${value.member} in order to access the member property of the value.</p>
-<p><strong>Usage:</strong></p>
+<h3 id="usage">Usage</h3>
 <p>Array.sum(expression)</p>
 <p>or</p>
 <p>sum(array,expression)</p>
@@ -483,26 +496,25 @@
 <p>$key to totalise the array subscript</p>
 <p>$value to totalise the array element</p>
 <p>${value.member} to totalise the specified member within each Element</p>
-<p><strong>Examples:</strong></p>
+<h3 id="examples">Examples</h3>
 <ol>
-<li>Add all the values up in a List.</li>
-</ol>
+<li>
+<p>Add all the values up in a List.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">array</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">{</span> <span style="color:#4e9a06">&#39;fred&#39;</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span> 1, <span style="color:#4e9a06">&#39;jim&#39;</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span> 2, <span style="color:#4e9a06">&#39;sheila&#39;</span> <span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">\&gt;</span> <span style="color:#0000cf;font-weight:bold">4</span> <span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span> <span style="color:#204a87">set</span> <span style="color:#000">sumofarray</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">array</span><span style="color:#000;font-weight:bold">.sum(</span><span style="color:#4e9a06">&#39;$value&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">sumofarray</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">array</span><span style="color:#000;font-weight:bold">.sum(</span><span style="color:#4e9a06">&#39;$value&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>In this <span style="color:#204a87;font-weight:bold">case</span> sumofarray will be <span style="color:#0000cf;font-weight:bold">7</span> <span style="color:#ce5c00;font-weight:bold">(</span>1+2+4<span style="color:#ce5c00;font-weight:bold">)</span>
-</span></span></code></pre></div><ol start="2">
-<li>Add up all the filesizes in a drop zone</li>
-</ol>
+</span></span></code></pre></div></li>
+<li>
+<p>Add up all the filesizes in a drop zone</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">sqlfiles</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">_DropZone_</span><span style="color:#000;font-weight:bold">.find(</span><span style="color:#4e9a06">&#39;\*.sql&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">totalsize</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">${</span><span style="color:#000">sqlfiles</span><span style="color:#000;font-weight:bold">.sum(</span><span style="color:#4e9a06">&#39;${value.size}&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>sqlfiles will be <span style="color:#204a87">set</span> to an array of files matching the <span style="color:#4e9a06">\*</span>.sql pattern in the _DropZone_. sum <span style="color:#204a87;font-weight:bold">then</span> operates on each element within the array, passing the size of each file to the totalizer.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Note, it is necessary to surround the expression <span style="color:#ce5c00;font-weight:bold">(</span>e.g.: <span style="color:#4e9a06">${</span><span style="color:#000">value</span><span style="color:#000;font-weight:bold">.member</span><span style="color:#4e9a06">}</span><span style="color:#ce5c00;font-weight:bold">)</span> with single quotes to prevent it from being expanded by the parser. If the expression is evaluated and expanded before being passed to sum an error will occur.
-</span></span></code></pre></div>
+</span></span></code></pre></div></li>
+</ol>
+<p>sqlfiles will be set to an array of files matching the *.sql pattern in the <em>DropZone</em>. sum then operates on each element within the array, passing the size of each file to the totalizer.</p>
+<p>Note, it is necessary to surround the expression (e.g.: ${value.member}) with single quotes to prevent it from being expanded by the parser. If the expression is evaluated and expanded before being passed to sum an error will occur.</p>
+
 	<style>
   .feedback--answer {
     display: inline-block;
@@ -560,7 +572,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 15, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/102cb1abc9a119dc45ffe0452c007961490d86e9">Remove extra headers in DMScript (102cb1a)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

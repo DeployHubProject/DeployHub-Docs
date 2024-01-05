@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-getcredential/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-15T10:20:11-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Get Credentials">
 <meta itemprop="description" content="Get a Credential object based on the Credential Name. 
 ">
-<meta itemprop="dateModified" content="2020-06-15T10:20:11-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="188">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Get Credentials"/>
 <meta name="twitter:description" content="Get a Credential object based on the Credential Name. 
@@ -449,7 +449,21 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#see-also">See Also</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -473,14 +487,14 @@
 		
 </header>
 	<p>getcredential takes an Credential Name and returns the matching <em>Credential Object</em>.</p>
-<p><strong>Usage:</strong></p>
+<h3 id="usage">Usage</h3>
 <p>getcredential(FQN)</p>
 <p>Where:</p>
 <p>FQN: Is the qualified name of the credential to be retrieved.</p>
-<p><strong>Returns:</strong></p>
+<h3 id="returns">Returns</h3>
 <p>Credential Object</p>
 <p>A qualified name can include as many Domain names as is necessary to uniquely identify the credential. If the credential name is unique within the Domains to which the invoking user has access then no qualification is necessary. Only if there is more than one credential with the same name (in different accessible domains) will it be necessary to qualify the credential name with the domain in which it is located.</p>
-<p><strong>Examples:</strong></p>
+<h3 id="examples">Examples</h3>
 <p><em>1) Retrieve a Credential.</em></p>
 <p>set db2creds = getcredential(&ldquo;DB2LoginCredentials&rdquo;);</p>
 <p>set username = ${db2creds.username};</p>
@@ -492,7 +506,7 @@
 <p>set password = ${db2creds.password};</p>
 <p>// username and password can now be used to access external system</p>
 <p>Further descriptions of Credential Objects are found in the high level section named <em>DMScript</em> Objects, in the section named Credential.</p>
-<p><strong>See Also:</strong></p>
+<h3 id="see-also">See Also</h3>
 <p>get_Application_(), get_Component_(), get_Environment_(), getserver(), getuser(), getusergroup()</p>
 
 	<style>
@@ -552,7 +566,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 15, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/102cb1abc9a119dc45ffe0452c007961490d86e9">Remove extra headers in DMScript (102cb1a)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

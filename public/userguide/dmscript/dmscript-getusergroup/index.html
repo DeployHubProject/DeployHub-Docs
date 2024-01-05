@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-getusergroup/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-17T14:59:15-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Get UserGroup">
 <meta itemprop="description" content="Gets a UserGroup object based on a UserGroup Name. 
 ">
-<meta itemprop="dateModified" content="2020-06-17T14:59:15-06:00" />
-<meta itemprop="wordCount" content="148">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="149">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Get UserGroup"/>
 <meta name="twitter:description" content="Gets a UserGroup object based on a UserGroup Name. 
 "/>
@@ -449,7 +449,21 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#get-user-group">Get User Group</a>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#see-also">See Also</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -472,21 +486,28 @@
 	<header class="article-meta">
 		
 </header>
-	<p>getusergroup takes a UserGroup Name and returns the matching <em>UserGroup Object</em>.</p>
-<p><strong>Usage:</strong></p>
+	<h2 id="get-user-group">Get User Group</h2>
+<p>getusergroup takes a UserGroup Name and returns the matching <em>UserGroup Object</em>.</p>
+<h3 id="usage">Usage</h3>
 <p>getusergroup(FQN)</p>
 <p>Where:</p>
 <p>FQN: Is the qualified name of the UserGroup to be retrieved.</p>
-<p><strong>Returns:</strong></p>
+<h3 id="returns">Returns</h3>
 <p>UserGroup Object</p>
 <p>A qualified name can include as many Domain names as is necessary to uniquely identify the UserGroup. If the UserGroup name is unique within the Domains to which the invoking user has access then no qualification is necessary. Only if there is more than one UserGroup with the same name (in different accessible domains) will it be necessary to qualify the UserGroup name with the domain in which it is located.</p>
-<p><strong>Examples:</strong></p>
-<p><em>1) Retrieve a User.Group</em></p>
-<p>set group = getusergroup(&ldquo;Developers&rdquo;);</p>
-<p><em>2) Retrieve a UserGroup specifying the enclosing domain:</em></p>
-<p>set group = getusergroup(&ldquo;Project1.Developers&rdquo;);</p>
+<h3 id="examples">Examples</h3>
+<ol>
+<li>
+<p>Retrieve a User.Group
+<code>set group = getusergroup(&quot;Developers&quot;);</code></p>
+</li>
+<li>
+<p>Retrieve a UserGroup specifying the enclosing domain:
+<code>set group = getusergroup(&quot;Project1.Developers&quot;);</code></p>
+</li>
+</ol>
 <p>Further descriptions of Group Objects are found in the high level section named <em>DMScript</em> Objects, in the section named Group.</p>
-<p><strong>See Also:</strong></p>
+<h3 id="see-also">See Also</h3>
 <p>get_Application_(), get_Component_(), getcredential(), get_Environment_(), getserver(), getuser()</p>
 
 	<style>
@@ -546,7 +567,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 17, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/e989440475d980e6e4004e933ae312e9b30b16fb">cleanup (e989440)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

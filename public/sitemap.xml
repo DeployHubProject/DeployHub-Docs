@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/userguide/publishing-components/intro-to-components/</loc>
-    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-intro/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/installation-and-support/0-saas-and-reverse-proxy/</loc>
-    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/first-steps/2-intro-to-setting-up-deployhub/</loc>
     <lastmod>2024-01-04T17:35:37-07:00</lastmod>
@@ -18,13 +18,13 @@
     <lastmod>2021-12-28T17:14:59-07:00</lastmod>
   </url><url>
     <loc>/userguide/introduction-to-deployhub/0-introduction/</loc>
-    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/first-steps/2-defining-domains/</loc>
     <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/publishing-components/2-define-components/</loc>
-    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/concepts/1-deployhub-basic-concepts/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
@@ -33,10 +33,10 @@
     <lastmod>2020-06-04T17:28:49-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-workingwithobjects/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-abort/</loc>
-    <lastmod>2020-06-04T17:28:49-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/first-steps/2-define-your-credentials/</loc>
     <lastmod>2024-01-04T17:35:37-07:00</lastmod>
@@ -45,10 +45,10 @@
     <lastmod>2024-01-04T16:41:57-07:00</lastmod>
   </url><url>
     <loc>/userguide/introduction-to-deployhub/0-hipster-store-tutorial/</loc>
-    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-append/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/concepts/1-deployhub-processing/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
@@ -72,10 +72,10 @@
     <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/restapi/intro-and-logging-in/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-appendstd/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/concepts/3-executing-deployments/</loc>
     <lastmod>2020-07-09T16:50:53-06:00</lastmod>
@@ -90,16 +90,16 @@
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/restapi/applications/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-assert/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/concepts/</loc>
     <lastmod>2020-06-30T09:25:28-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-attachment/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/first-steps/</loc>
     <lastmod>2020-06-26T10:47:36-06:00</lastmod>
@@ -108,7 +108,7 @@
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/restapi/components/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/publishing-components/</loc>
     <lastmod>2020-06-26T08:55:02-06:00</lastmod>
@@ -117,96 +117,96 @@
     <lastmod>2020-06-22T13:05:31-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-base64decode/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/restapi/credentials/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-base64encode/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/restapi/deployment/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/profeatures/2-data-sources/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-basename/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/restapi/deployment-log/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-breakcontinue/</loc>
     <lastmod>2020-06-15T10:20:11-06:00</lastmod>
   </url><url>
     <loc>/userguide/restapi/endpoints/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-changerequestobject/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/restapi/environments/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-checkout/</loc>
-    <lastmod>2020-05-21T11:18:48-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/restapi/calendar/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-comploop/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/customizations/2-define-notifiers/</loc>
   </url><url>
     <loc>/userguide/dmscript/dmscript-componentitemobject/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/customizations/2-notifier-templates/</loc>
   </url><url>
     <loc>/userguide/customizations/2-define-your-actions/</loc>
   </url><url>
     <loc>/userguide/restapi/users/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-conditionalstatements/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-create/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-credentials/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/customizations/2-define-your-functions-and-procedures/</loc>
   </url><url>
     <loc>/userguide/dmscript/dmscript-date/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-dateobject/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-decimal/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-delete/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/concepts/lifecyclesubdomains/</loc>
     <lastmod>2020-07-09T16:50:53-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-deploystatement/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-dirname/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-domainobjectt/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-dropzone/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-dropzonefileobject/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
@@ -215,58 +215,58 @@
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-echo/</loc>
-    <lastmod>2020-05-21T11:18:48-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-eval/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-filter/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-flatten/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-foreachstatement/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-getapplication/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-getcomponnet/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-getcredential/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-getenvironment/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-gethex/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-getserver/</loc>
-    <lastmod>2020-05-21T11:18:48-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-getuser/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-getusergroup/</loc>
-    <lastmod>2020-06-17T14:59:15-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-increment/</loc>
     <lastmod>2020-05-19T20:43:18-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-instr/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-iterate/</loc>
-    <lastmod>2020-06-17T14:59:15-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-length/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-lower/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/profeatures/5-application-releases/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
@@ -275,7 +275,7 @@
     <lastmod>2020-05-13T13:30:08-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-me/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-modify/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
@@ -287,32 +287,32 @@
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-now/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-octal/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/customizations/</loc>
   </url><url>
     <loc>/userguide/dmscript/dmscript-parallel/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/profeatures/calendar/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/customizations/2-users/</loc>
   </url><url>
     <loc>/userguide/dmscript/dmscript-psloop/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-query/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-random/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-regsub/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/customizations/customtypes/</loc>
   </url><url>
@@ -322,37 +322,37 @@
     <lastmod>2020-06-26T08:56:13-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-remotescript/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-rename/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-restfulget/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-restfulpost/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-rtrim/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-runtask/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-setatt/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-setstatement/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-sleep/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-soap/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-split/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/restapi/</loc>
     <lastmod>2020-05-21T11:33:49-06:00</lastmod>
@@ -361,28 +361,28 @@
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-stdpath/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-substr/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-sum/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-switch/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-tojson/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-trasnfer/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-trycatchfinally/</loc>
     <lastmod>2020-06-15T10:20:11-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-upper/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-usergroup/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
@@ -391,7 +391,7 @@
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-using/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/</loc>
     <lastmod>2020-05-19T20:43:18-06:00</lastmod>
@@ -400,22 +400,22 @@
     <lastmod>2020-05-21T11:18:48-06:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-whileloop/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-xmlparse/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-xpathnotation/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-zipadd/</loc>
-    <lastmod>2023-06-05T12:19:58-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-zipdel/</loc>
-    <lastmod>2023-06-05T12:19:58-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-zipget/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/intro-to-integrations/</loc>
     <lastmod>2022-12-07T11:23:06-07:00</lastmod>
@@ -430,7 +430,7 @@
     <lastmod>2024-01-04T16:48:45-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/helm/</loc>
-    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/hipchat/</loc>
     <lastmod>2022-12-07T11:23:06-07:00</lastmod>
@@ -454,7 +454,7 @@
     <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/salesforce/</loc>
-    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/slack/</loc>
     <lastmod>2022-12-07T11:23:06-07:00</lastmod>
@@ -478,142 +478,142 @@
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/application-and-release-tasks/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/attributes/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/audittrail-withdeployments/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/audittrail/</loc>
-    <lastmod>2020-06-28T15:52:03-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/changerequest/</loc>
-    <lastmod>2020-06-28T15:52:03-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/commandline/</loc>
-    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/git/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/hipchat/</loc>
-    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/ldap-datasource/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/listofactions/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-application-predecessor/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-application-result/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-application-version-full/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-application-version-result/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-application-version/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-application/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-approve-or-reject/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-attribute-result/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-attribute/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-calendar-event-result/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-calendar-event/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-component-predecessor/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-component-result/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-component-version-full/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-component-version-result/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-component-version/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-component/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-comptype/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-deployment-log-result/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-deployment-log/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-deployment-result/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-endpoint-result/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-endpoints-result/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-endpoints/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-environment-result/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-environment/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-environments-result/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-event-creator/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-event-environment/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-event-timestamp/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-request/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/model-success/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/openmake-meister/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/slack/</loc>
-    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/svn/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/tasks/</loc>
-    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url><url>
     <loc>/</loc>
     <lastmod>2020-07-07T10:13:15-06:00</lastmod>
@@ -623,6 +623,6 @@
     <priority>0.1</priority>
   </url><url>
     <loc>/userguide/</loc>
-    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
+    <lastmod>2024-01-05T11:30:33-07:00</lastmod>
   </url>
 </urlset>

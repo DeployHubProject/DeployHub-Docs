@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/restapi/deployment/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Deployment APIs">
 <meta itemprop="description" content="Start a deployment for a specified Application
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="397">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="400">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Deployment APIs"/>
 <meta name="twitter:description" content="Start a deployment for a specified Application
 "/>
@@ -452,7 +452,12 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#start-deployment">Start Deployment</a></li>
+    <li><a href="#start-deployment">Start Deployment</a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapideployapp_idenv_id">REST Api Endpoint /dmadminweb/API/deploy/{app_id}/{env_id}</a></li>
+        <li><a href="#parameters-for-dmadminwebapideployapp_idenv_id">Parameters for /dmadminweb/API/deploy/{app_id}/{env_id}</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -483,7 +488,7 @@
 <p>This call starts a deployment of the specified <em>Application</em> into the specified <em>Environment</em>.</p>
 <p>In order for API deployments to work through the permission model, there has to be a Deploy task either in the <em>Domain</em> in which the specified <em>Application</em> is located or in any of the parent <em>Domains</em> if the Deploy task is set to be available to <em>Subdomains</em>. This mechanism ensures that the invoking user has permission to deploy the <em>Application</em> (since the permissions are checked against the Task). Also, by specifying the Task to execute, any Pre and Post link <em>Actions</em> are executed just as if the task had been invoked via the Web UI.</p>
 <p>Note - Any additional parameters are created as Global Variables accessible with a url_prefix. For example, if you passed &ldquo;myparam=123&rdquo; as a parameter in the &ldquo;deploy&rdquo; api call, it would be available as $url_myparam.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapideployapp_idenv_id">REST Api Endpoint /dmadminweb/API/deploy/{app_id}/{env_id}</h3>
 <table>
 <thead>
 <tr>
@@ -498,7 +503,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapideployapp_idenv_id">Parameters for /dmadminweb/API/deploy/{app_id}/{env_id}</h3>
 <table>
 <thead>
 <tr>
@@ -540,7 +545,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Deployment Result</strong></p>
+<h4 id="deployment-result">Deployment Result</h4>
 <table>
 <thead>
 <tr>
@@ -623,7 +628,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

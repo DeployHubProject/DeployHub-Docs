@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD041 -->
+
 #### _Application Version_ Result Object
 
 | Name    | Type                                            | Description                                                                                                                                                            | Required |

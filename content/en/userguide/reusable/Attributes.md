@@ -1,5 +1,3 @@
-<!-- markdownlint-disable MD041 -->
-
 ### Key Value Configurations
 
 Key Value Configurations are Value Pairs for managing associative arrays assigned to the _Object_.

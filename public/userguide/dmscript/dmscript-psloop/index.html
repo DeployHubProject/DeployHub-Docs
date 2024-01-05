@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-psloop/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-05-19T20:43:18-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="PSLoop">
 <meta itemprop="description" content="Create an Endpoint Loop.
 ">
-<meta itemprop="dateModified" content="2020-05-19T20:43:18-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="178">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="PSLoop"/>
 <meta name="twitter:description" content="Create an Endpoint Loop.
@@ -449,7 +449,18 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -478,7 +489,7 @@
 echo ${server.name};
 }</p>
 <p>Note, the <em>Endpoint</em>-set is initially set to each <em>Endpoint</em> in the target <em>Environment</em>. When a <em>Component</em> is pushed onto the stack (when a <em>Component</em> is being deployed) the <em>Endpoint</em>-set is &ldquo;filtered&rdquo; to only include the <em>Endpoint</em> to which the <em>Component</em> is to be deployed. Thus, if you run psloop in a pre or post action to a <em>Component</em> then it will only iterate around the <em>Endpoints</em> to which the <em>Component</em> will be deployed. You can also use &ldquo;if&rdquo; statements to filter the <em>Endpoint</em> list.</p>
-<p><strong>Example:</strong></p>
+<h3 id="example">Example</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">$myservice</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;Y&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>// The Endpoint list here is filtered to only contain end // points with myservice attribute <span style="color:#204a87">set</span> to Y.
@@ -550,7 +561,7 @@ echo ${server.name};
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified May 19, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/aa9d9aeadf0a81214c86ed95159da4ece59f9d34">after dmscript (aa9d9ae)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

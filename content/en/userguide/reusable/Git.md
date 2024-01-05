@@ -1,4 +1,3 @@
-<!-- markdownlint-disable MD041 -->
 
 ## Git _Repository_ Details
 

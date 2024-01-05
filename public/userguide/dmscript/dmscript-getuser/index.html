@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-getuser/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2020-06-15T10:20:11-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Get User">
 <meta itemprop="description" content="Gets a User object based on a User Name. 
 ">
-<meta itemprop="dateModified" content="2020-06-15T10:20:11-06:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="170">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Get User"/>
 <meta name="twitter:description" content="Gets a User object based on a User Name. 
@@ -449,7 +449,21 @@
 
           </div>
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#see-also">See Also</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -474,14 +488,14 @@
 </header>
 	<p>Note: A call to the Function <em>me</em> returns a <em>User</em> object representing the current logged in user.</p>
 <p><em>getuser</em> takes a User Name and returns the matching <em>User Object</em>.</p>
-<p><strong>Usage:</strong></p>
+<h3 id="usage">Usage</h3>
 <p>getuser(FQN)</p>
 <p>Where:</p>
 <p>FQN: Is the qualified name of the user to be retrieved.</p>
-<p><strong>Returns:</strong></p>
+<h3 id="returns">Returns</h3>
 <p>User Object</p>
 <p>A qualified name can include as many Domain names as is necessary to uniquely identify the user. If the user name is unique within the Domains to which the invoking user has access then no qualification is necessary. Only if there is more than one user with the same name (in different accessible domains) will it be necessary to qualify the user name with the domain in which it is located.</p>
-<p><strong>Examples:</strong></p>
+<h3 id="examples">Examples</h3>
 <p><em>1) Retrieve a User.</em></p>
 <p>set user1 = getuser(&ldquo;admin&rdquo;);</p>
 <p>echo &ldquo;Name: ${user1.name}&rdquo;;</p>
@@ -489,7 +503,7 @@
 <p><em>2) Retrieve a User specifying the enclosing domain:</em></p>
 <p>set user1 = getuser(&ldquo;Project1.User1&rdquo;);</p>
 <p>Further descriptions of User Objects are found in the high level section named <em>DMScript</em> Objects, in the section named User.</p>
-<p><strong>See Also:</strong></p>
+<h3 id="see-also">See Also</h3>
 <p>get_Application_(), get_Component_(), getcredential(), get_Environment_(), getserver(),getusergroup()</p>
 
 	<style>
@@ -549,7 +563,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 15, 2020: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/102cb1abc9a119dc45ffe0452c007961490d86e9">Remove extra headers in DMScript (102cb1a)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

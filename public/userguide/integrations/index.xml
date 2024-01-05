@@ -477,19 +477,19 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh updatecomp --rsp component.toml 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
 &lt;h3 id=&#34;application-to-component-dependencies&#34;&gt;Application to Component Dependencies&lt;/h3&gt;
-&lt;img src=&#39;/userguide/images/ApplicationComponentDepVersions.png&#39;  /&gt;
+&lt;img src=&#39;/userguide/images/ApplicationComponentDepVersions.png&#39; alt=&#34;Application Component Dependencies&#34; /&gt;
 &lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;1 - The Hello World Application shows one Dependency.&lt;/b&gt;&lt;/div&gt;
 &lt;h3 id=&#34;application-level-sbom-and-cve&#34;&gt;Application Level SBOM and CVE&lt;/h3&gt;
-&lt;img src=&#39;/userguide/images/ApplicationSBOMandCVE.png&#39;  /&gt;
+&lt;img src=&#39;/userguide/images/ApplicationSBOMandCVE.png&#39; alt=&#34;Application Level SBOM and CVEs&#34; /&gt;
 &lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;2 - The HelloWorld Application Level SBOM and CVE results.&lt;/b&gt;&lt;br&gt;&lt;b&gt;&lt;i&gt;Note: CVE Results may vary depending on the time of the scan.&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;
 &lt;h3 id=&#34;component-ownership&#34;&gt;Component Ownership&lt;/h3&gt;
-&lt;img src=&#39;/userguide/images/Componetownership.png&#39;  /&gt;
+&lt;img src=&#39;/userguide/images/Componetownership.png&#39;  alt=&#34;Component Ownership&#34; /&gt;
 &lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;3 - Component Ownership and Detail&lt;/b&gt;&lt;/div&gt;
 &lt;h3 id=&#34;supply-chain-package-search&#34;&gt;Supply Chain “Package” Search&lt;/h3&gt;
-&lt;img src=&#39;/userguide/images/packagesearch.png&#39;  /&gt;
+&lt;img src=&#39;/userguide/images/packagesearch.png&#39; alt=&#34;Package Search&#34; /&gt;
 &lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;4 - Package Search&lt;/b&gt;&lt;/div&gt;
 &lt;br&gt;
-&lt;img src=&#39;/userguide/images/PackageSerachResults.png&#39;  /&gt;
+&lt;img src=&#39;/userguide/images/PackageSerachResults.png&#39; alt=&#34;Package Search Results&#34;  /&gt;
 &lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;4 - Package Search Results&lt;/b&gt;&lt;/div&gt;
 
       </description>
@@ -673,8 +673,8 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
 &lt;p&gt;DeployHub will then create an override values file which contains all the specific key value pairs defined at the &lt;em&gt;Endpoint&lt;/em&gt;, &lt;em&gt;Environment&lt;/em&gt;, &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt; in this order of precedence. For example, if the same key value pairs are defined at the &lt;em&gt;Endpoints&lt;/em&gt; as well as the &lt;em&gt;Application&lt;/em&gt;, the &lt;em&gt;Endpoint&lt;/em&gt; key values are used.&lt;/p&gt;
 &lt;p&gt;The override values file passes the Key value definitions Helm &amp;lsquo;upgrade&amp;rsquo; command.  This process allows a single Helm chart to be reused across all deployments, supporting the needed key value pairs for each deployment.&lt;/p&gt;
 &lt;p&gt;If you would like to create a hermetic Helm Chart stored in the DeployHub database, use the following key value:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;helmcapture=Y
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This must be defined at any level, i.e., &lt;em&gt;Endpoint&lt;/em&gt;, &lt;em&gt;Environment&lt;/em&gt;, &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;helmcapture&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;Y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This must be defined at any level, i.e., &lt;em&gt;Endpoint&lt;/em&gt;, &lt;em&gt;Environment&lt;/em&gt;, &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;connecting-a-deployhub-_endpoint_-to-your-kubernetes-cluster-through-helm&#34;&gt;Connecting a DeployHub &lt;em&gt;Endpoint&lt;/em&gt; to your Kubernetes Cluster through Helm&lt;/h2&gt;
 &lt;p&gt;DeployHub&amp;rsquo; deployment engine comes pre-installed with Helm.  For this reason you should use the deployment engine as the &amp;ldquo;localhost&amp;rdquo; &lt;em&gt;Endpoint&lt;/em&gt; for your deployments.  This Helm install on the &amp;ldquo;localhost&amp;rdquo; &lt;em&gt;Endpoint&lt;/em&gt; needs to know how to connect to your Kubernetes Cluster.&lt;/p&gt;
 &lt;p&gt;Mount your &amp;ldquo;.kube/config&amp;rdquo; file to the DeployHub deployment engine Docker container to provide the connection.  The additional parameter to the docker run command for the DeployHub container exposes the Kubernetes config file to the Helm install in DeployHub.  The following is an example of the additional parameter:&lt;/p&gt;
@@ -939,27 +939,21 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
 &lt;p&gt;Create your new &lt;em&gt;Component&lt;/em&gt; from the &lt;em&gt;Component&lt;/em&gt; Dashboard. See &lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Defining &lt;em&gt;Components&lt;/em&gt;&lt;/a&gt;.  For each container &lt;em&gt;Component&lt;/em&gt; you will need to define the variable values. Values are specified when you create a new container &lt;em&gt;Component.&lt;/em&gt; Values will override those defined at the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Environment&lt;/em&gt; level. The values from DeployHub will be passed along to Helm&amp;rsquo;s values.yml file at execution time. For more information on defining your container &lt;em&gt;Component&lt;/em&gt; see &lt;a href=&#34;/userguide/publishing-components/2-define-components/#container-specific-data-definition&#34;&gt;Container Specific Data Definition&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;storing-and-retrieving-a-hermetic-helm-chart&#34;&gt;Storing and Retrieving a Hermetic Helm Chart&lt;/h2&gt;
 &lt;p&gt;In order to create an &amp;lsquo;airtight&amp;rsquo; Helm deployment, DeployHub takes the generated Helm overrides file created during a Helm deployment and executes the Helm template command to find the container images that were referenced. All container image digests are captured and stored in the DeployHub database along with the Helm Chart and all key values used in a specific deployment.  To turn on this option, the following key value pair must be defined at  any level, i.e., &lt;em&gt;Endpoint&lt;/em&gt;, &lt;em&gt;Environment&lt;/em&gt;, &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;helmcapture=Y
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once stored in the DeployHub database, you can retrieve the hermetic Helm Chart, key value pairs and all container digests to repeat the exact deployment utilizing Helm manually.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;helmcapture&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;Y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once stored in the DeployHub database, you can retrieve the hermetic Helm Chart, key value pairs and all container digests to repeat the exact deployment utilizing Helm manually.&lt;/p&gt;
 &lt;h3 id=&#34;retrieving-and-running-the-helm-chart-manually&#34;&gt;Retrieving and Running the Helm Chart Manually&lt;/h3&gt;
 &lt;p&gt;To re-execute a Helm deployment manually, you will retrieve all captured data in a zip file (Helm Chart, all container digest, and key values ). To retrieve the data and generate a zip file, execute the following curl command if using the SaaS:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl &amp;#34;https://console.deployhub.com/dmadminweb/API/helmchart/&amp;lt;DeploymentNumber&amp;gt;?format=zip&amp;#34;-o Helmchart.zip
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://console.deployhub.com/dmadminweb/API/helmchart/&amp;lt;DeploymentNumber&amp;gt;?format=zip&amp;#34;&lt;/span&gt;-o Helmchart.zip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;where:
+Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.&lt;/p&gt;
+&lt;p&gt;Helmchart.zip is the name of the zip file you want to create.&lt;/p&gt;
+&lt;p&gt;If you are using an on premise version use the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;http://&amp;lt;myDeployHub&amp;gt;/dmadminweb/API/helmchart/&amp;lt;DeploymentNumber&amp;gt;?format=zip&amp;#34;&lt;/span&gt;-o Helmchart.zip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;where:
+myDeployHub is your on premise DeployHub Server.&lt;/p&gt;
+&lt;p&gt;Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.&lt;/p&gt;
+&lt;p&gt;Helmchart.zip is the name of the zip file you want to create.&lt;/p&gt;
 
-where:
-Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.
-
-Helmchart.zip is the name of the zip file you want to create.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you are using an on premise version use the following command:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
-curl &amp;#34;http://&amp;lt;myDeployHub&amp;gt;/dmadminweb/API/helmchart/&amp;lt;DeploymentNumber&amp;gt;?format=zip&amp;#34;-o Helmchart.zip
-
-where:
-myDeployHub is your on premise DeployHub Server.
-
-Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.
-
-Helmchart.zip is the name of the zip file you want to create.
-&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     
@@ -1431,11 +1425,11 @@ Helmchart.zip is the name of the zip file you want to create.
 &lt;li&gt;&lt;a href=&#34;/userguide/customizations/2-define-your-functions-and-procedures/&#34;&gt;Procedures and Functions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The following steps will take you through the process:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 1 - Create a SalesForce &lt;em&gt;Repository&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-1---create-a-salesforce-_repository_&#34;&gt;Step 1 - Create a SalesForce &lt;em&gt;Repository&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;A &lt;em&gt;Repository&lt;/em&gt; of the type &amp;ldquo;File System&amp;rdquo; is used to reference files pulled from Git.  For this reason, you will need to create a DeployHub &amp;ldquo;File System&amp;rdquo; &lt;em&gt;Repository&lt;/em&gt;.  To create this &lt;em&gt;Repository&lt;/em&gt; see &lt;a href=&#34;/userguide/first-steps/2-define-repositories/&#34;&gt;Connect Your Repositories&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 2 - Create a SalesForce &lt;em&gt;Credential&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-2---create-a-salesforce-_credential_&#34;&gt;Step 2 - Create a SalesForce &lt;em&gt;Credential&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;You will need a DeployHub &lt;em&gt;Credential&lt;/em&gt; to login to Salesforce for the deployment step. To create this &lt;em&gt;Credential&lt;/em&gt; see &lt;a href=&#34;/userguide/first-steps/2-define-your-credentials/&#34;&gt;Create Your Credentials&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 3 - Create a SalesForce &lt;em&gt;Environment&lt;/em&gt; and &lt;em&gt;EndPoint&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-3---create-a-salesforce-_environment_-and-_endpoint_&#34;&gt;Step 3 - Create a SalesForce &lt;em&gt;Environment&lt;/em&gt; and &lt;em&gt;EndPoint&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;You will need to create an &lt;em&gt;Endpoint&lt;/em&gt; and then an &lt;em&gt;Environment&lt;/em&gt; for your SalesForce deployment. You can create as many &lt;em&gt;Environments&lt;/em&gt; as needed based on your SalesForce Regions. See the &lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;Define Your Endpoints&lt;/a&gt; and &lt;a href=&#34;/userguide/first-steps/2-define-environments/&#34;&gt;Build Your Environments&lt;/a&gt; sections for more information.  The following parameters should be used when defining your &lt;em&gt;Endpoint&lt;/em&gt; and &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;Endpoint&lt;/em&gt; Detail Settings&lt;/strong&gt;&lt;/li&gt;
@@ -1524,7 +1518,7 @@ Helmchart.zip is the name of the zip file you want to create.
 &lt;/ul&gt;
 &lt;p&gt;Once downloaded, you will need to Import the scripts into DeployHub as &lt;em&gt;Procedures&lt;/em&gt;. To import these &lt;em&gt;Procedures&lt;/em&gt; navigate to the &lt;em&gt;Func/Procs&lt;/em&gt; Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the &lt;em&gt;Functions and Procedures&lt;/em&gt; List View. From the &lt;em&gt;Functions and Procedures&lt;/em&gt; List View select the &lt;strong&gt;Import&lt;/strong&gt; option. The Import will bring you to your operating system &amp;ldquo;file open&amp;rdquo; dialog box for selecting the GitCheckout.re, RunAnt.re and SalesforceCredential.re and SalesforceDeploy.re files.&lt;/p&gt;
 &lt;p&gt;Next, select your &amp;ldquo;Global,&amp;rdquo; or highest level, &lt;em&gt;Domain&lt;/em&gt; and upload the &lt;em&gt;Procedure&lt;/em&gt; into DeployHub. If you select a lower level &lt;em&gt;Subdomain&lt;/em&gt; you will restrict access.  By defining it to your highest level &lt;em&gt;Domain&lt;/em&gt;, all &lt;em&gt;Users&lt;/em&gt; will be able to see the &lt;em&gt;Procedures&lt;/em&gt;. Once you have both imported, you are now ready to create your &lt;em&gt;Action&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 5 - Create your SalesForce &lt;em&gt;Action&lt;/em&gt; using your &lt;em&gt;Procedures&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-5---create-your-salesforce-_action_-using-your-_procedures_&#34;&gt;Step 5 - Create your SalesForce &lt;em&gt;Action&lt;/em&gt; using your &lt;em&gt;Procedures&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Once you have imported the SalesForce files as &lt;em&gt;Procedures&lt;/em&gt;, you ready to define your &lt;em&gt;Custom Action&lt;/em&gt;. Navigate to the &lt;em&gt;Actions&lt;/em&gt; list view from the &lt;em&gt;Actions&lt;/em&gt; menu option on the left hand side of the DeployHub Main Menu panel.&lt;/p&gt;
 &lt;p&gt;Use the +Add option to create a new &lt;em&gt;Action&lt;/em&gt; for you &lt;em&gt;Procedure&lt;/em&gt;. In the &amp;ldquo;Full Domain&amp;rdquo; field select your &amp;ldquo;Global&amp;rdquo; &lt;em&gt;Domain&lt;/em&gt;. If you select a lower level &lt;em&gt;Subdomain&lt;/em&gt; you will restrict access to this &lt;em&gt;Custom Action&lt;/em&gt;.  By defining it to your highest level &lt;em&gt;Domain&lt;/em&gt;, all &lt;em&gt;Users&lt;/em&gt; will be able to execute the process regardless of their &lt;em&gt;SubDomain&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Name the new Action &amp;ldquo;SalesForceAction&amp;rdquo; (no spaces).&lt;/p&gt;
@@ -1534,7 +1528,7 @@ Helmchart.zip is the name of the zip file you want to create.
 -SalesforceDeploy&lt;/p&gt;
 &lt;p&gt;Note: RunAnt is reference by the SalesforceDeploy &lt;em&gt;Procedure&lt;/em&gt; and does not need to be included in the &lt;em&gt;Action&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;When you drag your Ansible &lt;em&gt;Procedures&lt;/em&gt; onto the area under &amp;ldquo;Start&amp;rdquo; a pop-up dialog box will open for you to complete the following parameters:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;GitCheckout Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;gitcheckout-parameters&#34;&gt;GitCheckout Parameters&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1571,7 +1565,7 @@ Helmchart.zip is the name of the zip file you want to create.
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;SalesforceCredential Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;salesforcecredential-parameters&#34;&gt;SalesforceCredential Parameters&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1586,7 +1580,7 @@ Helmchart.zip is the name of the zip file you want to create.
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;SalesforceDeploy Parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;salesforcedeploy-parameters&#34;&gt;SalesforceDeploy Parameters&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1618,7 +1612,7 @@ Helmchart.zip is the name of the zip file you want to create.
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;At this point the &lt;em&gt;Custom Action&lt;/em&gt; is ready to be used by anyone with access (based on Domain and security options). Each &lt;em&gt;Component&lt;/em&gt; that uses the &lt;em&gt;Custom Action&lt;/em&gt; will need to define specific values. Because this new &lt;em&gt;Custom Action&lt;/em&gt; is reusable, no &lt;em&gt;Component&lt;/em&gt; variables are defined at the &lt;em&gt;Action&lt;/em&gt; level.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 6 - Create Your SalesForce &lt;em&gt;Component&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-6---create-your-salesforce-_component_&#34;&gt;Step 6 - Create Your SalesForce &lt;em&gt;Component&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Now that you have defined your SalesForce &lt;em&gt;Custom Action&lt;/em&gt; you are ready to create your SalesForce &lt;em&gt;Component&lt;/em&gt;. Define your &lt;em&gt;Component&lt;/em&gt; to use a &lt;em&gt;Custom Action&lt;/em&gt; from the &lt;em&gt;Component&lt;/em&gt; Dashboard. See &lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Defining Components&lt;/a&gt; for more details on creating your new &lt;em&gt;Component&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Update the &lt;em&gt;Custom Action&lt;/em&gt; Detail field by choosing the SalesForceAction provided in the &lt;em&gt;Custom Action&lt;/em&gt; dropdown list. You will have a single parameter to update:&lt;/p&gt;
 &lt;table&gt;
@@ -1635,7 +1629,7 @@ Helmchart.zip is the name of the zip file you want to create.
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Step 7 - Set Your &lt;em&gt;Component&lt;/em&gt; Attributes_&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-7---set-your-_component_-attributes_&#34;&gt;Step 7 - Set Your &lt;em&gt;Component&lt;/em&gt; Attributes_&lt;/h3&gt;
 &lt;p&gt;The following variables must be added to the Attributes Section for all  &lt;em&gt;Components&lt;/em&gt; using the SalesForceAction &lt;em&gt;Custom Action&lt;/em&gt;.  The Attributes section can be found on the &lt;em&gt;Component&lt;/em&gt; Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;

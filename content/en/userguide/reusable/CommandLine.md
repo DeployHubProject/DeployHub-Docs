@@ -1,4 +1,3 @@
-<!-- markdownlint-disable MD041 -->
 
 ## Automating Your CD Pipeline with DeployHub
 

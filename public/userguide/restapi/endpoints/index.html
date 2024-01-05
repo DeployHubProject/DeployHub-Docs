@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/restapi/endpoints/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Endpoint APIs">
 <meta itemprop="description" content="APIs for retrieving and updating Endpoints..
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="1087">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="1098">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Endpoint APIs"/>
 <meta name="twitter:description" content="APIs for retrieving and updating Endpoints..
 "/>
@@ -452,14 +452,30 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#get-a-list-of-_endpoints_">Get a List of <em>EndPoints</em></a></li>
-    <li><a href="#retrieve-specific-_endpoint_">Retrieve Specific <em>Endpoint</em></a></li>
-    <li><a href="#assign-an-_endpoint_-to-an-_environment_">Assign an <em>Endpoint</em> to an <em>Environment</em>**</a>
+    <li><a href="#get-a-list-of-_endpoints_">Get a List of <em>EndPoints</em></a>
       <ul>
-        <li></li>
+        <li><a href="#rest-api-endpoint-dmadminwebapiservers">REST Api Endpoint /dmadminweb/API/servers</a></li>
+        <li><a href="#parameters-for-dmadminwebapiservers">Parameters for /dmadminweb/API/servers</a></li>
       </ul>
     </li>
-    <li><a href="#disassociate-a-_endpoint_-from-an-_environment_">Disassociate a <em>Endpoint</em> from an <em>Environment</em></a></li>
+    <li><a href="#retrieve-specific-_endpoint_">Retrieve Specific <em>Endpoint</em></a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapiserveridentifier">REST Api Endpoint /dmadminweb/API/server/{identifier}</a></li>
+        <li><a href="#parameters-for-dmadminwebapiserveridentifier">Parameters for /dmadminweb/API/server/{identifier}</a></li>
+      </ul>
+    </li>
+    <li><a href="#assign-an-_endpoint_-to-an-_environment_">Assign an <em>Endpoint</em> to an <em>Environment</em>**</a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapiassignserverserver_idenv_id">REST Api Endpoint /dmadminweb/API/assign/server/{server_id}/{env_id}</a></li>
+        <li><a href="#parameters-for-dmadminwebapiassignserverserver_idenv_id">Parameters for /dmadminweb/API/assign/server/{server_id}/{env_id}</a></li>
+      </ul>
+    </li>
+    <li><a href="#disassociate-a-_endpoint_-from-an-_environment_">Disassociate a <em>Endpoint</em> from an <em>Environment</em></a>
+      <ul>
+        <li><a href="#rest-api-endpoint-dmadminwebapiunassignserverserver_idenv_id">REST Api Endpoint /dmadminweb/API/unassign/server/{server_id}/{env_id}</a></li>
+        <li><a href="#parameters-for-dmadminwebapiunassignserverserver_idenv_id">Parameters for /dmadminweb/API/unassign/server/{server_id}/{env_id}</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -489,7 +505,7 @@
 	<h2 id="get-a-list-of-_endpoints_">Get a List of <em>EndPoints</em></h2>
 <p>This call returns an array of JSON objects representing each <em>Endpoint</em> to which the logged-in <em>User</em> has access.</p>
 <p>If the all parameter is not specified then only the <em>Endpoint</em> associated with the <em>User&rsquo;s</em> home <em>Domain</em> are listed. If the &ldquo;all&rdquo; parameter is specified and is set to &ldquo;y&rdquo;, for Yes, then the result includes the <em>Applications</em> included in any accessible _Subdomains.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapiservers">REST Api Endpoint /dmadminweb/API/servers</h3>
 <table>
 <thead>
 <tr>
@@ -504,7 +520,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapiservers">Parameters for /dmadminweb/API/servers</h3>
 <table>
 <thead>
 <tr>
@@ -525,7 +541,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Endpoints</em> Result</strong></p>
+<h4 id="_endpoints_-result"><em>Endpoints</em> Result</h4>
 <table>
 <thead>
 <tr>
@@ -550,7 +566,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Endpoint</em> Object</strong></p>
+<h4 id="_endpoint_-object"><em>Endpoint</em> Object</h4>
 <table>
 <thead>
 <tr>
@@ -673,7 +689,7 @@
 </table>
 <h2 id="retrieve-specific-_endpoint_">Retrieve Specific <em>Endpoint</em></h2>
 <p>This call returns a JSON object representing the specified <em>Endpoint</em>.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapiserveridentifier">REST Api Endpoint /dmadminweb/API/server/{identifier}</h3>
 <table>
 <thead>
 <tr>
@@ -688,7 +704,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapiserveridentifier">Parameters for /dmadminweb/API/server/{identifier}</h3>
 <table>
 <thead>
 <tr>
@@ -709,7 +725,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Responses for <em>Endpoint</em> Result</strong></p>
+<h4 id="responses-for-_endpoint_-result">Responses for <em>Endpoint</em> Result</h4>
 <table>
 <thead>
 <tr>
@@ -734,7 +750,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><em>Endpoint</em> Object</strong></p>
+<h4 id="_endpoint_-object-1"><em>Endpoint</em> Object</h4>
 <table>
 <thead>
 <tr>
@@ -858,7 +874,7 @@
 <h2 id="assign-an-_endpoint_-to-an-_environment_">Assign an <em>Endpoint</em> to an <em>Environment</em>**</h2>
 <p>This call allows an existing <em>Endpoint</em> to be associated with an existing <em>Environment</em>. Once the <em>Endpoint</em> is associated with an <em>Environment</em> it can receive <em>Components</em> during a deployment.</p>
 <p><em>Endpoint</em> can be associated with more than one <em>Environment</em>. Assigning an <em>Endpoint</em> to an <em>Environment</em> will not disassociate the <em>Endpoint</em> from any other <em>Environment</em> with which it may be already associated. To move an <em>Endpoint</em> between <em>Environments</em> see  the &ldquo;Disassociate an <em>Endpoint</em> from and <em>Environment</em>&rdquo; below to remove the <em>Endpoint</em> from the original <em>Environment</em>.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapiassignserverserver_idenv_id">REST Api Endpoint /dmadminweb/API/assign/server/{server_id}/{env_id}</h3>
 <table>
 <thead>
 <tr>
@@ -873,7 +889,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="parameters">Parameters</h5>
+<h3 id="parameters-for-dmadminwebapiassignserverserver_idenv_id">Parameters for /dmadminweb/API/assign/server/{server_id}/{env_id}</h3>
 <table>
 <thead>
 <tr>
@@ -901,7 +917,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Response Success Object</strong></p>
+<h4 id="response-success-object">Response Success Object</h4>
 <p>This Object contains the success/failed return code and an error message.</p>
 <table>
 <thead>
@@ -928,10 +944,9 @@
 </tbody>
 </table>
 <h2 id="disassociate-a-_endpoint_-from-an-_environment_">Disassociate a <em>Endpoint</em> from an <em>Environment</em></h2>
-<p><strong>Description</strong></p>
 <p>This call disassociates a server from an environment. When the server is disassociated from the environment then any subsequent deployments to that environment will not result in any files or operations being directed at the server.</p>
 <p>This call does not delete the server - it simply disassociates it from the environment. To delete a server use the API/del/server call.</p>
-<p><strong>REST Api Endpoint</strong></p>
+<h3 id="rest-api-endpoint-dmadminwebapiunassignserverserver_idenv_id">REST Api Endpoint /dmadminweb/API/unassign/server/{server_id}/{env_id}</h3>
 <table>
 <thead>
 <tr>
@@ -946,7 +961,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Parameters</strong></p>
+<h3 id="parameters-for-dmadminwebapiunassignserverserver_idenv_id">Parameters for /dmadminweb/API/unassign/server/{server_id}/{env_id}</h3>
 <table>
 <thead>
 <tr>
@@ -974,7 +989,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Response Success Object</strong></p>
+<h4 id="response-success-object-1">Response Success Object</h4>
 <p>This Object contains the success/failed return code and an error message.</p>
 <table>
 <thead>
@@ -1058,7 +1073,7 @@
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

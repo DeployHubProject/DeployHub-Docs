@@ -20,23 +20,23 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Using | DeployHub User Guide and API Reference</title>
-<meta name="description" content="Minipulate the context or the stack for the statements body.
+<meta name="description" content="Manipulate the context or the stack for the statements body.
 ">
 <meta property="og:title" content="Using" />
-<meta property="og:description" content="Minipulate the context or the stack for the statements body.
+<meta property="og:description" content="Manipulate the context or the stack for the statements body.
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/dmscript/dmscript-using/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2023-06-05T12:15:21-06:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="Using">
-<meta itemprop="description" content="Minipulate the context or the stack for the statements body.
+<meta itemprop="description" content="Manipulate the context or the stack for the statements body.
 ">
-<meta itemprop="dateModified" content="2023-06-05T12:15:21-06:00" />
-<meta itemprop="wordCount" content="525">
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
+<meta itemprop="wordCount" content="528">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Using"/>
-<meta name="twitter:description" content="Minipulate the context or the stack for the statements body.
+<meta name="twitter:description" content="Manipulate the context or the stack for the statements body.
 "/>
 
 
@@ -452,12 +452,15 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#using-stream">Using Stream</a></li>
-    <li><a href="#using-dropzone">Using DropZone</a></li>
-    <li><a href="#using-component">Using Component</a></li>
-    <li><a href="#using-application">Using Application</a></li>
-    <li><a href="#using-environment">Using Environment</a></li>
-    <li><a href="#return">Return</a></li>
+    <li><a href="#using">Using</a>
+      <ul>
+        <li><a href="#using-stream">Using Stream</a></li>
+        <li><a href="#using-dropzone">Using DropZone</a></li>
+        <li><a href="#using-component">Using Component</a></li>
+        <li><a href="#using-application">Using Application</a></li>
+        <li><a href="#using-environment">Using Environment</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -480,11 +483,12 @@
             
 <div class="td-content">
 	<h1>Using</h1>
-	<div class="lead">Minipulate the context or the stack for the statements body.</div>
+	<div class="lead">Manipulate the context or the stack for the statements body.</div>
 	<header class="article-meta">
 		
 </header>
-	<p><em>Using</em> affects either the context or the stack for the statements in its body. Can be used to:</p>
+	<h2 id="using">Using</h2>
+<p><em>Using</em> affects either the context or the stack for the statements in its body. Can be used to:</p>
 <ul>
 <li>
 <p>Set the stream that standard output and standard error will be redirected to or to receive a file read or base64encode operation.</p>
@@ -502,9 +506,9 @@
 <p>Push an <em>Environment</em> onto the stack for processing.</p>
 </li>
 </ul>
-<h2 id="using-stream">Using Stream</h2>
+<h3 id="using-stream">Using Stream</h3>
 <p>Using &ldquo;Stream&rdquo; pushes a stream object onto the stack and executes the body. Any standard output or standard error resulting from the body execution are written into the stream. The stream can then be manipulated by subsequent calls.</p>
-<p><strong>Examples:</strong></p>
+<h4 id="example-1">Example 1</h4>
 <p>Checkout a file from a repository and convert it to base64:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>checkout<span style="color:#ce5c00;font-weight:bold">(</span>repository: <span style="color:#4e9a06">&#39;example\_rep&#39;</span>, pattern: <span style="color:#4e9a06">&#39;demo1.zip&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
@@ -517,9 +521,9 @@
 </span></span><span style="display:flex;"><span><span style="color:#204a87">set</span> <span style="color:#000">b64</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">${</span><span style="color:#000">configzip</span><span style="color:#000;font-weight:bold">.base64encode()</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
 </span></span></code></pre></div><p>A stream object should always begin with a $ symbol. The first time a stream is referenced it is automatically created. Subsequent &ldquo;using stream&rdquo; statements will re-use the same stream object if it has previously been referenced.</p>
 <p>A stream can contain binary data. Streams can be used to create files and can also receive base64decoded data.</p>
-<h2 id="using-dropzone">Using DropZone</h2>
+<h3 id="using-dropzone">Using DropZone</h3>
 <p>Creates a new <em>DropZone</em> (an area on the <em>Endpoint</em> on which the DeployHub deployment engine is running). Typically, <em>DropZones</em> are created for each <em>Component</em> and the <em>Component</em> items are pulled from their associated repositories into these <em>DropZones</em>. The using <em>DropZone</em> statement creates a new <em>DropZone</em> and allows files within that <em>DropZone</em> to be created, modified and pushed to target <em>Endpoint_s without affecting any other files in the_Component DropZones</em>.</p>
-<p><em><strong>Examples:</strong></em></p>
+<h4 id="example-2">Example 2</h4>
 <p>Given an input file &ldquo;servers.xml&rdquo; that looks like this:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#4e9a06">\&lt;</span>deployhub<span style="color:#4e9a06">\&gt;</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
@@ -546,20 +550,20 @@
 </span></span><span style="display:flex;"><span>transfer<span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><h2 id="using-component">Using Component</h2>
+</span></span></code></pre></div><h3 id="using-component">Using Component</h3>
 <p>Pushes the named <em>Component</em> onto the stack and reduces <em>Endpoint</em> set to those containing the <em>Endpoints</em> on which the <em>Component</em> resides:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>using Component <span style="color:#4e9a06">&#39;Component1&#39;</span> <span style="color:#ce5c00;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87">echo</span> <span style="color:#4e9a06">${</span><span style="color:#000">Component</span><span style="color:#000;font-weight:bold">.name</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span>deploy<span style="color:#000;font-weight:bold">;</span>
 </span></span><span style="display:flex;"><span> <span style="color:#ce5c00;font-weight:bold">}</span>
-</span></span></code></pre></div><h2 id="using-application">Using Application</h2>
+</span></span></code></pre></div><h3 id="using-application">Using Application</h3>
 <p>Pushes the named <em>Application</em> onto the stack. Note, during a deployment operation (or a stand-alone task executed by right-clicking an <em>Application</em>) the selected <em>Application</em> is already on the stack. You can specify &ldquo;using <em>Application</em>&rdquo; when running <em>DMScript</em> that is not part of a deployment activity or to place another <em>Application</em> onto the stack for processing.</p>
 <p><em>Application</em> names can be qualified by prepending as many domain names as is necessary to uniquely identify the <em>Application</em>.</p>
-<h2 id="using-environment">Using Environment</h2>
+<h3 id="using-environment">Using Environment</h3>
 <p>Pushes the named <em>Environment</em> onto the stack and sets the <em>Endpoint</em> set to the <em>Endpoint_s within the_Environment</em>. Note, during a deployment operation (or a stand-alone task executed by right-clicking an_Environment_) the selected_Environment_is already on the stack. You can specify &ldquo;using_Environment_&rdquo; when running_DMScript_that is not part of a deployment activity or to place another_Environment_ onto the stack for processing.</p>
 <p><em>Environment</em> names can be qualified by prepending as many domain names as is necessary to uniquely identify the <em>Environment</em>.</p>
-<h2 id="return">Return</h2>
+<h4 id="returna">Returna</h4>
 <p>Returns from an action or returns a value from a <em>Function</em>.</p>
 <p>return; // <em>action</em>
 return expression; // <em>Function</em></p>
@@ -621,7 +625,7 @@ return expression; // <em>Function</em></p>
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified June 5, 2023: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/47debe1c4359bdf58563fdc3fc0b70c09a2fe383">fix typos (47debe1)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>

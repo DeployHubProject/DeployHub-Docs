@@ -28,12 +28,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/userguide/installation-and-support/0-saas-and-reverse-proxy/" /><meta property="article:section" content="userguide" />
 
-<meta property="article:modified_time" content="2024-01-04T17:35:37-07:00" />
+<meta property="article:modified_time" content="2024-01-05T11:30:33-07:00" />
 
 <meta itemprop="name" content="SaaS Sign-up and Reverse Proxy for Deployments">
 <meta itemprop="description" content="How to Sign up 
 ">
-<meta itemprop="dateModified" content="2024-01-04T17:35:37-07:00" />
+<meta itemprop="dateModified" content="2024-01-05T11:30:33-07:00" />
 <meta itemprop="wordCount" content="663">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="SaaS Sign-up and Reverse Proxy for Deployments"/>
 <meta name="twitter:description" content="How to Sign up 
@@ -464,7 +464,16 @@
         <li><a href="#test-your-docker-install">Test your Docker Install</a></li>
       </ul>
     </li>
-    <li><a href="#installing-your-deployhub-reverse-proxy-docker-image">Installing Your DeployHub Reverse Proxy Docker Image</a></li>
+    <li><a href="#installing-your-deployhub-reverse-proxy-docker-image">Installing Your DeployHub Reverse Proxy Docker Image</a>
+      <ul>
+        <li><a href="#step-1---set-your-clientid-as-environment-variable">Step 1 - Set your CLIENTID as environment variable</a></li>
+        <li><a href="#step-2---pull-reverse-proxy-from-redhat-quay-registry">Step 2 - Pull Reverse Proxy from Redhat Quay Registry</a></li>
+        <li><a href="#step-3---find-your-image-sha">Step 3 - Find your image SHA</a></li>
+        <li><a href="#step-4---start-the-container-for-linux-and-osx">Step 4 - Start the container for Linux and OS/X</a></li>
+        <li><a href="#step-5---access-deployhub-from-your-browser">Step 5 - Access DeployHub from your browser</a></li>
+        <li><a href="#step-6---confirm-your-reverse-proxy-is-running">Step 6 - Confirm Your Reverse Proxy is Running</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -519,32 +528,30 @@
 <p>See the <a href="https://docs.docker.com/get-started/#test-docker-version">Docker Install Test</a> instructions</p>
 <h2 id="installing-your-deployhub-reverse-proxy-docker-image">Installing Your DeployHub Reverse Proxy Docker Image</h2>
 <p>The DeployHub Reverse Proxy Docker Image is found on the Redhat Quay Docker Registry. Follow the steps below to install the Reverse Proxy into your Docker installation.</p>
-<p><strong>Step 1 - Set your CLIENTID as environment variable</strong></p>
+<h3 id="step-1---set-your-clientid-as-environment-variable">Step 1 - Set your CLIENTID as environment variable</h3>
 <p>Use your Client ID that you received in your &ldquo;Welcome&rdquo; sign up email from DeployHub. It will be a hexadecimal number such as:</p>
-<pre tabindex="0"><code>Your CLIENTID is 6d961c2d-69a4-4660-8a4a-aaea11276864
-</code></pre><p>Run:</p>
-<pre tabindex="0"><code>export CLIENTID=&#34;Your ID&#34;
-
-For example: 
-
-export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
-</code></pre><p><strong>Step 2 - Pull Reverse Proxy from Redhat Quay Registry</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Your CLIENTID is 6d961c2d-69a4-4660-8a4a-aaea11276864
+</span></span></code></pre></div><p>Run:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">CLIENTID</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Your ID&#34;</span>
+</span></span></code></pre></div><p>For example:</p>
+<pre tabindex="0"><code class="language-nash" data-lang="nash">export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
+</code></pre><h3 id="step-2---pull-reverse-proxy-from-redhat-quay-registry">Step 2 - Pull Reverse Proxy from Redhat Quay Registry</h3>
 <p>Run:</p>
-<pre tabindex="0"><code>docker pull quay.io/deployhub/deployhub-rproxy:latest
-</code></pre><p><strong>Step 3 - Find your image SHA</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker pull quay.io/deployhub/deployhub-rproxy:latest
+</span></span></code></pre></div><h3 id="step-3---find-your-image-sha">Step 3 - Find your image SHA</h3>
 <p>Run:</p>
-<pre tabindex="0"><code>docker images | grep deployhub-rproxy | grep latest
-</code></pre><p>Find the image SHA from the third column in the output.</p>
-<pre tabindex="0"><code>quay.io/deployhub/deployhub-rproxy      v9.0.0          0114088b0b44        6 days ago          3.32GB
-</code></pre><p>The SHA in the above example is 0114088b0b44.</p>
-<p><strong>Step 4 - Start the container for Linux and OS/X</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker images <span style="color:#000;font-weight:bold">|</span> grep deployhub-rproxy <span style="color:#000;font-weight:bold">|</span> grep latest
+</span></span></code></pre></div><p>Find the image SHA from the third column in the output.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>quay.io/deployhub/deployhub-rproxy      v9.0.0          0114088b0b44        <span style="color:#0000cf;font-weight:bold">6</span> days ago          3.32GB
+</span></span></code></pre></div><p>The SHA in the above example is 0114088b0b44.</p>
+<h3 id="step-4---start-the-container-for-linux-and-osx">Step 4 - Start the container for Linux and OS/X</h3>
 <p>Use the image SHA from Step 3 as the last parameter to the docker run.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -d --hostname <span style="color:#4e9a06">`</span>hostname<span style="color:#4e9a06">`</span> -e <span style="color:#000">CLIENTID</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">$CLIENTID</span> -v ~/.ssh:/keys:Z 0114088b0b44
-</span></span></code></pre></div><p><strong>Step 5 - Access DeployHub from your browser</strong></p>
+</span></span></code></pre></div><h3 id="step-5---access-deployhub-from-your-browser">Step 5 - Access DeployHub from your browser</h3>
 <p>DeployHub is accessible through the following url:</p>
-<pre tabindex="0"><code>https://console.deployhub.com/dmadminweb/Home
-</code></pre><p>Login using the UserID and Password you used when you Signed-up for DeployHub</p>
-<p><strong>Step 6 - Confirm Your Reverse Proxy is Running</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>https://console.deployhub.com/dmadminweb/Home
+</span></span></code></pre></div><p>Login using the UserID and Password you used when you Signed-up for DeployHub</p>
+<h3 id="step-6---confirm-your-reverse-proxy-is-running">Step 6 - Confirm Your Reverse Proxy is Running</h3>
 <p>In the upper right hand corner you will see a message that should say &ldquo;2 out of 2 Reverse Proxy Running.&rdquo;  There is a default proxy used to deploy into the DeployHub environment for the Hipster Store Tutorial.</p>
 
 	<style>
@@ -604,7 +611,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 </script>
 <br />
 <div class="text-muted mt-5 pt-3 border-top">
-  Last modified January 4, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/5f770e29c0f0064a8109bc5357127c32d95cecb7">lint updates (5f770e2)</a>
+  Last modified January 5, 2024: <a href="https://github.com/DeployHubProject/DeployHub-Docs/commit/0034038623e9d1cd31bef3f543bcb238afd89239">fix lint errors (0034038)</a>
 </div>
 
 </div>
