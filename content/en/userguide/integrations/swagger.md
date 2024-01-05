@@ -16,6 +16,15 @@ You can use the DeployHub _Component_ Detail view to manually upload your Swagge
 
 > Note: Swagger or OpenAPI formats can be used.
 
-### Viewing Component CVE Data
+#### Swagger and OpenAPI File Names Scanned for
+
+- swagger.yaml
+- swagger.yml
+- swagger.json
+- openapi.json
+- openapi.yaml
+- openapi.yml
+
+### Viewing Component Swagger Data
 
 Swagger data is associated to a particular _Component Version_ and can be seen by going to the Component Detail View.
