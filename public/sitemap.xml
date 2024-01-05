@@ -3,28 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/userguide/publishing-components/intro-to-components/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-intro/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/installation-and-support/0-saas-and-reverse-proxy/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/first-steps/2-intro-to-setting-up-deployhub/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/introduction-to-deployhub/</loc>
     <lastmod>2021-12-28T17:14:59-07:00</lastmod>
   </url><url>
     <loc>/userguide/introduction-to-deployhub/0-introduction/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/first-steps/2-defining-domains/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/publishing-components/2-define-components/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/concepts/1-deployhub-basic-concepts/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
@@ -39,13 +39,13 @@
     <lastmod>2020-06-04T17:28:49-06:00</lastmod>
   </url><url>
     <loc>/userguide/first-steps/2-define-your-credentials/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/installation-and-support/0-on-premise-installation-for-pro/</loc>
     <lastmod>2024-01-04T16:41:57-07:00</lastmod>
   </url><url>
     <loc>/userguide/introduction-to-deployhub/0-hipster-store-tutorial/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/dmscript/dmscript-append/</loc>
     <lastmod>2020-06-15T10:20:11-06:00</lastmod>
@@ -54,7 +54,7 @@
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/installation-and-support/0-commandlineinterface/</loc>
-    <lastmod>2024-01-04T16:41:57-07:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/packaging-applications/buildingapplications/</loc>
     <lastmod>2020-07-07T18:25:28-06:00</lastmod>
@@ -63,13 +63,13 @@
     <lastmod>2023-07-11T16:01:35-06:00</lastmod>
   </url><url>
     <loc>/userguide/first-steps/2-define-repositories/</loc>
-    <lastmod>2024-01-04T16:48:45-07:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/installation-and-support/0-contactsupport/</loc>
     <lastmod>2023-06-05T12:19:58-06:00</lastmod>
   </url><url>
     <loc>/userguide/packaging-applications/2-defining-applications/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/restapi/intro-and-logging-in/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
@@ -421,7 +421,7 @@
     <lastmod>2022-12-07T11:23:06-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/ci-cd_integrations/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/circleci/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
@@ -430,7 +430,7 @@
     <lastmod>2024-01-04T16:48:45-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/helm/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/hipchat/</loc>
     <lastmod>2022-12-07T11:23:06-07:00</lastmod>
@@ -448,19 +448,19 @@
     <lastmod>2022-12-07T11:23:06-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/osvdev/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/sonarqube/</loc>
-    <lastmod>2024-01-04T16:48:45-07:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/salesforce/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/slack/</loc>
     <lastmod>2022-12-07T11:23:06-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/spdx-syft-cyclonedx/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/svn/</loc>
     <lastmod>2022-12-07T11:23:06-07:00</lastmod>
@@ -469,10 +469,10 @@
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/tomcat/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/weblogic/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/integrations/websphere/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
@@ -493,13 +493,13 @@
     <lastmod>2020-06-28T15:52:03-06:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/commandline/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/git/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/hipchat/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/ldap-datasource/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
@@ -607,22 +607,22 @@
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/slack/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/svn/</loc>
     <lastmod>2023-06-05T12:15:21-06:00</lastmod>
   </url><url>
     <loc>/userguide/reusable/tasks/</loc>
-    <lastmod>2023-06-05T12:15:21-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url><url>
     <loc>/</loc>
     <lastmod>2020-07-07T10:13:15-06:00</lastmod>
   </url><url>
     <loc>/search/</loc>
-    <lastmod>2020-05-11T11:46:48-06:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
     <priority>0.1</priority>
   </url><url>
     <loc>/userguide/</loc>
-    <lastmod>2024-01-04T16:48:45-07:00</lastmod>
+    <lastmod>2024-01-04T17:35:37-07:00</lastmod>
   </url>
 </urlset>
