@@ -39,6 +39,7 @@ dh updatecomp --rsp component.toml --deppkg "cyclonedx@name of your SBOM file"
 Example:
 dh updatecomp --rsp component.toml --deppkg "cyclonedx@cyclonedx.json"
 ```
+
 With SPDX SBOM
 
 ```bash

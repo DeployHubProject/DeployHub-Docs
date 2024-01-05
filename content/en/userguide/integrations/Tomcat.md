@@ -9,6 +9,7 @@ description: >
 ## Integrating Tomcat into Your Deployment Logic
 
 DeployHub integrates with Tomcat for managing deployments where you need to stop and start the Tomcat server as part of your deployment logic. _Actions_ for Tomcat Windows servers are pre-defined within DeployHub. At the _Application_ level, you define _Pre_ and _Post_ _Actions_ that perform the calls to stop and then start Tomcat. You will be creating new _Procedures_ and _Actions_ to complete this setup.  For more information see:
+
 - [Customizing Actions](/userguide/first-steps/2-define-your-actions/)
 - [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
 

@@ -93,6 +93,7 @@ Version = "v1.0.0.${BUILD_NUM}-g${SHORT_SHA}"
 >Note: For SaaS users, you will have a second high-level qualifier that was created as part of your sign-up. This second high-level qualifier must be used as the start of your Application Name and Component Name.  For example: _GLOBAL.Santa Fe Software.Online Store_.
 
 #### Step 3 - Add a step in your pipeline to run Syft if you are not generating SBOMS (Optional)
+
 DeployHub can consume any SPDX and CycloneDX formatted SBOM. If you are already generating SBOMs, you will pass the name of the SBOM results to DeployHub is step 4 below. If you are not generating SBOMs as part of your pipeline process, you will need to add SBOM generation to collect the lower dependency data. Following is how to add Syft to your workflow to include the collection of SBOM data.
 
 [Syft SBOM tool](https://github.com/anchore/syft) will generate Software Bill of Material Reports for popular coding languages and package managers, including Docker images.
@@ -124,6 +125,7 @@ dh updatecomp --rsp component.toml --deppkg "cyclonedx@name of your SBOM file"
 Example:
 dh updatecomp --rsp component.toml --deppkg "cyclonedx@cyclonedx.json"
 ```
+
 With SPDX SBOM
 
 ```bash
@@ -132,6 +134,7 @@ dh updatecomp --rsp component.toml --deppkg "spdx@name of your SBOM file. "
 Example:
 dh updatecomp --rsp component.toml --deppkg "spdx@spdx.json"
 ```
+
 Without SBOM
 
 ```bash

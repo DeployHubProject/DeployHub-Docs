@@ -12,7 +12,6 @@ DeployHub is supply chain evidence catalog for publishing, versioning and sharin
 
 ![Supply Chain Catalog](/userguide/images/supplychaincatalog.png/)
 
-
 DeployHub visualizes ‘logical’ application versions in a cloud-native architecture providing a clear view of the software supply chain and their consumers. With this _Component_ level information, DeployHub can easily aggregate metadata up to the 'logical' application producing application level SBOMs, CVEs, audit reports, deployment inventory and status.
 
 DeployHub is particularly suited for a microservice architecture where hundreds of artifacts and repos are used, and a central view of the entire supply chain from a usage, security, and inventory perspective is required. When you outgrow your excel spreadsheet, its time to consider DeployHub.
@@ -106,4 +105,3 @@ For additional security features, agentless deployments and support, DeployHub P
 Unique to DeployHub Pro are "Divisional Domains." These _Domains_ allow you to expand and model your environments based on your organizational top-down structure. It also gives you the ability to restrict microservice read/write access to only certain Groups of Users.
 
 DeployHub Pro also provides integration to tools such as Bugzilla, GitHub Issues and Jira for tracking your complete value stream from change request to final endpoint. It also includes 'smart' calendars for scheduling deployments.
-

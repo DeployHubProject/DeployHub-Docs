@@ -10,7 +10,6 @@ description: >
 
 DeployHub can associate SonarQube Project Status, Bugs, Code Smells, and Violations metrics to your _Component Version_.  Associating these metrics enable compliance scoring for _Application Versions_ since the metrics are rolled-up from the _Component Versions_ to the _Application Version_.  See the [Compliance Scorecard](/compliance) for details and screenshots of the Application Compliance Scorecard Report.
 
-
 ### Getting metrics from SonarQube to DeployHub
 
 The DeployHub CI/CD command line program is used to associate Sonar metrics to the DeployHub _Component Version_.  See [CLI Installation](https://docs.deployhub.com/userguide/installation-and-support/0-commandlineinterface/) for instructions on basic setup in your CI/CD pipeline.
@@ -27,7 +26,6 @@ Restful API calls are needed in your pipeline to grab the metrics from Sonar.  S
 | SONAR_PASS     | Password for the userid                                                                                                 |
 | PROJECTKEY     | Name of the project in SonarQube                                                                                        |
 | COMPONENT_TOML | The DeployHub Component TOML file that defined the _Component Version_ to DeployHub.  Typically called `component.toml` |
-
 
 ```bash
 Check=$(curl -s -u ${SONAR_ID}:${SONAR_PASS} http://sonarqube.example.com/api/qualitygates/project_status?projectKey=$PROJECTKEY | jq -r '.projectStatus.status')
@@ -56,7 +54,6 @@ echo '    SonarProjectStatus = "$Check"' >> ${COMPONENT_TOML}
 | COMPONENT_NAME | Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube. |
 | COMPONENT_TOML | The DeployHub Component TOML file that defined the _Component Version_ to DeployHub.  Typically called `component.toml`                                                                                   |
 
-
 ```bash
 SONAR_BUGS=$(curl -k -s -u ${SONAR_ID}:${SONAR_PASS} 'https://sonarqube.example.com/api/measures/component?component=${COMPONENT_NAME}&metricKeys=complexity,bugs,new_technical_debt,code_smells,branch_coverage,violations' | jq -r '.component.measures | .[] |select(.metric == "bugs") | (.value)')
 
@@ -71,7 +68,6 @@ echo '    SonarBugs = "%{SONAR_BUGS}"'  >> ${COMPONENT_TOML}
 | SONAR_PASS     | Password for the userid                                                                                                                                                                                   |
 | COMPONENT_NAME | Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube. |
 | COMPONENT_TOML | The DeployHub Component TOML file that defined the _Component Version_ to DeployHub.  Typically called `component.toml`                                                                                   |
-
 
 ```bash
 SONAR_CODESMELLS=$(curl -k -s -u ${SONAR_ID}:${SONAR_PASS} 'https://sonarqube.example.com/api/measures/component?component=${COMPONENT_NAME}&metricKeys=complexity,bugs,new_technical_debt,code_smells,branch_coverage,violations' | jq -r '.component.measures | .[] |select(.metric == "code_smells") | (.value)')
@@ -88,13 +84,8 @@ echo '    SonarCodeSmells = "%{SONAR_CODESMELLS}"'  >> ${COMPONENT_TOML}
 | COMPONENT_NAME | Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube. |
 | COMPONENT_TOML | The DeployHub Component TOML file that defined the _Component Version_ to DeployHub.  Typically called `component.toml`                                                                                   |
 
-
 ```bash
 SONAR_VIOLATIONS=$(curl -k -s -u ${SONAR_ID}:${SONAR_PASS} 'https://sonarqube.example.com/api/measures/component?component=${COMPONENT_NAME}&metricKeys=complexity,bugs,new_technical_debt,code_smells,branch_coverage,violations' | jq -r '.component.measures | .[] |select(.metric == "violations") | (.value)')
 
 echo '    SonarViolations = "%{SONAR_VIOLATIONS}"'  >> ${COMPONENT_TOML}
 ```
-
-
-
-

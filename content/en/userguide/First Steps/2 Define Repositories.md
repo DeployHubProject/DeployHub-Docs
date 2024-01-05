@@ -43,7 +43,6 @@ The Dashboard view displays all information related to a specific _Repository_ T
 - SVN
 - Git (git repositories are treated as File System repositories). See [Git Repository](/userguide/first-steps/2-define-repositories/#git-_repository_-details) and [GitHub](/userguide/integrations/github/) for configuration steps.
 
-
 ### Common Details of all _Repositories_ Types
 
 | Field                | Description                                                                     |

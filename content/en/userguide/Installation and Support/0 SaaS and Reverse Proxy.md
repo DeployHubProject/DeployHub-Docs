@@ -33,7 +33,6 @@ Once the Reverse Proxy determines that a deployment is needed, it executes the d
 
 ![DeployHub Architecture](/userguide/images/ReverseProxy.png)
 
-
 ### Reverse Proxy Installation
 
 The Reverse Proxy runs as docker container. In order to install it, you need to install Docker.
@@ -63,6 +62,7 @@ Your CLIENTID is 6d961c2d-69a4-4660-8a4a-aaea11276864
 ~~~
 
 Run:
+
 ~~~
 export CLIENTID="Your ID"
 

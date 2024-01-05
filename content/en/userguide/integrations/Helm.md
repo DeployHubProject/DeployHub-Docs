@@ -17,6 +17,7 @@ DeployHub will then create an override values file which contains all the specif
 The override values file passes the Key value definitions Helm 'upgrade' command.  This process allows a single Helm chart to be reused across all deployments, supporting the needed key value pairs for each deployment.
 
 If you would like to create a hermetic Helm Chart stored in the DeployHub database, use the following key value:
+
 ~~~
 helmcapture=Y
 ~~~
@@ -96,7 +97,6 @@ In order to connect to Kubernetes cluster running on a cloud provider, an authen
 | helmtemplateopts                  | additional options for the helm template                                                         |
 | helmcapture                       | y/n for uploading a hermetic version of the chart and values to DeployHub stored by deploy log # |
 
-
 ## Helm and _Custom Actions_
 
 Helm is called as a DeployHub [_Custom Action_](/userguide/customizations/2-define-your-actions/). To use Helm, you will need to import two Helm files as DeployHub _Procedures_ and define them to your _Custom Action_. This Helm _Custom Action_ can then be assigned to your Container _Components_. See [_Procedures and Functions_](/userguide/customizations/2-define-your-functions-and-procedures/) and  [Customize Actions](/userguide/customizations/2-define-your-actions/) to learn more. The following steps will create your Helm _Custom Action_.
@@ -146,10 +146,10 @@ Create your new _Component_ from the _Component_ Dashboard. See [Defining _Compo
 ## Storing and Retrieving a Hermetic Helm Chart
 
 In order to create an 'airtight' Helm deployment, DeployHub takes the generated Helm overrides file created during a Helm deployment and executes the Helm template command to find the container images that were referenced. All container image digests are captured and stored in the DeployHub database along with the Helm Chart and all key values used in a specific deployment.  To turn on this option, the following key value pair must be defined at  any level, i.e., _Endpoint_, _Environment_, _Component_ or _Application_.
+
 ~~~
 helmcapture=Y
 ~~~
-
 
 Once stored in the DeployHub database, you can retrieve the hermetic Helm Chart, key value pairs and all container digests to repeat the exact deployment utilizing Helm manually.
 
@@ -167,6 +167,7 @@ Helmchart.zip is the name of the zip file you want to create.
 ~~~
 
 If you are using an on premise version use the following command:
+
 ~~~
 
 curl "http://<myDeployHub>/dmadminweb/API/helmchart/<DeploymentNumber>?format=zip"-o Helmchart.zip

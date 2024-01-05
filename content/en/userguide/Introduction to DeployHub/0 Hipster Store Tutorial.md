@@ -25,6 +25,7 @@ This _Hipster Store_ tutorial walks you through the basic concepts and [Objects]
 An _Application_ is a collection of microservices or _Components_ that make up a complete software solution.  In monolithic, we compile/link an _Application_, but this goes away in microservices.  DeployHub puts the _Application_ back together providing a "logical view" of the _Application_ including the _Components_ that it depends upon.
 
 _Applications_ are a collection of _Components_.  _Components_ are deployed to _Environments_. _Environments_ are a collection of _Endpoints_.  For more on each of these Objects see:
+
 - [Packaging _Applications_](/userguide/packaging-applications/)
 - [Publishing _Components_](/userguide/publishing-components/)
 - [Build Your _Environments_](/userguide/first-steps/2-define-environments/)
@@ -135,5 +136,3 @@ There are many other features of DeployHub that we did not get to cover on this 
 We will leave you with how to setup DeployHub for your installation.  See [First Steps](/userguide/first-steps/), for getting your setup completed. Once you have your setup complete you can start publishing _Components_, packaging _Applications_ and performing deployments.
 
 Another important topic is integrating with your CD pipeline.  See [Using DeployHub with CI/CD](/userguide/integrations/ci-cd_integrations/) for how you can include continuous configuration management and continuous deployments into your CD pipeline.
-
-

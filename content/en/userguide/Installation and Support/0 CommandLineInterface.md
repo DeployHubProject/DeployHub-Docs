@@ -7,6 +7,7 @@ description: >
 ---
 
 ## The Ortelius Command Line Interface (CLI)
+
 DeployHub uses the Open-Source [Ortelius](https://ortelius.io) Command Line Interface to support pipeline automation. The Ortelius Command Line Interface supports integration with DevOps tools and CI/CD pipelines. The Ortelius Command Line Interface is under the governance of the [Linux Foundation's Continuous Delivery Foundation (CDF).](https://cd.foundation)
 
 The Ortelius CLI Python script interacts with the Ortelius and DeployHub REST APIs to perform:
@@ -22,5 +23,5 @@ The Ortelius CLI Python script interacts with the Ortelius and DeployHub REST AP
 - Deploy the Application
 
 ## Up to Date Usage Info and Installation Instructions
- Refer to the [Ortelius GitHub CLI Documentation](https://github.com/ortelius/cli/blob/main/doc/dh.md) for [installation instructions](https://github.com/ortelius/cli) and the latest usage and parameters.
 
+ Refer to the [Ortelius GitHub CLI Documentation](https://github.com/ortelius/cli/blob/main/doc/dh.md) for [installation instructions](https://github.com/ortelius/cli) and the latest usage and parameters.

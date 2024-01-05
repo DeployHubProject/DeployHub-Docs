@@ -17,10 +17,7 @@ This process involves the creation of custom _Procedures_ and a _Post Action_.  
 - [Customizing Actions](/userguide/first-steps/2-define-your-actions/)
 - [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
 
-
-
 Once downloaded, you will need to Import them into DeployHub as the Procedures. To import these Procedures login to DeployHub and select the _Func/Procs_.  From the list view select  **Import** menu. Select your Domain, such as '_Global_ Domain' and upload the _Procedure_ into the DeployHub.
-
 
 **Step 1 - Download and Import the WebLogic scripts as _Procedures_**
 

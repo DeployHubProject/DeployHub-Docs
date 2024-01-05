@@ -2,6 +2,7 @@
 # See all available variables at https://megalinter.io/configuration/ and in linters documentation
 
 APPLY_FIXES: all # all, none, or list of linter keys
+FILTER_REGEX_INCLUDE: (content/)
 
 SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false

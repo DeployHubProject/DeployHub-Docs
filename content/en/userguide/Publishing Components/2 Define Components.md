@@ -104,8 +104,6 @@ A Container _Component_ has the following optional attributes:
 | **Git Tag**              | The last tag for the Git Repository. Populated when integrated into Continuous Delivery Pipelines.        |
 | **Git URL**              | The URL for the Git Repository.Populated when integrated into Continuous Delivery Pipelines.              |
 
-
-
 ### Application File Specific Data Definition
 
 | **Field**             | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -156,7 +154,6 @@ Below is how the full file deployment path is formatted:
 
 Give your users more information about your Container, Application File or Database Component. You can upload an external readme file to provide any information that you need to convey to your potential consumers. Use the 'Upload' option to select a file. It must be in text format. You can also automate the upload - see below.
 
-
 ## Component Swagger
 
 Publish your [Swagger API](/userguide/integrations/swagger) definitions to provide further information about your restful APIs and the parameters needed. DeployHub takes your .json or .yaml file and renders it using [Swagger](https://swagger.io/). Use the 'Upload' option to associate your .json or .yaml file to that specific _Component Version_. You can also automate the upload - see below.
@@ -173,7 +170,6 @@ Component vulnerabilities are based on your SBOM. Every thirty minutes, DeployHu
 
 Report the license associated with your code base for your _Component_. Use the 'Upload' option to import your License file into DeployHub. The file must be in a text format.
 
-
 ## Automate the Readme, SBOM, License, and Swagger Upload via Your Pipeline
 
 You can automatically upload you readme, SBOM, License, and Swagger data using the Command Line Interface (CLI) added to your pipeline. For more information review the [CI/CD CLI details](https://github.com/Ortelius/cli/blob/main/doc/dh.md).
@@ -183,7 +179,6 @@ You can automatically upload you readme, SBOM, License, and Swagger data using t
 ## Consuming _Applications_
 
 This section shows a list of all _Applications_ that are consuming this _Component_.
-
 
 {{% include "userguide/reusable/Attributes.md" %}}
 
@@ -205,7 +200,6 @@ The Access Section allows _Users_ within designated _Groups_ to update or view t
 |------------|-------------------------------------------------------------------------------------------------------------------|
 | **View**   | This allows any _User_ that belongs to any _Group_ in this list to see the selected _Component_ in the List View. |
 | **Change** | This allows any _User_ that belongs to any _Group_ in this list to make changes to the _Component_.               |
-
 
 ## _Component_ Dependency Map
 

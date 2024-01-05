@@ -11,6 +11,7 @@ description: >
 A DeployHub _Domain_ is how DeployHub organizes and shares data across teams.  You publish your microservices to a Catalog _Domain_, you package your _Application_ in a Project _Domain_ and you track your continuous delivery pipeline with a Life Cycle _Domain_. All DeployHub objects are assigned to a _Domain_.
 
 ### Domains and your Domain Driven Design
+
 A Domain Driven Design is critical for organizations moving from monolithic development to microservice development. In microservices, you must have a structured method for organizing microservices into "solution" spaces to facilitate reuse across siloed teams. DeployHub _Domains_ provides this organization.
 
 _Domains_ catalog and publish microservices and other reusable objects (web components, DB updates, etc.) making it easier to share these microservices and  _Components_ across siloed teams. Domains can be structured to closely resemble the patterns of your organization. They can represent functional areas such as 'security services' or departments, teams, geographical locations and software projects.
@@ -60,7 +61,6 @@ When scrolling up or down the _Domain_ hierarchy using the Sunburst map, the det
 
  _Users_ within designated _Groups_ can update the _Domain_ in various ways. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available _Groups_ list onto the desired access list. All _Users_ who belong to a _Group_ in one of the Access lists will be granted access to the _Domain_.  Access control for _Domains_ include:
 
-
 | Access     | Description                                                                          |
 |------------|--------------------------------------------------------------------------------------|
 | **View**   | Allows the _Group_ to see the _Domain_.                                              |
@@ -69,4 +69,3 @@ When scrolling up or down the _Domain_ hierarchy using the Sunburst map, the det
 | **Write**  | Allows the _Group_ to create _Subdomains_.                                           |
 
 {{% include "userguide/reusable/Tasks.md" %}}
-

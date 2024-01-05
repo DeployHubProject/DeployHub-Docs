@@ -21,6 +21,3 @@ CVE data is associated to a particular _Component Version_ and can be seen by go
 ### Viewing Application Level CVE Data
 
 DeployHub aggregates lower-level _Component_ data up to all consuming applications. When you view the CVEs at the _Application Version_ level, you are seeing a combination of all CVEs aggregated from the _Components_ which your _Application_ depends. Your _Applications_ CVE data can change over time based on the changes at the _Component Version_ level.
-
-
-
