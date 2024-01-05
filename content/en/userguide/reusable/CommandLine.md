@@ -17,9 +17,64 @@ In a cloud-native, microservice architecture there are many, if not hundreds, of
 
 >Note: Once created, your .toml file does not need to be updated unless the non-derived information changes, or you want to reorganize to which Applications or _Domains_ the Component has been assigned. For example, a Component has been reassigned to a new owner and new team represented by a _Domain_ or _Application_.
 
-Perform the following steps to add your _Components_ using the .toml file:
+#### Variable Resolution
 
-#### Step 1 - Define Your DeployHub Pipeline Variables
+The ${VARIABLE} syntax represents an environment variable or derived variable that will be resolved at execution time.  In the below example in Step 2, ${GIT_TAG} is a variable that will be derived by the CLI from git.  The derived value will be inserted in to the ${GIT_TAG} variable placeholders.
+
+##### Derived Variables
+
+| Attribute Name | Environment Variable | Description |
+|----------|-------------|
+| GitBranch | GIT_BRANCH | Name of the Git Branch |
+| GitBranchCreateCommit | GIT_BRANCH_CREATE_COMMIT | Commit that the branch was created from |
+| GitBranchCreateTimestamp | GIT_BRANCH_CREATE_TIMESTAMP | Timestamp of the commit that the brach was created from |
+| GitBranchParent | GIT_BRANCH_PARENT | Parent branch that the active branch was created from |
+| GitCommit | GIT_COMMIT or SHORT_SHA | Commit SHA |
+| GitCommitAuthors | GIT_COMMIT_AUTHORS | userids that created the commits in the repo |
+| GitCommittersCnt | GIT_COMMITTERS_CNT | number of users creating commits in the repo |
+| GitCommitTimestamp | GIT_COMMIT_TIMESTAMP | Timestamp of when the commit was created |
+| GitContribPercentage | GIT_CONTRIB_PERCENTAGE | GitCommittersCnt / GitTotalCommittersCnt * 100 |
+| GitLinesAdded | GIT_LINES_ADDED | Number of lines added since previous _Component Version_ |
+| GitLinesDeleted | GIT_LINES_DELETED | Number of lines deleted since previous _Component Version_ |
+| GitLinesTotal | GIT_LINES_TOTAL | Total number of changed lines for the commit |
+| GitOrg | GIT_ORG | GitHub Organization |
+| GitRepo | GIT_REPO | GitHub Repo Name without Org Name |
+| GitRepoProject | GIT_REPO_PROJECT | Org/Repo |
+| GitSignedOffBy | GIT_SIGNED_OFF_BY | Email in the `Signed-off by:` commit message |
+| GitTag | GIT_TAG | Current tag if active otherwise equal to Git Branch |
+| GitUrl | GIT_URL | Full url to the git repo |
+| GitVerifyCommit | GIT_VERIFY_COMMIT | Y/N is the commit signed by a verified userid |
+
+##### Derived Files
+
+The CLI will look for Readme, License, Swagger and OpenAPI files and upload those files to the _Component Version_.
+
+###### Readme File Names Scanned for
+
+- README
+- README.md
+- readme
+- readme.md
+
+###### License File Names Scanned for
+
+- LICENSE
+- LICENSE.md
+- license
+- license.md
+
+###### Swagger and OpenAPI File Names Scanned for
+
+- swagger.yaml
+- swagger.yml
+- swagger.json
+- openapi.json
+- openapi.yaml
+- openapi.yml
+
+#### Perform the following steps to add your _Components_ using the .toml file
+
+##### Step 1 - Define Your DeployHub Pipeline Variables
 
 The following variables should be set at the beginning of your Pipeline.
 
@@ -41,7 +96,7 @@ export DOCKERREPO=quay.io/DeployHub/hello-world
 export IMAGE_TAG=1.0.0
 ```
 
-#### Step 2 - Create your Component.toml file
+##### Step 2 - Create your Component.toml file
 
 Cut and paste the following into a component.toml file, update 'your' information, and commit/push it to your Git Repository.
 
@@ -93,7 +148,7 @@ Version = "v1.0.0.${BUILD_NUM}-g${SHORT_SHA}"
 
 >Note: For SaaS users, you will have a second high-level qualifier that was created as part of your sign-up. This second high-level qualifier must be used as the start of your Application Name and Component Name.  For example: _GLOBAL.Santa Fe Software.Online Store_.
 
-#### Step 3 - Add a step in your pipeline to run Syft if you are not generating SBOMS (Optional)
+##### Step 3 - Add a step in your pipeline to run Syft if you are not generating SBOMS (Optional)
 
 DeployHub can consume any SPDX and CycloneDX formatted SBOM. If you are already generating SBOMs, you will pass the name of the SBOM results to DeployHub is step 4 below. If you are not generating SBOMs as part of your pipeline process, you will need to add SBOM generation to collect the lower dependency data. Following is how to add Syft to your workflow to include the collection of SBOM data.
 
@@ -112,7 +167,7 @@ curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -
 cat cyclonedx.json
 ```
 
-#### Step 4 - Run the Ortelius CLI to add Your Component and Create an Application
+##### Step 4 - Run the Ortelius CLI to add Your Component and Create an Application
 
 >Note: To complete the process you will need to install the Ortelius CLI where your CI/CD server is running. Refer to the [Ortelius GitHub CLI Documentation](https://github.com/Ortelius/cli/blob/main/doc/dh.md) for installation instructions.
 
@@ -142,7 +197,7 @@ Without SBOM
 dh updatecomp --rsp component.toml 
 ```
 
-## Results
+#### Results using the CLI in your CI/CD pipeline
 
 ### Application to Component Dependencies
 

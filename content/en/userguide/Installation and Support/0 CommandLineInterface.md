@@ -21,6 +21,13 @@ The Ortelius CLI Python script interacts with the Ortelius and DeployHub REST AP
 - Export a domain including all objects to stdout
 - Imports the export file into the new domain
 - Deploy the Application
+- Persist SBOMs to the component version
+- Persist SonarQube Project Status, Bugs, Code Smells, and Violations metrics to the component version
+- Persist Veracode Score to the component version
+- Persist License File to the component version
+- Persist Readme File the component version
+- Persist Swagger and OpenAPI files the component version
+- Persist Git Branch, Branch Create Commit, Branch Create Timestamp, Branch Parent, Commit, Commit Authors, Committers Count, Commit Timestamp, Lines Added, Lines Deleted, Lines Total, Org, Repo, Repo Project, Signed Off By, Tag, Url, Verified Commit
 
 ## Up to Date Usage Info and Installation Instructions
 
