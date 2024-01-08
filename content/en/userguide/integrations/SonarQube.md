@@ -10,6 +10,10 @@ description: >
 
 DeployHub can associate SonarQube Project Status, Bugs, Code Smells, and Violations metrics to your _Component Version_.  Associating these metrics enable compliance scoring for _Application Versions_ since the metrics are rolled-up from the _Component Versions_ to the _Application Version_.  See the [Compliance Scorecard](/compliance) for details and screenshots of the Application Compliance Scorecard Report.
 
+### Example Scorecard Report
+
+![Scorecard with SonarQube Metrics](/scorecard-complete-sq.png)
+
 ### Getting metrics from SonarQube to DeployHub
 
 The DeployHub CI/CD command line program is used to associate Sonar metrics to the DeployHub _Component Version_.  See [CLI Installation](https://docs.deployhub.com/userguide/installation-and-support/0-commandlineinterface/) for instructions on basic setup in your CI/CD pipeline.

@@ -91,7 +91,7 @@ Example
 ```bash
 export DHURL=https://deployhub.example.com
 export DHUSER=Stella99
-export DHPASS=chasinghorses
+export DHPASS=password
 export DOCKERREPO=quay.io/DeployHub/hello-world
 export IMAGE_TAG=1.0.0
 ```
@@ -116,7 +116,8 @@ Version = "vyour Component Version.${BUILD_NUM}-g${SHORT_SHA}"
     DockerRepo = "${DOCKERREPO}"
     DockerSha = "${DIGEST}"
     DockerTag = "${IMAGE_TAG}"
-    DiscordChannel = "your Discord channel" or SlackChannel = "your Slack Channel" 
+    DiscordChannel = "your Discord channel"
+    SlackChannel = "your Slack Channel" 
     ServiceOwner = "${DHUSER}"
     ServiceOwnerEmail = "your Component Owner Email"
 ```
@@ -150,7 +151,7 @@ Version = "v1.0.0.${BUILD_NUM}-g${SHORT_SHA}"
 
 ##### Step 3 - Add a step in your pipeline to run Syft if you are not generating SBOMS (Optional)
 
-DeployHub can consume any SPDX and CycloneDX formatted SBOM. If you are already generating SBOMs, you will pass the name of the SBOM results to DeployHub is step 4 below. If you are not generating SBOMs as part of your pipeline process, you will need to add SBOM generation to collect the lower dependency data. Following is how to add Syft to your workflow to include the collection of SBOM data.
+DeployHub can consume any SPDX and CycloneDX formated SBOM. If you are already generating SBOMs, you will pass the name of the SBOM results to DeployHub is step 4 below. If you are not generating SBOMs as part of your pipeline process, you will need to add SBOM generation to collect the lower dependency data. Following is how to add Syft to your workflow to include the collection of SBOM data.
 
 [Syft SBOM tool](https://github.com/anchore/syft) will generate Software Bill of Material Reports for popular coding languages and package managers, including Docker images.
 
