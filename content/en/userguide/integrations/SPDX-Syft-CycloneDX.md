@@ -48,3 +48,11 @@ dh updatecomp --rsp component.toml --deppkg "spdx@name of your SBOM file. "
 Example:
 dh updatecomp --rsp component.toml --deppkg "spdx@spdx.json"
 ```
+
+## Results
+
+SBOM details are available at the _Component Version_ and _Application Version_ details pages.   Also, the SBOM with the associated CVE data can be exported to a PDF.  To export the SBOM and CVEs, go to the _Application_ list view, select an _Application Version_.  Then choose the
+menu item `Reports -> Export SBOM`.  The PDF will be generated showing all of the _Component Versions_, SBOM Packages and any associated CVEs
+aggregated up to the selected _Application Version_.
+
+[Example _Application Version_ SBOM and CVEs](/sbom.pdf)
