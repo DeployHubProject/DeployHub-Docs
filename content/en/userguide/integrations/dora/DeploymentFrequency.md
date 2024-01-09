@@ -37,11 +37,11 @@ return code is 0 for successful deployment or 1 for failed deployment.
 
 The following variables should be set at the beginning of your Pipeline.
 
-| Variable   | Value                            | Description                                                                              |
-|------------|----------------------------------|------------------------------------------------------------------------------------------|
-| DHURL      | URL to DeployHub Login           | The URL used to access DeployHub.                                                        |
-| DHUSER     | UserID                           | The ID used to log into DeployHub                                                        |
-| DHPASS     | password                         | The password used to log into DeployHub. This can encrypted based on the CI/CD solution. |
+| Variable | Value                  | Description                                                                              |
+|----------|------------------------|------------------------------------------------------------------------------------------|
+| DHURL    | URL to DeployHub Login | The URL used to access DeployHub.                                                        |
+| DHUSER   | UserID                 | The ID used to log into DeployHub                                                        |
+| DHPASS   | password               | The password used to log into DeployHub. This can encrypted based on the CI/CD solution. |
 
 Example
 
@@ -66,4 +66,3 @@ The Deployment Frequency report is accessible by selecting an _Application Versi
 
 The data time the top and bottom graphs are the same but use different visualizations in order to under the the Deployment Frequency.  
 The graphs are interactive, so float-overs and clicking on the labels will highlight and filter the data.
-

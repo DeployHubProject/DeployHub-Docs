@@ -24,7 +24,7 @@ The ${VARIABLE} syntax represents an environment variable or derived variable th
 ##### Derived Variables
 
 | Attribute Name | Environment Variable | Description |
-|----------|-------------|
+|----------|-------------|--------|
 | GitBranch | GIT_BRANCH | Name of the Git Branch |
 | GitBranchCreateCommit | GIT_BRANCH_CREATE_COMMIT | Commit that the branch was created from |
 | GitBranchCreateTimestamp | GIT_BRANCH_CREATE_TIMESTAMP | Timestamp of the commit that the brach was created from |

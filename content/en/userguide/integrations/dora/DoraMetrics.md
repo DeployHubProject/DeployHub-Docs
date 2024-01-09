@@ -25,4 +25,3 @@ The DOARA Lead Time for Changes is the amount of **time** it takes a **commit** 
 DeployHub expands upon the Lead Time for Changes and calculates the time lag for each stage of the pipeline.  
 This view gives a complete picture of the pace of changes from when the development makes a coding change to
 when that change has been deployed to a pipeline stage.
-

@@ -1,7 +1,7 @@
 ---
 title: "DORA Metrics Reports"
 linkTitle: "DORA Metrics Reports"
-weight: 80
+weight: 301
 description: >
   DORA Metrics reports and integrations.
 ---

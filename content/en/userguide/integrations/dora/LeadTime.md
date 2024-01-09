@@ -39,11 +39,11 @@ return code is 0 for successful deployment or 1 for failed deployment.
 
 The following variables should be set at the beginning of your Pipeline.
 
-| Variable   | Value                            | Description                                                                              |
-|------------|----------------------------------|------------------------------------------------------------------------------------------|
-| DHURL      | URL to DeployHub Login           | The URL used to access DeployHub.                                                        |
-| DHUSER     | UserID                           | The ID used to log into DeployHub                                                        |
-| DHPASS     | password                         | The password used to log into DeployHub. This can encrypted based on the CI/CD solution. |
+| Variable | Value                  | Description                                                                              |
+|----------|------------------------|------------------------------------------------------------------------------------------|
+| DHURL    | URL to DeployHub Login | The URL used to access DeployHub.                                                        |
+| DHUSER   | UserID                 | The ID used to log into DeployHub                                                        |
+| DHPASS   | password               | The password used to log into DeployHub. This can encrypted based on the CI/CD solution. |
 
 Example
 
@@ -66,5 +66,5 @@ The Lead Time For Changes report is accessible by selecting an _Application Vers
 
 ![Lead Time For Changes](/leadtime.png)
 
-The data is broken out by the number of days it takes for a change to an _Application Version_ to be deployed to an _Environment. 
+The data is broken out by the number of days it takes for a change to an _Application Version_ to be deployed to an _Environment_.
 The graph is interactive, so float-overs and clicking on the labels will highlight and filter the data.
