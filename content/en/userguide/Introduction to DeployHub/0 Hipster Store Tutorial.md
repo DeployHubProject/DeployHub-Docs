@@ -8,7 +8,8 @@ description: >
 
 ## Log in and Take a Test Drive
 
-When you [signed up to use DeployHub SaaS](https://www.deployhub.com/register-for-team/?), you were asked for basic information. Your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a _Subdomain_ under your Company _Domain_.
+When you [signup for DeployHub Team](https://www.deployhub.com/free-saas-software-supply-chain-security-tool/), you are asked for basic information, your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a _Subdomain_ under your Company _Domain_.
+
 
  DeployHub is accessible through the following url:
 
@@ -32,7 +33,7 @@ _Applications_ are a collection of _Components_.  _Components_ are deployed to _
 
 **Step 1 - Deploy the Hipster Store Application**
 
-To get started, [sign up for DeployHub](https://www.deployhub.com/free-team-sign-up/). Once you signed up, you will first deploy the Hipster Store _Application Base Version_ to the Hipster Store _Environment_. 
+To get started, [sign up for DeployHub](https://www.deployhub.com/free-saas-software-supply-chain-security-tool/). Once you login, you will have the opportunity to review the Hipster Store _Application Base Version_, _Component Versions_ and the Hipster Store _Environment_.  These are basic concepts important to understand. All security and DevOps attributes that DeployHub tracks are managed based on _Component Versions_, _Application Versions_, and _Environments_. 
 
 - Select the _Application_ Menu option from the left side of the DeployHub Home panel. This will bring you to a List View. 
 - Checkbox the "Hipster Store;July 4th Sale." This is the Hipster Store _Application Base Version_ and it has not been previously deployed.
