@@ -10,17 +10,17 @@ The _DropZone Object_ represents a _DropZone_. A _DropZone_ is an area on disk o
 
 The following properties can be accessed for a _DropZone_ object:
 
-| **Property** | **Type** | **Description** |
-| --- | --- | --- |
-| name | String | _DropZone_ name. |
-| path | String | The full path of the location on disk where the _DropZone_ is located. Useful for passing to external scripts that may need to manipulate files in the _DropZone_. |
-| files | Array | An Array of _DropZone Object_, each one of which represents a file in the _DropZone_. The array is keyed by the full path name of the file. |
+| **Property** | **Type** | **Description**                                                                                                                                                    |
+|--------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| name         | String   | _DropZone_ name.                                                                                                                                                   |
+| path         | String   | The full path of the location on disk where the _DropZone_ is located. Useful for passing to external scripts that may need to manipulate files in the _DropZone_. |
+| files        | Array    | An Array of _DropZone Object_, each one of which represents a file in the _DropZone_. The array is keyed by the full path name of the file.                        |
 
 The following methods can be called on the _DropZone_ object:
 
-| **Method** | **Return Type** | **Description** |
-| --- | --- | --- |
-| find(pattern) | Array | Returns an Array of _DropZone Object_, each one of which represents a file in the _DropZone_. The Array is restricted to files whose file name matches the specified pattern. The array is keyed by the full path name of the file. |
-| dir() | String | The full path of the location on disk where the _DropZone_ is located. Equivalent to the path attribute. |
+| **Method**    | **Return Type** | **Description**                                                                                                                                                                                                                     |
+|---------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| find(pattern) | Array           | Returns an Array of _DropZone Object_, each one of which represents a file in the _DropZone_. The Array is restricted to files whose file name matches the specified pattern. The array is keyed by the full path name of the file. |
+| dir()         | String          | The full path of the location on disk where the _DropZone_ is located. Equivalent to the path attribute.                                                                                                                            |
 
 ###

@@ -12,7 +12,7 @@ _appendstd_ is also a method that can be called on an _Endpoint_ object. In this
 
 _appendstd_ differs from append since it ensures that the directory separator chars are appropriate to the system type regardless of how they are formatted in the passed paths.
 
-**Usage:**
+### Usage
 
 appendstd(path1, path2 [, systemtype])
 
@@ -20,11 +20,11 @@ or
 
 Server.appendstd(path1,path2)
 
-**Returns:**
+### Returns
 
 String: The result of appending path2 to path1, formatted according to the specified systemtype or the system type of the _Endpoint_ object.
 
-**Example:**
+### Example
 
 ```bash
 set res = appendstd(@'C:\Temp', 'folder/file.txt', 'windows');
@@ -46,6 +46,6 @@ set res = appendstd('$2$DKA200:[FERDU01]', 'TEST/file.txt', 'vms');
 //
 ```
 
-**See Also:**
+### See Also
 
 append()

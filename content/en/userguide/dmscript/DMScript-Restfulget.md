@@ -8,7 +8,7 @@ description: >
 
 _restful\_get_ is used to make GET calls to RESTful based APIs. It takes a single mandatory parameter: the URL to which the message should be sent. There are three optional parameters:
 
-**Usage:**
+### Usage
 
 restful\_get(url[,parameters[,cookiejar[,header |,credential]]])
 
@@ -16,20 +16,20 @@ Where:
 
 url: Is the URL to GET.
 
-| Parameters | Description |
-| --- | --- |
-| String/Array | Optional: Optional: Either a String containing the parameters e.g: "first=John&amp;surname=Doe" or an array of name/value pairs representing the parameters to be sent to the specified URL.|
-| cookiejar | Optional. Either an array of name/value pairs representing the cookies to be set in the request or a String naming an array which will receive any cookies returned from the call. |
-|header | Optional: An array of name/value pairs representing extra directives to be included in the header lines sent to the _Endpoint_.|
-| credential | Optional: Either a credential object or the name of a credential. Used for basic authentication. This parameter is used instead of the header array. If you want to use both additional header directives and basic authentication you will need to include an Authorization directive in the header array. See below for examples. |
+| Parameters   | Description                                                                                                                                                                                                                                                                                                                         |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| String/Array | Optional: Optional: Either a String containing the parameters e.g: "first=John&amp;surname=Doe" or an array of name/value pairs representing the parameters to be sent to the specified URL.                                                                                                                                        |
+| cookiejar    | Optional. Either an array of name/value pairs representing the cookies to be set in the request or a String naming an array which will receive any cookies returned from the call.                                                                                                                                                  |
+| header       | Optional: An array of name/value pairs representing extra directives to be included in the header lines sent to the _Endpoint_.                                                                                                                                                                                                     |
+| credential   | Optional: Either a credential object or the name of a credential. Used for basic authentication. This parameter is used instead of the header array. If you want to use both additional header directives and basic authentication you will need to include an Authorization directive in the header array. See below for examples. |
 
-**Returns:**
+### Returns
 
 Array: Associative array containing the JSON/XML returned from the RESTful get. If the returned data is encoded with XML then it is converted into the array structure using the rules outlined for xmlparse above.
 
 restful\_get can be used to post requests to DeployHub's own API.
 
-**Example:**
+### Example
 
 ```bash
 1. _Call the Jenkins API to retrieve details for the latest build._
@@ -91,6 +91,6 @@ echo "Summary: ${res.result.summary}";
 }
 ```
 
-**See Also:**
+### See Also
 
 restful\_post(), soap()

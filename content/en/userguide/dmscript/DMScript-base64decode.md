@@ -9,7 +9,7 @@ description: >
 
 _base64decode_ converts a string of base64 encoded data into a stream and returns the number of bytes written to the stream. The stream needs to be passed as an optional parameter. If the stream is not specified, _base64decode_ needs to be called within a using stream block. If _base64decode_ is called outside of a using stream block and no stream parameter is passed, an error occurs.
 
-**Usage:**
+### Usage
 
 _String_.base64decode([stream])
 
@@ -21,11 +21,11 @@ Where:
 
 _stream_ is the name of an existing stream. If the stream does not currently exist, an error occurs. If stream is not specified, base64decode will write the decoded output to the stream identified in the enclosing using stream block.
 
-**Returns:**
+### Returns
 
 Integer: The length of the decoded data. The decoded data is written to the stream identified by the outer using stream statement.
 
-**Examples:**
+### Examples
 
 ```bash
 
@@ -99,6 +99,6 @@ res is Hello DeployHub!
 len is 23
 ```
 
-**See Also:**
+### See Also
 
 base64encode()

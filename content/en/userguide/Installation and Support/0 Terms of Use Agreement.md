@@ -1,7 +1,7 @@
 ---
 title: "Terms of Use Agreement"
 linkTitle: "Terms of Use Agreement"
-weight: 5
+weight: 6
 description: >
   DeployHub Terms of Use Agreement
 ---

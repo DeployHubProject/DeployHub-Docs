@@ -16,7 +16,7 @@ echo ${server.name};
 
 Note, the _Endpoint_-set is initially set to each _Endpoint_ in the target _Environment_. When a _Component_ is pushed onto the stack (when a _Component_ is being deployed) the _Endpoint_-set is "filtered" to only include the _Endpoint_ to which the _Component_ is to be deployed. Thus, if you run psloop in a pre or post action to a _Component_ then it will only iterate around the _Endpoints_ to which the _Component_ will be deployed. You can also use "if" statements to filter the _Endpoint_ list.
 
-**Example:**
+### Example
 
 ```bash
 if ($myservice = "Y") {

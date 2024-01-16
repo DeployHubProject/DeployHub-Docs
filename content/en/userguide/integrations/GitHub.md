@@ -23,7 +23,7 @@ Once you have completed this step, you are ready to create a new _Procedure_ tha
 
 **Step 2 - Create your GitHub Checkout _Procedure_ for your _Action_**
 
-_Procedures_ are called by _Actions_ to execute deployment logic. A pre-defined DeployHub _Procedure__ is available from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). This where you will find the most current version of this _Procedure_. For more information on creating _Procedures see [Functions and Procedures](/userguide/customizations/2-define-your-functions-and-procedures/).
+_Procedures_ are called by _Actions_ to execute deployment logic. A pre-defined DeployHub _Procedure__is available from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). This where you will find the most current version of this _Procedure_. For more information on creating_Procedures see [Functions and Procedures](/userguide/customizations/2-define-your-functions-and-procedures/).
 
 From the Ortelius Git Repo, pull the file named **GitCheckout.re**
 
@@ -37,13 +37,13 @@ Now we are going to customize this _Action_. On the right hand side, you will se
 
 _GitCheckout_ Parameters
 
-| **Field** | Value | Description |
-| --- | --- | --- |
-| **Title** | Not Required | Name of the step in your deployment workflow. Use "Git Checkout." |
-| **Summary** | Not Required | Enter a summary of this step. |
-| **Git Repo** | $GIT_URL| This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level. |
-| **Git Commit** | $GIT_COMMIT | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.|
-| **To Dir** | $GIT_DIR | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
+| **Field**      | Value        | Description                                                                                                                                                                                     |
+|----------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Title**      | Not Required | Name of the step in your deployment workflow. Use "Git Checkout."                                                                                                                               |
+| **Summary**    | Not Required | Enter a summary of this step.                                                                                                                                                                   |
+| **Git Repo**   | $GIT_URL     | This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level.                                                                    |
+| **Git Commit** | $GIT_COMMIT  | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.                                                                       |
+| **To Dir**     | $GIT_DIR     | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
 
 At this point the _Action_ is ready to be used by anyone with access (based on _Domain_ and _Group_ options).
 Note: Because this _Action_ is reusable, no _Component_ variables are defined. This is performed at the _Component_ level.
@@ -56,11 +56,11 @@ For each _Component_ you will need to define the variable values for $GIT_URL, $
 
 The following variables must be added to the Attributes Section for all  _Components_ using the GitCheckoutAction _Pre Action_.  The Attributes section can be found on the _Component_ Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:
 
-| Variable Name | Value Description |
-|--- | --- |
-| **GIT_URL** | This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level. |
-| **GIT_COMMIT** | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.|
-| **GIT_DIR** | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
+| Variable Name  | Value Description                                                                                                                                                                               |
+|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **GIT_URL**    | This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level.                                                                    |
+| **GIT_COMMIT** | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.                                                                       |
+| **GIT_DIR**    | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
 
 ## GitHub Issues and DeployHub Pro Change Request
 

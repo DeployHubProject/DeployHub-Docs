@@ -40,25 +40,25 @@ Following is a description of each Object and their attributes.
 
 An _Application_ has the following properties:
 
-| **Property** | **Description** |
-| --- | --- |
-| id | A unique identifier for the _Application_  in the database. |
-| name | _Application_ name. |
-| fqdomain |Fully qualified _Domain_ name. |
-| summary | Summary of the _Domain_. |
-| owner | _User_ or _Group_ that owns it. |
-| parent | The Base _Application_.|
-| predecessor |Predecessor _Application Version_. |
-| _Release_ | Defines the _Application_ Object with more than one _Application_. |
-| _Applications_ | Multiple _Applications_ used to create a _Release_.|
-| _Components_ | The objects that the _Application_ consumes. |
-| approvals | Allows a control point for progressing a change within the pipeline process. |
-| requests | The _Change Request_ objects associated with this _Application_.|
-| creator | The _User_ or _Group_ who created it. |
-| modifier | The _User_ or _Group_ who last modified it. |
-| ctime | The date/time it was created. |
-| mtime |  The date/time it was last modified. |
-| KV Configurations |  Key Value Pairs for managing associative arrays. |
+| **Property**      | **Description**                                                              |
+|-------------------|------------------------------------------------------------------------------|
+| id                | A unique identifier for the _Application_  in the database.                  |
+| name              | _Application_ name.                                                          |
+| fqdomain          | Fully qualified _Domain_ name.                                               |
+| summary           | Summary of the _Domain_.                                                     |
+| owner             | _User_ or _Group_ that owns it.                                              |
+| parent            | The Base _Application_.                                                      |
+| predecessor       | Predecessor _Application Version_.                                           |
+| _Release_         | Defines the _Application_ Object with more than one _Application_.           |
+| _Applications_    | Multiple _Applications_ used to create a _Release_.                          |
+| _Components_      | The objects that the _Application_ consumes.                                 |
+| approvals         | Allows a control point for progressing a change within the pipeline process. |
+| requests          | The _Change Request_ objects associated with this _Application_.             |
+| creator           | The _User_ or _Group_ who created it.                                        |
+| modifier          | The _User_ or _Group_ who last modified it.                                  |
+| ctime             | The date/time it was created.                                                |
+| mtime             | The date/time it was last modified.                                          |
+| KV Configurations | Key Value Pairs for managing associative arrays.                             |
 
 ### _Release_ Object
 
@@ -66,17 +66,17 @@ A [_Release_](/userguide/profeatures/5-application-releases/) is only available 
 
 ## _Change Request_ Object
 
-The [_Change Request_](/userguide/profeatures/5-change-requests/) Object represents a change request record associated with either a _Component_ or an _Application_. A _Change Request_ is a DeployHub Pro feature. 
+The [_Change Request_](/userguide/profeatures/5-change-requests/) Object represents a change request record associated with either a _Component_ or an _Application_. A _Change Request_ is a DeployHub Pro feature.
 
 The _Change Request_ object has the following properties:
 
-| Property | Description|
-| --- | --- |
-| id | The _Change Request_ id. |
-| name | The _Change Request_ description. |
-| status  | The _Change Request_ status. |
-| api\_url | A URL which, if passed to restful\_get, will return an array containing the full details of the _Change Request_ from the external change tracking system. Useful for getting more information than the id / description / status combination which is stored in DeployHub. |
-| html\_url | A URL which will direct a browser to the page describing the change request in the external change tracking system. |
+| Property  | Description                                                                                                                                                                                                                                                                 |
+|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| id        | The _Change Request_ id.                                                                                                                                                                                                                                                    |
+| name      | The _Change Request_ description.                                                                                                                                                                                                                                           |
+| status    | The _Change Request_ status.                                                                                                                                                                                                                                                |
+| api\_url  | A URL which, if passed to restful\_get, will return an array containing the full details of the _Change Request_ from the external change tracking system. Useful for getting more information than the id / description / status combination which is stored in DeployHub. |
+| html\_url | A URL which will direct a browser to the page describing the change request in the external change tracking system.                                                                                                                                                         |
 
 ## _Component_ Object
 
@@ -124,7 +124,7 @@ When you first define your _Application_, you create an _Application Base Versio
 
 When a new _Application Version_ is created from either an _Application Base Version_ or another _Application Version_, it inherits all previous _Components_ from its predecessor. That predecessor is determined when running a _Create Version Task_ for an _Application Version_. You can specify whether the new _Application Version_ inherits its _Components_ from the original _Application Base Version_, the latest _Application Version_, or a specific _Application Version_.
 
-DeployHub uses a simple versioning number schema starting at 1 and incrementing over time, for example Myapp;1, Myapp;2. 
+DeployHub uses a simple versioning number schema starting at 1 and incrementing over time, for example Myapp;1, Myapp;2.
 
 You can use your CI/CD process to include variance in your versioning number (base name, variant, version).  See [Component Versioning Schema](/userguide/integrations/ci-cd_integrations/#_component_-versioning-schema).
 
@@ -134,22 +134,22 @@ The [_Credential_ Object](/userguide/first-steps/2-define-your-credentials/) con
 
 The _Credential_ Object has the following properties:
 
-| Property | Description |
-| --- | --- |
-| id | A unique identifier for the _Credential_ as used in the database. |
-| name | The name of the  _Credential_. |
-| summary |  Description. |
-| fqdomain |  Fully qualified _Domain_ name that the _Credential_ is associated with. |
-| domain |  _Domain_ in which the _Credential_ is associated. |
-| owner |  _User_ or _Group_ that owns the _Credential_. |
-| username | Decrypted username. |
-| password | Decrypted password. |
-| b64auth |  A string representing the decrypted username and password together, with a : separator and then base64 encoded. Used for Basic Authorization for web-based APIs. |
-| creator | The _User_ or _Group_ who created this _Credential_. |
-| modifier | The _User_ or _Group_ who last modified this _Credential_. |
-| ctime | The date/time the _Credential_ was created. |
-| mtime | The date/time the _Credential_ was last modified. |
-| Type  | _Credential_ use. |
+| Property | Description                                                                                                                                                      |
+|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| id       | A unique identifier for the _Credential_ as used in the database.                                                                                                |
+| name     | The name of the  _Credential_.                                                                                                                                   |
+| summary  | Description.                                                                                                                                                     |
+| fqdomain | Fully qualified _Domain_ name that the _Credential_ is associated with.                                                                                          |
+| domain   | _Domain_ in which the _Credential_ is associated.                                                                                                                |
+| owner    | _User_ or _Group_ that owns the _Credential_.                                                                                                                    |
+| username | Decrypted username.                                                                                                                                              |
+| password | Decrypted password.                                                                                                                                              |
+| b64auth  | A string representing the decrypted username and password together, with a : separator and then base64 encoded. Used for Basic Authorization for web-based APIs. |
+| creator  | The _User_ or _Group_ who created this _Credential_.                                                                                                             |
+| modifier | The _User_ or _Group_ who last modified this _Credential_.                                                                                                       |
+| ctime    | The date/time the _Credential_ was created.                                                                                                                      |
+| mtime    | The date/time the _Credential_ was last modified.                                                                                                                |
+| Type     | _Credential_ use.                                                                                                                                                |
 
 ## _Data Source_ Objects
 
@@ -161,10 +161,10 @@ Dates track the date/time of the creation, deletion, or update of an Object.
 
 The _Date_ has the following properties:
 
-| Property | Description |
-| --- | --- |
+| Property      | Description                                                                                                                                                                                                                                          |
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | to\_int(secs) | Returns an integer representing the date as the number of seconds since midnight on January 1st 1970 (epoch). The secs parameter is optional. If needed, the specified number of seconds is added to the date/time before the new value is returned. |
-| to\_char(fmt) |  Formats the date into a string given by the passed fmt string. The fmt string should contain characters as specified below. |
+| to\_char(fmt) | Formats the date into a string given by the passed fmt string. The fmt string should contain characters as specified below.                                                                                                                          |
 
 ## _Domain_ Object
 
@@ -203,11 +203,11 @@ The _DropZone_ Object represents a local area where deployment artifacts are  ma
 
 A _DropZone_ Object has the following properties:
 
-| Property | Description |
-| --- | --- |
-| name | _DropZone_ name. |
-| path | The full path of where the _DropZone_ is located. Useful for passing to external scripts that may need to manipulate files in the _DropZone_. |
-| files | An Array of _DropZone Objects_, each one of which represents a file in the _DropZone_. The array is keyed by the full path name of the file. |
+| Property | Description                                                                                                                                   |
+|----------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| name     | _DropZone_ name.                                                                                                                              |
+| path     | The full path of where the _DropZone_ is located. Useful for passing to external scripts that may need to manipulate files in the _DropZone_. |
+| files    | An Array of _DropZone Objects_, each one of which represents a file in the _DropZone_. The array is keyed by the full path name of the file.  |
 
 ### _DropZone_ File Object
 
@@ -215,36 +215,36 @@ The _DropZone File_ Object represents a file in the _DropZone_.
 
 The _DropZone File_ Object has the following properties:
 
-| Property | Description |
-| --- | --- |
-| dzpath | The relative path of the file in the _DropZone_. |
+| Property | Description                                                                                                                 |
+|----------|-----------------------------------------------------------------------------------------------------------------------------|
+| dzpath   | The relative path of the file in the _DropZone_.                                                                            |
 | repopath | The relative path of the file as located in the repository (this path is relative to the base directory of the repository). |
-| size | The size of the file in bytes. |
-| ctime | The creation time of the file. |
-| mtime | The modified time of the file. |
+| size     | The size of the file in bytes.                                                                                              |
+| ctime    | The creation time of the file.                                                                                              |
+| mtime    | The modified time of the file.                                                                                              |
 
 ## _Environment_ Object
 
-The [_Environment_ Object](/userguide/first-steps/2-define-environments/) represents a collection of _Endpoints_ where an _Application_ is deployed. Multiple _Environments_ can represent your pipeline stages such as Development, Testing, and Production for a single _Application_.  Your _Application_ can have as many _Envrionments_ as needed.
+The [_Environment_ Object](/userguide/first-steps/2-define-environments/) represents a collection of _Endpoints_ where an _Application_ is deployed. Multiple _Environments_ can represent your pipeline stages such as Development, Testing, and Production for a single _Application_.  Your _Application_ can have as many _Environments_ as needed.
 
 The following properties can be accessed for an _Environment_ object:
 
-| **Property** | **Description** |
-| --- | --- |
-| id |  Unique identifier as used in the database. |
-| name | _Environment_ name. |
-| fqdomain | Fully qualified _Domain_ name. |
-| summary |  Description of the _Environment_. |
-| domain |  _Domain_ in which it is contained. |
-| owner  | _User_ or _Group_ Objects that owns it.|
-| basedir |  Base directory for deployments. |
-| _Endpoints_ |  The _Endpoints_ assigned to it. |
-| _Applications_ | The _Applications_ associated to it. |
-| creator |  The _User_ or _Group_ who created it. |
-| modifier | The _User_ or _Group_ who last modified it. |
-| ctime | The date/time it was created. |
-| mtime |  The date/time it was last modified. |
-| parent | Parent _Domain_. |
+| **Property**   | **Description**                             |
+|----------------|---------------------------------------------|
+| id             | Unique identifier as used in the database.  |
+| name           | _Environment_ name.                         |
+| fqdomain       | Fully qualified _Domain_ name.              |
+| summary        | Description of the _Environment_.           |
+| domain         | _Domain_ in which it is contained.          |
+| owner          | _User_ or _Group_ Objects that owns it.     |
+| basedir        | Base directory for deployments.             |
+| _Endpoints_    | The _Endpoints_ assigned to it.             |
+| _Applications_ | The _Applications_ associated to it.        |
+| creator        | The _User_ or _Group_ who created it.       |
+| modifier       | The _User_ or _Group_ who last modified it. |
+| ctime          | The date/time it was created.               |
+| mtime          | The date/time it was last modified.         |
+| parent         | Parent _Domain_.                            |
 
 ## _Endpoint_ Object
 
@@ -258,24 +258,24 @@ To map a _Component_ to _Endpoints_, assign one or more _Component_ Types to eac
 
 The _Endpoint_ object has the following properties:
 
-| **Property** | **Description** |
-| --- | --- |
-| id | A unique identifier as used in the database. |
-| name | The _Endpoint_ name. |
-| fqdomain | Fully qualified _Domain_ name. |
-| summary | Description of the _Endpoint_. |
-| domain | _Domain_ in which it is contained. |
-| owner | _User_ or _Group_ that owns it. |
-| hostname | Hostname (if set) or name otherwise. |
-| basedir | Base Directory for Deployments. |
-| type | _Endpoint_ Type, ie: cluster, windows, cloud, etc. |
-| credential | The logon and password used to access this _Endpoint_.|
-| _Components_ | The _Components_ currently installed on it. |
-| creator |  The _User_ or _Group_ who created it. |
-| modifier | The _User_ or _Group_ who last modified it. |
-| ctime | The date/time it was created. |
-| mtime | The date/time it was last modified. |
-| Key Value Configurations | Key Value Pairs for managing associative arrays. |
+| **Property**             | **Description**                                        |
+|--------------------------|--------------------------------------------------------|
+| id                       | A unique identifier as used in the database.           |
+| name                     | The _Endpoint_ name.                                   |
+| fqdomain                 | Fully qualified _Domain_ name.                         |
+| summary                  | Description of the _Endpoint_.                         |
+| domain                   | _Domain_ in which it is contained.                     |
+| owner                    | _User_ or _Group_ that owns it.                        |
+| hostname                 | Hostname (if set) or name otherwise.                   |
+| basedir                  | Base Directory for Deployments.                        |
+| type                     | _Endpoint_ Type, ie: cluster, windows, cloud, etc.     |
+| credential               | The logon and password used to access this _Endpoint_. |
+| _Components_             | The _Components_ currently installed on it.            |
+| creator                  | The _User_ or _Group_ who created it.                  |
+| modifier                 | The _User_ or _Group_ who last modified it.            |
+| ctime                    | The date/time it was created.                          |
+| mtime                    | The date/time it was last modified.                    |
+| Key Value Configurations | Key Value Pairs for managing associative arrays.       |
 
 ## _Notifier_ Objects
 
@@ -285,22 +285,22 @@ A [_Notifier_](/userguide/customizations/2-define-notifiers/) is sent after a su
 
 The _User_ Object represents a User in DeployHub. It has the following properties:
 
-| **Property** | **Return Type** | **Description** |
-| --- | --- | --- |
-| id | Integer | User id, as used in the database. |
-| name | String | User Name. |
-| kind | String | Returns "user". Used to differentiate between users and groups when retrieving an owner object. |
-| fqdomain | String | Fully qualified _Domain_ name. |
-| realname | String | The _User's_ full name. |
-| email | String | The _User's_ email address. |
-| phone | String | The _User's_ telephone number. |
-| groups | Array | Array of _Group_ Objects to which this User belongs. |
-| lastlogin | Date | The date/time last logged into DeployHub. |
-| creator | User | _User_ or _Group_ Object representing who created this _User_. |
-| modifier | User | _User_ or _Group_ Object representing who last modified this _User_. |
-| ctime | Date | _Date_ Object representing the date/time the User was created. |
-| mtime | Date | _Date_ Object representing the date/time the User was last modified. |
-| owner | Object | _User_ or _Group_ that owns the _User_ |
+| **Property** | **Return Type** | **Description**                                                                                 |
+|--------------|-----------------|-------------------------------------------------------------------------------------------------|
+| id           | Integer         | User id, as used in the database.                                                               |
+| name         | String          | User Name.                                                                                      |
+| kind         | String          | Returns "user". Used to differentiate between users and groups when retrieving an owner object. |
+| fqdomain     | String          | Fully qualified _Domain_ name.                                                                  |
+| realname     | String          | The _User's_ full name.                                                                         |
+| email        | String          | The _User's_ email address.                                                                     |
+| phone        | String          | The _User's_ telephone number.                                                                  |
+| groups       | Array           | Array of _Group_ Objects to which this User belongs.                                            |
+| lastlogin    | Date            | The date/time last logged into DeployHub.                                                       |
+| creator      | User            | _User_ or _Group_ Object representing who created this _User_.                                  |
+| modifier     | User            | _User_ or _Group_ Object representing who last modified this _User_.                            |
+| ctime        | Date            | _Date_ Object representing the date/time the User was created.                                  |
+| mtime        | Date            | _Date_ Object representing the date/time the User was last modified.                            |
+| owner        | Object          | _User_ or _Group_ that owns the _User_                                                          |
 
 ## _Group_ Object
 
@@ -308,15 +308,15 @@ The _Group_ Object represents a collection of _Users_ with the same _Domain_ and
 
 The _Group_ Object has the following properties:
 
-| Property | Description |
-| --- | --- |
-| id |  A unique identifier as used in the database. |
-| name  | _Group_ Name. |
-| kind  | Identifies whether this is a _User_ or a _Group_. |
-| fqdomain | Fully qualified _Domain_ name. |
-| email  | The _Group's_ email address. |
-| creator | _User_ or _Group_ Object representing who created this Group. |
+| Property | Description                                                           |
+|----------|-----------------------------------------------------------------------|
+| id       | A unique identifier as used in the database.                          |
+| name     | _Group_ Name.                                                         |
+| kind     | Identifies whether this is a _User_ or a _Group_.                     |
+| fqdomain | Fully qualified _Domain_ name.                                        |
+| email    | The _Group's_ email address.                                          |
+| creator  | _User_ or _Group_ Object representing who created this Group.         |
 | modifier | _User_ or _Group_ Object representing who last modified this _Group_. |
-| ctime |  _Date_ Object representing the date/time it was created. |
-| mtime |  _Date_ Object representing the date/time it was last modified. |
-| owner | _User_ or _Group_ that owns the object. |
+| ctime    | _Date_ Object representing the date/time it was created.              |
+| mtime    | _Date_ Object representing the date/time it was last modified.        |
+| owner    | _User_ or _Group_ that owns the object.                               |

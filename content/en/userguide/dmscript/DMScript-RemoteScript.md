@@ -6,18 +6,19 @@ description: >
   Execute a script on each remote Endpoint. 
 ---
 
+## Remote Script
 
 _Remotescript_ executes a script on each remote _Endpoint_ in the current server list. There are blocks that execute before and after the script is executed respectively. These blocks execute once for each _Endpoint_ in the current _Endpoint_ list.
 
 During the execution, there is an implicit _serverloop_ (psloop). The _Endpoint_ object is pushed onto the stack, any "pre" block is executed, the specified script is then executed on the current remote _Endpoint_ and then any "post" block is executed. In the post block, the variable $? is set to the exit status of the script.
 
 remotescript requires named parameters as follows:
-| Parameter | Description |
-| --- | --- |
-| filepath | Mandatory: A full path to the script to be executed on the remote _Endpoint_. |
-| params | Optional: A list of parameters to be passed to the script. |
+| Parameter | Description                                                                   |
+|-----------|-------------------------------------------------------------------------------|
+| filepath  | Mandatory: A full path to the script to be executed on the remote _Endpoint_. |
+| params    | Optional: A list of parameters to be passed to the script.                    |
 
-**Example:**
+### Example 1
 
 Execute a script on each _Endpoint_ in the current target _Environment_:
 
@@ -25,7 +26,7 @@ Execute a script on each _Endpoint_ in the current target _Environment_:
 remotescript(filepath: "/path/to/file");
 ```
 
-**Example:**
+### Example 2
 
 Execute a script on each _Endpoint_ which has the attribute "ATT1" set to "Y":
 
@@ -40,7 +41,7 @@ remotescript(filepath: "/path/to/file");
 
 ```
 
-**Example:**
+### Example 3
 
 Execute a script specific to each _Endpoint_ type within the _Environment_:
 
@@ -62,7 +63,7 @@ remotescript(filepath: "/opt/scripts/myscript.sh");
 }
 ```
 
-**Example:**
+### Example 4
 
 Execute a script on each _Endpoint_ in the _Environment_, passing parameters:
 

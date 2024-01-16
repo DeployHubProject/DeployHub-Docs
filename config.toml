@@ -1,10 +1,10 @@
 baseURL = "/"
 title = "DeployHub User Guide and API Reference"
 
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
-theme = ["docsy"]
+theme = ["github.com/google/docsy", "github.com/google/docsy/dependencies"]
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
@@ -16,7 +16,7 @@ defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
 
-disableKinds = ["taxonomy", "taxonomyTerm"]
+# disableKinds = ["taxonomy"]
 
 # Highlighting config
 pygmentsCodeFences = true
@@ -157,5 +157,5 @@ enable = false
         desc = "Development takes place here!"
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
 

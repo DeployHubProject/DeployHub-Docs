@@ -8,7 +8,7 @@ description: >
 
 _upper_ returns an uppercase version of the passed string.
 
-**Usage:**
+### Usage
 
 String.upper()
 
@@ -16,11 +16,11 @@ Or
 
 upper(String)
 
-**Returns:**
+### Returns
 
 String
 
-**Examples:**
+### Examples
 
 ```bash
 set a = "Hello There";
@@ -31,7 +31,7 @@ Result:
 
 HELLO THERE
 
-**See Also:**
+### See Also
 
 lower()
 ```

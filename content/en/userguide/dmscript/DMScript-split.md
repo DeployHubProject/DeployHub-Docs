@@ -8,7 +8,7 @@ description: >
 
 _split_ takes a source string and splits into a number of substrings. The split is performed at the specified character sequence. The resulting strings are returned in a list of strings.
 
-**Usage:**
+### Usage
 
 String.split(seq)
 
@@ -16,11 +16,11 @@ or
 
 split(String,seq);
 
-**Returns:**
+### Returns
 
 Array. A List of Strings.
 
-**Example:**
+### Example
 
 ```bash
 set mystr="/this/is/an/example";

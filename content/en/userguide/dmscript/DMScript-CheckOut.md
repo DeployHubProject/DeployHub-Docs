@@ -20,7 +20,7 @@ checkout takes a number of named parameters.
 
 The remaining parameters will depend on the chosen repository. The parameters specified will either override the defined properties (if the property is defined as _overridable_) or will be appended to them (if the property is defined as _appendable_). If a parameter attempts to override a property which is not defined as _overridable_ then a runtime error is thrown.
 
-**Example:**
+### Example
 
 ```bash
 A custom action for a _Component_ to post a configuration change to a DataPower web appliance:

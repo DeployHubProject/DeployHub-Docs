@@ -14,13 +14,13 @@ Regardless of why the _DMScript_ has been invoked (either a deployment or via it
 
 The following variables are always defined in the Global scope:
 
-| Variable | Description | Example |
-| --- | --- | --- |
-| ARGC | Count of command line args | $ARGC |
-| ARGV | Array of command line | ${ARGV[1]} |
-| DMHOME | Home directory of engine | $DMHOME/demo\_repo |
-| $ | Process id of engine process | $$ |
-| JSESSIONID | The session id of the Web UI | $JSESSIONID |
+| Variable   | Description                  | Example            |
+|------------|------------------------------|--------------------|
+| ARGC       | Count of command line args   | $ARGC              |
+| ARGV       | Array of command line        | ${ARGV[1]}         |
+| DMHOME     | Home directory of engine     | $DMHOME/demo\_repo |
+| $          | Process id of engine process | $$                 |
+| JSESSIONID | The session id of the Web UI | $JSESSIONID        |
 
 You can use $DMHOME to reference files that are stored in directories relative to the DeployHub engine installation location.
 
@@ -49,15 +49,15 @@ If you want to retrieve the value of an attribute at a specific point in the sta
 
 Each scope is named as follows:
 
-| Scope Name | Description |
-| --- | --- |
-| Global | Contains all Environment variables and any  "additional attributes " set by the user when the invoking task is run. |
-| Environment | Pushed during a deployment or when a manual task is invoked by right-clicking on an Environment. This scope contains the Environment Object itself and any attributes defined for that Environment. |
-| Application | Pushed during a deployment or when a manual task is invoked by right-clicking on an Application. This scope contains the Application Object itself and any attributes defined for that Application. |
-| Endpoint | Pushed during a deployment when a particular Endpoint is being targeted. Also available during a psloop (see  "psloop " later in this section). This scope contains the Endpoint Object itself and any attributes defined for that Endpoint. |
-| Component | Pushed during a deployment when the Application is being deployed. The scope contains the Component Object itself and any attributes defined for that Component. |
+| Scope Name  | Description                                                                                                                                                                                                                                  |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Global      | Contains all Environment variables and any  "additional attributes " set by the user when the invoking task is run.                                                                                                                          |
+| Environment | Pushed during a deployment or when a manual task is invoked by right-clicking on an Environment. This scope contains the Environment Object itself and any attributes defined for that Environment.                                          |
+| Application | Pushed during a deployment or when a manual task is invoked by right-clicking on an Application. This scope contains the Application Object itself and any attributes defined for that Application.                                          |
+| Endpoint    | Pushed during a deployment when a particular Endpoint is being targeted. Also available during a psloop (see  "psloop " later in this section). This scope contains the Endpoint Object itself and any attributes defined for that Endpoint. |
+| Component   | Pushed during a deployment when the Application is being deployed. The scope contains the Component Object itself and any attributes defined for that Component.                                                                             |
 
-_DMScript_ has built-in methods that allow you to iterate through _Endpoint_ and _Component_s and these push each _Component_/server onto the stack at the start of the loop and pop them off again at the end of the loop. This happens automatically for each iteration through the loop. So, for example, you could print the names of all the target _Endpoint_s by writing this:
+_DMScript_ has built-in methods that allow you to iterate through _Endpoint_ and _Component_s and these push each_Component_/server onto the stack at the start of the loop and pop them off again at the end of the loop. This happens automatically for each iteration through the loop. So, for example, you could print the names of all the target_Endpoint_s by writing this:
 
 ```bash
 psloop {
@@ -67,7 +67,7 @@ echo  "${server.name} - ${server.hostname} ";
 }
 ```
 
-_psloop_ stands for _Physical Server Loop_. It iterates through each _Endpoint_ in the current _Endpoint_ list (by default, this is all the _Endpoint_s associated with an _Environment_). Each _Endpoint_ is pushed onto the stack at the  "top " of the loop and popped off again at the end. So this loop will:
+_psloop_ stands for _Physical Server Loop_. It iterates through each _Endpoint_ in the current _Endpoint_ list (by default, this is all the _Endpoint_s associated with an_Environment_). Each_Endpoint_ is pushed onto the stack at the  "top " of the loop and popped off again at the end. So this loop will:
 
 - push the first _Endpoint_ onto the stack;
 - the  "echo " will print the name and the hostname of this _Endpoint_ (by explicitly naming the _Endpoint_ scope, the attributes  "name " and  "hostname " are pulled from the _Endpoint_ object on the stack);
@@ -103,34 +103,34 @@ During a Deployment, the following steps are followed:
 
 ### Pre Action to Task
 
-|  **Invocation Point**  |  **Available Objects and Variables** |
-| --- | --- |
-| $_Component_| The selected _Component_ if the task was invoked on a _Component._ |
+| **Invocation Point** | **Available Objects and Variables**                                |
+|----------------------|--------------------------------------------------------------------|
+| $_Component_         | The selected _Component_ if the task was invoked on a _Component._ |
 |$Application Object| The selected _Application_ if the task was invoked on an _Application.|   $Environment_Object| The _Environment_ being deployed to if this is a Deployment Task. |
 
 ### Post Action to Task
 
-|  **Invocation Point**  |  **Available Objects and Variables** |
-| --- | --- |
-| $? Integer| The Exit Status of the task.|
+| **Invocation Point** | **Available Objects and Variables** |
+|----------------------|-------------------------------------|
+| $? Integer           | The Exit Status of the task.        |
 | $_Component_ Object|The selected _Component_ if the task was invoked on a _Component._
 |$_Application_ Object| The selected _Application_ if the task was invoked on an _Application._ ||$_Environment_ Object| The _Environment_ being deployed to if this is a Deployment Task. |
 
 ### Pre Action for _Application_
 
-|  **Invocation Point**  |  **Available Objects and Variables** |
-| --- | --- |
-| ${dep.rollforward} Boolean| Set during a deployment to true or false.Indicates if the version being deployed is later than the version in the target _Environment_.|
-| ${dep.rollback} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is earlier than the version in the target _Environment_. |
-|${dep.same} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is the same as the version in the target _Environment_.|
+| **Invocation Point**       | **Available Objects and Variables**                                                                                                        |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| ${dep.rollforward} Boolean | Set during a deployment to true or false.Indicates if the version being deployed is later than the version in the target _Environment_.    |
+| ${dep.rollback} Boolean    | Set during a deployment to true or false. Indicates if the version being deployed is earlier than the version in the target _Environment_. |
+| ${dep.same} Boolean        | Set during a deployment to true or false. Indicates if the version being deployed is the same as the version in the target _Environment_.  |
 |$_Application_ Object| The _Application_ being deployed.
 |$_Environment_ Object| The _Environment_ being deployed to. |
 
 ### Post Action for _Application_
 
-|  **Invocation Point**  |  **Available Objects and Variables** |
-| --- | --- |
-| $? Integer| The Exit Status of the deployment.|
+| **Invocation Point** | **Available Objects and Variables** |
+|----------------------|-------------------------------------|
+| $? Integer           | The Exit Status of the deployment.  |
 | ${dep.rollforward} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is later than the version in the target _Environment_.
 |${dep.rollback} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is earlier than the version in the target _Environment_.|
 |${dep.same} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is the same as the version in the target _Environment_.|
@@ -158,29 +158,29 @@ During a Deployment, the following steps are followed:
 |$server Object| The _Endpoint_ the _Component_ is being deployed to.|
 |$Application_Object| The_Application_ being deployed.|
 |$Environment_Object| The_Environment_ being deployed to.|
-|$_DropZone_Object| The _DropZone_ containing the files to be transferred to the _Endpoint_. |
+|$_DropZone_Object| The _DropZone_containing the files to be transferred to the_Endpoint_. |
 
 ### Post Action for _Component_
 
-|  **Invocation Point**  |  **Available Objects and Variables** |
-| --- | --- |
-| $? Integer| The exit code of the _Component_ deployment.|
-|${dep.rollforward} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is later than the version in the target _Environment_.${dep.rollback} Boolean: Set during a deployment to true or false. Indicates if the version being deployed is earlier than the version in the target _Environment_.|
-|${dep.same} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is the same as the version in the target _Environment_.|
-|$_Component_Object| The _Component_ being deployed.|
-|$server Object| The _Endpoint_ the _Component_ is being deployed to.|
-|$_Application_Object| The _Application_ being deployed.|
-|$_Environment_Object| The _Environment_ being deployed to.|
-|${dep.files} List| The files deployed for this _Component._|
-|$_DropZone_Object| The _DropZone_ containing the files to be transferred to the _Endpoint_. |
+| **Invocation Point**       | **Available Objects and Variables**                                                                                                                                                                                                                                                                         |
+|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| $? Integer                 | The exit code of the _Component_ deployment.                                                                                                                                                                                                                                                                |
+| ${dep.rollforward} Boolean | Set during a deployment to true or false. Indicates if the version being deployed is later than the version in the target _Environment_.${dep.rollback} Boolean: Set during a deployment to true or false. Indicates if the version being deployed is earlier than the version in the target _Environment_. |
+| ${dep.same} Boolean        | Set during a deployment to true or false. Indicates if the version being deployed is the same as the version in the target _Environment_.                                                                                                                                                                   |
+| $_Component_Object         | The _Component_ being deployed.                                                                                                                                                                                                                                                                             |
+| $server Object             | The _Endpoint_ the _Component_ is being deployed to.                                                                                                                                                                                                                                                        |
+| $_Application_Object       | The _Application_ being deployed.                                                                                                                                                                                                                                                                           |
+| $_Environment_Object       | The _Environment_ being deployed to.                                                                                                                                                                                                                                                                        |
+| ${dep.files} List          | The files deployed for this _Component._                                                                                                                                                                                                                                                                    |
+| $_DropZone_Object          | The _DropZone_containing the files to be transferred to the_Endpoint_.                                                                                                                                                                                                                                      |
 
 ### Custom Actions for a _Component_
 
-|  **Invocation Point**  |  **Available Objects and Variables** |
-| --- | --- |
-| ${dep.rollforward} Boolean |Set during a deployment to true or false. Indicates if the version being deployed is later than the version in the target _Environment_.|
-|${dep.rollback} Boolean |Set during a deployment to true or false. Indicates if the version being deployed is earlier than the version in the target _Environment_.|
-|${dep.same} Boolean| Set during a deployment to true or false. Indicates if the version being deployed is the same as the version in the target _Environment_.|
+| **Invocation Point**       | **Available Objects and Variables**                                                                                                        |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| ${dep.rollforward} Boolean | Set during a deployment to true or false. Indicates if the version being deployed is later than the version in the target _Environment_.   |
+| ${dep.rollback} Boolean    | Set during a deployment to true or false. Indicates if the version being deployed is earlier than the version in the target _Environment_. |
+| ${dep.same} Boolean        | Set during a deployment to true or false. Indicates if the version being deployed is the same as the version in the target _Environment_.  |
 $_Component_Object| The _Component_ being deployed.|
 $server Object| The _Endpoint_ the _Component_ is being deployed to.|
 $_Application_Object| The _Application_ being deployed.|
@@ -192,10 +192,10 @@ _DMScript_ can be invoked at various stages in the deployment process.
 
 Given the deployment sequence described previously, you should place _DMScript_ here to achieve your desired results.
 
-| If you want to… | DMScript goes here |
-| --- | --- |
-| Call an External Application to confirm that an Application can be deployed (e.g.: Service Desk etc). | Pre-Action to Application or Deploy Task. |
-| Modify or remove files in a Drop Zone before Deployment. | Pre-Action to Component. |
-| Modify a File on a Target Endpoint after Deployment. | Post-Action to Component. |
-| Call an external tool to deploy a Component (i.e.: Ansible). | Custom Action to Component. |
-| Notify an External Application that an Application has been deployed. | Post-Action to Application or Deploy Task. |
+| If you want to…                                                                                       | DMScript goes here                         |
+|-------------------------------------------------------------------------------------------------------|--------------------------------------------|
+| Call an External Application to confirm that an Application can be deployed (e.g.: Service Desk etc). | Pre-Action to Application or Deploy Task.  |
+| Modify or remove files in a Drop Zone before Deployment.                                              | Pre-Action to Component.                   |
+| Modify a File on a Target Endpoint after Deployment.                                                  | Post-Action to Component.                  |
+| Call an external tool to deploy a Component (i.e.: Ansible).                                          | Custom Action to Component.                |
+| Notify an External Application that an Application has been deployed.                                 | Post-Action to Application or Deploy Task. |

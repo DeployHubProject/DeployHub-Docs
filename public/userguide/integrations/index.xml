@@ -1,0 +1,2360 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeployHub User Guide and API Reference – Integrations</title>
+    <link>/userguide/integrations/</link>
+    <description>Recent content in Integrations on DeployHub User Guide and API Reference</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/userguide/integrations/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Userguide: Custom DeployHub Actions</title>
+      <link>/userguide/integrations/intro-to-integrations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/intro-to-integrations/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;using-deployhub-actions-for-custom-integrations&#34;&gt;Using DeployHub Actions for Custom Integrations&lt;/h2&gt;
+&lt;p&gt;DeployHub has an open architecture with many out of the box integrations with other DevOps tools. You can incorporate the use of tools such as Ansible or Helm, add Slack or deploy to WebSphere or Salesforce with our built-in &lt;em&gt;Actions&lt;/em&gt; or by creating &lt;em&gt;Custom Actions&lt;/em&gt; using any scripting languages.  In addition, you can use &lt;a href=&#34;/userguide/dmscript/&#34;&gt;DMScript&lt;/a&gt; which has pre-built access to the DeployHub Objects.  &lt;a href=&#34;/userguide/restapi/&#34;&gt;RESTfull APIs&lt;/a&gt; are also available to interact with the DeployHub Objects for integration into external systems, or execute on a continuous delivery trigger.&lt;/p&gt;
+&lt;h2 id=&#34;types-of-actions&#34;&gt;Types of Actions&lt;/h2&gt;
+&lt;p&gt;Actions can be created using:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/customizations/2-define-notifiers/&#34;&gt;&lt;em&gt;Notifiers&lt;/em&gt;&lt;/a&gt; for calling, Email, Slack or Hipchat.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/customizations/2-define-your-actions/&#34;&gt;&lt;em&gt;Actions&lt;/em&gt; and &lt;em&gt;Custom Actions&lt;/em&gt;&lt;/a&gt; for deploying and managing Infrastructure Components like Tomcat or WebSphere or performing deployments with Helm, Ansible or Cloud Foundry.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/profeatures/2-data-sources/&#34;&gt;&lt;em&gt;Data Sources&lt;/em&gt;&lt;/a&gt; for connecting to outside data such as Change Request systems like Jira, Git or Bugzilla.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/restapi/&#34;&gt;&lt;em&gt;APIs&lt;/em&gt;&lt;/a&gt; for creating continuous delivery plug-ins for continuous configuration management.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;built-in-_actions_&#34;&gt;Built-In &lt;em&gt;Actions&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Built-in &lt;em&gt;Actions&lt;/em&gt; may already support what you need. Some Built-in &lt;em&gt;Actions&lt;/em&gt; are &lt;em&gt;Functions&lt;/em&gt; or &lt;em&gt;Procedures&lt;/em&gt; that can  delete files in a DropZone, or run a PostGres script. Other Built-in &lt;em&gt;Actions&lt;/em&gt; integrate with specific DevOps tools such as Ansible, Helm, Slack or GitHub.&lt;/p&gt;
+&lt;h3 id=&#34;built-in-database-actions&#34;&gt;Built-In Database Actions&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Run SQL Script (Postgres)&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Runs one or more SQL scripts against a Postgres Database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;built-in-deploy-actions&#34;&gt;Built-In Deploy Actions&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Checkout&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Extracts items from the specified &lt;em&gt;Repository&lt;/em&gt; and places them in the &lt;em&gt;Dropzone&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Deploy&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Extracts items from the specified &lt;em&gt;Repository&lt;/em&gt; and deploys then to the &lt;em&gt;Endpoints&lt;/em&gt; within the targeted &lt;em&gt;Environment&lt;/em&gt;. Use IF conditions to filter the &lt;em&gt;Endpoint&lt;/em&gt; list to those matching the specified criteria.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Deploy Component&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Deploys the specified &lt;em&gt;Component&lt;/em&gt; to the appropriate &lt;em&gt;Endpoints&lt;/em&gt; within the targeted &lt;em&gt;Environment&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Execute&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Runs a script on the appropriate &lt;em&gt;Endpoints&lt;/em&gt; within the targeted &lt;em&gt;Environment&lt;/em&gt;. Use IF conditions to filter the &lt;em&gt;Endpoint&lt;/em&gt; list to those matching the specified criteria.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Transfer&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Deploys the &lt;em&gt;Component&lt;/em&gt; on the stack to the &lt;em&gt;Endpoint&lt;/em&gt; on the stack.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;built-in-dropzone-actions&#34;&gt;Built-In Dropzone Actions&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Add File to ZIP&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Puts a &lt;em&gt;Dropzone&lt;/em&gt; file into a ZIP/WAR/JAR/EAR file.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Amend File Content&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Modifies a flat file in the &lt;em&gt;Dropzone&lt;/em&gt;. Set &amp;ldquo;&amp;ldquo;Server Specific&amp;rdquo;&amp;rdquo; to make a copy specific for each &lt;em&gt;Endpoint&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Delete File&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Removes a file from the &lt;em&gt;Dropzone&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Extract File from ZIP&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Extracts a named file from a ZIP/WAR/JAR/EAR file.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Iterate through Dropzone&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Loops through each file in the &lt;em&gt;Dropzone&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Remove File from ZIP&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Deletes a file from a ZIP/WAR/JAR/EAR archive.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Rename File&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Renames a file in the &lt;em&gt;Dropzone&lt;/em&gt;. Set &amp;ldquo;&amp;ldquo;Server Specific&amp;rdquo;&amp;rdquo; to make a copy specific to the current &lt;em&gt;Endpoint&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Using Dropzone&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Use a named &lt;em&gt;Dropzone&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;XML - Add Element&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Adds a New XML element.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;XML - Remove Element&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Removes an XML element.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;XML - Set Attribute&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Sets an attribute name in an XML element.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;XML - Set Text&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Sets the text in an XML element.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;built-in-flow-logic-actions&#34;&gt;Built-In Flow Logic Actions&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Calculate MD5&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Calculates the MD5 of a file.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Get Directory&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Returns the contents of a directory into an array.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Abort&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Terminates a deployment with error condition.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Add Two Values&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Add two values and stores the result in a variable.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Add Value to  Variable&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Add a value to a variable.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Echo&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Echoes a message.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;If&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;General Condition Expression evaluation. Also use this to filter the list of servers based on those matching the specified criteria.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Increment Variable&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Increments a variable.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Parallel&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Execute blocks in parallel.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Run Task&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Execute a Specific Task.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Set Variable&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Creates and sets a variable.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Sleep&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Pauses for n seconds.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Using Stream&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Use a named stream.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Wait for Task&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Wait for a Specific DeployHub Task to be Run.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;built-in-loop-actions&#34;&gt;Built-In Loop Actions&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Component Loop&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Loops through each &lt;em&gt;Component&lt;/em&gt; that makes up the &lt;em&gt;Application&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Loop Through Array Keys&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Loops through each element of an array, setting a variable to each key.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Server Loop&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Iterates through the current set of &lt;em&gt;Endpoints&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Version Loop&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Loops through each version between version on target &lt;em&gt;Endpoint&lt;/em&gt; and version being deployed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;built-in-tomcat-actions&#34;&gt;Built-In Tomcat Actions&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;TomcatPostDeploy&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Cleans work directory and starts Tomcat.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;TomcatPreDeploy&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Shuts down Tomcat before deployment.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;built-in-websphere-actions&#34;&gt;Built-In WebSphere Actions&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Deploy App&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Deploys an &lt;em&gt;Application&lt;/em&gt; to Websphere.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;built-in-windows-actions&#34;&gt;Built-In Windows Actions&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Extract Zip&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Extracts the contents of a zip file.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;List Services&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Returns a list of installed services into an array.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Start Service&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Starts a Windows Service on the appropriate &lt;em&gt;Endpoints&lt;/em&gt; within the targeted &lt;em&gt;Environment&lt;/em&gt;. Use IF conditions to filter the &lt;em&gt;Endpoint&lt;/em&gt; list to those matching the specified criteria.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Stop Service&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Stops a Windows Service on the appropriate &lt;em&gt;Endpoints&lt;/em&gt; within the targeted &lt;em&gt;Environment&lt;/em&gt;. Use IF conditions to filter the &lt;em&gt;Endpoint&lt;/em&gt; list to those matching the specified criteria.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;built-in-_actions_-that-support-devops-interoperability&#34;&gt;Built-in &lt;em&gt;Actions&lt;/em&gt; that Support DevOps Interoperability&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Action&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;/userguide/integrations/ansible/&#34;&gt;Ansible&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Uses Ansible to perform Deployments.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;/userguide/integrations/cloud-foundry/&#34;&gt;Cloud Foundry&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Uses Cloud Foundry to perform Deployments.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;/userguide/integrations/helm/&#34;&gt;Helm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Uses Helm to deploy Containers.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;/userguide/integrations/salesforce/&#34;&gt;SalesForce&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Deploys &lt;em&gt;Applications&lt;/em&gt; to SalesForce.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;/userguide/integrations/tomcat/&#34;&gt;Tomcat&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Deploys to a Tomcat environment.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;userguide/integrations/weblogic/&#34;&gt;WebLogic&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Deploys to a WebLogic Environment.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;/userguide/integrations/websphere/&#34;&gt;WebSphere&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Deploys to a WebSphere Environment.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: CI/CD and DeployHub</title>
+      <link>/userguide/integrations/ci-cd_integrations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/ci-cd_integrations/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;automating-your-cd-pipeline-with-deployhub&#34;&gt;Automating Your CD Pipeline with DeployHub&lt;/h2&gt;
+&lt;p&gt;In order to continuously gather pipeline intelligence, DeployHub must become part of your pipeline. DeployHub integrates into your CI/CD process using the Ortelius Open-Source Command Line (CLI). The Ortelius CLI gathers supply chain data based on a single pipeline workflow at the build and deploy steps. The build step gathers Swagger, SBOM, Readme, licenses, Git data, Docker image, and other build output. The deploy step records when a release occurs, what was sent and where the objects were sent to.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://Ortelius.io&#34;&gt;Ortelius&lt;/a&gt; CLI is maintained by the Ortelius Open Source Community under the governance of the &lt;a href=&#34;https://cd.foundation&#34;&gt;Linux Foundation&amp;rsquo;s Continuous Delivery Foundation.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For the most up to date information on the Ortelius CLI visit the &lt;a href=&#34;https://github.com/Ortelius/cli/blob/main/doc/dh.md&#34;&gt;Ortelius GitHub Repository&lt;/a&gt;. You will find a complete list of parameters for collecting Swagger, SBOM and other tool reports and results.&lt;/p&gt;
+&lt;h3 id=&#34;ortelius-cli-data-gathering-using-toml&#34;&gt;Ortelius CLI Data Gathering using .toml&lt;/h3&gt;
+&lt;p&gt;The Ortelius CLI reads from a .toml file. The .toml file contains non-derived information for each artifact that you create at your build step. In DeployHub, an artifact is referred to as a &lt;em&gt;Component&lt;/em&gt;.  A &lt;em&gt;Component&lt;/em&gt; is a Container, DB Object, or file object (.jar, Lamda Function, Apex file, etc.). The .toml file will provide the &amp;rsquo;non-derived&amp;rsquo; data for the &lt;em&gt;Component&lt;/em&gt; your are tracking in DeployHub which includes the &lt;em&gt;Component&lt;/em&gt; name, owner, &lt;em&gt;Component type&lt;/em&gt;, and owner contact details.  The Ortelius CLI will read the .toml file from the Git Repository associated to your pipeline. If you are using a Mono Repository for your entire codebase, you will need a separate Component.toml file for each &lt;em&gt;Component&lt;/em&gt;, managed in sub-directories.&lt;/p&gt;
+&lt;p&gt;In a cloud-native, microservice architecture there are many, if not hundreds, of &lt;em&gt;Components&lt;/em&gt;. Organizing your &lt;em&gt;Components&lt;/em&gt; within DeployHub is done in two ways. They are grouped based on a subject &lt;em&gt;Domain&lt;/em&gt; and assigned to a logical &lt;em&gt;Application&lt;/em&gt;. Not all &lt;em&gt;Components&lt;/em&gt; need to be assigned to an &lt;em&gt;Application&lt;/em&gt;, but they should be stored in a subject matter &lt;em&gt;Domain&lt;/em&gt; so they can be easily found and reused.&lt;/p&gt;
+&lt;p&gt;A logical &lt;em&gt;Application&lt;/em&gt; is a collection of &lt;em&gt;Components&lt;/em&gt; that make up a complete software systems consumed by an end user. Applications are composed of shared &lt;em&gt;Components&lt;/em&gt; and &lt;em&gt;Application&lt;/em&gt; specific &lt;em&gt;Components&lt;/em&gt;, and are a logical representation of what &lt;em&gt;Components&lt;/em&gt; need to be deployed in order for the software system to run.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Once created, your .toml file does not need to be updated unless the non-derived information changes, or you want to reorganize to which Applications or &lt;em&gt;Domains&lt;/em&gt; the Component has been assigned. For example, a Component has been reassigned to a new owner and new team represented by a &lt;em&gt;Domain&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Perform the following steps to add your &lt;em&gt;Components&lt;/em&gt; using the .toml file:&lt;/p&gt;
+&lt;h4 id=&#34;step-1---define-your-deployhub-pipeline-variables&#34;&gt;Step 1 - Define Your DeployHub Pipeline Variables&lt;/h4&gt;
+&lt;p&gt;The following variables should be set at the beginning of your Pipeline.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;DHURL&lt;/td&gt;
+&lt;td&gt;URL to DeployHub Login&lt;/td&gt;
+&lt;td&gt;The URL used to access DeployHub.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DHUSER&lt;/td&gt;
+&lt;td&gt;UserID&lt;/td&gt;
+&lt;td&gt;The ID used to log into DeployHub&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DHPASS&lt;/td&gt;
+&lt;td&gt;password&lt;/td&gt;
+&lt;td&gt;The password used to log into DeployHub. This can encrypted based on the CI/CD solution.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DOCKERREPO&lt;/td&gt;
+&lt;td&gt;Name of your Docker Repository&lt;/td&gt;
+&lt;td&gt;For Components that are Docker Images. Not needed for non-docker objects.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;IMAGE_TAG&lt;/td&gt;
+&lt;td&gt;Tag for the Docker Image if used&lt;/td&gt;
+&lt;td&gt;For Components that are Docker Images. Not needed for non-docker objects.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DHURL&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;https://deployhub.example.com
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DHUSER&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;Stella99
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DHPASS&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;chasinghorses
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DOCKERREPO&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;quay.io/DeployHub/hello-world
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;IMAGE_TAG&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;1.0.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;step-2---create-your-componenttoml-file&#34;&gt;Step 2 - Create your Component.toml file&lt;/h4&gt;
+&lt;p&gt;Cut and paste the following into a component.toml file, update &amp;lsquo;your&amp;rsquo; information, and commit/push it to your Git Repository.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Application Name and Version - not required. If not used the Component will not be associated to an Application&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Application&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;GLOBAL.&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Application&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Name&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;Application_Version = &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Application&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Version&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;# Define Component Name, Variant and Version - required
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;Name = &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;GLOBAL&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Component&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Name&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;Variant = &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;GIT_BRANCH&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;Version = &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;vyour&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Component&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Version&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;BUILD_NUM&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;-g&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SHORT_SHA&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;# Key/Values to associate to the Component Version
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;[Attributes]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    DockerBuildDate = &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;BLDDATE&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    DockerRepo = &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;DOCKERREPO&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    DockerSha = &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;DIGEST&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    DockerTag = &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;IMAGE_TAG&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    DiscordChannel = &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Discord&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;channel&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34; or SlackChannel = &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Slack&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Channel&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    ServiceOwner = &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;DHUSER&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    ServiceOwnerEmail = &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Component&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Owner&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Email&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Application Name and Version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Application&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;GLOBAL.Santa Fe Software.Online Store Company.Hipster Store.Prod.helloworld app&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Application_Version&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Define Component Name, Variant and Version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Name&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;GLOBAL.Santa Fe Software.Online Store Company&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Variant&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;${GIT_BRANCH}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Version&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;v1.0.0.${BUILD_NUM}-g${SHORT_SHA}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Key/Values to associate to the Component Version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Attributes&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;DockerBuildDate&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;${BLDDATE}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;DockerRepo&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;${DOCKERREPO}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;DockerSha&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;${DIGEST}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;DockerTag&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;${IMAGE_TAG}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;DiscordChannel&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://discord.gg/wM4b5yEFzS&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;ServiceOwner&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;${DHUSER}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;ServiceOwnerEmail&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;stella@DeployHub.io&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Note: For SaaS users, you will have a second high-level qualifier that was created as part of your sign-up. This second high-level qualifier must be used as the start of your Application Name and Component Name.  For example: &lt;em&gt;GLOBAL.Santa Fe Software.Online Store&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;step-3---add-a-step-in-your-pipeline-to-run-syft-if-you-are-not-generating-sboms-optional&#34;&gt;Step 3 - Add a step in your pipeline to run Syft if you are not generating SBOMS (Optional)&lt;/h4&gt;
+&lt;p&gt;DeployHub can consume any SPDX and CycloneDX formatted SBOM. If you are already generating SBOMs, you will pass the name of the SBOM results to DeployHub is step 4 below. If you are not generating SBOMs as part of your pipeline process, you will need to add SBOM generation to collect the lower dependency data. Following is how to add Syft to your workflow to include the collection of SBOM data.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/anchore/syft&#34;&gt;Syft SBOM tool&lt;/a&gt; will generate Software Bill of Material Reports for popular coding languages and package managers, including Docker images.&lt;/p&gt;
+&lt;p&gt;The following code example scans a Docker Image to generate the SBOM.  See &lt;a href=&#34;https://github.com/anchore/syft#supported-sources&#34;&gt;Syft Options&lt;/a&gt; to scan other objects and coding languages.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# install Syft&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; sh -s -- -b &lt;span style=&#34;color:#000&#34;&gt;$PWD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# create the SBOM&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./syft packages &lt;span style=&#34;color:#000&#34;&gt;$DOCKERREPO&lt;/span&gt;:&lt;span style=&#34;color:#000&#34;&gt;$IMAGE_TAG&lt;/span&gt; --scope all-layers -o cyclonedx-json &amp;gt; cyclonedx.json
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# display the SBOM&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat cyclonedx.json
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;step-4---run-the-ortelius-cli-to-add-your-component-and-create-an-application&#34;&gt;Step 4 - Run the Ortelius CLI to add Your Component and Create an Application&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: To complete the process you will need to install the Ortelius CLI where your CI/CD server is running. Refer to the &lt;a href=&#34;https://github.com/Ortelius/cli/blob/main/doc/dh.md&#34;&gt;Ortelius GitHub CLI Documentation&lt;/a&gt; for installation instructions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Execute the following calls to the Ortelius CLI as part of your workflow. It should be called after the build and SBOM generation:&lt;/p&gt;
+&lt;p&gt;With CycloneDX SBOM&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh updatecomp --rsp component.toml --deppkg &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cyclonedx@name of your SBOM file&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Example:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh updatecomp --rsp component.toml --deppkg &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cyclonedx@cyclonedx.json&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With SPDX SBOM&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh updatecomp --rsp component.toml --deppkg &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;spdx@name of your SBOM file. &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Example:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh updatecomp --rsp component.toml --deppkg &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;spdx@spdx.json&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Without SBOM&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh updatecomp --rsp component.toml 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;h3 id=&#34;application-to-component-dependencies&#34;&gt;Application to Component Dependencies&lt;/h3&gt;
+&lt;img src=&#39;/userguide/images/ApplicationComponentDepVersions.png&#39; alt=&#34;Application Component Dependencies&#34; /&gt;
+&lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;1 - The Hello World Application shows one Dependency.&lt;/b&gt;&lt;/div&gt;
+&lt;h3 id=&#34;application-level-sbom-and-cve&#34;&gt;Application Level SBOM and CVE&lt;/h3&gt;
+&lt;img src=&#39;/userguide/images/ApplicationSBOMandCVE.png&#39; alt=&#34;Application Level SBOM and CVEs&#34; /&gt;
+&lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;2 - The HelloWorld Application Level SBOM and CVE results.&lt;/b&gt;&lt;br&gt;&lt;b&gt;&lt;i&gt;Note: CVE Results may vary depending on the time of the scan.&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;h3 id=&#34;component-ownership&#34;&gt;Component Ownership&lt;/h3&gt;
+&lt;img src=&#39;/userguide/images/Componetownership.png&#39;  alt=&#34;Component Ownership&#34; /&gt;
+&lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;3 - Component Ownership and Detail&lt;/b&gt;&lt;/div&gt;
+&lt;h3 id=&#34;supply-chain-package-search&#34;&gt;Supply Chain “Package” Search&lt;/h3&gt;
+&lt;img src=&#39;/userguide/images/packagesearch.png&#39; alt=&#34;Package Search&#34; /&gt;
+&lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;4 - Package Search&lt;/b&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;img src=&#39;/userguide/images/PackageSerachResults.png&#39; alt=&#34;Package Search Results&#34;  /&gt;
+&lt;div style=&#34;margin-left:20%&#34;&gt;&lt;b&gt;4 - Package Search Results&lt;/b&gt;&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: CircleCI Deployment Orb</title>
+      <link>/userguide/integrations/circleci/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/circleci/</guid>
+      <description>
+        
+        
+        &lt;p&gt;DeployHub integrates with CircleCI to support continuous configuration management and continuous deployments built into your CircleCI pipeline. In particular, DeployHub integrates with CircleCI to enrich the CI/CD pipeline around microservices. &lt;/p&gt;
+&lt;p&gt;Critical to the process is the ability to perform configuration management, versioning and tracking of microservices across clusters and teams.  DeployHub&amp;rsquo;s CircleCI Orb includes the ability to perform automated version and dependency management of microservices tracking application and microservice relationships, their versions and their deployment meta data.&lt;/p&gt;
+&lt;h2 id=&#34;deployhub-tasks-and-the-circleci-deployment-orb&#34;&gt;DeployHub Tasks and the CircleCI Deployment Orb&lt;/h2&gt;
+&lt;p&gt;The DeployHub CircleCI Orb calls DeployHub to perform:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Task&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;move_job&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Executes the DeployHub &amp;lsquo;Move&amp;rsquo; task which promotes or demotes an application version to a different pipeline state.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;microservice_version_update_job&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Automatically increments the version number of a microservice and the application prior to deployment.  Tracks dependency relationships between microservices and applications to create dependency maps.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;deploy_job&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Deploys an application version to a specified environment. CircleCI will pass the application version name and environment to DeployHub.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;envscript_job&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Generates a script that captures additional information from CircleCI, Git and Environment TOML file.  This script is used in subsequent steps for adding additional information to DeployHub.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;approve_job&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Supported for DeployHub Pro users. Allows CircleCI to call DeployHub&amp;rsquo;s approval process to approve an application version to be moved to the next stage of the pipeline.  The approval occurs as the UserID is passed from CircleCI to DeployHub. Depending on your DeployHub configuration, you may need to call the ApproveJob. This would happen if an approval gate is defined in DeployHub.  CircleCI will pass the application version and the &amp;lsquo;Move&amp;rsquo; task to DeployHub.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;You do not need to use the &amp;lsquo;approve_job &amp;lsquo;or &amp;lsquo;move_job&amp;rsquo; functions. The use of these jobs is determined by how you define your CircleCI pipeline.  If you are using Approvals in CircleC, the approve_job records the approval information as part of the microservice deployment meta.  A &amp;lsquo;Move&amp;rsquo; process tracks where the microservice and application versions are in the pipeline.  You would generally perform a &amp;lsquo;Move&amp;rsquo; and then a &amp;lsquo;Deploy.&amp;rsquo;  Using the microservice_version_update_job is recommended before the deploy_job.  This allows DeployHub to perform your versioning, configuration management, dependency mapping and comparisons.  The deploy_job calls on DeployHub&amp;rsquo;s back in release engine to move the objects to endpoints (clusters for example.)&lt;/p&gt;
+&lt;h2 id=&#34;installing-the-circleci-deployment-orb&#34;&gt;Installing the CircleCI Deployment Orb&lt;/h2&gt;
+&lt;p&gt;To start using the DeployHub CircleCI Deployment Orb, you will need to create a .circleci/config.yml to define your workflow to CircleCI for that project. That workflow will define calls to the DeployHub jobs and define the variables such as Application Version, Environment, UserID and Password that will be passed to the DeployHub  CircleCI Orb.&lt;/p&gt;
+&lt;p&gt;For a full description, go to the &lt;a href=&#34;https://circleci.com/orbs/registry/orb/deployhub/deployhub-orb&#34;&gt;CircleCI Orb Registry&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;two-way-communication-and-shared-logging&#34;&gt;Two-way communication and shared logging&lt;/h3&gt;
+&lt;p&gt;DeployHub and CircleCI have a two-way logging communication.  The DeployHub CircleCI Deployment orb includes the ability for all logs about software deployments to be reported in both solutions.  CircleCI can report to DeployHub when deployments are ready to be executed, with DeployHub reporting back the status of the deployment. For most users, CircleCI remains their primary location to find results and logs.&lt;/p&gt;
+&lt;p&gt;For more information see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-defining-domains/&#34;&gt;Building Your Domain Catalog - Tasks in this Domain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-your-actions/&#34;&gt;Customizing Actions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/customizations/2-define-your-functions-and-procedures/&#34;&gt;Procedures and Functions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: GitHub</title>
+      <link>/userguide/integrations/github/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/github/</guid>
+      <description>
+        
+        
+        &lt;p&gt;DeployHub supports GitHub in the following ways.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A binary Repository for retrieving artifacts to deploy such as binaries or scripts.&lt;/li&gt;
+&lt;li&gt;GitHub Issue Tracking for &lt;strong&gt;DeployHub Pro&lt;/strong&gt;. A bridge connects a GitHub issue with a DeployHub Change Request.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;github-as-a-binary-repository&#34;&gt;GitHub as a Binary Repository&lt;/h2&gt;
+&lt;p&gt;You can configure DeployHub to call out to a Git Repo to pull deployable artifacts (binaries, scripts, etc.) as part of your deployment.  The process will check out your deployable artifacts based on commit, branch or tag specified. You will need to configure DeployHub with a file system DeployHub &lt;em&gt;Repository&lt;/em&gt; that will pull the files need for the deployment.  You will also need to create a &amp;ldquo;Git Checkout&amp;rdquo; &lt;em&gt;Procedure&lt;/em&gt; and &lt;em&gt;Action&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1 - Create a DeployHub File System &lt;em&gt;Repository&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DeployHub can use GitHub as a binary repository for retrieving deployable objects as part of the deployment process.  To do this you will first need to define GitHub as a connected &lt;em&gt;Repository&lt;/em&gt; Object from within DeployHub. This connection will be used by as part of the deployment process using a &lt;em&gt;Procedure&lt;/em&gt; and a &lt;em&gt;Action&lt;/em&gt;. For information on setting up File System as a binary repository see &lt;a href=&#34;/userguide/first-steps/2-define-repositories/&#34;&gt;Connect Your Repositories&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Once you have completed this step, you are ready to create a new &lt;em&gt;Procedure&lt;/em&gt; that performs the check out from the GitHub repository.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 2 - Create your GitHub Checkout &lt;em&gt;Procedure&lt;/em&gt; for your &lt;em&gt;Action&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Procedures&lt;/em&gt; are called by &lt;em&gt;Actions&lt;/em&gt; to execute deployment logic. A pre-defined DeployHub _Procedure__is available from the &lt;a href=&#34;https://github.com/ortelius/ortelius/blob/master/procedures/&#34;&gt;Ortelius Git Repo&lt;/a&gt;. This where you will find the most current version of this &lt;em&gt;Procedure&lt;/em&gt;. For more information on creating_Procedures see &lt;a href=&#34;/userguide/customizations/2-define-your-functions-and-procedures/&#34;&gt;Functions and Procedures&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;From the Ortelius Git Repo, pull the file named &lt;strong&gt;GitCheckout.re&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Once downloaded, you will need to Import it into DeployHub from the Func/Procs List View. Navigate to the List View by selecting the Func/Procs menu option on the left hand side of the DeployHub main panel. From the Func/Procs List view select the &lt;strong&gt;Import&lt;/strong&gt; option. The Import will bring you to your operating system &amp;ldquo;file open&amp;rdquo; dialog box for selecting the GitCheckout.re file.  Next, select your &lt;em&gt;Domain&lt;/em&gt; and upload the &lt;em&gt;Procedure&lt;/em&gt; into the DeployHub. You are now ready to create your &lt;em&gt;Action&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 3 - Create your &lt;em&gt;Action&lt;/em&gt; for the GitHub Checkout &lt;em&gt;Procedure&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Once you have imported your GitCheckout.re &lt;em&gt;Procedure&lt;/em&gt;, you can define your &lt;em&gt;Action&lt;/em&gt;. Navigate to the &lt;em&gt;Actions&lt;/em&gt; list view from the &lt;em&gt;Actions&lt;/em&gt; menu option on the left hand side of the DeployHub main panel. Use the +Add option to create a new &lt;em&gt;Action&lt;/em&gt; for you &lt;em&gt;Procedure&lt;/em&gt;. Name the new &lt;em&gt;Action&lt;/em&gt; &lt;strong&gt;GitCheckAction&lt;/strong&gt; (no spaces). See &lt;a href=&#34;/userguide/customizations/2-define-your-actions/&#34;&gt;Customize Your Actions&lt;/a&gt; for more information on creating &lt;em&gt;Actions&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Now we are going to customize this &lt;em&gt;Action&lt;/em&gt;. On the right hand side, you will see a list of &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; you can choose from.  Navigate to your &lt;em&gt;Domain&lt;/em&gt; to find the GitCheckOut &lt;em&gt;Procedure&lt;/em&gt;. Drag it onto the area under &lt;em&gt;Start.&lt;/em&gt; A pop-up dialog box will open for you to complete the following parameters:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;GitCheckout&lt;/em&gt; Parameters&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Field&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Title&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Not Required&lt;/td&gt;
+&lt;td&gt;Name of the step in your deployment workflow. Use &amp;ldquo;Git Checkout.&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Summary&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Not Required&lt;/td&gt;
+&lt;td&gt;Enter a summary of this step.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Git Repo&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$GIT_URL&lt;/td&gt;
+&lt;td&gt;This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Git Commit&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$GIT_COMMIT&lt;/td&gt;
+&lt;td&gt;This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;To Dir&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$GIT_DIR&lt;/td&gt;
+&lt;td&gt;This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use &amp;ldquo;.&amp;rdquo; for the default directory when assigning this value at the Component level.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;At this point the &lt;em&gt;Action&lt;/em&gt; is ready to be used by anyone with access (based on &lt;em&gt;Domain&lt;/em&gt; and &lt;em&gt;Group&lt;/em&gt; options).
+Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Component&lt;/em&gt; variables are defined. This is performed at the &lt;em&gt;Component&lt;/em&gt; level.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 4 - Assign the GitCheckoutAction to your &lt;em&gt;Component&lt;/em&gt; to be deployed&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For each &lt;em&gt;Component&lt;/em&gt; you will need to define the variable values for $GIT_URL, $GIT_COMMIT and $GIT_DIR that the GitCheckoutAction will use at the_Component_ level. The values will be passed to the GitCheckoutAction at deploy time. See &lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Defining &lt;em&gt;Components&lt;/em&gt;&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 5 - Set Your &lt;em&gt;Component&lt;/em&gt; Attributes_&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The following variables must be added to the Attributes Section for all  &lt;em&gt;Components&lt;/em&gt; using the GitCheckoutAction &lt;em&gt;Pre Action&lt;/em&gt;.  The Attributes section can be found on the &lt;em&gt;Component&lt;/em&gt; Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable Name&lt;/th&gt;
+&lt;th&gt;Value Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GIT_URL&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;This Variable represents the Git Repo containing the deployable artifacts. The value will be defined at the Component Level.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GIT_COMMIT&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GIT_DIR&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use &amp;ldquo;.&amp;rdquo; for the default directory when assigning this value at the Component level.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;github-issues-and-deployhub-pro-change-request&#34;&gt;GitHub Issues and DeployHub Pro Change Request&lt;/h2&gt;
+&lt;p&gt;DeployHub Pro can reference the GitHub issues to track Change Request for &lt;em&gt;Components&lt;/em&gt; and &lt;em&gt;Applictions&lt;/em&gt;. This enables the GitHub issues to be viewed from a &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt; using the DeployHub Pro &lt;em&gt;Change Request&lt;/em&gt; section from the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;. If you have a &lt;em&gt;Release&lt;/em&gt; defined, these GitHub issues will be rolled up from the &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Application&lt;/em&gt; to the &lt;em&gt;Release&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;For more information see &lt;a href=&#34;/userguide/integrations/jira-bugzilla-and-git-issues/&#34;&gt;Tracking Jira, Bugzilla and GitHub Issue&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Additional information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;userguide/customizations/2-data-sources/&#34;&gt;Managing &lt;em&gt;Data Sources&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;userguide/first-steps/2-define-repositories/&#34;&gt;Connect Your &lt;em&gt;Repositories&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Defining &lt;em&gt;Components&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Helm for Container Deployments</title>
+      <link>/userguide/integrations/helm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/helm/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Helm is called to replace the DeployHub default processing engine for performing container deployments. When DeployHub executes the release process, it will call the Helm Chart you have defined as your &lt;em&gt;Custom Action&lt;/em&gt; at the &lt;em&gt;Component&lt;/em&gt; level.  DeployHub includes the version of the Helm chart as part of its overall configuration data.&lt;/p&gt;
+&lt;h2 id=&#34;helm-and-key-value-pairs&#34;&gt;Helm and Key Value Pairs&lt;/h2&gt;
+&lt;p&gt;In order to support a consistent Helm deployment across Cluster &lt;em&gt;Endpoints&lt;/em&gt; and &lt;em&gt;Environments&lt;/em&gt; (Dev, Test, Prod) Key value pair substitution is performed. When a Helm chart is used, DeployHub will pull your Helm Chart in the .tgz format from either a public or private Chart Museum. It then expands it out into a separate directory location where Helm is executed. This location is defined by the DeployHub Endpoint which you define (see &amp;ldquo;Connecting a DeployHub &lt;em&gt;Endpoint&lt;/em&gt; to your Kubernetes Cluster through Helm&amp;rdquo; below).&lt;/p&gt;
+&lt;p&gt;DeployHub will then create an override values file which contains all the specific key value pairs defined at the &lt;em&gt;Endpoint&lt;/em&gt;, &lt;em&gt;Environment&lt;/em&gt;, &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt; in this order of precedence. For example, if the same key value pairs are defined at the &lt;em&gt;Endpoints&lt;/em&gt; as well as the &lt;em&gt;Application&lt;/em&gt;, the &lt;em&gt;Endpoint&lt;/em&gt; key values are used.&lt;/p&gt;
+&lt;p&gt;The override values file passes the Key value definitions Helm &amp;lsquo;upgrade&amp;rsquo; command.  This process allows a single Helm chart to be reused across all deployments, supporting the needed key value pairs for each deployment.&lt;/p&gt;
+&lt;p&gt;If you would like to create a hermetic Helm Chart stored in the DeployHub database, use the following key value:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;helmcapture&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;Y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This must be defined at any level, i.e., &lt;em&gt;Endpoint&lt;/em&gt;, &lt;em&gt;Environment&lt;/em&gt;, &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;connecting-a-deployhub-_endpoint_-to-your-kubernetes-cluster-through-helm&#34;&gt;Connecting a DeployHub &lt;em&gt;Endpoint&lt;/em&gt; to your Kubernetes Cluster through Helm&lt;/h2&gt;
+&lt;p&gt;DeployHub&amp;rsquo; deployment engine comes pre-installed with Helm.  For this reason you should use the deployment engine as the &amp;ldquo;localhost&amp;rdquo; &lt;em&gt;Endpoint&lt;/em&gt; for your deployments.  This Helm install on the &amp;ldquo;localhost&amp;rdquo; &lt;em&gt;Endpoint&lt;/em&gt; needs to know how to connect to your Kubernetes Cluster.&lt;/p&gt;
+&lt;p&gt;Mount your &amp;ldquo;.kube/config&amp;rdquo; file to the DeployHub deployment engine Docker container to provide the connection.  The additional parameter to the docker run command for the DeployHub container exposes the Kubernetes config file to the Helm install in DeployHub.  The following is an example of the additional parameter:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-v ~/.kube:/home/omreleng/.kube:Z
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For more information on starting the DeployHub Container see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/installation-and-support/0-saas-and-reverse-proxy/&#34;&gt;SaaS Sign-up and Reverse Proxy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/installation-and-support/0-on-premise-installation-for-team/&#34;&gt;DeployHub On-Premise Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/installation-and-support/0-on-premise-installation-for-pro/&#34;&gt;DeployHub Pro On-Prem Installation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;connection-to-a-cloud-kubernetes-cluster&#34;&gt;Connection to a Cloud Kubernetes Cluster&lt;/h3&gt;
+&lt;p&gt;In order to connect to Kubernetes cluster running on a cloud provider, an authentication between DeployHub and the cloud provider must be made.  Each cloud provider has a different set of parameters used to authenticate. Once authenticated, DeployHub will execute Helm in the same across all the cloud providers enabling reuse of the Helm Charts without the need to update them.&lt;/p&gt;
+&lt;h4 id=&#34;connecting-to-a-google-kubernetes-cluster&#34;&gt;Connecting to a Google Kubernetes Cluster&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Key&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;gcloud.compute.zone&lt;/td&gt;
+&lt;td&gt;compute zone for the cluster&lt;/td&gt;
+&lt;td&gt;gcloud config set compute/zone &lt;zone&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;gcloud.container.cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;td&gt;gcloud config set container/cluster and gcloud container clusters get-credentials &lt;cluster&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;gcloud.core.account&lt;/td&gt;
+&lt;td&gt;account name&lt;/td&gt;
+&lt;td&gt;gcloud config set core/account &lt;account&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;gcloud.core.disable_usage_reporting&lt;/td&gt;
+&lt;td&gt;disable reporting&lt;/td&gt;
+&lt;td&gt;gcloud config set core/disable_usage_reporting &amp;lt;disable_usage_reporting&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;gcloud.core.project&lt;/td&gt;
+&lt;td&gt;project name&lt;/td&gt;
+&lt;td&gt;gcloud config set core/project &lt;project&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;gcloud.oauth.account&lt;/td&gt;
+&lt;td&gt;service account name&lt;/td&gt;
+&lt;td&gt;gcloud auth activate-service-account &lt;account&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;gcloud.oauth.keyfile&lt;/td&gt;
+&lt;td&gt;key file for service account&lt;/td&gt;
+&lt;td&gt;gcloud auth activate-service-account &amp;ndash;key-file=&lt;keyfile&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;connecting-to-a-amazon-kubernetes-cluster&#34;&gt;Connecting to a Amazon Kubernetes Cluster&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Key&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;eks.aws_access_key_id&lt;/td&gt;
+&lt;td&gt;access key id&lt;/td&gt;
+&lt;td&gt;aws &amp;ndash;profile default configure set aws_access_key_id  &amp;lt;key_id&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eks.aws_secret_access_key&lt;/td&gt;
+&lt;td&gt;secret key&lt;/td&gt;
+&lt;td&gt;aws &amp;ndash;profile default configure set aws_secret_access_key &amp;lt;access_key&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eks.region&lt;/td&gt;
+&lt;td&gt;region the cluster is running in&lt;/td&gt;
+&lt;td&gt;aws eks &amp;ndash;region &lt;region&gt; update-kubeconfig &amp;ndash;name &lt;cluster&gt; &lt;optional&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eks.cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;td&gt;aws eks &amp;ndash;region &lt;region&gt; update-kubeconfig &amp;ndash;name &lt;cluster&gt; &lt;optional&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eks.optional&lt;/td&gt;
+&lt;td&gt;additional options&lt;/td&gt;
+&lt;td&gt;aws eks &amp;ndash;region &lt;region&gt; update-kubeconfig &amp;ndash;name &lt;cluster&gt; &lt;optional&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;connecting-to-a-azure-kubernetes-cluster&#34;&gt;Connecting to a Azure Kubernetes Cluster&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Key&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;aks.serviceprincipal&lt;/td&gt;
+&lt;td&gt;service principal&lt;/td&gt;
+&lt;td&gt;az login &amp;ndash;service-principal -u &lt;serviceprincipal&gt; -p &lt;certificate&gt; &amp;ndash;tenant &lt;tenant&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;aks.certificate&lt;/td&gt;
+&lt;td&gt;certificate for the service principal&lt;/td&gt;
+&lt;td&gt;az login &amp;ndash;service-principal -u &lt;serviceprincipal&gt; -p &lt;certificate&gt; &amp;ndash;tenant &lt;tenant&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;aks.tenant&lt;/td&gt;
+&lt;td&gt;tenant for the service principal&lt;/td&gt;
+&lt;td&gt;az login &amp;ndash;service-principal -u &lt;serviceprincipal&gt; -p &lt;certificate&gt; &amp;ndash;tenant &lt;tenant&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;aks.resourcegroup&lt;/td&gt;
+&lt;td&gt;resource group for the cluster&lt;/td&gt;
+&lt;td&gt;az aks get-credentials &amp;ndash;resource-group &lt;resourcegroup&gt; &amp;ndash;name &lt;cluster&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;aks.cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;td&gt;az aks get-credentials &amp;ndash;resource-group &lt;resourcegroup&gt; &amp;ndash;name &lt;cluster&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;using-an-existing-context&#34;&gt;Using an existing context&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Key&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;kubectl_context&lt;/td&gt;
+&lt;td&gt;context name&lt;/td&gt;
+&lt;td&gt;kubectl config use-context &amp;lt;kubectl_context&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;additional-helm-keyvalues&#34;&gt;Additional Helm Key/Values&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Key&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;helm_exe&lt;/td&gt;
+&lt;td&gt;use helm2 for Helm V2 executable. Default is Helm V3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;helmrepo.url&lt;/td&gt;
+&lt;td&gt;url to the chart repo (from Component Definition)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;helmrepo.username or helmrepouser&lt;/td&gt;
+&lt;td&gt;user name used to login into the repo with&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;helmrepo.password or helmrepopass&lt;/td&gt;
+&lt;td&gt;password user to login into the repo with&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;chart&lt;/td&gt;
+&lt;td&gt;chart to use (from Component Definition)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;chartversion&lt;/td&gt;
+&lt;td&gt;version of the chart.  Default latest (from Component Definition)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;chartnamespace&lt;/td&gt;
+&lt;td&gt;namespace to use for the deployment (from Component Definition)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;helmopts&lt;/td&gt;
+&lt;td&gt;additional options for the helm upgrade&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;helmtemplateopts&lt;/td&gt;
+&lt;td&gt;additional options for the helm template&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;helmcapture&lt;/td&gt;
+&lt;td&gt;y/n for uploading a hermetic version of the chart and values to DeployHub stored by deploy log #&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;helm-and-_custom-actions_&#34;&gt;Helm and &lt;em&gt;Custom Actions&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Helm is called as a DeployHub &lt;a href=&#34;/userguide/customizations/2-define-your-actions/&#34;&gt;&lt;em&gt;Custom Action&lt;/em&gt;&lt;/a&gt;. To use Helm, you will need to import two Helm files as DeployHub &lt;em&gt;Procedures&lt;/em&gt; and define them to your &lt;em&gt;Custom Action&lt;/em&gt;. This Helm &lt;em&gt;Custom Action&lt;/em&gt; can then be assigned to your Container &lt;em&gt;Components&lt;/em&gt;. See &lt;a href=&#34;/userguide/customizations/2-define-your-functions-and-procedures/&#34;&gt;&lt;em&gt;Procedures and Functions&lt;/em&gt;&lt;/a&gt; and  &lt;a href=&#34;/userguide/customizations/2-define-your-actions/&#34;&gt;Customize Actions&lt;/a&gt; to learn more. The following steps will create your Helm &lt;em&gt;Custom Action&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;step-1---download-and-import-the-helm-scripts-as-_procedures_&#34;&gt;Step 1 - Download and Import the Helm scripts as &lt;em&gt;Procedures&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;Download the the most current DeployHub Helm Procedures from the &lt;a href=&#34;https://github.com/DeployHub/DeployHub/blob/master/procedures/&#34;&gt;DeployHub Git Repo&lt;/a&gt;. There will be two:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;WriteEnv2Toml.re&lt;/strong&gt;:  This &lt;em&gt;Procedure&lt;/em&gt; takes all the attributes from DeployHub &lt;em&gt;Environments&lt;/em&gt;, &lt;em&gt;Applications&lt;/em&gt;, &lt;em&gt;Endpoints&lt;/em&gt; and &lt;em&gt;Components&lt;/em&gt; and writes them to a file readable by the Helm &lt;em&gt;Procedure.&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;HelmUpgrade.re&lt;/strong&gt; – This &lt;em&gt;Procedure&lt;/em&gt; performs a Helm upgrade/install of the Helm Chart.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;step-2---create-your-_procedures_&#34;&gt;Step 2 - Create your &lt;em&gt;Procedures&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;Once downloaded, you will need to Import the scripts into DeployHub as &lt;em&gt;Procedures&lt;/em&gt;. To import these &lt;em&gt;Procedures&lt;/em&gt; navigate to the &lt;em&gt;Func/Procs&lt;/em&gt; Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the &lt;em&gt;Functions and Procedures&lt;/em&gt; List View. From the &lt;em&gt;Functions and Procedures&lt;/em&gt; List View select the &lt;strong&gt;Import&lt;/strong&gt; option. The Import will bring you to your operating system &amp;ldquo;file open&amp;rdquo; dialog box for selecting the WriteEnv2Toml.re and HelmUpgrade.re files.&lt;/p&gt;
+&lt;p&gt;Next, select your &amp;ldquo;Global,&amp;rdquo; or highest level, &lt;em&gt;Domain&lt;/em&gt; and upload the &lt;em&gt;Procedure&lt;/em&gt; into DeployHub. If you select a lower level &lt;em&gt;Subdomain&lt;/em&gt; you will restrict access.  By defining it to your highest level &lt;em&gt;Domain&lt;/em&gt;, all &lt;em&gt;Users&lt;/em&gt; will be able to see the &lt;em&gt;Procedures&lt;/em&gt;. Once you have both imported, you are now ready to create your &lt;em&gt;Action&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;step-3---create-your-_action_-for-your-helm-_procedures_&#34;&gt;Step 3 - Create your &lt;em&gt;Action&lt;/em&gt; for Your Helm &lt;em&gt;Procedures&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;Once you have imported your WriteEnv2Toml.re and HelmUpgrade.re files as &lt;em&gt;Procedures&lt;/em&gt;, you can define your &lt;em&gt;Action&lt;/em&gt;. Navigate to the &lt;em&gt;Actions&lt;/em&gt; list view from the &lt;em&gt;Actions&lt;/em&gt; menu option on the left hand side of the DeployHub Main Menu panel.&lt;/p&gt;
+&lt;p&gt;Use the +Add option to create a new &lt;em&gt;Action&lt;/em&gt; for you &lt;em&gt;Procedure&lt;/em&gt;. In the &amp;ldquo;Full Domain&amp;rdquo; field select your &amp;ldquo;Global&amp;rdquo; &lt;em&gt;Domain&lt;/em&gt;. If you select a lower level &lt;em&gt;Subdomain&lt;/em&gt; you will restrict access to this &lt;em&gt;Custom Action&lt;/em&gt;.  By defining it to your highest level &lt;em&gt;Domain&lt;/em&gt;, all &lt;em&gt;Users&lt;/em&gt; will be able to execute the process regardless of their &lt;em&gt;SubDomain&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Name the new &lt;em&gt;Action&lt;/em&gt; &lt;strong&gt;HelmChart&lt;/strong&gt; (no spaces).&lt;/p&gt;
+&lt;p&gt;Now we are going to customize this &lt;em&gt;Action&lt;/em&gt;. On the right hand side, you will see a list of &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; you can choose from.  Navigate to your &lt;em&gt;Domain&lt;/em&gt; to find the WriteEnv2Toml.re and HelmUpgrade.re imported &lt;em&gt;Procedures&lt;/em&gt;.  Drag them onto the area under &amp;ldquo;Start&amp;rdquo;. The order should be &lt;em&gt;WriteEnv2Toml&lt;/em&gt;, &lt;em&gt;HelmUpgrade&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;No Parameter fields are required for &lt;em&gt;WriteEnv2File&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;When you drag the HelmUpgrade &lt;em&gt;Procedure&lt;/em&gt; onto the area under &amp;ldquo;Start&amp;rdquo; a pop-up dialog box will open for you to complete the following parameters:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Title&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Not Required&lt;/td&gt;
+&lt;td&gt;Name of the step in your deployment workflow.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Summary&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Not Required&lt;/td&gt;
+&lt;td&gt;Enter a summary of this step.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;RspFile&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$RspFile&lt;/td&gt;
+&lt;td&gt;The results from the WriteEnv2Toml.re Procedure&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Chart&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$(Chart)&lt;/td&gt;
+&lt;td&gt;The Helm Chart to be used during the deployment&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Release Name&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$(component.name)&lt;/td&gt;
+&lt;td&gt;The name of the release&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;At this point the Action is ready to be used by anyone with access (based on Domain and security options). Each &lt;em&gt;Component&lt;/em&gt; that uses the &lt;em&gt;Action&lt;/em&gt; will need to define specific values. Because this new &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Component&lt;/em&gt; variables are defined at the &lt;em&gt;Action&lt;/em&gt; level.&lt;/p&gt;
+&lt;h2 id=&#34;assign-the-helm-chart-action-to-a-component&#34;&gt;Assign the Helm Chart Action to a Component&lt;/h2&gt;
+&lt;p&gt;Create your new &lt;em&gt;Component&lt;/em&gt; from the &lt;em&gt;Component&lt;/em&gt; Dashboard. See &lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Defining &lt;em&gt;Components&lt;/em&gt;&lt;/a&gt;.  For each container &lt;em&gt;Component&lt;/em&gt; you will need to define the variable values. Values are specified when you create a new container &lt;em&gt;Component.&lt;/em&gt; Values will override those defined at the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Environment&lt;/em&gt; level. The values from DeployHub will be passed along to Helm&amp;rsquo;s values.yml file at execution time. For more information on defining your container &lt;em&gt;Component&lt;/em&gt; see &lt;a href=&#34;/userguide/publishing-components/2-define-components/#container-specific-data-definition&#34;&gt;Container Specific Data Definition&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;storing-and-retrieving-a-hermetic-helm-chart&#34;&gt;Storing and Retrieving a Hermetic Helm Chart&lt;/h2&gt;
+&lt;p&gt;In order to create an &amp;lsquo;airtight&amp;rsquo; Helm deployment, DeployHub takes the generated Helm overrides file created during a Helm deployment and executes the Helm template command to find the container images that were referenced. All container image digests are captured and stored in the DeployHub database along with the Helm Chart and all key values used in a specific deployment.  To turn on this option, the following key value pair must be defined at  any level, i.e., &lt;em&gt;Endpoint&lt;/em&gt;, &lt;em&gt;Environment&lt;/em&gt;, &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;helmcapture&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;Y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once stored in the DeployHub database, you can retrieve the hermetic Helm Chart, key value pairs and all container digests to repeat the exact deployment utilizing Helm manually.&lt;/p&gt;
+&lt;h3 id=&#34;retrieving-and-running-the-helm-chart-manually&#34;&gt;Retrieving and Running the Helm Chart Manually&lt;/h3&gt;
+&lt;p&gt;To re-execute a Helm deployment manually, you will retrieve all captured data in a zip file (Helm Chart, all container digest, and key values ). To retrieve the data and generate a zip file, execute the following curl command if using the SaaS:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://console.deployhub.com/dmadminweb/API/helmchart/&amp;lt;DeploymentNumber&amp;gt;?format=zip&amp;#34;&lt;/span&gt;-o Helmchart.zip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;where:
+Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.&lt;/p&gt;
+&lt;p&gt;Helmchart.zip is the name of the zip file you want to create.&lt;/p&gt;
+&lt;p&gt;If you are using an on premise version use the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;http://&amp;lt;myDeployHub&amp;gt;/dmadminweb/API/helmchart/&amp;lt;DeploymentNumber&amp;gt;?format=zip&amp;#34;&lt;/span&gt;-o Helmchart.zip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;where:
+myDeployHub is your on premise DeployHub Server.&lt;/p&gt;
+&lt;p&gt;Deployment Number is the Number of the Deployment displayed in the DeployHub dashboard for the Application.&lt;/p&gt;
+&lt;p&gt;Helmchart.zip is the name of the zip file you want to create.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: HipChat</title>
+      <link>/userguide/integrations/hipchat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/hipchat/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;hipchat-details&#34;&gt;HipChat Details&lt;/h2&gt;
+&lt;p&gt;DeployHub allows you to send notifications using &lt;em&gt;Notifiers&lt;/em&gt; via HipChat Groups, Topics, or Room features. Notifications are defined to &lt;em&gt;Components&lt;/em&gt; and &lt;em&gt;Applications&lt;/em&gt; and inform the recipient(s) of the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Applications&lt;/em&gt; deployment&amp;rsquo;s success or failure. To define your &lt;em&gt;Notifier&lt;/em&gt; see &lt;a href=&#34;/userguide/customizations/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;HTML&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;If checked, will send email in HTML format.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;HTML Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;If checked will indicate the value can be overridden. This is used for &amp;lsquo;scripted&amp;rsquo; notifications where the action editor includes a &amp;rsquo;notify&amp;rsquo; action.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Logfile&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The location of the log results between DeployHub and HipChat.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Logfile Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The Logfile can be hidden in the DeployHub database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Logfile Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The Logfile location can be changed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The url for the group chat, topic chat, or chat room.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Webhook Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The Webhook can be hidden in the DeployHub database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Webhook Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The Webhook can be changed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Assign your HipChat &lt;em&gt;Notifier&lt;/em&gt; to an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; from the Details section of the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; Dashboard. For more information see:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Define Your &lt;em&gt;Component&lt;/em&gt;&lt;/a&gt;.
+&lt;a href=&#34;/userguide/packaging-applications/2-defining-applications/&#34;&gt;Defining Your &lt;em&gt;Application&lt;/em&gt; Baseline&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Jira, Bugzilla and GitHub Issues</title>
+      <link>/userguide/integrations/jira-bugzilla-and-git-issues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/jira-bugzilla-and-git-issues/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;deployhub-pro-change-requests&#34;&gt;DeployHub Pro Change Requests&lt;/h3&gt;
+&lt;p&gt;The integration of Change Request systems are supported in DeployHub through the use of a &lt;em&gt;Data Source&lt;/em&gt;. To integrate Change Request you must first define a Change Request &lt;em&gt;Data Source&lt;/em&gt; from the &lt;em&gt;Data Source&lt;/em&gt; Dashboard. Once created, you will be able to select the &lt;em&gt;Data Source&lt;/em&gt; from the General Details &amp;ldquo;Change Request &lt;em&gt;Data Source&lt;/em&gt;&amp;rdquo; field of your &lt;em&gt;Application&lt;/em&gt; and/or &lt;em&gt;Component&lt;/em&gt;. When you have a Change Request &lt;em&gt;Data Source&lt;/em&gt; defined, you can add issue tickets using the Change Request section of the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; Dashboards.&lt;/p&gt;
+&lt;h4 id=&#34;creating-change-request-_data-sources_&#34;&gt;Creating Change Request &lt;em&gt;Data Sources&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;Jira, Bugzilla and GitHub are represented in DeployHub as &lt;em&gt;Data Source&lt;/em&gt; Types. Because a &lt;em&gt;Data Source&lt;/em&gt; is associated to a specific &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt; you will need to map a unique &lt;em&gt;Data Source&lt;/em&gt; for each system&amp;rsquo;s repository (Organization, Repository, Product, Project Key) where you are tracking the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;.  In a traditional release process, a &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Application&amp;rsquo;s&lt;/em&gt; repository may be the same.  Because microservices are often managed in their own repositories, you may need to define a &lt;em&gt;Data Source&lt;/em&gt; for each of your microservice &lt;em&gt;Components&lt;/em&gt;. For more on creating a Change Request &lt;em&gt;Data Source&lt;/em&gt; see &lt;a href=&#34;/userguide/profeatures/2-data-sources/&#34;&gt;Managing Data Sources&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Change Request that are tracked at the &lt;em&gt;Component&lt;/em&gt; level are rolled up to the &lt;em&gt;Application&lt;/em&gt; level.  All change request associated to &lt;em&gt;Components&lt;/em&gt; and &lt;em&gt;Applications&lt;/em&gt; are rolled up to the &lt;em&gt;Release&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Once connected, the Change Request Section for the &lt;em&gt;Component&lt;/em&gt; and the &lt;em&gt;Application&lt;/em&gt; shows all Change Request manually added. If a &lt;em&gt;Data Source&lt;/em&gt; has not been assigned, you will see a message &amp;ldquo;No Change Request Data Source has been setup.&amp;rdquo;  Once setup, you can use the &amp;lsquo;+Add&amp;rsquo; option to associate specific change request to the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;. Selecting +Add will create a new row in the table with a drop down list box.  This drop down will contain all change request retrieved by the &lt;em&gt;Data Source&lt;/em&gt;. Select the Change Request and use the Save option to commit the new row to the table.  Use the Edit option to switch a Change Request, or Delete to remove a Change Request.&lt;/p&gt;
+&lt;p&gt;For more information on using the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt; Dashboards for adding Change Request see &lt;a href=&#34;/userguide/publishing-components/&#34;&gt;Publishing &lt;em&gt;Components&lt;/em&gt;&lt;/a&gt; and &lt;a href=&#34;/userguide/packaging-applications/&#34;&gt;Packaging &lt;em&gt;Applications&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: LDAP and Active Directory</title>
+      <link>/userguide/integrations/ldap-and-active-directory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/ldap-and-active-directory/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;using-a-ldap-or-active-directory-_data-source_-for-single-sign-on&#34;&gt;Using a LDAP or Active Directory &lt;em&gt;Data Source&lt;/em&gt; for Single Sign-on&lt;/h2&gt;
+&lt;p&gt;DeployHub allows you to use LDAP or Active Directory to manage your &lt;em&gt;User&lt;/em&gt; logins.  Create an LDAP &lt;em&gt;Data Source&lt;/em&gt; to access an LDAP database and use the information stored to gain access to DeployHub. It also populates the &lt;em&gt;Users&lt;/em&gt; General tab with Real Name and Email, which it gets from the LDAP database. When you define a &lt;em&gt;User&lt;/em&gt;, you associate the LDAP authentication method. At login, DeployHub checks the User&amp;rsquo;s authentication method to determine if LDAP or Active Directory should be used.&lt;/p&gt;
+&lt;h3 id=&#34;creating-a-ldap-or-active-directory-_data-source_&#34;&gt;Creating a LDAP or Active Directory &lt;em&gt;Data Source&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;To support LDAP integration, you must create an LDAP  &lt;em&gt;Credential&lt;/em&gt; whose Username value is a user id (uid) followed by the necessary Ldap domain components (dc), all comma delimited (i.e., uid=mycompany,dc=example,dc=com). The &lt;em&gt;Credential&amp;rsquo;s&lt;/em&gt; Password field contains the password for the user in the LDAP directory. For more on creating &lt;em&gt;Credentials&lt;/em&gt; see &lt;a href=&#34;/userguide/first-steps/2-define-your-credentials/&#34;&gt;Create Your Credentials&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Data Source has specific parameters used to validate a User:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;LDAP Server&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;I.P. address or hostname of the LDAP Server. The address of the LDAP server, which can include the port (i.e., ldap://ldap.forumsys.com:389). If the port isn&amp;rsquo;t included, it can be put separately into the Port Number parameter.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;LDAP Server Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box to indicate if the LDAP Server should be hidden in the database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;LDAP Server Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the LDAP Server can be changed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Active Directory Domain&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Enter the name of the Active Directory Domain within the LDAP Server.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Active Directory Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box to indicate if the Active Directory Domain Name should be hidden in the database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Active Directory Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the Active Directory Domain Name can be changed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Port Number&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The port on which the LDAP server is listening.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Port Number Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box to indicate if the Port Number should be hidden in the database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Port Number Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the Port Number can be changed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Search Base&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The search base defines the starting point for the search in the LDAP directory tree.Enter the search base (the distinguished name of the search base object) that defines the location in the directory from which the LDAP search begins (i.e., dc=example,dc=com).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Search Base Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box to indicate if the Search Base should be hidden in the database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Search Base Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the Search Base can be changed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Search Filter&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Always (uid=$USERNAME) (include parenthesis), as this locates the user within the LDAP database using the Username that was entered into the DeployHub Credential. These filters are used for selecting which objects are returned when browsing for the search base. They identify which objects in your directory are examined, for example email address attributes or user attributes.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Search Filter Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box to indicate if the Search Filter should be hidden in the database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Search Filter Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the Search Filter can be changed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: ODBC Connection</title>
+      <link>/userguide/integrations/odbc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/odbc/</guid>
+      <description>
+        
+        
+        &lt;p&gt;You can use and ODBC connection to retrieve data from an external database. This is done by defining an ODBC &lt;em&gt;Data Source&lt;/em&gt; and calling it from any &lt;em&gt;Action&lt;/em&gt; written in &lt;a href=&#34;/userguide/dmscript/&#34;&gt;DMScript&lt;/a&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Data Source Name (DSN)&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Enter the Data Source Name (DSN) which is the logical name that is used by Open Database Connectivity (ODBC) to refer to the driver and other information that is required to access data from the data source.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;DSN Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box to indicate the DSN should be hidden in the database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;DSN Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the DSN can be changed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: OpenMake Meister Binary Repository</title>
+      <link>/userguide/integrations/openmake-meister/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/openmake-meister/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;openmake-meister-_repository_-details&#34;&gt;OpenMake Meister &lt;em&gt;Repository&lt;/em&gt; Details&lt;/h2&gt;
+&lt;p&gt;If you automate your builds (compile/link) using OpenMake Meister, DeployHub pulls binaries from the Meister binary repository that your &lt;em&gt;Component&lt;/em&gt; uses. Following is a list of the details for connecting a Meister repository to DeployHub:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Buildnumber&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The identifier of the Build that resides in the Meister &lt;em&gt;Repository&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Buildnumber Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box to indicate if the Build Number should be hidden in the database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Buildnumber Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the Build Number can be replaced at the &lt;em&gt;Component&lt;/em&gt; definition.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Filepath&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The fully qualified directory name to the files in the OpenMake Meister repository that will need to be deployed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Filepath Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box to indicate if the Filepath name should be hidden in the database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Filepath Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the Filepath can be replaced at the &lt;em&gt;Component&lt;/em&gt; definition.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Pattern&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;This defines the file types you want to pull from the &lt;em&gt;Repository&lt;/em&gt;, such as *.exe, *.dll, *.war.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Pattern Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box to indicate if the Pattern should be hidden in the database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Pattern Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the Pattern can be replaced at the &lt;em&gt;Component&lt;/em&gt; definition.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Recursive&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box in order to cause the &lt;em&gt;Repository&lt;/em&gt; to return all of the files from directories below those designated by Filepath.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Recursive Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the Recursive option can be replaced at the &lt;em&gt;Component&lt;/em&gt; definition.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: OSV.Dev CVE Integration</title>
+      <link>/userguide/integrations/osvdev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/osvdev/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;osv&#34;&gt;OSV&lt;/h2&gt;
+&lt;p&gt;DeployHub uses &lt;a href=&#34;https://osv.dev/&#34;&gt;OSV.dev&lt;/a&gt; to cross reference packages for gathering CVE data. Every 30 minutes DeployHub performs an OSV.dev look up for every package listed in every SBOM to determine if any vulnerabilities exist. The look-up is performed using the OSV public facing APIs. SBOM generation is required to perform this scan.&lt;/p&gt;
+&lt;p&gt;The CVE results are displayed at two levels, the &lt;em&gt;Component Version&lt;/em&gt; and the &lt;em&gt;Application Version&lt;/em&gt;. If you have included SBOM scanning as part of your DevOps pipeline, you will pass the name of the SBOM to DeployHub using the &lt;a href=&#34;/userguide/integrations/ci-cd_integrations/&#34;&gt;Ortelius CLI&lt;/a&gt;. DeployHub supports SPDX and CycloneDX SBOM formats. If you have not added SBOM&amp;rsquo;s as part of your DevOps Pipeline, you can include it through the Ortelius CLI process. The Ortelius CLI uses &lt;a href=&#34;/userguide/integrations/spdx-syft-cyclonedx/&#34;&gt;Syft&lt;/a&gt; to generate the SBOM.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: DeployHub must have access to OSV.Dev in order to continuously gather the CVE data.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;viewing-component-cve-data&#34;&gt;Viewing Component CVE Data&lt;/h3&gt;
+&lt;p&gt;CVE data is associated to a particular &lt;em&gt;Component Version&lt;/em&gt; and can be seen by going to the Component Detail View. DeployHub gathers the CVE information every 30 minutes for all Components. For this reason it is possible for new CVEs to appear. If a new CVE is found by OSV.dev, DeployHub automatically updates your Component&amp;rsquo;s CVEs.&lt;/p&gt;
+&lt;h3 id=&#34;viewing-application-level-cve-data&#34;&gt;Viewing Application Level CVE Data&lt;/h3&gt;
+&lt;p&gt;DeployHub aggregates lower-level &lt;em&gt;Component&lt;/em&gt; data up to all consuming applications. When you view the CVEs at the &lt;em&gt;Application Version&lt;/em&gt; level, you are seeing a combination of all CVEs aggregated from the &lt;em&gt;Components&lt;/em&gt; which your &lt;em&gt;Application&lt;/em&gt; depends. Your &lt;em&gt;Applications&lt;/em&gt; CVE data can change over time based on the changes at the &lt;em&gt;Component Version&lt;/em&gt; level.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: SonarQube Code Quality and Security Solution Integration</title>
+      <link>/userguide/integrations/sonarqube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/sonarqube/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;sonarqube&#34;&gt;SonarQube&lt;/h2&gt;
+&lt;p&gt;DeployHub can associate SonarQube Project Status, Bugs, Code Smells, and Violations metrics to your &lt;em&gt;Component Version&lt;/em&gt;.  Associating these metrics enable compliance scoring for &lt;em&gt;Application Versions&lt;/em&gt; since the metrics are rolled-up from the &lt;em&gt;Component Versions&lt;/em&gt; to the &lt;em&gt;Application Version&lt;/em&gt;.  See the &lt;a href=&#34;/compliance&#34;&gt;Compliance Scorecard&lt;/a&gt; for details and screenshots of the Application Compliance Scorecard Report.&lt;/p&gt;
+&lt;h3 id=&#34;getting-metrics-from-sonarqube-to-deployhub&#34;&gt;Getting metrics from SonarQube to DeployHub&lt;/h3&gt;
+&lt;p&gt;The DeployHub CI/CD command line program is used to associate Sonar metrics to the DeployHub &lt;em&gt;Component Version&lt;/em&gt;.  See &lt;a href=&#34;https://docs.deployhub.com/userguide/installation-and-support/0-commandlineinterface/&#34;&gt;CLI Installation&lt;/a&gt; for instructions on basic setup in your CI/CD pipeline.&lt;/p&gt;
+&lt;p&gt;Restful API calls are needed in your pipeline to grab the metrics from Sonar.  Shell commands using curl and jq allow us to parse the data returned from Sonar and format it for storage with the &lt;em&gt;Component Version&lt;/em&gt;.  The &lt;code&gt;component.toml&lt;/code&gt; file used by the DeployHub CLI is appended to with each new metric and upload to DeployHub at the end of the pipeline.  See &lt;a href=&#34;https://docs.deployhub.com/userguide/integrations/ci-cd_integrations/&#34;&gt;CI-CD Intergration&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Your codebase must be scanned with SonarQube and the results uploaded to the Sonar Server.  Sonar RestAPI calls will be made to fetch the metrics from the stored scanned results.  Also, a loop to recheck maybe needed since there can be delay between the scan and publishing the results.  See &lt;em&gt;SonarQube Project Status&lt;/em&gt; below for an example that includes the loop.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;sonarqube-project-status&#34;&gt;SonarQube Project Status&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;SONAR_ID&lt;/td&gt;
+&lt;td&gt;Userid used to login to SonarQube&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SONAR_PASS&lt;/td&gt;
+&lt;td&gt;Password for the userid&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PROJECTKEY&lt;/td&gt;
+&lt;td&gt;Name of the project in SonarQube&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;COMPONENT_TOML&lt;/td&gt;
+&lt;td&gt;The DeployHub Component TOML file that defined the &lt;em&gt;Component Version&lt;/em&gt; to DeployHub.  Typically called &lt;code&gt;component.toml&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Check&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;$(&lt;/span&gt;curl -s -u &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_ID&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;:&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_PASS&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt; http://sonarqube.example.com/api/qualitygates/project_status?projectKey&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$PROJECTKEY&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; jq -r &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;.projectStatus.status&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;max_retry&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;30&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;counter&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;until&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$Check&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;OK&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$Check&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ERROR&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$Check&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;==&lt;/span&gt;  &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;WARN&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  sleep &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[[&lt;/span&gt; counter -eq &lt;span style=&#34;color:#000&#34;&gt;$max_retry&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]]&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Failed! Check you sonnar-server&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;exit&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Retrying. Try #&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$counter&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;((&lt;/span&gt;counter++&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;Check&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;$(&lt;/span&gt;curl -s -u &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_ID&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;:&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_PASS&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt; http://sonarqube.example.com/api/qualitygates/project_status?projectKey&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$PROJECTKEY&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; jq -r &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;.projectStatus.status&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;    SonarProjectStatus = &amp;#34;$Check&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;COMPONENT_TOML&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;sonarqube-bugs&#34;&gt;SonarQube Bugs&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;SONAR_ID&lt;/td&gt;
+&lt;td&gt;Userid used to login to SonarQube&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SONAR_PASS&lt;/td&gt;
+&lt;td&gt;Password for the userid&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;COMPONENT_NAME&lt;/td&gt;
+&lt;td&gt;Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;COMPONENT_TOML&lt;/td&gt;
+&lt;td&gt;The DeployHub Component TOML file that defined the &lt;em&gt;Component Version&lt;/em&gt; to DeployHub.  Typically called &lt;code&gt;component.toml&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_BUGS&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;$(&lt;/span&gt;curl -k -s -u &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_ID&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;:&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_PASS&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;https://sonarqube.example.com/api/measures/component?component=${COMPONENT_NAME}&amp;amp;metricKeys=complexity,bugs,new_technical_debt,code_smells,branch_coverage,violations&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; jq -r &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;.component.measures | .[] |select(.metric == &amp;#34;bugs&amp;#34;) | (.value)&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;    SonarBugs = &amp;#34;%{SONAR_BUGS}&amp;#34;&amp;#39;&lt;/span&gt;  &amp;gt;&amp;gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;COMPONENT_TOML&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;sonarqube-code-smells&#34;&gt;SonarQube Code Smells&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;SONAR_ID&lt;/td&gt;
+&lt;td&gt;Userid used to login to SonarQube&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SONAR_PASS&lt;/td&gt;
+&lt;td&gt;Password for the userid&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;COMPONENT_NAME&lt;/td&gt;
+&lt;td&gt;Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;COMPONENT_TOML&lt;/td&gt;
+&lt;td&gt;The DeployHub Component TOML file that defined the &lt;em&gt;Component Version&lt;/em&gt; to DeployHub.  Typically called &lt;code&gt;component.toml&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_CODESMELLS&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;$(&lt;/span&gt;curl -k -s -u &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_ID&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;:&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_PASS&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;https://sonarqube.example.com/api/measures/component?component=${COMPONENT_NAME}&amp;amp;metricKeys=complexity,bugs,new_technical_debt,code_smells,branch_coverage,violations&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; jq -r &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;.component.measures | .[] |select(.metric == &amp;#34;code_smells&amp;#34;) | (.value)&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;    SonarCodeSmells = &amp;#34;%{SONAR_CODESMELLS}&amp;#34;&amp;#39;&lt;/span&gt;  &amp;gt;&amp;gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;COMPONENT_TOML&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;sonarqube-violations&#34;&gt;SonarQube Violations&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;SONAR_ID&lt;/td&gt;
+&lt;td&gt;Userid used to login to SonarQube&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SONAR_PASS&lt;/td&gt;
+&lt;td&gt;Password for the userid&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;COMPONENT_NAME&lt;/td&gt;
+&lt;td&gt;Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;COMPONENT_TOML&lt;/td&gt;
+&lt;td&gt;The DeployHub Component TOML file that defined the &lt;em&gt;Component Version&lt;/em&gt; to DeployHub.  Typically called &lt;code&gt;component.toml&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_VIOLATIONS&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;$(&lt;/span&gt;curl -k -s -u &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_ID&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;:&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SONAR_PASS&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;https://sonarqube.example.com/api/measures/component?component=${COMPONENT_NAME}&amp;amp;metricKeys=complexity,bugs,new_technical_debt,code_smells,branch_coverage,violations&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; jq -r &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;.component.measures | .[] |select(.metric == &amp;#34;violations&amp;#34;) | (.value)&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;    SonarViolations = &amp;#34;%{SONAR_VIOLATIONS}&amp;#34;&amp;#39;&lt;/span&gt;  &amp;gt;&amp;gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;COMPONENT_TOML&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: SalesForce</title>
+      <link>/userguide/integrations/salesforce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/salesforce/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;using-a-_custom-action_-for-salesforce-deployments&#34;&gt;Using a &lt;em&gt;Custom Action&lt;/em&gt; for SalesForce Deployments&lt;/h2&gt;
+&lt;p&gt;If you are developing your &lt;em&gt;Applications&lt;/em&gt; using SaleForce, this integration will allow you to support SalesForce deployments. By creating this &lt;em&gt;Custom Action&lt;/em&gt; you can replace the DeployHub standard deployment processing engine and instead use a process designed specific to Salesforce including the mapping of DeployHub &lt;em&gt;Environments&lt;/em&gt; to different SalesForce regions such as testing, pre-production, production, where the class and package files can be deployed.&lt;/p&gt;
+&lt;p&gt;The following directions allows you to create a &lt;em&gt;Custom Action&lt;/em&gt; using the pre-written DeployHub &lt;em&gt;Procedures&lt;/em&gt; to support a SaleForce deployment model.  Once you create your SalesForce &lt;em&gt;Custom Action&lt;/em&gt; you assign it to your SalesForce &lt;em&gt;Component&lt;/em&gt; which will override the DeployHub standard deployment engine.&lt;/p&gt;
+&lt;h2 id=&#34;steps-for-creating-your-salesforce-_custom-action_&#34;&gt;Steps for Creating Your SalesForce &lt;em&gt;Custom Action&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;You will need to create a SalesForce &lt;em&gt;Custom Action&lt;/em&gt; that will support your SalesForce deployment . This is done by adding the DeployHub pre-defined &lt;em&gt;Procedures&lt;/em&gt; and then defining them to a &lt;em&gt;Custom Action&lt;/em&gt; that your &lt;em&gt;Component&lt;/em&gt; will use for deployment.  For more details on creating &lt;em&gt;Procedures&lt;/em&gt; and &lt;em&gt;Actions&lt;/em&gt; see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/customizations/2-define-your-actions/&#34;&gt;Customizing Actions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/customizations/2-define-your-functions-and-procedures/&#34;&gt;Procedures and Functions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following steps will take you through the process:&lt;/p&gt;
+&lt;h3 id=&#34;step-1---create-a-salesforce-_repository_&#34;&gt;Step 1 - Create a SalesForce &lt;em&gt;Repository&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;A &lt;em&gt;Repository&lt;/em&gt; of the type &amp;ldquo;File System&amp;rdquo; is used to reference files pulled from Git.  For this reason, you will need to create a DeployHub &amp;ldquo;File System&amp;rdquo; &lt;em&gt;Repository&lt;/em&gt;.  To create this &lt;em&gt;Repository&lt;/em&gt; see &lt;a href=&#34;/userguide/first-steps/2-define-repositories/&#34;&gt;Connect Your Repositories&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;step-2---create-a-salesforce-_credential_&#34;&gt;Step 2 - Create a SalesForce &lt;em&gt;Credential&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;You will need a DeployHub &lt;em&gt;Credential&lt;/em&gt; to login to Salesforce for the deployment step. To create this &lt;em&gt;Credential&lt;/em&gt; see &lt;a href=&#34;/userguide/first-steps/2-define-your-credentials/&#34;&gt;Create Your Credentials&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;step-3---create-a-salesforce-_environment_-and-_endpoint_&#34;&gt;Step 3 - Create a SalesForce &lt;em&gt;Environment&lt;/em&gt; and &lt;em&gt;EndPoint&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;You will need to create an &lt;em&gt;Endpoint&lt;/em&gt; and then an &lt;em&gt;Environment&lt;/em&gt; for your SalesForce deployment. You can create as many &lt;em&gt;Environments&lt;/em&gt; as needed based on your SalesForce Regions. See the &lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;Define Your Endpoints&lt;/a&gt; and &lt;a href=&#34;/userguide/first-steps/2-define-environments/&#34;&gt;Build Your Environments&lt;/a&gt; sections for more information.  The following parameters should be used when defining your &lt;em&gt;Endpoint&lt;/em&gt; and &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;Endpoint&lt;/em&gt; Detail Settings&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Create a new &lt;em&gt;Endpoint&lt;/em&gt; using the following Detail values:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Detail Field&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Endpoint Operating System&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Linux&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Endpoint Type&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Application Server&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Hostname&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;localhost&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Protocol&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;ssh&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Base Directory&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;/tmp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Credentials&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;not required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;Environment&lt;/em&gt; Attributes&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using the Attributes section of the &lt;em&gt;Environment&lt;/em&gt; Dashboard, add the following Attributes. Use the +Add in the Attributes section to add a row to the Attributes table.  You must use Save to commit the row to the table.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variables&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;SalesforceCredential&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Enter the name of the &lt;em&gt;Credential&lt;/em&gt; that contains the Salesforce Userid and Password created in step 2.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ServerURL&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Enter the Salesforce URL for the target deployment.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;SalesforceRepo&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Enter the name of the File System &lt;em&gt;Repository&lt;/em&gt; created in Step 1.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;TestLevel&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Salesforce Test Case Level.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Step 4 - Create Your SaleForce &lt;em&gt;Procedures&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You will import and use pre-defined &lt;em&gt;Procedures&lt;/em&gt; to create your &lt;em&gt;Custom Action&lt;/em&gt;.  Import the most current GitCheckout, RunAnt, SalesforceCredential and SalesforceDeploy &lt;em&gt;Procedures&lt;/em&gt;/&lt;em&gt;Functions&lt;/em&gt; from &lt;a href=&#34;https://github.com/ortelius/ortelius/blob/master/procedures/&#34;&gt;Ortelius Git Repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The following files need to be retrieved:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;GitCheckout.re&lt;/strong&gt; - This &lt;em&gt;Procedure&lt;/em&gt; checks-out the files from your git repository to the deployhub eninge and then checks out the commit, branch or tag specified.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;RunAnt.re&lt;/strong&gt; - This &lt;em&gt;Procedure&lt;/em&gt; runs Ant&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SalesforceCredential.re&lt;/strong&gt; - This &lt;em&gt;Procedure&lt;/em&gt; exposes the credential for the Salesforce Deploy &lt;em&gt;Procedure&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SalesforceDeploy.re&lt;/strong&gt; - This Procedure executes Ant against a dynamically created build.xml file to upload the classes to Salesforce.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once downloaded, you will need to Import the scripts into DeployHub as &lt;em&gt;Procedures&lt;/em&gt;. To import these &lt;em&gt;Procedures&lt;/em&gt; navigate to the &lt;em&gt;Func/Procs&lt;/em&gt; Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the &lt;em&gt;Functions and Procedures&lt;/em&gt; List View. From the &lt;em&gt;Functions and Procedures&lt;/em&gt; List View select the &lt;strong&gt;Import&lt;/strong&gt; option. The Import will bring you to your operating system &amp;ldquo;file open&amp;rdquo; dialog box for selecting the GitCheckout.re, RunAnt.re and SalesforceCredential.re and SalesforceDeploy.re files.&lt;/p&gt;
+&lt;p&gt;Next, select your &amp;ldquo;Global,&amp;rdquo; or highest level, &lt;em&gt;Domain&lt;/em&gt; and upload the &lt;em&gt;Procedure&lt;/em&gt; into DeployHub. If you select a lower level &lt;em&gt;Subdomain&lt;/em&gt; you will restrict access.  By defining it to your highest level &lt;em&gt;Domain&lt;/em&gt;, all &lt;em&gt;Users&lt;/em&gt; will be able to see the &lt;em&gt;Procedures&lt;/em&gt;. Once you have both imported, you are now ready to create your &lt;em&gt;Action&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;step-5---create-your-salesforce-_action_-using-your-_procedures_&#34;&gt;Step 5 - Create your SalesForce &lt;em&gt;Action&lt;/em&gt; using your &lt;em&gt;Procedures&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;Once you have imported the SalesForce files as &lt;em&gt;Procedures&lt;/em&gt;, you ready to define your &lt;em&gt;Custom Action&lt;/em&gt;. Navigate to the &lt;em&gt;Actions&lt;/em&gt; list view from the &lt;em&gt;Actions&lt;/em&gt; menu option on the left hand side of the DeployHub Main Menu panel.&lt;/p&gt;
+&lt;p&gt;Use the +Add option to create a new &lt;em&gt;Action&lt;/em&gt; for you &lt;em&gt;Procedure&lt;/em&gt;. In the &amp;ldquo;Full Domain&amp;rdquo; field select your &amp;ldquo;Global&amp;rdquo; &lt;em&gt;Domain&lt;/em&gt;. If you select a lower level &lt;em&gt;Subdomain&lt;/em&gt; you will restrict access to this &lt;em&gt;Custom Action&lt;/em&gt;.  By defining it to your highest level &lt;em&gt;Domain&lt;/em&gt;, all &lt;em&gt;Users&lt;/em&gt; will be able to execute the process regardless of their &lt;em&gt;SubDomain&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Name the new Action &amp;ldquo;SalesForceAction&amp;rdquo; (no spaces).&lt;/p&gt;
+&lt;p&gt;Now we are going to customize this &lt;em&gt;Action&lt;/em&gt;. On the right hand side, you will see a list of &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; you can choose from.  Navigate to your &lt;em&gt;Domain&lt;/em&gt; to find the files imported as &lt;em&gt;Procedures&lt;/em&gt;.  Drag them onto the area under &amp;ldquo;Start&amp;rdquo;. The order should be:&lt;/p&gt;
+&lt;p&gt;-GitCheckout
+-SalesforceCredential
+-SalesforceDeploy&lt;/p&gt;
+&lt;p&gt;Note: RunAnt is reference by the SalesforceDeploy &lt;em&gt;Procedure&lt;/em&gt; and does not need to be included in the &lt;em&gt;Action&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;When you drag your Ansible &lt;em&gt;Procedures&lt;/em&gt; onto the area under &amp;ldquo;Start&amp;rdquo; a pop-up dialog box will open for you to complete the following parameters:&lt;/p&gt;
+&lt;h4 id=&#34;gitcheckout-parameters&#34;&gt;GitCheckout Parameters&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Field&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Title&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Not Required&lt;/td&gt;
+&lt;td&gt;Name of the step in your deployment workflow.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Summary&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Not Required&lt;/td&gt;
+&lt;td&gt;Enter a summary of this step.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Git Repo&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$GIT_URL&lt;/td&gt;
+&lt;td&gt;Git Repo containing your SalesForce Source Code.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Git Commit&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$GIT_COMMIT&lt;/td&gt;
+&lt;td&gt;The commit, tag or branch to checkout.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;To Dir&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$GIT_DIR&lt;/td&gt;
+&lt;td&gt;The directory to checkout into.  Use &amp;ldquo;.&amp;rdquo; for the default directory.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;salesforcecredential-parameters&#34;&gt;SalesforceCredential Parameters&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Argument&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Credential Name&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Name of the Credential your created in step 2 above.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;salesforcedeploy-parameters&#34;&gt;SalesforceDeploy Parameters&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Argument&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;User&lt;/td&gt;
+&lt;td&gt;Taken from the SalesForceCredential &lt;em&gt;Procedure&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Password&lt;/td&gt;
+&lt;td&gt;Taken from the SalesForceCredential &lt;em&gt;Procedure&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ServerUrl&lt;/td&gt;
+&lt;td&gt;The Salesforce region to be deployed to.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Repo&lt;/td&gt;
+&lt;td&gt;The &lt;em&gt;Repository&lt;/em&gt; where the class and packages exist, typically a filesystem type &lt;em&gt;Repository&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TestLevel&lt;/td&gt;
+&lt;td&gt;When test cases are run, which level (All, Some, etc.).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;At this point the &lt;em&gt;Custom Action&lt;/em&gt; is ready to be used by anyone with access (based on Domain and security options). Each &lt;em&gt;Component&lt;/em&gt; that uses the &lt;em&gt;Custom Action&lt;/em&gt; will need to define specific values. Because this new &lt;em&gt;Custom Action&lt;/em&gt; is reusable, no &lt;em&gt;Component&lt;/em&gt; variables are defined at the &lt;em&gt;Action&lt;/em&gt; level.&lt;/p&gt;
+&lt;h3 id=&#34;step-6---create-your-salesforce-_component_&#34;&gt;Step 6 - Create Your SalesForce &lt;em&gt;Component&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;Now that you have defined your SalesForce &lt;em&gt;Custom Action&lt;/em&gt; you are ready to create your SalesForce &lt;em&gt;Component&lt;/em&gt;. Define your &lt;em&gt;Component&lt;/em&gt; to use a &lt;em&gt;Custom Action&lt;/em&gt; from the &lt;em&gt;Component&lt;/em&gt; Dashboard. See &lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Defining Components&lt;/a&gt; for more details on creating your new &lt;em&gt;Component&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Update the &lt;em&gt;Custom Action&lt;/em&gt; Detail field by choosing the SalesForceAction provided in the &lt;em&gt;Custom Action&lt;/em&gt; dropdown list. You will have a single parameter to update:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Parameter&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Repository&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select your SalesForce Repository.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;step-7---set-your-_component_-attributes_&#34;&gt;Step 7 - Set Your &lt;em&gt;Component&lt;/em&gt; Attributes_&lt;/h3&gt;
+&lt;p&gt;The following variables must be added to the Attributes Section for all  &lt;em&gt;Components&lt;/em&gt; using the SalesForceAction &lt;em&gt;Custom Action&lt;/em&gt;.  The Attributes section can be found on the &lt;em&gt;Component&lt;/em&gt; Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variables&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GIT_URL&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;git url for the git repository. This is used in the git check out step executed by the SalesForce &lt;em&gt;Action&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GIT_COMMIT&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The commit hash for the version to be checked out from the git repository.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GIT_DIR&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The temporary directory is used by git to clone and checkout. This parameter should be a directory defined in a DeployHub &lt;em&gt;Repository&lt;/em&gt; for the_Component_ to find the files.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;You are now ready to assign your SalesForce &lt;em&gt;Component&lt;/em&gt; to an &lt;em&gt;Application&lt;/em&gt; and perform a deployment to one of the SalesForce &lt;em&gt;Environments&lt;/em&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Slack</title>
+      <link>/userguide/integrations/slack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/slack/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Slack can be integrated with DeployHub using &lt;em&gt;Notifiers&lt;/em&gt;. &lt;em&gt;Notifiers&lt;/em&gt; can be called to report on success or fail status of deployments.  See &lt;a href=&#34;/userguide/customizations/2-define-notifiers/&#34;&gt;Using &lt;em&gt;Notifiers&lt;/em&gt; for Messaging&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h2 id=&#34;slack-details&#34;&gt;Slack Details&lt;/h2&gt;
+&lt;p&gt;DeployHub sends messages to Slack based on certain events using &lt;em&gt;Notifiers&lt;/em&gt;. Below are the Slack details used when called by &lt;em&gt;Notifiers&lt;/em&gt;.  To define your &lt;em&gt;Notifier&lt;/em&gt; see &lt;a href=&#34;/userguide/customizations/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Channel&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;A particular channel within a Workspace. These can be public, private, or shared.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Channel Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;If checked, the Channel can be hidden in the DeployHub Database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Channel Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;If checked, the Channel name can be changed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Logfile&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The location of the log results between DeployHub and Slack.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Logfile Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;If checked, the Logfile can be hidden in the DeployHub database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Logfile Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;If checked, the Logfile location can be changed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The url for the group chat, topic chat, or chat room.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Webhook Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;If checked, the Webhook can be hidden in the DeployHub database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Webhook Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;If checked, the Webhook can be changed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Assign your Slack &lt;em&gt;Notifier&lt;/em&gt; to an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; from the Details section of the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; Dashboard. For more information see:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Define Your &lt;em&gt;Component&lt;/em&gt;&lt;/a&gt;.
+&lt;a href=&#34;/userguide/packaging-applications/2-defining-applications/&#34;&gt;Defining Your &lt;em&gt;Application&lt;/em&gt; Baseline&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: SPDX, CycloneDX and Syft</title>
+      <link>/userguide/integrations/spdx-syft-cyclonedx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/spdx-syft-cyclonedx/</guid>
+      <description>
+        
+        
+        &lt;p&gt;DeployHub can consume any SPDX and CycloneDX formatted SBOM. If you are already generating SBOMs, you will pass the name of the SBOM results to DeployHub as shown below. If you are not generating SBOMs as part of your pipeline process, you will need to add SBOM generation to collect the lower dependency data. Following is how to add Syft to your workflow to include the collection of SBOM data.&lt;/p&gt;
+&lt;h2 id=&#34;adding-syft-to-your-pipeline-automation&#34;&gt;Adding Syft to your Pipeline Automation&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/anchore/syft&#34;&gt;Syft SBOM tool&lt;/a&gt; will generate Software Bill of Material Reports for popular coding languages and package managers, including Docker images.&lt;/p&gt;
+&lt;p&gt;The following code example scans a Docker Image to generate the SBOM.  See &lt;a href=&#34;https://github.com/anchore/syft#supported-sources&#34;&gt;Syft Options&lt;/a&gt; to scan other objects and coding languages.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# install Syft&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; sh -s -- -b &lt;span style=&#34;color:#000&#34;&gt;$PWD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# create the SBOM&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./syft packages &lt;span style=&#34;color:#000&#34;&gt;$DOCKERREPO&lt;/span&gt;:&lt;span style=&#34;color:#000&#34;&gt;$IMAGE_TAG&lt;/span&gt; --scope all-layers -o cyclonedx-json &amp;gt; cyclonedx.json
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# display the SBOM&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat cyclonedx.json
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;passing-the-name-of-the-sbom-results&#34;&gt;Passing the Name of the SBOM Results&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: To complete the process you will need to install the Ortelius CLI where your CI/CD server is running. Refer to the &lt;a href=&#34;https://github.com/Ortelius/cli/blob/main/doc/dh.md&#34;&gt;Ortelius GitHub CLI Documentation&lt;/a&gt; for installation instructions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Execute the following calls to the Ortelius CLI as part of your workflow. It should be called after the build and SBOM generation:&lt;/p&gt;
+&lt;p&gt;With CycloneDX SBOM&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh updatecomp --rsp component.toml --deppkg &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cyclonedx@name of your SBOM file&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Example:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh updatecomp --rsp component.toml --deppkg &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cyclonedx@cyclonedx.json&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With SPDX SBOM&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh updatecomp --rsp component.toml --deppkg &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;spdx@name of your SBOM file. &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Example:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh updatecomp --rsp component.toml --deppkg &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;spdx@spdx.json&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: SVN as a Repository</title>
+      <link>/userguide/integrations/svn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/svn/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;svn-_repository_-details&#34;&gt;SVN &lt;em&gt;Repository&lt;/em&gt; Details&lt;/h2&gt;
+&lt;p&gt;Files and binaries can be pulled from SVN when defining your &lt;em&gt;Component&lt;/em&gt;.  Below are the details needed to connect SVN as a &lt;em&gt;Repository&lt;/em&gt; in DeployHub:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The path to the files within the Subversion repository.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Path Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box to indicate the Path should be hidden in the database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Path Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the Path can be replaced at the &lt;em&gt;Component&lt;/em&gt; definition.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Revision&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Refers to the Tag used within the Subversion repository that contains the versions of the necessary files.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Revision Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box to indicate the Revision should be hidden in the database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Revision Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the Revision can be replaced at the &lt;em&gt;Component&lt;/em&gt; definition.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;URL&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The Universal Resource Locator used to locate the Subversion repository.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;URL Encrypted&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box to indicate the URL should be hidden in the database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;URL Override&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Select the box if the URL can be replaced at the &lt;em&gt;Component&lt;/em&gt; definition.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Swagger Integration</title>
+      <link>/userguide/integrations/swagger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/swagger/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;swagger&#34;&gt;Swagger&lt;/h2&gt;
+&lt;p&gt;DeployHub uses &lt;a href=&#34;https://swagger.io/&#34;&gt;Swagger&lt;/a&gt; to display your microservice / API documentation, based on your &lt;em&gt;Component Version&lt;/em&gt;. Developers create, or automate the creation of Swagger documentation. Once created the Swagger documentation can be associated to the &lt;em&gt;Component Version&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;uploading-swagger-documentation&#34;&gt;Uploading Swagger Documentation&lt;/h3&gt;
+&lt;p&gt;You can use the DeployHub &lt;em&gt;Component&lt;/em&gt; Detail view to manually upload your Swagger documentation for your &lt;em&gt;Component&lt;/em&gt;. Alternatively, the recommended approach is to use the CI/CD Command Line Interface to automatically add your Swagger documentation file. Refer to the &lt;a href=&#34;https://github.com/Ortelius/cli/blob/main/doc/dh.md&#34;&gt;CI/CD CLI details&lt;/a&gt; for incorporating Swagger into your pipeline process.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Swagger or OpenAPI formats can be used.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;viewing-component-cve-data&#34;&gt;Viewing Component CVE Data&lt;/h3&gt;
+&lt;p&gt;Swagger data is associated to a particular &lt;em&gt;Component Version&lt;/em&gt; and can be seen by going to the Component Detail View.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Tomcat</title>
+      <link>/userguide/integrations/tomcat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/tomcat/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;integrating-tomcat-into-your-deployment-logic&#34;&gt;Integrating Tomcat into Your Deployment Logic&lt;/h2&gt;
+&lt;p&gt;DeployHub integrates with Tomcat for managing deployments where you need to stop and start the Tomcat server as part of your deployment logic. &lt;em&gt;Actions&lt;/em&gt; for Tomcat Windows servers are pre-defined within DeployHub. At the &lt;em&gt;Application&lt;/em&gt; level, you define &lt;em&gt;Pre&lt;/em&gt; and &lt;em&gt;Post&lt;/em&gt; &lt;em&gt;Actions&lt;/em&gt; that perform the calls to stop and then start Tomcat. You will be creating new &lt;em&gt;Procedures&lt;/em&gt; and &lt;em&gt;Actions&lt;/em&gt; to complete this setup.  For more information see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-your-actions/&#34;&gt;Customizing Actions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/customizations/2-define-your-functions-and-procedures/&#34;&gt;Procedures and Functions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following steps will take you through the process.&lt;/p&gt;
+&lt;h2 id=&#34;creating-pre-and-post-_actions_-for-startingstopping-tomcat&#34;&gt;Creating Pre and Post &lt;em&gt;Actions&lt;/em&gt; for Starting/Stopping Tomcat&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Step 1 - Download and Import the Tomcat Stop and Start scripts as &lt;em&gt;Procedures&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Download the the most current DeployHub Tomcat Procedures from the &lt;a href=&#34;https://github.com/ortelius/ortelius/blob/master/procedures/&#34;&gt;Ortelius Git Repo&lt;/a&gt;. There will be two:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;TomcatPreDeploy.re&lt;/strong&gt;:  This &lt;em&gt;Procedure&lt;/em&gt; stops your Tomcat Server.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;TomcatPostDeploy.re&lt;/strong&gt; – This &lt;em&gt;Procedure&lt;/em&gt; starts your Tomcat Server.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Step 2 - Create your Tomcat &lt;em&gt;Procedures&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Once downloaded, you will need to Import the scripts into DeployHub as &lt;em&gt;Procedures&lt;/em&gt;. To import these &lt;em&gt;Procedures&lt;/em&gt; navigate to the &lt;em&gt;Func/Procs&lt;/em&gt; Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the &lt;em&gt;Functions and Procedures&lt;/em&gt; List View. From the &lt;em&gt;Functions and Procedures&lt;/em&gt; List View select the &lt;strong&gt;Import&lt;/strong&gt; option. The Import will bring you to your operating system &amp;ldquo;file open&amp;rdquo; dialog box for selecting the TomcatPreDeploy.re and TomcatPostDeploy.re files.&lt;/p&gt;
+&lt;p&gt;Next, select your &amp;ldquo;Global,&amp;rdquo; or highest level, &lt;em&gt;Domain&lt;/em&gt; and upload the &lt;em&gt;Procedure&lt;/em&gt; into DeployHub. If you select a lower level &lt;em&gt;Subdomain&lt;/em&gt; you will restrict access.  By defining it to your highest level &lt;em&gt;Domain&lt;/em&gt;, all &lt;em&gt;Users&lt;/em&gt; will be able to see the &lt;em&gt;Procedures&lt;/em&gt;. Once you have both imported, you are now ready to create your &lt;em&gt;Action&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 3 - Create your &lt;em&gt;Action&lt;/em&gt; for the Tomcat &lt;em&gt;Procedures&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Once you have imported your TomcatPreDeploy.re and TomcatPostDeploy.re files as &lt;em&gt;Procedures&lt;/em&gt;, you can define your &lt;em&gt;Actions&lt;/em&gt;. Navigate to the &lt;em&gt;Actions&lt;/em&gt; list view from the &lt;em&gt;Actions&lt;/em&gt; menu option on the left hand side of the DeployHub Main Menu panel. You will be creating two &lt;em&gt;Actions&lt;/em&gt;, one for your Tomcat stop step, and the other for the Tomcat start step. One will be called in the &lt;em&gt;Pre Action&lt;/em&gt; the other in the &lt;em&gt;PostAction&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create the TomcatStopAction
+Use the +Add option to create your first new &lt;em&gt;Action&lt;/em&gt;.  In the &amp;ldquo;Full Domain&amp;rdquo; field select your &amp;ldquo;Global&amp;rdquo; &lt;em&gt;Domain&lt;/em&gt;. If you select a lower level &lt;em&gt;Subdomain&lt;/em&gt; you will restrict access to this &lt;em&gt;Custom Action&lt;/em&gt;.  By defining it to your highest level &lt;em&gt;Domain&lt;/em&gt;, all &lt;em&gt;Users&lt;/em&gt; will be able to execute the process regardless of their &lt;em&gt;SubDomain&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Name the new Action &amp;ldquo;TomcatStopAction&amp;rdquo; (no spaces).&lt;/p&gt;
+&lt;p&gt;Now we are going to customize this &lt;em&gt;Action&lt;/em&gt;. On the right hand side, you will see a list of &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; you can choose from.  Navigate to your &lt;em&gt;Domain&lt;/em&gt; to find the TomcatPreDeploy.re imported &lt;em&gt;Procedure&lt;/em&gt;.  Drag it onto the area under &amp;ldquo;Start&amp;rdquo;. When you drag the TomcatPreDeploy.re &lt;em&gt;Procedure&lt;/em&gt; onto the area under &amp;ldquo;Start&amp;rdquo; a pop-up dialog box will open for you to complete the following parameters:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Field&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Title&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Not Required&lt;/td&gt;
+&lt;td&gt;Name of the step in your deployment workflow.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Summary&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Not Required&lt;/td&gt;
+&lt;td&gt;Enter a summary of this step.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Tomcat Service Name&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$TOMCAT_SERVICE_NAME&lt;/td&gt;
+&lt;td&gt;The service running Tomcat&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Tomcat Root&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$TOMCAT_ROOT&lt;/td&gt;
+&lt;td&gt;Tomcat web root&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Application Name&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$APPLICATION_NAME&lt;/td&gt;
+&lt;td&gt;Application name (based on the .war or .ear)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Create the TomcatStartAction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Follow the directions above, except name the new Action &amp;ldquo;TomcatStopAction&amp;rdquo; (no spaces). Again on the right hand side of the &lt;em&gt;Action&lt;/em&gt; Dashboard, you will see a list of &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; you can choose from.  Navigate to your &lt;em&gt;Domain&lt;/em&gt; to find the TomcatPostDeploy.re imported &lt;em&gt;Procedure&lt;/em&gt;.  Drag it onto the area under &amp;ldquo;Start&amp;rdquo;. When you drag the TomcatPostDeploy.re &lt;em&gt;Procedure&lt;/em&gt; onto the area under &amp;ldquo;Start&amp;rdquo; a pop-up dialog box will open for you to complete the following parameters:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Field&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Title&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Not Required&lt;/td&gt;
+&lt;td&gt;Name of the step in your deployment workflow.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Summary&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Not Required&lt;/td&gt;
+&lt;td&gt;Enter a summary of this step.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Tomcat Service Name&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$TOMCAT_SERVICE_NAME&lt;/td&gt;
+&lt;td&gt;The service running Tomcat&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Tomcat Root&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$TOMCAT_ROOT&lt;/td&gt;
+&lt;td&gt;Tomcat web root&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Application Name&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;$APPLICATION_NAME&lt;/td&gt;
+&lt;td&gt;Application name (based on the .war or .ear)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;At this point your new &lt;em&gt;Actions&lt;/em&gt; are ready to be used by anyone with access (based on Domain and security options). Each &lt;em&gt;Component&lt;/em&gt; that uses the these &lt;em&gt;Actions&lt;/em&gt; as Pre and Post steps to the deployment will need to define specific values.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 4 - Assign the TomcatStop and TomcatStart Action to an &lt;em&gt;Application&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Create your &lt;em&gt;Application&lt;/em&gt; and define your Pre and Post Tomcat &lt;em&gt;Actions&lt;/em&gt; using the &lt;em&gt;Application&lt;/em&gt; Dashboard. The &lt;em&gt;Applications&lt;/em&gt; &lt;em&gt;Pre-Action&lt;/em&gt; should be assigned the TomcatStopAction.  This will cause your Tomcat server to be stopped prior to the &lt;em&gt;Application&lt;/em&gt; files being deployed.  The &lt;em&gt;Application&amp;rsquo;s&lt;/em&gt; &lt;em&gt;Post-Action&lt;/em&gt; should be assigned the TomcatStartAction which will start Tomcat after the deployment of your .ear/.war has been completed.  For more information see &lt;a href=&#34;/userguide/packaging-applications/2-defining-applications/&#34;&gt;Defining Your Application&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 5 - Set Your &lt;em&gt;Application&lt;/em&gt; Attributes_&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The following variables must be added to the Attributes Section for your Application using the TomcatStopAction &lt;em&gt;Pre Action&lt;/em&gt; and TomcatStartAction &lt;em&gt;Post Action&lt;/em&gt;.  The Attributes section can be found on the &lt;em&gt;Application&lt;/em&gt; Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable Name&lt;/th&gt;
+&lt;th&gt;Value Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;TOMCAT_SERVICE_NAME&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The service running Tomcat&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;TOMCAT_ROOT&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Tomcat web root&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;APPLICATION_NAME&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Application name (based on the .war or .ear)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Weblogic</title>
+      <link>/userguide/integrations/weblogic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/weblogic/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;introduction-to-the-weblogic-deployhub-integration&#34;&gt;Introduction to the WebLogic DeployHub Integration&lt;/h2&gt;
+&lt;p&gt;The DeployHub WebLogic integration supports a WebLogic deployment using a &lt;em&gt;Post Action&lt;/em&gt; at the &lt;em&gt;Component&lt;/em&gt; level. This &lt;em&gt;Post Action&lt;/em&gt;  installs your WebLogic solution binaries (.ear, .jar, and .war files) by loading them into the correct WebLogic target.  The process will first send your solution binaries to the the WebLogic Server. The &lt;em&gt;Post Action&lt;/em&gt; performs the load into the target.&lt;/p&gt;
+&lt;h2 id=&#34;creating-the-weblogic-action&#34;&gt;Creating the Weblogic Action&lt;/h2&gt;
+&lt;p&gt;This process involves the creation of custom &lt;em&gt;Procedures&lt;/em&gt; and a &lt;em&gt;Post Action&lt;/em&gt;.  For more information on creating &lt;em&gt;Procedures&lt;/em&gt; and &lt;em&gt;Actions&lt;/em&gt; see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-your-actions/&#34;&gt;Customizing Actions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/customizations/2-define-your-functions-and-procedures/&#34;&gt;Procedures and Functions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once downloaded, you will need to Import them into DeployHub as the Procedures. To import these Procedures login to DeployHub and select the &lt;em&gt;Func/Procs&lt;/em&gt;.  From the list view select  &lt;strong&gt;Import&lt;/strong&gt; menu. Select your Domain, such as &amp;lsquo;&lt;em&gt;Global&lt;/em&gt; Domain&amp;rsquo; and upload the &lt;em&gt;Procedure&lt;/em&gt; into the DeployHub.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1 - Download and Import the WebLogic scripts as &lt;em&gt;Procedures&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Download the the most current DeployHub WebLogic Procedures from the &lt;a href=&#34;https://github.com/ortelius/ortelius/blob/master/procedures/&#34;&gt;Ortelius Git Repo&lt;/a&gt;. There will be two:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;WeblogicCredential.re&lt;/strong&gt; - This &lt;em&gt;Procedure&lt;/em&gt; exposes the credential for the Weblogic Deploy &lt;em&gt;Procedure&lt;/em&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;WeblogicDeploy.re&lt;/strong&gt; - This Procedure executes Ant against a dynamically created build.xml file to upload the classes to Weblogic.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Step 2 - Create your WebLogic &lt;em&gt;Procedures&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Once downloaded, you will need to Import the scripts into DeployHub as &lt;em&gt;Procedures&lt;/em&gt;. To import these &lt;em&gt;Procedures&lt;/em&gt; navigate to the &lt;em&gt;Func/Procs&lt;/em&gt; Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the &lt;em&gt;Functions and Procedures&lt;/em&gt; List View. From the &lt;em&gt;Functions and Procedures&lt;/em&gt; List View select the &lt;strong&gt;Import&lt;/strong&gt; option. The Import will bring you to your operating system &amp;ldquo;file open&amp;rdquo; dialog box for selecting the WeblogicCredential.re and WeblogicDeploy.re files.&lt;/p&gt;
+&lt;p&gt;Next, select your &amp;ldquo;Global,&amp;rdquo; or highest level, &lt;em&gt;Domain&lt;/em&gt; and upload the &lt;em&gt;Procedure&lt;/em&gt; into DeployHub. If you select a lower level &lt;em&gt;Subdomain&lt;/em&gt; you will restrict access.  By defining it to your highest level &lt;em&gt;Domain&lt;/em&gt;, all &lt;em&gt;Users&lt;/em&gt; will be able to see the &lt;em&gt;Procedures&lt;/em&gt;. Once you have both imported, you are now ready to create your &lt;em&gt;Action&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 3 - Create your &lt;em&gt;Action&lt;/em&gt; for the WebLogic &lt;em&gt;Procedure&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Once you have imported your WeblogicCredential.re and WeblogicDeploy.re files as &lt;em&gt;Procedures&lt;/em&gt;, you can define your WebLogic &lt;em&gt;Action&lt;/em&gt;. Navigate to the &lt;em&gt;Actions&lt;/em&gt; list view from the &lt;em&gt;Actions&lt;/em&gt; menu option on the left hand side of the DeployHub Main Menu panel.&lt;/p&gt;
+&lt;p&gt;Use the +Add option to create your new &lt;em&gt;Action&lt;/em&gt;.  In the &amp;ldquo;Full Domain&amp;rdquo; field select your &amp;ldquo;Global&amp;rdquo; &lt;em&gt;Domain&lt;/em&gt;. If you select a lower level &lt;em&gt;Subdomain&lt;/em&gt; you will restrict access to this &lt;em&gt;Custom Action&lt;/em&gt;.  By defining it to your highest level &lt;em&gt;Domain&lt;/em&gt;, all &lt;em&gt;Users&lt;/em&gt; will be able to execute the process regardless of their &lt;em&gt;SubDomain&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Name the new Action &amp;ldquo;WeblogicDeployAction&amp;rdquo; (no spaces).&lt;/p&gt;
+&lt;p&gt;Now we are going to customize this &lt;em&gt;Action&lt;/em&gt;. On the right hand side, you will see a list of &lt;em&gt;Functions&lt;/em&gt; and &lt;em&gt;Procedures&lt;/em&gt; you can choose from.  Navigate to your &lt;em&gt;Domain&lt;/em&gt; to find the WeblogicCredential.re and WeblogicDeploy.re imported &lt;em&gt;Procedures&lt;/em&gt;.  Drag them onto the area under &amp;ldquo;Start&amp;rdquo;. When you drag the WeblogicCredential.re and WeblogicDeploy.re  &lt;em&gt;Procedures&lt;/em&gt; onto the area under &amp;ldquo;Start&amp;rdquo; a pop-up dialog box will open for you to complete the following parameters.&lt;/p&gt;
+&lt;p&gt;The order should be &lt;em&gt;WeblogicCredential&lt;/em&gt;, and then &lt;em&gt;WeblogicDeploy&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;At this point the Action is ready to be used by anyone with access (based on Domain and security options). Each Component that uses the Action will need to define specific values.
+The &lt;em&gt;Action&lt;/em&gt; can now be placed into the &lt;em&gt;Post Action field&lt;/em&gt; of a &lt;em&gt;Component&lt;/em&gt; as part of an &lt;em&gt;Application&lt;/em&gt; deployed to a Weblogic region.&lt;/p&gt;
+&lt;h3 id=&#34;_weblogiccredential_-parameters&#34;&gt;&lt;em&gt;WeblogicCredential&lt;/em&gt; Parameters&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Field&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Credential Name&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${WeblogicCredName}&lt;/td&gt;
+&lt;td&gt;Name of the Credential to use for the Weblogic Deployment&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;_weblogicdeploy_-parameters&#34;&gt;&lt;em&gt;WeblogicDeploy&lt;/em&gt; Parameters&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Field&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;AdminUrl&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${AdminUrl}&lt;/td&gt;
+&lt;td&gt;Admin url for performing deployment on&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;WeblogicHome&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${WeblogicHome}&lt;/td&gt;
+&lt;td&gt;Home directory for Weblogic&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;UserName&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${$WLUserName}&lt;/td&gt;
+&lt;td&gt;Weblogic user name.  This is passed to this &lt;em&gt;Procedure&lt;/em&gt; from the WeblogicCredential &lt;em&gt;Procedure&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Password&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${$WLPassword}&lt;/td&gt;
+&lt;td&gt;Weblogic password. This is passed to this &lt;em&gt;Procedure&lt;/em&gt; from the WeblogicCredential &lt;em&gt;Procedure&lt;/em&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Id&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${WeblogicTaskId}&lt;/td&gt;
+&lt;td&gt;Task identifier of a running deployment task&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;UserConfigFile&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${WeblogicConfig}&lt;/td&gt;
+&lt;td&gt;Config file to use&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Action&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${WeblogicAction}&lt;/td&gt;
+&lt;td&gt;Action to perform&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Name&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${WeblogicAppName}&lt;/td&gt;
+&lt;td&gt;Name of the application&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Targets&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${WeblogicTargets}&lt;/td&gt;
+&lt;td&gt;Targets to perform deployment on&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Plan&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${WeblogicPlan}&lt;/td&gt;
+&lt;td&gt;Deployment plan to use&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Library&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${WeblogicLibrary}&lt;/td&gt;
+&lt;td&gt;identifies the deployment as a shared J2EE library or optional package&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${dep.files}&lt;/td&gt;
+&lt;td&gt;Archive to deploy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Step 4 - Set Your &lt;em&gt;Action&lt;/em&gt; to your &lt;em&gt;Component&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Place the &lt;em&gt;Action&lt;/em&gt; within the &lt;em&gt;Component&amp;rsquo;s Post Action&lt;/em&gt; field. When &lt;em&gt;Application&lt;/em&gt; deploys its artifacts to the Weblogic server, and the  &lt;em&gt;Post Action&lt;/em&gt; at the &lt;em&gt;Component&lt;/em&gt; level performs the installation into Weblogic Target.&lt;/p&gt;
+&lt;p&gt;For more information see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-your-actions/&#34;&gt;Customizing Actions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/customizations/2-define-your-functions-and-procedures/&#34;&gt;Procedures and Functions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Step 5 - Set Your &lt;em&gt;Component&lt;/em&gt; Attributes_&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The following variables must be added to the Attributes Section for all  &lt;em&gt;Components&lt;/em&gt; using the WeblogicDeployAction &lt;em&gt;Post Action&lt;/em&gt;.  The Attributes section can be found on the &lt;em&gt;Component&lt;/em&gt; Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable Name&lt;/th&gt;
+&lt;th&gt;Value Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;WeblogicCredName&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Name of the Credential to use for the Weblogic Deployment&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;AdminUrl&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Admin url for performing deployment on&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;WeblogicHome&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Home directory for Weblogic&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;WeblogicTaskId&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Task identifier of a running deployment task&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;WeblogicConfig&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Config file to use&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;WeblogicAction&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Action to perform&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;WeblogicAppName&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Name of the application&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;WeblogicTargets&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Targets to perform deployment on&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;WeblogicPlan&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Deployment plan to use&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;WeblogicLibrary&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;identifies the deployment as a shared J2EE library or optional package&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: WebSphere</title>
+      <link>/userguide/integrations/websphere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/websphere/</guid>
+      <description>
+        
+        
+        &lt;p&gt;A DeployHub deployment can point to one or more &lt;em&gt;Repositories&lt;/em&gt; which contain the artifacts (.ear, .jar, and .war files) that make up a WebSphere application. These are referenced in DeployHub by one or more &lt;em&gt;Components&lt;/em&gt; (and one or more of their &lt;em&gt;Component__Items&lt;/em&gt;) within an &lt;em&gt;Application&lt;/em&gt;. A &lt;em&gt;Post Action&lt;/em&gt; is then executed which deploys these artifacts into WebSphere. The user creates the &lt;em&gt;Action&lt;/em&gt;, which itself contains &lt;em&gt;Procedures&lt;/em&gt;. The Procedure defined to the &lt;em&gt;Action&lt;/em&gt; for a WebSphere deployment is called &amp;ldquo;WebSphereDeploy.&amp;rdquo;&lt;/p&gt;
+&lt;h2 id=&#34;creating-the-websphere-action&#34;&gt;Creating the WebSphere Action&lt;/h2&gt;
+&lt;h2 id=&#34;new-action-for-the-websphere&#34;&gt;New Action for the WebSphere&lt;/h2&gt;
+&lt;p&gt;Once you have imported your &lt;em&gt;Procedures&lt;/em&gt;, you can define your &lt;em&gt;Action&lt;/em&gt;. Change to the &lt;em&gt;Actions&lt;/em&gt; list view and select &amp;ldquo;Add&amp;rdquo; menu.&lt;/p&gt;
+&lt;p&gt;Name the new Action &amp;ldquo;WebSphereDeployAction&amp;rdquo; (no spaces).&lt;/p&gt;
+&lt;p&gt;Now we are going to customize this Action. You will see the &amp;lsquo;Activity Hub&amp;rsquo; on the righthand side of your screen. Navigate to your Domain to find the Procedures. Drag them onto the area under &lt;em&gt;Start.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;At this point the Action is ready to be used by anyone with access (based on Domain and security options). Each Component that uses the Action will need to define specific values.
+The &lt;em&gt;Action&lt;/em&gt; can now be placed into the &lt;em&gt;Post Action field&lt;/em&gt; of a &lt;em&gt;Component&lt;/em&gt; as part of an &lt;em&gt;Application&lt;/em&gt; deployed to a WebSphere region.&lt;/p&gt;
+&lt;h3 id=&#34;_webspheredeploy_-parameters&#34;&gt;&lt;em&gt;WebSphereDeploy&lt;/em&gt; Parameters&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Field&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;AppName&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${AppName}&lt;/td&gt;
+&lt;td&gt;Application name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;EarFile&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${dep.files}&lt;/td&gt;
+&lt;td&gt;Name of the ear file&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ServerName&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${ServerName}&lt;/td&gt;
+&lt;td&gt;Server name in the node&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ContextRoot&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${ContextRoot}&lt;/td&gt;
+&lt;td&gt;Context Root for the application&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;NodeName&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${NodeName}&lt;/td&gt;
+&lt;td&gt;Name of the Node&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;CellName&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${CellName}&lt;/td&gt;
+&lt;td&gt;Name of the Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ValidateInstall&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${ValidateInstall}&lt;/td&gt;
+&lt;td&gt;Y or N to Validate after deployment&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;PrecompileJsps&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Checkbox&lt;/td&gt;
+&lt;td&gt;Select to Precompile JSPs&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;MapToVirtualHost&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Checkbox&lt;/td&gt;
+&lt;td&gt;Select to map application to virtual host&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;DistributeApp&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Checkbox&lt;/td&gt;
+&lt;td&gt;Select to distribute application to all nodes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;UseMetadataFromBinary&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Checkbox&lt;/td&gt;
+&lt;td&gt;Select to use metadata from archive&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;DeployEjb&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Checkbox&lt;/td&gt;
+&lt;td&gt;Select to deploy the EJB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;CreateMbeansForResource&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Checkbox&lt;/td&gt;
+&lt;td&gt;Select to create the mbeans for the EJB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ReloadEnabled&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Checkbox&lt;/td&gt;
+&lt;td&gt;Select to  reload the application&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;DeployWs&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Checkbox&lt;/td&gt;
+&lt;td&gt;Select to deploy WS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ProcessEmbeddedConfig&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Checkbox&lt;/td&gt;
+&lt;td&gt;Select to process the config in archive&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;AllowDispatchRemoteInclude&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Checkbox&lt;/td&gt;
+&lt;td&gt;Select to enable dispatch of remote include&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;AllowServiceRemoteInclude&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Checkbox&lt;/td&gt;
+&lt;td&gt;Select to enable service to remove include&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;UseAutoLink&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Checkbox&lt;/td&gt;
+&lt;td&gt;Select to use auto link&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Tasks&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;${Tasks}&lt;/td&gt;
+&lt;td&gt;Admin tasks to perform&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Set Your &lt;em&gt;Component&lt;/em&gt; Attributes_&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The following variables must be added to the Attributes Section for all  &lt;em&gt;Components&lt;/em&gt; using the WebSphereDeployAction &lt;em&gt;Post Action&lt;/em&gt;.  The Attributes section can be found on the &lt;em&gt;Component&lt;/em&gt; Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable Name&lt;/th&gt;
+&lt;th&gt;Value Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;AppName&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Application name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ServerName&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Server name in the node&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ContextRoot&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Context Root for the application&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;NodeName&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Name of the Node&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;CellName&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Name of the Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Tasks&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Use &amp;ldquo;changedDataSource,stopAndRemoveApp,installApp,startApp&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For more information see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-your-actions/&#34;&gt;Customizing Actions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/customizations/2-define-your-functions-and-procedures/&#34;&gt;Procedures and Functions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

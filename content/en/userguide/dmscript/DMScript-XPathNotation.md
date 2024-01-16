@@ -6,6 +6,8 @@ description: >
  Identify the elements to change in an XML document.  
 ---
 
+## XPath
+
 _Xpath notation_ supports subset of xpath notation to identify the elements to change in an XML document. The following restrictions apply:
 
 - All parent elements must be identified using a full path, starting from the root node.
@@ -13,16 +15,16 @@ _Xpath notation_ supports subset of xpath notation to identify the elements to c
 - The "|" operator is not permitted to select multiple elements.
 
 The following are valid xpath descriptors for DeployHub:
-| Descriptor | Description|
-| --- | --- |
-| /root/branch/element | All elements under branch. |
-| /root/branch/element[2] | The 2nd element under branch. |
-| /root/branch/element[@attr] | Every element under branch containing the named attribute. |
-| /root/branch/element[@attr=val] | Every element under branch with the specified attribute set to the named value. |
-| /root/branch/element[last()] | The last element under branch. |
-| /root/branch/element[last()-1] | The penultimate element under branch. |
-| /root/branch/element[position()\>1] | Every element under branch apart from the first one. |
-| /root/branch/element[position()\<3] | The first two elements under branch. |
+| Descriptor                          | Description                                                                     |
+|-------------------------------------|---------------------------------------------------------------------------------|
+| /root/branch/element                | All elements under branch.                                                      |
+| /root/branch/element[2]             | The 2nd element under branch.                                                   |
+| /root/branch/element[@attr]         | Every element under branch containing the named attribute.                      |
+| /root/branch/element[@attr=val]     | Every element under branch with the specified attribute set to the named value. |
+| /root/branch/element[last()]        | The last element under branch.                                                  |
+| /root/branch/element[last()-1]      | The penultimate element under branch.                                           |
+| /root/branch/element[position()\>1] | Every element under branch apart from the first one.                            |
+| /root/branch/element[position()\<3] | The first two elements under branch.                                            |
 |
 
 The statements that can be included in the modify statement block are listed below:
@@ -32,13 +34,13 @@ The statements that can be included in the modify statement block are listed bel
 This statement can only be included if the modifier parameter in the parent modify statement is set to "text". It is used to replace one string with another in the file specified by the file parameter in the parent modify statement.
 
 _text\_replace_ takes two mandatory and one optional named parameter:
-| Parameter| Description|
-| --- | --- |
-| find | The string to locate in the source file. This is a _regular expression_. Mandatory. |
-| replace | The string which will replace all occurrences of the find string in the source file. Mandatory. |
-| line | Boolean (true/false). Optional - defaults to false. If present and set to true, sets _text\_replace_ into _line processing_ mode – each line of the file is read and processed individually. This is useful when using regular expressions to process beginning and ends of lines. |
+| Parameter | Description                                                                                                                                                                                                                                                                        |
+|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| find      | The string to locate in the source file. This is a _regular expression_. Mandatory.                                                                                                                                                                                                |
+| replace   | The string which will replace all occurrences of the find string in the source file. Mandatory.                                                                                                                                                                                    |
+| line      | Boolean (true/false). Optional - defaults to false. If present and set to true, sets _text\_replace_ into _line processing_ mode – each line of the file is read and processed individually. This is useful when using regular expressions to process beginning and ends of lines. |
 
-***Example:***
+### Example 1
 
  Assuming we have a file called "config.txt" which looks like this:
 
@@ -60,7 +62,7 @@ text\_replace(find: "\_MEMORY\_", replace: "$MEMORY");
 }
 ```
 
-STACK and MEMORY are attributes held against the different target _Environment_s. This ensures that the config.txt file is changed to reflect the values specific to that _Environment_.
+STACK and MEMORY are attributes held against the different target _Environment_s. This ensures that the config.txt file is changed to reflect the values specific to that_Environment_.
 
 If STACK and MEMORY are attributes held against each _Endpoint_, you can make a _Endpoint_-specific copy of the config.txt file. In this case, each _Endpoint_ will receive its own copy of the config.txt file, modified according to its own attributes.
 
@@ -76,7 +78,7 @@ text\_replace(find: "\_MEMORY\_", replace: "$MEMORY");
 
 In this case, an implicit loop is performed for each _Endpoint_ in the current _Endpoint_ list. This pushes each _Endpoint_ in turn (along with its _Endpoint_ attributes STACK and MEMORY) onto the stack. The file is then modified and a copy taken for each _Endpoint_. During a subsequent deployment, the version of the file specific to each _Endpoint_ is deployed, so each _Endpoint_ gets its own copy of the file with STACK and MEMORY set appropriately.
 
-**Examples:**
+### Example 2
 
 Add an extra line to the end of the file:
 
@@ -106,7 +108,7 @@ Restart: Yes
 MaxDisk: 20G
 ```
 
-**Examples:**
+### Example 3
 
  Add an entry to the start of the file:
 
@@ -126,16 +128,14 @@ As we have not specified line processing mode, the regular expression ^ refers t
 
 Assuming MAXDISK is set to 20G in the targeted _Environment_ the result will be something like:
 
-```bash
 MaxDisk: 20G
-
 Stack: 128M
-
 Memory: 1024M
-
 Restart: Yes
 
 Example: Use line processing mode to add an automatic comment to every line. This uses the regular expression substitution markers "(" and ")" and replaces them in the target string by using \1, \2 etc.
+
+```bash
 
 modify(file: 'config.txt', modifier: "text", serverspecific: true) {
 
@@ -152,13 +152,13 @@ replace: "\1: \2 // set \1 to \2",
 line: true);
 
 }
+```
 
-Result:
+#### Result
 
+```text
 Stack: 128M // set Stack to 128M
-
 Memory: 1024M // set Memory to 1024M
-
 Restart: Yes // set Restarts to Yes
 ```
 
@@ -169,10 +169,10 @@ _Set\_text_ can only be included if the modifier parameter in the parent modify 
 _set\_text_ takes two named parameters:
 
 | xpath | An xpath descriptor indicating the location(s) in the XML document of the element(s) to be modified. |
-| --- | --- |
-| value | The value of the text to add to the element(s). |
+|-------|------------------------------------------------------------------------------------------------------|
+| value | The value of the text to add to the element(s).                                                      |
 
-**Examples:**
+### Example 4
 
  Given an input file "servers.xml" that looks like this:
 
@@ -206,11 +206,12 @@ Result:
 \<server name="server3" type="as400"\>server\_text\</server\>
 
 \</deployhub\>
-```~
+```
 
 NOTE: If the selected element(s) already have text, then that text is replaced by the _set\_text_ operation.
 
-**Examples:**
+### Example 5
+
 ```bash
 Set text for _Endpoints_ of type "windows":
 
@@ -221,8 +222,11 @@ set\_text(xpath: "/openmake/server[@type=windows]",
 value: "server\_text");
 
 }
+```
 
-Result:
+#### Example 5 Result
+
+```text
 
 \<deployhub\>
 
@@ -241,16 +245,16 @@ This statement can only be included if the modifier parameter in the parent modi
 
 _add\_element_ takes three named parameters:
 
-| Parameter | Description|
-| --- | --- |
-| xpath | An xpath descriptor indicating the location(s) in the XML document where the element is to be inserted. |
-| pos | A string indicating the position of the insert location relative to the xpath. Is one of: |
-| "before" | The specified element is added before the element identified by the xpath. |
-| "after" | The specified element is added after the element identified by the xpath. |
-| "inside" | The specified element is added inside the element identified by the xpath. |
-| element | The element to insert. Must be in XML syntax. |
+| Parameter | Description                                                                                             |
+|-----------|---------------------------------------------------------------------------------------------------------|
+| xpath     | An xpath descriptor indicating the location(s) in the XML document where the element is to be inserted. |
+| pos       | A string indicating the position of the insert location relative to the xpath. Is one of:               |
+| "before"  | The specified element is added before the element identified by the xpath.                              |
+| "after"   | The specified element is added after the element identified by the xpath.                               |
+| "inside"  | The specified element is added inside the element identified by the xpath.                              |
+| element   | The element to insert. Must be in XML syntax.                                                           |
 
-**Examples:**
+### Example 6
 
  Given an input file "servers.xml" that looks like this:
 
@@ -264,9 +268,11 @@ _add\_element_ takes three named parameters:
 \<server name="server3" type="as400" /\>
 
 \</deployhub\>
+```
 
 Add a "_Component_" element to each _Endpoint_:
 
+```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
 add\_element(xpath: "/deployhub/server",
@@ -274,8 +280,11 @@ add\_element(xpath: "/deployhub/server",
 pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
 }
+```
 
-Result:
+### Example 6 Result
+
+```text
 
 \<deployhub\>
 
@@ -300,7 +309,7 @@ Result:
 \</deployhub\>
 ```
 
-**Examples:**
+### Example 7
 
 Add a "_Component_" element to the second "server" element:
 
@@ -312,9 +321,11 @@ add\_element(xpath: "/deployhub/server[2]",
 pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
 }
+```
 
-Result:
+#### Example 7 Result
 
+```text
 \<deployhub\>
 
 \<server name="server1" type="unix" /\>
@@ -330,7 +341,7 @@ Result:
 \</deployhub\>
 ```
 
-**Examples:**
+### Example 8
 
 Add a "_Component_" element to each server of type "unix":
 
@@ -342,9 +353,11 @@ add\_element(xpath: '/deployhub/server[@type=unix]',
 pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
 }
+```
 
-Result:
+#### Example 8 Result
 
+```text
 \<deployhub\>
 
 \<server name="server1" type="unix"\>
@@ -360,7 +373,7 @@ Result:
 \</deployhub\>
 ```
 
-**Examples:**
+### Example 9
 
 Add different _Component_ elements to _Endpoints_ of specific types:
 
@@ -376,9 +389,11 @@ add\_element(xpath: '/deployhub/server[@type=windows]',
 pos: "inside", value: '\<_Component_ name="mycomp2" /\>');
 
 }
+```
 
-Result:
+#### Example 9 Result
 
+```text
 \<deployhub\>
 
 \<server name="server1" type="unix"\>
@@ -398,7 +413,7 @@ Result:
 \</ deployhub\>
 ```
 
-**Examples:**
+### Example 10
 
  Add a new "server" element:
 
@@ -412,8 +427,11 @@ pos: "after",
 value: '\<server name="server4" type="windows" /\>');
 
 }
+```
 
-Result:
+#### Example 10 Result
+
+```text
 
 \<deployhub\>
 
@@ -428,7 +446,7 @@ Result:
 \</deployhub\>
 ```
 
-**Examples:**
+### Example 11
 
  Add a "_Component_" element to every _Endpoint_ apart from the first one.
 
@@ -440,9 +458,11 @@ add\_element(xpath: "/deployhub/server[position()\>1]",
 pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
 }
+```
 
-Result:
+#### Example 11 Result
 
+```text
 \<deployhub\>
 
 \<server name="server1" type="unix" /\>
@@ -462,7 +482,7 @@ Result:
 \</deployhub\>
 ```
 
-**Examples:**
+### Example 12
 
 Create an entry specific for each _Endpoint_ in the targeted _Environment_.
 
@@ -480,7 +500,7 @@ value: "\<server name='${server.name}'"
 }
 ```
 
-**Examples:**
+### Example 13
 
 This example shows several techniques:
 
@@ -490,11 +510,11 @@ This example shows several techniques:
 4. Note the value string is made up of two concatenated strings.
 5. The value string is surrounded by double quotes in order that variable expansion (of the $server attributes name and type) can occur. To ensure the XML is syntactically correct, the values are surrounded by single quotes. This will not prevent variable expansion because the single quotes are effectively "escaped" by the surrounding double quotes (this is identical to the way Linux/Unix shells perform expansion). The XML parser will substitute double quotes.
 
-```bash
-Result:
+#### Example 13 Result
 
 Transferred to _Endpoint_ "midtier1":
 
+```text
 \<deployhub\>
 
 \<server name="server1" type="unix" /\>
@@ -528,14 +548,14 @@ Transferred to _Endpoint_ "fronttier1":
 This statement can only be included if the modifier parameter in the parent modify statement is set to "xml". It is used to modify or create an attribute in specified element(s) in an XML document.
 
 _set\_attribute_ takes two named parameters:
-| Parameter| Description|
-| --- | --- |
-| xpath | An xpath descriptor indicating the location(s) of the element and the attribute to modify. |
-| value | The new value for the specified attribute in the selected element(s). |
+| Parameter | Description                                                                                |
+|-----------|--------------------------------------------------------------------------------------------|
+| xpath     | An xpath descriptor indicating the location(s) of the element and the attribute to modify. |
+| value     | The new value for the specified attribute in the selected element(s).                      |
 
 NOTE:The xpath must specify an attribute using @ syntax – see examples below.
 
-**Examples:**
+### Example 14
 
 Given an input file "servers.xml" that looks like this:
 
@@ -549,9 +569,11 @@ Given an input file "servers.xml" that looks like this:
 \<server name="server3" type="as400" /\>
 
 \</deployhub\>
+```
 
 Change server2 to be of type "unix":
 
+```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
 set\_attribute(xpath: "/deployhub/server[@name=server2]/@type",
@@ -559,8 +581,11 @@ set\_attribute(xpath: "/deployhub/server[@name=server2]/@type",
 value: "unix");
 
 }
+```
 
-Result:
+#### Example 14 Result
+
+```text
 
 \<deployhub\>
 
@@ -573,7 +598,7 @@ Result:
 \</deployhub\>
 ```
 
-**Examples:**
+### Example 15
 
 Add a new attribute to every _Endpoint_ apart from the first one.
 
@@ -585,9 +610,11 @@ set\_attribute(xpath: "/deployhub/server[position()\>1]/@newattr",
 value: "newval");
 
 }
+```
 
-Result:
+#### Example 15 Result
 
+```text
 \<deployhub\>
 
 \<server name="server1" type="unix" /\>
@@ -599,7 +626,7 @@ Result:
 \</deployhub\>
 ```
 
-**Examples:**
+### Example 16
 
 Add an attribute specific for each _Endpoint_:
 
@@ -643,7 +670,7 @@ _remove\_element_ takes a single named parameter:
 
 xpath An xpath descriptor indicating the elements(s) in the XML document to be removed.
 
-**Examples:**
+### Example 17
 
 Given an input file "servers.xml" that looks like this:
 
@@ -657,16 +684,21 @@ Given an input file "servers.xml" that looks like this:
 \<server name="server3" type="as400" /\>
 
 \</deployhub\>
+```
 
 Remove server2:
 
+```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
 remove\_element(xpath: "/deployhub/server[@name=server2]");
 
 }
+```
 
-Result:
+#### Example 17 Result
+
+```text
 
 \<deployhub\>
 
@@ -677,7 +709,7 @@ Result:
 \</deployhub\>
 ```
 
-**Examples:**
+### Example 18
 
 Remove all Unix _Endpoints_:
 
@@ -687,9 +719,11 @@ modify(file: 'servers.xml', modifier: "xml") {
 remove\_element(xpath: "/deployhub/server[@type=unix]");
 
 }
+```
 
-Result:
+#### Example 18 Result
 
+```text
 \<deployhub\>
 
 \<server name="server2" type="windows" /\>
@@ -699,7 +733,7 @@ Result:
 \</deployhub\>
 ```
 
-**Examples:**
+### Example 19
 
 Ensure each _Endpoint_ gets its own copy of the file with its own entry removed.
 

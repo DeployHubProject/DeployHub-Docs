@@ -1,0 +1,243 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeployHub User Guide and API Reference – Installation and Support</title>
+    <link>/userguide/installation-and-support/</link>
+    <description>Recent content in Installation and Support on DeployHub User Guide and API Reference</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/userguide/installation-and-support/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Userguide: SaaS Sign-up and Reverse Proxy for Deployments</title>
+      <link>/userguide/installation-and-support/0-saas-and-reverse-proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/installation-and-support/0-saas-and-reverse-proxy/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;saas-sign-up-process-and-the-reverse-proxy&#34;&gt;SaaS Sign-up Process and the Reverse Proxy&lt;/h2&gt;
+&lt;p&gt;When you &lt;a href=&#34;https://www.deployhub.com/register-for-team/?&#34;&gt;signed up to use DeployHub SaaS&lt;/a&gt;, you were asked for basic information. Your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a &lt;em&gt;Subdomain&lt;/em&gt; under your Company &lt;em&gt;Domain&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;  If another user signs up with the same Company name, they will be informed that they must contact the Administrator for access to the DeployHub account. The Administrator is the first person who signed up to DeployHub with that Company name.&lt;/p&gt;
+&lt;p&gt;DeployHub is accessible through the following url:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://console.deployhub.com/dmadminweb/Home&#34;&gt;https://console.deployhub.com/dmadminweb/Home&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Login using the UserID and Password you used when you signed up for DeployHub.&lt;/p&gt;
+&lt;h3 id=&#34;take-a-test-drive-of-the-online-store-company----hipster-store-tutorial&#34;&gt;Take a Test Drive of the Online Store Company -  Hipster Store Tutorial&lt;/h3&gt;
+&lt;p&gt;The Hipster Store Tutorial is provided to give you a review of &lt;em&gt;Domains&lt;/em&gt;, &lt;em&gt;Components&lt;/em&gt;, and &lt;em&gt;Applications&lt;/em&gt; and will help you understand DeployHub basic concepts. See &lt;a href=&#34;/userguide/introduction-to-deployhub/0-hipster-store-tutorial/&#34;&gt;Hipster Store Tutorial&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h2 id=&#34;installing-the-reverse-proxy-for-managing-deployments-using-deployhub&#34;&gt;Installing the Reverse Proxy for Managing Deployments using DeployHub&lt;/h2&gt;
+&lt;p&gt;DeployHub includes a deployment engine that can be used to deploy your &lt;em&gt;Applications&lt;/em&gt;. Alternatively you can push deployment information to DeployHub using the &lt;a href=&#34;/installation-and-support/0-commandlineinterface/&#34;&gt;Command Line Interface&lt;/a&gt;. You will not need the Reverse Proxy if your are pushing deployment results with the CLI.&lt;/p&gt;
+&lt;p&gt;To start using DeployHub to deploy your &lt;em&gt;Applications&lt;/em&gt; and &lt;em&gt;Components&lt;/em&gt;, you will first need to install a Reverse Proxy inside your firewall. This contacts DeployHub in our SaaS environment to receive deployment requests.  The Reverse Proxy is required for deploying into your environment.&lt;/p&gt;
+&lt;p&gt;A Reverse Proxy queries the DeployHub SaaS every minute to determine if a deployment is needed. For SaaS users, it provides a security layer, preventing you from opening a port to the outside world. It uses standard HTTPS requests to communicate to the DeployHub SaaS on the Google GKE environment. Nothing from the external Google side of the firewall is pushed to the local DeployHub Reverse Proxy.&lt;/p&gt;
+&lt;p&gt;Once the Reverse Proxy determines that a deployment is needed, it executes the deployment using all files on the inside of the firewall. The one-way communication initiates the deployment but all work is done local to your network. On completion of the deployment, the logs are pushed back up to the DeployHub SaaS for viewing and audit.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/userguide/images/ReverseProxy.png&#34; alt=&#34;DeployHub Architecture&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;reverse-proxy-installation&#34;&gt;Reverse Proxy Installation&lt;/h3&gt;
+&lt;p&gt;The Reverse Proxy runs as docker container. In order to install it, you need to install Docker.&lt;/p&gt;
+&lt;h3 id=&#34;docker-installation-guides&#34;&gt;Docker Installation Guides&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/engine/install/centos/&#34;&gt;Docker for CentOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/engine/install/ubuntu/&#34;&gt;Docker for Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/engine/install/fedora/&#34;&gt;Docker for Fedora&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html-single/getting_started_with_containers/index&#34;&gt;Docker for RedHat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/docker-for-mac/install/&#34;&gt;Docker for OS/X&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;test-your-docker-install&#34;&gt;Test your Docker Install&lt;/h3&gt;
+&lt;p&gt;See the &lt;a href=&#34;https://docs.docker.com/get-started/#test-docker-version&#34;&gt;Docker Install Test&lt;/a&gt; instructions&lt;/p&gt;
+&lt;h2 id=&#34;installing-your-deployhub-reverse-proxy-docker-image&#34;&gt;Installing Your DeployHub Reverse Proxy Docker Image&lt;/h2&gt;
+&lt;p&gt;The DeployHub Reverse Proxy Docker Image is found on the Redhat Quay Docker Registry. Follow the steps below to install the Reverse Proxy into your Docker installation.&lt;/p&gt;
+&lt;h3 id=&#34;step-1---set-your-clientid-as-environment-variable&#34;&gt;Step 1 - Set your CLIENTID as environment variable&lt;/h3&gt;
+&lt;p&gt;Use your Client ID that you received in your &amp;ldquo;Welcome&amp;rdquo; sign up email from DeployHub. It will be a hexadecimal number such as:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Your CLIENTID is 6d961c2d-69a4-4660-8a4a-aaea11276864
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;CLIENTID&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Your ID&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nash&#34; data-lang=&#34;nash&#34;&gt;export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;step-2---pull-reverse-proxy-from-redhat-quay-registry&#34;&gt;Step 2 - Pull Reverse Proxy from Redhat Quay Registry&lt;/h3&gt;
+&lt;p&gt;Run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker pull quay.io/deployhub/deployhub-rproxy:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-3---find-your-image-sha&#34;&gt;Step 3 - Find your image SHA&lt;/h3&gt;
+&lt;p&gt;Run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker images &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep deployhub-rproxy &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Find the image SHA from the third column in the output.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;quay.io/deployhub/deployhub-rproxy      v9.0.0          0114088b0b44        &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt; days ago          3.32GB
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The SHA in the above example is 0114088b0b44.&lt;/p&gt;
+&lt;h3 id=&#34;step-4---start-the-container-for-linux-and-osx&#34;&gt;Step 4 - Start the container for Linux and OS/X&lt;/h3&gt;
+&lt;p&gt;Use the image SHA from Step 3 as the last parameter to the docker run.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -d --hostname &lt;span style=&#34;color:#4e9a06&#34;&gt;`&lt;/span&gt;hostname&lt;span style=&#34;color:#4e9a06&#34;&gt;`&lt;/span&gt; -e &lt;span style=&#34;color:#000&#34;&gt;CLIENTID&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;$CLIENTID&lt;/span&gt; -v ~/.ssh:/keys:Z 0114088b0b44
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-5---access-deployhub-from-your-browser&#34;&gt;Step 5 - Access DeployHub from your browser&lt;/h3&gt;
+&lt;p&gt;DeployHub is accessible through the following url:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;https://console.deployhub.com/dmadminweb/Home
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Login using the UserID and Password you used when you Signed-up for DeployHub&lt;/p&gt;
+&lt;h3 id=&#34;step-6---confirm-your-reverse-proxy-is-running&#34;&gt;Step 6 - Confirm Your Reverse Proxy is Running&lt;/h3&gt;
+&lt;p&gt;In the upper right hand corner you will see a message that should say &amp;ldquo;2 out of 2 Reverse Proxy Running.&amp;rdquo;  There is a default proxy used to deploy into the DeployHub environment for the Hipster Store Tutorial.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: DeployHub On-Prem Installation</title>
+      <link>/userguide/installation-and-support/0-on-premise-installation-for-pro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/installation-and-support/0-on-premise-installation-for-pro/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;on-premise-installation-using-the-deployhub-helm-chart&#34;&gt;On Premise Installation Using the DeployHub Helm Chart&lt;/h2&gt;
+&lt;p&gt;DeployHub can be installed into your own cloud environment, or onto a hosted cloud environment.  DeployHub uses Helm to manage and perform the installation. The process includes the installation of multiple containers. The Helm chart and instructions can be found at &lt;a href=&#34;https://artifacthub.io/packages/helm/deployhub/deployhub&#34;&gt;ArtifactHub&lt;/a&gt;. This is the location for the most up to date instructions for downloading and running the DeployHub Helm chart.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;
+&lt;p&gt;Once you have completed your installation, you can take the next step and complete a &lt;a href=&#34;/userguide/integrations/ci-cd_integrations/&#34;&gt;Proof of Concept&lt;/a&gt; integrated into your CI/CD pipeline with the Command Line Interface.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Command Line Interface Installation</title>
+      <link>/userguide/installation-and-support/0-commandlineinterface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/installation-and-support/0-commandlineinterface/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;the-ortelius-command-line-interface-cli&#34;&gt;The Ortelius Command Line Interface (CLI)&lt;/h2&gt;
+&lt;p&gt;DeployHub uses the Open-Source &lt;a href=&#34;https://ortelius.io&#34;&gt;Ortelius&lt;/a&gt; Command Line Interface to support pipeline automation. The Ortelius Command Line Interface supports integration with DevOps tools and CI/CD pipelines. The Ortelius Command Line Interface is under the governance of the &lt;a href=&#34;https://cd.foundation&#34;&gt;Linux Foundation&amp;rsquo;s Continuous Delivery Foundation (CDF).&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The Ortelius CLI Python script interacts with the Ortelius and DeployHub REST APIs to perform:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Approve the application version&lt;/li&gt;
+&lt;li&gt;Move the application version using the supplied task&lt;/li&gt;
+&lt;li&gt;Create/replace the component version for the application version&lt;/li&gt;
+&lt;li&gt;Assign a component version to an application version&lt;/li&gt;
+&lt;li&gt;Assign the key/values pairs to the component version&lt;/li&gt;
+&lt;li&gt;Create a bash file from the component .toml file&lt;/li&gt;
+&lt;li&gt;Export a domain including all objects to stdout&lt;/li&gt;
+&lt;li&gt;Imports the export file into the new domain&lt;/li&gt;
+&lt;li&gt;Deploy the Application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;up-to-date-usage-info-and-installation-instructions&#34;&gt;Up to Date Usage Info and Installation Instructions&lt;/h2&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;https://github.com/ortelius/cli/blob/main/doc/dh.md&#34;&gt;Ortelius GitHub CLI Documentation&lt;/a&gt; for &lt;a href=&#34;https://github.com/ortelius/cli&#34;&gt;installation instructions&lt;/a&gt; and the latest usage and parameters.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Single Sign On using Okta and SAML</title>
+      <link>/userguide/installation-and-support/0-enabling-sso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/installation-and-support/0-enabling-sso/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;step-1---login-into-okta&#34;&gt;Step 1 - Login into Okta&lt;/h2&gt;
+&lt;p&gt;Login into your Okta Dashboard - &lt;a href=&#34;https://www.okta.com/&#34;&gt;https://www.okta.com/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;step-2---create-an-okta-application-for-deployhub&#34;&gt;Step 2 - Create an Okta Application for DeployHub&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;/deployhub-okta-app.png&#34; alt=&#34;Alt text&#34; title=&#34;DeployHub Okta Application&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;step-3---configure-the-saml-settings&#34;&gt;Step 3 - Configure the SAML Settings&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Single Sign On URL - &amp;lt;https://&lt;DeployHub&gt; Server&amp;gt;/dmadminweb/sso&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Recipient URL - &amp;lt;https://&lt;DeployHub&gt; Server&amp;gt;/dmadminweb/sso/finish&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Destination URL - &amp;lt;https://&lt;DeployHub&gt; Server&amp;gt;/dmadminweb/sso/finish&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Audience Restriction - &amp;lt;https://&lt;DeployHub&gt; Server&amp;gt;/dmadminweb/sso/finish&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/deployhub-okta-saml.png&#34; alt=&#34;Alt text&#34; title=&#34;DeployHub Okta SAML&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-4---view-saml-setup-instructions&#34;&gt;Step 4 - View SAML setup instructions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;On the Sign On tab - &lt;code&gt;View SAML setup instructions&lt;/code&gt; to obtain the SAML XML file needed to enable SSO on the DeployHub side.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/deployhub-okta-saml-view.png&#34; alt=&#34;Alt text&#34; title=&#34;DeployHub Okta Sign On&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-5---download-the-saml-xml-data&#34;&gt;Step 5 - Download the SAML XML data&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Copy the contents of the &lt;code&gt;IDP Metadata&lt;/code&gt; from the &lt;strong&gt;Optional&lt;/strong&gt; section into a file called &lt;code&gt;idp-metadata.xml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/deployhub-okta-saml-xml.png&#34; alt=&#34;Alt text&#34; title=&#34;DeployHub Okta Sign On&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-6---convert-idp-metadataxml-to-base64-environment-variable&#34;&gt;Step 6 - Convert &lt;code&gt;idp-metadata.xml&lt;/code&gt; to base64 environment variable&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;export IDP_METADATA=$(base64 -w 0 idp-metadata.xml)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-7---convert-logout-url-to-base64-environment-variable&#34;&gt;Step 7 - Convert logout url to base64 environment variable&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;export SAML_LOGOUT=$(echo -n https://sso.example.com | base64)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-8---apply-the-saml-configuration-to-the-kubernetes-cluster-using-helm&#34;&gt;Step 8 - Apply the SAML Configuration to the Kubernetes Cluster using Helm&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;helm upgrade my-release deployhub/deployhub --install --version 10.0.105 --set dh-ms-general.dbhost=db.example.com --set dh-ms-general.dbpass=changeme --set-string dh-ms-general.dbport=5432 --set dh-ms-nginx.ingress.type=glb --set dh-ms-general.SamlIdpMetadata=${IDP_METADATA} --set dh-ms-general.SamlLogoutRedirect=${SAML_LOGOUT}&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note:  The &lt;code&gt;dh-ms-general.SamlIdpMetadata&lt;/code&gt; is the base64 encoded string of the IDP Metadata and &lt;code&gt;dh-ms-general.SamlLogoutRedirect&lt;/code&gt; is the redirect used when someone logs out of DeployHub.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Contact Support</title>
+      <link>/userguide/installation-and-support/0-contactsupport/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/installation-and-support/0-contactsupport/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Need help with configuring DeployHub? Think you found a bug? Or just want to chat about cool things like Kubernetes, Containers, and other DevOps realms? Reach out to us. We are focused on your success.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Call us directly – yes, that is a real thing. (505) 424-6439.&lt;/li&gt;
+&lt;li&gt;Email us at &lt;a href=&#34;mailto:request-info@deployhub.com&#34;&gt;request-info@deployhub.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Not feeling chatty? – Open a &lt;a href=&#34;https://github.com/DeployHubProject/DeployHub-Pro/issues&#34;&gt;GitHub Ticket&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Terms of Use Agreement</title>
+      <link>/userguide/installation-and-support/0-terms-of-use-agreement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/installation-and-support/0-terms-of-use-agreement/</guid>
+      <description>
+        
+        
+        &lt;p&gt;DEPLOYHUB® INC. TERMS OF USE&lt;/p&gt;
+&lt;p&gt;These DeployHub Terms of Service (the “Terms” or the “Agreement”) govern access to and use of the DeployHub websites and services (collectively “DeployHub Service”) provided by DeployHub, Inc. by the site visitor (“Site Visitor”), or any individual and/or entity that creates an account (“Account”) or purchases/uses of the DeployHub Services (collectively “Customer”). Customers and Site Visitors may be referred to in these Terms as “you” and “your” as applicable. Please note that we may modify these Terms as further described in the Communication and Revisions section below, so you should make sure to check this page from time to time.&lt;/p&gt;
+&lt;p&gt;If you are a Customer and you or your organization are bound by a Master Services Agreement or Subscription Agreement with DeployHub (“Corporate Terms”), then these Terms will apply to the extent such use is not already governed by such a Master Services Agreement or Subscription Agreement. For the avoidance of doubt, all references to the “Site” in these Terms also include the DeployHub Services.&lt;/p&gt;
+&lt;p&gt;Our Privacy Policy explains how we collect and use your information, By using our Services, you’re agreeing to be bound by these Terms and our Privacy Policy.&lt;/p&gt;
+&lt;p&gt;BY ACCESSING OR USING THE DEPLOYHUB SERVICES, YOU AGREE TO FOLLOW AND BE BOUND BY THESE TERMS. IF YOU DO NOT AGREE TO THESE TERMS, YOU ARE NOT AUTHORIZED AND MUST CEASE USING THE SITE IMMEDIATELY.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Communication and Revisions. From time to time, DeployHub,Inc  may revise these Terms or any additional terms and conditions that are relevant to a particular DeployHub Service to reflect changes in the law or to the DeployHub Services by posting the revised terms on the Site with the current date. You are responsible for reviewing the site on a timely basis to receive notices of any changes.  If you persist as a Customer after the site changes, you agree to be bound by the revised terms. You agree that we shall not be liable to you or to any third party for any modification of the Terms. &lt;br&gt;&lt;br&gt;1.1 You agree to receive all communications, agreements, and notices that DeployHub Inc. provides in connection with any DeployHub Services (“Communications”), including, but not limited to, Communications related to our delivery of the DeployHub Services and your purchase of or subscription to the DeployHub Services, via electronic means, including by e-mail, text, in-app notifications, or by posting them on the Site or through any DeployHub Services. You agree that all Communications we provide to you electronically satisfy any legal requirement that such Communications be in writing or be delivered in a particular manner and you agree to keep your Account contact information current.&lt;/li&gt;
+&lt;li&gt;Access Grant. Except as otherwise restricted by these Terms, upon your acceptance of these Terms and in consideration of the purchase fee paid by you, we grant you a limited, non-exclusive and non-transferable access and use the DeployHub Services for your internal business purposes and only as expressly permitted in these Terms and any applicable paid Customer plan that enables registration of an Account for the use of a DeployHub Service (“Subscription Plan”). If you are or become a direct competitor of DeployHub Inc., you may not access or use the DeployHub Services without DeployHub’s explicit, advance, written consent, and then only for the purposes authorized in writing.&lt;/li&gt;
+&lt;li&gt;Limitations on Use. The DeployHub Services may be used on the DeployHub website, or only on computers owned, leased, or otherwise controlled by you.  The DeployHub Services may only be used in accordance with the Documentation.  You will not permit others to: (a) copy the DeployHub Services or Documentation, other than making one copy of the DeployHub Services for backup or archival purposes; (b) use the DeployHub Services or Documentation other than as permitted in this Agreement; (c) use the DeployHub Services to process the data of a third party; (d) modify, disassemble, reverse engineer, de-compile or translate the DeployHub Services or the Documentation; (e) sell, assign, sublicense, lease, pledge, rent or otherwise share the DeployHub Services rights under this Agreement; (f) create any derivative works based upon the DeployHub Services or Documentation; or (g) modify, obscure or remove any proprietary notices on the DeployHub Services, the Documentation or copies thereof.&lt;/li&gt;
+&lt;li&gt;Ownership. All rights, title and interest in and to the DeployHub Services, trademarks and Documentation and any modifications, translations, adaptations, upgrades and enhancements thereto are and shall at all times remain the sole and exclusive property of DeployHub or its licensors.  The DeployHub Services, trademarks and Documentation are protected by the U.S. Copyright Act and other intellectual property laws and international treaties.  You agree that you do not own or hereby acquires any claim or right of ownership or the DeployHub Service, trademarks or Documentation.   You also acknowledge and agree that the DeployHub Services, Trademarks and the Documentation are proprietary products of DeployHub, Inc. protected under the U.S. Copyright Act and other intellectual property laws and international treaties.&lt;/li&gt;
+&lt;li&gt;Term and Termination. This Agreement is effective upon your receipt of the DeployHub Services and shall continue until terminated. You may terminate this Agreement at any time by discontinuing the use of the DeployHub Services, returning the DeployHub Services, the Documentation and all copies and portions thereof to DeployHub.  DeployHub may terminate this Agreement immediately upon the breach by you of any term of this Agreement. Upon such termination by DeployHub, you agree to return to DeployHub the DeployHub Services, the Documentation and all copies and portions thereof.&lt;/li&gt;
+&lt;li&gt;Limited Warranty. DeployHub warrants, for your benefit alone, for a period of 30 days from the date of commencement of this Agreement (the “Warranty Period”) that the DeployHub Services shall operate substantially in accordance with the functional specifications in the Documentation.  If the DeployHub Services does not so perform during the Warranty Period, DeployHub will, at its option and as your sole and exclusive remedy in connection with the same, repair or replace the defective DeployHub Services or refund the purchase fee paid by you under this Agreement.  EXCEPT FOR THE WARRANTIES SET FORTH ABOVE, THE DEPLOYHUB SERVICES AND THE DOCUMENTATION ARE PROVIDED “AS IS,” AND DEPLOYHUB DISCLAIMS ANY AND ALL OTHER WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.  Moreover, the above warranty shall not apply to (and DeployHub shall have no obligation with respect to) any failure of the DeployHub Services arising from or related to: (a) the use of the DeployHub Services in connection with any equipment or DeployHub Services not created or approved in advance by DeployHub; or (b) noncompliance with the Documentation, misuse, neglect, improper operation or mismanagement of the DeployHub Services.&lt;/li&gt;
+&lt;li&gt;Limitation of Liability. Deployhub’s cumulative liability to YOU for any loss or damages resulting from any claims, demands, or actions arising out of or relating to this Agreement shall not exceed the fee paid by YOU to DeployHub for the use of the DeployHub Services under this Agreement.  In no event shall DeployHub be liable for any (a) indirect, punitive, incidental, consequential, special, or exemplary damages or lost profits, (b) loss of use of any computer or loss or corruption of data or the costs of system or data recovery, or (c) third party claims.  The limitations contained in this paragraph apply whether the liability is based on contract, negligence, strict liability or otherwise, even if DeployHub has been advised of the possibility of such damages.  SOME STATES DO NOT ALLOW THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.&lt;/li&gt;
+&lt;li&gt;Trademark. DEPLOYHUB is a registered trademark of DeployHub Inc.  No right, license, or interest to such trademark is granted to you under this Agreement, and you agree that no such right, license, or interest shall be asserted by you with respect to such trademark.&lt;/li&gt;
+&lt;li&gt;Entire Agreement. This Agreement constitutes the entire agreement between the parties with respect to the use of the DeployHub Services and the Documentation, and supersedes all prior or contemporaneous understandings, written or oral, regarding such subject matter.&lt;/li&gt;
+&lt;li&gt;General Terms. This Agreement shall be construed and governed in accordance with the laws of the State of New Mexico.  Any action, suit, or other legal proceeding which is commenced to resolve any matter arising under or relating to any provision of this Agreement shall be commenced and prosecuted only in a state or federal court in Santa Fe, NM, and You hereby consent to the jurisdiction of such a court.  If any action is brought by either party to this Agreement against the other party regarding the subject matter hereof, the prevailing party shall be entitled to recover, in addition to any other relief granted, reasonable attorney fees and expenses of litigation.  Should any term of this Agreement be declared void or unenforceable by any court of competent jurisdiction, such declaration shall have no effect on the remaining terms hereof.  The failure of either party to enforce any rights granted hereunder or to take action against the other party in the event of any breach hereunder shall not be deemed a waiver by that party as to subsequent enforcement of rights or subsequent actions in the event of future breaches.  DeployHub may assign this Agreement without notice to you.  The headings of the sections of this Agreement are included for ease of references only, are not part of this Agreement and are not to be used in the construction and interpretation of the terms hereof.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

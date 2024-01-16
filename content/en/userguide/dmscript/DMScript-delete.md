@@ -6,22 +6,23 @@ description: >
   Remove a file or a directory from the DropZone. 
 ---
 
+## Delete
 
 _Delete_ removes a file or a directory from the _DropZone_. Any file or directory marked as deleted will not be transferred to the target _Endpoint_(s) in any subsequent deployment.
 
 _delete_ takes the following optional named parameters:
-| Parameter  | Description |
-| --- | --- |
-| file | Optional. The name of the file to be removed. |
-| dir | Optional. The name of the directory to be removed. |
+| Parameter | Description                                        |
+|-----------|----------------------------------------------------|
+| file      | Optional. The name of the file to be removed.      |
+| dir       | Optional. The name of the directory to be removed. |
 
 NOTE: A single file or dir parameter _must_ be specified.
 
-**Example:**
+### Example 1
 
-```bash
 Remove all files of zero length from the _DropZone_. If this is done in a pre-action to a _Component_, then no zero length file will be deployed to the _Endpoint_ even if they have been checked out from the repository:
 
+```bash
 set filelist = ${DropZone.files};
 
 iterate(file: $filelist) {
@@ -41,13 +42,13 @@ delete(file: ${file.dzpath});
 }
 ```
 
-**Example:**
+### Example 2
 
-```bash
  _Pre Action_ to a _Component_:
 
   Remove all files with a modification time prior to the time the _Component_ was last deployed to the _Endpoint_. If this removes all files, the _Component_ will not be deployed (since there are no files left in the _DropZone_). This allows you to set a _Component_ to "Deploy Always" and only push files that have been added to the _Component_ since it was last deployed.
 
+```javascript
 if (${dep.same}) {
 
 // We're deploying the same version of Application as currently

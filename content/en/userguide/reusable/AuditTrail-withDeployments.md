@@ -1,15 +1,16 @@
+
 ### Audit Trail
 
 The Audit Trail displays audit entries for any changes or deployments that impact this object. It includes all changes in the object including _User_ date and time, and deployments with unique numbers.
 
 For deployment audits, select a deployment number to see the details including:
 
-| Access | Description |
-| --- | --- |
-|**Log** | The output of the deployment. |
-|**Files**| Any files or objects deployed.|
-|**Step Duration**| Deployment Steps with time required to execute.|
-|**Feedback Loop**| Shows what was updated starting from _Component_.|
+| Access            | Description                                       |
+|-------------------|---------------------------------------------------|
+| **Log**           | The output of the deployment.                     |
+| **Files**         | Any files or objects deployed.                    |
+| **Step Duration** | Deployment Steps with time required to execute.   |
+| **Feedback Loop** | Shows what was updated starting from _Component_. |
 
 You can also Subscribe or Comment to an Audit Entry.
 

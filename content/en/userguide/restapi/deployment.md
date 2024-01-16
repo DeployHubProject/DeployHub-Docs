@@ -14,19 +14,19 @@ In order for API deployments to work through the permission model, there has to 
 
 Note - Any additional parameters are created as Global Variables accessible with a url_prefix. For example, if you passed "myparam=123" as a parameter in the "deploy" api call, it would be available as $url_myparam.
 
-**REST Api Endpoint**
+### REST Api Endpoint /dmadminweb/API/deploy/{app_id}/{env_id}
 
-| HTTP Verb | URL |
-| ---- | ----------- |
-| GET | /dmadminweb/API/deploy/{app_id}/{env_id} |
+| HTTP Verb | URL                                      |
+|-----------|------------------------------------------|
+| GET       | /dmadminweb/API/deploy/{app_id}/{env_id} |
 
-**Parameters**
+### Parameters for /dmadminweb/API/deploy/{app_id}/{env_id}
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| wait | query | If the wait parameter is not specified - or is specified and set to Y - then the call does not return until the deployment is complete. If the wait parameter is set to N then the call returns as soon as the deployment has been instigated but before it completes. In both cases, the deployment id is returned.  | No | string |
-| task | query | Is the identifier of a Deploy task to execute in order to perform the deployment. Either its name, its qualified name with its domain and any parent _Domains_ included in dot notation(i.e. GLOBAL.Product) or its internal ID. If the task is not specified, the first accessible Deploy Task within the _Application's_ _Domain_ is used (or any Deploy Task in parent _Domain_ if they are set to be "available" to _Subdomains).  | No | string |
-| app_id | path | Is the identifier of an_Application_. Either its name, its qualified name with its parent_Domain included in dot notation (i.e. GLOBAL.Product) or its internal ID. | Yes | string |
-| env_id | path | Is the identifier of an_Environment_. Either its name, its qualified name with its parent_Domains_ included in dot notation (i.e. GLOBAL.Product) or its internal ID. | Yes | string |
+| Name   | Located in | Description                                                                                                                                                                                                                                                                                                                                                                                                                           | Required | Schema |
+|--------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|--------|
+| wait   | query      | If the wait parameter is not specified - or is specified and set to Y - then the call does not return until the deployment is complete. If the wait parameter is set to N then the call returns as soon as the deployment has been instigated but before it completes. In both cases, the deployment id is returned.                                                                                                                  | No       | string |
+| task   | query      | Is the identifier of a Deploy task to execute in order to perform the deployment. Either its name, its qualified name with its domain and any parent _Domains_ included in dot notation(i.e. GLOBAL.Product) or its internal ID. If the task is not specified, the first accessible Deploy Task within the _Application's_ _Domain_ is used (or any Deploy Task in parent _Domain_ if they are set to be "available" to _Subdomains). | No       | string |
+| app_id | path       | Is the identifier of an_Application_. Either its name, its qualified name with its parent_Domain included in dot notation (i.e. GLOBAL.Product) or its internal ID.                                                                                                                                                                                                                                                                   | Yes      | string |
+| env_id | path       | Is the identifier of an_Environment_. Either its name, its qualified name with its parent_Domains_ included in dot notation (i.e. GLOBAL.Product) or its internal ID.                                                                                                                                                                                                                                                                 | Yes      | string |
 
 {{% include "userguide/reusable/Model Deployment Result.md" %}}

@@ -8,15 +8,15 @@ description: >
 
 Returns a Date object representing the current date and time. Note, the current date and time is taken from that of the executing deployment engine, not of the _Endpoint_ running the web interface.
 
-**Usage:**
+### Usage
 
 now()
 
-**Returns:**
+### Returns
 
 Date Object
 
-**Example:**
+### Example
 
 set d = now();
 
@@ -30,6 +30,6 @@ The time now is Wednesday, April 06, 2016 15:41:50
 
 Epoch is 1459953710
 
-**See Also:**
+### See Also
 
 date()

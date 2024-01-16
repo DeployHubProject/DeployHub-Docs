@@ -22,7 +22,7 @@ Server.append(path1,path2)
 
 String: The result of appending path2 to path1, formatted according to the specified systemtype or the system type of the _Endpoint_ object.
 
-**Example:**
+### Example
 
 ```bash
 

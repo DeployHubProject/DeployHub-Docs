@@ -26,7 +26,8 @@ iterate name in expression {
 
 NOTE: Unlike _foreach_, iterate only operates with Arrays/Lists. Because it sets the variable to the content of each array element, the key value is not available in the body of the loop.
 
-**Example:**
+### Example
+
 Here is an example of an _Array iterator_ – this iterates over all the values in the specified array (i.e.: the subscripts). e.g.
 
 ```bash

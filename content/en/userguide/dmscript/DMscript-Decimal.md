@@ -22,12 +22,12 @@ Where:
 
 base is the base to be used when performing the conversion.
 
-**Returns:**
+### Returns
 
 String.
 ```
 
-**Examples:**
+### Examples
 
 ```bash
 Convert a hexadecimal number into decimal notation.
@@ -41,6 +41,6 @@ Result:
 echoes 65279
 ```
 
-**See Also:**
+### See Also
 
 hex(), octal()

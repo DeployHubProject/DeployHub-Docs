@@ -16,7 +16,7 @@ For releasing _Components_, an agentless architecture supports both a modern arc
 
 ## Reverse Proxy and SaaS
 
-As a SaaS customer, a 'one-way' reverse proxy is used on your side of the firewall. The proxy send requests for deployments every 60 seconds. 
+As a SaaS customer, a 'one-way' reverse proxy is used on your side of the firewall. The proxy send requests for deployments every 60 seconds.
 
 ![SaaS Architecture](/userguide/images/ReverseProxy.png)
 
@@ -26,7 +26,7 @@ DeployHub integrates with external deployment solutions such as Helm to perform 
 
 ## The DeployHub Engine for Monolithic Releases and Database Updates
 
-Our deployment engine manages monolithic deployments and database updates. It moves files and scripts from source _Repositories_ to a target _Environment_ which contains one or more _Endpoints_. This is performed via _Releases_ or _Applications_, which contain _Components_. _Components_ reference a _Repository_, whose files and scripts are placed into the _Dropzone_. Customized _Actions_  manipulate the files (edit, delete, etc.) within the _Dropzone_. This happens before being deployed in a predetermined order to every _Endpoint_ within the _Environment_. 
+Our deployment engine manages monolithic deployments and database updates. It moves files and scripts from source _Repositories_ to a target _Environment_ which contains one or more _Endpoints_. This is performed via _Releases_ or _Applications_, which contain _Components_. _Components_ reference a _Repository_, whose files and scripts are placed into the _Dropzone_. Customized _Actions_  manipulate the files (edit, delete, etc.) within the _Dropzone_. This happens before being deployed in a predetermined order to every _Endpoint_ within the _Environment_.
 
 DeployHub performs all deployments in an Agentless mode. No remote agents need be installed on the target _Endpoint_ to execute deployments.
 
@@ -36,14 +36,14 @@ DeployHub uses ftp, ftps, sftp, or Windows protocol to transfer files. When a de
 
 The first _Application_ is moved onto the stack. Any Pre-Action for the _Application_ will be executed at this point.
 
-|Step|Description|
-|---|---|
-|1| The first _Component_ is moved onto the stack.|
-|2| A _DropZone_ is created for the _Component_.|
-|3| The first _Component_ is processed. It references specific files from the _Repository_ and these are placed into the _DropZone_. |
-|4| If needed, A Pre _Action_ for the _Component_ is performed within the _DropZone_ before deployment. |
-|5| The _DropZone_ files are placed into every _Endpoint_ within the _Environment_ where the _Endpoint_ type is the same as the _Component_ type. Keep in mind that a _Component_ can have only one type and an _Endpoint_ can have many types.|
-|6|A Post-Action for the _Component_ is performed for cleanup or additional manipulation of files. It is run against every _Endpoint_ with the same _Component Type_ as the _Component_.|
+| Step | Description                                                                                                                                                                                                                                 |
+|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1    | The first _Component_ is moved onto the stack.                                                                                                                                                                                              |
+| 2    | A _DropZone_ is created for the _Component_.                                                                                                                                                                                                |
+| 3    | The first _Component_ is processed. It references specific files from the _Repository_ and these are placed into the _DropZone_.                                                                                                            |
+| 4    | If needed, A Pre _Action_ for the _Component_ is performed within the _DropZone_ before deployment.                                                                                                                                         |
+| 5    | The _DropZone_ files are placed into every _Endpoint_ within the _Environment_ where the _Endpoint_ type is the same as the _Component_ type. Keep in mind that a _Component_ can have only one type and an _Endpoint_ can have many types. |
+| 6    | A Post-Action for the _Component_ is performed for cleanup or additional manipulation of files. It is run against every _Endpoint_ with the same _Component Type_ as the _Component_.                                                       |
 |7|If there are more _Components_, steps 2 through 7 are performed again after a new _DropZone_ is created.
 |8|Pre and Post processing _Actions_ defined in the _Application_ or _Release_ are performed on each of the target _Endpoints_ in the _Environments_. Any errors found at the delivery level are logged and may fail the deployment. All logs are reported back to DeployHub and recorded in the Logs section for each _Application_ or _Release_.
 

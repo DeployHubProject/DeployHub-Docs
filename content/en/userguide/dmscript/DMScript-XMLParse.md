@@ -14,7 +14,7 @@ _xmlparse_ operates on a String. If the string contains valid XML data, then thi
 - Any repeating tag causes the value to become a list
 - Any attributes in the tag are created as an array with the key being the tag name (preceded by a @ character) and the value being the value of the attribute.
 
-**Usage:**
+### Usage
 
 _String_.xmlparse()
 
@@ -22,11 +22,11 @@ or
 
 xmlparse(string)
 
-**Returns:**
+### Returns
 
 Array: An encoded version of the passed XML string.
 
-**Examples:**
+### Examples
 
 ```bash
 _Parse an XML document and process it with DMScript:_
