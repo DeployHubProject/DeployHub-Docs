@@ -119,6 +119,13 @@
 &lt;li&gt;Export a domain including all objects to stdout&lt;/li&gt;
 &lt;li&gt;Imports the export file into the new domain&lt;/li&gt;
 &lt;li&gt;Deploy the Application&lt;/li&gt;
+&lt;li&gt;Persist SBOMs to the component version&lt;/li&gt;
+&lt;li&gt;Persist SonarQube Project Status, Bugs, Code Smells, and Violations metrics to the component version&lt;/li&gt;
+&lt;li&gt;Persist Veracode Score to the component version&lt;/li&gt;
+&lt;li&gt;Persist License File to the component version&lt;/li&gt;
+&lt;li&gt;Persist Readme File the component version&lt;/li&gt;
+&lt;li&gt;Persist Swagger and OpenAPI files the component version&lt;/li&gt;
+&lt;li&gt;Persist Git Branch, Branch Create Commit, Branch Create Timestamp, Branch Parent, Commit, Commit Authors, Committers Count, Commit Timestamp, Lines Added, Lines Deleted, Lines Total, Org, Repo, Repo Project, Signed Off By, Tag, Url, Verified Commit&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;up-to-date-usage-info-and-installation-instructions&#34;&gt;Up to Date Usage Info and Installation Instructions&lt;/h2&gt;
 &lt;p&gt;Refer to the &lt;a href=&#34;https://github.com/ortelius/cli/blob/main/doc/dh.md&#34;&gt;Ortelius GitHub CLI Documentation&lt;/a&gt; for &lt;a href=&#34;https://github.com/ortelius/cli&#34;&gt;installation instructions&lt;/a&gt; and the latest usage and parameters.&lt;/p&gt;

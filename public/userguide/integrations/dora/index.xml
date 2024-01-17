@@ -1,0 +1,185 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeployHub User Guide and API Reference – DORA Metrics Reports</title>
+    <link>/userguide/integrations/dora/</link>
+    <description>Recent content in DORA Metrics Reports on DeployHub User Guide and API Reference</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="/userguide/integrations/dora/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Userguide: DORA Metrics Reports</title>
+      <link>/userguide/integrations/dora/dorametrics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/dora/dorametrics/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;devops-research-and-assessment-dora&#34;&gt;DevOps Research and Assessment (DORA)&lt;/h2&gt;
+&lt;p&gt;When DeployHub is integrated into your CI/CD pipeline, it can capture metrics for DORA reporting.&lt;br&gt;
+The two DORA metrics that DeployHub captures are Deployment Frequency and Lead Time for Changes.&lt;/p&gt;
+&lt;h3 id=&#34;deployment-frequency&#34;&gt;Deployment Frequency&lt;/h3&gt;
+&lt;p&gt;The DORA Deployment Frequency is how &lt;strong&gt;often&lt;/strong&gt; an organization &lt;strong&gt;successfully&lt;/strong&gt; releases to &lt;strong&gt;production&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;DeployHub takes the deployment frequency to the next level, it tracks all deployments from Development, to QA and to Production.
+This additional tracking provides insights into movement of changes throughout the whole pipeline and not just Production.&lt;/p&gt;
+&lt;h3 id=&#34;lead-time-for-changes&#34;&gt;Lead Time for Changes&lt;/h3&gt;
+&lt;p&gt;The DOARA Lead Time for Changes is the amount of &lt;strong&gt;time&lt;/strong&gt; it takes a &lt;strong&gt;commit&lt;/strong&gt; to get into &lt;strong&gt;production&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;DeployHub expands upon the Lead Time for Changes and calculates the time lag for each stage of the pipeline.&lt;br&gt;
+This view gives a complete picture of the pace of changes from when the development makes a coding change to
+when that change has been deployed to a pipeline stage.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Deployment Frequency</title>
+      <link>/userguide/integrations/dora/deploymentfrequency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/dora/deploymentfrequency/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The Deployment Frequency is a count of the number of times a &lt;em&gt;Application&lt;/em&gt; is deployed to an &lt;em&gt;Environment&lt;/em&gt; per month.  &lt;em&gt;Application Versions&lt;/em&gt; are grouped together using the &lt;em&gt;Application Base Version&lt;/em&gt;.  This grouping is equivalent to an &lt;em&gt;Application&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;p&gt;In order for DeployHub to track the Deployment Frequency you must record when a deployment happens for an &lt;em&gt;Application Version&lt;/em&gt; and to
+which &lt;em&gt;Environment&lt;/em&gt; it happened for.  The DeployHub CLI can be used to record the deployment.  Using the CLI enables the Workflow tool,
+Jenkins, GitHub, or GitLab, to tell DeployHub when it performs a deployment.&lt;/p&gt;
+&lt;h3 id=&#34;recording-a-deployment-with-the-deployhub-cli&#34;&gt;Recording a deployment with the DeployHub CLI&lt;/h3&gt;
+&lt;p&gt;See &lt;a href=&#34;/userguide/installation-and-support/0-commandlineinterface&#34;&gt;Installing the CLI&lt;/a&gt; for CI/CD Setup instructions.&lt;/p&gt;
+&lt;p&gt;The CLI accepts a json file that defines the &lt;em&gt;Application Version&lt;/em&gt;, &lt;em&gt;Environment&lt;/em&gt; and deployment return code.&lt;br&gt;
+The &lt;em&gt;Application Version&lt;/em&gt; is an existing application version that was created manually or earlier in your pipeline.&lt;br&gt;
+The &lt;em&gt;Environment&lt;/em&gt; the environment, Dev, QA or Prod, that the &lt;em&gt;Application Version&lt;/em&gt; was deployed to.  The deployment
+return code is 0 for successful deployment or 1 for failed deployment.&lt;/p&gt;
+&lt;h4 id=&#34;deployjson-file&#34;&gt;deploy.json File&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;application&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;GLOBAL.Online Store Company.Hipster Store.Test.Hipster Store;Labor Day Sale;1_2_10_2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;environment&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;GLOBAL.Online Store Company.Hipster Store.qa3-windows&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;rc&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;running-the-cli&#34;&gt;Running the CLI&lt;/h4&gt;
+&lt;p&gt;The following variables should be set at the beginning of your Pipeline.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;DHURL&lt;/td&gt;
+&lt;td&gt;URL to DeployHub Login&lt;/td&gt;
+&lt;td&gt;The URL used to access DeployHub.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DHUSER&lt;/td&gt;
+&lt;td&gt;UserID&lt;/td&gt;
+&lt;td&gt;The ID used to log into DeployHub&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DHPASS&lt;/td&gt;
+&lt;td&gt;password&lt;/td&gt;
+&lt;td&gt;The password used to log into DeployHub. This can encrypted based on the CI/CD solution.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DHURL&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;https://deployhub.example.com
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DHUSER&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;Stella99
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DHPASS&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;password
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh deploy --deploydata deploy.json --logdeployment
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;results&#34;&gt;Results&lt;/h4&gt;
+&lt;p&gt;In the DeployHub web UI, navigate to the &lt;em&gt;Application&lt;/em&gt; list view.  You will see that the &lt;em&gt;Application Version&lt;/em&gt; has been deployed to
+&lt;em&gt;Environment&lt;/em&gt; with a &lt;em&gt;Deployment&lt;/em&gt; number.  The &lt;em&gt;Deployment&lt;/em&gt; number is generated by the CLI.&lt;/p&gt;
+&lt;p&gt;The Deployment Frequency report is accessible by selecting an &lt;em&gt;Application Version&lt;/em&gt; in the list view, then menu item &lt;code&gt;Reports -&amp;gt; Deployment Frequency&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/deployment-frequency.png&#34; alt=&#34;Deployment Frequency&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The data time the top and bottom graphs are the same but use different visualizations in order to under the the Deployment Frequency.&lt;br&gt;
+The graphs are interactive, so float-overs and clicking on the labels will highlight and filter the data.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: Lead Time for Changes</title>
+      <link>/userguide/integrations/dora/leadtime/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/userguide/integrations/dora/leadtime/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The Lead Time for Changes is the amount of time from the developer performing a build of a Git commit which creates a &lt;em&gt;Component Version&lt;/em&gt; and when
+that &lt;em&gt;Component Version&lt;/em&gt; is deployed to an _Environment.  &lt;em&gt;Component Versions&lt;/em&gt; as packaged into an &lt;em&gt;Application Version&lt;/em&gt;.  The &lt;em&gt;Application Version&lt;/em&gt; is used in the report since it aggregates all Git commits and deployments up from the &lt;em&gt;Component Versions&lt;/em&gt;.  So the Lead Time will be
+from the most recent Git commit to the most recent deployment to an &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;p&gt;In order for DeployHub to track the Lead Time you must record when a deployment happens for an &lt;em&gt;Application Version&lt;/em&gt; and to
+which &lt;em&gt;Environment&lt;/em&gt; it happened for.  The DeployHub CLI can be used to record the deployment.  Using the CLI enables the Workflow tool,
+Jenkins, GitHub, or GitLab, to tell DeployHub when it performs a deployment.&lt;/p&gt;
+&lt;h3 id=&#34;recording-a-deployment-with-the-deployhub-cli&#34;&gt;Recording a deployment with the DeployHub CLI&lt;/h3&gt;
+&lt;p&gt;See &lt;a href=&#34;/userguide/installation-and-support/0-commandlineinterface&#34;&gt;Installing the CLI&lt;/a&gt; for CI/CD Setup instructions.&lt;/p&gt;
+&lt;p&gt;The CLI accepts a json file that defines the &lt;em&gt;Application Version&lt;/em&gt;, &lt;em&gt;Environment&lt;/em&gt; and deployment return code.&lt;br&gt;
+The &lt;em&gt;Application Version&lt;/em&gt; is an existing application version that was created manually or earlier in your pipeline.&lt;br&gt;
+The &lt;em&gt;Environment&lt;/em&gt; the environment, Dev, QA or Prod, that the &lt;em&gt;Application Version&lt;/em&gt; was deployed to.  The deployment
+return code is 0 for successful deployment or 1 for failed deployment.&lt;/p&gt;
+&lt;h4 id=&#34;deployjson-file&#34;&gt;deploy.json File&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;application&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;GLOBAL.Online Store Company.Hipster Store.Test.Hipster Store;Labor Day Sale;1_2_10_2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;environment&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;GLOBAL.Online Store Company.Hipster Store.qa3-windows&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;rc&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;running-the-cli&#34;&gt;Running the CLI&lt;/h4&gt;
+&lt;p&gt;The following variables should be set at the beginning of your Pipeline.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;DHURL&lt;/td&gt;
+&lt;td&gt;URL to DeployHub Login&lt;/td&gt;
+&lt;td&gt;The URL used to access DeployHub.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DHUSER&lt;/td&gt;
+&lt;td&gt;UserID&lt;/td&gt;
+&lt;td&gt;The ID used to log into DeployHub&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DHPASS&lt;/td&gt;
+&lt;td&gt;password&lt;/td&gt;
+&lt;td&gt;The password used to log into DeployHub. This can encrypted based on the CI/CD solution.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DHURL&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;https://deployhub.example.com
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DHUSER&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;Stella99
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;DHPASS&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;password
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dh deploy --deploydata deploy.json --logdeployment
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;results&#34;&gt;Results&lt;/h4&gt;
+&lt;p&gt;In the DeployHub web UI, navigate to the &lt;em&gt;Application&lt;/em&gt; list view.  You will see that the &lt;em&gt;Application Version&lt;/em&gt; has been deployed to
+&lt;em&gt;Environment&lt;/em&gt; with a &lt;em&gt;Deployment&lt;/em&gt; number.  The &lt;em&gt;Deployment&lt;/em&gt; number is generated by the CLI.&lt;/p&gt;
+&lt;p&gt;The Lead Time For Changes report is accessible by selecting an &lt;em&gt;Application Version&lt;/em&gt; in the list view, then menu item &lt;code&gt;Reports -&amp;gt; Lead Time For Changes&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/leadtime.png&#34; alt=&#34;Lead Time For Changes&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The data is broken out by the number of days it takes for a change to an &lt;em&gt;Application Version&lt;/em&gt; to be deployed to an &lt;em&gt;Environment&lt;/em&gt;.
+The graph is interactive, so float-overs and clicking on the labels will highlight and filter the data.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

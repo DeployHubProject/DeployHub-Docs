@@ -8,7 +8,7 @@ description: >
 
 ## Veracode
 
-DeployHub can associate Veracode Security Scan to your _Component Version_  Associating these metrics enable compliance scoring for _Application Versions_ since the metrics are rolled-up from the _Component Versions_ to the _Application Version_.  See the [Compliance Scorecard](/compliance) for details and screenshots of the Application Compliance Scorecard Report.
+DeployHub can associate Veracode Security Scan to your _Component Version_  Associating these metrics enable compliance scoring for _Application Versions_ since the metrics are rolled-up from the _Component Versions_ to the _Application Version_.  See an Application Compliance Scorecard Report below for details.
 
 ### Example Scorecard Report
 

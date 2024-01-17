@@ -109,7 +109,7 @@
         
         
         &lt;h2 id=&#34;log-in-and-take-a-test-drive&#34;&gt;Log in and Take a Test Drive&lt;/h2&gt;
-&lt;p&gt;When you &lt;a href=&#34;https://www.deployhub.com/register-for-team/?&#34;&gt;signed up to use DeployHub SaaS&lt;/a&gt;, you were asked for basic information. Your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a &lt;em&gt;Subdomain&lt;/em&gt; under your Company &lt;em&gt;Domain&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;When you &lt;a href=&#34;https://www.deployhub.com/free-saas-software-supply-chain-security-tool/&#34;&gt;signup for DeployHub Team&lt;/a&gt;, you are asked for basic information, your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a &lt;em&gt;Subdomain&lt;/em&gt; under your Company &lt;em&gt;Domain&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;DeployHub is accessible through the following url:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://console.deployhub.com/dmadminweb/Home&#34;&gt;https://console.deployhub.com/dmadminweb/Home&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Login using the UserID and Password you used when you signed up for DeployHub.&lt;/p&gt;
@@ -125,7 +125,7 @@
 &lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;Define Your &lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;step-1---deploy-the-hipster-store-application&#34;&gt;Step 1 - Deploy the Hipster Store Application&lt;/h3&gt;
-&lt;p&gt;To get started, &lt;a href=&#34;https://www.deployhub.com/free-team-sign-up/&#34;&gt;sign up for DeployHub&lt;/a&gt;. Once you signed up, you will first deploy the Hipster Store &lt;em&gt;Application Base Version&lt;/em&gt; to the Hipster Store &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;To get started, &lt;a href=&#34;https://www.deployhub.com/free-saas-software-supply-chain-security-tool/&#34;&gt;sign up for DeployHub&lt;/a&gt;. Once you login, you will have the opportunity to review the Hipster Store &lt;em&gt;Application Base Version&lt;/em&gt;, &lt;em&gt;Component Versions&lt;/em&gt; and the Hipster Store &lt;em&gt;Environment&lt;/em&gt;.  These are basic concepts important to understand. All security and DevOps attributes that DeployHub tracks are managed based on &lt;em&gt;Component Versions&lt;/em&gt;, &lt;em&gt;Application Versions&lt;/em&gt;, and &lt;em&gt;Environments&lt;/em&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Select the &lt;em&gt;Application&lt;/em&gt; Menu option from the left side of the DeployHub Home panel. This will bring you to a List View.&lt;/li&gt;
 &lt;li&gt;Checkbox the &amp;ldquo;Hipster Store;July 4th Sale.&amp;rdquo; This is the Hipster Store &lt;em&gt;Application Base Version&lt;/em&gt; and it has not been previously deployed.&lt;/li&gt;
