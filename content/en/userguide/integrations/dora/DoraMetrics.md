@@ -3,13 +3,12 @@ title: "DORA Metrics Reports"
 linkTitle: "DORA Metrics Reports"
 weight: 30
 description: >
-  Aggregated DORA Metrics for coupled and decoupled architectures
+  Aggregated DORA Metrics for Coupled and Decoupled Architectures
 ---
 
 ## DevOps Research and Assessment (DORA)
 
-When DeployHub is integrated into your CI/CD pipeline, it can capture metrics for DORA reporting.  
-The two DORA metrics that DeployHub captures are Deployment Frequency and Lead Time for Changes.
+When DeployHub is integrated into your CI/CD pipeline, it can capture metrics for DORA reporting. The two DORA metrics that DeployHub captures are Deployment Frequency and Lead Time for Changes.
 
 ### Deployment Frequency
 
