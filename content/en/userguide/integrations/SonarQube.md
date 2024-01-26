@@ -14,11 +14,11 @@ DeployHub can associate SonarQube Project Status, Bugs, Code Smells, and Violati
 
 ![Scorecard with SonarQube Metrics](/scorecard-complete-sq.png)
 
-### Getting metrics from SonarQube to DeployHub
+### Getting Metrics from SonarQube to DeployHub
 
-The DeployHub CI/CD command line program is used to associate Sonar metrics to the DeployHub _Component Version_.  See [CLI Installation](https://docs.deployhub.com/userguide/installation-and-support/0-commandlineinterface/) for instructions on basic setup in your CI/CD pipeline.
+DeployHub uses the Command Line Interface from the [Ortelius Open Source project](https://www.ortelius.io) incubating at the Linux Foundation. The Ortleius CI/CD command line program is used to associate Sonar metrics to the DeployHub _Component Version_.  See [CLI Installation](https://docs.deployhub.com/userguide/installation-and-support/0-commandlineinterface/) for instructions on basic setup in your CI/CD pipeline.
 
-Restful API calls are needed in your pipeline to grab the metrics from Sonar.  Shell commands using curl and jq allow us to parse the data returned from Sonar and format it for storage with the _Component Version_.  The `component.toml` file used by the DeployHub CLI is appended to with each new metric and upload to DeployHub at the end of the pipeline.  See [CI-CD Intergration](https://docs.deployhub.com/userguide/integrations/ci-cd_integrations/) for more details.
+Restful API calls are needed in your pipeline to grab the metrics from Sonar.  Shell commands using curl and jq allow us to parse the data returned from Sonar and format it for storage with the _Component Version_.  The `component.toml` file used by the DeployHub CLI is appended to with each new metric and upload to DeployHub at the end of the pipeline.  See [CI-CD Integration](https://docs.deployhub.com/userguide/integrations/ci-cd_integrations/) for more details.
 
 > Note: Your codebase must be scanned with SonarQube and the results uploaded to the Sonar Server.  Sonar RestAPI calls will be made to fetch the metrics from the stored scanned results.  Also, a loop to recheck maybe needed since there can be delay between the scan and publishing the results.  See _SonarQube Project Status_ below for an example that includes the loop.
 
@@ -26,7 +26,7 @@ Restful API calls are needed in your pipeline to grab the metrics from Sonar.  S
 
 | Variable       | Value                                                                                                                   |
 |----------------|-------------------------------------------------------------------------------------------------------------------------|
-| SORAR_URL      | URL for SonarQube Server.  For example: <https://sonar.example.com>                                                     |
+| SORAR_URL      | URL for SonarQube Server.  For example: `https://sonar.example.com`                                                     |
 | SONAR_ID       | Userid used to login to SonarQube                                                                                       |
 | SONAR_PASS     | Password for the userid                                                                                                 |
 | PROJECTKEY     | Name of the project in SonarQube                                                                                        |
@@ -54,7 +54,7 @@ echo '    SonarProjectStatus = "$Check"' >> ${COMPONENT_TOML}
 
 | Variable       | Value                                                                                                                                                                                                     |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| SORAR_URL      | URL for SonarQube Server.  For example: <https://sonar.example.com>                                                                                                                                       |
+| SORAR_URL      | URL for SonarQube Server.  For example: `https://sonar.example.com`                                                                                                                                       |
 | SONAR_ID       | Userid used to login to SonarQube                                                                                                                                                                         |
 | SONAR_PASS     | Password for the userid                                                                                                                                                                                   |
 | COMPONENT_NAME | Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube. |
@@ -70,7 +70,7 @@ echo '    SonarBugs = "%{SONAR_BUGS}"'  >> ${COMPONENT_TOML}
 
 | Variable       | Value                                                                                                                                                                                                     |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| SORAR_URL      | URL for SonarQube Server.  For example: <https://sonar.example.com>                                                                                                                                       |
+| SORAR_URL      | URL for SonarQube Server.  For example: `https://sonar.example.com`                                                                                                                                       |
 | SONAR_ID       | Userid used to login to SonarQube                                                                                                                                                                         |
 | SONAR_PASS     | Password for the userid                                                                                                                                                                                   |
 | COMPONENT_NAME | Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube. |
@@ -86,7 +86,7 @@ echo '    SonarCodeSmells = "%{SONAR_CODESMELLS}"'  >> ${COMPONENT_TOML}
 
 | Variable       | Value                                                                                                                                                                                                     |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| SORAR_URL      | URL for SonarQube Server.  For example: <https://sonar.example.com>                                                                                                                                       |
+| SORAR_URL      | URL for SonarQube Server.  For example: `https://sonar.example.com`                                                                                                                                       |
 | SONAR_ID       | Userid used to login to SonarQube                                                                                                                                                                         |
 | SONAR_PASS     | Password for the userid                                                                                                                                                                                   |
 | COMPONENT_NAME | Name of the component in SonarQube.  This name will typically be the same as the name of the component being built, but the Sonar Scan maybe uploaded to an alternate name.  Use the name from SonarQube. |
