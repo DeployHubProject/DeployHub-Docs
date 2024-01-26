@@ -31,4 +31,4 @@ The Ortelius CLI Python script interacts with the Ortelius and DeployHub REST AP
 
 ## Up to Date Usage Info and Installation Instructions
 
- Refer to the [Ortelius GitHub CLI Documentation](https://github.com/ortelius/cli/blob/main/doc/dh.md) for [installation instructions](https://github.com/ortelius/cli) and the latest usage and parameters.
+ Refer to the [Ortelius GitHub CLI Documentation](https://github.com/ortelius/ortelius-cli/blob/main/doc/dh.md) for [installation instructions](https://github.com/ortelius/ortelius-cli) and the latest usage and parameters.
