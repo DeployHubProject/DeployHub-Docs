@@ -84,7 +84,7 @@ _Components_ are artifacts, binaries, database SQL, files or any deployable arti
 7) View the Blast Radius of a _Component_. The Blast Radius shows you what 'logical' applications are impacted by a vulnerability, anomaly, or update. From the _Component_ detail screen, scroll to the bottom to see the Dependency Map. You will see this map shows the versions of the Ortelius "logical" _Application_ that are using this version of the _Component_. 
 
 
-![Component Map](/userguide/images/newvulnerabilities.jpg)
+![Component Map](/userguide/images/component-map.jpg)
 
 <br>
 
@@ -124,7 +124,7 @@ Results:
 - List of OS packages from the SBOM report
 - List of current vulnerabilities 
 
-![Application details](/userguide/images/app-details.jpg)
+![Application details](/userguide/images/application-detials.jpg)
 
 
 6) View the _Applications_ overall security compliance. This report shows the security activities that are associated with the DevSecOps pipeline. 
