@@ -1,15 +1,15 @@
 ---
-title: "Build Your Environments"
-linkTitle: "Build Your Environments"
+title: "Associate Environments"
+linkTitle: "Associate Environments"
 weight: 10
 description: >
-  How to Add Environments for Deployments
+  Associate Environments to Applications
 ---
 ## Intro to _Environments_
 
-_Environments_ represent where you execute your _Application_ and _Components_ such as a Kubernetes Cluster for Dev, Test or Production. An _Environment_ could be a virtual cloud or physical datacenter.  _Applications_ run in many _Environments_ to support your Pipeline states.
-
-Note: First define [_Endpoints_](/userguide/first-steps/2-define-endpoints/) to be assigned before you can define an _Environment_.
+_Environments_ represent where you execute your _Application_ or where your _Application_ is published. An _Environment_ could be a virtual cloud or artifact repository. 
+ 
+Note: If you are using DeployHub's internal deployment engine you will first define [_Endpoints_](/userguide/profeatures/deployments/2-define-endpoints/) to be assigned before you can define an _Environment_. If you are using your own deployment process, such as Helm, _Endpoints_ are not needed. 
 
 ### _Environments_ and _Domains_
 

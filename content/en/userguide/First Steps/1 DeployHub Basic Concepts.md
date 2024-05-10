@@ -37,7 +37,7 @@ Following is a description of each Object and their attributes.
 
 ### _Domain_ Object
 
-The [_Domain_ Object](/userguide/customizations/2-define-your-functions-and-procedures/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Subdomains_. _Subdomains_ inherit the parents properties, _Tasks_ and access.
+The [_Domain_ Object](/userguide/first-steps/2-defining-domains/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Subdomains_. _Subdomains_ inherit the parents properties, _Tasks_ and access.
 
 Your _Components_, are cataloged based on _Domains_ and _Subdomains_ which you define. _Domains_ catalog microservices that solve the same 'problem sets.' In a similar way, _Applications_ are assigned to their own _Domain_. _Environments_ and _Endpoints_ are associated to _Domains_ that are managing _Applications_.
 
@@ -68,7 +68,7 @@ The following properties can be accessed on the _Domain_ object:
 
 ### _Application_ Object
 
-[_Applications_](/userguide/packaging-applications/) are a collection of _Components_ that are released as a single software solution. You define an _Application_ by associating the _Components_ it will consume. When you initially define an _Application_ it is referenced as the _Application Base Version._ When an underlying _Component_ impacts the _Application_ a new  _Application Version_ is created. _Applications_ are organized by a _Domain_.
+[_Applications_](/userguide/first-steps/packaging-applications/) are a collection of _Components_ that are released as a single software solution. You define an _Application_ by associating the _Components_ it will consume. When you initially define an _Application_ it is referenced as the _Application Base Version._ When an underlying _Component_ impacts the _Application_ a new  _Application Version_ is created. _Applications_ are organized by a _Domain_.
 
 - **_Application Base Version_** : Defines the software product in terms of _Components_, _Attributes,_ and assigned _Environments_.
 
@@ -98,7 +98,7 @@ An _Application_ has the following properties:
 
 ### _Component_ Object
 
-DeployHub manages artifacts and other reusable objects as [_Components_](/userguide/publishing-components/). _Components_ are consumed by _Applications_. By assigning _Components_ to _Applications_ you track a 'logical' view of your software solution. In a monolithic approach, this happens at the software compile and link step. In cloud-native architecture, _Components_ are loosely coupled and linked at run-time. Defining _Components_ to _Applications_ allows DeployHub to aggregate security data to the _Application_ level and produce _Application_ security reports such as SBOMs in a decoupled architecture. 
+DeployHub manages artifacts and other reusable objects as [_Components_](/userguide/first-steps/publishing-components/). _Components_ are consumed by _Applications_. By assigning _Components_ to _Applications_ you track a 'logical' view of your software solution. In a monolithic approach, this happens at the software compile and link step. In cloud-native architecture, _Components_ are loosely coupled and linked at run-time. Defining _Components_ to _Applications_ allows DeployHub to aggregate security data to the _Application_ level and produce _Application_ security reports such as SBOMs in a decoupled architecture. 
 
 _Components_ change over time, and so DeployHub contains _Component Base Versions_ and _Component Versions_ like those of _Application Base Versions_ and _Application Versions._ And like _Applications_, _Components_ are associated to a Domain.
 
@@ -198,17 +198,37 @@ The _Change Request_ object has the following properties:
 
  The [_Data Source_](/userguide/customizations/2-data-sources/) object  communicates with various sources of information such as databases, HTTP servers, FTP servers, etc., and can be used to connect to other DevOps tools as needed.
 
+### _Group_ Object
+
+The [_Group_ Object](/userguide/profeatures/5-pro-groups/) represents a collection of _Users_ with the same _Domain_ and security access. (This is a DeployHub Pro Feature.)
+
+The _Group_ Object has the following properties:
+
+| Property | Description                                                           |
+|----------|-----------------------------------------------------------------------|
+| id       | A unique identifier as used in the database.                          |
+| name     | _Group_ Name.                                                         |
+| kind     | Identifies whether this is a _User_ or a _Group_.                     |
+| fqdomain | Fully qualified _Domain_ name.                                        |
+| email    | The _Group's_ email address.                                          |
+| creator  | _User_ or _Group_ Object representing who created this Group.         |
+| modifier | _User_ or _Group_ Object representing who last modified this _Group_. |
+| ctime    | _Date_ Object representing the date/time it was created.              |
+| mtime    | _Date_ Object representing the date/time it was last modified.        |
+| owner    | _User_ or _Group_ that owns the object.                               |
+
+
 ## Objects Used by the Internal Deployment Engine
 
 If your organization requires a standardized method of doing deployments, the DeployHub internal deployment engine can be configured for this use. The internal deployment engine is agentless and requires a [reverse proxy.](/userguide/profeatures/deployments/0-saas-and-reverse-proxy/) For more information on the internal deployment engine [read the deployment chapter.](/userguide/profeatures/deployments/)
 
 ### _Release_ Object
 
-A [_Release_](/userguide/profeatures/5-application-releases/) is only available in **DeployHub Pro**. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a 'Release Train.' Releases are used as part of DeployHub's internal deployment engine and are not required for managing Security Intelligence. 
+A [_Release_](/userguide/profeatures/deployments/5-application-releases/) is only available in **DeployHub Pro**. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a 'Release Train.' Releases are used as part of DeployHub's internal deployment engine and are not required for managing Security Intelligence. 
 
 ### _Credential_ Object
 
-The [_Credential_ Object](/userguide/first-steps/2-define-your-credentials/) contains the logon and password needed to access _EndPoints_ and external repositories like Git or Quay. _Credentials_ are used by the internal deployment engine, but not required for Security Intelligence gathering. 
+The [_Credential_ Object](/userguide/profeatures/deployments/2-define-your-credentials/) contains the logon and password needed to access _EndPoints_ and external repositories like Git or Quay. _Credentials_ are used by the internal deployment engine, but not required for Security Intelligence gathering. 
 
 The _Credential_ Object has the following properties:
 
@@ -258,7 +278,7 @@ The _DropZone File_ Object has the following properties:
 
 ### _Endpoint_ Object
 
-The [_Endpoint_ Object](/userguide/first-steps/2-define-endpoints/) (Local Helm Host, container, VM/Cloud Image) represents where a deployment will be sent. _Endpoints_ are assigned to an _Environment_.
+The [_Endpoint_ Object](/userguide/profeatures/deployments/2-define-endpoints/) (Local Helm Host, container, VM/Cloud Image) represents where a deployment will be sent. _Endpoints_ are assigned to an _Environment_.
 
 ### _Endpoint_ Mapping
 
@@ -312,21 +332,3 @@ The _User_ Object represents a User in DeployHub. It has the following propertie
 | mtime        | Date            | _Date_ Object representing the date/time the User was last modified.                            |
 | owner        | Object          | _User_ or _Group_ that owns the _User_                                                          |
 
-### _Group_ Object
-
-The _Group_ Object represents a collection of _Users_ with the same _Domain_ and security access. (This is a DeployHub Pro Feature.)
-
-The _Group_ Object has the following properties:
-
-| Property | Description                                                           |
-|----------|-----------------------------------------------------------------------|
-| id       | A unique identifier as used in the database.                          |
-| name     | _Group_ Name.                                                         |
-| kind     | Identifies whether this is a _User_ or a _Group_.                     |
-| fqdomain | Fully qualified _Domain_ name.                                        |
-| email    | The _Group's_ email address.                                          |
-| creator  | _User_ or _Group_ Object representing who created this Group.         |
-| modifier | _User_ or _Group_ Object representing who last modified this _Group_. |
-| ctime    | _Date_ Object representing the date/time it was created.              |
-| mtime    | _Date_ Object representing the date/time it was last modified.        |
-| owner    | _User_ or _Group_ that owns the object.                               |
