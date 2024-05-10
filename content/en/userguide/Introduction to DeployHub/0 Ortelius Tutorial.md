@@ -43,45 +43,65 @@ _Components_ are artifacts, binaries, database SQL, files or any deployable arti
 
 ### Take a Tour of _Components_
 
-1) From the left hand side menu, select "_Components_". Using the filter option, choose _GLOBAL.Open Source.Linux Foundation.CDF.Ortelius_ to view all of the _Components_ consumed by the Ortelius open source project. 
+<strong>1) View Components</strong>
+
+From the left hand side menu, select "_Components_". Using the filter option, choose _GLOBAL.Open Source.Linux Foundation.CDF.Ortelius_ to view all of the _Components_ consumed by the Ortelius open source project. 
 
 ![Ortelius Domain](/userguide/images/OrteliusDomainSelection.jpg)
 
-<br>
+<p><br></p>
 
-2) Notice that the first item in the list is _ms-compitem-crud;main_. "Main" indicates the base version of this _Component_. The subsequent items in the list shows the changes from the "Main" branch.
+<strong>2) Component Lists </strong>
+
+Notice that the first item in the list is _ms-compitem-crud;main_. "Main" indicates the base version of this _Component_. The subsequent items in the list shows the changes from the "Main" branch.
 
 ![Components](/userguide/images/OrteliusComponentMain.jpg)
 
-<br>
+<p><br></p>
 
-3) Generate a Comparison Report between two _Component_ versions. Checkmark any two versions and select the _Compare_ option from the list menu  to see their differences.
+<strong> 3) Historical Comparisons</strong>
+
+Generate a Comparison Report between two _Component_ versions. Checkmark any two versions and select the _Compare_ option from the list menu  to see their differences.
 
 ![Compare Components](/userguide/images/componentlist.jpg)
 
-4) View a _Component_ Software Bill of Materials (SBOM) Report. When your _Component_ build executes, Ortelius will generate an Software Bill of Material using the tool of your choice. DeployHub then cross references the known vulnerabilities to the packages. The report shows a timestamp to record the point in time the vulnerabilities were found. This is a static view of the known vulnerabilities at build time. 
+<p><br></p>
+
+<strong> 4) Software Bill of Materials</strong>
+
+View a _Component_ Software Bill of Materials (SBOM) Report. When your _Component_ build executes, Ortelius will generate an Software Bill of Material using the tool of your choice. DeployHub then cross references the known vulnerabilities to the packages. The report shows a timestamp to record the point in time the vulnerabilities were found. This is a static view of the known vulnerabilities at build time. 
 
 ![Component SBOM](/userguide/images/SBOM-component.jpg)
 
+<p><br></p>
 
-5) Sort Components by "Completed." "Completed" indicates the _Component_ has been deployed to end users. From the _Component_ list view, click on "Completed" to sort. Select a _Component_ in the completed list to view its Security Posture and current vulnerabilities. DeployHub provides updates to vulnerabilities every 30 minutes. 
+<strong> 5) Sorting Components</strong>
+
+Sort Components by "Completed." "Completed" indicates the _Component_ has been deployed to end users. From the _Component_ list view, click on "Completed" to sort. Select a _Component_ in the completed list to view its Security Posture and current vulnerabilities. DeployHub provides updates to vulnerabilities every 30 minutes. 
 
 ![CompletedComponents](/userguide/images/completed.jpg)
 
+<p><br></p>
 
+<strong>6) Component Details</strong>
 
-6) View the _Components_ details including the OpenSSF Scorecard Results, current known vulnerabilities, and Overall _Component_ Security Posture. 
+View the _Components_ details including the OpenSSF Scorecard Results, current known vulnerabilities, and Overall _Component_ Security Posture. 
 
 ![Components Scorecard](/userguide/images/componentOpenSSFSC.jpg)
 
+<p><br></p>
 
 ![Components Swagger](/userguide/images/readme-swagger.jpg)
 
+<p><br></p>
 
 ![Components Vulnerabilities](/userguide/images/newvulnerabilities.jpg)
 
+<p><br></p>
 
-7) View the Blast Radius of a _Component_. The Blast Radius shows you what 'logical' applications are impacted by a vulnerability, anomaly, or update. From the _Component_ detail screen, scroll to the bottom to see the Dependency Map. You will see this map shows the versions of the Ortelius "logical" _Application_ that are using this version of the _Component_. 
+<strong>7) Blast Radius </strong>
+
+View the Blast Radius of a _Component_. The Blast Radius shows you what 'logical' applications are impacted by a vulnerability, anomaly, or update. From the _Component_ detail screen, scroll to the bottom to see the Dependency Map. You will see this map shows the versions of the Ortelius "logical" _Application_ that are using this version of the _Component_. 
 
 
 ![Component Map](/userguide/images/component-map.jpg)
@@ -96,46 +116,62 @@ An _Application_ is a collection of _Components_ that make up a complete softwar
 
 ### Take a Tour of _Applications_
 
-1) From the left hand side menu, select "_Applications"_. If you have completed the above steps, you will still be in the _GLOBAL.Open Source.Linux Foundation.CDF.Ortelius_ Domain. 
+<strong>1) Application Lists </strong>
 
-
-2) Notice that the first item in the list is _ortelius_ without a assigned Version number. This indicates the main branch of the Ortelius _Application_. Select "Completed" from the list menu options to sort by all versions of Ortelius that have been released. 
+From the left hand side menu, select "_Applications"_. If you have completed the above steps, you will still be in the _GLOBAL.Open Source.Linux Foundation.CDF.Ortelius_ Domain. Notice that the first item in the list is _ortelius_ without a assigned Version number. This indicates the main branch of the Ortelius _Application_. Select "Completed" from the list menu options to sort by all versions of Ortelius that have been released. 
 
 ![Application List](/userguide/images/app-list.jpg)
 
-<br>
+<p><br></p>
 
-3) Generate a Comparison Report between two _Application_ versions. Checkmark any two versions and select the _Compare_ option from the list menu  to see their differences.
+<strong> 2) Compare Versions </strong>
+
+Generate a Comparison Report between two _Application_ versions. Checkmark any two versions and select the _Compare_ option from the list menu  to see their differences.
 
 ![Compare Applications](/userguide/images/app-compare-select.jpg)
+
+<p><br></p>
 
 Results:
 
 ![Compare Application Results](/userguide/images/app-compare.jpg)
 
+<p><br></p>
 
-4) View an aggregated _Application_ Software Bill of Material report. An _Application_ SBOM is a report that shows all of the _Application's_ _Component_ SBOM data, with duplicates removed. When a _Component_ is updated, DeployHub automatically creates a new version of all _Applications_ consuming the _Component_, with a new aggregated SBOM. DeployHub then cross references all of the _Application's_ _Components_ packages with the known vulnerabilities. The report shows a timestamp to record the point in time the vulnerabilities were found. This is a static view of the known vulnerabilities at build time for the _Application_ with SBOM details. If you are required to produce an SBOM for governance purposes, you can provide your consumers with access to the DeployHub platform allowing them to 'self serve' and track your _Application's_ security posture.  
+<strong>4) Aggregated Software Bill of Materials</strong>
+
+View an aggregated _Application_ Software Bill of Material report. An _Application_ SBOM is a report that shows all of the _Application's_ _Component_ SBOM data, with duplicates removed. When a _Component_ is updated, DeployHub automatically creates a new version of all _Applications_ consuming the _Component_, with a new aggregated SBOM. DeployHub then cross references all of the _Application's_ _Components_ packages with the known vulnerabilities. The report shows a timestamp to record the point in time the vulnerabilities were found. This is a static view of the known vulnerabilities at build time for the _Application_ with SBOM details. If you are required to produce an SBOM for governance purposes, you can provide your consumers with access to the DeployHub platform allowing them to 'self serve' and track your _Application's_ security posture.  
+
+<p><br></p>
 
 ![Export SBOM](/userguide/images/exportSBOM.jpg)
 
+<p><br></p>
 
-5) View the _Application_ details including:
+<strong>5) Application Details</strong>
+
+View the _Application_ details including:
 - List of _Components_ the _Application Consumes
 - List of OS packages from the SBOM report
 - List of current vulnerabilities 
 
 ![Application details](/userguide/images/application-detials.jpg)
 
+<p><br></p>
 
-6) View the _Applications_ overall security compliance. This report shows the security activities that are associated with the DevSecOps pipeline. 
+<strong>6) Application Security Posture</strong>
+
+View the _Applications_ overall security posture. This report shows the security activities that are associated with the DevSecOps pipeline. 
 
 ![Compliance Run](/userguide/images/run-compliance.jpg)
+
+<p><br></p>
 
 Results:
 
 ![Compliance Results](/userguide/images/compliance-results.jpg)
 
-
+<p><br></p>
 
 Learn More at  [Packaging _Applications_](/userguide/packaging-applications/)
 
@@ -146,14 +182,21 @@ DeployHub allows you to search your entire inventory of _Components_ for open-so
 
 ### Take a Tour of Open-Source Inventory
 
-1) Search for Package using the "Package Search" menu option from the _Application_ list view. 
+<strong> 1) Open Source Package Search</strong>
+
+Search for Package using the "Package Search" menu option from the _Application_ list view. 
 
 ![Package Search Menu](/userguide/images/packagesearchmenu.jpg)
 
+<p><br></p>
 
-2) Enter the package you wish to search for such as "Spring." 
+<strong> 2) Enter the Package Name</strong>
+
+Enter the package you wish to search for such as "Spring." 
 
 ![Package Search Menu](/userguide/images/spring-search.jpg)
+
+<p><br></p>
 
 Results:
 
@@ -173,5 +216,3 @@ There are many other features of DeployHub that we did not get to cover on this 
 Another important topic is integrating with your CD pipeline.  See [Using DeployHub with CI/CD](/userguide/integrations/ci-cd_integrations/) on how you can include gathering all DevSecOps data.
 
 We will leave you with how to setup DeployHub for your installation.  See [First Steps](/userguide/first-steps/), for getting your setup completed. Once you have your setup complete you can start continuously gathering your software supply chains security intelligence. 
-
-
