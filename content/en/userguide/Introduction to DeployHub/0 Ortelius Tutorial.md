@@ -1,9 +1,9 @@
 ---
-title: "Ortelius Tutorial"
-linkTitle: "Ortelius Tutorial"
+title: "Free SaaS Signup and Tutorial"
+linkTitle: "Free SaaS Signup and Tutorial"
 weight: 3 
 description: >
-  Explore Ortelius Domains, Components, Applications, Open-Source Inventory, and Environments.
+  Explore Continuous Security Intelligence
 ---
 This tutorial uses the Ortelius project to walk you through the basic concepts of Continuous Security Intelligence. DeployHub Team is based on the [Ortelius](https://ortelius.io) Open-Source project, incubating at the [Continuous Delivery Foundation](https://cd.foundation). This free SaaS version of Ortelius is hosted by DeployHub, and is also referred to as DeployHub Team. 
 

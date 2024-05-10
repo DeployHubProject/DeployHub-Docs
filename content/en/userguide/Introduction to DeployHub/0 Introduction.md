@@ -74,7 +74,7 @@ DeployHub versions both _Components_ and 'logical' _Applications_.  When version
 
 **Agentless Software Releases:** If you do not currently use an automated deployment solution, DeployHub includes an agentless release engine for deploying _Components_ and _Applications_ across your _Environments_. Alternatively, DeployHub can integrate with your existing deployment solutions such as Helm, Spinnaker or any release solution with APIs or CLIs.  
 
-## Agentless Delivery
+## DeployHub's Agentless Delivery
 
 If you do not have a centralized solution for automating deployments, DeployHub can help. DeployHub Pro includes a deployment engine for pushing _Components_ to your _Endpoints_ (Clusters, Cloud, etc.) using an agentless architecture. The deployment engine can support containers, DB Updates, and file updates (.dll, .jar, Apex files, Lamda functions, Terraform, z/OS objects, etc.)
 
@@ -102,7 +102,7 @@ Our free version is based upon the [Ortleius](https://www.Ortelius.io/) open sou
 
 ### DeployHub Pro
 
-For additional security features, agentless deployments and support, DeployHub Pro includes extended Users and Group access controls as well as more granular _Domains_.
+For additional security features and support, DeployHub Pro includes agentless deployments, extended Users and Group access controls as well as more granular _Domains_.
 
 Unique to DeployHub Pro are "Divisional Domains." These _Domains_ allow you to expand and model your environments based on your organizational top-down structure. It also gives you the ability to restrict microservice read/write access to only certain Groups of Users.
 

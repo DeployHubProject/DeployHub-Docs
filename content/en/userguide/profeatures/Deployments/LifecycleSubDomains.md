@@ -1,9 +1,9 @@
 ---
-title: "DeployHub and Continuous Delivery"
-linkTitle: "DeployHub and Continuous Delivery"
+title: "Deployment Pre and Post Actions"
+linkTitle: "DeployHub Pre and Post Actions"
 weight: 42
 description: >
-  Using DeployHub with your Continuous Delivery solution. 
+  Using Pre and Post Actions for Deployments 
 ---
 ## Introduction to Life Cycle _Subdomains_
 

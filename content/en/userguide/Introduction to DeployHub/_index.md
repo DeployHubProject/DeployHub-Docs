@@ -1,7 +1,7 @@
 ---
-title: "Welcome"
-linkTitle: "Welcome"
+title: "Free SaaS Signup"
+linkTitle: "Free SaaS Signup"
 weight: 1
 description: >
-  Introduction to DeployHub version 10.0 and the Hipster Store Example
+  Free SaaS Signup for Continuous Security Intelligence
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Executing Deployments"
 linkTitle: "Executing Deployments"
-weight: 6
+weight: 20
 description: >
   Deploying _Applications_ and _Components_.
 ---

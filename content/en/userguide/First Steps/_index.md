@@ -1,9 +1,9 @@
 ---
-title: "First Steps"
-linkTitle: "First Steps"
+title: "Getting Started"
+linkTitle: "Getting Started"
 weight: 12
 description: >
-  Steps for setting Up Your Domain Catalog and Defining Environments, Endpoints, Credentials, and Repositories.
+  Steps for setting up Domains, Applications, Components, and Environments
 ---
 
 

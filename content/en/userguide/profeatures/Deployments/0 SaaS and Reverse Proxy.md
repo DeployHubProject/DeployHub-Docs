@@ -1,25 +1,11 @@
 ---
-title: "SaaS Sign-up and Reverse Proxy for Deployments"
-linkTitle: "SaaS Sign-up and Reverse Proxy for Deployments"
+title: "Reverse Proxy for Deployments"
+linkTitle: "Reverse Proxy for Deployments"
 weight: 1
 description: >
-  How to Sign up 
+  Configuration the Reverse Proxy for Deployments
 ---
-## SaaS Sign-up Process and the Reverse Proxy
 
-When you [signed up to use DeployHub SaaS](https://www.deployhub.com/register-for-team/?), you were asked for basic information. Your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a _Subdomain_ under your Company _Domain_.
-
-**Note:**  If another user signs up with the same Company name, they will be informed that they must contact the Administrator for access to the DeployHub account. The Administrator is the first person who signed up to DeployHub with that Company name.
-
- DeployHub is accessible through the following url:
-
-[https://console.deployhub.com/dmadminweb/Home](https://console.deployhub.com/dmadminweb/Home)
-
-Login using the UserID and Password you used when you signed up for DeployHub.
-
-### Take a Test Drive of the Online Store Company -  Hipster Store Tutorial
-
-The Hipster Store Tutorial is provided to give you a review of _Domains_, _Components_, and _Applications_ and will help you understand DeployHub basic concepts. See [Hipster Store Tutorial](/userguide/introduction-to-deployhub/0-hipster-store-tutorial/) for more information.  
 
 ## Installing the Reverse Proxy for Managing Deployments using DeployHub
 
