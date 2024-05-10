@@ -8,9 +8,9 @@ description: >
 
 ## Introduction
 
-DeployHub's core Objects are _Domains_, _Applications_, _Components_, _Environments_ and _Endpoints_. These Objects catalog, track, and version independently deployable objects, maps their relationships, and releases them to clusters, cloud, or physical data centers.
+DeployHub's core Objects are _Domains_, _Applications_, _Components_, _Environments_ and _Endpoints_. These Objects catalog, track, and version independently released objects with their security metadata, maps their relationships, and tracks them to clusters, cloud, or physical data centers. 
 
-_Domains_ are core to DeployHub's management of microservices.  _Domains_ are hierarchical and pass inheritance from parent to siblings. For this reason, _Components_ can be shared across the _Subdomains_. The hierarchical structure of _Domains_ provides a high-level of control and management over how microservices are shared and reused.
+_Domains_ are core to DeployHub's cataloging of decoupled _Components_.  _Domains_ are hierarchical and pass inheritance from parent to siblings. For this reason, _Components_ can be shared across the _Subdomains_. The hierarchical structure of _Domains_ provides a high-level of control and management over how _Components_ are shared and reused.
 
 ![Example of Domains, Applications, Components and Environments](/userguide/images/OnlineStore-Domains.jpg)
 
@@ -80,9 +80,9 @@ The _Change Request_ object has the following properties:
 
 ## _Component_ Object
 
-DeployHub manages microservices and other reusable objects as [_Components_](/userguide/publishing-components/). These are assigned to an _Application_ even though they are managed independently. By assigning _Components_ to _Applications_ you track a 'logical' view of your software solution. In a monolithic approach, this happened at the software compile and link step. In microservices though, they are loosely coupled and linked at run-time. Defining _Components_ to _Applications_ puts the _Application_ back in the picture, even if it is only a 'logical' view.
+DeployHub manages artifacts and other reusable objects as [_Components_](/userguide/publishing-components/). _Components_ are consumed by _Applications_. By assigning _Components_ to _Applications_ you track a 'logical' view of your software solution. In a monolithic approach, this happens at the software compile and link step. In cloud-native architecture, _Components_ are loosely coupled and linked at run-time. Defining _Components_ to _Applications_ puts the _Application_ back in the picture, even if it is a 'logical' view.
 
-If you are an API or microservice developer, this will be where you do most of your work. However, application developers may also define _Components_ for a specific _Application_. _Components_ are microservices (containers), Database updates, or other deployable objects. By tracking the low level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across team.
+If you are an API or 'feature' developer, this will be where you do most of your work. However, application developers may also define _Components_ for a specific _Application_. _Components_ are artifacts (containers), Database updates, or other deployable objects. By tracking the low level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across team.
 
 _Components_ change over time, and so DeployHub contains _Component Base Versions_ and _Component Versions_ like those of _Application Base Versions_ and _Application Versions._ And like _Applications_, _Components_ are associated to a Domain.
 
