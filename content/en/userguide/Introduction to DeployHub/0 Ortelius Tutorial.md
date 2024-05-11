@@ -5,19 +5,28 @@ weight: 3
 description: >
   Explore Continuous Security Intelligence
 ---
-This tutorial uses the Ortelius project to walk you through the basic concepts of Continuous Security Intelligence. DeployHub Team is based on the [Ortelius](https://ortelius.io) Open-Source project, incubating at the [Continuous Delivery Foundation](https://cd.foundation). This free SaaS version of Ortelius is hosted by DeployHub, and is also referred to as DeployHub Team. 
+This tutorial uses the Ortelius _Application_ to walk you through the basic concepts of Continuous Security Intelligence. [Ortelius](https://ortelius.io) is a open-source project incubating at the [Continuous Delivery Foundation](https://cd.foundation). This free SaaS version of Ortelius is hosted and sponsored by DeployHub Team. 
+
+![Ortelius Hosted by DeployHub Team](/userguide/images/HostedLogo-SignIn.png)
+
+The Ortelius project uses a decoupled microservices architecture serving as a great example of how Continuous Security Intelligence unifies fragmented clues and forensics across _Components_ to expose the _Application_ level security posture. In this tutorial you will see how Ortelius aggregates _Component_ level security to the _Application_ level providing  _Application_ level:
+- SBOMs
+- real-time vulnerability reports
+- compliance reports
+
+You will also see how Ortelius uses a Domain-Driven Design (DDD) to organize data across teams. 
 
 ## Signing Up and Getting Started
 
-When you [signup for DeployHub Team](https://www.deployhub.com/deployhub-team/), you are asked for basic information, your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a _Subdomain_ under your Company _Domain_.
+When you [signup for Ortelius](https://www.deployhub.com/deployhub-team-signup/), you are asked for basic information, your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a _Subdomain_ under your Company _Domain_.
 
-DeployHub Team is accessible through the following url:
+Ortelius is accessible through the following url:
 
 [https://console.deployhub.com/dmadminweb/Home](https://console.deployhub.com/dmadminweb/Home)
 
-Login using the UserID and Password you used when you signed up for DeployHub. Check your email for your login information. 
+Login using the UserID and Password you used when you signed up for Ortelius. Check your email for your login information. 
 
-Upon logging into DeployHub, you will be given an option to select your Company Name Domain, or the Open Source Domain. The Open Source Domain is prepopulated with data so you can take a tour.  Select the Open Source Domain to start exploring. 
+Upon logging into Ortelius, you will be given an option to select your Company Name Domain, or the Open Source Domain. The Open Source Domain is prepopulated with data so you can take a tour.  Select the Open Source Domain to start exploring. 
 
 ![Sign into a Domain](/userguide/images/domainsignin.jpg)
 
@@ -108,7 +117,7 @@ View the Blast Radius of a _Component_. The Blast Radius shows you what 'logical
 
 <br>
 
-For More information on Components see - [Publishing _Components_](/userguide/publishing-components/)
+For More information on Components see - [Publishing _Components_](/userguide/first-steps/publishing-components/)
 
 ## Explore Applications
 
@@ -173,7 +182,7 @@ Results:
 
 <p><br></p>
 
-Learn More at  [Packaging _Applications_](/userguide/packaging-applications/)
+Learn More at  [Packaging _Applications_](/userguide/first-steps/packaging-applications/)
 
 
 ## Explore Open-Source Inventory
@@ -206,13 +215,11 @@ Results:
 
 ## Conclusion
 
-There are many other features of DeployHub that we did not get to cover on this short test drive. However, you should have the basic understanding of the major Objects and concepts needed to get you started.  What we did not cover that you may want to view are:
+There are many other features of DeployHub that we did not get to cover on this short test drive. However, you should have the basic understanding of the major Objects and concepts needed to get you started. However, you may want to explore how to connect your CI/CD pipeline to automatically connect SBOMs to your pipeline process. See [SPDX, CycloneDX and Syft](/userguide/integrations/spdx-syft-cyclonedx/) on how you can include SBOMs in your CI/CD process. 
 
-[Environments and Endpoints](/userguide/first-steps/2-define-your-credentials/) - Environments and Endpoints can be used to:
--  execute deployments using DeployHub's internal agentless deployment engine
--  associate an artifact repo to your _Application_ 
--  connect your external deployment tools, called from your CI/CD deployment step, to DeployHub. 
+Other topics to explore include: 
 
-Another important topic is integrating with your CD pipeline.  See [Using DeployHub with CI/CD](/userguide/integrations/ci-cd_integrations/) on how you can include gathering all DevSecOps data.
+- [The Internal Deployment Engine](/userguide/profeatures/deployments/) - execute deployments using DeployHub's internal agentless deployment engine
+-  connect your [CI/CD pipeline](/userguide/integrations/ci-cd_integrations/) 
 
-We will leave you with how to setup DeployHub for your installation.  See [First Steps](/userguide/first-steps/), for getting your setup completed. Once you have your setup complete you can start continuously gathering your software supply chains security intelligence. 
+We will leave you with how to setup your own _Applications_ and _Components_ to start gathering forensics for Continuous Security Intelligence. See [Getting Started](/userguide/first-steps/), for getting your setup completed. 
