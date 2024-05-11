@@ -3,13 +3,14 @@ title: "Intro to  Components"
 linkTitle: "Intro to Components"
 weight: 1
 description: >
+    Understanding _Components_ and _Application_ Relationships
   
 ---
 ## Intro to _Components_
 
-DeployHub manages microservices and other reusable objects as _Components_.  _Components_ are assigned to an _Application_ even though they are managed independently.  Assign _Components_ to _Applications_ to track a 'logical' view of your software solution. In a monolithic approach, we performed this step during the software compile and link, or 'build' process. In microservices, they are loosely coupled and linked at run-time. Defining _Components_ to [_Applications_](/userguide/packaging-applications/buildingapplications/) puts the _Application_ in a 'logical' view.
+DeployHub manages artifacts and shared objects as _Components_.  _Components_ are consumed by an _Application_. With DeployHub you assign _Components_ to _Applications_ to define a 'logical' view of your software solution. In a monolithic approach, we performed this step during the software compile and link, or 'build' process. In decoupled architecture, _Components_ are loosely coupled and linked at run-time. Defining _Components_ to [_Applications_](/userguide/first-steps/packaging-applications/) allows DeployHub to aggregate _Component_ level security insights up to all of the consuming _Applications_ delivering _Application_ level security postures, and Software Bill of Materials reports. 
 
-If you are an API or microservice developer, this will be where you do most of your work. However, application developers may also define _Components_ that are used only by their specific _Application_. _Components_ are microservices (containers), Database updates or files, along with Pre and Post [_Actions_](/userguide/customizations/2-define-your-actions/#intro-to-actions) that are used to control the deployment of the _Component_. By tracking the low level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across organizational teams and _Environments_.
+By tracking the low level deployment metadata for a _Component_, it can be easily shared and released in a consistent way across organizational teams, _Domains_, _Applications_, and _Environments_.
 
 _Components_ change over time, and so DeployHub contains _Component Base Versions_ and _Component Versions_.
 
@@ -19,7 +20,7 @@ _Components_ change over time, and so DeployHub contains _Component Base Version
 
 ## Components and Domains
 
-_Components_ are organized by _Domains_. When you create a new _Component_ you publish it to the _Domain_ that defines the "Solution Space" the _Component_ addresses.  By organizing _Components_ into _Domains_, you create a catalog that allows other teams within your organization to find and reuse your _Components_. The organization of _Components_ by _Domains_ support the Domain Driven Design of a microservices architecture. Before you begin publishing _Components_, you will need to have a _Domain_ ready.  For more on _Domains_ see the [Building Your Domain Catalog](/userguide/first-steps/2-defining-domains/).
+_Components_ are organized by _Domains_. When you create a new _Component_ you publish it to the _Domain_ that defines the "Solution Space" the _Component_ addresses.  By organizing _Components_ into _Domains_, you create a catalog that allows other teams within your organization to find and reuse your _Components_. The organization of _Components_ by _Domains_ support the Domain Driven Design of a decoupled architecture. Before you begin publishing _Components_, you will need to have a _Domain_ ready.  For more on _Domains_ see the [Building Your Domain Catalog](/userguide/first-steps/2-defining-domains/).
 
 ## _Components_ and _Applications_
 
@@ -45,7 +46,7 @@ DeployHub uses a backend versioning engine to track your _Components_. Versionin
 - Deployment script (Hlem Chart, Ansible Playbook, etc.)
 - Any Attributes (DB Name for example) such as the _Action_ used to perform the deployment, environment variables, and database schemas.
 
-This information is collected when you define your _Component_ to the DeployHub catalog. You can use the DeployHub APIs to automatically update this information via your CD Pipeline once you have defined your _Component Base Version_. When your CD engine initiates a workflow for the _Component_, it indicates that a new version of the _Component_ is being pushed across the Pipeline causing all consuming _Applications_ to be automatically incremented to a new version number.  If a _Component_ changes, the consuming _Application_ also changes.  Both get a new version number. For more information see [CD Engines](/userguide/pipeline/2-define-your-build-engines/).
+This information is collected when you define your _Component_ to the DeployHub catalog. You can use the DeployHub APIs to automatically update this information via your CD Pipeline once you have defined your _Component Base Version_. When your CD engine initiates a workflow for the _Component_, it indicates that a new version of the _Component_ is being pushed across the Pipeline causing all consuming _Applications_ to be automatically incremented to a new version number.  If a _Component_ changes, the consuming _Application_ also changes.  Both get a new version number.
 
 When you first define your _Component_ DeployHub tracks it as the _Component Base Version_. Subsequent updates to that _Component_ creates a new _Component Version_ which represent the updates over time. A _Component Base Version_ is always the first one created, and it acts as a model for subsequent _Component Versions_. Otherwise they are identical types of objects.
 
@@ -55,4 +56,4 @@ DeployHub uses a simple versioning number schema starting at 1 and incrementing 
  Myapp;1, Myapp;2.
 ```
 
-You can use your CI/CD process to include variance in your versioning number (base name, variant, version).  See [Component Versioning Schema](/userguide/integrations/ci-cd_integrations/#_component_-versioning-schema).
+You can use your CI/CD process to include variance in your versioning number (base name, variant, version).  
