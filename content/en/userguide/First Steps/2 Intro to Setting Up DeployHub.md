@@ -1,17 +1,12 @@
 ---
-title: "DeployHub CLI and Pipeline Automation"
-linkTitle: "DeployHub CLI and Pipeline Automation"
+title: "Setting Up DeployHub Via the CLI or Dashboard"
+linkTitle: "Setting Up DeployHub Via the CLI or Dashboard"
 weight: 2
 description: >
-  Adding DeployHub to your Pipeline
+  Setting Up DeployHub Via the CLI or Dashboard
 ---
-## Setup DeployHub via Pipeline Automation and the CLI
 
-The fastest way to setup DeployHub is to use the Ortelius Command Line Interface to automate DeployHub via your CI/CD Pipeline.
-
-{{% include "/userguide/reusable/CommandLine.md/" %}}
-
-## Set Up DeployHub via the User Interface
+## Set Up DeployHub via the Dashboard
 
 | Step | Description |
 | --- | --- |
@@ -23,3 +18,11 @@ The fastest way to setup DeployHub is to use the Ortelius Command Line Interface
 Once this basic setup is complete, integrate DeployHub into your [CI/CD](/userguide/integrations/ci-cd_integrations/) process to automatically track, version and deploy your _Application_ and _Components_.
 
 If you want to customize how DeployHub manages deployments - you will do this using [_Actions_](/userguide/customizations/2-define-your-actions/), [_Functions_ & _Procedures_](/userguide/customizations/2-define-your-functions-and-procedures/).
+
+## Setup DeployHub via Pipeline Automation and the CLI
+
+The fastest way to setup DeployHub is to use the Ortelius Command Line Interface to automate DeployHub via your CI/CD Pipeline.
+
+{{% include "/userguide/reusable/CommandLine.md/" %}}
+
+
