@@ -1,7 +1,8 @@
+## Using the CI/CD Integration to Add New Components and Applications
 
-## Adding Continuous Security Intelligence to your DevOps Pipeline with DeployHub
+In order to continuously gather pipeline intelligence, DeployHub must become part of your CI/CD pipeline. Adding your _Components_ and _Applications_ is automated via the CI/CD process. You cannot add new _Components_ or _Applications_ using the DeployHub Dashboard. 
 
-In order to continuously gather pipeline intelligence, DeployHub must become part of your pipeline. DeployHub integrates into your CI/CD process using the Ortelius Open-Source Command Line (CLI). The Ortelius CLI gathers supply chain data based on a single pipeline workflow at the build and deploy steps. The build step gathers Swagger, SBOM, Readme, licenses, Git data, Docker image, and other build output. The deploy step records when a release occurs, what was sent and where the objects were sent to.
+DeployHub integrates into your CI/CD process using the Ortelius Open-Source Command Line (CLI). The Ortelius CLI gathers supply chain data based on a single pipeline workflow at the build and deploy steps. The build step gathers Swagger, SBOM, Readme, licenses, Git data, Docker image, and other build output. The deploy step records when a release occurs, what was sent and where the objects were sent to.
 
 The [Ortelius](https://Ortelius.io) CLI is maintained by the Ortelius Open Source Community under the governance of the [Linux Foundation's Continuous Delivery Foundation.](https://cd.foundation)
 
@@ -96,7 +97,7 @@ export DOCKERREPO=quay.io/DeployHub/hello-world
 export IMAGE_TAG=1.0.0
 ```
 
-##### Step 2 - Create your Component.toml file
+##### Step 2 - Create Your Component.toml File
 
 Cut and paste the following into a component.toml file, update 'your' information, and commit/push it to your Git Repository.
 
@@ -148,6 +149,19 @@ Version = "v1.0.0.${BUILD_NUM}-g${SHORT_SHA}"
 ```
 
 >Note: For SaaS users, you will have a second high-level qualifier that was created as part of your sign-up. This second high-level qualifier must be used as the start of your Application Name and Component Name.  For example: _GLOBAL.Santa Fe Software.Online Store_.
+
+>Note: Component Versioning Schema - A more advanced Component Version Schema is represented by the 'Version" variable. This Variable will allow you to define a custom component versioning schema to suit your organizations requirements. 
+
+| Variable | Value | Description |
+| ------- | ----- | ----------- |
+| Version | Version String | Your Required Version Schema |
+
+Example: 
+```
+Version = "v1.0.0.${BUILD_NUM}-g${SHORT_SHA}"
+```
+
+
 
 ##### Step 3 - Add a step in your pipeline to run Syft if you are not generating SBOMS (Optional)
 

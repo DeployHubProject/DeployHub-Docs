@@ -1,7 +1,7 @@
 ---
 title: "DeployHub On-Prem Installation"
 linkTitle: "DeployHub On-Prem Installation"
-weight: 3
+weight: 12
 description: >
   Installing DeployHub On-premise
 ---

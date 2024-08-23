@@ -1,7 +1,7 @@
 ---
-title: "On Prem Installation, CLI Interface and Support"
-linkTitle: "On Prem Installation, CLI Interface and Support"
-weight: 2
+title: "Installation and Support"
+linkTitle: "Installation and Support"
+weight: 3
 description: >
   On Premise Installation, CLI Interface and Support 
 ---

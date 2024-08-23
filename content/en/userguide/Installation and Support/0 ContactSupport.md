@@ -1,7 +1,7 @@
 ---
 title: "Contact Support"
 linkTitle: "Contact Support"
-weight: 5
+weight: 15
 description: >
   Reach Out for Technical Support and Information
 ---

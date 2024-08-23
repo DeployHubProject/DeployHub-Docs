@@ -1,7 +1,7 @@
 ---
 title: "Command Line Interface Installation"
 linkTitle: "Command Line Interface Installation"
-weight: 4
+weight: 10
 description: >
  Command Line Interface Installation
 ---

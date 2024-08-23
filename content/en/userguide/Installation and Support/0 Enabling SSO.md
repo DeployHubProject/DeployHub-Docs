@@ -1,7 +1,7 @@
 ---
 title: "Single Sign On using Okta and SAML"
 linkTitle: "Single Sign On using Okta and SAML"
-weight: 4
+weight: 20
 description: >
   Enabling SSO
 ---
