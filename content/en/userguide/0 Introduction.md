@@ -40,11 +40,11 @@ DeployHub versions both _Components_ and 'logical' _Applications_.  When version
 - Deployment Script (Helm Chart, Ansible Playbook, etc.)
 - Any Attributes (DB Name for example)
 
- _Application Versions_ are based on a collection of _Component Versions_. If a new version of a _Component_ is built or registered, DeployHub auto increments the _Component_ version and the consuming _Application_ version.  Dashboards are provided for each new _Application_ version showing:
+ _Application Versions_ are based on a collection of _Component Versions_. When a new version of a _Component_ is created, DeployHub auto increments the _Component_ version and all consuming _Application_ versions.  Dashboards show for each new _Application_ version:
 
-- A full map of all _Components_, the _Application_ version is consuming
-- An _Component_ and aggregated _Application_ SBOM
-- An _Component_ and _Application_ CVE
+- A full map of all _Components_ the _Application_ version is consuming
+- An aggregated _Application_ SBOM
+- An _Application_ CVE report, with real-time updates
 - The specific changes that created the new _Application_ version (your new diff report)
 - The audit history
 - Log history
@@ -53,7 +53,7 @@ DeployHub versions both _Components_ and 'logical' _Applications_.  When version
 - An _Application_ security posture report
 
 
-## Other Core Features
+## Core Features
 
 **Package Vulnerability Search** Discover where a vulnerability is running across all endpoints. DeployHub can show you which logical _Applications_ are consuming a vulnerable package, and where it is deployed. 
 
@@ -63,7 +63,7 @@ DeployHub versions both _Components_ and 'logical' _Applications_.  When version
 
 **Blast Radius:** Know your _Component_ impact before you ever deploy. DeployHub can provide predictive insights showing what _Applications_ will be impacted by an updated service. DeployHub provides this data in clear maps of dependent _Applications_ and services. The blast radius also shows what _Components_ and _Applications_ are impacted by a vulnerability for rapid response. 
 
- **Improved incident response:** DeployHub makes it easy to find the owner of _Component_, and contact them through PagerDuty, HipChat, Discord, Slack, email or phone.
+**Improved incident response:** DeployHub makes it easy to find the owner of _Component_, and contact them through PagerDuty, HipChat, Discord, Slack, email or phone.
 
 **Integrates into your CD pipeline:** DeployHub is automated via your CD Pipeline to continuously version your decoupled architecture with changes, including where they are deployed.
 
@@ -82,7 +82,7 @@ Unique to DeployHub Pro are "Divisional Domains." These _Domains_ allow you to e
 
 ### DeployHub Pro's Agentless Delivery
 
-If you do not have a centralized solution for automating deployments, DeployHub can help. DeployHub Pro includes a deployment engine for pushing _Components_ to your _Endpoints_ (Clusters, Cloud, etc.) using an agentless architecture. The deployment engine can support containers, DB Updates, and file updates (.dll, .jar, Apex files, Lamda functions, Terraform, z/OS objects, etc.)
+If you do not have a centralized solution for automating deployments, DeployHub can help. DeployHub Pro includes a deployment engine for pushing _Components_ to your _Endpoints_ (Clusters, Cloud, etc.) using an agentless architecture. The deployment engine can support containers and any type of file object including executables, jar files, Apex files, and Lamda functions.
 
 This agentless technology works for both cloud native and legacy architectures including:
 
