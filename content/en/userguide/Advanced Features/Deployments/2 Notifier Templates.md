@@ -1,7 +1,7 @@
 ---
 title: "Using Notifier Templates"
 linkTitle: "Using Notifier Templates"
-weight: 29
+weight: 600
 description: >
   Write and reuse standard message templates for your _Notifiers_.
 ---
@@ -14,7 +14,7 @@ Note: To create a _Notifier Template_ you will need to first create the _Notifie
 
 Each _Notifier Template_ contains the subject and body of the actual notification, and if via email, a list of recipients. Recipients can be members of one or more _Groups_ as well as the owners of the _Application_, the owner of the _Environment_, and/or the owners of the _Environment_ _Endpoints_.
 
-For more information on _Notifiers_ see [Using Notifiers for Messaging](/userguide/customizations/2-define-notifiers/).
+For more information on _Notifiers_ see [Using Notifiers for Messaging](/userguide/advanced-features/deployments/2-define-notifiers/).
 
 Using these two objects, _Notifiers_ and _Notifier Templates_, notifications can be sent whenever a deployment to an _Environment_ fails or succeeds, whenever a _Request_ Task is executed, or the state of an _EndPoint_ changes. You can also use the Filter bar, represented by a funnel icon, to reorder your _Notify Templates_ by _Notifier Template_ Name and _Notifier_.
 

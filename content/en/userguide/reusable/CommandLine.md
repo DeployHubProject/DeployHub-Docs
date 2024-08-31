@@ -1,22 +1,17 @@
-## Using the CI/CD Command Line to Add New Components and Applications
 
-In order to continuously gather pipeline intelligence, DeployHub must become part of your CI/CD pipeline. Adding your _Components_ and _Applications_ is automated via the CI/CD process. You cannot add new _Components_ or _Applications_ using the DeployHub Dashboard. 
+## DeployHub and the Open-Source Ortelius Command Line CI/CD Integration
 
-DeployHub integrates into your CI/CD process using the Ortelius Open-Source Command Line (CLI). The Ortelius CLI gathers supply chain data based on a single pipeline workflow at the build and deploy steps. The build step gathers Swagger, SBOM, Readme, licenses, Git data, Docker image, and other build output. The deploy step records when a release occurs, what was sent and where the objects were sent to.
+DeployHub integrates into your CI/CD process using the Ortelius Open-Source Command Line (CLI). The Ortelius CLI gathers supply chain data based on a single pipeline workflow at the build and deploy steps. The build step gathers Swagger, Software Bill of Materials, Readme, licenses, Git data, Docker image, and other pipeline output. The deploy step records when a release occurs, what was sent and where the aratifacts were sent to.
 
 The [Ortelius](https://Ortelius.io) CLI is maintained by the Ortelius Open Source Community under the governance of the [Linux Foundation's Continuous Delivery Foundation.](https://cd.foundation)
 
-For the most up to date information on the Ortelius CLI visit the [Ortelius GitHub Repository](https://github.com/Ortelius/cli/blob/main/doc/dh.md). You will find a complete list of parameters for collecting Swagger, SBOM and other tool reports and results.
+For the most up to date information on the Ortelius CLI visit the [Ortelius GitHub Repository](https://github.com/ortelius/ortelius-cli/blob/main/doc/dh.md). You will find a complete list of parameters for collecting Swagger, SBOM and other tool reports and results.
 
 ### Ortelius CLI Data Gathering using .toml
 
 The Ortelius CLI reads from a .toml file. The .toml file contains non-derived information for each artifact that you create at your build step. In DeployHub, an artifact is referred to as a _Component_.  A _Component_ is a Container, DB Object, or file object (.jar, Lamda Function, Apex file, etc.). The .toml file will provide the 'non-derived' data for the _Component_ you are tracking in DeployHub, which includes the _Component_ name, owner, _Component type_, and owner contact details.  The Ortelius CLI will read the .toml file from the Git Repository associated to your pipeline. If you are using a Mono Repository for your entire codebase, you will need a separate Component.toml file for each _Component_ managed in sub-directories.
 
-In a cloud-native decoupled architecture, there are hundreds, if not thousands, of _Components_. Organizing your _Components_ within DeployHub is done in two ways. First, they are grouped based on a subject _Domain_ and secondly, assigned to a logical _Application_. Not all _Components_ need to be assigned to an _Application_, but they should be stored in a subject matter _Domain_ so they can be easily found and reused. 
-
- A logical _Application_ is a collection of _Components_ that make up a complete software systems consumed by an end user. Applications are composed of shared _Components_ and _Application_ specific _Components_, and are a logical representation of what _Components_ need to be deployed in order for the software system to run. 
-
->Note: Once created, your .toml file does not need to be updated unless the non-derived information changes or you want to reorganize to which Applications or _Domains_ the Component has been assigned. For example, a Component has been reassigned to a new owner and new team represented by a _Domain_ or _Application_.
+Once created, your .toml file does not need to be updated unless the non-derived information changes or you want to reorganize to which _Applications_ or _Domains_ the _Component_ has been assigned. For example, a _Component_ has been reassigned to a new owner and new team represented by a _Domain_ or _Application_.
 
 #### Variable Resolution
 
@@ -184,7 +179,7 @@ cat cyclonedx.json
 
 ##### Step 4 - Run the Ortelius CLI to add Your Component and Create an Application
 
->Note: To complete the process you will need to install the Ortelius CLI where your CI/CD server is running. Refer to the [Ortelius GitHub CLI Documentation](https://github.com/Ortelius/cli/blob/main/doc/dh.md) for installation instructions.
+>Note: To complete the process you will need to install the Ortelius CLI where your CI/CD server is running. Refer to the [Ortelius GitHub CLI Documentation](https://github.com/ortelius/ortelius-cli/blob/main/doc/dh.md) for installation instructions.
 
 Execute the following calls to the Ortelius CLI as part of your workflow. It should be called after the build and SBOM generation:
 

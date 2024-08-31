@@ -1,7 +1,7 @@
 ---
 title: "Managing Users"
 linkTitle: "Managing Users"
-weight: 86
+weight: 3
 description: >
   Adding and Managing Users. 
 ---
@@ -51,7 +51,7 @@ The following details are common to all _Users_:
 | **Phone**                                          | _Users_ phone number.                                                                                                                                                                                                           |
 | **Date Format**                                    | Defines how the date will be displayed to address geographical differences.                                                                                                                                                     |
 | **Time Format**                                    | 24 hour clock (military time) vs. 12 hour clock                                                                                                                                                                                 |
-| **Validation Data Source (DeployHub Pro Feature)** | Set to the _Data Source_ (LDap, Active Directory) for login. This is a DeployHub Pro Feature. The _Data Source_ must be pre-defined.  See [Managing Data Sources](/userguide/profeatures/2-data-sources/) for more information. |
+| **Validation Data Source (DeployHub Pro Feature)** | Set to the _Data Source_ (LDap, Active Directory) for login. This is a DeployHub Pro Feature. The _Data Source_ must be pre-defined.  See [Managing Data Sources](/userguide/advanced-features/deployments/2-data-sources/) for more information. |
 | **Password**                                       | Password selected by the _User_ (encrypted in the database).                                                                                                                                                                    |
 | **Account Locked**                                 | Locks the User out of the system.                                                                                                                                                                                               |
 | **Force Change Password**                          | Forces the User to change their password on initial sign-in.                                                                                                                                                                    |
@@ -66,6 +66,6 @@ This Section contains a list of all the _Groups_ the selected _User_ belongs to.
 
 DeployHub Team has two _Groups_, Administrators and Users, to which _Users_ can be assigned.  Access control to Objects are based on these two high level _Groups_. DeployHub Team allows you to create as many _Users_ as required but only the "User" and "Administrator" _Groups_ are supported.
 
-**DeployHub Pro** allows you to create custom _Groups_ for assigning _Users_ giving you more security control around the Objects. For information on how to create _User_ _Groups_ with DeployHub Pro see [Creating DeployHub Pro Groups](/userguide/profeatures/5-pro-groups/.)
+**DeployHub Pro** allows you to create custom _Groups_ for assigning _Users_ giving you more security control around the Objects. For information on how to create _User_ _Groups_ with DeployHub Pro see [Creating User Groups](/userguide/advanced-features/user-groups/.)
 
 {{% include "userguide/reusable/AuditTrail.md" %}}

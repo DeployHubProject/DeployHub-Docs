@@ -1,7 +1,7 @@
 ---
 title: "Reverse Proxy for Deployments"
 linkTitle: "Reverse Proxy for Deployments"
-weight: 1
+weight: 3
 description: >
   Configuration the Reverse Proxy for Deployments
 ---
@@ -9,7 +9,7 @@ description: >
 
 ## Installing the Reverse Proxy for Managing Deployments using DeployHub
 
-DeployHub includes a deployment engine that can be used to deploy your _Applications_. Alternatively you can push deployment information to DeployHub using the [Command Line Interface](/installation-and-support/0-commandlineinterface/). You will not need the Reverse Proxy if your are pushing deployment results with the CLI.
+DeployHub includes a deployment engine that can be used to deploy your _Applications_. Alternatively you can push deployment information via your CI/CD pipeline using the [Command Line Interface](/userguide/installation-and-support/0-commandlineinterface/). You will not need the Reverse Proxy if your are pushing deployment results with the CLI.
 
 To start using DeployHub to deploy your _Applications_ and _Components_, you will first need to install a Reverse Proxy inside your firewall. This contacts DeployHub in our SaaS environment to receive deployment requests.  The Reverse Proxy is required for deploying into your environment.
 

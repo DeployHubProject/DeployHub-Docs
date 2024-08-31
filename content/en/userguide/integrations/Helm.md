@@ -36,9 +36,8 @@ DeployHub' deployment engine comes pre-installed with Helm.  For this reason you
 
 For more information on starting the DeployHub Container see:
 
-- [SaaS Sign-up and Reverse Proxy](/userguide/installation-and-support/0-saas-and-reverse-proxy/)
-- [DeployHub On-Premise Installation](/userguide/installation-and-support/0-on-premise-installation-for-team/)
-- [DeployHub Pro On-Prem Installation](/userguide/installation-and-support/0-on-premise-installation-for-pro/)
+- [SaaS Sign-up and Reverse Proxy](/userguide/advanced-features/deployments/0-saas-and-reverse-proxy/)
+- [DeployHub On-Premise Installation](/userguide/installation-and-support/0-on-premise-installation-for-pro/)
 
 ### Connection to a Cloud Kubernetes Cluster
 
@@ -99,7 +98,7 @@ In order to connect to Kubernetes cluster running on a cloud provider, an authen
 
 ## Helm and _Custom Actions_
 
-Helm is called as a DeployHub [_Custom Action_](/userguide/customizations/2-define-your-actions/). To use Helm, you will need to import two Helm files as DeployHub _Procedures_ and define them to your _Custom Action_. This Helm _Custom Action_ can then be assigned to your Container _Components_. See [_Procedures and Functions_](/userguide/customizations/2-define-your-functions-and-procedures/) and  [Customize Actions](/userguide/customizations/2-define-your-actions/) to learn more. The following steps will create your Helm _Custom Action_.
+Helm is called as a DeployHub _Custom Action_. To use Helm, you will need to import two Helm files as DeployHub _Procedures_ and define them to your _Custom Action_. This Helm _Custom Action_ can then be assigned to your Container _Components_. See [_Procedures and Functions_](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/) and  [Customize Actions](/userguide/advanced-features/deployments/2-define-your-actions/) to learn more. The following steps will create your Helm _Custom Action_.
 
 ### Step 1 - Download and Import the Helm scripts as _Procedures_
 
@@ -141,7 +140,7 @@ At this point the Action is ready to be used by anyone with access (based on Dom
 
 ## Assign the Helm Chart Action to a Component
 
-Create your new _Component_ from the _Component_ Dashboard. See [Defining _Components_](/userguide/publishing-components/2-define-components/).  For each container _Component_ you will need to define the variable values. Values are specified when you create a new container _Component._ Values will override those defined at the _Application_ or _Environment_ level. The values from DeployHub will be passed along to Helm's values.yml file at execution time. For more information on defining your container _Component_ see [Container Specific Data Definition](/userguide/publishing-components/2-define-components/#container-specific-data-definition).
+Create your new _Component_ from the _Component_ Dashboard. See [the _Components_ chapter](/userguide/2-define-components/).  For each container _Component_ you will need to define the variable values. Values are specified when you create a new container _Component._ Values will override those defined at the _Application_ or _Environment_ level. The values from DeployHub will be passed along to Helm's values.yml file at execution time. 
 
 ## Storing and Retrieving a Hermetic Helm Chart
 

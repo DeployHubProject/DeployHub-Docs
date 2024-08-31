@@ -5,7 +5,7 @@ DeployHub allows you to use LDAP or Active Directory to manage your _User_ login
 
 ### Creating a LDAP or Active Directory _Data Source_
 
-To support LDAP integration, you must create an LDAP  _Credential_ whose Username value is a user id (uid) followed by the necessary Ldap domain components (dc), all comma delimited (i.e., uid=mycompany,dc=example,dc=com). The _Credential's_ Password field contains the password for the user in the LDAP directory. For more on creating _Credentials_ see [Create Your Credentials](/userguide/first-steps/2-define-your-credentials/).
+To support LDAP integration, you must create an LDAP  _Credential_ whose Username value is a user id (uid) followed by the necessary Ldap domain components (dc), all comma delimited (i.e., uid=mycompany,dc=example,dc=com). The _Credential's_ Password field contains the password for the user in the LDAP directory. For more on creating _Credentials_ see [Create Your Credentials](/userguide/advanced-features/deployments/2-define-your-credentials/).
 
 The Data Source has specific parameters used to validate a User:
 

@@ -10,8 +10,8 @@ description: >
 
 DeployHub integrates with Tomcat for managing deployments where you need to stop and start the Tomcat server as part of your deployment logic. _Actions_ for Tomcat Windows servers are pre-defined within DeployHub. At the _Application_ level, you define _Pre_ and _Post_ _Actions_ that perform the calls to stop and then start Tomcat. You will be creating new _Procedures_ and _Actions_ to complete this setup.  For more information see:
 
-- [Customizing Actions](/userguide/first-steps/2-define-your-actions/)
-- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
+- [Customizing Actions](/userguide/advanced-features/deployments/2-define-your-actions/)
+- [Procedures and Functions](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/)
 
 The following steps will take you through the process.
 
@@ -66,7 +66,7 @@ At this point your new _Actions_ are ready to be used by anyone with access (bas
 
 **Step 4 - Assign the TomcatStop and TomcatStart Action to an _Application_**
 
-Create your _Application_ and define your Pre and Post Tomcat _Actions_ using the _Application_ Dashboard. The _Applications_ _Pre-Action_ should be assigned the TomcatStopAction.  This will cause your Tomcat server to be stopped prior to the _Application_ files being deployed.  The _Application's_ _Post-Action_ should be assigned the TomcatStartAction which will start Tomcat after the deployment of your .ear/.war has been completed.  For more information see [Defining Your Application](/userguide/packaging-applications/2-defining-applications/).
+Create your _Application_ and define your Pre and Post Tomcat _Actions_ using the _Application_ Dashboard. The _Applications_ _Pre-Action_ should be assigned the TomcatStopAction.  This will cause your Tomcat server to be stopped prior to the _Application_ files being deployed.  The _Application's_ _Post-Action_ should be assigned the TomcatStartAction which will start Tomcat after the deployment of your .ear/.war has been completed.  For more information see the [Application Chapter](/userguide/2-defining-applications/).
 
 **Step 5 - Set Your _Application_ Attributes_**
 

@@ -1,13 +1,13 @@
 ---
-title: "Managing Data Sources"
-linkTitle: "Managing Data Sources"
+title: "Using Data Sources"
+linkTitle: "Using Data Sources"
 weight: 20
 description: >
-  Managing Data Sources such as ODBC connections.
+  Managing Data Sources such as ODBC connections for Jira, Bugzilla or GitHub. 
 ---
 ## Intro to Data Sources
 
-_Data Sources_ are used to connect to Jira, Bugzilla, and GitHub to track change request and LDAP and Active Directory for single sign-on. You will need to define a _Credential_ for these _Data Sources_ in order to login. See [Create Your Credentials](/userguide/first-steps/2-define-your-credentials/) for more information on defining a _Credential_ for your _Data Source_.
+_Data Sources_ are used to connect to Jira, Bugzilla, and GitHub to track change request and LDAP and Active Directory for single sign-on. You will need to define a _Credential_ for these _Data Sources_ in order to login. See [Create Your Credentials](/userguide/advanced-features/deployments/2-define-your-credentials/) for more information on defining a _Credential_ for your _Data Source_.
 
 ## The _Data Sources_ List View for Adding or Deleting
 

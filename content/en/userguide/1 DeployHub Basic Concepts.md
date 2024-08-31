@@ -1,21 +1,18 @@
 ---
 title: "Understanding DeployHub Objects"
 linkTitle: "Understanding DeployHub Objects"
-weight: 5
+weight: 4
 description: >
   Understanding Core Objects and Concepts.
 ---
 
 ## Introduction
 
-DeployHub's core Objects are _Domains_, _Applications_, _Components_, _Environments_ and _Endpoints_. These Objects organize, aggregate, and version independently released artifacts with their DevSecOps metadata such as deployment location, Software Bill of Materials, OpenSSF Scorecard, and CVEs. This data is the basis for analyzing your software systems security posture and tracking vulnerabilities to where they are running in your environment.  
-
-_Domains_ are core to DeployHub's gathering of decoupled _Component_ metadata.  _Domains_ are hierarchical and pass inheritance from parent to siblings. For this reason, _Components_ can be shared across the _Subdomains_. The hierarchical structure of _Domains_ provides a high-level of control and management over how _Components_ are shared. reported on, and reused.
-
-![Example of Domains, Applications, Components and Environments](/userguide/images/OnlineStore-Domains.jpg)
+DeployHub's core Objects are _Domains_, _Applications_, _Components_, _Environments_ and _Endpoints_. These Objects organize, aggregate, and version independently released artifacts with their DevSecOps metadata such as deployment location, Software Bill of Materials, OpenSSF Scorecard, and known vulnerabilities. This data is the basis for analyzing your software system's security posture and tracking vulnerabilities to where they are running in your environment.  
 
  _Objects_ related to gathering Security Intelligence include:
 
+- Domains - Organizes data into "solution" spaces
 - Components - APIs, Microservices, Containers
 - Applications - A collection of _Components_ that serves as a complete software solution.
 - Environments - The location where the _Application_ is running.
@@ -33,9 +30,11 @@ Following is a description of each Object and their attributes.
 
 ### _Domain_ Object
 
-The [_Domain_ Object](/userguide/first-steps/2-defining-domains/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Subdomains_. _Subdomains_ inherit the parents properties, _Tasks_ and access.
+The [_Domain_ Object](/userguide/2-defining-domains/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Subdomains_. _Subdomains_ inherit the parents properties, _Tasks_ and access.
 
-Your _Components_, are organized based on _Domains_ and _Subdomains_ which you define. _Domains_ categorize _Components_ that solve the same 'problem sets.' In a similar way, _Applications_ are assigned to their own _Domain_. _Environments_ and _Endpoints_ are associated to _Domains_ that are running _Applications_.
+![Example of Domains, Applications, Components and Environments](/userguide/images/OnlineStore-Domains.jpg)
+
+Your _Components_, are organized based on _Domains_ and _Subdomains_ which you define. _Domains_ categorize _Components_ that solve the same 'problem sets.' In a similar way, _Applications_ are assigned to _Domains_. In addition, _Environments_ and _Endpoints_ are associated to _Domains_ that are running _Applications_.
 
 The highest level _Domain_ is your _Global Domain_. With the SaaS version, your _Global Domain_ name is defined based on your Company. With the on-premise installation, you will see a _Domain_ called _Global_.
 
@@ -64,15 +63,15 @@ The following properties can be accessed on the _Domain_ object:
 
 ### _Component_ Object
 
-DeployHub manages artifacts and other reusable objects as [_Components_](/userguide/first-steps/publishing-components/). _Components_ are consumed by _Applications_. By assigning _Components_ to _Applications_ you track a 'logical' view of your software solution as a whole. In cloud-native architecture, _Components_ are loosely coupled and communicate at run-time. Defining _Components_ to _Applications_ allows Ortelius to aggregate security data to the _Application_ level and produce _Application_ security reports such as SBOMs in a decoupled architecture where hundreds of SBOMs are needed for one _Application_ SBOM. 
+DeployHub manages artifacts and other reusable objects as [_Components_](/userguide/2-define-components/). _Components_ are consumed by _Applications_. By assigning _Components_ to _Applications_ you track a 'logical' view of your software solution as a whole. In cloud-native architecture, _Components_ are loosely coupled and communicate at run-time. Defining _Components_ to _Applications_ supports the aggregation of security data to the _Application_ level to produce _Application_ security reports such as Software Bill of Materials (SBOM) reports in a decoupled architecture where hundreds of SBOMs are needed for one _Application_ SBOM. 
 
-_Components_ change over time. To expose changes, DeployHub takes a snapshot of the initial _Component Base Version_ and tracks subsequent changes recorded as  _Component Versions_. _Components_ are associated to a Domain for organization and quick searches.
+_Components_ change over time. To expose changes, DeployHub takes a snapshot of the initial _Component Base Version_ and tracks subsequent changes recorded as  _Component Versions_. _Components_ are associated to a _Domain_ for organization and quick searches.
 
-- **_Component Base Version_** : The initial _Component_ Object that represent the artifacts being managed
+- **_Component Base Version_** : The initial _Component_ object that represent the artifacts being managed
 
 - **_Component Version_** : A child of the _Component Base Version_ that represents changes.
 
-A _Component_ Object has the following properties:
+A _Component_ object has the following properties:
 
 | **Property** |  **Description** |
 | --- | --- | --- |
@@ -97,7 +96,7 @@ A _Component_ Object has the following properties:
 
 ### _Application_ Object
 
-[_Applications_](/userguide/first-steps/packaging-applications/) are a collection of _Components_ that are released as a single software solution. You define an _Application_ by associating the _Components_ it will consume. When you initially define an _Application_ it is referenced as the _Application Base Version._ When an underlying _Component_ changes, it impacts the _Application_ creating a new  _Application Version_. _Applications_ are organized by a _Domain_.
+[_Applications_](/userguide/2-defining-applications/) are a collection of _Components_ that are released as a single software solution. You define an _Application_ by associating the _Components_ it will consume. When you initially define an _Application_ it is referenced as the _Application Base Version._ When an underlying _Component_ changes, it impacts the _Application_ creating a new  _Application Version_. _Applications_ are organized by a _Domain_.
 
 - **_Application Base Version_** : Defines the software product in terms of _Components_, _Attributes,_ and assigned _Environments_.
 
@@ -134,13 +133,11 @@ There is a many-to-many relationship between _Applications_ and _Components._ An
 
 A backend versioning datastore tracks all software configuration updates. This is done within an _Application_. An _Application_ consists of one or more _Components_. Versioning tracks all changes in both your _Application_ and _Component_ attributes. 
 
-When you first define your _Application_, you create an _Application Base Version_. Over time, as you update your code and deliver new features, each change to the _Application_ creates a new _Application Version_.  _Application Versions_ package all your _Components_ in your entire software product. Like _Application Versions_, there is an initial _Component Base Version_ and subsequent _Component Versions,_ which represent any updates . An _Application Base Version_ or _Component Base Version_ is always the first one created, and it acts as a model for subsequent _Application_ or _Component Versions_. Otherwise they are identical types of objects.
-
-When a new _Application Version_ is created from either an _Application Base Version_ or another _Application Version_, it inherits all previous _Components_ from its predecessor. That predecessor is determined when running a _Create Version Task_ for an _Application Version_. You can specify whether the new _Application Version_ inherits its _Components_ from the original _Application Base Version_, the latest _Application Version_, or a specific _Application Version_.
+When you first define your _Application_, you create an _Application Base Version_. Over time, as you update your code and deliver new features, each change to the _Application_ creates a new _Application Version_.  _Application Versions_ are a collection of all your _Components_ in the software solution delivered to end users. Like _Component Versions_, there is an initial _Application Base Version_ and subsequent _Application Versions,_ which represent the updates over time. An _Application Base Version_ or _Component Base Version_ is always the first one created, and it acts as the base-line for subsequent _Application_ or _Component Versions_. Otherwise they are identical types of objects.
 
 DeployHub uses a simple versioning number schema starting at 1 and incrementing over time, for example Myapp;1, Myapp;2.
 
-You can use your CI/CD process to include variance in your versioning number (base name, variant, version).  See [Component Versioning Schema](/userguide/integrations/ci-cd_integrations/#_component_-versioning-schema).
+You can use your CI/CD process to include variance in your versioning number (base name, variant, version.) See [CI/CD and DeployHub](/userguide/integrations/ci-cd_integrations/).
 
 ### _Environment_ Object
 
@@ -166,6 +163,35 @@ The following properties can be accessed for an _Environment_ object:
 | parent         | Parent _Domain_.                            |
 
 
+### _Endpoint_ Object
+
+The [_Endpoint_ object](/userguide/2-define-endpoints/) (Local Helm Host, container, VM/Cloud Image) represents where an _Application_ is running. _Endpoints_ are assigned to an _Environment_.
+
+_Endpoints_ are the containers, virtual machines, or servers where the _Application_ has been deployed. _Endpoints_ allow DeployHub to expose where vulnerabilities are running across your development, testing and production _Environments_.
+
+ _Endpoints_ are mapped to _Components_ and _Environments_.  _Endpoints_ are used to track where a _Component_ is installed for vulnerability exposure, and referenced by the DeployHub internal deployment engine for executing deployments. 
+
+The _Endpoint_ object has the following properties:
+
+| **Property**             | **Description**                                        |
+|--------------------------|--------------------------------------------------------|
+| id                       | A unique identifier as used in the database.           |
+| name                     | The _Endpoint_ name.                                   |
+| fqdomain                 | Fully qualified _Domain_ name.                         |
+| summary                  | Description of the _Endpoint_.                         |
+| domain                   | _Domain_ in which it is contained.                     |
+| owner                    | _User_ or _Group_ that owns it.                        |
+| hostname                 | Hostname (if set) or name otherwise.                   |
+| basedir                  | Base Directory for where the _Application_ is running.                        |
+| type                     | _Endpoint_ Type, ie: cluster, windows, cloud, etc.     |
+| credential               | The logon and password used to access this _Endpoint_. |
+| _Components_             | The _Components_ currently installed on it.            |
+| creator                  | The _User_ or _Group_ who created it.                  |
+| modifier                 | The _User_ or _Group_ who last modified it.            |
+| ctime                    | The date/time it was created.                          |
+| mtime                    | The date/time it was last modified.                    |
+| Key Value Configurations | Key Value Pairs for managing associative arrays.       |
+
 ### _Date_ Object
 
 Dates track the date/time of the creation, deletion, or update of an Object.
@@ -179,7 +205,7 @@ The _Date_ has the following properties:
 
 ### _Change Request_ Object
 
-The [_Change Request_](/userguide/profeatures/5-change-requests/) Object represents a change request record associated with either a _Component_ or an _Application_. A _Change Request_ is a DeployHub Pro feature.
+The [_Change Request_](/userguide/profeatures/5-change-requests/) Object represents a change request record associated with either a _Component_ or an _Application_. 
 
 The _Change Request_ object has the following properties:
 
@@ -198,7 +224,7 @@ The _Change Request_ object has the following properties:
 
 ### _Group_ Object
 
-The [_Group_ Object](/userguide/profeatures/5-pro-groups/) represents a collection of _Users_ with the same _Domain_ and security access. (This is a DeployHub Pro Feature.)
+The [_Group_ Object](/userguide/profeatures/5-pro-groups/) represents a collection of _Users_ with the same _Domain_ and security access. 
 
 The _Group_ Object has the following properties:
 
@@ -214,6 +240,28 @@ The _Group_ Object has the following properties:
 | ctime    | _Date_ Object representing the date/time it was created.              |
 | mtime    | _Date_ Object representing the date/time it was last modified.        |
 | owner    | _User_ or _Group_ that owns the object.                               |
+
+
+### _User_ Object
+
+The _User_ Object represents a User in DeployHub. It has the following properties:
+
+| **Property** | **Return Type** | **Description**                                                                                 |
+|--------------|-----------------|-------------------------------------------------------------------------------------------------|
+| id           | Integer         | User id, as used in the database.                                                               |
+| name         | String          | User Name.                                                                                      |
+| kind         | String          | Returns "user". Used to differentiate between users and groups when retrieving an owner object. |
+| fqdomain     | String          | Fully qualified _Domain_ name.                                                                  |
+| realname     | String          | The _User's_ full name.                                                                         |
+| email        | String          | The _User's_ email address.                                                                     |
+| phone        | String          | The _User's_ telephone number.                                                                  |
+| groups       | Array           | Array of _Group_ Objects to which this User belongs.                                            |
+| lastlogin    | Date            | The date/time last logged into DeployHub.                                                       |
+| creator      | User            | _User_ or _Group_ Object representing who created this _User_.                                  |
+| modifier     | User            | _User_ or _Group_ Object representing who last modified this _User_.                            |
+| ctime        | Date            | _Date_ Object representing the date/time the User was created.                                  |
+| mtime        | Date            | _Date_ Object representing the date/time the User was last modified.                            |
+| owner        | Object          | _User_ or _Group_ that owns the _User_                                                          |
 
 
 ## Objects Used by the Internal Deployment Engine
@@ -273,62 +321,8 @@ The _DropZone File_ Object has the following properties:
 | ctime    | The creation time of the file.                                                                                              |
 | mtime    | The modified time of the file.                                                                                              |
 
-### _Endpoint_ Object
 
-The [_Endpoint_ Object](/userguide/profeatures/deployments/2-define-endpoints/) (Local Helm Host, container, VM/Cloud Image) represents where a deployment will be sent. _Endpoints_ are assigned to an _Environment_.
-
-
-### _Endpoint_ Mapping
-
-_Endpoints_ are the physical servers, Virtual Machines, Kubernetes Cluster or Cloud Environment. This allows DeployHub to expose where vulnerabilities are running across your development, testing and production _Environments_.
-
- _Endpoints are mapped to _Components_ and _Environments_.  _Endpoints_ are used to track where a _Component_ is installed, and referenced by the DeployHub internal deployment engine for executing deployments. When using _Endpoints_ for deployments, each _Component_ is assigned a Type attribute. You can specify which kind of _Endpoint_ is needed. For example, a Database _Component_ is installed onto an _Endpoint_ with a corresponding Database _Type_ definition. A _Component_ is assigned a single Type, while an _Endpoint_ can be assigned multiple Types. For example, if your single _Endpoint_ needed to have both a database and your application binaries installed, it would be assigned both a 'Database' and a 'Binary' _Type_ attribute.
-
-To map a _Component_ to _Endpoints_, assign one or more _Component_ Types to each _Endpoint_. Then assign a single Type attribute to that _Component_. When an _Application_ is deployed, each _Component_ within the _Application_ will be deployed to each _Endpoint_ if the _Component's Type_ attribute matches one of the _Endpoint's_ Type attributes. DeployHub ships with standard _Component_ and _Endpoint_ Types and allows you to define custom Type attributes.
-
-The _Endpoint_ object has the following properties:
-
-| **Property**             | **Description**                                        |
-|--------------------------|--------------------------------------------------------|
-| id                       | A unique identifier as used in the database.           |
-| name                     | The _Endpoint_ name.                                   |
-| fqdomain                 | Fully qualified _Domain_ name.                         |
-| summary                  | Description of the _Endpoint_.                         |
-| domain                   | _Domain_ in which it is contained.                     |
-| owner                    | _User_ or _Group_ that owns it.                        |
-| hostname                 | Hostname (if set) or name otherwise.                   |
-| basedir                  | Base Directory for where the _Application_ is running.                        |
-| type                     | _Endpoint_ Type, ie: cluster, windows, cloud, etc.     |
-| credential               | The logon and password used to access this _Endpoint_. |
-| _Components_             | The _Components_ currently installed on it.            |
-| creator                  | The _User_ or _Group_ who created it.                  |
-| modifier                 | The _User_ or _Group_ who last modified it.            |
-| ctime                    | The date/time it was created.                          |
-| mtime                    | The date/time it was last modified.                    |
-| Key Value Configurations | Key Value Pairs for managing associative arrays.       |
 
 ### _Notifier_ Objects
 
 A [_Notifier_](/userguide/customizations/2-define-notifiers/) is sent after a successful or failed deployment attempt. If these features are activated, they are also sent when deployed files have been changed, a Request Task has been used, or when an _Endpoint_ is down,  DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose.
-
-### _User_ Object
-
-The _User_ Object represents a User in DeployHub. It has the following properties:
-
-| **Property** | **Return Type** | **Description**                                                                                 |
-|--------------|-----------------|-------------------------------------------------------------------------------------------------|
-| id           | Integer         | User id, as used in the database.                                                               |
-| name         | String          | User Name.                                                                                      |
-| kind         | String          | Returns "user". Used to differentiate between users and groups when retrieving an owner object. |
-| fqdomain     | String          | Fully qualified _Domain_ name.                                                                  |
-| realname     | String          | The _User's_ full name.                                                                         |
-| email        | String          | The _User's_ email address.                                                                     |
-| phone        | String          | The _User's_ telephone number.                                                                  |
-| groups       | Array           | Array of _Group_ Objects to which this User belongs.                                            |
-| lastlogin    | Date            | The date/time last logged into DeployHub.                                                       |
-| creator      | User            | _User_ or _Group_ Object representing who created this _User_.                                  |
-| modifier     | User            | _User_ or _Group_ Object representing who last modified this _User_.                            |
-| ctime        | Date            | _Date_ Object representing the date/time the User was created.                                  |
-| mtime        | Date            | _Date_ Object representing the date/time the User was last modified.                            |
-| owner        | Object          | _User_ or _Group_ that owns the _User_                                                          |
-

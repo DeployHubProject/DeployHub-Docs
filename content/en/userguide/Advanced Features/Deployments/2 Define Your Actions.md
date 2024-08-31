@@ -1,7 +1,7 @@
 ---
 title: "Customize Your Actions"
 linkTitle: "Customize Your Actions"
-weight: 30
+weight: 6
 description: >
   Understanding and Adding Actions for defining your deployment logic.
 ---
@@ -24,7 +24,7 @@ In addition, a _Custom Action_ can replace the usual Deployment Engine processin
 
 _Actions_ can be implemented in many ways including:
 
-- Written in DMScript - DeployHub's internal deployment scripting language. DMScript has access to the DeployHub Object Model.  DMScript ships with several pre-installed _Procedures_ and _Functions_. It is also easy to create your own and add them to the activities that can be used when creating your _Components_ installation logic. For more information see [Dmscript](/userguide/dmscript/).
+- Written in DMScript - DeployHub's internal deployment scripting language. DMScript has access to the DeployHub Object Model.  DMScript ships with several pre-installed _Procedures_ and _Functions_. It is also easy to create your own and add them to the activities that can be used when creating your _Components_ installation logic. For more information see [Dmscript](/userguide/advanced-features/dmscript/).
 
 - A 'local' script  - written in any scripting language that is supported by Linux, and executes in the DeployHub Container mounted from the Docker Host.
 
@@ -36,7 +36,7 @@ _Actions_ can be invoked:
 
 - After any _Task_ in a _Domain_ is executed: When the _Task_ is created, a "Post-Action" can be specified. The specified _Action_ is invoked after the _Task_ is executed. This can be used to connect to external systems to notify others that a _Task_ has been executed (for example, to notify a bug-tracking system that an _Application Version_ has been moved to a Testing state).
 
-- As a stand-alone _Action_ that can be invoked from the DeployHub User Interface: The _Action_ is associated with a "Run Action" _Task_. When invoked, the _Action_ is executed. A user can right-click on the _Domain_ to view the _Task_ to execute the _Action_. Alternatively, they can right-click on an _Application_ or a _Component_. In these circumstances, the selected object is pushed onto the _Stack_ and is available via the $application or $component objects. See DMScript [Stack](/userguide/dmscript/dmscript-stack/) for more information.
+- As a stand-alone _Action_ that can be invoked from the DeployHub User Interface: The _Action_ is associated with a "Run Action" _Task_. When invoked, the _Action_ is executed. A user can right-click on the _Domain_ to view the _Task_ to execute the _Action_. Alternatively, they can right-click on an _Application_ or a _Component_. In these circumstances, the selected object is pushed onto the _Stack_ and is available via the $application or $component objects. See DMScript [Stack](/userguide/advanced-features/dmscript/dmscript-stack/) for more information.
 
 - Before an _Application_ is deployed: An _Application_ can be defined as having a "Pre-Action." This can be either an _Action_ or a _Function_. When the _Application_ is deployed, this "Pre-Action" is invoked first before any other operation. If this Pre-Action aborts or returns a non-zero return code, the deployment itself will be prevented.
 
@@ -99,7 +99,7 @@ NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If y
 
 ### Blueprint Section
 
-The logic of an _Action_ is defined using a graphical drag and drop blueprint designer. A tree view on the right shows all the _Functions_ and _Procedures_ organized by categories that can be include in the _Action's_ logic. You can use the built-in activities for defining the logical steps of the _Action_ or you can create new _Procedures_ or _Functions_ and have them available as activities to use. See [_Functions_ and _Procedures_](/userguide/customizations/2-define-your-functions-and-procedures/) for more information.
+The logic of an _Action_ is defined using a graphical drag and drop blueprint designer. A tree view on the right shows all the _Functions_ and _Procedures_ organized by categories that can be include in the _Action's_ logic. You can use the built-in activities for defining the logical steps of the _Action_ or you can create new _Procedures_ or _Functions_ and have them available as activities to use. See [_Functions_ and _Procedures_](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/) for more information.
 
 The blueprint designer contains all activities that make up the _Actions_ logical processing steps, linked together in the order they are to be executed. Each step in the process has anchors where connections can be made. When you drag a item onto the designer, a blue input anchor is displayed at the top of the items "box." You will see a green anchor at the bottom representing output. In this way you can create connections between the processes.  
 

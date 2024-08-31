@@ -8,17 +8,15 @@ description: >
 
 ## Intro to _Components_
 
-_Components_ are independent artifacts—such as containers, jar files, and executables—pushed through the CI/CD pipeline and deployed separately, each with its own security details, including SBOMs and vulnerabilities. DeployHub continuously tracks the CI/CD pipeline, collecting both security and DevOps insights for every _Component_. By mapping this data, DeployHub provides a unified view of each _Component's_ security profiles. 
+_Components_ are independent artifacts—such as containers, jar files, and executables—pushed through the CI/CD pipeline and deployed separately, each with its own security details, including Software Bill of Materials (SBOMs) and vulnerabilities. DeployHub continuously tracks the CI/CD pipeline, collecting both security and DevOps insights for every _Component_. By mapping this data, DeployHub provides a unified view of each _Component's_ security profile. 
 
-A collection of _Components_ forms a 'logical' view of an _Application_. Since each _Component_ comes with its own security and DevOps data, DeployHub aggregates the _Component_ insights for all 'logical' _Applications_. This aggregation provides a comprehensive view of the 'logical' _Application's_ SBOMs and vulnerabilities, supporting a unified security perspective within complex, decoupled, cloud-native architectures. 
+A collection of _Components_ forms a 'logical' view of an _Application_. Because each _Component_ comes with its own security and DevOps data, DeployHub aggregates the _Component_ insights for all 'logical' _Applications_. This aggregation provides a comprehensive view of the 'logical' _Application's_ SBOMs and vulnerabilities, supporting a unified security perspective within complex, decoupled, cloud-native architectures. 
 
 _Components_ change over time, and so they have both a _Component Base Versions_, the first iteration of a _Component_, and _Component Versions_, all subsequent iterations.
 
 - **Component Base Version** : The initial definition of a _Component_.
 
 - **Component Version** : A child of the _Component Base Version_ that represents changes.
-
-When an SBOM is created for every _Component_ vulnerabilities can be continuously detected and mapped to where they are physically running. 
 
 ## Publish New _Component Versions_ automatically via the CI/CD Pipeline
 
@@ -28,7 +26,7 @@ Components can only be added via your CI/CD pipeline. Configure your CI/CD Pipel
 
 _Components_ are organized by _Domains_. When you create a new _Component_ you publish it to the _Domain_ that defines the "Solution Space" the _Component_ addresses.  By organizing _Components_ into _Domains_, you create a catalog that allows other teams within your organization to find the _Component_, view its security profile, and share its Software Bill of Materials (SBOM) report.
 
-The organization of _Components_ by _Domains_ support the Domain Driven Design of a decoupled architecture. Before you begin publishing _Components_, you will need to have a _Domain_ ready.  For more on _Domains_ see the [Building Your Domain Catalog](/userguide/first-steps/2-defining-domains/).
+The organization of _Components_ by _Domains_ support the Domain Driven Design of a decoupled architecture. Before you begin publishing _Components_, you will need to have a _Domain_ ready.  For more on _Domains_ see the [Building Your Domain Catalog](/userguide/2-defining-domains/).
 
 ## _Components_ and _Applications_
 
@@ -52,7 +50,7 @@ DeployHub uses a backend versioning engine to track your _Components_. When you 
 - CD Build / Workflow Number
 - Deployment Metadata 
 
-DevOps and security information is collected for all _Components_ via the CI/CD pipeline. When your CD engine initiates a workflow for the _Component_, DeployHub is called to determine that a new version of the _Component_ is being pushed across the Pipeline. When a _Component_ is updated, DeployHub automatically updates all consuming _Applications_ and creates a new logical _Application_Version_. If a _Component_ changes, the consuming _Application_ also changes.  Both get a new version number. For more information see [Using DeployHub with CI/CD](/userguide/integrations/ci-cd_integrations/).
+DevOps and security information is collected for all _Components_ via the CI/CD pipeline. When your CD engine initiates a workflow for the _Component_, DeployHub is called to determine that a new version of the _Component_ is being pushed across the Pipeline. When a _Component_ is updated, DeployHub automatically updates all consuming _Applications_ and creates a new logical _Application Version_. If a _Component_ changes, the consuming _Application_ also changes.  Both get a new version number. For more information see [Using DeployHub with CI/CD](/userguide/integrations/ci-cd_integrations/).
 
 DeployHub uses a simple versioning number schema starting at 1 and incrementing over time, for example: ` Myapp;1, Myapp;2. ` .
 
@@ -102,14 +100,14 @@ You can compare any two _Component Versions_ by selecting the _Compare_button. Y
 
 ## Security Posture Section
 
-The first information you will see when viewing a _Component_ is the Security Posture. DeployHub gathers security insights created by open-source and commercial tools coming from organizations such as the [OpenSSF](https://openssf.org/projects/), [Continuous Delivery Foundation](https://cd.foundation), [OSV.dev](https://osv.dev/), and [Sonatype](https://https://www.sonatype.com/). When security tooling is added to your CI/CD pipeline, DeployHub pulls the security information and maps it to the deployment locations providing real-time security insights for every software update, referred to as continuous security monitoring. By mapping the security data to release versions, and their deployed locations, DeployHub gives you continuous insights into vulnerabilities long after your static CI/CD container scan was completed.
+The first information you will see when viewing a _Component_ is the Security Posture. DeployHub gathers security insights created by open-source and commercial tools coming from organizations such as the [OpenSSF](https://openssf.org/projects/), [Continuous Delivery Foundation](https://cd.foundation), [OSV.dev](https://osv.dev/), and [Sonatype](https://www.sonatype.com/). When security tooling is added to your CI/CD pipeline, DeployHub pulls the security information and maps it to the deployment locations providing real-time security insights for every software update, referred to as continuous security monitoring. By mapping the security data to release versions, and their deployed locations, DeployHub gives you continuous insights into vulnerabilities long after your static CI/CD container scan was completed.
 
->Note: Data from security tools can only be displayed if the tools are added to the CI/CD pipeline. To learn how DeployHub can simplify this step view [Setting up DeployHub via the CLI](/userguide/first-steps/2-intro-to-setting-up-deployhub/).
+>Note: Data from security tools can only be displayed if the tools are added to the CI/CD pipeline. To learn how DeployHub can simplify this step view [Setting up DeployHub via the CLI](/userguide/integrations/ci-cd_integrations/).
 
 
 ### Software Bill of Materials
 
-DeployHub consumes a _Component's_ Software Bill of Materials data as part of the CI/CD process. It can consume both [SPDX](https://spdx.dev/) and [CycloneDX](https://cyclonedx.org/) formats. DeployHub presents the following high-level information, based on all consumed packages, derived from your CI/CD SBOM step:  
+DeployHub consumes a _Component's_ Software Bill of Materials data as part of the CI/CD process. It can consume both [SPDX](https://spdx.dev/) and [CycloneDX](https://cyclonedx.org/) formats. DeployHub presents the following SBOM summary information:
 
 | SBOM Element  | Description |
 |------------------|--------------------------------------------------|
@@ -135,7 +133,7 @@ With the SBOM data, DeployHub continuously monitors the vulnerabilities for the 
 
 ### OpenSSF Scorecard
 
-OpenSSF Scorecard is a collection of security health metrics for open source packages. These metrics are critical as they allow consumers of the package to evaluate the security posture before use. DeployHub displays the OpenSSF score card information for the _Component_ as well as all of the packages the _Component_ consumes (displayed at the SBOM level). 
+OpenSSF Scorecard is a collection of security health metrics for open source packages. These metrics are critical as they allow consumers to evaluate the security posture before use. DeployHub displays the OpenSSF score card information for the _Component_ and all of the packages the _Component_ consumes (displayed at the SBOM level). 
 
 
 |OpenSSF Scorecard Element  | Description |
@@ -155,7 +153,7 @@ DeployHub consumes the license information from the GitHub repository associated
 
 ## Impact Assessment Section
 
-When responding to vulnerabilities you must know how widespread the vulnerability is across your runtime environments. DeployHub maps security data to DevOps data to provide an inventory of each _Application_ who uses the _Component_. 
+When responding to vulnerabilities you must know how widespread the vulnerability is across your runtime environments. DeployHub maps security data to DevOps data to provide an inventory of each _Application_ who consumes _Component_. 
 
 ### Consuming Applications
 
@@ -178,7 +176,7 @@ The Blast Radius shows a graphic representation of how many _Applications_ are c
 
 As many _Components_ are APIs, DeployHub gathers the Swagger information. Swagger is important because it plays a crucial role in API development and documentation. Swagger helps design, build, document, and consume RESTful web services. If available, the Swagger information is displayed in this section. 
 
->Note: Automate the Readme, SBOM, License, and Swagger Upload via Your Pipeline. You can automatically upload you readme, SBOM, License, and Swagger data using the Command Line Interface (CLI) added to your pipeline. For more information review the [CI/CD CLI details](https://github.com/Ortelius/cli/blob/main/doc/dh.md).
+>Note: Automate the Readme, SBOM, License, and Swagger Upload via Your Pipeline. You can automatically upload you readme, SBOM, License, and Swagger data using the Command Line Interface (CLI) added to your pipeline. For more information review the [CI/CD CLI details](/userguide/integrations/ci-cd_integrations/).
 
 
 ## _Component_ with DevOps Details Section
@@ -186,8 +184,6 @@ As many _Components_ are APIs, DeployHub gathers the Swagger information. Swagge
 DeployHub gathers both security insights and DevOps insights to provide a comprehensive view of a _Component's_ security posture. The DevOps details shows the owner of the _Component_, Build information, Helm and Git details, Key Value data, and DeployHub deployment engine information if used.  
 
 ### _Component_ Details
-
-This information provides basic information about the owner of the _Component_ and how to contact them. 
 
 |Field | Description   |
 |----------------------|---------------------------------------------|
@@ -249,18 +245,17 @@ DeployHub includes an agentless deployment engine, but can also integrate with e
 
 | **Field**                | **Description** |
 |--------------------------|-----------------------------------------|
-| **Endpoint Type**                  | Used to map the _Component_ to _Endpoints_ within an _Environment_ at deployment.  This allows DeployHub to map the _Component_ to the correct _Endpoint_ when moving across different environments.  You can add your own _Endpoint_ Types from the Customize Types menu or select from the default  |
 | **Change Request Data Source**     | This _Data Source_ is assigned to the _Component_ for tracking Change Request. A Change Request Data Source must be pre-defined for this field to be used.   |
 | **Category**                       | Assigning a Category to an Object allows lists of Objects based on Categories to be used throughout DeployHub. Add a new Category in the entry field or use an existing Category displayed in the drop down. Categories are most commonly associated with _Actions_, _Functions_ and _Procedures_. Pre-defined Categories include: <li>Build - _Actions_, _Functions_ and _Procedures_ for calling ANT (SalesForce integration).</li><li>Database - _Actions_, _Functions_ and _Procedures_ for database updates.</li><li>Deploy- _Actions_, _Functions_ and _Procedures_ for Deployments.</li><li>Dropzone- _Actions_, _Functions_ and _Procedures_ for interacting with the Dropzone.</li><li>File Logic- _Actions_, _Functions_ and _Procedures_ related to File manipulation.</li><li>Flow Logic- _Actions_, _Functions_ and _Procedures_ for if then else in DMScript.</li><li>Loops- _Actions_, _Functions_ and _Procedures_ for file looping.</li><li>General-Non-categorized Objects (default).</li><li>WebLogic- _Actions_, _Functions_ and _Procedures_ for deploying to WebLogic.</li><li>WebSphere- _Actions_, _Functions_ and _Procedures_ for deploying to WebSphere.</li><li>Windows- _Actions, Functions_ and _Procedures_ used for Windows deployments.</li> |
 | **Always Deploy**                  | The _Component_ is deployed to the associated _Endpoints_ in the _Target Environment_ regardless if the _Component_ is already present on the _Endpoints_. This is useful for monolithic applications where you want to copy over a binary for example.   |
 | **Deploy Sequentially**            | Normally when a _Component_ in an _Application_ is deployed to several _Endpoints_ in an _Environment_, it is deployed to each _Endpoint_ at the same time (in parallel). The "Deploy Sequentially" option changes this behavior to force the _Component_ to deploy to each _Endpoint_ in turn, sequentially.  |
-| **Base Directory**    | Base, or high level, directory where the file will be deployed. This value will be ignored if the _Endpoint_ has a Base Directory defined.  See [Formatting Directories](/publishing-components/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments) on the order of how the deployment directory is formatted. |
+| **Base Directory**    | Base, or high level, directory where the file will be deployed. This value will be ignored if the _Endpoint_ has a Base Directory defined.   |
 | **Pre-Action**        | An _Action_ that is to be run prior to the deployment of this _Component_. This can be used to perform prerequisite requirements, such as creating directories, creating files from scratch, or moving files between directories.|
 | **Post-Action**       | An _Action_ that is to be run after the deployment of this _Component_. This can be used to execute actions on the target _Endpoint_ after the _Component_ has been deployed. 
 | **Custom Action**                  | An _Action_ that replaces the usual Deployment Engine processing. Custom _Actions_ can be used to call Ansible, Helm or other external deployment tools.  |
-| **Base Directory**    | Base, or high level, directory where the file will be deployed. This value will be ignored if the _Endpoint_ has a Base Directory defined.  See [Formatting Directories](/publishing-components/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments) on the order of how the deployment directory is formatted.   
-| **Target Directory**  | The directory under the Base Directory where the file will be deployed, or final "Target" Directory. See [Formatting Directories](/publishing-components/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments) on the order of how the deployment directory is formatted. 
-| **Repository**        | Choose the Repository that contains your _Application_ binaries, files, etc. This list box is populated based on the _Repositories_ pre-defined in your initial setup. Based on the _Repository_ you select, you may be provided override or append fields if they were made available. For a list of the _Repositories_  See [Connecting Your Repositories](/first-steps/2-define-repositories/#using-the-repository-dashboard-for-viewing-and-editing) for more information.<ul><li>Filepath Override: Enter a filepath that will override the default filepath defined at the _Repository_ level.</li><li>Pattern Override: Enter a pattern that will override the default pattern defined at the _Repostory_ level.  Patterns are file types you want to pull from the _Repository_, such as \*.exe, \*.dll, \*.war. </li><li>Recursive Override: Select the box in order to override the default recursive behavior defined at the _Repository_ level. This will turn recursion on or off depending on the setting at the _Repository_ level. </li><li>Version Override: Overrides the default template of your versioning pattern defined at the _Repository_ level. </li></ul> |
+| **Base Directory**    | Base, or high level, directory where the file will be deployed. This value will be ignored if the _Endpoint_ has a Base Directory defined.    
+| **Target Directory**  | The directory under the Base Directory where the file will be deployed, or final "Target" Directory. 
+| **Repository**        | Choose the Repository that contains your _Application_ binaries, files, etc. This list box is populated based on the _Repositories_ pre-defined in your initial setup. Based on the _Repository_ you select, you may be provided override or append fields if they were made available. For a list of the _Repositories_  See [Connecting Your Repositories](/userguide/advanced-features/deployments/2-define-repositories/) for more information.<ul><li>Filepath Override: Enter a filepath that will override the default filepath defined at the _Repository_ level.</li><li>Pattern Override: Enter a pattern that will override the default pattern defined at the _Repostory_ level.  Patterns are file types you want to pull from the _Repository_, such as \*.exe, \*.dll, \*.war. </li><li>Recursive Override: Select the box in order to override the default recursive behavior defined at the _Repository_ level. This will turn recursion on or off depending on the setting at the _Repository_ level. </li><li>Version Override: Overrides the default template of your versioning pattern defined at the _Repository_ level. </li></ul> |
 
 
 {{% include "userguide/reusable/Attributes.md" %}}

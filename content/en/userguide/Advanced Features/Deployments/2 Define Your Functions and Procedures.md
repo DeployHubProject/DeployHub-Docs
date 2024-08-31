@@ -1,13 +1,13 @@
 ---
 title: "Procedures and Functions"
 linkTitle: "Procedures and Functions"
-weight: 34
+weight: 8
 description: >
   Customizing your Deployment _Actions_ with _Functions_ and _Procedures_.
 ---
 ## Functions and Procedures
 
-_Functions_ and _Procedures_ are the steps that make up an _Action_. If you have not worked with _Actions_, read about them in them in the [Customize your Actions Chapter](/userguide/customizations/2-define-your-actions/).
+_Functions_ and _Procedures_ are the steps that make up an _Action_. If you have not worked with _Actions_, read about them in them in the [Customize your Actions Chapter](/userguide/advanced-features/deployments/2-define-your-actions/).
 
 _Functions_ and _Procedures_ are used by _Actions_ to define custom installation logic of a _Component_ or perform any type of Pre or Post Action. Using _Actions_, _Functions_ and _Procedures_ allows you to be as creative as needed to meet the unique needs of your implementation.
 

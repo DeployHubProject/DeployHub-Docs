@@ -41,7 +41,7 @@ The Dashboard view displays all information related to a specific _Repository_ T
 - File System (included as a default with override and append options enabled)
 - OpenMake Meister (Build system with a binary repository)
 - SVN
-- Git (git repositories are treated as File System repositories). See [Git Repository](/userguide/first-steps/2-define-repositories/#git-_repository_-details) and [GitHub](/userguide/integrations/github/) for configuration steps.
+- Git (git repositories are treated as File System repositories). See [GitHub](/userguide/integrations/github/) for configuration steps.
 
 ### Common Details of all _Repositories_ Types
 
@@ -105,13 +105,11 @@ You can configure DeployHub to call out to a Git Repo to pull deployable artifac
 
 **Step 1 - Create a DeployHub File System _Repository_**
 
-DeployHub can use Git as a binary repository for retrieving deployable objects as part of the deployment process.  To do this you will first need to define Git as a connected _Repository_ Object from within DeployHub. This connection will be used by as part of the deployment process using a _Procedure_ and a _Action_. For information on setting up File System as a binary repository see [Connect Your Repositories](/userguide/first-steps/2-define-repositories/).
-
-Once you have completed this step, you are ready to create a new _Procedure_ that performs the check out from the Git repository.
+DeployHub can use Git as a binary repository for retrieving deployable objects as part of the deployment process.  To do this you will first need to define Git as a connected _Repository_ Object from within DeployHub. This connection will be used by as part of the deployment process using a _Procedure_ and a _Action_. Once you have completed this step, you are ready to create a new _Procedure_ that performs the check out from the Git repository.
 
 **Step 2 - Create your Git Checkout _Procedure_ for your _Action_**
 
-_Procedures_ are called by _Actions_ to execute deployment logic. A pre-defined DeployHub _Procedure__is available from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). This where you will find the most current version of this _Procedure_. For more information on creating_Procedures see [Functions and Procedures](/userguide/customizations/2-define-your-functions-and-procedures/).
+_Procedures_ are called by _Actions_ to execute deployment logic. A pre-defined DeployHub _Procedure__is available from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). This where you will find the most current version of this _Procedure_. For more information on creating_Procedures see [Functions and Procedures](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/).
 
 From the Ortelius Git Repo, pull the file named **GitCheckout.re**
 
@@ -119,7 +117,7 @@ Once downloaded, you will need to Import it into DeployHub from the Func/Procs L
 
 **Step 3 - Create your _Action_ for the GitHub Checkout _Procedure_**
 
-Once you have imported your GitCheckout.re _Procedure_, you can define your _Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub main panel. Use the +Add option to create a new _Action_ for you _Procedure_. Name the new _Action_ **GitCheckAction** (no spaces). See [Customize Your Actions](/userguide/customizations/2-define-your-actions/) for more information on creating _Actions_.
+Once you have imported your GitCheckout.re _Procedure_, you can define your _Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub main panel. Use the +Add option to create a new _Action_ for you _Procedure_. Name the new _Action_ **GitCheckAction** (no spaces). See [Customize Your Actions](/userguide/advanced-features/deployments/2-define-your-actions/) for more information on creating _Actions_.
 
 Now we are going to customize this _Action_. On the right hand side, you will see a list of _Functions_ and _Procedures_ you can choose from.  Navigate to your _Domain_ to find the GitCheckOut _Procedure_. Drag it onto the area under _Start._ A pop-up dialog box will open for you to complete the following parameters:
 
@@ -138,7 +136,7 @@ Note: Because this _Action_ is reusable, no _Component_ variables are defined. T
 
 **Step 4 - Assign the GitCheckoutAction to your _Component_ to be deployed**
 
-For each _Component_ you will need to define the variable values for $GIT_URL, $GIT_COMMIT and $GIT_DIR that the GitCheckoutAction will use at the_Component_ level. The values will be passed to the GitCheckoutAction at deploy time. See [Defining _Components_](/userguide/publishing-components/2-define-components/) for more information.
+For each _Component_ you will need to define the variable values for $GIT_URL, $GIT_COMMIT and $GIT_DIR that the GitCheckoutAction will use at the_Component_ level. The values will be passed to the GitCheckoutAction at deploy time. See [the _Components_ chapter](/userguide/2-define-components/) for more information.
 
 **Step 5 - Set Your _Component_ Attributes_**
 

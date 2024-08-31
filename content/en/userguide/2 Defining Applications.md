@@ -1,14 +1,32 @@
 ---
-title: "Defining Your Application Baseline"
-linkTitle: "Defining Your Application Baseline"
+title: "Applications and Their Security Posture"
+linkTitle: "Applications and Their Security Posture"
 weight: 7
 description: >
-  How to Create a New Baseline Application.
+  Viewing the Application Security Posture.
 ---
 
-## Using the _Application_ List View for Adding or Deleting
 
-Use the _Application_ List View accessible from the left hand _Application_ menu option. This will take you to a list of all _Application Base Versions_ and _Application Versions_ to which you have access. There is a row for every _Environment_ to which the _Application Base Version_ or _Application Version_ has been deployed.  For this reason, there will be multiple entries for the same _Application_ if it has been deployed to multiple _Environments_.  
+## Understanding _Applications_ and _Application Versions_
+
+ _Applications_ are a collection of _Components_ that are released as a single software solution to end users. You define an _Application_ by associating the _Components_ it will consume. The first time you define an _Application_, it is referred to as the _Application Base Version._ When you change the _Application Base Version_, you create a new _Application Version_. _Applications_ are assigned to _Environments_ and _Domains_.
+
+- **Application Base Version** : Defines the software product in terms of _Components_, _Attributes,_ and assigned _Environments_.
+
+- **Application Version** : This child of the _Application Base Version_ represents changes and can be deployed just as an _Application Base Version_ is. For instance, your Application Base Version may be called MyApp;1, subsequent versions would be automatically named MyApp;2, MyApp;3, etc.
+
+## Applications and their Components
+
+_Applications_ are defined by the _Components_ they consume. As with _Components_, _Applications_ have versions. When a new _Component_ is published by the CI/CD workflow, DeployHub is called to automatically create a new _Application Version_.  For more information on this topic, see the [Adding Your Components and Applications to DeployHub](/userguide/addingtopipeline/).
+
+
+## Adding New _Application Versions_ Automatically via Continuous Delivery
+
+_Applications_ and new _Application Versions_ can only be added via the CI/CD process. Configure a CI/CD workflow to automatically update new _Application_ versions each time a new GitCommit triggers a new _Component_ that your _Application_ consumes. DeployHub in the workflow performs this continuous versioning of new _Components_ and their consuming _Applications_.  For more information, see [Using DeployHub with CI/CD](/userguide/addingtopipeline/).
+
+## Viewing _Applications_
+
+Use the _Application_ List View accessible from the left hand _Application_ menu option. This will take you to a list of the latest _Application Versions_ to which you have access. 
 
 The list view is organized on the following columns:
 
@@ -16,9 +34,8 @@ The list view is organized on the following columns:
 |------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | **Version**                        | The _Application Base Version_ or _Application Version_ number.                                                                           |
 | **Domain**                         | The _Domain_ to which the _Application_ belongs.                                                                                          |
-| **Parent**                         | The _Application Base Version_ from which the _Application Version_ was created. This will be empty for the _Application Base Version_.   |
 | **Environment**                    | The _Environment_ to which the _Application_ has been deployed. Each _Environment_ will represent a different row in the List View table. |
-| **Last Deployment to Environment** | The Deployment Log number.                                                                                                                |
+| **Deployment Log** | The Deployment Log number.                                                                                                                |
 | **Completed**                      | The date and time of the last deployment to the listed _Environment_.                                                                     |
 | **Results**                        | Success or Fail.                                                                                                                          |
 
@@ -31,7 +48,7 @@ You can also use the Filter bar, represented by a funnel icon, to reorder your _
 - Result
 - Version
 
-Double click on an item to see the _Dashboard_ view.
+
 
 ## Additional Tabs from the _Application_ List View
 
@@ -40,16 +57,46 @@ The _Application_ List View has the following Tabs.
 | Tab             | Description                                                                                                                                                                                                     |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Refresh**     | Refreshes the browser.                                                                                                                                                                                          |
-| **Add Base**    | Allows you to Add a new _Application Base Version_.                                                                                                                                                             |
-| **Add Version** | Creates a copy of the selected _Application_ in the list, creating a new _Application Version_.                                                                                                                 |
 | **Delete**      | Deletes the selected item. However, you must delete the _Applications_ starting from the newest to the oldest.  The _Application Base Version_ would be deleted last. Sorting by "Version" gives you the order. |
-| **Tasks**       | Displays all _Application_ Tasks available for the selected item based on the Tasks defined to the _Application_ Domain. See [Tasks](/userguide/first-steps/2-defining-domains/#tasks) for more information.    |
-| **List**        | Displays the List View.                                                                                                                                                                                         |
-| **Map**         | Displays a global Map of all versions of the _Application_ with _Components_.                                                                                                                                   |
+| **Package Search**        | Allows for the search of a particular package across all _Applications_ and _Components_. Use this feature to quickly find where a vulnerable package version is running.                                                                                                                                                                                          |
+| **Reports**         | Generate a Compliance Summary report, [Dora deployment frequency](/userguide/integrations/dora/deploymentfrequency/), [Dora lead time to change](/userguide/integrations/dora/leadtime/) or export a federated SBOM to meet government requirements such as [EO 14028](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028#:~:text=Summary%20of%20EO%2014028%20requirements&text=Establishes%20baseline%20security%20standards%20for,making%20security%20data%20publicly%20available.).                                                                                                                                    |
 
 ## Viewing and Editing with the _Application_ Dashboard
 
-The Dashboard view displays all information related to a specific _Application Base Version_ or _Application Version_. The Dashboard view has two additional tab options - Package Components and Versions.  Below are the Details for an _Application_.
+Double click on an _Application Version_ to see the Dashboard view. The Dashboard view displays all information related to the latest _Application Version_ selected from the List View. This view of the _Application Version_ shows you the security posture including OpenSSF scorecard, Software Bill of Materials report, and real-time vulnerabilities. In addition, you can view how the _Application Version_ is impacted by _Components_, or view the DevOps details. 
+
+ The Dashboard view has two additional Buttons - Versions and Compare
+
+### Viewing all _Component Versions_
+
+You can view a list of all _Application Versions_ by selecting the "Versions" button displayed after the _Application's_ name at the top of the Dashboard. 
+
+### Comparing Two _Component Versions_
+
+You can compare your current _Application Version_ with any other _Application Version_ by selecting the _Compare_ button. You will be provided a list to select your second _Component Versions_ for the comparison.  
+
+### Security Posture Section
+
+View the _Application Version_ Software Bill of Material Report, and Real-time vulnerabilities. 
+
+<u>Federated Software Bill of Materials Report</u>
+
+This section is a summary the _Applications_ federated Software Bill of Materials (SBOM) report showing all of the packages consumed by the 'logical' _Application Version_. An _Application_ SBOM provides a detailed report of all _Component_ SBOM data within the _Application_, with duplicates removed. When a _Component_ is updated, DeployHub automatically generates a new version of all _Applications_ that use that _Component_, along with a new aggregated SBOM. 
+
+>Note:  If you need to produce an _Application Version_ SBOM for governance reporting or sharing, you can export the SBOM from the _Application_ List View _Reports_ menu option.
+
+<u>Vulnerabilities </u>
+
+Using the aggregated Software Bill of Materials, DeployHub cross-references all _Component_ packages within the _Application_ against known vulnerability databases such as [OSV.dev](https://osv.dev). DeployHub will scan for new known vulnerabilities every 10 minutes, and update the dashboard.
+
+>Note - This list may be incomplete if one or more of your _Package Components_ do not have an associated SBOM that can be used to gather vulnerability data.
+
+## Impact Assessment
+
+Track the _Component Versions_ that the _Application Version_ is dependent upon. This view gives you a list of the _Components_ that the _Application_ requires. In addition, this view provides links to the  selected _Component Version_, and deployed locations of the _Component_.
+
+### Application DevOps Details
+Below are the Details for an _Application_.
 
 | Details                            | Description                                                                                                                                                     |
 |------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -62,40 +109,13 @@ The Dashboard view displays all information related to a specific _Application B
 | **Custom Action**                  | Overrides any Pre or Post Actions, such as calling an external solutions such as Helm.                                                                          |
 | **Successful Deployment Template** | Used for success notifications.                                                                                                                                 |
 | **Failed Deployment Template**     | Used for failure notifications.                                                                                                                                 |
+| **Log History**     | _Applications_ can be deployed many times, to the same or different locations (_Environments_). For every Deployment, the Log History will show all deployments based on "Result" and "Date                                                                                                                             |
+| **Key Value Configuration**     | This list shows the key values used as part of the _Application Version_ deployment. This data can be added manually or updated via the CI/CD process. |
+ 
 
-### _Application_ Dependencies
-
-The Dependency list shows all of your _Package Components_. This will remain empty until you assign _Components_ to your _Application_. You can manually assign _Package Components_ by using the _Package Components_ tab at the top of your _Application_ Dashboard. Alternatively, the recommended method is to automate the collection of this data via a [CI/CD Command Line Interface (CLI)](/userguide/integrations/ci-cd_integrations/).
-
-### Vulnerabilities
-
-Your _Application's_ vulnerabilities are derived by aggregating all of your _Package Component's_ vulnerabilities to the 'logical' _Application_ level. Vulnerabilities are displayed based on each _Component's_ SBOM. This data is automatically populated when one or more of your _Package Components_ have an SBOM that produced vulnerability data.
-
->Note - This list may be incomplete if one or more of your _Package Components_ do not have an associated SBOM that can be used to gather vulnerability data.
-
-### SBOM
-
-Your _Application's_ SBOM is derived by aggregating all of your _Package Component's_ SBOMs to the 'logical' _Application_ level.  
-
->Note - This list may be incomplete if one or more of your _Package Components_ do not have an associated SBOM.
-
-### Log History
-
-_Applications_ can be deployed many times, to the same or different locations (_Environments_). For every Deployment, the Log History will show all deployments based on "Result" and "Date".
 
 {{% include "userguide/reusable/Attributes.md" %}}
 
-### Trends
-
-The Trends graph shows the success or failure rates overtime as well at the time required for the last 10 deployments. If an _Application_ deployment takes longer than previous deployments, there is an issue with the deployment logic.
-
-### Deployed Environments
-
-Each _Application Base Version_ is assigned the _Environments_ for data aggregation. _Application Versions_ inherit the _Environments_ from the _Application Base Version_.
-
-### Last Deployment Difference Based on Environment
-
-The Difference Graph shows what changed in the last deployment between the previous deployment. For the _Application Base Version_ all _Components_ will be shown.  Subsequent deployments will only show  changes.
 
 {{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
 
@@ -109,20 +129,4 @@ The Difference Graph shows what changed in the last deployment between the previ
 | **Change** | Any _User_ in any _Group_ within this list can make changes to the _Component_.                                                                    |
 | **Deploy** | Any _User_ in any _Group_ within this list can deploy the _Application_.  Restrictions are based on the Access defined at the _Environment_ level. |
 
-{{% include "userguide/reusable/ChangeRequest.md" %}}
 
-### _Application_ Dependency Map
-
-The Dependency Map provides a graphical view of all your _Package Components_. This will remain empty until you assign _Components_ to your _Application_. Do this by using the _Package Components_ tab at the top of your _Application_ Dashboard.
-
-## Package Components Tab
-
-This tab contains all the _Components_ that make up an _Application_, linked together in order of deployment if needed using a blueprint designer. Click on the _Component_ Selector on the right side to see the available _Components_ based on _Domains_ and Categories. A Category acts as a tag or label assigned at the _Component_ level and are not specific to _Domains_.  _Domains_ are identified with a sitemap icon. A Category is identified with a Tag icon. Selecting either expands the options to show all available _Components_.
-
-Click and drag a _Component_ from the list on the far right side and drop it into the Assigned _Components_ area. It will appear in the area as a box containing the name of the _Component_. It automatically links to the last _Component_. Right click on the connecting line, select "Delete this Connection".Create by Click on the anchor (the green dot at the bottom of the _Component_)  to create a new connector. Then drag and drop it onto another _Component_. This determines the order in which the _Components_ will be deployed. Each _Component_ contains _Component Items_ also linked together in the order to be executed.  For a microservice implementation, they can all be linked to the "start point". This means they will be deployed in parallel.
-
-NOTE: At least one _Component_ must be connected to the "start point" or the deployment will fail.
-
-## How to Publish New _Application Versions_ Automatically via Continuous Delivery
-
-Configure a continuous delivery system to automatically update new _Application_ versions each time a new GitCommit triggers a new _Component_ to be consumed by your _Application_. DeployHub in the workflow performs this continuous versioning of new _Components_ and their consuming _Applications_.  For more information, see [Using DeployHub with CI/CD](/userguide/integrations/ci-cd_integrations/).

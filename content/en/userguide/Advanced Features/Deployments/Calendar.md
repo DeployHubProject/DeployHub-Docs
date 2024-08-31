@@ -19,6 +19,9 @@ When viewing a _Calendar_ by Month, Week, or Day you can click on a place within
 
 ### Availability Field
 
+
+This field, found on the _Environment_ detail view interacts with the _Environment_ calendar making the _Environment_ open for deployments at anytime, or closed for all deployments unless scheduled. The default value, "Always Available Unless Denied by Calendar", allows the _User_ to deploy _Applications_ into the _Environment_ unless there is an entry in the Calendar that prevents stops it. The other value, "Always Unavailable Unless Denied by Calendar", doesn't allow deployments unless a specific entry in the Calendar is approved. |
+
 The "Availability" field controls access to the _Environments._ You either close or open the Calendar for deployment events.
 
 - _Available Unless Denied by Calendar –_ Selecting this option **opens** the Calendar for deployments at any time. To restrict a deployment, you would add a "Unavailable" Event for a specified period.

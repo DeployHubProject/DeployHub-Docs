@@ -86,14 +86,3 @@ Built-in _Actions_ may already support what you need. Some Built-in _Actions_ ar
 |**Start Service** | Starts a Windows Service on the appropriate _Endpoints_ within the targeted _Environment_. Use IF conditions to filter the _Endpoint_ list to those matching the specified criteria. |
 |**Stop Service** | Stops a Windows Service on the appropriate _Endpoints_ within the targeted _Environment_. Use IF conditions to filter the _Endpoint_ list to those matching the specified criteria. |
 
-## Built-in _Actions_ that Support DevOps Interoperability
-
-| Action                                                  | Description                                |
-|---------------------------------------------------------|--------------------------------------------|
-| [Ansible](/userguide/integrations/ansible/)             | Uses Ansible to perform Deployments.       |
-| [Cloud Foundry](/userguide/integrations/cloud-foundry/) | Uses Cloud Foundry to perform Deployments. |
-| [Helm](/userguide/integrations/helm/)                   | Uses Helm to deploy Containers.            |
-| [SalesForce](/userguide/integrations/salesforce/)       | Deploys _Applications_ to SalesForce.      |
-| [Tomcat](/userguide/integrations/tomcat/)               | Deploys to a Tomcat environment.           |
-| [WebLogic](userguide/integrations/weblogic/)            | Deploys to a WebLogic Environment.         |
-| [WebSphere](/userguide/integrations/websphere/)         | Deploys to a WebSphere Environment.        |

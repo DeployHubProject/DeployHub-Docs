@@ -36,7 +36,7 @@ You do not need to use any specific syntax to access an Object variable. Wheneve
 
 ### Application Object
 
-The _Application_ object represents either a Base _Application_, an _Application Version,_ or a Release. In **DeployHub Pro** there is always an _Application_ on the stack representing the _Application_/_Release_ being deployed referenced by $_Application_. You can also retrieve an _Application_ using the get_Application__Function_ or push an _Application_ onto the Stack via using _Application_.
+The _Application_ object represents either a Base _Application_, an _Application Version,_ or a Release. In DeployHub there is always an _Application_ on the stack representing the _Application_/_Release_ being deployed referenced by $_Application_. You can also retrieve an _Application_ using the get_Application__Function_ or push an _Application_ onto the Stack via using _Application_.
 
 NOTE: A _Release_ is a DeployHub Pro Object. It is of the _type__Application_. The release property indicates if the object represents a Release.
 

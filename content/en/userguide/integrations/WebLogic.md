@@ -14,8 +14,10 @@ The DeployHub WebLogic integration supports a WebLogic deployment using a _Post 
 
 This process involves the creation of custom _Procedures_ and a _Post Action_.  For more information on creating _Procedures_ and _Actions_ see:
 
-- [Customizing Actions](/userguide/first-steps/2-define-your-actions/)
-- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
+
+- [Customizing Actions](/userguide/advanced-features/deployments/2-define-your-actions/)
+- [Procedures and Functions](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/)
+
 
 Once downloaded, you will need to Import them into DeployHub as the Procedures. To import these Procedures login to DeployHub and select the _Func/Procs_.  From the list view select  **Import** menu. Select your Domain, such as '_Global_ Domain' and upload the _Procedure_ into the DeployHub.
 
@@ -77,8 +79,9 @@ Place the _Action_ within the _Component's Post Action_ field. When _Application
 
 For more information see:
 
-- [Customizing Actions](/userguide/first-steps/2-define-your-actions/)
-- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
+- [Customizing Actions](/userguide/advanced-features/deployments/2-define-your-actions/)
+- [Procedures and Functions](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/)
+
 
 **Step 5 - Set Your _Component_ Attributes_**
 

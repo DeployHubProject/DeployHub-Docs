@@ -14,7 +14,7 @@ The Ortelius project uses a decoupled microservices architecture serving as a gr
 - real-time vulnerability reports
 - compliance reports
 
-You will also see how Ortelius uses a Domain-Driven Design (DDD) to organize data across teams. 
+You will also see how Ortelius uses a Domain-Driven Design (DDD) to organize data. 
 
 ## Signing Up and Getting Started
 
@@ -36,25 +36,23 @@ Upon logging into Ortelius, you will be given an option to select your Company N
 
 _Domains_ serve as the basic structure of organizing Continuous Security Intelligence. Developers use _Domains_ to catalog their _Components_ based on 'solution spaces.' Organizing your software supply chain in this way allows for _Components_ to be easily shared.
 
-_Domains_ are not folders. They serve as a method for creating fully qualified names of Objects within DeployHub to keep things organized.  _Domains_ also manage security and Tasks.  When you assign security options and Tasks at the _Domain_ level, any child _Subdomain_ inherits the value. A child _Subdomain_ can override a parent _Domain_ value. 
-
-You can explore the _GLOBAL.open source_ Domain to learn how Continuous Security Intelligence is organized.  In DeployHub terminology, the _GLOBAL.open source_ Domain has multiple _Subdomains_.
+_Domains_ are not folders. They serve as a method for creating fully qualified names of objects within DeployHub to keep things organized. You can explore the _GLOBAL.open source_ Domain to learn how Continuous Security Intelligence is organized.  In DeployHub terminology, the _GLOBAL.open source_ Domain has multiple _Sub-domains_.
 
 1) From the left hand side menu, select _Domains_. This will take you to the _Domain_ Details. All _Domains_ you have access to will be shown in the _Domain_ List Box. 
 
-2) Select GLOBAL.Open Source.Linux Foundation. In the Details, you will see this _Domain_ has two _Sub-Domains_, the CDF and the OpenSSF. Driving into the GLOBAL.Open Source.Linux Foundation.CDF _Domain_ will show you the Ortelius project is a _Sub-Domain_ of the CDF.   
+2) Select GLOBAL.Open Source.Linux Foundation. In the Details, you will see this _Domain_ has two _Sub-Domains_, the CDF and the OpenSSF. Driving into the GLOBAL.Open Source.Linux Foundation.CDF _Domain_ will show you the Ortelius project is a _Sub-domain_ of the CDF.   
 
-For More information on Domains see - [Building _Domains_](/userguide/first-steps/2-defining-domains/)
+For More information on Domains see - [Building Your _Domain_ Catalog](/userguide/2-defining-domains//)
 
 <p><br></p>
 
 ## Explore Components
 
-_Components_ are artifacts, binaries, files or any deployable artifact. _Components_ are assigned to _Applications_. This assignment allows for the aggregation of data from the _Components_ to the _Applications_ that consume them, providing unified Software Bill of Materials reports and Application Security Posture reports.  
+_Components_ are artifacts, binaries, files or any deployable object. _Components_ are assigned to _Applications_. This assignment allows for the aggregation of data from the _Components_ to the _Applications_ that consume them, providing unified Software Bill of Materials reports and Application Security Posture reports.  
 
 ### Using the Component List View
 
-From the left hand side menu, select "_Components_". This will take you to a list of view of all _Components_ assigned to the selected _Domain_. Using the filter option, choose _GLOBAL.Open Source.Linux Foundation.CDF.Ortelius_ to view all of the _Components_ consumed by the Ortelius open source project. 
+From the left hand side menu, select "_Components_". This will take you to a list view of all _Components_ assigned to the selected _Domain_. Using the filter option, choose _GLOBAL.Open Source.Linux Foundation.CDF.Ortelius_ to view all of the _Components_ consumed by the Ortelius open source project. 
 
 ![Ortelius Domain](/userguide/images/OrteliusDomainSelection.jpg)
 
@@ -68,7 +66,7 @@ Sort Components by "Completed." "Completed" indicates the _Component_ has been d
 
 <strong><u>Viewing a Component's Version</strong></u>
 
-The first item in our sorted _Component_ list is the latest version of _ms-compitem-crud_ represented by the version label "main;10_0_834_g1bdd9d_."  
+The first item in our sorted _Component_ list is the latest version of _ms-compitem-crud_ represented by the version label "main;10_0_834_g1bdd9d_." DeployHub uses a versioning engine to track changes as artifacts are updated, and appends the name with a new version number.  
 
 ![Component List](/userguide/images/component-version.jpg)
 
@@ -83,7 +81,7 @@ The _Component_ Detail page shows you the _Components_ Security Profile, Impact 
 
 <strong><u>View Previous Versions and Run a Comparison</strong></u>
 
- From the top menu, look for the previous _Version button_. 
+From the top menu, look for the previous _Version button_. 
 
  ![Compare Components](/userguide/images/component-compare-menu.jpg)
 
@@ -100,13 +98,12 @@ You will be provided a report that shows the differences between these two _Comp
 
 <strong><u>SBOM and Vulnerabilities</u></strong>
 
-When you view a _Components_ details, the first attribute you will see is the _Component's_ Software Bill of Materials and real-time vulnerabilities. 
+When you view a _Component's_ details, the first attribute you will see is the _Component's_ Software Bill of Materials summary and real-time vulnerabilities. 
 
 When your _Component_ build executes, DeployHub will generate a Software Bill of Materials (SBOM) report using the CI/CD command line integration (CLI). Once gathered, DeployHub cross references the SBOM results to known vulnerabilities in real-time. While the SBOM is a static view, the vulnerabilities are updated regularly. DeployHub continuously scans [OSV.dev](https://osv.dev/) for new known vulnerabilities for all the packages in the SBOM.
 
-In this view, you will see the _Component's_ SBOM displayed with the Package, Version, License and OpenSSF Scorecard values. 
+In this SBOM summary, you will see the _Component's_ SBOM displayed with the Package, Version, License and OpenSSF Scorecard values. 
 
-<p><br></p>
 
 >Note: You can export a _Component's_ Software Bill of Materials (SBOM) Report by returning to the _Component_ list view, check mark the _Component_ and select _Export SBOM_ from the top navigation menu. You will be a provided a full view of your _Components_ SBOM for sharing across teams. 
 
@@ -152,18 +149,18 @@ DeployHub provides you a view of the _Components_ Swagger information when avail
 
 This section gives you additional information about the _Component_ such as _Owner_ name and contact information, build details, Git Repo information and Helm Chart information if used. In addition, if you are using the DeployHub internal Deployment Engine, the configuration for deploying your _Component_ is provided.  
 
-For More information on Components see - [Publishing _Components_](/userguide/first-steps/publishing-components/).
+For More information on Components see - [Components and Their Security Posture](/userguide/2-define-components/).
 
 <p><br></p>
 
 ## Explore Applications
 
-An _Application_ is a collection of _Components_ that together form a complete software solution. DeployHub handles the logical _Application_ by aggregating _Component_ data at the _Application_ level. The Application features display all logical _Applications_ with their associated Components, and their combined security profile.
+An _Application_ is a collection of _Components_ that together form a complete software solution. DeployHub handles the logical _Application_ by aggregating _Component_ data at the _Application_ level. The Application features display all logical _Applications_ with their associated _Components_, and their combined security profile.
 
 
 ### Using the Application List View
 
-From the left hand side menu, select "_Applications"_. If you have completed the above steps, you will still be in the _GLOBAL.Open Source.Linux Foundation.CDF.Ortelius_ _Domain_. Notice that the first item in the list is _ortelius_ with the most recent Version number. 
+From the left hand side menu, select "_Applications"_. If you have completed the above steps, you will still be in the _GLOBAL.Open Source.Linux Foundation.CDF.Ortelius_ _Domain_. Notice that the first item in the list is "Ortelius" with the most recent Version number. 
 
 ![Application List](/userguide/images/app-list.jpg)
 
@@ -173,7 +170,7 @@ From the left hand side menu, select "_Applications"_. If you have completed the
 
 Select the Ortelius Application and run the following reports:
 
-- Compliance Summary - this report is a summation of data gathered across your CI/CD pipeline and includes a compliance checklist for a variety of security checks and environment inventory for the _Application_ _Component_ versions.
+- Compliance Summary - this report is a summation of data gathered across your CI/CD pipeline and includes a compliance checklist for a variety of security checks and environment inventory for all of the _Application's_ _Component_ versions.
 
 ![Compliance Run](/userguide/images/compliance-results.jpg)
 
@@ -203,7 +200,7 @@ You will be provided a list of all _Applications_ with their _Components_ that a
 
 ### View an Application's Security Profile and Details
 
-The _Application_ Detail page shows you the _Application_ Security Profile, Impact Assessment, and DevOps configuration. You can also view previous versions, and compare your current version with an older version. Double click on the _Ortelius_ _Application_ to view its security profile and retrieve a list of previous versions. 
+The _Application_ Detail page shows you the _Application_ Security Profile, Impact Assessment, and DevOps configuration. You can also view previous versions, and compare your current version with an older version. Double click on the "Ortelius" _Application_ to view its security profile and retrieve a list of previous versions. 
 
 <p><br></p>
 
@@ -211,7 +208,7 @@ The _Application_ Detail page shows you the _Application_ Security Profile, Impa
  
  From the top menu, find for the _Version button_. This button shows you the total number of previous versions of this _Application_. Select the button to be see a list of all previous versions. From this list you can select any version to see its details. 
 
- Generate a Comparison Report between two _Application_ versions. Select the _Compare Button_. You will be provided a list to select the previous version to compare the current version you are viewing. You will be provided a report that shows the differences between these two _Application versions_. 
+ Generate a Comparison Report between two _Application_ versions. Select the _Compare Button_. Generate a Comparison Report between two _Application_ versions. Select the Compare Button. You will be provided a list to select the previous version to compare the current version you are viewing.
 
 ![Compare applications](/userguide/images/app-compare.jpg)
 
@@ -219,7 +216,9 @@ The _Application_ Detail page shows you the _Application_ Security Profile, Impa
 
 <u><strong> View the Application's Aggregated Software Bill of Materials and Real-time Vulnerabilities</strong></u>
 
-When exploring the _Application_ details, the first attribute you will see is the _Applications_ summarized Software Bill of Material (SBOM) report and known vulnerabilities whin the Security Posture Section. An _Application_ SBOM provides a detailed report of all _Component_ SBOM data within the _Application_, with duplicates removed. When a _Component_ is updated, DeployHub automatically generates a new version of all _Applications_ that use that _Component_, along with a new aggregated SBOM. DeployHub then cross-references all _Component_ packages within the _Application_ against known vulnerabilities. If you need to produce an SBOM for governance purposes, you can export the SBOM from the _Application_ List View _Reports_ menu option.
+When exploring the _Application_ details, the first attribute you will see is the _Applications_ summarized Software Bill of Materials (SBOM) report and known vulnerabilities outlined in the Security Posture Section. 
+
+An _Application_ SBOM provides a detailed report of all _Component_ SBOM data within the _Application_, with duplicates removed. When a _Component_ is updated, DeployHub automatically generates a new version of all _Applications_ that use that _Component_, along with a new aggregated SBOM. DeployHub then cross-references all _Component_ packages within the _Application_ against known vulnerabilities. If you need to produce an SBOM for governance purposes, you can export the SBOM from the _Application_ List View _Reports_ menu option.
 
 <p><br></p>
 
@@ -233,13 +232,13 @@ In the Impact Assessment Section, you will see the _Environments_ the _Applicati
 
 This section shows your _Applications_ Log History, and Key Value Configurations that were used.
 
-Learn More at  [Packaging _Applications_](/userguide/first-steps/packaging-applications/)
+Learn More at  [_Applications_ and Their Security Posture](/userguide/2-defining-applications/)
 
 <p><br></p>
 
 ## Conclusion
 
-There are many other features of DeployHub that we did not cover on this short test drive. You may want to explore how to connect your CI/CD pipeline to automatically connect SBOMs and other DevSecOps tools to your pipeline process. See [SPDX, CycloneDX and Syft](/userguide/integrations/spdx-syft-cyclonedx/) on how you can include SBOMs in your CI/CD process. 
+There are many other features of DeployHub that we did not cover on this short test drive. You may want to explore how to connect your CI/CD pipeline to automatically connect SBOMs and other DevSecOps tooling data to your pipeline process. See [SPDX, CycloneDX and Syft](/userguide/integrations/spdx-syft-cyclonedx/) on how you can include SBOMs in your CI/CD process. 
 
 Other topics to explore include: 
 

@@ -3,7 +3,7 @@
 
 Task are used for executing deployments, managing approvals, or staging a deployment. Tasks can be assigned to any _Domain_. However, they are most commonly associated to _Project Domains_ and _Life Cycle Domains_. You can assign a Task at a higher _Domain_ level allowing any child _Domains_ to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your _Subdomains_. However, this means that a Catalog _Domain_ may include Tasks that it cannot use.
 
-The following Tasks are available as default Tasks, but you can create any type of custom Task. A custom Task will call a Custom [_Action_](/userguide/customizations/2-define-your-actions/):
+The following Tasks are available as default Tasks, but you can create any type of custom Task. A custom Task will call a Custom [_Action_](/userguide/advanced-features/deployments/2-define-your-actions/):
 
 - Move Version to the Next or Previous Pipeline State
 - Deploy Version to _Environment_
@@ -11,7 +11,7 @@ The following Tasks are available as default Tasks, but you can create any type 
 
 ### DeployHub Pro
 
-DeployHub Pro includes a ["smart" Calendar](/userguide/profeatures/calendar/).  The following Task are used to interact with the DeployHub Smart Calendar for Requesting and Approving deployments.
+DeployHub includes a ["smart" Calendar](/userguide/advanced-features/deployments/calendar/).  The following Task are used to interact with the DeployHub Smart Calendar for Requesting and Approving deployments.
 
 - Request Calendar Entry for Deployment to an _Environment_
 - Approve Version for Move to Next Pipeline State
@@ -37,8 +37,8 @@ Moves an _Application_ or _Release_ version from one Pipeline state (Life Cycle 
 | **Post-Action**               | Change the default behavior by assigning a custom _Action_ to execute as a Post-processing step.                                                                                                      |
 | **Available in _Subdomains_** | Once selected, all _Subdomains_ will have access to this Task.                                                                                                                                        |
 | **Move To _Domain_**          | The target _Domain_ where the version will be moved.                                                                                                                                                  |
-| **Success _Notify Template_** | The _Notify Template_ emailed on a successful move. You need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/). |
-| **Failure _Notify Template_** | The _Notify Template_ emailed on a failed move. You need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).     |
+| **Success _Notify Template_** | The _Notify Template_ emailed on a successful move. You need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/advanced-features/deployments/2-notifier-templates/). |
+| **Failure _Notify Template_** | The _Notify Template_ emailed on a failed move. You need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/advanced-features/deployments/2-notifier-templates/).     |
 
 ### Deploy Version to _Environment_
 
@@ -66,8 +66,8 @@ Runs a stand-alone _Action_. For example, if you need to interrupt a deployment 
 | **Post-Action**                       | You can change the default behavior by assigning a custom _Action_ to execute as a Post-processing step.                                                                                                                    |
 | **Action to Run**                     | The Action that will be executed manually.                                                                                                                                                                                  |
 | **Available in _Subdomains_**         | If selected, all _Subdomains_ will have access to this Task.                                                                                                                                                                |
-| **Success _Notify Template_**         | The _Notify Template_ that will be emailed on a successful _Action_. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/). |
-| **Failure _Notify Template_**         | The _Notify Template_ that will be emailed on a failed _Action_. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).     |
+| **Success _Notify Template_**         | The _Notify Template_ that will be emailed on a successful _Action_. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/advanced-features/deployments/2-notifier-templates/). |
+| **Failure _Notify Template_**         | The _Notify Template_ that will be emailed on a failed _Action_. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/advanced-features/deployments/2-notifier-templates/).     |
 
 ### Approve Version for Move to Next Pipeline State
 
@@ -84,8 +84,8 @@ Note: When an Approve Task has been defined for a _Domain_, it will force the us
 | **Post-Action**                | You can change the default behavior of this Task by assigning a custom _Action_ to execute as a Post-processing step.                                                                                           |
 | **Available in _Subdomains_**  | If this is selected, all _Subdomains_ will have access to this Task.                                                                                                                                            |
 | **Approval _Domains_**         | The target _Domain_ that approval  is the subject of.                                                                                                                                                           |
-| **Approval _Notify Template_** | The _Notify Template_ that will be emailed on approval. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/).  |
-| **Rejected _Notify Template_** | The _Notify Template_ that will be emailed on rejection. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/). |
+| **Approval _Notify Template_** | The _Notify Template_ that will be emailed on approval. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/advanced-features/deployments/2-notifier-templates/).  |
+| **Rejected _Notify Template_** | The _Notify Template_ that will be emailed on rejection. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/advanced-features/deployments/2-notifier-templates/). |
 
 ### Request Calendar Entry for Deployment to an _Environment_
 
@@ -100,7 +100,7 @@ DeployHub Pro feature. Sends a request from a _User_ to add a time slot to the c
 | **Post-Action**               | You can change the default behavior by assigning a custom _Action_ to execute a Post-processing step.                                                                                                 |
 | **Available in _Subdomains_** | If selected, all _Subdomains_ will have access to this Task.                                                                                                                                          |
 | **Linked Task**               | The target _Domain_ where the version will be moved.                                                                                                                                                  |
-| **Request _Notify Template_** | The _Notify Template_ emailed for the request. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/customizations/2-notifier-templates/). |
+| **Request _Notify Template_** | The _Notify Template_ emailed for the request. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/advanced-features/deployments/2-notifier-templates/). |
 
 ### Task Execute Access
 

@@ -1,7 +1,7 @@
 
 ## HipChat Details
 
-DeployHub allows you to send notifications using _Notifiers_ via HipChat Groups, Topics, or Room features. Notifications are defined to _Components_ and _Applications_ and inform the recipient(s) of the _Component_ or _Applications_ deployment's success or failure. To define your _Notifier_ see [Using Notifiers for Messaging](/userguide/customizations/2-define-notifiers/).  
+DeployHub allows you to send notifications using _Notifiers_ via HipChat Groups, Topics, or Room features. Notifications are defined to _Components_ and _Applications_ and inform the recipient(s) of the _Component_ or _Applications_ deployment's success or failure.   
 
 | Field                 | Description                                                                                                                                         |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -16,5 +16,5 @@ DeployHub allows you to send notifications using _Notifiers_ via HipChat Groups,
 
 Assign your HipChat _Notifier_ to an _Application_ or _Component_ from the Details section of the _Application_ or _Component_ Dashboard. For more information see:
 
-[Define Your _Component_](/userguide/publishing-components/2-define-components/).
-[Defining Your _Application_ Baseline](/userguide/packaging-applications/2-defining-applications/).
+- [ _Components_](/userguide/2-define-components/)
+- [ _Applications_](/userguide/2-defining-applications/)

@@ -61,5 +61,6 @@ The following variables must be added to the Attributes Section for all  _Compon
 
 For more information see:
 
-- [Customizing Actions](/userguide/first-steps/2-define-your-actions/)
-- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
+- [Customizing Actions](/userguide/advanced-features/deployments/2-define-your-actions/)
+- [Procedures and Functions](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/)
+

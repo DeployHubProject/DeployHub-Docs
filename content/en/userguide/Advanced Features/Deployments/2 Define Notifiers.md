@@ -1,7 +1,7 @@
 ---
 title: "Using Notifiers for Messaging"
 linkTitle: "Using Notifiers for Messaging"
-weight: 28
+weight: 300
 description: >
   Using _Notifiers_ for communicating deployment results.
 ---
@@ -19,7 +19,7 @@ DeployHub can use Email, Slack, SMS, and HipChat for this purpose.
 
 ## _Notifiers_ and _Notifier Templates_
 
-_Notifiers_ are associated to a _Notifier Template_. The _Notifier Template_ is used for sending standard message for your _Notifier_. A _Notifier_ contains one or more _Notifier Templates_. See [Using _Notifier Templates_](/userguide/customizations/2-notifier-templates/) for more information.
+_Notifiers_ are associated to a _Notifier Template_. The _Notifier Template_ is used for sending standard message for your _Notifier_. A _Notifier_ contains one or more _Notifier Templates_. See [Using _Notifier Templates_](/userguide/advanced-features/deployments/2-notifier-templates/) for more information.
 
 Using these two objects, _Notifiers_ and _Notifier Templates_, notifications can be sent whenever a deployment to an _Environment_ fails or succeeds, whenever a _Request_ Task is executed, or the state of an _EndPoint_ changes. A a variety of email or messaging systems can be used to individually tailor notifications containing all information needed to inform all relevant teams.
 
@@ -99,9 +99,7 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Noti
 | **Change** | This allows a _User_ who belongs to any _UserGroup_ in the list to change the attributes of the _Notifier_.                                                |
 | **Send**   | Allows _Users_ to send an email.                                                                                                                           |
 
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
-
 ## Notifier Templates
 
 You can create standard message templates for you _Notifiers_.  For more information see:
-[Notifier Templates](/userguide/customizations/2-notifier-templates/).
+[Notifier Templates](/userguide/advanced-features/deployments/2-notifier-templates/).

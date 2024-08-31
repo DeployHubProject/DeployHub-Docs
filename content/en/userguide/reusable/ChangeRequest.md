@@ -5,7 +5,7 @@ The integration of Change Request systems are supported in DeployHub through the
 
 #### Creating Change Request _Data Sources_
 
-Jira, Bugzilla and GitHub are represented in DeployHub as _Data Source_ Types. Because a _Data Source_ is associated to a specific _Component_ or _Application_ you will need to map a unique _Data Source_ for each system's repository (Organization, Repository, Product, Project Key) where you are tracking the _Component_ or _Application_.  In a traditional release process, a _Component_ and _Application's_ repository may be the same.  Because microservices are often managed in their own repositories, you may need to define a _Data Source_ for each of your microservice _Components_. For more on creating a Change Request _Data Source_ see [Managing Data Sources](/userguide/profeatures/2-data-sources/).
+Jira, Bugzilla and GitHub are represented in DeployHub as _Data Source_ Types. Because a _Data Source_ is associated to a specific _Component_ or _Application_ you will need to map a unique _Data Source_ for each system's repository (Organization, Repository, Product, Project Key) where you are tracking the _Component_ or _Application_.  In a traditional release process, a _Component_ and _Application's_ repository may be the same.  Because microservices are often managed in their own repositories, you may need to define a _Data Source_ for each of your microservice _Components_. For more on creating a Change Request _Data Source_ see [Managing Data Sources](/userguide/advanced-features/deployments/2-data-sources/).
 
 Change Request that are tracked at the _Component_ level are rolled up to the _Application_ level.  All change request associated to _Components_ and _Applications_ are rolled up to the _Release_.
 

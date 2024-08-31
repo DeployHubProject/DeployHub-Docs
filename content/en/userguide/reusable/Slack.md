@@ -1,7 +1,7 @@
 
 ## Slack Details
 
-DeployHub sends messages to Slack based on certain events using _Notifiers_. Below are the Slack details used when called by _Notifiers_.  To define your _Notifier_ see [Using Notifiers for Messaging](/userguide/customizations/2-define-notifiers/).  
+DeployHub sends messages to Slack based on certain events using _Notifiers_. Below are the Slack details used when called by _Notifiers_. 
 
 | Field                 | Description                                                                       |
 |-----------------------|-----------------------------------------------------------------------------------|
@@ -17,5 +17,5 @@ DeployHub sends messages to Slack based on certain events using _Notifiers_. Bel
 
 Assign your Slack _Notifier_ to an _Application_ or _Component_ from the Details section of the _Application_ or _Component_ Dashboard. For more information see:
 
-[Define Your _Component_](/userguide/publishing-components/2-define-components/).
-[Defining Your _Application_ Baseline](/userguide/packaging-applications/2-defining-applications/).
+- [ _Components_](/userguide/2-define-components/)
+- [ _Applications_](/userguide/2-defining-applications/)

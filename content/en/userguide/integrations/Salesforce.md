@@ -16,22 +16,22 @@ The following directions allows you to create a _Custom Action_ using the pre-wr
 
 You will need to create a SalesForce _Custom Action_ that will support your SalesForce deployment . This is done by adding the DeployHub pre-defined _Procedures_ and then defining them to a _Custom Action_ that your _Component_ will use for deployment.  For more details on creating _Procedures_ and _Actions_ see:
 
-- [Customizing Actions](/userguide/customizations/2-define-your-actions/)
-- [Procedures and Functions](/userguide/customizations/2-define-your-functions-and-procedures/)
+- [Customizing Actions](/userguide/advanced-features/deployments/2-define-your-actions/)
+- [Procedures and Functions](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/)
 
 The following steps will take you through the process:
 
 ### Step 1 - Create a SalesForce _Repository_
 
-A _Repository_ of the type "File System" is used to reference files pulled from Git.  For this reason, you will need to create a DeployHub "File System" _Repository_.  To create this _Repository_ see [Connect Your Repositories](/userguide/first-steps/2-define-repositories/).
+A _Repository_ of the type "File System" is used to reference files pulled from Git.  For this reason, you will need to create a DeployHub "File System" _Repository_.  To create this _Repository_ see [Connect Your Repositories](/userguide/advanced-features/deployments/2-define-repositories/).
 
 ### Step 2 - Create a SalesForce _Credential_
 
-You will need a DeployHub _Credential_ to login to Salesforce for the deployment step. To create this _Credential_ see [Create Your Credentials](/userguide/first-steps/2-define-your-credentials/).
+You will need a DeployHub _Credential_ to login to Salesforce for the deployment step. To create this _Credential_ see [Create Your Credentials](/userguide/advanced-features/deployments/2-define-your-credentials/).
 
 ### Step 3 - Create a SalesForce _Environment_ and _EndPoint_
 
-You will need to create an _Endpoint_ and then an _Environment_ for your SalesForce deployment. You can create as many _Environments_ as needed based on your SalesForce Regions. See the [Define Your Endpoints](/userguide/first-steps/2-define-endpoints/) and [Build Your Environments](/userguide/first-steps/2-define-environments/) sections for more information.  The following parameters should be used when defining your _Endpoint_ and _Environment_.
+You will need to create an _Endpoint_ and then an _Environment_ for your SalesForce deployment. You can create as many _Environments_ as needed based on your SalesForce Regions. See the [Define Your Endpoints](/userguide/2-define-endpoints/) and [Build Your Environments](/userguide/2-define-environments/) sections for more information.  The following parameters should be used when defining your _Endpoint_ and _Environment_.
 
 - **_Endpoint_ Detail Settings**
 
@@ -123,7 +123,7 @@ At this point the _Custom Action_ is ready to be used by anyone with access (bas
 
 ### Step 6 - Create Your SalesForce _Component_
 
-Now that you have defined your SalesForce _Custom Action_ you are ready to create your SalesForce _Component_. Define your _Component_ to use a _Custom Action_ from the _Component_ Dashboard. See [Defining Components](/userguide/publishing-components/2-define-components/) for more details on creating your new _Component_.
+Now that you have defined your SalesForce _Custom Action_ you are ready to create your SalesForce _Component_. Define your _Component_ to use a _Custom Action_ from the _Component_ Dashboard. See the [Components Chapter](/userguide/2-define-components/) for more details on creating your new _Component_.
 
 Update the _Custom Action_ Detail field by choosing the SalesForceAction provided in the _Custom Action_ dropdown list. You will have a single parameter to update:
 

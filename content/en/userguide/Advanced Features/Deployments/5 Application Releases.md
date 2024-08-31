@@ -1,7 +1,7 @@
 ---
 title: "Creating Releases"
 linkTitle: "Creating Releases"
-weight: 80
+weight: 9
 description: >
   Using _Releases_ to manage many _Applications_ in a single deployment.
 ---
@@ -46,7 +46,7 @@ The _Release_ List View has the following Tabs.
 | **Add Base**    | Allows you to Add a new _Release Base Version_.                                                                                                                                                        |
 | **Add Version** | Creates a copy of the selected _Release_ in the list, creating a new _Release Version_.                                                                                                                |
 | **Delete**      | Deletes the selected item. However, you must delete the _Release_ starting from the newest to the oldest.  The _Release Base Version_ would be deleted last. Sorting by "Version" gives you the order. |
-| **Tasks**       | Displays all _Release_ Tasks defined to this _Domain_ and available for the selected Item. See [Tasks](/userguide/first-steps/2-defining-domains/#tasks) for more information.                         |
+| **Tasks**       | Displays all _Release_ Tasks defined to this _Domain_ and available for the selected Item. See the [Domian chapter](/userguide/2-defining-domains/#tasks) for more information.                         |
 
 ## Viewing and Editing with the _Release_ Dashboard
 

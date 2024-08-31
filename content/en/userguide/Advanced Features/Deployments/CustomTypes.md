@@ -1,7 +1,7 @@
 ---
 title: "Custom Types"
 linkTitle: "Custom Types"
-weight: 90
+weight: 800
 description: >
   Adding Custom Types for _Endpoints_. 
 ---
