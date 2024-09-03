@@ -260,10 +260,11 @@ DeployHub includes an agentless deployment engine, but can also integrate with e
 
 {{% include "userguide/reusable/Attributes.md" %}}
 
+{{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
 
-## Audit and Access Section
+## Access Section
 
-The Audit and Access Section allows _Users_ within designated _Groups_ to update or view the _Component_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Component_:
+The Access Section allows _Users_ within designated _Groups_ to update or view the _Component_. To add a _Group_ to one of the access lists, drag and drop the _Group_ from the Available Groups list onto desired access list. All _Users_ who belong to a _Group_ that appear in one of the Access lists will be granted access to the _Component_:
 
 | Access     | Description|
 |------------|-------------------------------------------------|

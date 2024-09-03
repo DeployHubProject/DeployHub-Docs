@@ -1,5 +1,5 @@
 
-### DeployHub Pro Change Requests
+### DeployHub Change Requests
 
 The integration of Change Request systems are supported in DeployHub through the use of a _Data Source_. To integrate Change Request you must first define a Change Request _Data Source_ from the _Data Source_ Dashboard. Once created, you will be able to select the _Data Source_ from the General Details "Change Request _Data Source_" field of your _Application_ and/or _Component_. When you have a Change Request _Data Source_ defined, you can add issue tickets using the Change Request section of the _Application_ or _Component_ Dashboards.
 

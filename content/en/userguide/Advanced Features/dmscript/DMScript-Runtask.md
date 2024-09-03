@@ -42,7 +42,7 @@ note: "This is an automated approval",
 approve: true);
 ```
 
-Here, the deployed _Application_'s fully qualified domain is prepended to the name of the task "Approve" in order to accurately identify the task regardless of where the _Application_ is in the Life Cycle.
+Here, the deployed _Application_'s fully qualified domain is prepended to the name of the task "Approve" in order to accurately identify the task regardless of where the _Application_ is in the lifecycle.
 
 NOTE: Tasks that operate on _Application_s require the_Application_to be on the stack. During a deployment operation, the_Application_will be on the stack and accessible via the $_Application_object. If you are running a task outside of the deployment process you will need to push the_Application_onto the stack by executing the task within a using_Application_block. See_using Application_ later in this chapter for more information.
 

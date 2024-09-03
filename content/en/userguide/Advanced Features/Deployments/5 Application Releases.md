@@ -7,7 +7,7 @@ description: >
 ---
 ## Intro to Releases
 
- A _Release_ manages the progression and deployment of multiple _Applications_ together.  _Releases_ and _Release Versions_ are a DeployHub Pro feature.  _Releases_ and _Release Versions_ are collections of one or more _Applications_ that are managed as a unit due to their interdependencies. This is sometimes referred to as a "Release Train." Like _Applications_ and _Components_, _Releases_ are versioned each time they are deployed. A _Release Base Version_ is the initial version and acts as a model for subsequent _Release Versions_.
+ A _Release_ manages the progression and deployment of multiple _Applications_ together.  _Releases_ and _Release Versions_ are a DeployHub feature.  _Releases_ and _Release Versions_ are collections of one or more _Applications_ that are managed as a unit due to their interdependencies. This is sometimes referred to as a "Release Train." Like _Applications_ and _Components_, _Releases_ are versioned each time they are deployed. A _Release Base Version_ is the initial version and acts as a model for subsequent _Release Versions_.
 
 ## The _Release_ List View for Adding or Deleting
 

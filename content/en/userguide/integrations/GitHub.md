@@ -3,7 +3,7 @@ title: "GitHub"
 linkTitle: "GitHub"
 weight: 304
 description: >
-  Integrating GitHub repository and issues with DeployHub Pro.
+  Integrating GitHub Repository and Issues with DeployHub.
 ---
 
 DeployHub supports GitHub in the following ways.
@@ -62,9 +62,9 @@ The following variables must be added to the Attributes Section for all  _Compon
 | **GIT_COMMIT** | This Variable represents the Git the commit, tag or branch to checkout. The value will be defined at the Component Level.                                                                       |
 | **GIT_DIR**    | This Variable represents the directory to checkout into.  The value will be defined at the Component Level. Use "." for the default directory when assigning this value at the Component level. |
 
-## GitHub Issues and DeployHub Pro Change Request
+## GitHub Issues and DeployHub Change Request
 
-DeployHub Pro can reference the GitHub issues to track Change Request for _Components_ and _Applictions_. This enables the GitHub issues to be viewed from a _Component_ or _Application_ using the DeployHub Pro _Change Request_ section from the _Component_ or _Application_. If you have a _Release_ defined, these GitHub issues will be rolled up from the _Component_ and _Application_ to the _Release_.
+DeployHub can reference the GitHub issues to track Change Request for _Components_ and _Applications_. This enables the GitHub issues to be viewed from a _Component_ or _Application_ using the DeployHub  _Change Request_ section from the _Component_ or _Application_. If you have a _Release_ defined, these GitHub issues will be rolled up from the _Component_ and _Application_ to the _Release_.
 
 For more information see [Tracking Jira, Bugzilla and GitHub Issue](/userguide/integrations/jira-bugzilla-and-git-issues/).
 

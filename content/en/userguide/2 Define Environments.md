@@ -52,7 +52,7 @@ The Dashboard view displays all information related to a specific _Environment_.
 |**Owner Type**| User or Group |
 | **Owner**| The owner defaults to the _User_ or _Group_ who created it.  |
 |**Summary**| A short text description of the _Environment_. |
-|**Availability**| (DeployHub Pro feature) This field interacts with the _Environment_ calendar making the _Environment_ open for deployments at anytime, or closed for all deployments unless scheduled. The default value, "Always Available Unless Denied by Calendar", allows the _User_ to deploy _Applications_ into the _Environment_ unless there is an entry in the Calendar that prevents stops it. The other value, "Always Unavailable Unless Denied by Calendar", doesn't allow deployments unless a specific entry in the Calendar is approved. |
+|**Availability**| This field interacts with the _Environment_ calendar making the _Environment_ open for deployments at anytime, or closed for all deployments unless scheduled. The default value, "Always Available Unless Denied by Calendar", allows the _User_ to deploy _Applications_ into the _Environment_ unless there is an entry in the Calendar that prevents stops it. The other value, "Always Unavailable Unless Denied by Calendar", doesn't allow deployments unless a specific entry in the Calendar is approved. |
 | **Created** | Auto generated date and time the _Environment_ was created. |
 | **Modified** | Auto generated date and time the _Environment_ was last modified. |
 
@@ -64,7 +64,7 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Envi
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **View**                    | Allows the _User_ to see the _Environment_. If the _User_ does not belong to a _Group_ in the View Access list, the _Environment_ will not appear in the List View. |
 | **Change**                  | Allows the _User_ to change the _Environment's_ characteristics i.e. Name, Summary, etc.                                                                            |
-| **Create Calendar Entries** | Allows _Users_ to control the Calendar for the selected _Environment_. NOTE: Securing Environment Calendars is only available in DeployHub Pro.                     |
+| **Create Calendar Entries** | Allows _Users_ to control the Calendar for the selected _Environment_.                  |
 | **Deploy**                  | Allows _Users_ to deploy  _Applications_ into the selected _Environment_.                                                                                           |
 
 {{% include "userguide/reusable/AuditTrail-withDeployments.md" %}}
@@ -88,6 +88,4 @@ This map shows you all of the current _Component Versions_, with _Application Ve
 
 ## Environment Calendar 
 
-**DeployHub Team** _Calendar_ only shows you a history of what has already been deployed.
-
-**DeployHub Pro** users have access to "Smart" Calendars.  For more information see [DeployHub Pro Smart Calendars](/userguide/profeatures/deployments/calendar/).
+DeployHub users have access to "Smart" Calendars.  For more information see [DeployHub Smart Calendars](/userguide/profeatures/deployments/calendar/).

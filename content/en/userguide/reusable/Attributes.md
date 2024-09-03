@@ -1,8 +1,10 @@
-### Key Value Configurations
+## Key Value Configurations
 
-Key Value Configurations are Value Pairs for managing associative arrays assigned to the _Object_.
+Key Value pairs are stored for any configuration setting that needs to be persisted with the version of the _Object_. For example, pairs can be used to store issue numbers from Jira or GitHub issues with the _Component Version_ and/or _Applications Version_. 
 
-Key Value Pairs are most commonly used with the internal DeployHub Engine. They can be assigned at multiple levels, from the Global _Domain_ down to an individual _Component_ and have a "scope." Lower level Objects can override a higher level Object.  Below is the order in which Key Value Pairs can be overridden:
+For users of the DeployHub internal deployment engine, Key Value pairs can be stored by DeployHub and referenced during a deployment. 
+
+Key Value pairs can be assigned at multiple levels, from the Global _Domain_ down to an individual _Component_ and have a "scope." Lower level Objects can override a higher level Object.  Below is the order in which Key Value Pairs can be overridden:
 
 | Object          | Description                                                                                                     |
 |-----------------|-----------------------------------------------------------------------------------------------------------------|

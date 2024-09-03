@@ -9,7 +9,7 @@ APIs can be used to extract and update DeployHub [Objects](/userguide/concepts/1
 
 ## Object Accessibility
 
-APIs rely _User and Group_ access to determine if the call is allowed. The Objects that are accessible via the API are restricted based on the logged-in user. Only Objects that are contained within the user's home _Domain_ and any _Subdomains_ are accessible via the API.
+APIs rely _User and Group_ access to determine if the call is allowed. The Objects that are accessible via the API are restricted based on the logged-in user. Only Objects that are contained within the user's home _Domain_ and any _Sub-Domains_ are accessible via the API.
 
 If a requested object does not have "read" permission then it cannot be accessed via the API. Similarly, attempting to modify Objects which do not have the appropriate "change" permission is also prohibited. In such cases, the "success" flag returned is "false" and the error is "Permission Denied".
 
@@ -27,7 +27,7 @@ When specifying an Object by name you can always qualify the name by pre-pending
     GLOBAL.USA.Development.demoenv
 ```
 
-This specifies that the "demoenv" Environment required can be found in the "Development" Subdomain of Domain "USA" which is a Subdomain of "GLOBAL".
+This specifies that the "demoenv" Environment required can be found in the "Development" Sub-Domain of Domain "USA" which is a Sub-Domain of "GLOBAL".
 
 ## Use the object's internal ID
 
@@ -51,7 +51,7 @@ _Do not create objects with fully numeric names - DeployHub will not be able to 
 
   If the username/password combination is correct, the user is logged in and the success indication is returned. Now we can call any of the other API interfaces by specifying the same file in which we stored the session ID returned from the login call.
   
-  For example, this will return a JSON array containing all the servers in our home and _Subdomains_ to which we have view access.
+  For example, this will return a JSON array containing all the servers in our home and _Sub-Domains_ to which we have view access.
 
   ```bash
     curl --data "all=Y" --cookie c:\temp\session.txt http://mac:8080/dmadminweb/API/servers

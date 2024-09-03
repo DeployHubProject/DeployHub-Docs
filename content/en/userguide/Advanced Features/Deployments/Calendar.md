@@ -1,6 +1,6 @@
 ---
-title: "DeployHub Pro Smart Calendars"
-linkTitle: "DeployHub Pro Smart Calendars"
+title: "DeployHub Smart Calendars"
+linkTitle: "DeployHub Smart Calendars"
 weight: 86
 description: >
   Control deployments to _Environments_ with Smart Calendars.
@@ -8,7 +8,7 @@ description: >
 
 ## Smart _Environment_ Calendars
 
-**DeployHub Pro**  uses Smart Calendars to control the scheduling of deployments to the _Environment_. Smart Calendars are found by navigating to the _Environment_ Dashboard View and selecting the "Calendar" Tab. Each _Environment_ has a unique Calendar.  Smart Calenders use events that allow you to schedule deployment for 'Auto Deploy', schedule a Task for an on-demand deployment, or block the _Calendar_ to prevent a deployment. Smart Calendars allow for a no-touch approval process driven by your continuous delivery pipeline. If an _Environment_ Owner needs to block the Calendar, your CI/CD process will be blocked from executing the deployment. Once the Calendar has been re-opened, the deployments will once again be allowed brining the _Application Version_ to the correct state.   Each _Environment_ has its own _Calendar_ that can be used to:
+**DeployHub** uses Smart Calendars to control the scheduling of deployments to the _Environment_. Smart Calendars are found by navigating to the _Environment_ Dashboard View and selecting the "Calendar" Tab. Each _Environment_ has a unique Calendar.  Smart Calenders use events that allow you to schedule deployment for 'Auto Deploy', schedule a Task for an on-demand deployment, or block the _Calendar_ to prevent a deployment. Smart Calendars allow for a no-touch approval process driven by your continuous delivery pipeline. If an _Environment_ Owner needs to block the Calendar, your CI/CD process will be blocked from executing the deployment. Once the Calendar has been re-opened, the deployments will once again be allowed brining the _Application Version_ to the correct state.   Each _Environment_ has its own _Calendar_ that can be used to:
 
 - Automatically deploy an _Application_ or _Release_ into the _Environment_ on a certain date and time.
 - Reserve a date to deploy on-demand an _Application_ or _Release_, preventing other _Users_ from performing deployments into the same _Environment_.
@@ -30,7 +30,7 @@ The "Availability" field controls access to the _Environments._ You either close
 
 ### AutoDeploy
 
-**DeployHub Pro** allows for a scheduled deployment using the _Environment's Calendar_, which is referred to as an "_AutoDeploy_." If _AutoDeploy_ is selected, a drop-down list allows the selection of an _Application_ or _Release_ to be deployed beginning at the designated Start Time. Not only does the _Calendar_ automatically run the deployment at the designated Start Time, it also keeps any other deployments from taking place in the designated Environment during that time period.
+**DeployHub** allows for a scheduled deployment using the _Environment's Calendar_, which is referred to as an "_AutoDeploy_." If _AutoDeploy_ is selected, a drop-down list allows the selection of an _Application_ or _Release_ to be deployed beginning at the designated Start Time. Not only does the _Calendar_ automatically run the deployment at the designated Start Time, it also keeps any other deployments from taking place in the designated Environment during that time period.
 
 ### Reserved
 

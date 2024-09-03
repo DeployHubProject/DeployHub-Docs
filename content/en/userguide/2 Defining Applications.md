@@ -103,7 +103,7 @@ Below are the Details for an _Application_.
 | **Full Domain**                    | The fully qualified path of the _Domain_ that the _Application_ is to be associated with, showing all parent _Domains_.                                         |
 | **Name**                           | The Name of your _Application_.                                                                                                                                 |
 | **Description**                    | A short description of your software system.                                                                                                                    |
-| **Change Request DataSource**      | DeployHub Pro Option - Establishes the Change Request system for the _Application_. A Change Request Data Source must be pre-defined for this field to be used. |
+| **Change Request DataSource**      | Establishes the Change Request system for the _Application_. A Change Request Data Source must be pre-defined for this field to be used. |
 | **Pre-Action**                     | An action executed prior to the deployment.                                                                                                                     |
 | **Post-Action**                    | An action executed at the completion of deployment.                                                                                                             |
 | **Custom Action**                  | Overrides any Pre or Post Actions, such as calling an external solutions such as Helm.                                                                          |

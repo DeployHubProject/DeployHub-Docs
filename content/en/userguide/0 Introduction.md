@@ -20,7 +20,7 @@ A crucial concept in decoupled architecture is the "<strong>logical</strong> _Ap
 
 DeployHub surveils the DevSecOps pipeline to automatically gather security and DevOps data for all _Components_. DeployHub captures DevSecOps data when a _Component_ has been published, creating a new version for each release. It then creates new _Application Versions_ for all impacted 'logical' _Applications_.
 
-## Versioning - DeployHub's Secret Sauce
+## Versioning Critical Security Insights
 
 DeployHub versions both _Components_ and 'logical' _Applications_.  When versioning _Components_, DeployHub provides insights into that versions security posture including:
 

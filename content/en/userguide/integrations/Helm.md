@@ -6,6 +6,28 @@ description: >
   Using Helm to execute deployments as an _Action_.
 ---
 
+DeployHub supports Helm in two ways:
+
+- Stores the Helm chart repository and version
+- Can be called by the DeployHub internal deployment engine for performing container deployments.
+
+## Storing Helm Chart Repository and Version
+
+DeployHub integrates with Helm using the [CI/CD Command Line Interface](/userguide/integrations/ci-cd_integrations/) (CLI). For every _Component Version_, the CLI gathers and stores the 
+
+| Access                      | Description                                                                                                                                                         |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Chart                   | Helm Chart for the Component |
+|ChartNamespace          | Name space for the Component to be deployed to |
+|ChartRepo               | Helm Chart Repo Name |
+|ChartRepoUrl            | Helm Chart Repo Url |
+|ChartVersion            | Helm Chart version |
+
+These values are displayed for every _Component Version_ and viewable from the _Component Detail_ dashboard. 
+
+
+## Using Helm with the DeployHub Internal Engine
+
 Helm is called to replace the DeployHub default processing engine for performing container deployments. When DeployHub executes the release process, it will call the Helm Chart you have defined as your _Custom Action_ at the _Component_ level.  DeployHub includes the version of the Helm chart as part of its overall configuration data.
 
 ## Helm and Key Value Pairs
@@ -102,7 +124,7 @@ Helm is called as a DeployHub _Custom Action_. To use Helm, you will need to imp
 
 ### Step 1 - Download and Import the Helm scripts as _Procedures_
 
-Download the the most current DeployHub Helm Procedures from the [DeployHub Git Repo](https://github.com/DeployHub/DeployHub/blob/master/procedures/). There will be two:
+Download the the most current DeployHub Helm Procedures from the [DeployHub Git Repo](https://github.com/DeployHubProject/DeployHub-Pro/blob/main/procedures/HelmUpgrade.re). There will be two:
 
 - **WriteEnv2Toml.re**:  This _Procedure_ takes all the attributes from DeployHub _Environments_, _Applications_, _Endpoints_ and _Components_ and writes them to a file readable by the Helm _Procedure._
 
@@ -112,13 +134,13 @@ Download the the most current DeployHub Helm Procedures from the [DeployHub Git 
 
 Once downloaded, you will need to Import the scripts into DeployHub as _Procedures_. To import these _Procedures_ navigate to the _Func/Procs_ Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the _Functions and Procedures_ List View. From the _Functions and Procedures_ List View select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the WriteEnv2Toml.re and HelmUpgrade.re files.
 
-Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub. If you select a lower level _Subdomain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
+Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub. If you select a lower level _Sub-Domain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
 
 ### Step 3 - Create your _Action_ for Your Helm _Procedures_
 
 Once you have imported your WriteEnv2Toml.re and HelmUpgrade.re files as _Procedures_, you can define your _Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Main Menu panel.
 
-Use the +Add option to create a new _Action_ for you _Procedure_. In the "Full Domain" field select your "Global" _Domain_. If you select a lower level _Subdomain_ you will restrict access to this _Custom Action_.  By defining it to your highest level _Domain_, all _Users_ will be able to execute the process regardless of their _SubDomain_.
+Use the +Add option to create a new _Action_ for you _Procedure_. In the "Full Domain" field select your "Global" _Domain_. If you select a lower level _Sub-Domain_ you will restrict access to this _Custom Action_.  By defining it to your highest level _Domain_, all _Users_ will be able to execute the process regardless of their _Sub-Domain_.
 
 Name the new _Action_ **HelmChart** (no spaces).
 

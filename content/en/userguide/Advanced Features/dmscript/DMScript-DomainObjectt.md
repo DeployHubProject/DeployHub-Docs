@@ -17,8 +17,7 @@ The following properties can be accessed on the _Domain_ object:
 | fqdomain       | String          | Fully qualified domain name.                                          |
 | summary        | String          | Summary text.                                                         |
 | domain         | Object          | Domain in which the Domain is contained                               |
-| subdomains     | Array           | List of _Domain_ objects which are contained within this Domain.      |
-| Life Cycle     | Boolean         | true if the Domain contains a Life Cycle, false otherwise.            |
+| Sub-Domainns     | Array           | List of _Domain_ objects which are contained within this Domain.      |
 | _Applications_ | Array           | List of _Application_ objects which are contained within this domain. |
 | _Environments_ | Array           | List of _Environment_ objects which are contained within this domain. |
 | creator        | User            | User Object representing the user who created this domain.            |

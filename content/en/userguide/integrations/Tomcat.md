@@ -29,14 +29,14 @@ Download the the most current DeployHub Tomcat Procedures from the [Ortelius Git
 
 Once downloaded, you will need to Import the scripts into DeployHub as _Procedures_. To import these _Procedures_ navigate to the _Func/Procs_ Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the _Functions and Procedures_ List View. From the _Functions and Procedures_ List View select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the TomcatPreDeploy.re and TomcatPostDeploy.re files.
 
-Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub. If you select a lower level _Subdomain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
+Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub. If you select a lower level _Sub-Domain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
 
 **Step 3 - Create your _Action_ for the Tomcat _Procedures_**
 
 Once you have imported your TomcatPreDeploy.re and TomcatPostDeploy.re files as _Procedures_, you can define your _Actions_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Main Menu panel. You will be creating two _Actions_, one for your Tomcat stop step, and the other for the Tomcat start step. One will be called in the _Pre Action_ the other in the _PostAction_.
 
 - Create the TomcatStopAction
-Use the +Add option to create your first new _Action_.  In the "Full Domain" field select your "Global" _Domain_. If you select a lower level _Subdomain_ you will restrict access to this _Custom Action_.  By defining it to your highest level _Domain_, all _Users_ will be able to execute the process regardless of their _SubDomain_.
+Use the +Add option to create your first new _Action_.  In the "Full Domain" field select your "Global" _Domain_. If you select a lower level _Sub-Domain_ you will restrict access to this _Custom Action_.  By defining it to your highest level _Domain_, all _Users_ will be able to execute the process regardless of their _Sub-Domain_.
 
 Name the new Action "TomcatStopAction" (no spaces).
 

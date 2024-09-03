@@ -13,10 +13,10 @@ DeployHub's core Objects are _Domains_, _Applications_, _Components_, _Environme
  _Objects_ related to gathering Security Intelligence include:
 
 - Domains - Organizes data into "solution" spaces
-- Components - APIs, Microservices, Containers
-- Applications - A collection of _Components_ that serves as a complete software solution.
+- Components - An independently deployed artifact such as files, APIs, Microservices, Containers
+- Applications - A collection of independently deployed artifacts (_Components_) that serves as a complete software solution.
 - Environments - The location where the _Application_ is running.
-- Endpoints - Multiple locations within the Environment where a _Component_ is running. 
+- Endpoints - The clusters, servers, or Virtual Machines within the Environment where a _Component_ is running. 
 
 DeployHub includes an agentless deployment engine for organizations who are looking to standardize on a deployment process.  _Objects_ related to DeployHub's Internal Deployment engine includes:
 
@@ -30,17 +30,13 @@ Following is a description of each Object and their attributes.
 
 ### _Domain_ Object
 
-The [_Domain_ Object](/userguide/2-defining-domains/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Subdomains_. _Subdomains_ inherit the parents properties, _Tasks_ and access.
+The [_Domain_ Object](/userguide/2-defining-domains/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Sub-Domains_. _Sub-Domains_ inherit the parents properties, _Tasks_ and access.
 
 ![Example of Domains, Applications, Components and Environments](/userguide/images/OnlineStore-Domains.jpg)
 
-Your _Components_, are organized based on _Domains_ and _Subdomains_ which you define. _Domains_ categorize _Components_ that solve the same 'problem sets.' In a similar way, _Applications_ are assigned to _Domains_. In addition, _Environments_ and _Endpoints_ are associated to _Domains_ that are running _Applications_.
+Your _Components_, are organized based on _Domains_ and _Sub-Domains_ which you define. _Domains_ categorize _Components_ that solve the same 'problem sets.' In a similar way, _Applications_ are assigned to _Domains_. In addition, _Environments_ and _Endpoints_ are associated to _Domains_ that are running _Applications_.
 
 The highest level _Domain_ is your _Global Domain_. With the SaaS version, your _Global Domain_ name is defined based on your Company. With the on-premise installation, you will see a _Domain_ called _Global_.
-
-_Domains_ also include _Tasks_. _Tasks_ include Move, Approve, Version and Deploy. _Tasks_ can be called by external solutions via APIs for integration into your Continuous Delivery Pipeline. _Tasks_ are associated to any _Domain_ and can be defined as _Pre_ or _Post_.  _Tasks_ are normally defined to _Life Cycle Subdomains_ and support continuous configuration management in your continuous delivery process.
-
-_Life Cycle Subdomains_ allow you to automate the push of your continuous deployments from development through production. DeployHub can be called by your Continuous Delivery engine (Jenkins, Bamboo, GitLab, CircleCI, Puppet Relay, Google CloudBuild or GitHub Actions) to perform the continuous deployment task across all states of your pipeline. If you are not using a Continuous Delivery orchestration engine, you can assign _Tasks_ to your _Life Cycle Subdomain_ to define a continuous deployment 'promotion' process within DeployHub.
 
 The following properties can be accessed on the _Domain_ object:
 
@@ -51,8 +47,7 @@ The following properties can be accessed on the _Domain_ object:
 | fqdomain | Fully qualified _Domain_ name. |
 | summary | Summary text. |
 | domain | Higher level _Domain_ to which it belongs. |
-| subdomains | List of _Domain_ objects which are contained within it. |
-| Life Cycle | A _Domain_ that includes a pipeline and the lowest level _Subdomains_. _Life Cycle-domains_ cannot have _Subdomains_. |
+| Sub-Domains | List of _Domain_ objects which are contained within it. |
 | _Applications_ | The _Application_ objects which are contained within it. |
 | _Environments_ | The _Environment_ objects which are contained within it. |
 | creator | The _User_ or _Group_ Object representing the user who created it. |
@@ -183,7 +178,6 @@ The _Endpoint_ object has the following properties:
 | owner                    | _User_ or _Group_ that owns it.                        |
 | hostname                 | Hostname (if set) or name otherwise.                   |
 | basedir                  | Base Directory for where the _Application_ is running.                        |
-| type                     | _Endpoint_ Type, ie: cluster, windows, cloud, etc.     |
 | credential               | The logon and password used to access this _Endpoint_. |
 | _Components_             | The _Components_ currently installed on it.            |
 | creator                  | The _User_ or _Group_ who created it.                  |
@@ -270,7 +264,7 @@ If your organization requires a standardized method of doing deployments, the De
 
 ### _Release_ Object
 
-A [_Release_](/userguide/profeatures/deployments/5-application-releases/) is only available in **DeployHub Pro**. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a 'Release Train.' Releases are used as part of DeployHub's internal deployment engine and are not required for managing Security Intelligence. 
+A [_Release_](/userguide/profeatures/deployments/5-application-releases/) is only available in DeployHub. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a 'Release Train.' Releases are used as part of DeployHub's internal deployment engine and are not required for managing Security Intelligence. 
 
 ### _Credential_ Object
 

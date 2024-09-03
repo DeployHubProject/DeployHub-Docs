@@ -1,13 +1,13 @@
 ---
 title: "Creating User Groups"
 linkTitle: "Creating User Groups"
-weight: 4
+weight: 12
 description: >
     Add additional User Groups for more security and control over DeployHub Objects.
 ---
 ## Intro to _Groups_
 
-Access control to Objects are based on _Groups_. DeployHub Pro allows you to create custom _Groups_ for organizing _Users_ giving you more granular security control around the DeployHub Objects.
+Access control to Objects are based on _Groups_. DeployHub allows you to create custom _Groups_ for organizing _Users_ giving you more granular security control around the DeployHub Objects.
 
 DeployHub default _Groups_ include:
 -Administrator _Group_ - The _User_ who initially signs into DeployHub is automatically added to this _Group_. By default, this _Group_ has access to all objects.
@@ -18,7 +18,7 @@ DeployHub default _Groups_ include:
 
 ## _Groups_ and _Domain_ Inheritance
 
-_Users_ and _Groups_ are created under a _Domain_. A _User_ or _Group_ that is created at a higher level _Domain_ will inherit access to all _Subdomains_, based on their access settings. _Group_ access and inherited access properties can be overridden within a _Subdomain_. As an example, Administrators, Director, and Operational level _Users_ or _Groups_ can be assigned to the highest level _Domain_ for the Enterprise while Application Teams and Testing Teams can be defined to only the _Subdomains_ that pertain to their area of expertise. _Users_ or _Groups_ can belong to multiple _Domains_.  
+_Users_ and _Groups_ are created under a _Domain_. A _User_ or _Group_ that is created at a higher level _Domain_ will inherit access to all _Sub-Domains_, based on their access settings. _Group_ access and inherited access properties can be overridden within a _Sub-Domain_. As an example, Administrators, Director, and Operational level _Users_ or _Groups_ can be assigned to the highest level _Domain_ for the Enterprise while Application Teams and Testing Teams can be defined to only the _Sub-Domains_ that pertain to their area of expertise. _Users_ or _Groups_ can belong to multiple _Domains_.  
 
 ## Using the _Group_ List View for Adding or Deleting
 
@@ -53,7 +53,7 @@ _Groups_ have the following attributes:
 | **Override Access Control** | If checked, allows any _User_ belonging to this _Group_ to have control over the entire system, and no access restrictions apply to them. This option creates a Super Group level of Administrator and should only be used for individuals with full administrative privileges. |
 | **Users**                   | When checked, allows the _User_ to create and add Users to any of the _Domains_ to which they belong.                                                                                                                                                                           |
 | **User Groups**             | When checked, allows the _User_ to create and add _Groups_ to any of the _Domains_ to which they belong.                                                                                                                                                                        |
-| **Domains**                 | When checked, allows the _User_ to create and add _Subdomains_ to any of the _Domains_ to which they belong.                                                                                                                                                                    |
+| **Domains**                 | When checked, allows the _User_ to create and add _Sub-Domains_ to any of the _Domains_ to which they belong.                                                                                                                                                                    |
 | **Environments**            | When checked, allows the _User_ to create and add _Environments_ to any of the _Domains_ to which they belong.                                                                                                                                                                  |
 | **Endpoints**               | When checked, allows the _User_ to create and add _Endpoints_ to any of the _Domains_ to which they belong.                                                                                                                                                                     |
 | **Repositories**            | When checked, allows the _User_ to create and add _Repositories_ to any of the _Domains_ to which they belong.                                                                                                                                                                  |

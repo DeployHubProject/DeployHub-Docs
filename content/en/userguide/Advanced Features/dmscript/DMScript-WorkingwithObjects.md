@@ -38,7 +38,7 @@ You do not need to use any specific syntax to access an Object variable. Wheneve
 
 The _Application_ object represents either a Base _Application_, an _Application Version,_ or a Release. In DeployHub there is always an _Application_ on the stack representing the _Application_/_Release_ being deployed referenced by $_Application_. You can also retrieve an _Application_ using the get_Application__Function_ or push an _Application_ onto the Stack via using _Application_.
 
-NOTE: A _Release_ is a DeployHub Pro Object. It is of the _type__Application_. The release property indicates if the object represents a Release.
+NOTE: A _Release_ is a DeployHub Object. It is of the _type__Application_. The release property indicates if the object represents a Release.
 
 The following properties can be accessed for an _Application_ object:
 
@@ -379,8 +379,7 @@ The following properties can be accessed on the _Domain_ object:
 | fqdomain       | String          | Fully qualified domain name.                                          |
 | summary        | String          | Summary text.                                                         |
 | domain         | Object          | Domain in which the Domain is contained                               |
-| subdomains     | Array           | List of _Domain_ objects which are contained within this Domain.      |
-| Life Cycle     | Boolean         | true if the Domain contains a Life Cycle, false otherwise.            |
+| Sub-Domains     | Array           | List of _Domain_ objects which are contained within this Domain.      |
 | _Applications_ | Array           | List of _Application_ objects which are contained within this domain. |
 | _Environments_ | Array           | List of _Environment_ objects which are contained within this domain. |
 | creator        | User            | User Object representing the user who created this domain.            |

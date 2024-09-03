@@ -117,4 +117,3 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Data
 | **Select** | Allows _Users_ to use the _Data Source_ to access external data.                                                                                                 |
 | **Delete** | Allows the _User_ to remove the _Data Source_.                                                                                                                   |
 
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. If you need more granularity in your UserGroups, you will need to upgrade to **DeployHub Pro.**
