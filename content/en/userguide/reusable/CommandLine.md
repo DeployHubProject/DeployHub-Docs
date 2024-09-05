@@ -1,7 +1,7 @@
 
 ## Adding Continuous Security Intelligence to your DevOps Pipeline
 
-In order to continuously gather pipeline intelligence, Ortelius must become part of your pipeline. DeployHub integrates with the CI/CD process using the Ortelius Command Line (CLI). The Ortelius CLI gathers supply chain data based on a single pipeline workflow at the build and deploy steps. The build step gathers Swagger, SBOM, Readme, licenses, Git data, Docker image, and other build output. The deploy step records when a release occurs, what was sent and where the objects were sent to.
+In order to continuously gather pipeline intelligence, DeployHub must become part of your pipeline. DeployHub integrates with Jenkins and other CI/CD engines using the Ortelius Command Line (CLI). The Ortelius CLI gathers supply chain data based on a single pipeline workflow at the build and deploy steps. The build step gathers Swagger, SBOM, Readme, licenses, Git data, Docker image, and other build output. The deploy step records when a release occurs, what was sent and where the objects were sent to.
 
 The [Ortelius](https://Ortelius.io) CLI is maintained by the Ortelius Open Source Community under the governance of the [Linux Foundation's Continuous Delivery Foundation.](https://cd.foundation)
 

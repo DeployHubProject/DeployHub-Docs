@@ -1,10 +1,12 @@
 ---
 title: "SalesForce"
 linkTitle: "SalesForce"
-weight: 322
+weight: 360
 description: >
   Deploying SalesForce objects with DeployHub.
 ---
+
+![salesforce](/userguide/images/salesforce.jpg)
 
 ## Using a _Custom Action_ for SalesForce Deployments
 

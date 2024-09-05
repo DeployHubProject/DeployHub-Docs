@@ -1,10 +1,12 @@
 ---
 title: "DORA Metrics Reports"
 linkTitle: "DORA Metrics Reports"
-weight: 30
+weight: 307
 description: >
   Aggregated DORA Metrics for Decoupled Deployments
 ---
+
+![Dora](/userguide/images/dora.png)
 
 ## DevOps Research and Assessment (DORA)
 

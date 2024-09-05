@@ -1,10 +1,12 @@
 ---
 title: "OSV.Dev CVE Integration"
 linkTitle: "OSV.Dev CVE Integration"
-weight: 320
+weight: 350
 description: >
   Cross Referencing Packages with CVE Database
 ---
+
+![OSV](/userguide/images/osvdev.jpg)
 
 ## OSV
 

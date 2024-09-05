@@ -1,7 +1,7 @@
 ---
 title: "Jira, Bugzilla and GitHub Issues"
 linkTitle: "Jira, Bugzilla and GitHub Issues"
-weight: 310
+weight: 320
 description: >
   Tracking Change Request with DeployHub.
 ---

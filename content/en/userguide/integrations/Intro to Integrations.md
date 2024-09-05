@@ -1,7 +1,7 @@
 ---
 title: "Custom DeployHub Actions"
 linkTitle: "Custom DeployHub Actions"
-weight: 300
+weight: 301
 description: >
   Customizing integrations with DeployHub Actions.
 ---

@@ -1,10 +1,12 @@
 ---
 title: "Swagger Integration"
 linkTitle: "Swagger Integration"
-weight: 330
+weight: 366
 description: >
   Tracking Swagger for Your Component
 ---
+
+![swagger](/userguide/images/Swagger-logo.png)
 
 ## Swagger
 

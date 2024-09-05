@@ -1,7 +1,7 @@
 ---
 title: "SVN as a Repository"
 linkTitle: "SVN"
-weight: 328
+weight: 387
 description: >
   Integrating SVN as a DeployHub Repository.
 ---

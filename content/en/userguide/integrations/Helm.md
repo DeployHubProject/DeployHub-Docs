@@ -1,10 +1,12 @@
 ---
 title: "Helm for Container Deployments"
 linkTitle: "Helm for Container Deployments"
-weight: 306
+weight: 312
 description: >
   Using Helm to execute deployments as an _Action_.
 ---
+
+![Helm](/userguide/images/helm.png)
 
 DeployHub supports Helm in two ways:
 

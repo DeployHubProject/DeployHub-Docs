@@ -1,10 +1,12 @@
 ---
 title: "SonarQube Code Quality and Security Solution Integration"
 linkTitle: "SonarQube Integration"
-weight: 320
+weight: 380
 description: >
   Associating Sonar Project Status, Bugs, Code Smells, and Violations to your _Component Version_.
 ---
+
+![sonarqube](/userguide/images/sonarqube.png)
 
 ## SonarQube
 

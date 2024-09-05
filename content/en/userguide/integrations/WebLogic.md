@@ -1,7 +1,7 @@
 ---
 title: "Weblogic"
 linkTitle: "Weblogic"
-weight: 332
+weight: 395
 description: >
   Executing deployments requiring a Weblogic Server.
 ---

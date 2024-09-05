@@ -1,10 +1,12 @@
 ---
 title: "AWS Lamda"
 linkTitle: "AWS Lamda"
-weight: 52
+weight: 330
 description: >
   Versioning your AWS Lamda Functions.
 ---
+
+![Lambda](/userguide/images/lambda.png)
 
 ## Lambda Functions
 

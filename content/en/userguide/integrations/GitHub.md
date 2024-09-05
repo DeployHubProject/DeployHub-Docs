@@ -1,10 +1,12 @@
 ---
 title: "GitHub"
 linkTitle: "GitHub"
-weight: 304
+weight: 310
 description: >
   Integrating GitHub Repository and Issues with DeployHub.
 ---
+
+![GitHub](/userguide/images/GitHub-Logo.png)
 
 DeployHub supports GitHub in the following ways.
 
