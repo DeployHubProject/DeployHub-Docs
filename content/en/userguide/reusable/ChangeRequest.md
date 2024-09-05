@@ -10,3 +10,14 @@ Jira, Bugzilla and GitHub are represented in DeployHub as _Data Source_ Types. B
 Change Request that are tracked at the _Component_ level are rolled up to the _Application_ level.  All change request associated to _Components_ and _Applications_ are rolled up to the _Release_.
 
 Once connected, the Change Request Section for the _Component_ and the _Application_ shows all Change Request manually added. If a _Data Source_ has not been assigned, you will see a message "No Change Request Data Source has been setup."  Once setup, you can use the '+Add' option to associate specific change request to the _Component_ or _Application_. Selecting +Add will create a new row in the table with a drop down list box.  This drop down will contain all change request retrieved by the _Data Source_. Select the Change Request and use the Save option to commit the new row to the table.  Use the Edit option to switch a Change Request, or Delete to remove a Change Request.
+
+
+The _Change Request_ object has the following properties:
+
+| Property  | Description                                                                                                                                                                                                                                                                 |
+|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ID        | The _Change Request_ id.                                                                                                                                                                                                                                                    |
+| Name      | The _Change Request_ description.                                                                                                                                                                                                                                           |
+| Status    | The _Change Request_ status.                                                                                                                                                                                                                                                |
+| api\_url  | A URL which, if passed to restful\_get, will return an array containing the full details of the _Change Request_ from the external change tracking system. Useful for getting more information than the ID / description / status combination which is stored in DeployHub. |
+| html\_url | A URL which will direct a browser to the page describing the change request in the external change tracking system.|

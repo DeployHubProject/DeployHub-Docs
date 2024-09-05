@@ -201,17 +201,6 @@ The _Date_ has the following properties:
 
 The [_Change Request_](/userguide/advanced-features/deployments/changerequest) Object represents a change request record associated with either a _Component_ or an _Application_. 
 
-The _Change Request_ object has the following properties:
-
-| Property  | Description                                                                                                                                                                                                                                                                 |
-|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ID        | The _Change Request_ id.                                                                                                                                                                                                                                                    |
-| Name      | The _Change Request_ description.                                                                                                                                                                                                                                           |
-| Status    | The _Change Request_ status.                                                                                                                                                                                                                                                |
-| api\_url  | A URL which, if passed to restful\_get, will return an array containing the full details of the _Change Request_ from the external change tracking system. Useful for getting more information than the ID / description / status combination which is stored in DeployHub. |
-| html\_url | A URL which will direct a browser to the page describing the change request in the external change tracking system.|
-
-
 ### _Data Source_ Objects
 
  The [_Data Source_](/userguide/advanced-features/deployments/2-data-sources/) object  communicates with various sources of information such as databases, HTTP servers, FTP servers, etc., and can be used to connect to other DevOps tools as needed.
