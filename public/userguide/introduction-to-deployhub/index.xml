@@ -197,7 +197,7 @@
 &lt;p&gt;There are many other features of DeployHub that we did not get to cover on this short test drive. However, you should have the basic understanding of the major Objects and concepts needed to get you started.  What we did not cover that you may want to view are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-your-credentials/&#34;&gt;Create Credentials&lt;/a&gt; - User names and passwords for accessing &lt;em&gt;Endpoints&lt;/em&gt; and &lt;em&gt;Repositories&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-repositories/&#34;&gt;Connect Repositories&lt;/a&gt; - Repositories for accessing artifiacts.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/advanced-features/deployments/2-define-repositories/&#34;&gt;Connect Repositories&lt;/a&gt; - Repositories for accessing artifiacts.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We will leave you with how to setup DeployHub for your installation.  See &lt;a href=&#34;/userguide/first-steps/&#34;&gt;First Steps&lt;/a&gt;, for getting your setup completed. Once you have your setup complete you can start publishing &lt;em&gt;Components&lt;/em&gt;, packaging &lt;em&gt;Applications&lt;/em&gt; and performing deployments.&lt;/p&gt;
 &lt;p&gt;Another important topic is integrating with your CD pipeline.  See &lt;a href=&#34;/userguide/integrations/ci-cd_integrations/&#34;&gt;Using DeployHub with CI/CD&lt;/a&gt; for how you can include continuous configuration management and continuous deployments into your CD pipeline.&lt;/p&gt;

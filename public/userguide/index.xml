@@ -1058,7 +1058,7 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Add your &lt;em&gt;Repositories&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Add your &lt;a href=&#34;/userguide/first-steps/2-define-repositories/&#34;&gt;&lt;em&gt;Repository&lt;/em&gt;&lt;/a&gt; before you begin defining your &lt;em&gt;Components&lt;/em&gt; as you will need to specify a &lt;em&gt;Repository&lt;/em&gt; for your finding your &lt;em&gt;Component&lt;/em&gt;. DeployHub needs to know where to pull files and containers.&lt;/td&gt;
+&lt;td&gt;Add your &lt;a href=&#34;/userguide/advanced-features/deployments/2-define-repositories/&#34;&gt;&lt;em&gt;Repository&lt;/em&gt;&lt;/a&gt; before you begin defining your &lt;em&gt;Components&lt;/em&gt; as you will need to specify a &lt;em&gt;Repository&lt;/em&gt; for your finding your &lt;em&gt;Component&lt;/em&gt;. DeployHub needs to know where to pull files and containers.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Define your &lt;em&gt;Environment&lt;/em&gt; and &lt;em&gt;Endpoints&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
@@ -4649,7 +4649,7 @@ If you are using SSH Private keys, you will find these files in your Home direct
 &lt;p&gt;There are many other features of DeployHub that we did not get to cover on this short test drive. However, you should have the basic understanding of the major Objects and concepts needed to get you started.  What we did not cover that you may want to view are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-your-credentials/&#34;&gt;Create Credentials&lt;/a&gt; - User names and passwords for accessing &lt;em&gt;Endpoints&lt;/em&gt; and &lt;em&gt;Repositories&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-repositories/&#34;&gt;Connect Repositories&lt;/a&gt; - Repositories for accessing artifiacts.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/advanced-features/deployments/2-define-repositories/&#34;&gt;Connect Repositories&lt;/a&gt; - Repositories for accessing artifiacts.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We will leave you with how to setup DeployHub for your installation.  See &lt;a href=&#34;/userguide/first-steps/&#34;&gt;First Steps&lt;/a&gt;, for getting your setup completed. Once you have your setup complete you can start publishing &lt;em&gt;Components&lt;/em&gt;, packaging &lt;em&gt;Applications&lt;/em&gt; and performing deployments.&lt;/p&gt;
 &lt;p&gt;Another important topic is integrating with your CD pipeline.  See &lt;a href=&#34;/userguide/integrations/ci-cd_integrations/&#34;&gt;Using DeployHub with CI/CD&lt;/a&gt; for how you can include continuous configuration management and continuous deployments into your CD pipeline.&lt;/p&gt;
@@ -4909,10 +4909,10 @@ If you are using SSH Private keys, you will find these files in your Home direct
     
     <item>
       <title>Userguide: Connect Your Repositories</title>
-      <link>/userguide/first-steps/2-define-repositories/</link>
+      <link>/userguide/advanced-features/deployments/2-define-repositories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/first-steps/2-define-repositories/</guid>
+      <guid>/userguide/advanced-features/deployments/2-define-repositories/</guid>
       <description>
         
         
@@ -4959,7 +4959,7 @@ If you are using SSH Private keys, you will find these files in your Home direct
 &lt;li&gt;File System (included as a default with override and append options enabled)&lt;/li&gt;
 &lt;li&gt;OpenMake Meister (Build system with a binary repository)&lt;/li&gt;
 &lt;li&gt;SVN&lt;/li&gt;
-&lt;li&gt;Git (git repositories are treated as File System repositories). See &lt;a href=&#34;/userguide/first-steps/2-define-repositories/#git-_repository_-details&#34;&gt;Git Repository&lt;/a&gt; and &lt;a href=&#34;/userguide/integrations/github/&#34;&gt;GitHub&lt;/a&gt; for configuration steps.&lt;/li&gt;
+&lt;li&gt;Git (git repositories are treated as File System repositories). See &lt;a href=&#34;/userguide/advanced-features/deployments/2-define-repositories/#git-_repository_-details&#34;&gt;Git Repository&lt;/a&gt; and &lt;a href=&#34;/userguide/integrations/github/&#34;&gt;GitHub&lt;/a&gt; for configuration steps.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;common-details-of-all-_repositories_-types&#34;&gt;Common Details of all &lt;em&gt;Repositories&lt;/em&gt; Types&lt;/h3&gt;
 &lt;table&gt;
@@ -5161,7 +5161,7 @@ If you are using SSH Private keys, you will find these files in your Home direct
 &lt;h2 id=&#34;git-_repository_-details&#34;&gt;Git &lt;em&gt;Repository&lt;/em&gt; Details&lt;/h2&gt;
 &lt;p&gt;You can configure DeployHub to call out to a Git Repo to pull deployable artifacts (binaries, scripts, etc.) as part of your deployment.  The process will check out your deployable artifacts based on commit, branch or tag specified. You will need to configure DeployHub with a file system DeployHub &lt;em&gt;Repository&lt;/em&gt; that will pull the files need for the deployment.  You will also need to create a &amp;ldquo;Git Checkout&amp;rdquo; &lt;em&gt;Procedure&lt;/em&gt; and &lt;em&gt;Action&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 1 - Create a DeployHub File System &lt;em&gt;Repository&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;DeployHub can use Git as a binary repository for retrieving deployable objects as part of the deployment process.  To do this you will first need to define Git as a connected &lt;em&gt;Repository&lt;/em&gt; Object from within DeployHub. This connection will be used by as part of the deployment process using a &lt;em&gt;Procedure&lt;/em&gt; and a &lt;em&gt;Action&lt;/em&gt;. For information on setting up File System as a binary repository see &lt;a href=&#34;/userguide/first-steps/2-define-repositories/&#34;&gt;Connect Your Repositories&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;DeployHub can use Git as a binary repository for retrieving deployable objects as part of the deployment process.  To do this you will first need to define Git as a connected &lt;em&gt;Repository&lt;/em&gt; Object from within DeployHub. This connection will be used by as part of the deployment process using a &lt;em&gt;Procedure&lt;/em&gt; and a &lt;em&gt;Action&lt;/em&gt;. For information on setting up File System as a binary repository see &lt;a href=&#34;/userguide/advanced-features/deployments/2-define-repositories/&#34;&gt;Connect Your Repositories&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Once you have completed this step, you are ready to create a new &lt;em&gt;Procedure&lt;/em&gt; that performs the check out from the Git repository.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 2 - Create your Git Checkout &lt;em&gt;Procedure&lt;/em&gt; for your &lt;em&gt;Action&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Procedures&lt;/em&gt; are called by &lt;em&gt;Actions&lt;/em&gt; to execute deployment logic. A pre-defined DeployHub _Procedure__is available from the &lt;a href=&#34;https://github.com/ortelius/ortelius/blob/master/procedures/&#34;&gt;Ortelius Git Repo&lt;/a&gt;. This where you will find the most current version of this &lt;em&gt;Procedure&lt;/em&gt;. For more information on creating_Procedures see &lt;a href=&#34;/userguide/customizations/2-define-your-functions-and-procedures/&#34;&gt;Functions and Procedures&lt;/a&gt;.&lt;/p&gt;

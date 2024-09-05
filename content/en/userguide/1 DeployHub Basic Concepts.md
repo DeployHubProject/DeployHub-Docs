@@ -199,7 +199,7 @@ The _Date_ has the following properties:
 
 ### _Change Request_ Object
 
-The [_Change Request_](/userguide/profeatures/5-change-requests/) Object represents a change request record associated with either a _Component_ or an _Application_. 
+The [_Change Request_](/userguide/advanced-features/deployments/changerequest) Object represents a change request record associated with either a _Component_ or an _Application_. 
 
 The _Change Request_ object has the following properties:
 
