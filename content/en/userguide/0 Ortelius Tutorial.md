@@ -244,4 +244,4 @@ Other topics to explore include:
 
 -  Get started by connecting  your [CI/CD pipeline](/userguide/integrations/ci-cd_integrations/) to add _Components_ and _Applications_.
 
-- [The Internal Deployment Engine](/userguide/profeatures/deployments/) - execute deployments using DeployHub's internal agentless deployment engine
+- [The Internal Deployment Engine](/userguide/advanced-features/deployments/) - execute deployments using DeployHub's internal agentless deployment engine

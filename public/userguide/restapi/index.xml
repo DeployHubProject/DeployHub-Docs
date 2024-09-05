@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DeployHub User Guide and API Reference – RESTfull API</title>
-    <link>/userguide/restapi/</link>
+    <link>/userguide/advanced-features/restapi/</link>
     <description>Recent content in RESTfull API on DeployHub User Guide and API Reference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/userguide/restapi/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/userguide/advanced-features/restapi/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,14 +16,14 @@
     
     <item>
       <title>Userguide: Intro to APIs and Logging In</title>
-      <link>/userguide/restapi/intro-and-logging-in/</link>
+      <link>/userguide/advanced-features/restapi/intro-and-logging-in/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/intro-and-logging-in/</guid>
+      <guid>/userguide/advanced-features/restapi/intro-and-logging-in/</guid>
       <description>
         
         
-        &lt;p&gt;APIs can be used to extract and update DeployHub &lt;a href=&#34;/userguide/concepts/1-deployhub-basic-concepts/&#34;&gt;Objects&lt;/a&gt;.  The most common use for APIs is to integrate DeployHub into your continuous delivery engine for a continuous configuration management and deploy process.  APIs are generally used for executing deployments, but can also be used to automatically update &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Application&lt;/em&gt; versions.&lt;/p&gt;
+        &lt;p&gt;APIs can be used to extract and update DeployHub &lt;a href=&#34;/userguide/1-deployhub-basic-concepts/&#34;&gt;Objects&lt;/a&gt;.  The most common use for APIs is to integrate DeployHub into your continuous delivery engine for a continuous configuration management and deploy process.  APIs are generally used for executing deployments, but can also be used to automatically update &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Application&lt;/em&gt; versions.&lt;/p&gt;
 &lt;h2 id=&#34;object-accessibility&#34;&gt;Object Accessibility&lt;/h2&gt;
 &lt;p&gt;APIs rely &lt;em&gt;User and Group&lt;/em&gt; access to determine if the call is allowed. The Objects that are accessible via the API are restricted based on the logged-in user. Only Objects that are contained within the user&amp;rsquo;s home &lt;em&gt;Domain&lt;/em&gt; and any &lt;em&gt;Subdomains&lt;/em&gt; are accessible via the API.&lt;/p&gt;
 &lt;p&gt;If a requested object does not have &amp;ldquo;read&amp;rdquo; permission then it cannot be accessed via the API. Similarly, attempting to modify Objects which do not have the appropriate &amp;ldquo;change&amp;rdquo; permission is also prohibited. In such cases, the &amp;ldquo;success&amp;rdquo; flag returned is &amp;ldquo;false&amp;rdquo; and the error is &amp;ldquo;Permission Denied&amp;rdquo;.&lt;/p&gt;
@@ -104,7 +104,7 @@
 &lt;tr&gt;
 &lt;td&gt;200&lt;/td&gt;
 &lt;td&gt;The result will include a cookie. Include this cookie for subsequent calls to APIs.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;/userguide/restapi/models/#success&#34;&gt;success&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/userguide/advanced-features/restapi/models/#success&#34;&gt;success&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -114,10 +114,10 @@
     
     <item>
       <title>Userguide: Application APIs</title>
-      <link>/userguide/restapi/applications/</link>
+      <link>/userguide/advanced-features/restapi/applications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/applications/</guid>
+      <guid>/userguide/advanced-features/restapi/applications/</guid>
       <description>
         
         
@@ -771,10 +771,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Component APIs</title>
-      <link>/userguide/restapi/components/</link>
+      <link>/userguide/advanced-features/restapi/components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/components/</guid>
+      <guid>/userguide/advanced-features/restapi/components/</guid>
       <description>
         
         
@@ -1514,10 +1514,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Credential APIs</title>
-      <link>/userguide/restapi/credentials/</link>
+      <link>/userguide/advanced-features/restapi/credentials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/credentials/</guid>
+      <guid>/userguide/advanced-features/restapi/credentials/</guid>
       <description>
         
         
@@ -1704,10 +1704,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Deployment APIs</title>
-      <link>/userguide/restapi/deployment/</link>
+      <link>/userguide/advanced-features/restapi/deployment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/deployment/</guid>
+      <guid>/userguide/advanced-features/restapi/deployment/</guid>
       <description>
         
         
@@ -1803,10 +1803,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Deployment Log APIs</title>
-      <link>/userguide/restapi/deployment-log/</link>
+      <link>/userguide/advanced-features/restapi/deployment-log/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/deployment-log/</guid>
+      <guid>/userguide/advanced-features/restapi/deployment-log/</guid>
       <description>
         
         
@@ -1951,10 +1951,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Endpoint APIs</title>
-      <link>/userguide/restapi/endpoints/</link>
+      <link>/userguide/advanced-features/restapi/endpoints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/endpoints/</guid>
+      <guid>/userguide/advanced-features/restapi/endpoints/</guid>
       <description>
         
         
@@ -2477,10 +2477,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Environment APIs</title>
-      <link>/userguide/restapi/environments/</link>
+      <link>/userguide/advanced-features/restapi/environments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/environments/</guid>
+      <guid>/userguide/advanced-features/restapi/environments/</guid>
       <description>
         
         
@@ -2699,10 +2699,10 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
     
     <item>
       <title>Userguide: Environment Calendar API</title>
-      <link>/userguide/restapi/calendar/</link>
+      <link>/userguide/advanced-features/restapi/calendar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/calendar/</guid>
+      <guid>/userguide/advanced-features/restapi/calendar/</guid>
       <description>
         
         
@@ -3025,10 +3025,10 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
     
     <item>
       <title>Userguide: User APIs</title>
-      <link>/userguide/restapi/users/</link>
+      <link>/userguide/advanced-features/restapi/users/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/users/</guid>
+      <guid>/userguide/advanced-features/restapi/users/</guid>
       <description>
         
         

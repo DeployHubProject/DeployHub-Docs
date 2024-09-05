@@ -5,7 +5,7 @@ weight: 5
 description: >
   Introduction and the Login API
 ---
-APIs can be used to extract and update DeployHub [Objects](/userguide/concepts/1-deployhub-basic-concepts/) for custom security reporting or integration into external systems.  
+APIs can be used to extract and update DeployHub [Objects](/userguide/1-deployhub-basic-concepts/) for custom security reporting or integration into external systems.  
 
 ## Object Accessibility
 
@@ -76,6 +76,6 @@ When issuing calls to the API, the client application must either first issue a 
 
 ### Response
 
-| Code | Description                                                                         | Schema                                        |
-|------|-------------------------------------------------------------------------------------|-----------------------------------------------|
-| 200  | The result will include a cookie. Include this cookie for subsequent calls to APIs. | [success](/userguide/restapi/models/#success) |
+| Code | Description                                                                         |
+|------|-------------------------------------------------------------------------------------|
+| 200  | The result will include a cookie. Include this cookie for subsequent calls to APIs. | 

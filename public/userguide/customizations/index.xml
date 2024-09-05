@@ -16,10 +16,10 @@
     
     <item>
       <title>Userguide: Using Notifiers for Messaging</title>
-      <link>/userguide/customizations/2-define-notifiers/</link>
+      <link>/userguide/advanced-features/deployments/2-define-notifiers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/customizations/2-define-notifiers/</guid>
+      <guid>/userguide/advanced-features/deployments/2-define-notifiers/</guid>
       <description>
         
         
@@ -199,7 +199,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;hipchat-details&#34;&gt;HipChat Details&lt;/h2&gt;
-&lt;p&gt;DeployHub allows you to send notifications using &lt;em&gt;Notifiers&lt;/em&gt; via HipChat Groups, Topics, or Room features. Notifications are defined to &lt;em&gt;Components&lt;/em&gt; and &lt;em&gt;Applications&lt;/em&gt; and inform the recipient(s) of the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Applications&lt;/em&gt; deployment&amp;rsquo;s success or failure. To define your &lt;em&gt;Notifier&lt;/em&gt; see &lt;a href=&#34;/userguide/customizations/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;DeployHub allows you to send notifications using &lt;em&gt;Notifiers&lt;/em&gt; via HipChat Groups, Topics, or Room features. Notifications are defined to &lt;em&gt;Components&lt;/em&gt; and &lt;em&gt;Applications&lt;/em&gt; and inform the recipient(s) of the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Applications&lt;/em&gt; deployment&amp;rsquo;s success or failure. To define your &lt;em&gt;Notifier&lt;/em&gt; see &lt;a href=&#34;/userguide/advanced-features/deployments/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -243,10 +243,10 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Assign your HipChat &lt;em&gt;Notifier&lt;/em&gt; to an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; from the Details section of the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; Dashboard. For more information see:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Define Your &lt;em&gt;Component&lt;/em&gt;&lt;/a&gt;.
-&lt;a href=&#34;/userguide/packaging-applications/2-defining-applications/&#34;&gt;Defining Your &lt;em&gt;Application&lt;/em&gt; Baseline&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/userguide/userguide/2-define-components/&#34;&gt;Define Your &lt;em&gt;Component&lt;/em&gt;&lt;/a&gt;.
+&lt;a href=&#34;/userguide/2-defining-applications/&#34;&gt;Defining Your &lt;em&gt;Application&lt;/em&gt; Baseline&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;slack-details&#34;&gt;Slack Details&lt;/h2&gt;
-&lt;p&gt;DeployHub sends messages to Slack based on certain events using &lt;em&gt;Notifiers&lt;/em&gt;. Below are the Slack details used when called by &lt;em&gt;Notifiers&lt;/em&gt;.  To define your &lt;em&gt;Notifier&lt;/em&gt; see &lt;a href=&#34;/userguide/customizations/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;DeployHub sends messages to Slack based on certain events using &lt;em&gt;Notifiers&lt;/em&gt;. Below are the Slack details used when called by &lt;em&gt;Notifiers&lt;/em&gt;.  To define your &lt;em&gt;Notifier&lt;/em&gt; see &lt;a href=&#34;/userguide/advanced-features/deployments/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -294,8 +294,8 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Assign your Slack &lt;em&gt;Notifier&lt;/em&gt; to an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; from the Details section of the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; Dashboard. For more information see:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Define Your &lt;em&gt;Component&lt;/em&gt;&lt;/a&gt;.
-&lt;a href=&#34;/userguide/packaging-applications/2-defining-applications/&#34;&gt;Defining Your &lt;em&gt;Application&lt;/em&gt; Baseline&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/userguide/userguide/2-define-components/&#34;&gt;Define Your &lt;em&gt;Component&lt;/em&gt;&lt;/a&gt;.
+&lt;a href=&#34;/userguide/2-defining-applications/&#34;&gt;Defining Your &lt;em&gt;Application&lt;/em&gt; Baseline&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;notifier-access-controls&#34;&gt;Notifier Access Controls&lt;/h2&gt;
 &lt;p&gt;The Access Section allows &lt;em&gt;Users&lt;/em&gt; within designated &lt;em&gt;Groups&lt;/em&gt; to update the &lt;em&gt;Notifier&lt;/em&gt; in various ways. To add a &lt;em&gt;Group&lt;/em&gt; to one of the access lists, drag and drop the &lt;em&gt;Group&lt;/em&gt; from the Available Groups list onto desired access list. All &lt;em&gt;Users&lt;/em&gt; who belong to a &lt;em&gt;Group&lt;/em&gt; that appear in one of the Access lists will be granted access to the &lt;em&gt;Notifier&lt;/em&gt; in the following ways:&lt;/p&gt;
 &lt;table&gt;
@@ -341,7 +341,7 @@
 &lt;p&gt;&lt;em&gt;Notifier Templates&lt;/em&gt; are used to create standard messages that are automatically sent by &lt;em&gt;Notifiers&lt;/em&gt;.  Each &lt;em&gt;Notifier Template&lt;/em&gt; is assigned to a &lt;em&gt;Notifier&lt;/em&gt;. There are two default &lt;em&gt;Notifier Templates&lt;/em&gt;, one for a successful deployment (DeploySuccess) and one for a failed deployment (DeployFailure).&lt;/p&gt;
 &lt;p&gt;Note: To create a &lt;em&gt;Notifier Template&lt;/em&gt; you will need to first create the &lt;em&gt;Notifier&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Each &lt;em&gt;Notifier Template&lt;/em&gt; contains the subject and body of the actual notification, and if via email, a list of recipients. Recipients can be members of one or more &lt;em&gt;Groups&lt;/em&gt; as well as the owners of the &lt;em&gt;Application&lt;/em&gt;, the owner of the &lt;em&gt;Environment&lt;/em&gt;, and/or the owners of the &lt;em&gt;Environment&lt;/em&gt; &lt;em&gt;Endpoints&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;For more information on &lt;em&gt;Notifiers&lt;/em&gt; see &lt;a href=&#34;/userguide/customizations/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more information on &lt;em&gt;Notifiers&lt;/em&gt; see &lt;a href=&#34;/userguide/advanced-features/deployments/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Using these two objects, &lt;em&gt;Notifiers&lt;/em&gt; and &lt;em&gt;Notifier Templates&lt;/em&gt;, notifications can be sent whenever a deployment to an &lt;em&gt;Environment&lt;/em&gt; fails or succeeds, whenever a &lt;em&gt;Request&lt;/em&gt; Task is executed, or the state of an &lt;em&gt;EndPoint&lt;/em&gt; changes. You can also use the Filter bar, represented by a funnel icon, to reorder your &lt;em&gt;Notify Templates&lt;/em&gt; by &lt;em&gt;Notifier Template&lt;/em&gt; Name and &lt;em&gt;Notifier&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;using-the-_notifiers_-list-view-for-adding-or-deleting&#34;&gt;Using the &lt;em&gt;Notifiers&lt;/em&gt; List View for Adding or Deleting&lt;/h2&gt;
 &lt;p&gt;You will find &lt;em&gt;Notifier Templates&lt;/em&gt; under the Setup menu.  Selecting &lt;em&gt;Notifier Templates&lt;/em&gt; will take you to a list of all &lt;em&gt;Notifier Templates&lt;/em&gt; which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your &lt;em&gt;Notifier Templates&lt;/em&gt; List View.  You can reorder the list view on &lt;em&gt;Notifier Templates&lt;/em&gt; and &lt;em&gt;Domains&lt;/em&gt;.&lt;/p&gt;
@@ -475,7 +475,7 @@
 &lt;p&gt;&lt;em&gt;Actions&lt;/em&gt; can be implemented in many ways including:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Written in DMScript - DeployHub&amp;rsquo;s internal deployment scripting language. DMScript has access to the DeployHub Object Model.  DMScript ships with several pre-installed &lt;em&gt;Procedures&lt;/em&gt; and &lt;em&gt;Functions&lt;/em&gt;. It is also easy to create your own and add them to the activities that can be used when creating your &lt;em&gt;Components&lt;/em&gt; installation logic. For more information see &lt;a href=&#34;/userguide/dmscript/&#34;&gt;Dmscript&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Written in DMScript - DeployHub&amp;rsquo;s internal deployment scripting language. DMScript has access to the DeployHub Object Model.  DMScript ships with several pre-installed &lt;em&gt;Procedures&lt;/em&gt; and &lt;em&gt;Functions&lt;/em&gt;. It is also easy to create your own and add them to the activities that can be used when creating your &lt;em&gt;Components&lt;/em&gt; installation logic. For more information see &lt;a href=&#34;/userguide/advanced-features/dmscript/&#34;&gt;Dmscript&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;A &amp;rsquo;local&amp;rsquo; script  - written in any scripting language that is supported by Linux, and executes in the DeployHub Container mounted from the Docker Host.&lt;/p&gt;
@@ -493,7 +493,7 @@
 &lt;p&gt;After any &lt;em&gt;Task&lt;/em&gt; in a &lt;em&gt;Domain&lt;/em&gt; is executed: When the &lt;em&gt;Task&lt;/em&gt; is created, a &amp;ldquo;Post-Action&amp;rdquo; can be specified. The specified &lt;em&gt;Action&lt;/em&gt; is invoked after the &lt;em&gt;Task&lt;/em&gt; is executed. This can be used to connect to external systems to notify others that a &lt;em&gt;Task&lt;/em&gt; has been executed (for example, to notify a bug-tracking system that an &lt;em&gt;Application Version&lt;/em&gt; has been moved to a Testing state).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;As a stand-alone &lt;em&gt;Action&lt;/em&gt; that can be invoked from the DeployHub User Interface: The &lt;em&gt;Action&lt;/em&gt; is associated with a &amp;ldquo;Run Action&amp;rdquo; &lt;em&gt;Task&lt;/em&gt;. When invoked, the &lt;em&gt;Action&lt;/em&gt; is executed. A user can right-click on the &lt;em&gt;Domain&lt;/em&gt; to view the &lt;em&gt;Task&lt;/em&gt; to execute the &lt;em&gt;Action&lt;/em&gt;. Alternatively, they can right-click on an &lt;em&gt;Application&lt;/em&gt; or a &lt;em&gt;Component&lt;/em&gt;. In these circumstances, the selected object is pushed onto the &lt;em&gt;Stack&lt;/em&gt; and is available via the $application or $component objects. See DMScript &lt;a href=&#34;/userguide/dmscript/dmscript-stack/&#34;&gt;Stack&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;As a stand-alone &lt;em&gt;Action&lt;/em&gt; that can be invoked from the DeployHub User Interface: The &lt;em&gt;Action&lt;/em&gt; is associated with a &amp;ldquo;Run Action&amp;rdquo; &lt;em&gt;Task&lt;/em&gt;. When invoked, the &lt;em&gt;Action&lt;/em&gt; is executed. A user can right-click on the &lt;em&gt;Domain&lt;/em&gt; to view the &lt;em&gt;Task&lt;/em&gt; to execute the &lt;em&gt;Action&lt;/em&gt;. Alternatively, they can right-click on an &lt;em&gt;Application&lt;/em&gt; or a &lt;em&gt;Component&lt;/em&gt;. In these circumstances, the selected object is pushed onto the &lt;em&gt;Stack&lt;/em&gt; and is available via the $application or $component objects. See DMScript &lt;a href=&#34;/userguide/advanced-features/dmscript/dmscript-stack/&#34;&gt;Stack&lt;/a&gt; for more information.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Before an &lt;em&gt;Application&lt;/em&gt; is deployed: An &lt;em&gt;Application&lt;/em&gt; can be defined as having a &amp;ldquo;Pre-Action.&amp;rdquo; This can be either an &lt;em&gt;Action&lt;/em&gt; or a &lt;em&gt;Function&lt;/em&gt;. When the &lt;em&gt;Application&lt;/em&gt; is deployed, this &amp;ldquo;Pre-Action&amp;rdquo; is invoked first before any other operation. If this Pre-Action aborts or returns a non-zero return code, the deployment itself will be prevented.&lt;/p&gt;
@@ -1338,7 +1338,7 @@ An editor box opens automatically to set any input values required. If the dropp
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Validation Data Source (DeployHub Pro Feature)&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Set to the &lt;em&gt;Data Source&lt;/em&gt; (LDap, Active Directory) for login. This is a DeployHub Pro Feature. The &lt;em&gt;Data Source&lt;/em&gt; must be pre-defined.  See &lt;a href=&#34;/userguide/profeatures/2-data-sources/&#34;&gt;Managing Data Sources&lt;/a&gt; for more information.&lt;/td&gt;
+&lt;td&gt;Set to the &lt;em&gt;Data Source&lt;/em&gt; (LDap, Active Directory) for login. This is a DeployHub Pro Feature. The &lt;em&gt;Data Source&lt;/em&gt; must be pre-defined.  See &lt;a href=&#34;/userguide/advanced-features/deployments/2-data-sources/&#34;&gt;Managing Data Sources&lt;/a&gt; for more information.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Password&lt;/strong&gt;&lt;/td&gt;
@@ -1373,7 +1373,7 @@ An editor box opens automatically to set any input values required. If the dropp
 &lt;h2 id=&#34;group-membership&#34;&gt;Group Membership&lt;/h2&gt;
 &lt;p&gt;This Section contains a list of all the &lt;em&gt;Groups&lt;/em&gt; the selected &lt;em&gt;User&lt;/em&gt; belongs to. Add a &lt;em&gt;Group&lt;/em&gt; to the selected &lt;em&gt;User&lt;/em&gt; by clicking on the plus &amp;lsquo;+Add&amp;rsquo; sign in the upper right, which adds an empty row to the table with a drop down list of all available &lt;em&gt;Groups&lt;/em&gt;. Use the Save option to commit it to the table. Use the Trash Can icon to delete a &lt;em&gt;Group&lt;/em&gt; from the table.&lt;/p&gt;
 &lt;p&gt;DeployHub Team has two &lt;em&gt;Groups&lt;/em&gt;, Administrators and Users, to which &lt;em&gt;Users&lt;/em&gt; can be assigned.  Access control to Objects are based on these two high level &lt;em&gt;Groups&lt;/em&gt;. DeployHub Team allows you to create as many &lt;em&gt;Users&lt;/em&gt; as required but only the &amp;ldquo;User&amp;rdquo; and &amp;ldquo;Administrator&amp;rdquo; &lt;em&gt;Groups&lt;/em&gt; are supported.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;DeployHub Pro&lt;/strong&gt; allows you to create custom &lt;em&gt;Groups&lt;/em&gt; for assigning &lt;em&gt;Users&lt;/em&gt; giving you more security control around the Objects. For information on how to create &lt;em&gt;User&lt;/em&gt; &lt;em&gt;Groups&lt;/em&gt; with DeployHub Pro see &lt;a href=&#34;/userguide/profeatures/5-pro-groups/.&#34;&gt;Creating DeployHub Pro Groups&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DeployHub Pro&lt;/strong&gt; allows you to create custom &lt;em&gt;Groups&lt;/em&gt; for assigning &lt;em&gt;Users&lt;/em&gt; giving you more security control around the Objects. For information on how to create &lt;em&gt;User&lt;/em&gt; &lt;em&gt;Groups&lt;/em&gt; with DeployHub Pro see &lt;a href=&#34;/userguide/user-groups/.&#34;&gt;Creating DeployHub Pro Groups&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;audit-trail&#34;&gt;Audit Trail&lt;/h3&gt;
 &lt;p&gt;The Audit Trail displays audit entries for any changes or deployments that impact this object. It includes any changes in the object including &lt;em&gt;User&lt;/em&gt; date and time, and deployments with unique numbers.&lt;/p&gt;
 &lt;p&gt;You can Subscribe to or Comment on an Audit Entry.&lt;/p&gt;
@@ -1471,7 +1471,7 @@ An editor box opens automatically to set any input values required. If the dropp
         
         
         &lt;h2 id=&#34;intro-to-_groups_&#34;&gt;Intro to &lt;em&gt;Groups&lt;/em&gt;&lt;/h2&gt;
-&lt;p&gt;DeployHub Team has three default Groups - Administrators, Everyone and Users.  Access control to Objects are based on these three high level &lt;em&gt;Groups&lt;/em&gt;. DeployHub Team allows you to create as many &lt;em&gt;Users&lt;/em&gt; as required but only the &amp;ldquo;Users&amp;rdquo; &amp;ldquo;Everyone&amp;rdquo; and &amp;ldquo;Administrator&amp;rdquo; &lt;em&gt;Groups&lt;/em&gt; are available. You can modify these &lt;em&gt;Groups&lt;/em&gt; as needed to create access controls around Objects. If you need to create custom &lt;em&gt;Groups&lt;/em&gt;, you will need to upgrade to DeployHub Pro.  See &lt;a href=&#34;/userguide/profeatures/5-pro-groups/&#34;&gt;Creating Pro User &lt;em&gt;Groups&lt;/em&gt;&lt;/a&gt; for details on Pro &lt;em&gt;User&lt;/em&gt; &lt;em&gt;Groups&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;DeployHub Team has three default Groups - Administrators, Everyone and Users.  Access control to Objects are based on these three high level &lt;em&gt;Groups&lt;/em&gt;. DeployHub Team allows you to create as many &lt;em&gt;Users&lt;/em&gt; as required but only the &amp;ldquo;Users&amp;rdquo; &amp;ldquo;Everyone&amp;rdquo; and &amp;ldquo;Administrator&amp;rdquo; &lt;em&gt;Groups&lt;/em&gt; are available. You can modify these &lt;em&gt;Groups&lt;/em&gt; as needed to create access controls around Objects. If you need to create custom &lt;em&gt;Groups&lt;/em&gt;, you will need to upgrade to DeployHub Pro.  See &lt;a href=&#34;/userguide/user-groups/&#34;&gt;Creating Pro User &lt;em&gt;Groups&lt;/em&gt;&lt;/a&gt; for details on Pro &lt;em&gt;User&lt;/em&gt; &lt;em&gt;Groups&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;using-the-_group_-list-viewing&#34;&gt;Using the &lt;em&gt;Group&lt;/em&gt; List Viewing&lt;/h2&gt;
 &lt;p&gt;You will find &lt;em&gt;Groups&lt;/em&gt; under the Setup menu.  Selecting &lt;em&gt;Groups&lt;/em&gt; will take you to a list of displaying the Administration &lt;em&gt;Group&lt;/em&gt; and &lt;em&gt;User&lt;/em&gt; Group.&lt;/p&gt;
 &lt;p&gt;From the &lt;em&gt;Groups&lt;/em&gt; List View, double click on the &lt;em&gt;Group&lt;/em&gt; which you would like to view to see all Details.&lt;/p&gt;

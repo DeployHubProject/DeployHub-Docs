@@ -9,7 +9,7 @@ description: >
 | Dependency | Version | Git Repo | License |
 | -------------| ------ | ---------- |-------------|
 | Ansible | 2.7 | [ansible/ansible](https://github.com/ansible/ansible) | [GPL-3](https://github.com/ansible/ansible/blob/devel/COPYING) |
-| BlockUI | 2.66.0-2013.10.09 | [malsup/blockui](https://github.com/malsup/blockui/) | [MIT License](http://malsup.github.com/mit-license.txt) |
+| BlockUI | 2.66.0-2013.10.09 | [malsup/blockui](https://github.com/malsup/blockui/) | [MIT License] |
 | Data Tables | 1.10.19 | [DataTables/DataTables](https://github.com/DataTables/DataTables) | [MIT License](https://datatables.net/license_mit) |
 | Data-Driven Documents | 5.0 | [d3/d3](https://github.com/d3/d3) | [BSD-3-Clause License](https://github.com/d3/d3/blob/master/LICENSE) |
 | Date Format | 1.2.3 | | [MIT License](https://opensource.org/licenses/MIT) |
@@ -31,7 +31,7 @@ description: >
 | JQuery Time Picker | | [trentrichardson/jQuery-Timepicker-Addon](https://github.com/trentrichardson/jQuery-Timepicker-Addon) | [MIT License](https://github.com/trentrichardson/jQuery-Timepicker-Addon/blob/master/LICENSE-MIT) |
 | JQuery UI - Widget | | [jquery/jquery-ui](https://github.com/jquery/jquery-ui) | [JQuery License](https://github.com/jquery/jquery-ui/blob/master/LICENSE.txt) |
 | JQuery UI | | [jquery/jquery-ui](https://github.com/jquery/jquery-ui) | [JQuery License](https://github.com/jquery/jquery-ui/blob/master/LICENSE.txt) |
-| jsPlumb | | [jsplumb/jsplumb](https://github.com/jsplumb/jsplumb) | [MIT License](https://github.com/jsplumb/jsplumb/blob/master/jsPlumb-LICENSE.txt) |
+| jsPlumb | | [jsplumb/jsplumb](https://github.com/jsplumb/jsplumb) | MIT License |
 | jsTree | | [vakata/jstree](https://github.com/vakata/jstree) | [MIT License](https://github.com/vakata/jstree/blob/master/LICENSE-MIT) |
 | OAuth | | [oauth-io/oauth-js](https://github.com/oauth-io/oauth-js) | [Apache 2](https://www.apache.org/licenses/LICENSE-2.0) |
 | Py Requests CredSSP | | [jborean93/requests-credssp](https://github.com/jborean93/requests-credssp) | [MIT License](https://github.com/jborean93/requests-credssp/blob/master/LICENSE) |

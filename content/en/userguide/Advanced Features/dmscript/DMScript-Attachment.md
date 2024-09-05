@@ -114,4 +114,4 @@ echo "\<;/table<";
 ```
 
 Email Received:
-![Sample Email](/userguide/dmscript/Attachment.jpg)
+![Sample Email](/userguide/advanced-features/dmscript/Attachment.jpg)

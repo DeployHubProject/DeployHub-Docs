@@ -66,10 +66,10 @@
     
     <item>
       <title>Userguide: Intro to Customizing Actions with DMScript</title>
-      <link>/userguide/dmscript/dmscript-intro/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-intro/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-intro/</guid>
       <description>
         
         
@@ -1062,7 +1062,7 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Define your &lt;em&gt;Environment&lt;/em&gt; and &lt;em&gt;Endpoints&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Next, identify your deployment landscape before you execute a deployment. You will deploy to an &lt;a href=&#34;/userguide/first-steps/2-define-environments/&#34;&gt;&lt;em&gt;Environment&lt;/em&gt;&lt;/a&gt; which is a collection of &lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;&lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Next, identify your deployment landscape before you execute a deployment. You will deploy to an &lt;a href=&#34;/userguide/2-define-environments/&#34;&gt;&lt;em&gt;Environment&lt;/em&gt;&lt;/a&gt; which is a collection of &lt;a href=&#34;/userguide/2-define-endpoints/&#34;&gt;&lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Publish your &lt;em&gt;Components&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
@@ -1569,10 +1569,10 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
     
     <item>
       <title>Userguide: Defining Components</title>
-      <link>/userguide/publishing-components/2-define-components/</link>
+      <link>/userguide/userguide/2-define-components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/publishing-components/2-define-components/</guid>
+      <guid>/userguide/userguide/2-define-components/</guid>
       <description>
         
         
@@ -1851,11 +1851,11 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Base Directory&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Base, or high level, directory where the file will be deployed. This value will be ignored if the &lt;em&gt;Endpoint&lt;/em&gt; has a Base Directory defined.  See &lt;a href=&#34;/publishing-components/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
+&lt;td&gt;Base, or high level, directory where the file will be deployed. This value will be ignored if the &lt;em&gt;Endpoint&lt;/em&gt; has a Base Directory defined.  See &lt;a href=&#34;/userguide/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Target Directory&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;The directory under the Base Directory where the file will be deployed, or final &amp;ldquo;Target&amp;rdquo; Directory. See &lt;a href=&#34;/publishing-components/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
+&lt;td&gt;The directory under the Base Directory where the file will be deployed, or final &amp;ldquo;Target&amp;rdquo; Directory. See &lt;a href=&#34;/userguide/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Pre-Action&lt;/strong&gt;&lt;/td&gt;
@@ -1903,7 +1903,7 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Base Directory&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Base, or high level, directory where the file will be deployed. This value will be ignored if the &lt;em&gt;Endpoint&lt;/em&gt; has a Base Directory defined.  See &lt;a href=&#34;/publishing-components/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
+&lt;td&gt;Base, or high level, directory where the file will be deployed. This value will be ignored if the &lt;em&gt;Endpoint&lt;/em&gt; has a Base Directory defined.  See &lt;a href=&#34;/userguide/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Pre-Action&lt;/strong&gt;&lt;/td&gt;
@@ -1915,7 +1915,7 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Roll Forward Target Directory&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;The directory under the Base Directory where the Roll Forward file will be deployed, or final &amp;ldquo;Target&amp;rdquo; Directory. See &lt;a href=&#34;/publishing-components/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
+&lt;td&gt;The directory under the Base Directory where the Roll Forward file will be deployed, or final &amp;ldquo;Target&amp;rdquo; Directory. See &lt;a href=&#34;/userguide/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Roll Forward Repository&lt;/strong&gt;&lt;/td&gt;
@@ -1923,7 +1923,7 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Rollback Target Directory&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;The directory under the Base Directory where the Rollback file will be deployed, or final &amp;ldquo;Target&amp;rdquo; Directory. See &lt;a href=&#34;/publishing-components/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
+&lt;td&gt;The directory under the Base Directory where the Rollback file will be deployed, or final &amp;ldquo;Target&amp;rdquo; Directory. See &lt;a href=&#34;/userguide/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Rollback Repository&lt;/strong&gt;&lt;/td&gt;
@@ -2144,7 +2144,7 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
 &lt;h3 id=&#34;deployhub-pro-change-requests&#34;&gt;DeployHub Pro Change Requests&lt;/h3&gt;
 &lt;p&gt;The integration of Change Request systems are supported in DeployHub through the use of a &lt;em&gt;Data Source&lt;/em&gt;. To integrate Change Request you must first define a Change Request &lt;em&gt;Data Source&lt;/em&gt; from the &lt;em&gt;Data Source&lt;/em&gt; Dashboard. Once created, you will be able to select the &lt;em&gt;Data Source&lt;/em&gt; from the General Details &amp;ldquo;Change Request &lt;em&gt;Data Source&lt;/em&gt;&amp;rdquo; field of your &lt;em&gt;Application&lt;/em&gt; and/or &lt;em&gt;Component&lt;/em&gt;. When you have a Change Request &lt;em&gt;Data Source&lt;/em&gt; defined, you can add issue tickets using the Change Request section of the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; Dashboards.&lt;/p&gt;
 &lt;h4 id=&#34;creating-change-request-_data-sources_&#34;&gt;Creating Change Request &lt;em&gt;Data Sources&lt;/em&gt;&lt;/h4&gt;
-&lt;p&gt;Jira, Bugzilla and GitHub are represented in DeployHub as &lt;em&gt;Data Source&lt;/em&gt; Types. Because a &lt;em&gt;Data Source&lt;/em&gt; is associated to a specific &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt; you will need to map a unique &lt;em&gt;Data Source&lt;/em&gt; for each system&amp;rsquo;s repository (Organization, Repository, Product, Project Key) where you are tracking the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;.  In a traditional release process, a &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Application&amp;rsquo;s&lt;/em&gt; repository may be the same.  Because microservices are often managed in their own repositories, you may need to define a &lt;em&gt;Data Source&lt;/em&gt; for each of your microservice &lt;em&gt;Components&lt;/em&gt;. For more on creating a Change Request &lt;em&gt;Data Source&lt;/em&gt; see &lt;a href=&#34;/userguide/profeatures/2-data-sources/&#34;&gt;Managing Data Sources&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Jira, Bugzilla and GitHub are represented in DeployHub as &lt;em&gt;Data Source&lt;/em&gt; Types. Because a &lt;em&gt;Data Source&lt;/em&gt; is associated to a specific &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt; you will need to map a unique &lt;em&gt;Data Source&lt;/em&gt; for each system&amp;rsquo;s repository (Organization, Repository, Product, Project Key) where you are tracking the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;.  In a traditional release process, a &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Application&amp;rsquo;s&lt;/em&gt; repository may be the same.  Because microservices are often managed in their own repositories, you may need to define a &lt;em&gt;Data Source&lt;/em&gt; for each of your microservice &lt;em&gt;Components&lt;/em&gt;. For more on creating a Change Request &lt;em&gt;Data Source&lt;/em&gt; see &lt;a href=&#34;/userguide/advanced-features/deployments/2-data-sources/&#34;&gt;Managing Data Sources&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Change Request that are tracked at the &lt;em&gt;Component&lt;/em&gt; level are rolled up to the &lt;em&gt;Application&lt;/em&gt; level.  All change request associated to &lt;em&gt;Components&lt;/em&gt; and &lt;em&gt;Applications&lt;/em&gt; are rolled up to the &lt;em&gt;Release&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Once connected, the Change Request Section for the &lt;em&gt;Component&lt;/em&gt; and the &lt;em&gt;Application&lt;/em&gt; shows all Change Request manually added. If a &lt;em&gt;Data Source&lt;/em&gt; has not been assigned, you will see a message &amp;ldquo;No Change Request Data Source has been setup.&amp;rdquo;  Once setup, you can use the &amp;lsquo;+Add&amp;rsquo; option to associate specific change request to the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;. Selecting +Add will create a new row in the table with a drop down list box.  This drop down will contain all change request retrieved by the &lt;em&gt;Data Source&lt;/em&gt;. Select the Change Request and use the Save option to commit the new row to the table.  Use the Edit option to switch a Change Request, or Delete to remove a Change Request.&lt;/p&gt;
 &lt;h2 id=&#34;publish-a-new-_component-version_-based-on-an-existing-_component-version_&#34;&gt;Publish a New &lt;em&gt;Component Version&lt;/em&gt; Based on an Existing &lt;em&gt;Component Version&lt;/em&gt;&lt;/h2&gt;
@@ -2157,10 +2157,10 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
     
     <item>
       <title>Userguide: DeployHub 101</title>
-      <link>/userguide/concepts/1-deployhub-basic-concepts/</link>
+      <link>/userguide/1-deployhub-basic-concepts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/concepts/1-deployhub-basic-concepts/</guid>
+      <guid>/userguide/1-deployhub-basic-concepts/</guid>
       <description>
         
         
@@ -2493,7 +2493,7 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;_data-source_-objects&#34;&gt;&lt;em&gt;Data Source&lt;/em&gt; Objects&lt;/h2&gt;
-&lt;p&gt;The &lt;a href=&#34;/userguide/customizations/2-data-sources/&#34;&gt;&lt;em&gt;Data Source&lt;/em&gt;&lt;/a&gt; object  communicates with various sources of information such as databases, HTTP servers, FTP servers, etc., and can be used to connect to other DevOps tools as needed.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;/userguide/advanced-features/deployments/2-data-sources/&#34;&gt;&lt;em&gt;Data Source&lt;/em&gt;&lt;/a&gt; object  communicates with various sources of information such as databases, HTTP servers, FTP servers, etc., and can be used to connect to other DevOps tools as needed.&lt;/p&gt;
 &lt;h2 id=&#34;_date_-object&#34;&gt;&lt;em&gt;Date&lt;/em&gt; Object&lt;/h2&gt;
 &lt;p&gt;Dates track the date/time of the creation, deletion, or update of an Object.&lt;/p&gt;
 &lt;p&gt;The &lt;em&gt;Date&lt;/em&gt; has the following properties:&lt;/p&gt;
@@ -2662,7 +2662,7 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;_environment_-object&#34;&gt;&lt;em&gt;Environment&lt;/em&gt; Object&lt;/h2&gt;
-&lt;p&gt;The &lt;a href=&#34;/userguide/first-steps/2-define-environments/&#34;&gt;&lt;em&gt;Environment&lt;/em&gt; Object&lt;/a&gt; represents a collection of &lt;em&gt;Endpoints&lt;/em&gt; where an &lt;em&gt;Application&lt;/em&gt; is deployed. Multiple &lt;em&gt;Environments&lt;/em&gt; can represent your pipeline stages such as Development, Testing, and Production for a single &lt;em&gt;Application&lt;/em&gt;.  Your &lt;em&gt;Application&lt;/em&gt; can have as many &lt;em&gt;Environments&lt;/em&gt; as needed.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;/userguide/2-define-environments/&#34;&gt;&lt;em&gt;Environment&lt;/em&gt; Object&lt;/a&gt; represents a collection of &lt;em&gt;Endpoints&lt;/em&gt; where an &lt;em&gt;Application&lt;/em&gt; is deployed. Multiple &lt;em&gt;Environments&lt;/em&gt; can represent your pipeline stages such as Development, Testing, and Production for a single &lt;em&gt;Application&lt;/em&gt;.  Your &lt;em&gt;Application&lt;/em&gt; can have as many &lt;em&gt;Environments&lt;/em&gt; as needed.&lt;/p&gt;
 &lt;p&gt;The following properties can be accessed for an &lt;em&gt;Environment&lt;/em&gt; object:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -2731,7 +2731,7 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;_endpoint_-object&#34;&gt;&lt;em&gt;Endpoint&lt;/em&gt; Object&lt;/h2&gt;
-&lt;p&gt;The &lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;&lt;em&gt;Endpoint&lt;/em&gt; Object&lt;/a&gt; (Local Helm Host, container, VM/Cloud Image) represents where a deployment will be sent. &lt;em&gt;Endpoints&lt;/em&gt; are assigned to an &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;/userguide/2-define-endpoints/&#34;&gt;&lt;em&gt;Endpoint&lt;/em&gt; Object&lt;/a&gt; (Local Helm Host, container, VM/Cloud Image) represents where a deployment will be sent. &lt;em&gt;Endpoints&lt;/em&gt; are assigned to an &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;_endpoint_-mapping&#34;&gt;&lt;em&gt;Endpoint&lt;/em&gt; Mapping&lt;/h3&gt;
 &lt;p&gt;Each &lt;em&gt;Component&lt;/em&gt; is assigned a Type attribute. You can specify which kind of &lt;em&gt;Endpoint&lt;/em&gt; is needed. For example, a Database &lt;em&gt;Component&lt;/em&gt; is installed onto an &lt;em&gt;Endpoint&lt;/em&gt; with a corresponding Database &lt;em&gt;Type&lt;/em&gt; definition. A &lt;em&gt;Component&lt;/em&gt; is assigned a single Type, while an &lt;em&gt;Endpoint&lt;/em&gt; can be assigned multiple Types. For example, if your single &lt;em&gt;Endpoint&lt;/em&gt; needed to have both a database and your application binaries installed, it would be assigned both a &amp;lsquo;Database&amp;rsquo; and a &amp;lsquo;Binary&amp;rsquo; &lt;em&gt;Type&lt;/em&gt; attribute.&lt;/p&gt;
 &lt;p&gt;To map a &lt;em&gt;Component&lt;/em&gt; to &lt;em&gt;Endpoints&lt;/em&gt;, assign one or more &lt;em&gt;Component&lt;/em&gt; Types to each &lt;em&gt;Endpoint&lt;/em&gt;. Then assign a single Type attribute to that &lt;em&gt;Component&lt;/em&gt;. When an &lt;em&gt;Application&lt;/em&gt; is deployed, each &lt;em&gt;Component&lt;/em&gt; within the &lt;em&gt;Application&lt;/em&gt; will be deployed to each &lt;em&gt;Endpoint&lt;/em&gt; if the &lt;em&gt;Component&amp;rsquo;s Type&lt;/em&gt; attribute matches one of the &lt;em&gt;Endpoint&amp;rsquo;s&lt;/em&gt; Type attributes. DeployHub ships with standard &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Endpoint&lt;/em&gt; Types and allows you to define custom Type attributes.&lt;/p&gt;
@@ -2811,7 +2811,7 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;_notifier_-objects&#34;&gt;&lt;em&gt;Notifier&lt;/em&gt; Objects&lt;/h2&gt;
-&lt;p&gt;A &lt;a href=&#34;/userguide/customizations/2-define-notifiers/&#34;&gt;&lt;em&gt;Notifier&lt;/em&gt;&lt;/a&gt; is sent after a successful or failed deployment attempt. If these features are activated, they are also sent when deployed files have been changed, a Request Task has been used, or when an &lt;em&gt;Endpoint&lt;/em&gt; is down,  DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose.&lt;/p&gt;
+&lt;p&gt;A &lt;a href=&#34;/userguide/advanced-features/deployments/2-define-notifiers/&#34;&gt;&lt;em&gt;Notifier&lt;/em&gt;&lt;/a&gt; is sent after a successful or failed deployment attempt. If these features are activated, they are also sent when deployed files have been changed, a Request Task has been used, or when an &lt;em&gt;Endpoint&lt;/em&gt; is down,  DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose.&lt;/p&gt;
 &lt;h2 id=&#34;_user_-object&#34;&gt;&lt;em&gt;User&lt;/em&gt; Object&lt;/h2&gt;
 &lt;p&gt;The &lt;em&gt;User&lt;/em&gt; Object represents a User in DeployHub. It has the following properties:&lt;/p&gt;
 &lt;table&gt;
@@ -2954,10 +2954,10 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
     
     <item>
       <title>Userguide: Working with Objects</title>
-      <link>/userguide/dmscript/dmscript-workingwithobjects/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-workingwithobjects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-workingwithobjects/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-workingwithobjects/</guid>
       <description>
         
         
@@ -4338,10 +4338,10 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
     
     <item>
       <title>Userguide: Abort</title>
-      <link>/userguide/dmscript/dmscript-abort/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-abort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-abort/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-abort/</guid>
       <description>
         
         
@@ -4566,15 +4566,15 @@ If you are using SSH Private keys, you will find these files in your Home direct
 &lt;p&gt;&lt;a href=&#34;https://console.deployhub.com/dmadminweb/Home&#34;&gt;https://console.deployhub.com/dmadminweb/Home&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Login using the UserID and Password you used when you signed up for DeployHub.&lt;/p&gt;
 &lt;h2 id=&#34;the-online-store-company---hipster-store-tutorial&#34;&gt;The Online Store Company - Hipster Store Tutorial&lt;/h2&gt;
-&lt;p&gt;This &lt;em&gt;Hipster Store&lt;/em&gt; tutorial walks you through the basic concepts and &lt;a href=&#34;/userguide/concepts/1-deployhub-basic-concepts/&#34;&gt;Objects&lt;/a&gt; behind DeployHub. It also allows you to run a deployment in our hosted Kubernetes cluster (Google.) In DeployHub terminology, the Hipster Store is both an &lt;em&gt;Application&lt;/em&gt; and a &lt;em&gt;Subdomain&lt;/em&gt;. The Hipster Store belongs to a higher level &lt;em&gt;Domain&lt;/em&gt; called the &amp;ldquo;Online Store Company&amp;rdquo;.  We will first review and deploy an &lt;em&gt;Application&lt;/em&gt; and then we will review the &lt;em&gt;Application&amp;rsquo;s&lt;/em&gt; &lt;em&gt;Components&lt;/em&gt; and how they are organized under &lt;em&gt;Domains&lt;/em&gt;. We will review the &amp;ldquo;Online Store Company&amp;rdquo; &lt;em&gt;Domain&lt;/em&gt; structure, and show how the Objects are organized using a &lt;em&gt;Domain&lt;/em&gt; design.&lt;/p&gt;
+&lt;p&gt;This &lt;em&gt;Hipster Store&lt;/em&gt; tutorial walks you through the basic concepts and &lt;a href=&#34;/userguide/1-deployhub-basic-concepts/&#34;&gt;Objects&lt;/a&gt; behind DeployHub. It also allows you to run a deployment in our hosted Kubernetes cluster (Google.) In DeployHub terminology, the Hipster Store is both an &lt;em&gt;Application&lt;/em&gt; and a &lt;em&gt;Subdomain&lt;/em&gt;. The Hipster Store belongs to a higher level &lt;em&gt;Domain&lt;/em&gt; called the &amp;ldquo;Online Store Company&amp;rdquo;.  We will first review and deploy an &lt;em&gt;Application&lt;/em&gt; and then we will review the &lt;em&gt;Application&amp;rsquo;s&lt;/em&gt; &lt;em&gt;Components&lt;/em&gt; and how they are organized under &lt;em&gt;Domains&lt;/em&gt;. We will review the &amp;ldquo;Online Store Company&amp;rdquo; &lt;em&gt;Domain&lt;/em&gt; structure, and show how the Objects are organized using a &lt;em&gt;Domain&lt;/em&gt; design.&lt;/p&gt;
 &lt;h2 id=&#34;learn-about-applications&#34;&gt;Learn About Applications&lt;/h2&gt;
 &lt;p&gt;An &lt;em&gt;Application&lt;/em&gt; is a collection of microservices or &lt;em&gt;Components&lt;/em&gt; that make up a complete software solution.  In monolithic, we compile/link an &lt;em&gt;Application&lt;/em&gt;, but this goes away in microservices.  DeployHub puts the &lt;em&gt;Application&lt;/em&gt; back together providing a &amp;ldquo;logical view&amp;rdquo; of the &lt;em&gt;Application&lt;/em&gt; including the &lt;em&gt;Components&lt;/em&gt; that it depends upon.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Applications&lt;/em&gt; are a collection of &lt;em&gt;Components&lt;/em&gt;.  &lt;em&gt;Components&lt;/em&gt; are deployed to &lt;em&gt;Environments&lt;/em&gt;. &lt;em&gt;Environments&lt;/em&gt; are a collection of &lt;em&gt;Endpoints&lt;/em&gt;.  For more on each of these Objects see:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;/userguide/packaging-applications/&#34;&gt;Packaging &lt;em&gt;Applications&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/userguide/publishing-components/&#34;&gt;Publishing &lt;em&gt;Components&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-environments/&#34;&gt;Build Your &lt;em&gt;Environments&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;Define Your &lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/2-define-environments/&#34;&gt;Build Your &lt;em&gt;Environments&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/userguide/2-define-endpoints/&#34;&gt;Define Your &lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;step-1---deploy-the-hipster-store-application&#34;&gt;Step 1 - Deploy the Hipster Store Application&lt;/h3&gt;
 &lt;p&gt;To get started, &lt;a href=&#34;https://www.deployhub.com/free-saas-software-supply-chain-security-tool/&#34;&gt;sign up for DeployHub&lt;/a&gt;. Once you login, you will have the opportunity to review the Hipster Store &lt;em&gt;Application Base Version&lt;/em&gt;, &lt;em&gt;Component Versions&lt;/em&gt; and the Hipster Store &lt;em&gt;Environment&lt;/em&gt;.  These are basic concepts important to understand. All security and DevOps attributes that DeployHub tracks are managed based on &lt;em&gt;Component Versions&lt;/em&gt;, &lt;em&gt;Application Versions&lt;/em&gt;, and &lt;em&gt;Environments&lt;/em&gt;.&lt;/p&gt;
@@ -4659,10 +4659,10 @@ If you are using SSH Private keys, you will find these files in your Home direct
     
     <item>
       <title>Userguide: Append</title>
-      <link>/userguide/dmscript/dmscript-append/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-append/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-append/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-append/</guid>
       <description>
         
         
@@ -4821,7 +4821,7 @@ If you are using SSH Private keys, you will find these files in your Home direct
         
         
         &lt;h2 id=&#34;application-base-versions-and-versions&#34;&gt;Application Base Versions and Versions&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;Applications&lt;/em&gt; are main &lt;a href=&#34;/userguide/concepts/1-deployhub-basic-concepts/#application-object&#34;&gt;Objects&lt;/a&gt; in DeployHub. They are a collection of &lt;em&gt;Components&lt;/em&gt; that can be deployed as a single software solution. You define an &lt;em&gt;Application&lt;/em&gt; by associating the &lt;em&gt;Components&lt;/em&gt; it will consume. The first time you define an &lt;em&gt;Application&lt;/em&gt;, it is referred to as the &lt;em&gt;Application Base Version.&lt;/em&gt; When you change the &lt;em&gt;Application Base Version&lt;/em&gt;, you create a new &lt;em&gt;Application Version&lt;/em&gt;. &lt;em&gt;Applications&lt;/em&gt; are assigned and deployed to &lt;em&gt;Environments&lt;/em&gt;. &lt;em&gt;Applications&lt;/em&gt; are associated to a &lt;em&gt;Domain&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Applications&lt;/em&gt; are main &lt;a href=&#34;/userguide/1-deployhub-basic-concepts/#application-object&#34;&gt;Objects&lt;/a&gt; in DeployHub. They are a collection of &lt;em&gt;Components&lt;/em&gt; that can be deployed as a single software solution. You define an &lt;em&gt;Application&lt;/em&gt; by associating the &lt;em&gt;Components&lt;/em&gt; it will consume. The first time you define an &lt;em&gt;Application&lt;/em&gt;, it is referred to as the &lt;em&gt;Application Base Version.&lt;/em&gt; When you change the &lt;em&gt;Application Base Version&lt;/em&gt;, you create a new &lt;em&gt;Application Version&lt;/em&gt;. &lt;em&gt;Applications&lt;/em&gt; are assigned and deployed to &lt;em&gt;Environments&lt;/em&gt;. &lt;em&gt;Applications&lt;/em&gt; are associated to a &lt;em&gt;Domain&lt;/em&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Application Base Version&lt;/strong&gt; : Defines the software product in terms of &lt;em&gt;Components&lt;/em&gt;, &lt;em&gt;Attributes,&lt;/em&gt; and assigned &lt;em&gt;Environments&lt;/em&gt;.&lt;/p&gt;
@@ -5210,7 +5210,7 @@ If you are using SSH Private keys, you will find these files in your Home direct
 &lt;p&gt;At this point the &lt;em&gt;Action&lt;/em&gt; is ready to be used by anyone with access (based on &lt;em&gt;Domain&lt;/em&gt; and &lt;em&gt;Group&lt;/em&gt; options).
 Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Component&lt;/em&gt; variables are defined. This is performed at the &lt;em&gt;Component&lt;/em&gt; level.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 4 - Assign the GitCheckoutAction to your &lt;em&gt;Component&lt;/em&gt; to be deployed&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;For each &lt;em&gt;Component&lt;/em&gt; you will need to define the variable values for $GIT_URL, $GIT_COMMIT and $GIT_DIR that the GitCheckoutAction will use at the_Component_ level. The values will be passed to the GitCheckoutAction at deploy time. See &lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Defining &lt;em&gt;Components&lt;/em&gt;&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;For each &lt;em&gt;Component&lt;/em&gt; you will need to define the variable values for $GIT_URL, $GIT_COMMIT and $GIT_DIR that the GitCheckoutAction will use at the_Component_ level. The values will be passed to the GitCheckoutAction at deploy time. See &lt;a href=&#34;/userguide/userguide/2-define-components/&#34;&gt;Defining &lt;em&gt;Components&lt;/em&gt;&lt;/a&gt; for more information.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 5 - Set Your &lt;em&gt;Component&lt;/em&gt; Attributes_&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The following variables must be added to the Attributes Section for all  &lt;em&gt;Components&lt;/em&gt; using the GitCheckoutAction &lt;em&gt;Pre Action&lt;/em&gt;.  The Attributes section can be found on the &lt;em&gt;Component&lt;/em&gt; Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:&lt;/p&gt;
 &lt;table&gt;
@@ -5406,10 +5406,10 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
     
     <item>
       <title>Userguide: Defining Your Application Baseline</title>
-      <link>/userguide/packaging-applications/2-defining-applications/</link>
+      <link>/userguide/2-defining-applications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/packaging-applications/2-defining-applications/</guid>
+      <guid>/userguide/2-defining-applications/</guid>
       <description>
         
         
@@ -5674,7 +5674,7 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
 &lt;h3 id=&#34;deployhub-pro-change-requests&#34;&gt;DeployHub Pro Change Requests&lt;/h3&gt;
 &lt;p&gt;The integration of Change Request systems are supported in DeployHub through the use of a &lt;em&gt;Data Source&lt;/em&gt;. To integrate Change Request you must first define a Change Request &lt;em&gt;Data Source&lt;/em&gt; from the &lt;em&gt;Data Source&lt;/em&gt; Dashboard. Once created, you will be able to select the &lt;em&gt;Data Source&lt;/em&gt; from the General Details &amp;ldquo;Change Request &lt;em&gt;Data Source&lt;/em&gt;&amp;rdquo; field of your &lt;em&gt;Application&lt;/em&gt; and/or &lt;em&gt;Component&lt;/em&gt;. When you have a Change Request &lt;em&gt;Data Source&lt;/em&gt; defined, you can add issue tickets using the Change Request section of the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; Dashboards.&lt;/p&gt;
 &lt;h4 id=&#34;creating-change-request-_data-sources_&#34;&gt;Creating Change Request &lt;em&gt;Data Sources&lt;/em&gt;&lt;/h4&gt;
-&lt;p&gt;Jira, Bugzilla and GitHub are represented in DeployHub as &lt;em&gt;Data Source&lt;/em&gt; Types. Because a &lt;em&gt;Data Source&lt;/em&gt; is associated to a specific &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt; you will need to map a unique &lt;em&gt;Data Source&lt;/em&gt; for each system&amp;rsquo;s repository (Organization, Repository, Product, Project Key) where you are tracking the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;.  In a traditional release process, a &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Application&amp;rsquo;s&lt;/em&gt; repository may be the same.  Because microservices are often managed in their own repositories, you may need to define a &lt;em&gt;Data Source&lt;/em&gt; for each of your microservice &lt;em&gt;Components&lt;/em&gt;. For more on creating a Change Request &lt;em&gt;Data Source&lt;/em&gt; see &lt;a href=&#34;/userguide/profeatures/2-data-sources/&#34;&gt;Managing Data Sources&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Jira, Bugzilla and GitHub are represented in DeployHub as &lt;em&gt;Data Source&lt;/em&gt; Types. Because a &lt;em&gt;Data Source&lt;/em&gt; is associated to a specific &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt; you will need to map a unique &lt;em&gt;Data Source&lt;/em&gt; for each system&amp;rsquo;s repository (Organization, Repository, Product, Project Key) where you are tracking the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;.  In a traditional release process, a &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Application&amp;rsquo;s&lt;/em&gt; repository may be the same.  Because microservices are often managed in their own repositories, you may need to define a &lt;em&gt;Data Source&lt;/em&gt; for each of your microservice &lt;em&gt;Components&lt;/em&gt;. For more on creating a Change Request &lt;em&gt;Data Source&lt;/em&gt; see &lt;a href=&#34;/userguide/advanced-features/deployments/2-data-sources/&#34;&gt;Managing Data Sources&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Change Request that are tracked at the &lt;em&gt;Component&lt;/em&gt; level are rolled up to the &lt;em&gt;Application&lt;/em&gt; level.  All change request associated to &lt;em&gt;Components&lt;/em&gt; and &lt;em&gt;Applications&lt;/em&gt; are rolled up to the &lt;em&gt;Release&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Once connected, the Change Request Section for the &lt;em&gt;Component&lt;/em&gt; and the &lt;em&gt;Application&lt;/em&gt; shows all Change Request manually added. If a &lt;em&gt;Data Source&lt;/em&gt; has not been assigned, you will see a message &amp;ldquo;No Change Request Data Source has been setup.&amp;rdquo;  Once setup, you can use the &amp;lsquo;+Add&amp;rsquo; option to associate specific change request to the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Application&lt;/em&gt;. Selecting +Add will create a new row in the table with a drop down list box.  This drop down will contain all change request retrieved by the &lt;em&gt;Data Source&lt;/em&gt;. Select the Change Request and use the Save option to commit the new row to the table.  Use the Edit option to switch a Change Request, or Delete to remove a Change Request.&lt;/p&gt;
 &lt;h3 id=&#34;_application_-dependency-map&#34;&gt;&lt;em&gt;Application&lt;/em&gt; Dependency Map&lt;/h3&gt;
@@ -5691,14 +5691,14 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
     
     <item>
       <title>Userguide: Intro to APIs and Logging In</title>
-      <link>/userguide/restapi/intro-and-logging-in/</link>
+      <link>/userguide/advanced-features/restapi/intro-and-logging-in/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/intro-and-logging-in/</guid>
+      <guid>/userguide/advanced-features/restapi/intro-and-logging-in/</guid>
       <description>
         
         
-        &lt;p&gt;APIs can be used to extract and update DeployHub &lt;a href=&#34;/userguide/concepts/1-deployhub-basic-concepts/&#34;&gt;Objects&lt;/a&gt;.  The most common use for APIs is to integrate DeployHub into your continuous delivery engine for a continuous configuration management and deploy process.  APIs are generally used for executing deployments, but can also be used to automatically update &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Application&lt;/em&gt; versions.&lt;/p&gt;
+        &lt;p&gt;APIs can be used to extract and update DeployHub &lt;a href=&#34;/userguide/1-deployhub-basic-concepts/&#34;&gt;Objects&lt;/a&gt;.  The most common use for APIs is to integrate DeployHub into your continuous delivery engine for a continuous configuration management and deploy process.  APIs are generally used for executing deployments, but can also be used to automatically update &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Application&lt;/em&gt; versions.&lt;/p&gt;
 &lt;h2 id=&#34;object-accessibility&#34;&gt;Object Accessibility&lt;/h2&gt;
 &lt;p&gt;APIs rely &lt;em&gt;User and Group&lt;/em&gt; access to determine if the call is allowed. The Objects that are accessible via the API are restricted based on the logged-in user. Only Objects that are contained within the user&amp;rsquo;s home &lt;em&gt;Domain&lt;/em&gt; and any &lt;em&gt;Subdomains&lt;/em&gt; are accessible via the API.&lt;/p&gt;
 &lt;p&gt;If a requested object does not have &amp;ldquo;read&amp;rdquo; permission then it cannot be accessed via the API. Similarly, attempting to modify Objects which do not have the appropriate &amp;ldquo;change&amp;rdquo; permission is also prohibited. In such cases, the &amp;ldquo;success&amp;rdquo; flag returned is &amp;ldquo;false&amp;rdquo; and the error is &amp;ldquo;Permission Denied&amp;rdquo;.&lt;/p&gt;
@@ -5779,7 +5779,6 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
 &lt;tr&gt;
 &lt;td&gt;200&lt;/td&gt;
 &lt;td&gt;The result will include a cookie. Include this cookie for subsequent calls to APIs.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;/userguide/restapi/models/#success&#34;&gt;success&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -5789,10 +5788,10 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
     
     <item>
       <title>Userguide: Appendstd</title>
-      <link>/userguide/dmscript/dmscript-appendstd/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-appendstd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-appendstd/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-appendstd/</guid>
       <description>
         
         
@@ -5839,7 +5838,7 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
         
         
         &lt;h2 id=&#34;the-deployhub-deployment-engine-and-incremental-processing&#34;&gt;The DeployHub Deployment Engine and Incremental Processing&lt;/h2&gt;
-&lt;p&gt;DeployHub uses a deployment engine to perform the push of deployments across your &lt;a href=&#34;/userguide/first-steps/2-define-environments/&#34;&gt;&lt;em&gt;Environments&lt;/em&gt;&lt;/a&gt;.  For SaaS users, your reverse proxy is your deployment engine.  For on premise installations, your deployment engine is installed as part of your DeployHub installation. The deployment engine is called when a deployment is initiated. The job of the deployment engine is to do the decision making about what &lt;a href=&#34;/userguide/publishing-components/intro-to-components/&#34;&gt;&lt;em&gt;Components&lt;/em&gt;&lt;/a&gt; need to be released, and what processing logic is required.  Deployment processing is based on the deployment configuration of the &lt;em&gt;Component&lt;/em&gt;. DeployHub deploys &lt;em&gt;Applications&lt;/em&gt; which are a collection of &lt;em&gt;Components&lt;/em&gt;, on an increment basis. If a &lt;em&gt;Component&lt;/em&gt; is already running in an &lt;em&gt;Environment&lt;/em&gt;, it is not re-released. This is how DeployHub independently deploys microservices, and handles roll forward or rollback logic.  DeployHub uses a backend version control engine to achieve incremental deployments, forward or backward.&lt;/p&gt;
+&lt;p&gt;DeployHub uses a deployment engine to perform the push of deployments across your &lt;a href=&#34;/userguide/2-define-environments/&#34;&gt;&lt;em&gt;Environments&lt;/em&gt;&lt;/a&gt;.  For SaaS users, your reverse proxy is your deployment engine.  For on premise installations, your deployment engine is installed as part of your DeployHub installation. The deployment engine is called when a deployment is initiated. The job of the deployment engine is to do the decision making about what &lt;a href=&#34;/userguide/publishing-components/intro-to-components/&#34;&gt;&lt;em&gt;Components&lt;/em&gt;&lt;/a&gt; need to be released, and what processing logic is required.  Deployment processing is based on the deployment configuration of the &lt;em&gt;Component&lt;/em&gt;. DeployHub deploys &lt;em&gt;Applications&lt;/em&gt; which are a collection of &lt;em&gt;Components&lt;/em&gt;, on an increment basis. If a &lt;em&gt;Component&lt;/em&gt; is already running in an &lt;em&gt;Environment&lt;/em&gt;, it is not re-released. This is how DeployHub independently deploys microservices, and handles roll forward or rollback logic.  DeployHub uses a backend version control engine to achieve incremental deployments, forward or backward.&lt;/p&gt;
 &lt;h3 id=&#34;roll-forward-or-rollback&#34;&gt;Roll Forward or Rollback&lt;/h3&gt;
 &lt;p&gt;Whenever a deployment has a problem, DeployHub can provide a fast and safe repair with Roll Forward and Rollback of an &lt;em&gt;Application&lt;/em&gt; using &lt;em&gt;Components&lt;/em&gt;. Roll Forward or Rollback allows DeployHub to apply &lt;em&gt;Components&lt;/em&gt; to &lt;em&gt;Endpoints&lt;/em&gt; incrementally and in order. As DeployHub interrogates its versioning engine for each &lt;em&gt;Application Version&lt;/em&gt;, the associated &lt;em&gt;Components&lt;/em&gt; are advanced to a new version, or replaced with a previous version to handle the Roll Forward or Rollback conditions.&lt;/p&gt;
 &lt;h3 id=&#34;configuring-deployment-logic&#34;&gt;Configuring Deployment Logic&lt;/h3&gt;
@@ -5847,7 +5846,7 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
 &lt;p&gt;&lt;strong&gt;Executing Deployments with the Default &lt;em&gt;Actions&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;When you execute a deployment, DeployHub will call a default &lt;em&gt;Action&lt;/em&gt; to push the &lt;em&gt;Component&lt;/em&gt; from the source location to the target &lt;em&gt;Endpoint&lt;/em&gt;. You can customize the deployment process by writing your own &lt;em&gt;Actions&lt;/em&gt; that allow you to refine the way the deployment processing will occur. &lt;em&gt;Actions&lt;/em&gt; themselves contain &lt;a href=&#34;/userguide/customizations/2-define-your-functions-and-procedures/&#34;&gt;&lt;em&gt;Procedures&lt;/em&gt;, &lt;em&gt;Functions,&lt;/em&gt;&lt;/a&gt; and other &lt;em&gt;Actions&lt;/em&gt; which allow you to develop highly functioning and re-useable processes that can be shared across the &lt;em&gt;Domain&lt;/em&gt; to which they belong. For most users, no modifications to the default &lt;em&gt;Actions&lt;/em&gt; are required. For your microservice &lt;em&gt;Components&lt;/em&gt; you will use a &lt;em&gt;Custom Action&lt;/em&gt; that calls your Helm chart.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Executing Deployments with &lt;em&gt;Custom Actions&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Custom Actions&lt;/em&gt; allow you to execute existing one-off deployment scripts and can support an easy transition to using DeployHub. You can choose to bypass DeployHub&amp;rsquo;s default &lt;em&gt;Actions&lt;/em&gt; using a pre-defined our newly created &lt;a href=&#34;/userguide/customizations/2-define-your-actions/&#34;&gt;&lt;em&gt;Custom Action&lt;/em&gt;&lt;/a&gt;. This can be used to call other tools such as Helm, Ansible or a homegrown deploy script that does the heavy lifting of managing deployment logic. To use a &lt;em&gt;Custom Action&lt;/em&gt; you will &lt;a href=&#34;/userguide/publishing-components/2-define-components/#viewing-and-editing-_components_-with-the-dashboard&#34;&gt;define your &lt;em&gt;Component&lt;/em&gt;&lt;/a&gt; with the &lt;em&gt;Custom Action&lt;/em&gt; that will take over the normal deployment processing. When a &lt;em&gt;Custom Action&lt;/em&gt; is designated within an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt;, any default Pre or Post &lt;em&gt;Action&lt;/em&gt; is ignored and not executed during the deployment. If a &lt;em&gt;Custom Action&lt;/em&gt; is used, it can use one or more DeployHub &lt;em&gt;Procedures&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt;, and &lt;em&gt;Actions&lt;/em&gt;, in a predetermined order.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Custom Actions&lt;/em&gt; allow you to execute existing one-off deployment scripts and can support an easy transition to using DeployHub. You can choose to bypass DeployHub&amp;rsquo;s default &lt;em&gt;Actions&lt;/em&gt; using a pre-defined our newly created &lt;a href=&#34;/userguide/customizations/2-define-your-actions/&#34;&gt;&lt;em&gt;Custom Action&lt;/em&gt;&lt;/a&gt;. This can be used to call other tools such as Helm, Ansible or a homegrown deploy script that does the heavy lifting of managing deployment logic. To use a &lt;em&gt;Custom Action&lt;/em&gt; you will &lt;a href=&#34;/userguide/userguide/2-define-components/#viewing-and-editing-_components_-with-the-dashboard&#34;&gt;define your &lt;em&gt;Component&lt;/em&gt;&lt;/a&gt; with the &lt;em&gt;Custom Action&lt;/em&gt; that will take over the normal deployment processing. When a &lt;em&gt;Custom Action&lt;/em&gt; is designated within an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt;, any default Pre or Post &lt;em&gt;Action&lt;/em&gt; is ignored and not executed during the deployment. If a &lt;em&gt;Custom Action&lt;/em&gt; is used, it can use one or more DeployHub &lt;em&gt;Procedures&lt;/em&gt;, &lt;em&gt;Functions&lt;/em&gt;, and &lt;em&gt;Actions&lt;/em&gt;, in a predetermined order.&lt;/p&gt;
 &lt;h3 id=&#34;distributed-deployments-for-traditional-data-centers&#34;&gt;Distributed Deployments for Traditional Data Centers&lt;/h3&gt;
 &lt;p&gt;For large distributed traditional data centers you can install multiple deployment engines and assign them to specific Project &lt;em&gt;Domains&lt;/em&gt; to handle large &amp;lsquo;fan out&amp;rsquo; deployment processing. Multiple deployment engines can be used to distribute the deployment processing for large data centers with thousands of physical &lt;em&gt;Endpoints&lt;/em&gt;, but is not required for a modern Kubernetes architecture. You can change the deployment engine at the &lt;a href=&#34;/userguide/first-steps/2-defining-domains/#_domain_-details&#34;&gt;&lt;em&gt;Domain&lt;/em&gt; Details section&lt;/a&gt; using the &lt;em&gt;Engine Hostname&lt;/em&gt; Detail field. This field tells DeployHub which engine to use for deployments in that &lt;em&gt;Domain&lt;/em&gt;. If you need to implement multiple deployment engines for large distributed deployments, contact our &lt;a href=&#34;/userguide/installation-and-support/0-contactsupport/&#34;&gt;Support Team&lt;/a&gt;. They can provide you a link to download an installer that includes only the deployment engine and not the full DeployHub install. You would use this installer to build out separate deployment engines that are then defined to the &lt;em&gt;Domain&lt;/em&gt; allowing each &lt;em&gt;Application&lt;/em&gt; to have its own engine.&lt;/p&gt;
 &lt;h2 id=&#34;executing-deployments&#34;&gt;Executing Deployments&lt;/h2&gt;
@@ -5859,9 +5858,9 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
 &lt;li&gt;Automated from Continuous Delivery&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;executing-deployments-on-demand&#34;&gt;Executing Deployments On-demand&lt;/h3&gt;
-&lt;p&gt;An on-demand deployment can be initiated for an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; using a &lt;em&gt;Deploy Task&lt;/em&gt;. Once the &lt;em&gt;Deploy Task&lt;/em&gt; has been defined in the &lt;em&gt;Domain&lt;/em&gt;, it will be available from the &lt;a href=&#34;/userguide/packaging-applications/2-defining-applications/#the-_application_-list-view-for-adding-or-deleting&#34;&gt;&lt;em&gt;Application&lt;/em&gt; List View&lt;/a&gt;.  By selecting the &lt;em&gt;Application Version&lt;/em&gt; and going to the Task drop down, you can push a deployment on-demand.&lt;/p&gt;
+&lt;p&gt;An on-demand deployment can be initiated for an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Release&lt;/em&gt; using a &lt;em&gt;Deploy Task&lt;/em&gt;. Once the &lt;em&gt;Deploy Task&lt;/em&gt; has been defined in the &lt;em&gt;Domain&lt;/em&gt;, it will be available from the &lt;a href=&#34;/userguide/2-defining-applications/#the-_application_-list-view-for-adding-or-deleting&#34;&gt;&lt;em&gt;Application&lt;/em&gt; List View&lt;/a&gt;.  By selecting the &lt;em&gt;Application Version&lt;/em&gt; and going to the Task drop down, you can push a deployment on-demand.&lt;/p&gt;
 &lt;h3 id=&#34;roll-forward-incremental-deployments&#34;&gt;Roll Forward Incremental Deployments&lt;/h3&gt;
-&lt;p&gt;You execute a roll forward or rollback deployment on-demand. To roll forward or rollback, go to the  &lt;a href=&#34;/userguide/packaging-applications/2-defining-applications/#the-_application_-list-view-for-adding-or-deleting&#34;&gt;&lt;em&gt;Application&lt;/em&gt; List View&lt;/a&gt;, select the new or older &lt;em&gt;Application Version&lt;/em&gt; you wish to deploy and use the &lt;em&gt;Deploy Task&lt;/em&gt; available from the Task Tab. This will push the selected version to the cluster incrementally.&lt;/p&gt;
+&lt;p&gt;You execute a roll forward or rollback deployment on-demand. To roll forward or rollback, go to the  &lt;a href=&#34;/userguide/2-defining-applications/#the-_application_-list-view-for-adding-or-deleting&#34;&gt;&lt;em&gt;Application&lt;/em&gt; List View&lt;/a&gt;, select the new or older &lt;em&gt;Application Version&lt;/em&gt; you wish to deploy and use the &lt;em&gt;Deploy Task&lt;/em&gt; available from the Task Tab. This will push the selected version to the cluster incrementally.&lt;/p&gt;
 &lt;h2 id=&#34;deployhub-and-your-continuous-delivery-cd-pipeline&#34;&gt;DeployHub and Your Continuous Delivery (CD) Pipeline&lt;/h2&gt;
 &lt;p&gt;DeployHub is added to your CD pipeline to perform continuous configuration management of your &lt;em&gt;Applications&lt;/em&gt; and &lt;em&gt;Components&lt;/em&gt;, and to push them to runtime &lt;em&gt;Environments&lt;/em&gt; across your defined Life Cycle.&lt;/p&gt;
 &lt;p&gt;DeployHub uses a built-in deployment pipeline for tracking an &lt;em&gt;Application&amp;rsquo;s&lt;/em&gt; journey across a software delivery Life Cycle, i.e. Dev, Test, Production. However, it is important to understand that a DeployHub Life Cycle &lt;em&gt;Subdomain&lt;/em&gt; is not intended to replace your CD orchestration solution. DeployHub integrates with your CD pipeline becoming a part of your overall ecosystem for versioning, tracking and deploying software to clusters, cloud environments and physical data centers.&lt;/p&gt;
@@ -6176,10 +6175,10 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
     
     <item>
       <title>Userguide: Define Your Endpoints</title>
-      <link>/userguide/first-steps/2-define-endpoints/</link>
+      <link>/userguide/2-define-endpoints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/first-steps/2-define-endpoints/</guid>
+      <guid>/userguide/2-define-endpoints/</guid>
       <description>
         
         
@@ -6273,7 +6272,7 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Base Directory&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;If you would like to force all deployments to occur in a specific high level directory, enter it into this field. The &lt;em&gt;Endpoint&lt;/em&gt; Base Directory will override the &lt;em&gt;Component&lt;/em&gt; Base Directory. For more information see &lt;a href=&#34;/userguide/publishing-components/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
+&lt;td&gt;If you would like to force all deployments to occur in a specific high level directory, enter it into this field. The &lt;em&gt;Endpoint&lt;/em&gt; Base Directory will override the &lt;em&gt;Component&lt;/em&gt; Base Directory. For more information see &lt;a href=&#34;/userguide/userguide/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Credential&lt;/strong&gt;&lt;/td&gt;
@@ -6367,16 +6366,16 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
     
     <item>
       <title>Userguide: Build Your Environments</title>
-      <link>/userguide/first-steps/2-define-environments/</link>
+      <link>/userguide/2-define-environments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/first-steps/2-define-environments/</guid>
+      <guid>/userguide/2-define-environments/</guid>
       <description>
         
         
         &lt;h2 id=&#34;intro-to-_environments_&#34;&gt;Intro to &lt;em&gt;Environments&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Environments&lt;/em&gt; represent where you execute your &lt;em&gt;Application&lt;/em&gt; and &lt;em&gt;Components&lt;/em&gt; such as a Kubernetes Cluster for Dev, Test or Production. An &lt;em&gt;Environment&lt;/em&gt; could be a virtual cloud or physical datacenter.  &lt;em&gt;Applications&lt;/em&gt; run in many &lt;em&gt;Environments&lt;/em&gt; to support your Pipeline states.&lt;/p&gt;
-&lt;p&gt;Note: First define &lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;&lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt; to be assigned before you can define an &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Note: First define &lt;a href=&#34;/userguide/2-define-endpoints/&#34;&gt;&lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt; to be assigned before you can define an &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;_environments_-and-_domains_&#34;&gt;&lt;em&gt;Environments&lt;/em&gt; and &lt;em&gt;Domains&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Environments&lt;/em&gt; are associated to a &lt;a href=&#34;/userguide/first-steps/2-defining-domains/&#34;&gt;&lt;em&gt;Domain&lt;/em&gt;&lt;/a&gt;. You can assign &lt;em&gt;Environments&lt;/em&gt; to any level of &lt;em&gt;Domain&lt;/em&gt; including the &lt;em&gt;Global Domain&lt;/em&gt;. However, &lt;em&gt;Environments&lt;/em&gt; are most commonly associated to a &lt;em&gt;Project Domain&lt;/em&gt; used for &lt;em&gt;Applications&lt;/em&gt;. A &lt;em&gt;Project Domain&lt;/em&gt; is used to manage an &lt;em&gt;Application&lt;/em&gt; and may be defined to include &lt;em&gt;Life Cycle Subdomains&lt;/em&gt; for managing your &lt;em&gt;Application&amp;rsquo;s&lt;/em&gt; progression from development through release.&lt;/p&gt;
 &lt;h2 id=&#34;use-the-_environment_-list-view-to-add-and-delete&#34;&gt;Use the &lt;em&gt;Environment&lt;/em&gt; List View to Add and Delete&lt;/h2&gt;
@@ -6558,12 +6557,12 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
 &lt;/table&gt;
 &lt;p&gt;Key Value Pairs can be given any Name and a Value. Use +Add to add Key Value Pairs to the table. Use Save to confirm.  Use the checkbox to Delete or Edit a Key Value Pair.&lt;/p&gt;
 &lt;h3 id=&#34;assigned-_endpoints_&#34;&gt;Assigned &lt;em&gt;Endpoints&lt;/em&gt;&lt;/h3&gt;
-&lt;p&gt;Note: You will need to have pre-defined your &lt;em&gt;Endpoints&lt;/em&gt;.  See the &lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;Define Your Endpoints&lt;/a&gt; chapter for more information.&lt;/p&gt;
+&lt;p&gt;Note: You will need to have pre-defined your &lt;em&gt;Endpoints&lt;/em&gt;.  See the &lt;a href=&#34;/userguide/2-define-endpoints/&#34;&gt;Define Your Endpoints&lt;/a&gt; chapter for more information.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Environments&lt;/em&gt; are a collection of &lt;em&gt;Endpoints&lt;/em&gt;. Use this section to assign the &lt;em&gt;Endpoints&lt;/em&gt; that will make up this &lt;em&gt;Environment&lt;/em&gt;. Use +Add to create a new row in the &lt;em&gt;Endpoints&lt;/em&gt; table. Use Save to commit the row.  Select the row and use Edit or Delete to update or remove an &lt;em&gt;Endpoint&lt;/em&gt;. When you add a new &lt;em&gt;Endpoint&lt;/em&gt; the  Hostname will be displayed. The Hostname is the actual network name or IP address.  It is assigned when the &lt;em&gt;Endpoint&lt;/em&gt; is defined, but is not a required field. If it is defined, it will be displayed in the row.&lt;/p&gt;
 &lt;h3 id=&#34;trends&#34;&gt;Trends&lt;/h3&gt;
 &lt;p&gt;This section shows the success/failure rate and time required for the last 10 deployments to this &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;assigned-_applications_&#34;&gt;Assigned &lt;em&gt;Applications&lt;/em&gt;&lt;/h3&gt;
-&lt;p&gt;View all the &lt;em&gt;Application Base Versions&lt;/em&gt; assigned to this &lt;em&gt;Environment&lt;/em&gt;. This is read only.  &lt;em&gt;Applications Base Versions&lt;/em&gt; are associated to &lt;em&gt;Environments&lt;/em&gt; when created using the &lt;a href=&#34;/userguide/packaging-applications/2-defining-applications/#viewing-and-editing-with-the-_application_-dashboard&#34;&gt;&lt;em&gt;Application&lt;/em&gt; Dashboard&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;View all the &lt;em&gt;Application Base Versions&lt;/em&gt; assigned to this &lt;em&gt;Environment&lt;/em&gt;. This is read only.  &lt;em&gt;Applications Base Versions&lt;/em&gt; are associated to &lt;em&gt;Environments&lt;/em&gt; when created using the &lt;a href=&#34;/userguide/2-defining-applications/#viewing-and-editing-with-the-_application_-dashboard&#34;&gt;&lt;em&gt;Application&lt;/em&gt; Dashboard&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;deployed-_components_-to-_environment_-map&#34;&gt;Deployed &lt;em&gt;Components&lt;/em&gt; to &lt;em&gt;Environment&lt;/em&gt; Map&lt;/h3&gt;
 &lt;p&gt;This map shows you all of the current &lt;em&gt;Component Versions&lt;/em&gt;, with &lt;em&gt;Application Versions&lt;/em&gt;, that have been deployed to this &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;environment-calendars-tab&#34;&gt;Environment Calendars Tab&lt;/h2&gt;
@@ -6575,10 +6574,10 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
     
     <item>
       <title>Userguide: Application APIs</title>
-      <link>/userguide/restapi/applications/</link>
+      <link>/userguide/advanced-features/restapi/applications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/applications/</guid>
+      <guid>/userguide/advanced-features/restapi/applications/</guid>
       <description>
         
         
@@ -7232,10 +7231,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Assert</title>
-      <link>/userguide/dmscript/dmscript-assert/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-assert/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-assert/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-assert/</guid>
       <description>
         
         
@@ -7329,10 +7328,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Attachment</title>
-      <link>/userguide/dmscript/dmscript-attachment/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-attachment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-attachment/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-attachment/</guid>
       <description>
         
         
@@ -7443,17 +7442,17 @@ In order for this to work through the permission model, there has to be an &lt;e
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Email Received:
-&lt;img src=&#34;/userguide/dmscript/Attachment.jpg&#34; alt=&#34;Sample Email&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;/userguide/advanced-features/dmscript/Attachment.jpg&#34; alt=&#34;Sample Email&#34;&gt;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Userguide: AVLoop</title>
-      <link>/userguide/dmscript/dmscript-avloop/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-avloop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-avloop/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-avloop/</guid>
       <description>
         
         
@@ -7637,10 +7636,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Component APIs</title>
-      <link>/userguide/restapi/components/</link>
+      <link>/userguide/advanced-features/restapi/components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/components/</guid>
+      <guid>/userguide/advanced-features/restapi/components/</guid>
       <description>
         
         
@@ -8380,10 +8379,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: base64decode</title>
-      <link>/userguide/dmscript/dmscript-base64decode/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-base64decode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-base64decode/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-base64decode/</guid>
       <description>
         
         
@@ -8474,10 +8473,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Credential APIs</title>
-      <link>/userguide/restapi/credentials/</link>
+      <link>/userguide/advanced-features/restapi/credentials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/credentials/</guid>
+      <guid>/userguide/advanced-features/restapi/credentials/</guid>
       <description>
         
         
@@ -8664,10 +8663,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: base64encode</title>
-      <link>/userguide/dmscript/dmscript-base64encode/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-base64encode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-base64encode/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-base64encode/</guid>
       <description>
         
         
@@ -8731,10 +8730,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Deployment APIs</title>
-      <link>/userguide/restapi/deployment/</link>
+      <link>/userguide/advanced-features/restapi/deployment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/deployment/</guid>
+      <guid>/userguide/advanced-features/restapi/deployment/</guid>
       <description>
         
         
@@ -8830,10 +8829,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Managing Data Sources</title>
-      <link>/userguide/profeatures/2-data-sources/</link>
+      <link>/userguide/advanced-features/deployments/2-data-sources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/profeatures/2-data-sources/</guid>
+      <guid>/userguide/advanced-features/deployments/2-data-sources/</guid>
       <description>
         
         
@@ -9207,10 +9206,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: basename</title>
-      <link>/userguide/dmscript/dmscript-basename/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-basename/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-basename/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-basename/</guid>
       <description>
         
         
@@ -9253,10 +9252,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Deployment Log APIs</title>
-      <link>/userguide/restapi/deployment-log/</link>
+      <link>/userguide/advanced-features/restapi/deployment-log/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/deployment-log/</guid>
+      <guid>/userguide/advanced-features/restapi/deployment-log/</guid>
       <description>
         
         
@@ -9401,10 +9400,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Break/Continue</title>
-      <link>/userguide/dmscript/dmscript-breakcontinue/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-breakcontinue/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-breakcontinue/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-breakcontinue/</guid>
       <description>
         
         
@@ -9469,10 +9468,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Endpoint APIs</title>
-      <link>/userguide/restapi/endpoints/</link>
+      <link>/userguide/advanced-features/restapi/endpoints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/endpoints/</guid>
+      <guid>/userguide/advanced-features/restapi/endpoints/</guid>
       <description>
         
         
@@ -9995,10 +9994,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Change Request</title>
-      <link>/userguide/dmscript/dmscript-changerequestobject/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-changerequestobject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-changerequestobject/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-changerequestobject/</guid>
       <description>
         
         
@@ -10041,10 +10040,10 @@ In order for this to work through the permission model, there has to be an &lt;e
     
     <item>
       <title>Userguide: Environment APIs</title>
-      <link>/userguide/restapi/environments/</link>
+      <link>/userguide/advanced-features/restapi/environments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/environments/</guid>
+      <guid>/userguide/advanced-features/restapi/environments/</guid>
       <description>
         
         
@@ -10263,10 +10262,10 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
     
     <item>
       <title>Userguide: Check Out</title>
-      <link>/userguide/dmscript/dmscript-checkout/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-checkout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-checkout/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-checkout/</guid>
       <description>
         
         
@@ -10334,10 +10333,10 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
     
     <item>
       <title>Userguide: Environment Calendar API</title>
-      <link>/userguide/restapi/calendar/</link>
+      <link>/userguide/advanced-features/restapi/calendar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/restapi/calendar/</guid>
+      <guid>/userguide/advanced-features/restapi/calendar/</guid>
       <description>
         
         
@@ -10660,10 +10659,10 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
     
     <item>
       <title>Userguide: CompLoop</title>
-      <link>/userguide/dmscript/dmscript-comploop/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-comploop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-comploop/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-comploop/</guid>
       <description>
         
         
@@ -10699,10 +10698,10 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
     
     <item>
       <title>Userguide: Using Notifiers for Messaging</title>
-      <link>/userguide/customizations/2-define-notifiers/</link>
+      <link>/userguide/advanced-features/deployments/2-define-notifiers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/customizations/2-define-notifiers/</guid>
+      <guid>/userguide/advanced-features/deployments/2-define-notifiers/</guid>
       <description>
         
         
@@ -10882,7 +10881,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;hipchat-details&#34;&gt;HipChat Details&lt;/h2&gt;
-&lt;p&gt;DeployHub allows you to send notifications using &lt;em&gt;Notifiers&lt;/em&gt; via HipChat Groups, Topics, or Room features. Notifications are defined to &lt;em&gt;Components&lt;/em&gt; and &lt;em&gt;Applications&lt;/em&gt; and inform the recipient(s) of the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Applications&lt;/em&gt; deployment&amp;rsquo;s success or failure. To define your &lt;em&gt;Notifier&lt;/em&gt; see &lt;a href=&#34;/userguide/customizations/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;DeployHub allows you to send notifications using &lt;em&gt;Notifiers&lt;/em&gt; via HipChat Groups, Topics, or Room features. Notifications are defined to &lt;em&gt;Components&lt;/em&gt; and &lt;em&gt;Applications&lt;/em&gt; and inform the recipient(s) of the &lt;em&gt;Component&lt;/em&gt; or &lt;em&gt;Applications&lt;/em&gt; deployment&amp;rsquo;s success or failure. To define your &lt;em&gt;Notifier&lt;/em&gt; see &lt;a href=&#34;/userguide/advanced-features/deployments/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10926,10 +10925,10 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Assign your HipChat &lt;em&gt;Notifier&lt;/em&gt; to an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; from the Details section of the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; Dashboard. For more information see:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Define Your &lt;em&gt;Component&lt;/em&gt;&lt;/a&gt;.
-&lt;a href=&#34;/userguide/packaging-applications/2-defining-applications/&#34;&gt;Defining Your &lt;em&gt;Application&lt;/em&gt; Baseline&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/userguide/userguide/2-define-components/&#34;&gt;Define Your &lt;em&gt;Component&lt;/em&gt;&lt;/a&gt;.
+&lt;a href=&#34;/userguide/2-defining-applications/&#34;&gt;Defining Your &lt;em&gt;Application&lt;/em&gt; Baseline&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;slack-details&#34;&gt;Slack Details&lt;/h2&gt;
-&lt;p&gt;DeployHub sends messages to Slack based on certain events using &lt;em&gt;Notifiers&lt;/em&gt;. Below are the Slack details used when called by &lt;em&gt;Notifiers&lt;/em&gt;.  To define your &lt;em&gt;Notifier&lt;/em&gt; see &lt;a href=&#34;/userguide/customizations/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;DeployHub sends messages to Slack based on certain events using &lt;em&gt;Notifiers&lt;/em&gt;. Below are the Slack details used when called by &lt;em&gt;Notifiers&lt;/em&gt;.  To define your &lt;em&gt;Notifier&lt;/em&gt; see &lt;a href=&#34;/userguide/advanced-features/deployments/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -10977,8 +10976,8 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Assign your Slack &lt;em&gt;Notifier&lt;/em&gt; to an &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; from the Details section of the &lt;em&gt;Application&lt;/em&gt; or &lt;em&gt;Component&lt;/em&gt; Dashboard. For more information see:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Define Your &lt;em&gt;Component&lt;/em&gt;&lt;/a&gt;.
-&lt;a href=&#34;/userguide/packaging-applications/2-defining-applications/&#34;&gt;Defining Your &lt;em&gt;Application&lt;/em&gt; Baseline&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/userguide/userguide/2-define-components/&#34;&gt;Define Your &lt;em&gt;Component&lt;/em&gt;&lt;/a&gt;.
+&lt;a href=&#34;/userguide/2-defining-applications/&#34;&gt;Defining Your &lt;em&gt;Application&lt;/em&gt; Baseline&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;notifier-access-controls&#34;&gt;Notifier Access Controls&lt;/h2&gt;
 &lt;p&gt;The Access Section allows &lt;em&gt;Users&lt;/em&gt; within designated &lt;em&gt;Groups&lt;/em&gt; to update the &lt;em&gt;Notifier&lt;/em&gt; in various ways. To add a &lt;em&gt;Group&lt;/em&gt; to one of the access lists, drag and drop the &lt;em&gt;Group&lt;/em&gt; from the Available Groups list onto desired access list. All &lt;em&gt;Users&lt;/em&gt; who belong to a &lt;em&gt;Group&lt;/em&gt; that appear in one of the Access lists will be granted access to the &lt;em&gt;Notifier&lt;/em&gt; in the following ways:&lt;/p&gt;
 &lt;table&gt;
@@ -11013,10 +11012,10 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
     
     <item>
       <title>Userguide: Component Item Object</title>
-      <link>/userguide/dmscript/dmscript-componentitemobject/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-componentitemobject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-componentitemobject/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-componentitemobject/</guid>
       <description>
         
         
@@ -11121,7 +11120,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Notifier Templates&lt;/em&gt; are used to create standard messages that are automatically sent by &lt;em&gt;Notifiers&lt;/em&gt;.  Each &lt;em&gt;Notifier Template&lt;/em&gt; is assigned to a &lt;em&gt;Notifier&lt;/em&gt;. There are two default &lt;em&gt;Notifier Templates&lt;/em&gt;, one for a successful deployment (DeploySuccess) and one for a failed deployment (DeployFailure).&lt;/p&gt;
 &lt;p&gt;Note: To create a &lt;em&gt;Notifier Template&lt;/em&gt; you will need to first create the &lt;em&gt;Notifier&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Each &lt;em&gt;Notifier Template&lt;/em&gt; contains the subject and body of the actual notification, and if via email, a list of recipients. Recipients can be members of one or more &lt;em&gt;Groups&lt;/em&gt; as well as the owners of the &lt;em&gt;Application&lt;/em&gt;, the owner of the &lt;em&gt;Environment&lt;/em&gt;, and/or the owners of the &lt;em&gt;Environment&lt;/em&gt; &lt;em&gt;Endpoints&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;For more information on &lt;em&gt;Notifiers&lt;/em&gt; see &lt;a href=&#34;/userguide/customizations/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more information on &lt;em&gt;Notifiers&lt;/em&gt; see &lt;a href=&#34;/userguide/advanced-features/deployments/2-define-notifiers/&#34;&gt;Using Notifiers for Messaging&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Using these two objects, &lt;em&gt;Notifiers&lt;/em&gt; and &lt;em&gt;Notifier Templates&lt;/em&gt;, notifications can be sent whenever a deployment to an &lt;em&gt;Environment&lt;/em&gt; fails or succeeds, whenever a &lt;em&gt;Request&lt;/em&gt; Task is executed, or the state of an &lt;em&gt;EndPoint&lt;/em&gt; changes. You can also use the Filter bar, represented by a funnel icon, to reorder your &lt;em&gt;Notify Templates&lt;/em&gt; by &lt;em&gt;Notifier Template&lt;/em&gt; Name and &lt;em&gt;Notifier&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;using-the-_notifiers_-list-view-for-adding-or-deleting&#34;&gt;Using the &lt;em&gt;Notifiers&lt;/em&gt; List View for Adding or Deleting&lt;/h2&gt;
 &lt;p&gt;You will find &lt;em&gt;Notifier Templates&lt;/em&gt; under the Setup menu.  Selecting &lt;em&gt;Notifier Templates&lt;/em&gt; will take you to a list of all &lt;em&gt;Notifier Templates&lt;/em&gt; which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your &lt;em&gt;Notifier Templates&lt;/em&gt; List View.  You can reorder the list view on &lt;em&gt;Notifier Templates&lt;/em&gt; and &lt;em&gt;Domains&lt;/em&gt;.&lt;/p&gt;
@@ -11255,7 +11254,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Actions&lt;/em&gt; can be implemented in many ways including:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Written in DMScript - DeployHub&amp;rsquo;s internal deployment scripting language. DMScript has access to the DeployHub Object Model.  DMScript ships with several pre-installed &lt;em&gt;Procedures&lt;/em&gt; and &lt;em&gt;Functions&lt;/em&gt;. It is also easy to create your own and add them to the activities that can be used when creating your &lt;em&gt;Components&lt;/em&gt; installation logic. For more information see &lt;a href=&#34;/userguide/dmscript/&#34;&gt;Dmscript&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Written in DMScript - DeployHub&amp;rsquo;s internal deployment scripting language. DMScript has access to the DeployHub Object Model.  DMScript ships with several pre-installed &lt;em&gt;Procedures&lt;/em&gt; and &lt;em&gt;Functions&lt;/em&gt;. It is also easy to create your own and add them to the activities that can be used when creating your &lt;em&gt;Components&lt;/em&gt; installation logic. For more information see &lt;a href=&#34;/userguide/advanced-features/dmscript/&#34;&gt;Dmscript&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;A &amp;rsquo;local&amp;rsquo; script  - written in any scripting language that is supported by Linux, and executes in the DeployHub Container mounted from the Docker Host.&lt;/p&gt;
@@ -11273,7 +11272,7 @@ which the logged-in &lt;em&gt;User&lt;/em&gt; has access.&lt;/p&gt;
 &lt;p&gt;After any &lt;em&gt;Task&lt;/em&gt; in a &lt;em&gt;Domain&lt;/em&gt; is executed: When the &lt;em&gt;Task&lt;/em&gt; is created, a &amp;ldquo;Post-Action&amp;rdquo; can be specified. The specified &lt;em&gt;Action&lt;/em&gt; is invoked after the &lt;em&gt;Task&lt;/em&gt; is executed. This can be used to connect to external systems to notify others that a &lt;em&gt;Task&lt;/em&gt; has been executed (for example, to notify a bug-tracking system that an &lt;em&gt;Application Version&lt;/em&gt; has been moved to a Testing state).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;As a stand-alone &lt;em&gt;Action&lt;/em&gt; that can be invoked from the DeployHub User Interface: The &lt;em&gt;Action&lt;/em&gt; is associated with a &amp;ldquo;Run Action&amp;rdquo; &lt;em&gt;Task&lt;/em&gt;. When invoked, the &lt;em&gt;Action&lt;/em&gt; is executed. A user can right-click on the &lt;em&gt;Domain&lt;/em&gt; to view the &lt;em&gt;Task&lt;/em&gt; to execute the &lt;em&gt;Action&lt;/em&gt;. Alternatively, they can right-click on an &lt;em&gt;Application&lt;/em&gt; or a &lt;em&gt;Component&lt;/em&gt;. In these circumstances, the selected object is pushed onto the &lt;em&gt;Stack&lt;/em&gt; and is available via the $application or $component objects. See DMScript &lt;a href=&#34;/userguide/dmscript/dmscript-stack/&#34;&gt;Stack&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;As a stand-alone &lt;em&gt;Action&lt;/em&gt; that can be invoked from the DeployHub User Interface: The &lt;em&gt;Action&lt;/em&gt; is associated with a &amp;ldquo;Run Action&amp;rdquo; &lt;em&gt;Task&lt;/em&gt;. When invoked, the &lt;em&gt;Action&lt;/em&gt; is executed. A user can right-click on the &lt;em&gt;Domain&lt;/em&gt; to view the &lt;em&gt;Task&lt;/em&gt; to execute the &lt;em&gt;Action&lt;/em&gt;. Alternatively, they can right-click on an &lt;em&gt;Application&lt;/em&gt; or a &lt;em&gt;Component&lt;/em&gt;. In these circumstances, the selected object is pushed onto the &lt;em&gt;Stack&lt;/em&gt; and is available via the $application or $component objects. See DMScript &lt;a href=&#34;/userguide/advanced-features/dmscript/dmscript-stack/&#34;&gt;Stack&lt;/a&gt; for more information.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Before an &lt;em&gt;Application&lt;/em&gt; is deployed: An &lt;em&gt;Application&lt;/em&gt; can be defined as having a &amp;ldquo;Pre-Action.&amp;rdquo; This can be either an &lt;em&gt;Action&lt;/em&gt; or a &lt;em&gt;Function&lt;/em&gt;. When the &lt;em&gt;Application&lt;/em&gt; is deployed, this &amp;ldquo;Pre-Action&amp;rdquo; is invoked first before any other operation. If this Pre-Action aborts or returns a non-zero return code, the deployment itself will be prevented.&lt;/p&gt;

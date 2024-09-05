@@ -41,10 +41,10 @@ when that change has been deployed to a pipeline stage.&lt;/p&gt;
     
     <item>
       <title>Userguide: Deployment Frequency</title>
-      <link>/userguide/integrations/dora/deploymentfrequency/</link>
+      <link>/userguide/integrations/dorametrics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/integrations/dora/deploymentfrequency/</guid>
+      <guid>/userguide/integrations/dorametrics/</guid>
       <description>
         
         
@@ -111,10 +111,10 @@ The graphs are interactive, so float-overs and clicking on the labels will highl
     
     <item>
       <title>Userguide: Lead Time for Changes</title>
-      <link>/userguide/integrations/dora/leadtime/</link>
+      <link>/userguide/integrations/dorametrics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/integrations/dora/leadtime/</guid>
+      <guid>/userguide/integrations/dorametrics/</guid>
       <description>
         
         

@@ -116,7 +116,7 @@ DeployHub consumes a _Component's_ Software Bill of Materials data as part of th
 | **License**         | The license used by the Package. |
 | **OSSF Scorecard**  | When available, the OpenSSF Scorecard status for each package.|
 
->Note: SBOM information will only be displayed if SBOM usage is added to the CI/CD pipeline. To learn how DeployHub can simplify this step view [Setting up DeployHub via the CLI](/userguide/first-steps/2-intro-to-setting-up-deployhub/).
+>Note: SBOM information will only be displayed if SBOM usage is added to the CI/CD pipeline. To learn how DeployHub can simplify this step view [the CI/CD chapter](/userguide/first-steps/2-intro-to-setting-up-deployhub/).
 
 ### Real-Time Vulnerabilities
 

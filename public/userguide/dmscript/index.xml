@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DeployHub User Guide and API Reference – DM Script</title>
-    <link>/userguide/dmscript/</link>
+    <link>/userguide/advanced-features/dmscript/</link>
     <description>Recent content in DM Script on DeployHub User Guide and API Reference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/userguide/dmscript/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/userguide/advanced-features/dmscript/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Userguide: Intro to Customizing Actions with DMScript</title>
-      <link>/userguide/dmscript/dmscript-intro/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-intro/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-intro/</guid>
       <description>
         
         
@@ -617,10 +617,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: Working with Objects</title>
-      <link>/userguide/dmscript/dmscript-workingwithobjects/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-workingwithobjects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-workingwithobjects/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-workingwithobjects/</guid>
       <description>
         
         
@@ -2001,10 +2001,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: Abort</title>
-      <link>/userguide/dmscript/dmscript-abort/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-abort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-abort/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-abort/</guid>
       <description>
         
         
@@ -2045,10 +2045,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: Append</title>
-      <link>/userguide/dmscript/dmscript-append/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-append/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-append/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-append/</guid>
       <description>
         
         
@@ -2091,10 +2091,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: Appendstd</title>
-      <link>/userguide/dmscript/dmscript-appendstd/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-appendstd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-appendstd/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-appendstd/</guid>
       <description>
         
         
@@ -2133,10 +2133,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: Assert</title>
-      <link>/userguide/dmscript/dmscript-assert/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-assert/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-assert/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-assert/</guid>
       <description>
         
         
@@ -2230,10 +2230,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: Attachment</title>
-      <link>/userguide/dmscript/dmscript-attachment/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-attachment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-attachment/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-attachment/</guid>
       <description>
         
         
@@ -2344,17 +2344,17 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Email Received:
-&lt;img src=&#34;/userguide/dmscript/Attachment.jpg&#34; alt=&#34;Sample Email&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;/userguide/advanced-features/dmscript/Attachment.jpg&#34; alt=&#34;Sample Email&#34;&gt;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Userguide: AVLoop</title>
-      <link>/userguide/dmscript/dmscript-avloop/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-avloop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-avloop/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-avloop/</guid>
       <description>
         
         
@@ -2538,10 +2538,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: base64decode</title>
-      <link>/userguide/dmscript/dmscript-base64decode/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-base64decode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-base64decode/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-base64decode/</guid>
       <description>
         
         
@@ -2632,10 +2632,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: base64encode</title>
-      <link>/userguide/dmscript/dmscript-base64encode/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-base64encode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-base64encode/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-base64encode/</guid>
       <description>
         
         
@@ -2699,10 +2699,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: basename</title>
-      <link>/userguide/dmscript/dmscript-basename/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-basename/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-basename/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-basename/</guid>
       <description>
         
         
@@ -2745,10 +2745,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: Break/Continue</title>
-      <link>/userguide/dmscript/dmscript-breakcontinue/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-breakcontinue/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-breakcontinue/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-breakcontinue/</guid>
       <description>
         
         
@@ -2813,10 +2813,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: Change Request</title>
-      <link>/userguide/dmscript/dmscript-changerequestobject/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-changerequestobject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-changerequestobject/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-changerequestobject/</guid>
       <description>
         
         
@@ -2859,10 +2859,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: Check Out</title>
-      <link>/userguide/dmscript/dmscript-checkout/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-checkout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-checkout/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-checkout/</guid>
       <description>
         
         
@@ -2930,10 +2930,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: CompLoop</title>
-      <link>/userguide/dmscript/dmscript-comploop/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-comploop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-comploop/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-comploop/</guid>
       <description>
         
         
@@ -2969,10 +2969,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: Component Item Object</title>
-      <link>/userguide/dmscript/dmscript-componentitemobject/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-componentitemobject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-componentitemobject/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-componentitemobject/</guid>
       <description>
         
         
@@ -3066,10 +3066,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: Conditionals</title>
-      <link>/userguide/dmscript/dmscript-conditionalstatements/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-conditionalstatements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-conditionalstatements/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-conditionalstatements/</guid>
       <description>
         
         
@@ -3124,10 +3124,10 @@ You can customize any &lt;em&gt;Action&lt;/em&gt; using DM Script. DeployHub has
     
     <item>
       <title>Userguide: Create and Read</title>
-      <link>/userguide/dmscript/dmscript-create/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-create/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-create/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-create/</guid>
       <description>
         
         
@@ -3273,10 +3273,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Credentials</title>
-      <link>/userguide/dmscript/dmscript-credentials/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-credentials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-credentials/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-credentials/</guid>
       <description>
         
         
@@ -3406,10 +3406,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Date</title>
-      <link>/userguide/dmscript/dmscript-date/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-date/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-date/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-date/</guid>
       <description>
         
         
@@ -3458,10 +3458,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Date Object</title>
-      <link>/userguide/dmscript/dmscript-dateobject/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-dateobject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-dateobject/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-dateobject/</guid>
       <description>
         
         
@@ -3677,10 +3677,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Decimal</title>
-      <link>/userguide/dmscript/dmscript-decimal/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-decimal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-decimal/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-decimal/</guid>
       <description>
         
         
@@ -3717,10 +3717,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Delete</title>
-      <link>/userguide/dmscript/dmscript-delete/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-delete/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-delete/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-delete/</guid>
       <description>
         
         
@@ -3813,10 +3813,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Deploy Statement</title>
-      <link>/userguide/dmscript/dmscript-deploystatement/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-deploystatement/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-deploystatement/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-deploystatement/</guid>
       <description>
         
         
@@ -3858,10 +3858,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Directory Name</title>
-      <link>/userguide/dmscript/dmscript-dirname/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-dirname/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-dirname/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-dirname/</guid>
       <description>
         
         
@@ -3901,10 +3901,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Domain Object</title>
-      <link>/userguide/dmscript/dmscript-domainobjectt/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-domainobjectt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-domainobjectt/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-domainobjectt/</guid>
       <description>
         
         
@@ -3997,10 +3997,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: DropZone Physicl Path</title>
-      <link>/userguide/dmscript/dmscript-dropzone/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-dropzone/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-dropzone/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-dropzone/</guid>
       <description>
         
         
@@ -4034,10 +4034,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: DropZone File Object</title>
-      <link>/userguide/dmscript/dmscript-dropzonefileobject/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-dropzonefileobject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-dropzonefileobject/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-dropzonefileobject/</guid>
       <description>
         
         
@@ -4108,10 +4108,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: DropZone Object</title>
-      <link>/userguide/dmscript/dmscript-dropzoneobject/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-dropzoneobject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-dropzoneobject/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-dropzoneobject/</guid>
       <description>
         
         
@@ -4172,10 +4172,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Echo</title>
-      <link>/userguide/dmscript/dmscript-echo/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-echo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-echo/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-echo/</guid>
       <description>
         
         
@@ -4210,10 +4210,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Eval</title>
-      <link>/userguide/dmscript/dmscript-eval/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-eval/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-eval/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-eval/</guid>
       <description>
         
         
@@ -4234,10 +4234,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Filter</title>
-      <link>/userguide/dmscript/dmscript-filter/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-filter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-filter/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-filter/</guid>
       <description>
         
         
@@ -4285,10 +4285,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Flatten</title>
-      <link>/userguide/dmscript/dmscript-flatten/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-flatten/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-flatten/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-flatten/</guid>
       <description>
         
         
@@ -4335,10 +4335,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: For Each Statement</title>
-      <link>/userguide/dmscript/dmscript-foreachstatement/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-foreachstatement/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-foreachstatement/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-foreachstatement/</guid>
       <description>
         
         
@@ -4437,10 +4437,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Get Application</title>
-      <link>/userguide/dmscript/dmscript-getapplication/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-getapplication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-getapplication/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-getapplication/</guid>
       <description>
         
         
@@ -4466,10 +4466,10 @@ Added user bsmith okay&lt;/p&gt;
     
     <item>
       <title>Userguide: Get Components</title>
-      <link>/userguide/dmscript/dmscript-getcomponnet/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-getcomponnet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-getcomponnet/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-getcomponnet/</guid>
       <description>
         
         
@@ -4496,10 +4496,10 @@ Further descriptions of &lt;em&gt;Component&lt;/em&gt; Objects are found in the 
     
     <item>
       <title>Userguide: Get Credentials</title>
-      <link>/userguide/dmscript/dmscript-getcredential/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-getcredential/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-getcredential/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-getcredential/</guid>
       <description>
         
         
@@ -4531,10 +4531,10 @@ Further descriptions of &lt;em&gt;Component&lt;/em&gt; Objects are found in the 
     
     <item>
       <title>Userguide: Get Environment</title>
-      <link>/userguide/dmscript/dmscript-getenvironment/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-getenvironment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-getenvironment/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-getenvironment/</guid>
       <description>
         
         
@@ -4560,10 +4560,10 @@ Further descriptions of &lt;em&gt;Component&lt;/em&gt; Objects are found in the 
     
     <item>
       <title>Userguide: Get Hex</title>
-      <link>/userguide/dmscript/dmscript-gethex/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-gethex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-gethex/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-gethex/</guid>
       <description>
         
         
@@ -4591,10 +4591,10 @@ Further descriptions of &lt;em&gt;Component&lt;/em&gt; Objects are found in the 
     
     <item>
       <title>Userguide: Get Server</title>
-      <link>/userguide/dmscript/dmscript-getserver/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-getserver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-getserver/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-getserver/</guid>
       <description>
         
         
@@ -4620,10 +4620,10 @@ Further descriptions of &lt;em&gt;Component&lt;/em&gt; Objects are found in the 
     
     <item>
       <title>Userguide: Get User</title>
-      <link>/userguide/dmscript/dmscript-getuser/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-getuser/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-getuser/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-getuser/</guid>
       <description>
         
         
@@ -4652,10 +4652,10 @@ Further descriptions of &lt;em&gt;Component&lt;/em&gt; Objects are found in the 
     
     <item>
       <title>Userguide: Get UserGroup</title>
-      <link>/userguide/dmscript/dmscript-getusergroup/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-getusergroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-getusergroup/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-getusergroup/</guid>
       <description>
         
         
@@ -4688,10 +4688,10 @@ Further descriptions of &lt;em&gt;Component&lt;/em&gt; Objects are found in the 
     
     <item>
       <title>Userguide: Increment or Decrement</title>
-      <link>/userguide/dmscript/dmscript-increment/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-increment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-increment/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-increment/</guid>
       <description>
         
         
@@ -4704,10 +4704,10 @@ Further descriptions of &lt;em&gt;Component&lt;/em&gt; Objects are found in the 
     
     <item>
       <title>Userguide: Instr</title>
-      <link>/userguide/dmscript/dmscript-instr/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-instr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-instr/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-instr/</guid>
       <description>
         
         
@@ -4729,10 +4729,10 @@ Further descriptions of &lt;em&gt;Component&lt;/em&gt; Objects are found in the 
     
     <item>
       <title>Userguide: Iterate</title>
-      <link>/userguide/dmscript/dmscript-iterate/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-iterate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-iterate/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-iterate/</guid>
       <description>
         
         
@@ -4784,10 +4784,10 @@ Further descriptions of &lt;em&gt;Component&lt;/em&gt; Objects are found in the 
     
     <item>
       <title>Userguide: Length</title>
-      <link>/userguide/dmscript/dmscript-length/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-length/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-length/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-length/</guid>
       <description>
         
         
@@ -4832,10 +4832,10 @@ Further descriptions of &lt;em&gt;Component&lt;/em&gt; Objects are found in the 
     
     <item>
       <title>Userguide: Lower</title>
-      <link>/userguide/dmscript/dmscript-lower/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-lower/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-lower/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-lower/</guid>
       <description>
         
         
@@ -4859,10 +4859,10 @@ Further descriptions of &lt;em&gt;Component&lt;/em&gt; Objects are found in the 
     
     <item>
       <title>Userguide: Me</title>
-      <link>/userguide/dmscript/dmscript-me/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-me/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-me/</guid>
       <description>
         
         
@@ -4886,10 +4886,10 @@ UserObject()&lt;/p&gt;
     
     <item>
       <title>Userguide: Modify</title>
-      <link>/userguide/dmscript/dmscript-modify/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-modify/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-modify/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-modify/</guid>
       <description>
         
         
@@ -4934,10 +4934,10 @@ UserObject()&lt;/p&gt;
     
     <item>
       <title>Userguide: Notify</title>
-      <link>/userguide/dmscript/dmscript-notify/</link>
+      <link>/userguide/advanced-features/dmscript/dmscript-notify/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/dmscript/dmscript-notify/</guid>
+      <guid>/userguide/advanced-features/dmscript/dmscript-notify/</guid>
       <description>
         
         

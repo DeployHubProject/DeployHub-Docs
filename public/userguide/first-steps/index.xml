@@ -345,7 +345,7 @@ In a cloud-native microservice architecture, there are many, if not hundreds, of
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Define your &lt;em&gt;Environment&lt;/em&gt; and &lt;em&gt;Endpoints&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Next, identify your deployment landscape before you execute a deployment. You will deploy to an &lt;a href=&#34;/userguide/first-steps/2-define-environments/&#34;&gt;&lt;em&gt;Environment&lt;/em&gt;&lt;/a&gt; which is a collection of &lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;&lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Next, identify your deployment landscape before you execute a deployment. You will deploy to an &lt;a href=&#34;/userguide/2-define-environments/&#34;&gt;&lt;em&gt;Environment&lt;/em&gt;&lt;/a&gt; which is a collection of &lt;a href=&#34;/userguide/2-define-endpoints/&#34;&gt;&lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Publish your &lt;em&gt;Components&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
@@ -1222,7 +1222,7 @@ If you are using SSH Private keys, you will find these files in your Home direct
 &lt;p&gt;At this point the &lt;em&gt;Action&lt;/em&gt; is ready to be used by anyone with access (based on &lt;em&gt;Domain&lt;/em&gt; and &lt;em&gt;Group&lt;/em&gt; options).
 Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Component&lt;/em&gt; variables are defined. This is performed at the &lt;em&gt;Component&lt;/em&gt; level.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 4 - Assign the GitCheckoutAction to your &lt;em&gt;Component&lt;/em&gt; to be deployed&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;For each &lt;em&gt;Component&lt;/em&gt; you will need to define the variable values for $GIT_URL, $GIT_COMMIT and $GIT_DIR that the GitCheckoutAction will use at the_Component_ level. The values will be passed to the GitCheckoutAction at deploy time. See &lt;a href=&#34;/userguide/publishing-components/2-define-components/&#34;&gt;Defining &lt;em&gt;Components&lt;/em&gt;&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;For each &lt;em&gt;Component&lt;/em&gt; you will need to define the variable values for $GIT_URL, $GIT_COMMIT and $GIT_DIR that the GitCheckoutAction will use at the_Component_ level. The values will be passed to the GitCheckoutAction at deploy time. See &lt;a href=&#34;/userguide/userguide/2-define-components/&#34;&gt;Defining &lt;em&gt;Components&lt;/em&gt;&lt;/a&gt; for more information.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 5 - Set Your &lt;em&gt;Component&lt;/em&gt; Attributes_&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The following variables must be added to the Attributes Section for all  &lt;em&gt;Components&lt;/em&gt; using the GitCheckoutAction &lt;em&gt;Pre Action&lt;/em&gt;.  The Attributes section can be found on the &lt;em&gt;Component&lt;/em&gt; Dashboard.  Use the +Add option in this section to add a row for the variable. You must use Save to commit the row to the table:&lt;/p&gt;
 &lt;table&gt;
@@ -1399,10 +1399,10 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
     
     <item>
       <title>Userguide: Define Your Endpoints</title>
-      <link>/userguide/first-steps/2-define-endpoints/</link>
+      <link>/userguide/2-define-endpoints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/first-steps/2-define-endpoints/</guid>
+      <guid>/userguide/2-define-endpoints/</guid>
       <description>
         
         
@@ -1496,7 +1496,7 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Base Directory&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;If you would like to force all deployments to occur in a specific high level directory, enter it into this field. The &lt;em&gt;Endpoint&lt;/em&gt; Base Directory will override the &lt;em&gt;Component&lt;/em&gt; Base Directory. For more information see &lt;a href=&#34;/userguide/publishing-components/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
+&lt;td&gt;If you would like to force all deployments to occur in a specific high level directory, enter it into this field. The &lt;em&gt;Endpoint&lt;/em&gt; Base Directory will override the &lt;em&gt;Component&lt;/em&gt; Base Directory. For more information see &lt;a href=&#34;/userguide/userguide/2-define-components/#formatting-of-the-deployment-directory-with-base-and-target-directories-for-database-and-application-file-deployments&#34;&gt;Formatting Directories&lt;/a&gt; on the order of how the deployment directory is formatted.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Credential&lt;/strong&gt;&lt;/td&gt;
@@ -1590,16 +1590,16 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
     
     <item>
       <title>Userguide: Build Your Environments</title>
-      <link>/userguide/first-steps/2-define-environments/</link>
+      <link>/userguide/2-define-environments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/userguide/first-steps/2-define-environments/</guid>
+      <guid>/userguide/2-define-environments/</guid>
       <description>
         
         
         &lt;h2 id=&#34;intro-to-_environments_&#34;&gt;Intro to &lt;em&gt;Environments&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Environments&lt;/em&gt; represent where you execute your &lt;em&gt;Application&lt;/em&gt; and &lt;em&gt;Components&lt;/em&gt; such as a Kubernetes Cluster for Dev, Test or Production. An &lt;em&gt;Environment&lt;/em&gt; could be a virtual cloud or physical datacenter.  &lt;em&gt;Applications&lt;/em&gt; run in many &lt;em&gt;Environments&lt;/em&gt; to support your Pipeline states.&lt;/p&gt;
-&lt;p&gt;Note: First define &lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;&lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt; to be assigned before you can define an &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Note: First define &lt;a href=&#34;/userguide/2-define-endpoints/&#34;&gt;&lt;em&gt;Endpoints&lt;/em&gt;&lt;/a&gt; to be assigned before you can define an &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;_environments_-and-_domains_&#34;&gt;&lt;em&gt;Environments&lt;/em&gt; and &lt;em&gt;Domains&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Environments&lt;/em&gt; are associated to a &lt;a href=&#34;/userguide/first-steps/2-defining-domains/&#34;&gt;&lt;em&gt;Domain&lt;/em&gt;&lt;/a&gt;. You can assign &lt;em&gt;Environments&lt;/em&gt; to any level of &lt;em&gt;Domain&lt;/em&gt; including the &lt;em&gt;Global Domain&lt;/em&gt;. However, &lt;em&gt;Environments&lt;/em&gt; are most commonly associated to a &lt;em&gt;Project Domain&lt;/em&gt; used for &lt;em&gt;Applications&lt;/em&gt;. A &lt;em&gt;Project Domain&lt;/em&gt; is used to manage an &lt;em&gt;Application&lt;/em&gt; and may be defined to include &lt;em&gt;Life Cycle Subdomains&lt;/em&gt; for managing your &lt;em&gt;Application&amp;rsquo;s&lt;/em&gt; progression from development through release.&lt;/p&gt;
 &lt;h2 id=&#34;use-the-_environment_-list-view-to-add-and-delete&#34;&gt;Use the &lt;em&gt;Environment&lt;/em&gt; List View to Add and Delete&lt;/h2&gt;
@@ -1781,12 +1781,12 @@ Note: Because this &lt;em&gt;Action&lt;/em&gt; is reusable, no &lt;em&gt;Compone
 &lt;/table&gt;
 &lt;p&gt;Key Value Pairs can be given any Name and a Value. Use +Add to add Key Value Pairs to the table. Use Save to confirm.  Use the checkbox to Delete or Edit a Key Value Pair.&lt;/p&gt;
 &lt;h3 id=&#34;assigned-_endpoints_&#34;&gt;Assigned &lt;em&gt;Endpoints&lt;/em&gt;&lt;/h3&gt;
-&lt;p&gt;Note: You will need to have pre-defined your &lt;em&gt;Endpoints&lt;/em&gt;.  See the &lt;a href=&#34;/userguide/first-steps/2-define-endpoints/&#34;&gt;Define Your Endpoints&lt;/a&gt; chapter for more information.&lt;/p&gt;
+&lt;p&gt;Note: You will need to have pre-defined your &lt;em&gt;Endpoints&lt;/em&gt;.  See the &lt;a href=&#34;/userguide/2-define-endpoints/&#34;&gt;Define Your Endpoints&lt;/a&gt; chapter for more information.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Environments&lt;/em&gt; are a collection of &lt;em&gt;Endpoints&lt;/em&gt;. Use this section to assign the &lt;em&gt;Endpoints&lt;/em&gt; that will make up this &lt;em&gt;Environment&lt;/em&gt;. Use +Add to create a new row in the &lt;em&gt;Endpoints&lt;/em&gt; table. Use Save to commit the row.  Select the row and use Edit or Delete to update or remove an &lt;em&gt;Endpoint&lt;/em&gt;. When you add a new &lt;em&gt;Endpoint&lt;/em&gt; the  Hostname will be displayed. The Hostname is the actual network name or IP address.  It is assigned when the &lt;em&gt;Endpoint&lt;/em&gt; is defined, but is not a required field. If it is defined, it will be displayed in the row.&lt;/p&gt;
 &lt;h3 id=&#34;trends&#34;&gt;Trends&lt;/h3&gt;
 &lt;p&gt;This section shows the success/failure rate and time required for the last 10 deployments to this &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;assigned-_applications_&#34;&gt;Assigned &lt;em&gt;Applications&lt;/em&gt;&lt;/h3&gt;
-&lt;p&gt;View all the &lt;em&gt;Application Base Versions&lt;/em&gt; assigned to this &lt;em&gt;Environment&lt;/em&gt;. This is read only.  &lt;em&gt;Applications Base Versions&lt;/em&gt; are associated to &lt;em&gt;Environments&lt;/em&gt; when created using the &lt;a href=&#34;/userguide/packaging-applications/2-defining-applications/#viewing-and-editing-with-the-_application_-dashboard&#34;&gt;&lt;em&gt;Application&lt;/em&gt; Dashboard&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;View all the &lt;em&gt;Application Base Versions&lt;/em&gt; assigned to this &lt;em&gt;Environment&lt;/em&gt;. This is read only.  &lt;em&gt;Applications Base Versions&lt;/em&gt; are associated to &lt;em&gt;Environments&lt;/em&gt; when created using the &lt;a href=&#34;/userguide/2-defining-applications/#viewing-and-editing-with-the-_application_-dashboard&#34;&gt;&lt;em&gt;Application&lt;/em&gt; Dashboard&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;deployed-_components_-to-_environment_-map&#34;&gt;Deployed &lt;em&gt;Components&lt;/em&gt; to &lt;em&gt;Environment&lt;/em&gt; Map&lt;/h3&gt;
 &lt;p&gt;This map shows you all of the current &lt;em&gt;Component Versions&lt;/em&gt;, with &lt;em&gt;Application Versions&lt;/em&gt;, that have been deployed to this &lt;em&gt;Environment&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;environment-calendars-tab&#34;&gt;Environment Calendars Tab&lt;/h2&gt;

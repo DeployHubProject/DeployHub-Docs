@@ -14,7 +14,7 @@ DeployHub default _Groups_ include:
 -User _Group_ - All _Users_ who sign in after the initial Administrator _User_ is created.
 -Everyone _Group_ - All Users regardless of their assigned _Group_ are automatically added to this _Group_. It is the default _Group_ that provides access to "everyone" for all Objects.  To restrict _Everyone_ access, update the _Access_ options at the Object level.  This _Group_ cannot be modified.  If you delete a _User_ from the system, they will be deleted from the Everyone _Group_.
 
-[_Users_](/userguide/advanced-features/2-users/) are given access to DeployHub Objects based on their _Group_ access. A many-to-many relationship exists between _Users_ and _Groups_, so that a _User_ can belong to many different _Groups_, and a _Group_ can contain many different _Users_. If a _User_ belongs to more than one _Group_, the _User_ will be given the highest level of access.
+[_Users_](/userguide/2-users/) are given access to DeployHub Objects based on their _Group_ access. A many-to-many relationship exists between _Users_ and _Groups_, so that a _User_ can belong to many different _Groups_, and a _Group_ can contain many different _Users_. If a _User_ belongs to more than one _Group_, the _User_ will be given the highest level of access.
 
 ## _Groups_ and _Domain_ Inheritance
 
