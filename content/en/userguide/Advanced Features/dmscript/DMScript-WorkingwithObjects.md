@@ -44,7 +44,7 @@ The following properties can be accessed for an _Application_ object:
 
 | **Property**   | **Type** | **Description**                                                                                                                                            |
 |----------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id             | Integer  | _Application_ id, as used in the database.                                                                                                                 |
+| ID             | Integer  | _Application_ id, as used in the database.                                                                                                                 |
 | name           | String   | _Application_ name.                                                                                                                                        |
 | fqdomain       | String   | Fully qualified domain name.                                                                                                                               |
 | summary        | String   | Summary text.                                                                                                                                              |
@@ -146,11 +146,11 @@ The _Change Request_ object represents a change request record associated with e
 
 The following properties can be accessed for a _Change Request_ object:
 
-| id        | String | The change request id.                                                                                                                                                                                                                                                      |
+| ID        | String | The change request id.                                                                                                                                                                                                                                                      |
 |-----------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | name      | String | The change request description.                                                                                                                                                                                                                                             |
 | status    | String | The change request status.                                                                                                                                                                                                                                                  |
-| api\_url  | String | A URL which - if passed to restful\_get - will return an array containing the full details of the change request from the external change tracking system. Useful for getting more information than the id / description / status combination which is stored in DeployHub. |
+| api\_url  | String | A URL which - if passed to restful\_get - will return an array containing the full details of the change request from the external change tracking system. Useful for getting more information than the ID / description / status combination which is stored in DeployHub. |
 | html\_url | String | A URL which will direct a browser to the page describing the change request in the external change tracking system.                                                                                                                                                         |
 
 ### Component Object
@@ -161,7 +161,7 @@ The following properties can be accessed for a _Component_ object:
 
 | **Property** | **Type** | **Description**                                                                                        |
 |--------------|----------|--------------------------------------------------------------------------------------------------------|
-| id           | Integer  | _Component_ id, as used in the database.                                                               |
+| ID           | Integer  | _Component_ id, as used in the database.                                                               |
 | name         | String   | _Component_ name.                                                                                      |
 | fqdomain     | String   | Fully qualified domain name.                                                                           |
 | summary      | String   | Summary text.                                                                                          |
@@ -203,7 +203,7 @@ The following properties can be accessed for a _Component_ item object:
 
 | **Property** | **Type** | **Description**                                                                   |
 |--------------|----------|-----------------------------------------------------------------------------------|
-| id           | Integer  | _Component_ Item id, as used in the database.                                     |
+| ID           | Integer  | _Component_ Item id, as used in the database.                                     |
 | name         | String   | _Component_ Item name.                                                            |
 | summary      | String   | Summary text.                                                                     |
 | parent       | Object   | The _Component_ to which this Item belongs.                                       |
@@ -253,7 +253,7 @@ The following properties can be accessed for a _Credential Object_:
 
 | Property | Type    | Description                                                                                                                                                                                                                                                                                             |
 |----------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id       | Integer | _Credential_ id, as used in the database.                                                                                                                                                                                                                                                               |
+| ID       | Integer | _Credential_ id, as used in the database.                                                                                                                                                                                                                                                               |
 | name     | String  | _Credential_ name.                                                                                                                                                                                                                                                                                      |
 | fqdomain | String  | Fully qualified _Domain_ name.                                                                                                                                                                                                                                                                          |
 | summary  | String  | Summary text.                                                                                                                                                                                                                                                                                           |
@@ -374,12 +374,12 @@ The following properties can be accessed on the _Domain_ object:
 
 | **Property**   | **Return Type** | **Description**                                                       |
 |----------------|-----------------|-----------------------------------------------------------------------|
-| id             | Integer         | Domain id, as used in the database.                                   |
+| ID             | Integer         | Domain id, as used in the database.                                   |
 | name           | String          | Domain name.                                                          |
 | fqdomain       | String          | Fully qualified domain name.                                          |
 | summary        | String          | Summary text.                                                         |
 | domain         | Object          | Domain in which the Domain is contained                               |
-| Sub-Domains     | Array           | List of _Domain_ objects which are contained within this Domain.      |
+| Subdomains     | Array           | List of _Domain_ objects which are contained within this Domain.      |
 | _Applications_ | Array           | List of _Application_ objects which are contained within this domain. |
 | _Environments_ | Array           | List of _Environment_ objects which are contained within this domain. |
 | creator        | User            | User Object representing the user who created this domain.            |
@@ -440,7 +440,7 @@ The following properties can be accessed for an _Environment_ object:
 
 | **Property**   | **Type** | **Description**                                                               |
 |----------------|----------|-------------------------------------------------------------------------------|
-| id             | Integer  | _Environment_ id, as used in the database.                                    |
+| ID             | Integer  | _Environment_ id, as used in the database.                                    |
 | name           | String   | _Environment_ name.                                                           |
 | fqdomain       | String   | Fully qualified domain name.                                                  |
 | summary        | String   | Summary text.                                                                 |
@@ -496,7 +496,7 @@ The following properties can be accessed for an _Endpoint_ object:
 
 | **Property** | **Type** | **Description**                                                                          |
 |--------------|----------|------------------------------------------------------------------------------------------|
-| id           | Integer  | _Endpoint_ id, as used in the database.                                                  |
+| ID           | Integer  | _Endpoint_ id, as used in the database.                                                  |
 | name         | String   | _Endpoints_ name.                                                                        |
 | fqdomain     | String   | Fully qualified _Domain_ name.                                                           |
 | summary      | String   | Summary text.                                                                            |
@@ -546,7 +546,7 @@ The following properties can be accessed on the User object:
 
 | **Property** | **Return Type** | **Description**                                                                                  |
 |--------------|-----------------|--------------------------------------------------------------------------------------------------|
-| id           | Integer         | User id, as used in the database.                                                                |
+| ID           | Integer         | User id, as used in the database.                                                                |
 | name         | String          | User Name.                                                                                       |
 | kind         | String          | Returns "user". Used to differentiate between users and groups where retrieving an owner object. |
 | fqdomain     | String          | Fully qualified domain name.                                                                     |
@@ -569,7 +569,7 @@ The following properties can be accessed on the UserGroup object:
 
 | **Property** | **Return Type** | **Description**                                                                                   |
 |--------------|-----------------|---------------------------------------------------------------------------------------------------|
-| id           | Integer         | _UserGroup_ id, as used in the database.                                                          |
+| ID           | Integer         | _UserGroup_ id, as used in the database.                                                          |
 | name         | String          | _UserGroup_ Name.                                                                                 |
 | kind         | String          | Returns "group". Used to differentiate between users and groups where retrieving an owner object. |
 | fqdomain     | String          | Fully qualified _Domain_ name.                                                                    |

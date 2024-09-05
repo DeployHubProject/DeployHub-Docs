@@ -69,4 +69,4 @@ You can Delete a Recipient by using the Trash Can Icon next to the item in the t
 
 This table shows all variables that can be used when constructing the subject line and message body for a template. These variables are automatically expanded when the notification is issued. Variables can be either Object Methods (such as ${application.name}) or Scalar Variables that are set by DeployHub during specific operations (such as $SERVER_STATUS during a periodic server scan).
 
-Object Methods can be used for any object that is available to DeployHub during the operation. For example, you could use ${application.id} to get the internal application id or ${application.domain.name} to get the current domain for the application.
+Object Methods can be used for any object that is available to DeployHub during the operation. For example, you could use ${application.id} to get the internal application ID or ${application.domain.name} to get the current domain for the application.

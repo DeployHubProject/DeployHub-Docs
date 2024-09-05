@@ -12,7 +12,7 @@ The following properties can be accessed on the User object:
 
 | **Property** | **Return Type** | **Description**                                                                                  |
 |--------------|-----------------|--------------------------------------------------------------------------------------------------|
-| id           | Integer         | User id, as used in the database.                                                                |
+| ID           | Integer         | User id, as used in the database.                                                                |
 | name         | String          | User Name.                                                                                       |
 | kind         | String          | Returns "user". Used to differentiate between users and groups where retrieving an owner object. |
 | fqdomain     | String          | Fully qualified domain name.                                                                     |

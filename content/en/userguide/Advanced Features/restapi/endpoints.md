@@ -11,7 +11,7 @@ description: >
 
 This call returns an array of JSON objects representing each _Endpoint_ to which the logged-in _User_ has access.
 
-If the all parameter is not specified then only the _Endpoint_ associated with the _User's_ home _Domain_ are listed. If the "all" parameter is specified and is set to "y", for Yes, then the result includes the _Applications_ included in any accessible _Sub-Domains.
+If the all parameter is not specified then only the _Endpoint_ associated with the _User's_ home _Domain_ are listed. If the "all" parameter is specified and is set to "y", for Yes, then the result includes the _Applications_ included in any accessible _Subdomains.
 
 ### REST Api Endpoint /dmadminweb/API/servers
 

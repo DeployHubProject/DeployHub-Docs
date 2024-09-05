@@ -55,13 +55,13 @@ DeployHub versions both _Components_ and 'logical' _Applications_.  When version
 
 ## Core Features
 
-**Package Vulnerability Search**
+**Package Vulnerability Search:**
 
- Discover where a vulnerability is running across all endpoints. DeployHub shows which logical _Applications_ are consuming a vulnerable package, and where it is deployed. 
+ Discover where a vulnerability is running across all endpoints. DeployHub shows which logical _Applications_ are consuming a vulnerable package, and how your runtime environments are at risk. 
 
 **Dependency maps:** 
 
-Understand _Component_ to _Application_ dependencies. DeployHub presents the 'logical' view of an _Application_ with all _Components_ dependencies. 
+Understand _Component_ to _Application_ dependencies. DeployHub presents the 'logical' view of an _Application_ with all _Component_ dependencies. 
 
 **Application Level SBOMs and CVE:** 
 
@@ -69,7 +69,7 @@ DeployHub aggregates all _Component_ level data up to the logical _Application V
 
 **Blast Radius:**
 
-See how a single _Component_ impacts consuming _Applications_. DeployHub can provide predictive insights showing what _Applications_ will be impacted by an updated service. DeployHub provides this data in clear maps of dependent _Applications_ and services. The blast radius also shows what _Components_ and _Applications_ are impacted by a vulnerability for rapid response. 
+See how a single _Component_ impacts consuming _Applications_. DeployHub can provide predictive insights showing what _Applications_ will be impacted by an updated service. DeployHub provides this data in clear maps of dependent _Applications_ and services. The blast radius also shows which _Components_ and _Applications_ are impacted by a vulnerability for rapid response. 
 
 **Improved incident response:**
 

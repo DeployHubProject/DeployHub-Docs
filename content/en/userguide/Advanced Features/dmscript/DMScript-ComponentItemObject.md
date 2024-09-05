@@ -13,7 +13,7 @@ The following properties can be accessed for a _Component_ item object:
 
 | **Property** | **Type** | **Description**                                                                   |
 |--------------|----------|-----------------------------------------------------------------------------------|
-| id           | Integer  | _Component_ Item id, as used in the database.                                     |
+| ID           | Integer  | _Component_ Item id, as used in the database.                                     |
 | name         | String   | _Component_ Item name.                                                            |
 | summary      | String   | Summary text.                                                                     |
 | parent       | Object   | The _Component_ to which this Item belongs.                                       |

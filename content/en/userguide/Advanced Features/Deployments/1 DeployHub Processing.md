@@ -8,9 +8,9 @@ description: >
 
 ## Architecture
 
-DeployHub includes a central engine that can be installed locally or from the SaaS offering via a reverse proxy. The central engine connects to external repositories, Continuous Delivery (CD) engines, DevOps tools, data sources, transfer protocols and notification tools. With our open architecture, you plug-in the tool-set you use to define your release configurations.
+DeployHub includes an agentless internal deployment engine that can be used to run deployments. The deployment engine is installed locally or from the SaaS offering via a reverse proxy. The internal engine connects to repositories, Continuous Delivery (CI/CD) pipelines, DevOps tools, data sources, transfer protocols and notification tools. With our open architecture, you plug-in the tool-set you use to define your release configurations.
 
-For releasing _Components_, an agentless architecture supports both a modern architecture of containers as well as legacy systems. If you use solutions like Helm or Ansible to update your cluster, great, we can call those external solutions to perform the updates and provide all the microservice configuration mapping and version information. DeployHub also has plug-ins to continuous delivery pipelines that supports continuous configuration management as part of your release process.
+For deploying _Application versions_, an agentless architecture supports both a decoupled architecture of containers as well as legacy systems. If you use solutions like [Helm](/userguide/integrations/helm/) to update your cluster, great, we can call those external solutions to perform the updates and provide all the deployment configuration mapping and version information. DeployHub also has plug-ins to continuous delivery pipelines that supports continuous configuration management as part of your release process.
 
 ![Architecture](/userguide/images/Architecture.png)
 
@@ -20,13 +20,9 @@ As a SaaS customer, a 'one-way' reverse proxy is used on your side of the firewa
 
 ![SaaS Architecture](/userguide/images/ReverseProxy.png)
 
-## Deployments with Custom Actions for Cloud Native Releases
+## Deployments with Custom Actions 
 
 DeployHub integrates with external deployment solutions such as Helm to perform the actual movement of containers to a cluster. When a _Custom Action_ is used, the internal deployment engine is bypassed. This is the easiest way to perform an update to your cluster.
-
-## The DeployHub Engine for Monolithic Releases and Database Updates
-
-Our deployment engine manages monolithic deployments and database updates. It moves files and scripts from source _Repositories_ to a target _Environment_ which contains one or more _Endpoints_. This is performed via _Releases_ or _Applications_, which contain _Components_. _Components_ reference a _Repository_, whose files and scripts are placed into the _Dropzone_. Customized _Actions_  manipulate the files (edit, delete, etc.) within the _Dropzone_. This happens before being deployed in a predetermined order to every _Endpoint_ within the _Environment_.
 
 DeployHub performs all deployments in an Agentless mode. No remote agents need be installed on the target _Endpoint_ to execute deployments.
 

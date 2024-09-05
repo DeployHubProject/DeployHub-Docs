@@ -5,7 +5,7 @@ weight: 2
 description: >
   Take a Tour of Continuous Security Intelligence
 ---
-To help you understand the need for continuously monitoring your security intelligence, DeployHub has provided a free version with a tutorial for you to explore. This free version is based on the Ortelius.io open-source project incubating at the [Continuous Delivery Foundation](https://cd.foundation), hosted by DeployHub Team. Explore how the Ortelius _Application_ is configured and walk through basic concepts of Continuous Security Intelligence. 
+To help you understand the need for continuously monitoring your security intelligence, DeployHub has provided a free version with a tutorial for you to explore. This free version is based on the Ortelius.io open-source project incubating at the [Continuous Delivery Foundation](https://cd.foundation), hosted by DeployHub, Inc. Explore how the Ortelius _Application_ is configured and walk through basic concepts of Continuous Security Intelligence. 
 
 ![Ortelius Hosted by DeployHub Team](/userguide/images/HostedLogo-SignIn.png)
 
@@ -36,11 +36,11 @@ Upon logging into Ortelius, you will be given an option to select your Company N
 
 _Domains_ serve as the basic structure of organizing Continuous Security Intelligence. Developers use _Domains_ to catalog their _Components_ based on 'solution spaces.' Organizing your software supply chain in this way allows for _Components_ to be easily shared.
 
-_Domains_ are not folders. They serve as a method for creating fully qualified names of objects within DeployHub to keep things organized. You can explore the _GLOBAL.open source_ Domain to learn how Continuous Security Intelligence is organized.  In DeployHub terminology, the _GLOBAL.open source_ Domain has multiple _Sub-domains_.
+_Domains_ are not folders. They serve as a method for creating fully qualified names of objects within DeployHub to keep things organized. You can explore the _GLOBAL.open source_ Domain to learn how Continuous Security Intelligence is organized.  In DeployHub terminology, the _GLOBAL.open source_ Domain has multiple _Subdomains_.
 
 1) From the left hand side menu, select _Domains_. This will take you to the _Domain_ Details. All _Domains_ you have access to will be shown in the _Domain_ List Box. 
 
-2) Select GLOBAL.Open Source.Linux Foundation. In the Details, you will see this _Domain_ has two _Sub-Domains_, the CDF and the OpenSSF. Driving into the GLOBAL.Open Source.Linux Foundation.CDF _Domain_ will show you the Ortelius project is a _Sub-domain_ of the CDF.   
+2) Select GLOBAL.Open Source.Linux Foundation. In the Details, you will see this _Domain_ has two _Subdomains_, the CDF and the OpenSSF. Driving into the GLOBAL.Open Source.Linux Foundation.CDF _Domain_ will show you the Ortelius project is a _Sub-domain_ of the CDF.   
 
 For More information on Domains see - [Building Your _Domain_ Catalog](/userguide/2-defining-domains//)
 

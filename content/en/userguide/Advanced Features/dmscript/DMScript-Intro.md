@@ -243,7 +243,7 @@ Variables can be either simple _Scalar Variables_ (i.e. variables that hold eith
 
 NOTE: _DMScript_ does not support floating point variables.
 
-Objects have _Properties_ and _Methods_ associated with them. Nearly every object has a name property (which returns the object's name) and an id property (which returns the object's unique internal ID).
+Objects have _Properties_ and _Methods_ associated with them. Nearly every object has a name property (which returns the object's name) and an ID property (which returns the object's unique internal ID).
 
 Properties are returned by appending the property name to the object variable name with an intervening period. To reference the entire property, the complete variable name must be enclosed with braces.
 

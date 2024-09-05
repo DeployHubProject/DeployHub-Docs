@@ -1,7 +1,7 @@
 
 ## Deployment Tasks
 
-Task are used for executing deployments, managing approvals, or staging a deployment. Tasks can be assigned to any _Domain_. However, they are most commonly associated to _Project Domains_. You can assign a Task at a higher _Domain_ level allowing any child _Domains_ to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your _Sub-Domains_. However, this means that a Catalog _Domain_ may include Tasks that it cannot use.
+Task are used for executing deployments, managing approvals, or staging a deployment. Tasks can be assigned to any _Domain_. However, they are most commonly associated to _Project Domains_. You can assign a Task at a higher _Domain_ level allowing any child _Domains_ to automatically inherit the Tasks. This inheritance simplifies managing Tasks by making some common to all of your _Subdomains_. However, this means that a Catalog _Domain_ may include Tasks that it cannot use.
 
 The following Tasks are available as default Tasks, but you can create any type of custom Task. A custom Task will call a Custom [_Action_](/userguide/advanced-features/deployments/2-define-your-actions/):
 
@@ -34,7 +34,7 @@ Deploys an _Application_ or _Release_ version to an _Environment_. Select the ta
 | **Modified**                  | Auto-generated date and time when updated.                                                       |
 | **Pre-Action**                | Change the default behavior by assigning a custom _Action_ to execute as a Pre-processing step.  |
 | **Post-Action**               | Change the default behavior by assigning a custom _Action_ to execute as a Post-processing step. |
-| **Available in _Sub-Domains_** | If selected, all _Sub-Domains_ will have access to this Task.                                     |
+| **Available in _Subdomains_** | If selected, all _Subdomains_ will have access to this Task.                                     |
 
 ### Manually Trigger _Action_ to be executed
 
@@ -48,7 +48,7 @@ Runs a stand-alone _Action_. For example, if you need to interrupt a deployment 
 | **Pre-Action**                        | You can change the default behavior by assigning a custom _Action_ to execute as a Pre-processing step.                                                                                                                     |
 | **Post-Action**                       | You can change the default behavior by assigning a custom _Action_ to execute as a Post-processing step.                                                                                                                    |
 | **Action to Run**                     | The Action that will be executed manually.                                                                                                                                                                                  |
-| **Available in _Sub-Domains_**         | If selected, all _Sub-Domains_ will have access to this Task.                                                                                                                                                                |
+| **Available in _Subdomains_**         | If selected, all _Subdomains_ will have access to this Task.                                                                                                                                                                |
 | **Success _Notify Template_**         | The _Notify Template_ that will be emailed on a successful _Action_. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/advanced-features/deployments/2-notifier-templates/). |
 | **Failure _Notify Template_**         | The _Notify Template_ that will be emailed on a failed _Action_. You will need to define the _Notify Template_ from the Setup Menu.  See more on [_Notify Templates_](/userguide/advanced-features/deployments/2-notifier-templates/).     |
 

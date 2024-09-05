@@ -5,11 +5,11 @@ weight: 5
 description: >
   Introduction and the Login API
 ---
-APIs can be used to extract and update DeployHub [Objects](/userguide/concepts/1-deployhub-basic-concepts/).  The most common use for APIs is to integrate DeployHub into your continuous delivery engine for a continuous configuration management and deploy process.  APIs are generally used for executing deployments, but can also be used to automatically update _Component_ and _Application_ versions.  
+APIs can be used to extract and update DeployHub [Objects](/userguide/concepts/1-deployhub-basic-concepts/) for custom security reporting or integration into external systems.  
 
 ## Object Accessibility
 
-APIs rely _User and Group_ access to determine if the call is allowed. The Objects that are accessible via the API are restricted based on the logged-in user. Only Objects that are contained within the user's home _Domain_ and any _Sub-Domains_ are accessible via the API.
+APIs rely _User and Group_ access to determine if the call is allowed. The Objects that are accessible via the API are restricted based on the logged-in user. Only Objects that are contained within the user's home _Domain_ and any _Subdomains_ are accessible via the API.
 
 If a requested object does not have "read" permission then it cannot be accessed via the API. Similarly, attempting to modify Objects which do not have the appropriate "change" permission is also prohibited. In such cases, the "success" flag returned is "false" and the error is "Permission Denied".
 
@@ -37,7 +37,7 @@ The query tools in the API return the object's internal ID as well as its name. 
 
 To use the ID, just place it where you would normally place the object's name. The APIs will assume you're specifying an ID if the name given is fully-numeric.
 
-_Do not create objects with fully numeric names - DeployHub will not be able to determine if this is an object id or the object name._
+_Do not create objects with fully numeric names - DeployHub will not be able to determine if this is an object ID or the object name._
 
 ## Using cURL to access the API
 
@@ -51,7 +51,7 @@ _Do not create objects with fully numeric names - DeployHub will not be able to 
 
   If the username/password combination is correct, the user is logged in and the success indication is returned. Now we can call any of the other API interfaces by specifying the same file in which we stored the session ID returned from the login call.
   
-  For example, this will return a JSON array containing all the servers in our home and _Sub-Domains_ to which we have view access.
+  For example, this will return a JSON array containing all the servers in our home and _Subdomains_ to which we have view access.
 
   ```bash
     curl --data "all=Y" --cookie c:\temp\session.txt http://mac:8080/dmadminweb/API/servers
@@ -71,7 +71,7 @@ When issuing calls to the API, the client application must either first issue a 
 
 | Name | Located in | Value             | Required | Schema |
 |------|------------|-------------------|----------|--------|
-| user | query      | User Id           | Yes      | string |
+| user | query      | User ID           | Yes      | string |
 | pass | query      | Password for User | Yes      | string |
 
 ### Response

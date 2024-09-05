@@ -81,7 +81,7 @@ In order to connect to Kubernetes cluster running on a cloud provider, an authen
 
 | Key                       | Value                            | Command                                                                 |
 |---------------------------|----------------------------------|-------------------------------------------------------------------------|
-| eks.aws_access_key_id     | access key id                    | aws --profile default configure set aws_access_key_id  <key_id>         |
+| eks.aws_access_key_id     | access key ID                    | aws --profile default configure set aws_access_key_id  <key_id>         |
 | eks.aws_secret_access_key | secret key                       | aws --profile default configure set aws_secret_access_key <access_key>  |
 | eks.region                | region the cluster is running in | aws eks --region <region> update-kubeconfig --name <cluster> <optional> |
 | eks.cluster               | cluster name                     | aws eks --region <region> update-kubeconfig --name <cluster> <optional> |

@@ -12,7 +12,7 @@ The following properties can be accessed on the _Domain_ object:
 
 | **Property**   | **Return Type** | **Description**                                                       |
 |----------------|-----------------|-----------------------------------------------------------------------|
-| id             | Integer         | Domain id, as used in the database.                                   |
+| ID             | Integer         | Domain id, as used in the database.                                   |
 | name           | String          | Domain name.                                                          |
 | fqdomain       | String          | Fully qualified domain name.                                          |
 | summary        | String          | Summary text.                                                         |

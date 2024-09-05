@@ -12,7 +12,7 @@
 | deployid    | integer                                | Is the ID of the deployment (if this is a deployment record), 0 otherwise.               | No       |
 | desc        | string                                 | Is the Description of the event.                                                         | No       |
 | environment | _Event Environment_ Object (see below) | Environment for the even.t                                                               | No       |
-| id          | integer                                | Is the internal event id.                                                                | No       |
+| ID          | integer                                | Is the internal event id.                                                                | No       |
 | pending     | boolean                                | Is a Boolean indicating whether the event is awaiting approval by the environment owner. | No       |
 | title       | string                                 | Is the event title.                                                                      | No       |
 | type        | string                                 | Is the event type.                                                                       | No       |

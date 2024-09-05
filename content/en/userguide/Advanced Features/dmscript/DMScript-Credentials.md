@@ -16,7 +16,7 @@ The following properties can be accessed for a credential object:
 
 | Property | Type    | Description                                  |
 |----------|---------|----------------------------------------------|
-| id       | Integer | _Endpoint_ id, as used in the database.      |
+| ID       | Integer | _Endpoint_ id, as used in the database.      |
 | ---      | ---     | ---                                          |
 | name     | String  | _Endpoint_ name.                             |
 | fqdomain | String  | Fully qualified domain name.                 |

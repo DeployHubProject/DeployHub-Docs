@@ -19,8 +19,8 @@ The following variables are always defined in the Global scope:
 | ARGC       | Count of command line args   | $ARGC              |
 | ARGV       | Array of command line        | ${ARGV[1]}         |
 | DMHOME     | Home directory of engine     | $DMHOME/demo\_repo |
-| $          | Process id of engine process | $$                 |
-| JSESSIONID | The session id of the Web UI | $JSESSIONID        |
+| $          | Process ID of engine process | $$                 |
+| JSESSIONID | The session ID of the Web UI | $JSESSIONID        |
 
 You can use $DMHOME to reference files that are stored in directories relative to the DeployHub engine installation location.
 

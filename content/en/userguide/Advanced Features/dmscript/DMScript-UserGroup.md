@@ -12,7 +12,7 @@ The following properties can be accessed on the UserGroup object:
 
 | **Property** | **Return Type** | **Description**                                                                                   |
 |--------------|-----------------|---------------------------------------------------------------------------------------------------|
-| id           | Integer         | UserGroup id, as used in the database.                                                            |
+| ID           | Integer         | UserGroup id, as used in the database.                                                            |
 | ---          | ---             | ---                                                                                               |
 | name         | String          | UserGroup Name.                                                                                   |
 | kind         | String          | Returns "group". Used to differentiate between users and groups where retrieving an owner object. |
