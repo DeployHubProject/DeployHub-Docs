@@ -215,7 +215,7 @@ When integrated with your CI/CD engine, DeployHub tracks the DevOps data from th
 
 ### Helm Details
 
-Helm can be used for deploying Container _Components_. DeployHub interfaces with Helm to support a Kubernetes Cluster deployment. Follow the steps at [Helm for Container Deployments](/userguide/integrations/helm).
+Helm can be used for deploying Container _Components_. DeployHub interfaces with Helm to support a Kubernetes Cluster deployment. Follow the steps at [Helm for Container Deployments](/userguide/integrations/helm/).
 
 A Container _Component_ has the following optional attributes:
 
