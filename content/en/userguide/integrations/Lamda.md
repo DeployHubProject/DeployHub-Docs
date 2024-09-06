@@ -1,7 +1,7 @@
 ---
 title: "AWS Lamda"
 linkTitle: "AWS Lamda"
-weight: 330
+weight: 319
 description: >
   Versioning your AWS Lamda Functions.
 ---

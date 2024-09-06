@@ -6,6 +6,8 @@ description: >
   Executing deployments requiring a WebSphere Server.
 ---
 
+![Websphere](/userguide/images/websphere.png)
+
 A DeployHub deployment can point to one or more _Repositories_ which contain the artifacts (.ear, .jar, and .war files) that make up a WebSphere application. These are referenced in DeployHub by one or more _Components_ (and one or more of their _Component__Items_) within an _Application_. A _Post Action_ is then executed which deploys these artifacts into WebSphere. The user creates the _Action_, which itself contains _Procedures_. The Procedure defined to the _Action_ for a WebSphere deployment is called "WebSphereDeploy."
 
 ## Creating the WebSphere Action

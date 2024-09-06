@@ -1,10 +1,12 @@
 ---
-title: "Application Compliance Summary Report"
-linkTitle: "Application Compliance Summary Report"
-weight: 305
+title: "Compliance Summary Report"
+linkTitle: "Compliance Summary Report"
+weight: 303
 description: >
-  Viewing the Compliance Summary Report
+  Viewing the Compliance Summary Report based on an Application Version.
 ---
+
+![Compliance Summary](/userguide/images/compliance-small.png)
 
 ## Compliance Summary Report
 

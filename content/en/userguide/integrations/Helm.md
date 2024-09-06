@@ -1,7 +1,7 @@
 ---
 title: "Helm for Container Deployments"
 linkTitle: "Helm for Container Deployments"
-weight: 312
+weight: 311
 description: >
   Using Helm to execute deployments as an _Action_.
 ---

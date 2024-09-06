@@ -1,7 +1,7 @@
 ---
 title: "CI/CD and DeployHub"
 linkTitle: "CI/CD and DeployHub"
-weight: 303
+weight: 302
 description: >
   Integrating DeployHub into your CI/CD process.
 ---

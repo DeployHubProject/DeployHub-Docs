@@ -1,10 +1,12 @@
 ---
 title: "Jira, Bugzilla and GitHub Issues"
 linkTitle: "Jira, Bugzilla and GitHub Issues"
-weight: 320
+weight: 314
 description: >
   Tracking Change Request with DeployHub.
 ---
+
+![Bugzilla, Jira, GitHub](/userguide/images/bugzilla-jira-github.png)
 
 {{% include "userguide/reusable/ChangeRequest.md" %}}
 

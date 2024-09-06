@@ -5,4 +5,7 @@ weight: 387
 description: >
   Integrating SVN as a DeployHub Repository.
 ---
+
+![SBOM Tools](/userguide/images/subversion.png)
+
 {{% include "/userguide/reusable/SVN.md/" %}}

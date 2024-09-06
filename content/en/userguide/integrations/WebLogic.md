@@ -6,6 +6,9 @@ description: >
   Executing deployments requiring a Weblogic Server.
 ---
 
+![Weblogic](/userguide/images/weblogic.png)
+
+
 ## Introduction to the WebLogic DeployHub Integration
 
 The DeployHub WebLogic integration supports a WebLogic deployment using a _Post Action_ at the _Component_ level. This _Post Action_  installs your WebLogic solution binaries (.ear, .jar, and .war files) by loading them into the correct WebLogic target.  The process will first send your solution binaries to the the WebLogic Server. The _Post Action_ performs the load into the target.

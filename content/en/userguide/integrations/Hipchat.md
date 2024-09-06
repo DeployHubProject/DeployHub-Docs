@@ -1,7 +1,7 @@
 ---
 title: "HipChat"
 linkTitle: "HipChat"
-weight: 315
+weight: 312
 description: >
   Integrating HipChat with DeployHub Notifiers.
 ---

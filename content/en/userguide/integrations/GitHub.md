@@ -1,37 +1,74 @@
 ---
-title: "GitHub"
-linkTitle: "GitHub"
+title: "Git Repo Integration"
+linkTitle: "Git Repo Integration"
 weight: 310
 description: >
-  Integrating GitHub Repository and Issues with DeployHub.
+  Integrating with Git Repos such as  GitHub or GitLab 
 ---
 
-![GitHub](/userguide/images/GitHub-Logo.png)
+![Git](/userguide/images/git.png)
 
-DeployHub supports GitHub in the following ways.
+DeployHub supports [GitHub](https://github.com/) or [GitLab](https://about.gitlab.com/) in the following ways.
 
-1. A binary Repository for retrieving artifacts to deploy such as binaries or scripts.
-2. GitHub Issue Tracking. A bridge connects a GitHub issue with a DeployHub Change Request.
+1. The collection of Git information for security purposes. 
+2. A binary Repository for retrieving artifacts to deploy such as binaries or scripts.
+3. GitHub Issue Tracking. A bridge connects a GitHub issue with a DeployHub Change Request.
 
-## GitHub as a Binary Repository
+## The Collection of GitHub Metrics and Metadata
+
+DeployHub stores the Git Metrics and Metadata for informational, mapping and computational purposes.  This is done for any Git Repository, such as GitHub, GitLab etc.
+
+DeployHub integrates with Git using the [CI/CD Command Line Interface](/guides/userguide/integrations/ci-cd_integrations/) (CLI). For every _Component Version_, the CLI gathers and stores the following:
+
+| Field in Git Details Section | Description                                                     |
+|------------------------------|-----------------------------------------------------------------|
+| Git Commit                   | Git commit that triggered the CI job (DERIVED IF NOT SPECIFIED) |
+| Git Repo                     | Git repo that triggered the CI job (DERIVED IF NOT SPECIFIED)   |
+| Git Tag                      | Git tag in the git repo (DERIVED IF NOT SPECIFIED)              |
+| Git Url                      | Full url to the git repo (DERIVED IF NOT SPECIFIED)             |
+| Purl                         | Purl for the _Component Version_ (DERIVED IF NOT SPECIFIED)     |
+
+
+| Key in Key Value Configuration | Description                                                                    |
+|--------------------------------|--------------------------------------------------------------------------------|
+| Git Branch                     | Git branch in the git repo (DERIVED IF NOT SPECIFIED)                          |
+| Git Branch Create Commit       | Git commit that the branch was created from (DERIVED IF NOT SPECIFIED)         |
+| Git Branch Create Timestamp    | Timestamp of when the branch was created (DERIVED IF NOT SPECIFIED)            |
+| Git Branch Parent              | The parent branch for the current branch (DERIVED IF NOT SPECIFIED)            |
+| Git Commit Authors             | List of committers for the repo (DERIVED IF NOT SPECIFIED)                     |
+| Git Committers Cnt             | Count of Git Commit Authors (DERIVED IF NOT SPECIFIED)                         |
+| Git Commit Timestamp           | Timestamp of the current commit (DERIVED IF NOT SPECIFIED)                     |
+| Git Contrib Percentage         | Git Committers Cnt / Git Total Committers Cnt * 100 (DERIVED IF NOT SPECIFIED) |
+| Git Lines Added                | Lines added since the previous commit (DERIVED IF NOT SPECIFIED)               |
+| Git Lines Deleted              | Lines deleted since the previous commit (DERIVED IF NOT SPECIFIED)             |
+| Git Lines Total                | Total line count for the branch (DERIVED IF NOT SPECIFIED)                     |
+| Git Org                        | Organization for the repo (DERIVED IF NOT SPECIFIED)                           |
+| Git Repo Project               | Project name part of the repository url (DERIVED IF NOT SPECIFIED)             |
+| Git Total Committers Cnt       | Total committers working on this repo                                          |
+
+These values are displayed for every _Component Version_ and viewable from the _Component Detail_ dashboard.
+
+
+
+## Git as a Binary Repository
 
 You can configure DeployHub to call out to a Git Repo to pull deployable artifacts (binaries, scripts, etc.) as part of your deployment.  The process will check out your deployable artifacts based on commit, branch or tag specified. You will need to configure DeployHub with a file system DeployHub _Repository_ that will pull the files need for the deployment.  You will also need to create a "Git Checkout" _Procedure_ and _Action_.  
 
 **Step 1 - Create a DeployHub File System _Repository_**
 
-DeployHub can use GitHub as a binary repository for retrieving deployable objects as part of the deployment process.  To do this you will first need to define GitHub as a connected _Repository_ Object from within DeployHub. This connection will be used by as part of the deployment process using a _Procedure_ and a _Action_. For information on setting up File System as a binary repository see [Connect Your Repositories](/userguide/advanced-features/deployments/2-define-repositories/).
+DeployHub can use Git as a binary repository for retrieving deployable objects as part of the deployment process.  To do this you will first need to define GitHub as a connected _Repository_ Object from within DeployHub. This connection will be used by as part of the deployment process using a _Procedure_ and a _Action_. For information on setting up File System as a binary repository see [Connect Your Repositories](/userguide/advanced-features/deployments/2-define-repositories/).
 
 Once you have completed this step, you are ready to create a new _Procedure_ that performs the check out from the GitHub repository.
 
-**Step 2 - Create your GitHub Checkout _Procedure_ for your _Action_**
+**Step 2 - Create your Git Checkout _Procedure_ for your _Action_**
 
-_Procedures_ are called by _Actions_ to execute deployment logic. A pre-defined DeployHub _Procedure__is available from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). This where you will find the most current version of this _Procedure_. For more information on creating_Procedures see [Functions and Procedures](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/).
+_Procedures_ are called by _Actions_ to execute deployment logic. A pre-defined DeployHub _Procedure__is available from the [DeployHub Git Repo](https://github.com/DeployHubProject/DeployHub-Pro/tree/main/procedures). This where you will find the most current version of this _Procedure_. For more information on creating_Procedures see [Functions and Procedures](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/).
 
-From the Ortelius Git Repo, pull the file named **GitCheckout.re**
+From the DeployHub Git Repo, pull the file named **GitCheckout.re**
 
 Once downloaded, you will need to Import it into DeployHub from the Func/Procs List View. Navigate to the List View by selecting the Func/Procs menu option on the left hand side of the DeployHub main panel. From the Func/Procs List view select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the GitCheckout.re file.  Next, select your _Domain_ and upload the _Procedure_ into the DeployHub. You are now ready to create your _Action_.
 
-**Step 3 - Create your _Action_ for the GitHub Checkout _Procedure_**
+**Step 3 - Create your _Action_ for the Git Checkout _Procedure_**
 
 Once you have imported your GitCheckout.re _Procedure_, you can define your _Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub main panel. Use the +Add option to create a new _Action_ for you _Procedure_. Name the new _Action_ **GitCheckAction** (no spaces). See [Customize Your Actions](/userguide/integrations/intro-to-integrations/) for more information on creating _Actions_.
 
@@ -66,8 +103,8 @@ The following variables must be added to the Attributes Section for all  _Compon
 
 ## GitHub Issues and DeployHub Change Request
 
-DeployHub can reference the GitHub issues to track Change Request for _Components_ and _Applications_. This enables the GitHub issues to be viewed from a _Component_ or _Application_ using the DeployHub  _Change Request_ section from the _Component_ or _Application_. If you have a _Release_ defined, these GitHub issues will be rolled up from the _Component_ and _Application_ to the _Release_.
+DeployHub can reference the Git issues to track Change Request for _Components_ and _Applications_. This enables the Git issues to be viewed from a _Component_ or _Application_ using the DeployHub  _Change Request_ section from the _Component_ or _Application_. If you have a _Release_ defined, these GitHub issues will be rolled up from the _Component_ and _Application_ to the _Release_.
 
-For more information see [Tracking Jira, Bugzilla and GitHub Issue](/userguide/integrations/jira-bugzilla-and-git-issues/).
+For more information see [Tracking Jira, Bugzilla and Git Issue](/userguide/integrations/jira-bugzilla-and-git-issues/).
 
 
