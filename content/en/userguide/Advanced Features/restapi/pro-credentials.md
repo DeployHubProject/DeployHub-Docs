@@ -10,7 +10,7 @@ description: >
 
 This call creates a new credential. All of the attributes of the new _Credential_ are set through parameters to the API. If "_Domain_" is not specified then the _Environment_ is created in the logged in _User's_ home _Domain_.
 
-### REST Api Endpoint /dmadminweb/API/new/credential/{cred_id}
+### REST API Endpoint /dmadminweb/API/new/credential/{cred_id}
 
 | HTTP Verb | URL                                      |
 |-----------|------------------------------------------|
@@ -35,7 +35,7 @@ This call creates a new credential. All of the attributes of the new _Credential
 
 This call deletes a _Credential_.
 
-### REST Api Endpoint /dmadminweb/API/del/credential/{cred_id}
+### REST API Endpoint /dmadminweb/API/del/credential/{cred_id}
 
 | HTTP Verb | URL                                      |
 |-----------|------------------------------------------|

@@ -52,6 +52,3 @@ You execute a roll forward or rollback deployment on-demand. To roll forward or 
 DeployHub is added to your CD pipeline to perform continuous configuration management of your _Applications_ and _Components_, and to push them to runtime _Environments_ across your defined pipeline. Learn more by reading the [CI/CD Chapter](/userguide/integrations/ci-cd_integrations/)
 
 
-
-
-{{% include "userguide/reusable/Tasks.md" %}}

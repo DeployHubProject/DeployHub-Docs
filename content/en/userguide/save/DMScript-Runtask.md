@@ -1,10 +1,3 @@
----
-title: "Runtask"
-linkTitle: "Runtask"
-weight: 94
-description: >
-  Invoke a Task associated to a Domain.
----
 
 ## runtask
 

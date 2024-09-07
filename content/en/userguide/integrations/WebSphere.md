@@ -46,7 +46,6 @@ The _Action_ can now be placed into the _Post Action field_ of a _Component_ as 
 | **AllowDispatchRemoteInclude** | Checkbox           | Select to enable dispatch of remote include   |
 | **AllowServiceRemoteInclude**  | Checkbox           | Select to enable service to remove include    |
 | **UseAutoLink**                | Checkbox           | Select to use auto link                       |
-| **Tasks**                      | ${Tasks}           | Admin tasks to perform                        |
 
 **Set Your _Component_ Attributes_**
 
@@ -59,7 +58,7 @@ The following variables must be added to the Attributes Section for all  _Compon
 | **ContextRoot** | Context Root for the application                             |
 | **NodeName**    | Name of the Node                                             |
 | **CellName**    | Name of the Cell                                             |
-| **Tasks**       | Use "changedDataSource,stopAndRemoveApp,installApp,startApp" |
+
 
 For more information see:
 

@@ -21,7 +21,7 @@ This call returns an array of JSON objects representing each _Application_ to wh
 
 If the "all" parameters is not specified then only the _Applications_ associated with the _User's_ home _Domain_ are listed. If the "all" parameter is specified by setting it to "y" then the result includes the _Applications_ in all accessible _Subdomains_.
 
-### REST Api Endpoint 
+### REST API Endpoint 
 
 | HTTP Verb | URL                          |
 |-----------|------------------------------|
@@ -41,7 +41,7 @@ If the "all" parameters is not specified then only the _Applications_ associated
 
 This call returns a JSON object representing the specified _Application_. The resulting JSON will vary slightly depending on whether the specified _Application_ is an _Application Base Version_ or an _Application Version_.
 
-### REST Api Endpoint 
+### REST API Endpoint 
 
 | HTTP Verb | URL                                      |
 |-----------|------------------------------------------|
@@ -64,7 +64,7 @@ This call creates a new _Application Version_. The new _Application Version_ inh
 
 This mechanism ensures that the invoking user has permission to create a new version of the _Application_ (since the permissions are checked against the _Task_) and also the target _Domain_ (i.e. the _Domain_ in which the new _Application_ is created) is determined from the _Task_. Also, by specifying the _Task_ to execute, any pre and post link _Actions_ are executed just as if the _Task_ had been invoked via the Web UI.
 
-### REST Api Endpoint
+### REST API Endpoint
 
 | HTTP Verb | URL                                 |
 |-----------|-------------------------------------|
@@ -105,7 +105,7 @@ In order for this to work through the permission model, there has to be an _Appr
 
 This mechanism ensures that the invoking user has permission to approve the _Application_ (since the permissions are checked against the named _Task_) and also the target _Domain_ (i.e. the _Domain_ to which the _Application_ is being approved/rejected) is determined from the _Task_. Also, by specifying the _Task_ to execute, any Pre and Post _Actions_ are executed just as if the _Task_ had been invoked via the Web UI.
 
-### REST Api Endpoint 
+### REST API Endpoint 
 
 | HTTP Verb | URL                              |
 |-----------|----------------------------------|
@@ -126,7 +126,7 @@ This mechanism ensures that the invoking user has permission to approve the _App
 
 This call associates an existing _Application_ with an _Environment_. This association allows the _Application_ (or any of its Versions) to be deployed to that _Environment_. An _Application_ needs to be assigned to an _Environment_ before it can be deployed to that _Environment_.
 
-### REST Api Endpoint 
+### REST API Endpoint 
 
 | HTTP Verb | URL                                                  |
 |-----------|------------------------------------------------------|

@@ -30,7 +30,7 @@ Following is a description of each Object and their attributes.
 
 ### _Domain_ Object
 
-The [_Domain_ Object](/userguide/2-defining-domains/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Subdomains_. _Subdomains_ inherit the parents properties, _Tasks_ and access.
+The [_Domain_ Object](/userguide/2-defining-domains/) represents the highest order of organization for managing _Applications_, _Components_ and _Environments_. _Domains_ are hierarchical and can have _Subdomains_. _Subdomains_ inherit the parents properties, and access.
 
 ![Example of Domains, Applications, Components and Environments](/userguide/images/OnlineStore-Domains.jpg)
 

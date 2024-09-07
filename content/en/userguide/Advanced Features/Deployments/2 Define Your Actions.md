@@ -14,7 +14,7 @@ In addition, a _Custom Action_ can replace the usual DeployHub deployment engine
 
 ### Procedures and Functions
 
-_Actions_ are used to customize DeployHub around deployments, and _Tasks_.  For most users, no configuration of _Actions_ is required.  However, if you want to use your own deployment scripts, then you will need to use a _Custom Action_.  This section will get you started on creating your own _Actions._
+_Actions_ are used to customize DeployHub around deployments.  For most users, no configuration of _Actions_ is required.  However, if you want to use your own deployment scripts, then you will need to use a _Custom Action_.  This section will get you started on creating your own _Actions._
 
 DeployHub comes with a set of reusable Built-in _Actions_. An _Action_ includes a set of _Functions_ and/or _Procedures_ which are executed in sequence to provide the logic of a _Component's_ deployment. _Actions_ can also be used as Pre or Post deployment steps to an _Application_ or _Release_.  
 
@@ -92,8 +92,6 @@ The Access Section allows _Users_ within designated _Groups_ to update the _Acti
 | **View**    | Allows _Users_ to see the _Action_. If the _User_ does not belong to a _Group_ in the View Access list, the _Action_ will not appear in the List View. |
 | **Change**  | Allows _User_ to change the _Action’s_ characteristics i.e. Name, Summary, etc.                                                                        |
 | **Execute** | Allows _Users_ to execute this _Action_.                                                                                                               |
-
-NOTE: **DeployHub Team** has only two Groups, _Administrators_ and _Users_. 
 
 {{% include "userguide/reusable/AuditTrail.md" %}}
 

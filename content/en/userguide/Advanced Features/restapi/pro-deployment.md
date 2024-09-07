@@ -12,9 +12,9 @@ This call starts a deployment of the specified _Application_ into the specified 
 
 In order for API deployments to work through the permission model, there has to be a Deploy task either in the _Domain_ in which the specified _Application_ is located or in any of the parent _Domains_ if the Deploy task is set to be available to _Subdomains_. This mechanism ensures that the invoking user has permission to deploy the _Application_ (since the permissions are checked against the Task). Also, by specifying the Task to execute, any Pre and Post link _Actions_ are executed just as if the task had been invoked via the Web UI.
 
-Note - Any additional parameters are created as Global Variables accessible with a url_prefix. For example, if you passed "myparam=123" as a parameter in the "deploy" api call, it would be available as $url_myparam.
+Note - Any additional parameters are created as Global Variables accessible with a url_prefix. For example, if you passed "myparam=123" as a parameter in the "deploy" API call, it would be available as $url_myparam.
 
-### REST Api Endpoint /dmadminweb/API/deploy/{app_id}/{env_id}
+### REST API Endpoint /dmadminweb/API/deploy/{app_id}/{env_id}
 
 | HTTP Verb | URL                                      |
 |-----------|------------------------------------------|

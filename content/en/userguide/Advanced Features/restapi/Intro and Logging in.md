@@ -61,7 +61,7 @@ _Do not create objects with fully numeric names - DeployHub will not be able to 
 
 When issuing calls to the API, the client application must either first issue a "login" call, specifying the username and password or must specify the username and password in each individual call to the API.
 
-### REST Api Endpoint /dmadminweb/API/login
+### REST API Endpoint /dmadminweb/API/login
 
 | HTTP Verb | URL                   |
 |-----------|-----------------------|

@@ -64,8 +64,6 @@ The following details are common to all _Users_:
 
 This Section contains a list of all the _Groups_ the selected _User_ belongs to. Add a _Group_ to the selected _User_ by clicking on the plus '+Add' sign in the upper right, which adds an empty row to the table with a drop down list of all available _Groups_. Use the Save option to commit it to the table. Use the Trash Can icon to delete a _Group_ from the table.
 
-DeployHub Team has two _Groups_, Administrators and Users, to which _Users_ can be assigned.  Access control to Objects are based on these two high level _Groups_. DeployHub Team allows you to create as many _Users_ as required but only the "User" and "Administrator" _Groups_ are supported.
-
 DeployHub allows you to create custom _Groups_ for assigning _Users_ giving you more security control around the Objects. For information on how to create _User_ _Groups_ with DeployHub see [Creating User Groups](/userguide/user-groups/.)
 
 {{% include "userguide/reusable/AuditTrail.md" %}}

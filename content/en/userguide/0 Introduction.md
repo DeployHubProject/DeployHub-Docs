@@ -8,11 +8,9 @@ description: >
 
 ## Why Use DeployHub
 
-DeployHub is a Continuous Security Intelligence solution designed for decoupled architectures. DeployHub  monitors and collects DevSecOps data from the CI/CD pipeline for every artifact. It unifies the data generated across your pipeline, offering a consolidated security profile of the software delivered to end users. With DeployHub’s integrated security intelligence, you can quickly respond to vulnerabilities and issues, gaining a clear view of how a vulnerable package is used, which applications depend on it, and where it has been deployed.  
+DeployHub is a Continuous Security Intelligence solution designed for decoupled architectures. DeployHub  monitors and collects DevSecOps data from the CI/CD pipeline for every artifact. It unifies the data generated across the pipeline, offering a consolidated security profile of the software delivered to end users. With DeployHub’s integrated security intelligence, IT Teams can quickly respond to vulnerabilities and issues, gaining a clear view of how a vulnerable package is used, which applications depend on it, and where it has been deployed.  
 
 ![Supply Chain Catalog](/userguide/images/supplychaincatalog.png/)
-
-DeployHub is based on the open-source Continuous Delivery Foundation project, [Ortelius.io](https://ortelius.io)
 
 ### Security Postures in Decoupled Environments
 
@@ -83,20 +81,23 @@ DeployHub is automated via the CD Pipeline to continuously version your decouple
 
  The DeployHub Domain structure organizes the software supply chain to encourage reuse and sharing across development teams.
 
-## DeployHub Team - Free Version
+## Ortelius Open Source - Free Version
 
-A free version of DeployHub is available and based upon the [Ortleius](https://www.Ortelius.io/) open source project. DeployHub Team can be used from the hosted site or installed on premise. It is a strategic and fully open source continuous security intelligence system that integrates with your DevOps tools. It supports unlimited endpoints, versions, and users. [Learn more](/userguide/0-ortelius-tutorial/). 
+DeployHub is based on the [Ortleius](https://www.Ortelius.io/) open source project, incubating at the [Continuous Delivery Foundation](https://cd.foundation). DeployHub provides a hosted version of Ortelius, or an on premise installation. Ortelius is a free open source continuous security intelligence system that integrates with your DevOps tools. It supports unlimited endpoints, versions, and users. [Learn more](/userguide/0-ortelius-tutorial/). 
 
-## DeployHub Pro
+## DeployHub Upgrade from Ortelius Open Source
 
-For additional security features and support, DeployHub Pro includes extended Users and Group access controls as well as more granular _Domains_.
+For the enterprise that needs more control over the software supply chain, and deployment features, DeployHub provides an upgrade that includes:
 
-Unique to DeployHub Pro are "Divisional Domains." These _Domains_ allow you to expand and model your environments based on your organizational top-down structure. It also gives you the ability to restrict read/write access to only certain Groups of Users.
+### Security Groups
+For additional security features and support, DeployHub extends Users and Group access controls, with LDAP, and more granular _Domains_ and _Subdomains_.
+
+Unique to DeployHub are "Divisional Domains." These _Domains_ allow IT Teams to model how DeployHub organizes data based on a Domain Driven Design (DDD).  It also provides the ability to restrict read/write access to only certain Groups of Users.
 
 
-### DeployHub Pro's Agentless Delivery
+### DeployHub Agentless Delivery
 
-If you do not have a centralized solution for automating deployments, DeployHub can help. DeployHub Pro includes a deployment engine for pushing _Components_ to your _Endpoints_ (Clusters, Cloud, etc.) using an agentless architecture. The deployment engine can support containers and any type of file object including executables, jar files, Apex files, and Lamda functions.
+DeployHub can help IT Teams who do not use a centralized solution for automating deployments. DeployHub includes a deployment engine for pushing _Components_ to _Endpoints_ (Clusters, Cloud, etc.) using an agentless architecture. The deployment engine can support containers and any type of file object including executables, jar files, Apex files, and Lamda functions.
 
 This agentless technology works for both cloud native and legacy architectures including:
 

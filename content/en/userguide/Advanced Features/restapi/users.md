@@ -11,7 +11,7 @@ description: >
 
 This call assigns an existing _User_ to a _Group_. Once a user has been assigned to the group then the _User_ will have access to any object to which the _Group_ has been granted appropriate access.
 
-### REST Api Endpoint /dmadminweb/API/assign/user/{user_id}/{group_id}
+### REST API Endpoint /dmadminweb/API/assign/user/{user_id}/{group_id}
 
 | HTTP Verb | URL                                              |
 |-----------|--------------------------------------------------|
@@ -30,7 +30,7 @@ This call assigns an existing _User_ to a _Group_. Once a user has been assigned
 
 This call disassociates a _User_ from a _Group_. Once a _User_ has been removed from the _Group_ they no longer have access to any object to which access has been granted through the _Group_.
 
-### REST Api Endpoint /dmadminweb/API/unassign/user/{user_id}/{group_id}
+### REST API Endpoint /dmadminweb/API/unassign/user/{user_id}/{group_id}
 
 | HTTP Verb | URL                                                |
 |-----------|----------------------------------------------------|
