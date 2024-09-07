@@ -10,7 +10,7 @@ description: >
 
 ## Compliance Summary Report
 
-DeployHub gathers _Application Version_ security compliance insights from a variety of sources and displays the information using the Compliance Summary report. 
+DeployHub gathers _Application Version_ security compliance insights from a variety of sources and displays the information using the Compliance Summary report.  Data collection is done via the [CI/CD Integration](/guides/userguide/integrations/ci-cd_integrations/).
 
 ### Generating the Compliance Summary Report
 

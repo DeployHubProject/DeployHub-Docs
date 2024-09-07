@@ -6,6 +6,11 @@ description: >
   Get a list of Environments.
 ---
 
+## Retrieve SBOM PDF for a Environment
+
+See [ms-sbom-export microservice Swagger](https://github.com/ortelius/ms-sbom-export?tab=readme-ov-file#readme)
+
+
 ## List Environments
 
 This call returns an array of JSON objects representing each _Environment_ to
@@ -13,7 +18,7 @@ which the logged-in _User_ has access.
 
 If the all parameter is not specified then only the _Environments_ associated with the _User's_ home _Domain_ are listed. If the all parameter is specified and is set to "y", for yes, then the result includes the _Environments_ included in any accessible _Subdomains_.
 
-### REST Api Endpoint /dmadminweb/API/environments
+### REST Api Endpoint 
 
 | HTTP Verb | URL                          |
 |-----------|------------------------------|
@@ -32,13 +37,13 @@ If the all parameter is not specified then only the _Environments_ associated wi
 
 This call returns a JSON object representing the specified _Environment_.
 
-### REST Api Endpoint /dmadminweb/API/environment/{identifier}
+### REST Api Endpoint 
 
 | HTTP Verb | URL                                      |
 |-----------|------------------------------------------|
 | GET       | /dmadminweb/API/environment/{identifier} |
 
-### Parameters for /dmadminweb/API/environment/{identifier}
+### Parameters 
 
 | Name       | Located in | Description                                                                                                                                                               | Required | Schema |
 |------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|--------|
