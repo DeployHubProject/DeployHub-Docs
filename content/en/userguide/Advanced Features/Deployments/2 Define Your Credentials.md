@@ -18,7 +18,7 @@ You may not need _Credentials_ if you only deploy containers. DeployHub uses Hel
 
 ## Use the Credential List View for Adding or Deleting
 
-_Credentials_ are found under the **Setup** menu on the left of the DeployHub main panel. By selecting the _Credentials_ menu, you see a list of all _Credentials_ to which you have access. You can also use the Search bar, represented by a funnel icon, to filter _Credentials_ based on Name or _Domain_.
+_Credentials_ are found under the Advanced Features menu on the left of the DeployHub main panel. By selecting the _Credentials_ menu, you see a list of all _Credentials_ to which you have access. You can also use the Search bar, represented by a funnel icon, to filter _Credentials_ based on Name or _Domain_.
 
 The _Credentials_ List View has the following Tabs:
 

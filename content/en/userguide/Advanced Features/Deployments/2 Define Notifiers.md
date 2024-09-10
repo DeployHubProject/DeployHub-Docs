@@ -25,7 +25,7 @@ Using these two objects, _Notifiers_ and _Notifier Templates_, notifications can
 
 ## Using the _Notifiers_ List View for Adding or Deleting
 
-You will find _Notifiers_ under the Setup menu.  Selecting _Notifiers_ will take you to a list of all _Notifiers_ to which you have access. You can also use the Filter bar, represented by a funnel icon, to reorder your _Notifiers_ List View.  You can reorder the list view on _Notifiers_ and _Domains_
+You will find _Notifiers_ under the Advanced Features menu.  Selecting _Notifiers_ will take you to a list of all _Notifiers_ to which you have access. You can also use the Filter bar, represented by a funnel icon, to reorder your _Notifiers_ List View.  You can reorder the list view on _Notifiers_ and _Domains_
 
 _Notifiers_ are defined to a _Domain_ and will be displayed based on your access to the _Domain_ to which it belongs.
 

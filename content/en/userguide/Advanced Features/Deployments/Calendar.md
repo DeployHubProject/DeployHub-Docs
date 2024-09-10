@@ -13,7 +13,7 @@ description: >
 - Automatically deploy an _Application_ or _Release_ into the _Environment_ on a certain date and time.
 - Reserve a date to deploy on-demand an _Application_ or _Release_, preventing other _Users_ from performing deployments into the same _Environment_.
 - Block a timeframe from receiving any _Application_ or _Release_ deployments.
-- Open a timeframe to auto-approve an _Application_ or _Release_ deployment.
+
 
 When viewing a _Calendar_ by Month, Week, or Day you can click on a place within a selected day and drag the mouse pointer down in order to select the time span for the event. A light blue area appears, covering the selected time. Right click on this area and select "_Create New Event_." A pop-up window appears with buttons that are used to set the selected time period to one of the three types listed above.
 

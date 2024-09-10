@@ -53,7 +53,10 @@ When scrolling up or down the _Domain_ hierarchy the detail information is re-di
 | **Created** | Auto-generated date when it was created.|
 | **Modified** | Auto-generated date when it was modified.|
 | **Engine**| The hostname of the deployment engine. Defaults to "Deployment Engine." This field can be used to specify another DeployHub Deployment Engine for widely distributed deployments. |
-| **_Subdomains_** | A list of all _Subdomains_ assigned to this _Domain_.
+| **_Subdomains_** | A list of all _Subdomains_ assigned to this _Domain_. |
+| **_Tasks_**  | Execution of Deployments used with the internal Deployment Engine |
+
+{{% include "userguide/reusable/Tasks.md" %}}
 
 ### Access Control
 

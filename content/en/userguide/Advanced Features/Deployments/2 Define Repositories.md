@@ -21,7 +21,7 @@ You do not need to define a _Repository_ if you only deploy containers. Containe
 
 ## Use the Repository List View for Adding and Deleting
 
-The _Repository_ menu option is in the Setup menu on the left of the DeployHub main panel. Select the _Repository_ menu for a list of all _Repositories_ to which you have access. The Search bar, represented by a funnel icon, filters _Repositories_ based on Name or Domain.
+The _Repository_ menu option is under the Advanced Features menu on the left of the DeployHub main panel. Select the _Repository_ menu for a list of all _Repositories_ to which you have access. The Search bar, represented by a funnel icon, filters _Repositories_ based on Name or Domain.
 
 The _Repository_ List View has the following Tabs:
 

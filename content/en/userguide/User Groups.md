@@ -22,7 +22,7 @@ _Users_ and _Groups_ are created under a _Domain_. A _User_ or _Group_ that is c
 
 ## Using the _Group_ List View for Adding or Deleting
 
-You will find _Groups_ under the Setup menu.  Selecting _Groups_ will take you to a list of all _Groups_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Groups_ List View based on _Groups_ and _Domains_.
+You will find _Groups_ on the main menu on the left hand side of the DeployHub dashboard.  Selecting _Groups_ will take you to a list of all _Groups_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Groups_ List View based on _Groups_ and _Domains_.
 
 The _Groups_ List View has the following Tabs.
 

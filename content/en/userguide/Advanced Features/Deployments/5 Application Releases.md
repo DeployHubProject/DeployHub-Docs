@@ -11,7 +11,7 @@ description: >
 
 ## The _Release_ List View for Adding or Deleting
 
-Use the _Release_ List View accessible from the left hand _Release_ menu option. This will take you to a list of all _Release Base Versions_ and _Release Versions_ to which you have access. There is a row for every _Environment_ to which the _Release Base Version_ or _Release Version_ has been deployed.  For this reason, you will see multiple entries for the same _Release_ if it has been deployed to multiple _Environments_.  
+Use the _Release_ List View accessible from the left hand _Release_ menu option, found under Advanced Features. This will take you to a list of all _Release Base Versions_ and _Release Versions_ to which you have access. There is a row for every _Environment_ to which the _Release Base Version_ or _Release Version_ has been deployed.  For this reason, you will see multiple entries for the same _Release_ if it has been deployed to multiple _Environments_.  
 
 The list view is organized on the following columns:
 

@@ -22,7 +22,7 @@ _Users_ are created under a _Domain_. A _User_ that is created at a higher level
 
 ## Using the _User_ List View for Adding or Deleting
 
-You will find _Users_ under the Setup menu.  Selecting _Users_ will take you to a list of all _Users_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Users_ List View based on _Users_ and _Domains_.
+You will find _Users_ under on the left side of the DeployHub dashboard.   Selecting _Users_ will take you to a list of all _Users_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Users_ List View based on _Users_ and _Domains_.
 
 The _Users_ List View has the following Tabs.
 

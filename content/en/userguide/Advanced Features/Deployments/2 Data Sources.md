@@ -11,7 +11,7 @@ _Data Sources_ are used to connect to Jira, Bugzilla, and GitHub to track change
 
 ## The _Data Sources_ List View for Adding or Deleting
 
-You will find _Data Sources_ under the Setup menu.  Selecting _Data Sources_ will take you to a list of all _DataSources_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Data Sources_ List View.  You can filter the list view on _Data Sources_ and _Domains_. _Data Sources_ are defined to a _Domain_ and will be displayed based on your access to the _Domain_.
+You will find _Data Sources_ under the Advanced Features menu.  Selecting _Data Sources_ will take you to a list of all _DataSources_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Data Sources_ List View.  You can filter the list view on _Data Sources_ and _Domains_. _Data Sources_ are defined to a _Domain_ and will be displayed based on your access to the _Domain_.
 
 The _Data Sources_ List View has the following Tabs.
 

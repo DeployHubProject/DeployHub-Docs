@@ -32,10 +32,6 @@ _Actions_ can be implemented in many ways including:
 
 _Actions_ can be invoked:
 
-- Before any _Task_ in a _Domain_ is executed: When the _Task_ is created, a "Pre-Action" can be specified. This can be either a _Procedure_ or a _Function_. The specified _Procedure_ or _Function_ is invoked before the _Task_ is executed. If the _Procedure_ or _Function_ aborts or returns a non-zero return code, the _Task_ itself is prevented from running.
-
-- After any _Task_ in a _Domain_ is executed: When the _Task_ is created, a "Post-Action" can be specified. The specified _Action_ is invoked after the _Task_ is executed. This can be used to connect to external systems to notify others that a _Task_ has been executed (for example, to notify a bug-tracking system that an _Application Version_ has been moved to a Testing state).
-
 - As a stand-alone _Action_ that can be invoked from the DeployHub User Interface: The _Action_ is associated with a "Run Action" _Task_. When invoked, the _Action_ is executed. A user can right-click on the _Domain_ to view the _Task_ to execute the _Action_. Alternatively, they can right-click on an _Application_ or a _Component_. In these circumstances, the selected object is pushed onto the _Stack_ and is available via the $application or $component objects. See DMScript [Stack](/userguide/advanced-features/dmscript/dmscript-stack/) for more information.
 
 - Before an _Application_ is deployed: An _Application_ can be defined as having a "Pre-Action." This can be either an _Action_ or a _Function_. When the _Application_ is deployed, this "Pre-Action" is invoked first before any other operation. If this Pre-Action aborts or returns a non-zero return code, the deployment itself will be prevented.
