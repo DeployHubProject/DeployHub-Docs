@@ -1,14 +1,14 @@
 ---
-title: "Custom DeployHub Actions"
-linkTitle: "Custom DeployHub Actions"
+title: "Custom DeployHub Pro Actions"
+linkTitle: "Custom DeployHub Pro Actions"
 weight: 301
 description: >
-  Customizing integrations with DeployHub Actions.
+  Customizing integrations with DeployHub Pro Actions.
 ---
 
-## Using DeployHub Actions for Custom Integrations
+## Using DeployHub Pro Actions for Custom Integrations
 
-DeployHub has an open architecture with many out of the box integrations with other DevOps tools. You can incorporate the use of tools such as Ansible or Helm, add Slack or deploy to WebSphere or Salesforce with our built-in _Actions_ or by creating _Custom Actions_ using any scripting languages.  In addition, you can use [DMScript](/userguide/advanced-features/dmscript/) which has pre-built access to the DeployHub Objects.  [RESTfull APIs](/userguide/advanced-features/restapi/) are also available to interact with the DeployHub Objects for integration into external systems, or execute on a continuous delivery trigger.
+DeployHub Pro has an open architecture with many out of the box integrations with other DevOps tools. You can incorporate the use of tools such as Ansible or Helm, add Slack or deploy to WebSphere or Salesforce with our built-in _Actions_ or by creating _Custom Actions_ using any scripting languages.  In addition, you can use [DMScript](/userguide/advanced-features/dmscript/) which has pre-built access to the DeployHub Pro Objects.  [RESTfull APIs](/userguide/advanced-features/restapi/) are also available to interact with the DeployHub Pro Objects for integration into external systems, or execute on a continuous delivery trigger.
 
 ## Types of Actions
 

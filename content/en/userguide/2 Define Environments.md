@@ -7,7 +7,7 @@ description: >
 ---
 ## Intro to _Environments_
 
-A DeployHub _Environment_ is a collection of [_Endpoints_](/userguide/2-define-endpoints/). _Environments_ represent where you run your _Application_ or where your _Application_ is published. _Environments_ often represent where development, test, or production code is running. An _Environment_ could be a virtual cloud or artifact repository. Therefore, there is a many-to-many relationship between _Environments_ and _Endpoints_, so that an _Endpoint_ can be assigned to more than one _Environment_, and an _Environment_ can contain many _Endpoints_. 
+A DeployHub Pro _Environment_ is a collection of [_Endpoints_](/userguide/2-define-endpoints/). _Environments_ represent where you run your _Application_ or where your _Application_ is published. _Environments_ often represent where development, test, or production code is running. An _Environment_ could be a virtual cloud or artifact repository. Therefore, there is a many-to-many relationship between _Environments_ and _Endpoints_, so that an _Endpoint_ can be assigned to more than one _Environment_, and an _Environment_ can contain many _Endpoints_. 
 
 This data establishes relationships that allow for mapping a vulnerability found at the _Component_ level to the specific _Environment_ and _Endpoint_ where it is running.
  
@@ -15,7 +15,7 @@ This data establishes relationships that allow for mapping a vulnerability found
 
 ## Adding _Environments_ Via Your CI/CD Workflow
 
-The Ortelius open-source project Command Line Integration (CLI) automates the creation of _Environments_. When a deployment is logged, the CLI is passed the _Application Version_, _Environment_, and _Endpoints_. The CLI will automatically create _Endpoints_ and _Environments_ if they do not already exist. If no _Endpoint_ is provided to the CLI, the name of the _Endpoint_ will default to the _Environment_ name. At least one _Environment_ name must be passed to the CLI. To learn more, read the chapter  [CI/CD and DeployHub](/userguide/integrations/ci-cd_integrations/)
+The Ortelius open-source project Command Line Integration (CLI) automates the creation of _Environments_. When a deployment is logged, the CLI is passed the _Application Version_, _Environment_, and _Endpoints_. The CLI will automatically create _Endpoints_ and _Environments_ if they do not already exist. If no _Endpoint_ is provided to the CLI, the name of the _Endpoint_ will default to the _Environment_ name. At least one _Environment_ name must be passed to the CLI. To learn more, read the chapter  [CI/CD and DeployHub Pro](/userguide/integrations/ci-cd_integrations/)
 
 You can also add _Environments_ manually via the Dashboard.
 
@@ -88,4 +88,4 @@ This map shows you all of the current _Component Versions_, with _Application Ve
 
 ## Environment Calendar 
 
-DeployHub users have access to "Smart" Calendars.  For more information see [DeployHub Smart Calendars](/userguide/advanced-features/deployments/calendar/).
+DeployHub Pro users have access to "Smart" Calendars.  For more information see [DeployHub Pro Smart Calendars](/userguide/advanced-features/deployments/calendar/).

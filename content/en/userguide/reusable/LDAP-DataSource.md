@@ -1,7 +1,7 @@
 
 ## Using a LDAP or Active Directory _Data Source_ for Single Sign-on
 
-DeployHub allows you to use LDAP or Active Directory to manage your _User_ logins.  Create an LDAP _Data Source_ to access an LDAP database and use the information stored to gain access to DeployHub. It also populates the _Users_ General tab with Real Name and Email, which it gets from the LDAP database. When you define a _User_, you associate the LDAP authentication method. At login, DeployHub checks the User's authentication method to determine if LDAP or Active Directory should be used.  
+DeployHub Pro allows you to use LDAP or Active Directory to manage your _User_ logins.  Create an LDAP _Data Source_ to access an LDAP database and use the information stored to gain access to DeployHub Pro. It also populates the _Users_ General tab with Real Name and Email, which it gets from the LDAP database. When you define a _User_, you associate the LDAP authentication method. At login, DeployHub Pro checks the User's authentication method to determine if LDAP or Active Directory should be used.  
 
 ### Creating a LDAP or Active Directory _Data Source_
 
@@ -23,6 +23,6 @@ The Data Source has specific parameters used to validate a User:
 |**Search Base** | The search base defines the starting point for the search in the LDAP directory tree.Enter the search base (the distinguished name of the search base object) that defines the location in the directory from which the LDAP search begins (i.e., dc=example,dc=com). |
 |**Search Base Encrypted** | Select the box to indicate if the Search Base should be hidden in the database.|
 |**Search Base Override** |Select the box if the Search Base can be changed.|
-|**Search Filter**| Always (uid=$USERNAME) (include parenthesis), as this locates the user within the LDAP database using the Username that was entered into the DeployHub Credential. These filters are used for selecting which objects are returned when browsing for the search base. They identify which objects in your directory are examined, for example email address attributes or user attributes.|
+|**Search Filter**| Always (uid=$USERNAME) (include parenthesis), as this locates the user within the LDAP database using the Username that was entered into the DeployHub Pro Credential. These filters are used for selecting which objects are returned when browsing for the search base. They identify which objects in your directory are examined, for example email address attributes or user attributes.|
 |**Search Filter Encrypted** | Select the box to indicate if the Search Filter should be hidden in the database.|
 |**Search Filter Override** |Select the box if the Search Filter can be changed.|

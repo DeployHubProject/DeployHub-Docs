@@ -8,7 +8,7 @@ description: >
 
 ## A Domain Driven Design
 
-A _Domain_ is how DeployHub organizes and shares data across teams. All DeployHub objects are assigned to a _Domain_.
+A _Domain_ is how DeployHub Pro organizes and shares data across teams. All DeployHub Pro objects are assigned to a _Domain_.
 
 ### Domains and a Domain Driven Design
 
@@ -28,7 +28,7 @@ There are four common ways to implement _Domains_:
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Site _Domain_** | This is the highest-level and default _Domain_. For SaaS Users, your Site _Domain_ will be defaulted to the Company name from your registration. You can rename your Site _Domain_ if needed. For an On-Premise installation, your default Site _Domain_ name is 'Global.' You can rename your Site _Domain_ if needed. Anything defined to this level can be shared across all lower level _Subdomains_. For example, _Environments_ defined to the Site _Domain_ are shared by all child _Subdomains_. |
 |**Catalog _Subdomains_**| These _Domains_ are used to organize all _Components_. At this level, you create as many _Subdomains_ as needed to represent your _Component_ organization based on the "solution space" they serve. For example, you could design _Domains_ as follows: <li> Security Services</li><li>Purchase Processing</li><li>Data Access<li>Ad Services</li>  
-|**Division _Subdomains_**| DeployHub Users can take advantage of Division Domains. Larger companies can define a catalog to share _Components_ based on geographical areas, organizational responsibility, or business units. A Division _Sub-Domain_ can have many child _Subdomains_. For example, a Catalog _Sub-Domain_ for Security and Purchasing Services could be broken down into further _Subdomains_: <ul><li> Security Services</li><ul><li>Login Services</li><li>Payment Processing Services <li>Merchant Services</li><li>EMEA Shipping Services</li><li>North America Shipping Services</li></ul><br><li>Purchase Processing Services</li><ul><li>EMEA Check-out Services</li><li>North America Check-out Services</li></ul> |
+|**Division _Subdomains_**| DeployHub Pro Users can take advantage of Division Domains. Larger companies can define a catalog to share _Components_ based on geographical areas, organizational responsibility, or business units. A Division _Sub-Domain_ can have many child _Subdomains_. For example, a Catalog _Sub-Domain_ for Security and Purchasing Services could be broken down into further _Subdomains_: <ul><li> Security Services</li><ul><li>Login Services</li><li>Payment Processing Services <li>Merchant Services</li><li>EMEA Shipping Services</li><li>North America Shipping Services</li></ul><br><li>Purchase Processing Services</li><ul><li>EMEA Check-out Services</li><li>North America Check-out Services</li></ul> |
 |**Project _Subdomains_**| Use a _Sub-Domain_ to represent your software _Application_. |
 
 Below is an example of how the Online Store Company _Domains_ have been defined. For SaaS users, you can review this by inspecting the Online Store Company _Domain_.
@@ -52,7 +52,7 @@ When scrolling up or down the _Domain_ hierarchy the detail information is re-di
 | **Owner** | Name of the Owner.|
 | **Created** | Auto-generated date when it was created.|
 | **Modified** | Auto-generated date when it was modified.|
-| **Engine**| The hostname of the deployment engine. Defaults to "Deployment Engine." This field can be used to specify another DeployHub Deployment Engine for widely distributed deployments. |
+| **Engine**| The hostname of the deployment engine. Defaults to "Deployment Engine." This field can be used to specify another DeployHub Pro Deployment Engine for widely distributed deployments. |
 | **_Subdomains_** | A list of all _Subdomains_ assigned to this _Domain_. |
 | **_Tasks_**  | Execution of Deployments used with the internal Deployment Engine |
 

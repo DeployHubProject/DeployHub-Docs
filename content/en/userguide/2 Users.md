@@ -8,9 +8,9 @@ description: >
 
 ## Intro to _Users_
 
-_Users_ are given access to DeployHub Objects based on their _Group_ access. By default there are three _Groups_.
+_Users_ are given access to DeployHub Pro Objects based on their _Group_ access. By default there are three _Groups_.
 
--Administrator _Group_ - The _User_ who initially signs into DeployHub is automatically added to this _Group_. By default, this _Group_ has access to all objects.
+-Administrator _Group_ - The _User_ who initially signs into DeployHub Pro is automatically added to this _Group_. By default, this _Group_ has access to all objects.
 -User _Group_ - All _Users_ who sign in after the initial Administrator _User_ is created.
 -Everyone _Group_ - All Users regardless of their assigned _Group_ are automatically added to this _Group_. It is the default _Group_ that provides access to "everyone" for all Objects.  To restrict _Everyone_ access, update the _Access_ options at the Object level.  This _Group_ cannot be modified.  If you delete a _User_ from the system, they will be deleted from the Everyone _Group_.
 
@@ -22,7 +22,7 @@ _Users_ are created under a _Domain_. A _User_ that is created at a higher level
 
 ## Using the _User_ List View for Adding or Deleting
 
-You will find _Users_ under on the left side of the DeployHub dashboard.   Selecting _Users_ will take you to a list of all _Users_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Users_ List View based on _Users_ and _Domains_.
+You will find _Users_ under on the left side of the DeployHub Pro dashboard.   Selecting _Users_ will take you to a list of all _Users_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Users_ List View based on _Users_ and _Domains_.
 
 The _Users_ List View has the following Tabs.
 
@@ -64,6 +64,6 @@ The following details are common to all _Users_:
 
 This Section contains a list of all the _Groups_ the selected _User_ belongs to. Add a _Group_ to the selected _User_ by clicking on the plus '+Add' sign in the upper right, which adds an empty row to the table with a drop down list of all available _Groups_. Use the Save option to commit it to the table. Use the Trash Can icon to delete a _Group_ from the table.
 
-DeployHub allows you to create custom _Groups_ for assigning _Users_ giving you more security control around the Objects. For information on how to create _User_ _Groups_ with DeployHub see [Creating User Groups](/userguide/user-groups/.)
+DeployHub Pro allows you to create custom _Groups_ for assigning _Users_ giving you more security control around the Objects. For information on how to create _User_ _Groups_ with DeployHub Pro see [Creating User Groups](/userguide/user-groups/.)
 
 {{% include "userguide/reusable/AuditTrail.md" %}}

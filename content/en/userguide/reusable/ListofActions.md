@@ -53,7 +53,7 @@ Built-in _Actions_ may already support what you need. Some Built-in _Actions_ ar
 |**Set Variable** | Creates and sets a variable. |
 |**Sleep** | Pauses for n seconds. |
 |**Using Stream** | Use a named stream. |
-|**Wait for Task** | Wait for a Specific DeployHub Task to be Run. |
+|**Wait for Task** | Wait for a Specific DeployHub Pro Task to be Run. |
 
 ### Built-In Loop Actions
 

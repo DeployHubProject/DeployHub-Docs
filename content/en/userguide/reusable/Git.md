@@ -14,7 +14,7 @@ You can pull files from a Git Repository to be used by your _Components_.  The f
 | **To Dir**               | Directory where the files will be checked out to.                                                                                                                       |
 | **To Dir Encrypted**     | Select the box to indicate the To Dir should be hidden in the database.                                                                                                 |
 | **To Dir Override**      | Select the box if the To Dir can be replaced at the _Component_ definition.                                                                                             |
-| **Filepath**             | The fully qualified directory name to the files that will need to be deployed. These files must be on a file system that the DeployHub deployment engine has access to. |
+| **Filepath**             | The fully qualified directory name to the files that will need to be deployed. These files must be on a file system that the DeployHub Pro deployment engine has access to. |
 | **Filepath Encrypted**   | Select the box to indicate the Filepath name should be hidden in the database.                                                                                          |
 | **Filepath Override**    | Select the box if the Filepath can be replaced at the _Component_ definition.                                                                                           |
 | **Pattern**              | This defines the file types you want to pull from the _Repository_, such as \*.exe, \*.dll, \*.war.                                                                     |

@@ -7,16 +7,16 @@ description: >
 ---
 
 
-## Getting Started with the DeployHub Internal Deployment Engine
+## Getting Started with the DeployHub Pro Internal Deployment Engine
 
-DeployHub includes a deployment engine that can be used to deploy your _Applications_. You will need to setup:
+DeployHub Pro includes a deployment engine that can be used to deploy your _Applications_. You will need to setup:
 
 - _Credentials_ for accessing repositories and endpoints.
-- _Domains_ for defining relationship hierarchy. If you are using DeployHub for monitoring security posture, your _Domains_ will already be defined.
+- _Domains_ for defining relationship hierarchy. If you are using DeployHub Pro for monitoring security posture, your _Domains_ will already be defined.
 - _Repositories_ such as GitHub or Quay for accessing artifacts.
 - _Endpoints_ define where the deployed object will be placed such as VM images, Clusters, etc.
-- _Environments_ is defined as a collection of _Endpoints_ and often represents Development, Testing, or Production. If you are using DeployHub to manage security postures, you may have previously defined these objects.  
-- _Components and Applications_ added via the CI/CD pipeline. If you are using DeployHub to monitor security postures, this step will already be completed.
+- _Environments_ is defined as a collection of _Endpoints_ and often represents Development, Testing, or Production. If you are using DeployHub Pro to manage security postures, you may have previously defined these objects.  
+- _Components and Applications_ added via the CI/CD pipeline. If you are using DeployHub Pro to monitor security postures, this step will already be completed.
 - _Deployment Actions_ to execute the deployment process.
 - _Schedule or deploy on demand_ or via the CI/CD Pipeline. 
 
@@ -24,5 +24,5 @@ You will also need to configure your [reverse proxy](/userguide/advanced-feature
 
 ## Quick Info Map
 
-![DeployHub Architecture](/userguide/images/setuporder.png)
+![DeployHub Pro Architecture](/userguide/images/setuporder.png)
 

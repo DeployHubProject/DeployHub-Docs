@@ -6,7 +6,7 @@ description: >
   Using _abort_ to end a script execution.
 ---
 
-_abort_ throws an exception, which would normally end a script execution. It can take an optional message which DeployHub will issue when the script ends. _abort_ is typically used when a condition prevents the rest of the script from executing correctly. _abort_ takes a single, named parameter:
+_abort_ throws an exception, which would normally end a script execution. It can take an optional message which DeployHub Pro will issue when the script ends. _abort_ is typically used when a condition prevents the rest of the script from executing correctly. _abort_ takes a single, named parameter:
 
 msg: The message to print on abort. If msg is not specified, the msg defaults to ABORT.
 

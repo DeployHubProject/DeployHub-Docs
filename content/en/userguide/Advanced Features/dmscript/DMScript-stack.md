@@ -3,12 +3,12 @@ title: "Stack"
 linkTitle: "Stack"
 weight: 100
 description: >
-  Manage the DeployHub Stack.
+  Manage the DeployHub Pro Stack.
 ---
 
 
 
-The stack is a fundamental part of DeployHub. During deployment, objects are pushed onto and popped off the stack. Objects such as _Environments_, _Applications_, and _Endpoints_ each have their own properties. These are accessible as variables in _DMScript_ (provided the object is currently on the stack).
+The stack is a fundamental part of DeployHub Pro. During deployment, objects are pushed onto and popped off the stack. Objects such as _Environments_, _Applications_, and _Endpoints_ each have their own properties. These are accessible as variables in _DMScript_ (provided the object is currently on the stack).
 
 Regardless of why the _DMScript_ has been invoked (either a deployment or via it being linked to a manually invoked task), there is always a  "global" scope. This contains all the _Environment_ variables available to the deployment engine, any additional parameters specified for the invoking task and any variables set with the –g option.
 
@@ -22,11 +22,11 @@ The following variables are always defined in the Global scope:
 | $          | Process ID of engine process | $$                 |
 | JSESSIONID | The session ID of the Web UI | $JSESSIONID        |
 
-You can use $DMHOME to reference files that are stored in directories relative to the DeployHub engine installation location.
+You can use $DMHOME to reference files that are stored in directories relative to the DeployHub Pro engine installation location.
 
 Every invocation of the engine results in a new engine process (and therefore a new value of $$). You can use the $$ variable to create filenames that are guaranteed to be unique even if multiple engines are running simultaneously.
 
-If the _DMScript_ has been invoked from the DeployHub Web User Interface (i.e.: a manual deployment or a task invocation) then JSESSIONID is set to the session ID of the web session. You can use this to call the DeployHub API from inside _DMScript_ without the need to explicitly log in to the API.
+If the _DMScript_ has been invoked from the DeployHub Pro Web User Interface (i.e.: a manual deployment or a task invocation) then JSESSIONID is set to the session ID of the web session. You can use this to call the DeployHub Pro API from inside _DMScript_ without the need to explicitly log in to the API.
 
 During a deployment, the _Environment_ (and its attributes) are pushed onto the stack, followed by the _Application_ being deployed. At this point, the stack looks like this:
 

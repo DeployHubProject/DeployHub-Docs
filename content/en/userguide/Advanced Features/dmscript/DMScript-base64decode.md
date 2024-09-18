@@ -33,7 +33,7 @@ Integer: The length of the decoded data. The decoded data is written to the stre
 
 // Encode a String into Base 64
 
-echo "Hello DeployHub!" >> $teststream;
+echo "Hello DeployHub Pro!" >> $teststream;
 
 set b64 = ${teststream.base64encode()};
 
@@ -55,7 +55,7 @@ Result:
 
 b64 is SGVsbG8gUmVsZWFzZSBFbmdpbmVlciE=
 
-res is Hello DeployHub!
+res is Hello DeployHub Pro!
 
 len is 23
 
@@ -76,7 +76,7 @@ echo "len is $len";
 
 Result:
 
-res is Hello DeployHub!
+res is Hello DeployHub Pro!
 
 len is 23
 
@@ -94,7 +94,7 @@ echo "len is $len";
 
 Result:
 
-res is Hello DeployHub!
+res is Hello DeployHub Pro!
 
 len is 23
 ```

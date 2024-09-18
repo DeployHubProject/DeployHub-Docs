@@ -8,7 +8,7 @@ description: >
 
 ## DMScript
 
-_DMScript_ is an object-orientated scripting language. As such, it understands each object in the DeployHub model. You can access each object either by selecting it off the stack (e.g.: $_Environment_), by retrieving a reference to the object from some other object, or by calling a built-in _Function_ to retrieve it. Each object has accessible properties. Some objects also have methods that can be called.
+_DMScript_ is an object-orientated scripting language. As such, it understands each object in the DeployHub Pro model. You can access each object either by selecting it off the stack (e.g.: $_Environment_), by retrieving a reference to the object from some other object, or by calling a built-in _Function_ to retrieve it. Each object has accessible properties. Some objects also have methods that can be called.
 
 The following is a list of the objects that you can reference in _DMScript_.
 
@@ -28,7 +28,7 @@ The following is a list of the objects that you can reference in _DMScript_.
 
 ### Attributes
 
-Attributes set against DeployHub objects are accessible as variables in _DMScript_.
+Attributes set against DeployHub Pro objects are accessible as variables in _DMScript_.
 
 For example, suppose QUEUE\_NAME is queue1 in "Test _Environment_ A" and queue2 in "Test _Environment_ B". When deploying to "Test _Environment_ A" the value of $QUEUE\_NAME will be queue1. When deploying to "Test _Environment_ B" the value of $QUEUE\_NAME will be queue2.
 
@@ -36,9 +36,9 @@ You do not need to use any specific syntax to access an Object variable. Wheneve
 
 ### Application Object
 
-The _Application_ object represents either a Base _Application_, an _Application Version,_ or a Release. In DeployHub there is always an _Application_ on the stack representing the _Application_/_Release_ being deployed referenced by $_Application_. You can also retrieve an _Application_ using the get_Application__Function_ or push an _Application_ onto the Stack via using _Application_.
+The _Application_ object represents either a Base _Application_, an _Application Version,_ or a Release. In DeployHub Pro there is always an _Application_ on the stack representing the _Application_/_Release_ being deployed referenced by $_Application_. You can also retrieve an _Application_ using the get_Application__Function_ or push an _Application_ onto the Stack via using _Application_.
 
-NOTE: A _Release_ is a DeployHub Object. It is of the _type__Application_. The release property indicates if the object represents a Release.
+NOTE: A _Release_ is a DeployHub Pro Object. It is of the _type__Application_. The release property indicates if the object represents a Release.
 
 The following properties can be accessed for an _Application_ object:
 
@@ -150,7 +150,7 @@ The following properties can be accessed for a _Change Request_ object:
 |-----------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | name      | String | The change request description.                                                                                                                                                                                                                                             |
 | status    | String | The change request status.                                                                                                                                                                                                                                                  |
-| API\_url  | String | A URL which - if passed to restful\_get - will return an array containing the full details of the change request from the external change tracking system. Useful for getting more information than the ID / description / status combination which is stored in DeployHub. |
+| API\_url  | String | A URL which - if passed to restful\_get - will return an array containing the full details of the change request from the external change tracking system. Useful for getting more information than the ID / description / status combination which is stored in DeployHub Pro. |
 | html\_url | String | A URL which will direct a browser to the page describing the change request in the external change tracking system.                                                                                                                                                         |
 
 ### Component Object
@@ -392,7 +392,7 @@ The following properties can be accessed on the _Domain_ object:
 
 #### DropZone
 
-The _DropZone Object_ represents a _DropZone_. A _DropZone_ is an area on disk on the DeployHub Server where deployment artifacts are stored and manipulated before onward transmission to the target _Endpoint_(s). A _DropZone_ is placed onto the stack during a using _DropZone_ statement – all operations within this block have access to this _DropZone_ via the _DropZone Object_. A _DropZone Object_ is also present on the stack during pre and post action processing for a _Component_. In this case, the content of the _DropZone_ are the files checked out from the repository for the associated _Component_ Items.
+The _DropZone Object_ represents a _DropZone_. A _DropZone_ is an area on disk on the DeployHub Pro Server where deployment artifacts are stored and manipulated before onward transmission to the target _Endpoint_(s). A _DropZone_ is placed onto the stack during a using _DropZone_ statement – all operations within this block have access to this _DropZone_ via the _DropZone Object_. A _DropZone Object_ is also present on the stack during pre and post action processing for a _Component_. In this case, the content of the _DropZone_ are the files checked out from the repository for the associated _Component_ Items.
 
 The following properties can be accessed for a _DropZone_ object:
 
@@ -554,7 +554,7 @@ The following properties can be accessed on the User object:
 | email        | String          | The User&#39;s email address.                                                                    |
 | phone        | String          | The User&#39;s telephone number.                                                                 |
 | groups       | Array           | Array of UserGroup Objects – the UserGroups to which this user belongs.                          |
-| lastlogin    | Date            | The date/time the user last logged into DeployHub.                                               |
+| lastlogin    | Date            | The date/time the user last logged into DeployHub Pro.                                               |
 | creator      | User            | User Object representing the user who created this user.                                         |
 | modifier     | User            | User Object representing the user who last modified this user.                                   |
 | ctime        | Date            | Date Object representing the date/time the user was created.                                     |

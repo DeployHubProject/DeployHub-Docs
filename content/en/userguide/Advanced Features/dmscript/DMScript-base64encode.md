@@ -26,7 +26,7 @@ String: The base64 encoded representation of the passed stream data.
 ```bash
 1. _Create a string and convert it to Base64:_
 
-echo "Hello DeployHub!" >> $teststream;
+echo "Hello DeployHub Pro!" >> $teststream;
 
 set b64 = ${teststream.base64encode()};
 
@@ -40,7 +40,7 @@ b64 is SGVsbG8gUmVsZWFzZSBFbmdpbmVlciE=
 
 2. _Call_ base64encode _directly, passing the stream as a parameter:_
 
-echo "Hello DeployHub!" >> $teststream;
+echo "Hello DeployHub Pro!" >> $teststream;
 
 set b64 = base64encode($teststream);
 

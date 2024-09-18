@@ -1,6 +1,6 @@
 ---
-title: "Understanding DeployHub Objects"
-linkTitle: "Understanding DeployHub Objects"
+title: "Understanding DeployHub Pro Objects"
+linkTitle: "Understanding DeployHub Pro Objects"
 weight: 4
 description: >
   Understanding Core Objects and Concepts.
@@ -8,7 +8,7 @@ description: >
 
 ## Introduction
 
-DeployHub's core Objects are _Domains_, _Applications_, _Components_, _Environments_ and _Endpoints_. These Objects organize, aggregate, and version independently released artifacts with their DevSecOps metadata such as deployment location, Software Bill of Materials, OpenSSF Scorecard, and known vulnerabilities. This data is the basis for analyzing your software system's security posture and tracking vulnerabilities to where they are running in your environment.  
+DeployHub Pro's core Objects are _Domains_, _Applications_, _Components_, _Environments_ and _Endpoints_. These Objects organize, aggregate, and version independently released artifacts with their DevSecOps metadata such as deployment location, Software Bill of Materials, OpenSSF Scorecard, and known vulnerabilities. This data is the basis for analyzing your software system's security posture and tracking vulnerabilities to where they are running in your environment.  
 
  _Objects_ related to gathering Security Intelligence include:
 
@@ -18,7 +18,7 @@ DeployHub's core Objects are _Domains_, _Applications_, _Components_, _Environme
 - Environments - The location where the _Application_ is running.
 - Endpoints - The clusters, servers, or Virtual Machines within the Environment where a _Component_ is running. 
 
-DeployHub includes an agentless deployment engine for organizations who are looking to standardize on a deployment process.  _Objects_ related to DeployHub's Internal Deployment engine includes:
+DeployHub Pro includes an agentless deployment engine for organizations who are looking to standardize on a deployment process.  _Objects_ related to DeployHub Pro's Internal Deployment engine includes:
 
 - Release
 - Credentials
@@ -58,9 +58,9 @@ The following properties can be accessed on the _Domain_ object:
 
 ### _Component_ Object
 
-DeployHub manages artifacts and other reusable objects as [_Components_](/userguide/2-define-components/). _Components_ are consumed by _Applications_. By assigning _Components_ to _Applications_ you track a 'logical' view of your software solution as a whole. In cloud-native architecture, _Components_ are loosely coupled and communicate at run-time. Defining _Components_ to _Applications_ supports the aggregation of security data to the _Application_ level to produce _Application_ security reports such as Software Bill of Materials (SBOM) reports in a decoupled architecture where hundreds of SBOMs are needed for one _Application_ SBOM. 
+DeployHub Pro manages artifacts and other reusable objects as [_Components_](/userguide/2-define-components/). _Components_ are consumed by _Applications_. By assigning _Components_ to _Applications_ you track a 'logical' view of your software solution as a whole. In cloud-native architecture, _Components_ are loosely coupled and communicate at run-time. Defining _Components_ to _Applications_ supports the aggregation of security data to the _Application_ level to produce _Application_ security reports such as Software Bill of Materials (SBOM) reports in a decoupled architecture where hundreds of SBOMs are needed for one _Application_ SBOM. 
 
-_Components_ change over time. To expose changes, DeployHub takes a snapshot of the initial _Component Base Version_ and tracks subsequent changes recorded as  _Component Versions_. _Components_ are associated to a _Domain_ for organization and quick searches.
+_Components_ change over time. To expose changes, DeployHub Pro takes a snapshot of the initial _Component Base Version_ and tracks subsequent changes recorded as  _Component Versions_. _Components_ are associated to a _Domain_ for organization and quick searches.
 
 - **_Component Base Version_** : The initial _Component_ object that represent the artifacts being managed
 
@@ -122,7 +122,7 @@ An _Application_ has the following properties:
 
 ### _Component_ and _Application_ Relationships
 
-There is a many-to-many relationship between _Applications_ and _Components._ An _Application_ can contain many different _Components_, and a _Component_ can be used across many different _Applications_.  _Components_ can be easily shared between _Applications_. DeployHub tracks and versions the _Component_ relationships including which _Applications_ they impact. This is necessary for tracking vulnerabilities found at the _Component_ level to the _Application_ that consumes it.
+There is a many-to-many relationship between _Applications_ and _Components._ An _Application_ can contain many different _Components_, and a _Component_ can be used across many different _Applications_.  _Components_ can be easily shared between _Applications_. DeployHub Pro tracks and versions the _Component_ relationships including which _Applications_ they impact. This is necessary for tracking vulnerabilities found at the _Component_ level to the _Application_ that consumes it.
 
 ### _Component_ and _Application_ Versioning
 
@@ -130,9 +130,9 @@ A backend versioning datastore tracks all software configuration updates. This i
 
 When you first define your _Application_, you create an _Application Base Version_. Over time, as you update your code and deliver new features, each change to the _Application_ creates a new _Application Version_.  _Application Versions_ are a collection of all your _Components_ in the software solution delivered to end users. Like _Component Versions_, there is an initial _Application Base Version_ and subsequent _Application Versions,_ which represent the updates over time. An _Application Base Version_ or _Component Base Version_ is always the first one created, and it acts as the base-line for subsequent _Application_ or _Component Versions_. Otherwise they are identical types of objects.
 
-DeployHub uses a simple versioning number schema starting at 1 and incrementing over time, for example Myapp;1, Myapp;2.
+DeployHub Pro uses a simple versioning number schema starting at 1 and incrementing over time, for example Myapp;1, Myapp;2.
 
-You can use your CI/CD process to include variance in your versioning number (base name, variant, version.) See [CI/CD and DeployHub](/userguide/integrations/ci-cd_integrations/).
+You can use your CI/CD process to include variance in your versioning number (base name, variant, version.) See [CI/CD and DeployHub Pro](/userguide/integrations/ci-cd_integrations/).
 
 ### _Environment_ Object
 
@@ -162,9 +162,9 @@ The following properties can be accessed for an _Environment_ object:
 
 The [_Endpoint_ object](/userguide/2-define-endpoints/) is a compute node that (Local Helm Host, container, VM/Cloud Image) represents where an _Application_ is running. _Endpoints_ are assigned to an _Environment_.
 
-_Endpoints_ are the containers, virtual machines, or servers where the _Application_ has been deployed. _Endpoints_ allow DeployHub to expose where vulnerabilities are running across your development, testing and production _Environments_.
+_Endpoints_ are the containers, virtual machines, or servers where the _Application_ has been deployed. _Endpoints_ allow DeployHub Pro to expose where vulnerabilities are running across your development, testing and production _Environments_.
 
- _Endpoints_ are mapped to _Components_ and _Environments_.  _Endpoints_ are used to track where a _Component_ is installed for vulnerability exposure, and referenced by the DeployHub internal deployment engine for executing deployments. 
+ _Endpoints_ are mapped to _Components_ and _Environments_.  _Endpoints_ are used to track where a _Component_ is installed for vulnerability exposure, and referenced by the DeployHub Pro internal deployment engine for executing deployments. 
 
 The _Endpoint_ object has the following properties:
 
@@ -227,7 +227,7 @@ The _Group_ Object has the following properties:
 
 ### _User_ Object
 
-The _User_ Object represents a User in DeployHub. It has the following properties:
+The _User_ Object represents a User in DeployHub Pro. It has the following properties:
 
 | **Property** | **Return Type** | **Description**                                                                                 |
 |--------------|-----------------|-------------------------------------------------------------------------------------------------|
@@ -239,7 +239,7 @@ The _User_ Object represents a User in DeployHub. It has the following propertie
 | Email        | String          | The _User's_ email address.                                                                     |
 | Phone        | String          | The _User's_ telephone number.                                                                  |
 | groups       | Array           | Array of _Group_ Objects to which this User belongs.                                            |
-| lastlogin    | Date            | The date/time last logged into DeployHub.                                                       |
+| lastlogin    | Date            | The date/time last logged into DeployHub Pro.                                                       |
 | Creator      | User            | _User_ or _Group_ Object representing who created this _User_.                                  |
 | Modifier     | User            | _User_ or _Group_ Object representing who last modified this _User_.                            |
 | ctime        | Date            | _Date_ Object representing the date/time the User was created.                                  |
@@ -249,11 +249,11 @@ The _User_ Object represents a User in DeployHub. It has the following propertie
 
 ## Objects Used by the Internal Deployment Engine
 
-If your organization requires a standardized method of doing deployments, the DeployHub internal deployment engine can be configured for this use. The internal deployment engine is agentless and requires a [reverse proxy.](/userguide/advanced-features/deployments/0-saas-and-reverse-proxy/) For more information on the internal deployment engine [read the deployment chapter.](/userguide/advanced-features/deployments/)
+If your organization requires a standardized method of doing deployments, the DeployHub Pro internal deployment engine can be configured for this use. The internal deployment engine is agentless and requires a [reverse proxy.](/userguide/advanced-features/deployments/0-saas-and-reverse-proxy/) For more information on the internal deployment engine [read the deployment chapter.](/userguide/advanced-features/deployments/)
 
 ### _Release_ Object
 
-A [_Release_](/userguide/advanced-features/deployments/5-application-releases/) is only available in DeployHub. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a 'Release Train.' Releases are used as part of DeployHub's internal deployment engine and are not required for managing Security Intelligence. 
+A [_Release_](/userguide/advanced-features/deployments/5-application-releases/) is only available in DeployHub Pro. A _Release_ is a collection of _Applications_ that must be deployed together, sometimes referred to as a 'Release Train.' Releases are used as part of DeployHub Pro's internal deployment engine and are not required for managing Security Intelligence. 
 
 ### _Credential_ Object
 
@@ -279,7 +279,7 @@ The _Credential_ Object has the following properties:
 
 ### _Dropzone_ Object
 
-The _DropZone_ Object is used by the DeployHub internal deployment engine. It represents a local area where deployment artifacts are manipulated before sent to the target _Endpoints_. A _DropZone_ Object is also present on the stack during Pre and Post _Action_ processing for a _Component_. For example, the content of the _DropZone_ are the files checked out from the repository for the associated _Component_.
+The _DropZone_ Object is used by the DeployHub Pro internal deployment engine. It represents a local area where deployment artifacts are manipulated before sent to the target _Endpoints_. A _DropZone_ Object is also present on the stack during Pre and Post _Action_ processing for a _Component_. For example, the content of the _DropZone_ are the files checked out from the repository for the associated _Component_.
 
 A _DropZone_ Object has the following properties:
 
@@ -306,4 +306,4 @@ The _DropZone File_ Object has the following properties:
 
 ### _Notifier_ Objects
 
-A [_Notifier_](/userguide/advanced-features/deployments/2-define-notifiers/) is sent after a successful or failed deployment attempt. If these features are activated, they are also sent when deployed files have been changed, a Request Task has been used, or when an _Endpoint_ is down,  DeployHub can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose.
+A [_Notifier_](/userguide/advanced-features/deployments/2-define-notifiers/) is sent after a successful or failed deployment attempt. If these features are activated, they are also sent when deployed files have been changed, a Request Task has been used, or when an _Endpoint_ is down,  DeployHub Pro can use SMTP (Simple Mail Transfer Protocol), Slack and HipChat for this purpose.

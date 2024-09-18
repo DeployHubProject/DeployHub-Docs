@@ -18,7 +18,7 @@ For deployment audits, select a deployment number to see the details including:
 | **Step Duration** | Deployment Steps with time required to execute.   |
 | **Feedback Loop** | Shows what was updated starting from _Component_. |
 
-When using the internal DeployHub deployment engine, all log output is automatically persisted with the _Application Version_ and _Component Version_. 
+When using the internal DeployHub Pro deployment engine, all log output is automatically persisted with the _Application Version_ and _Component Version_. 
 
 If you are using another deployment solution, you can persist the log via the CI/CD workflow. The output from the deployment can be passed to the CLI to be persisted with the _Application Version_ and _Component Versions_. Learn more about the [CI/CD CLI Integration](/userguide/integrations/ci-cd_integrations/)
 

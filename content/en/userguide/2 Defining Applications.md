@@ -17,12 +17,12 @@ description: >
 
 ## Applications and their Components
 
-_Applications_ are defined by the _Components_ they consume. As with _Components_, _Applications_ have versions. When a new _Component_ is published by the CI/CD workflow, DeployHub is called to automatically create a new _Application Version_.  For more information on this topic, see the [Adding Your Components and Applications to DeployHub](/userguide/addingtopipeline/).
+_Applications_ are defined by the _Components_ they consume. As with _Components_, _Applications_ have versions. When a new _Component_ is published by the CI/CD workflow, DeployHub Pro is called to automatically create a new _Application Version_.  For more information on this topic, see the [Adding Your Components and Applications to DeployHub Pro](/userguide/addingtopipeline/).
 
 
 ## Adding New _Application Versions_ Automatically via Continuous Delivery
 
-_Applications_ and new _Application Versions_ can only be added via the CI/CD process. Configure a CI/CD workflow to automatically update new _Application_ versions each time a new GitCommit triggers a new _Component_ that your _Application_ consumes. DeployHub in the workflow performs this continuous versioning of new _Components_ and their consuming _Applications_.  For more information, see [Using DeployHub with CI/CD](/userguide/addingtopipeline/).
+_Applications_ and new _Application Versions_ can only be added via the CI/CD process. Configure a CI/CD workflow to automatically update new _Application_ versions each time a new GitCommit triggers a new _Component_ that your _Application_ consumes. DeployHub Pro in the workflow performs this continuous versioning of new _Components_ and their consuming _Applications_.  For more information, see [Using DeployHub Pro with CI/CD](/userguide/addingtopipeline/).
 
 ## Viewing _Applications_
 
@@ -81,13 +81,13 @@ View the _Application Version_ Software Bill of Material Report, and Real-time v
 
 <u>Federated Software Bill of Materials Report</u>
 
-This section is a summary the _Applications_ federated Software Bill of Materials (SBOM) report showing all of the packages consumed by the 'logical' _Application Version_. An _Application_ SBOM provides a detailed report of all _Component_ SBOM data within the _Application_, with duplicates removed. When a _Component_ is updated, DeployHub automatically generates a new version of all _Applications_ that use that _Component_, along with a new aggregated SBOM. 
+This section is a summary the _Applications_ federated Software Bill of Materials (SBOM) report showing all of the packages consumed by the 'logical' _Application Version_. An _Application_ SBOM provides a detailed report of all _Component_ SBOM data within the _Application_, with duplicates removed. When a _Component_ is updated, DeployHub Pro automatically generates a new version of all _Applications_ that use that _Component_, along with a new aggregated SBOM. 
 
 >Note:  If you need to produce an _Application Version_ SBOM for governance reporting or sharing, you can export the SBOM from the _Application_ List View _Reports_ menu option.
 
 <u>Vulnerabilities </u>
 
-Using the aggregated Software Bill of Materials, DeployHub cross-references all _Component_ packages within the _Application_ against known vulnerability databases such as [OSV.dev](https://osv.dev). DeployHub will scan for new known vulnerabilities every 10 minutes, and update the dashboard.
+Using the aggregated Software Bill of Materials, DeployHub Pro cross-references all _Component_ packages within the _Application_ against known vulnerability databases such as [OSV.dev](https://osv.dev). DeployHub Pro will scan for new known vulnerabilities every 10 minutes, and update the dashboard.
 
 >Note - This list may be incomplete if one or more of your _Package Components_ do not have an associated SBOM that can be used to gather vulnerability data.
 

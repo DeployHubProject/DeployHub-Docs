@@ -15,7 +15,7 @@ description: >
 - When an _Endpoint_ is unavailable.
 - Used As part of your continuous _Delivery Pipeline_ to automatically update users.
 
-DeployHub can use Email, Slack, SMS, and HipChat for this purpose.
+DeployHub Pro can use Email, Slack, SMS, and HipChat for this purpose.
 
 ## _Notifiers_ and _Notifier Templates_
 
@@ -68,13 +68,13 @@ The following details are common to all _Notifiers_ types:
 | **SSL**                | If checked, Secure Sockets Layer for sending email will be used.                                                                                                                                                                                                   |
 | **SSL Override**       | If checked, the SSL can be changed.                                                                                                                                                                                                                                |
 | **From**               | The email address of the sender. Typically, this is a shared address accessible to users who push deployments.                                                                                                                                                     |
-| **From  Encrypted**    | The From name can be hidden in the DeployHub database.                                                                                                                                                                                                             |
+| **From  Encrypted**    | The From name can be hidden in the DeployHub Pro database.                                                                                                                                                                                                             |
 | **From  Override**     | The From name can be changed.                                                                                                                                                                                                                                      |
-| **Logfile**            | The location of the log results between DeployHub and the Mail Server.                                                                                                                                                                                             |
-| **Logfile Encrypted**  | The Logfile can be hidden in the DeployHub database.                                                                                                                                                                                                               |
+| **Logfile**            | The location of the log results between DeployHub Pro and the Mail Server.                                                                                                                                                                                             |
+| **Logfile Encrypted**  | The Logfile can be hidden in the DeployHub Pro database.                                                                                                                                                                                                               |
 | **Logfile Override**   | The Logfile location can be changed.                                                                                                                                                                                                                               |
 | **Mailport**           | The port that receives email on the mail server. Typically 26, but it could be different.                                                                                                                                                                          |
-| **Mailport Encrypted** | The Mailport can be hidden in the DeployHub database.                                                                                                                                                                                                              |
+| **Mailport Encrypted** | The Mailport can be hidden in the DeployHub Pro database.                                                                                                                                                                                                              |
 | **Mailport Override**  | The Mailport can be changed.                                                                                                                                                                                                                                       |
 
 ## SMS Details
@@ -82,7 +82,7 @@ The following details are common to all _Notifiers_ types:
 | Field               | Description                                                                                              |
 |---------------------|----------------------------------------------------------------------------------------------------------|
 | **From**            | The address of the sender. Typically, this is a shared address accessible to users who push deployments. |
-| **From  Encrypted** | The From name can be hidden in the DeployHub database.                                                   |
+| **From  Encrypted** | The From name can be hidden in the DeployHub Pro database.                                                   |
 | **From  Override**  | The From name can be changed.                                                                            |
 
 {{% include "/userguide/reusable/Hipchat.md/" %}}

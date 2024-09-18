@@ -8,9 +8,9 @@ description: >
 
 ## Intro to _Components_
 
-_Components_ are independent artifacts—such as containers, jar files, and executables—pushed through the CI/CD pipeline and deployed separately, each with its own security details, including Software Bill of Materials (SBOMs) and vulnerabilities. DeployHub continuously tracks the CI/CD pipeline, collecting both security and DevOps insights for every _Component_. By mapping this data, DeployHub provides a unified view of each _Component's_ security profile. 
+_Components_ are independent artifacts—such as containers, jar files, and executables—pushed through the CI/CD pipeline and deployed separately, each with its own security details, including Software Bill of Materials (SBOMs) and vulnerabilities. DeployHub Pro continuously tracks the CI/CD pipeline, collecting both security and DevOps insights for every _Component_. By mapping this data, DeployHub Provides a unified view of each _Component's_ security profile. 
 
-A collection of _Components_ forms a 'logical' view of an _Application_. Because each _Component_ comes with its own security and DevOps data, DeployHub aggregates the _Component_ insights for all 'logical' _Applications_. This aggregation provides a comprehensive view of the 'logical' _Application's_ SBOMs and vulnerabilities, supporting a unified security perspective within complex, decoupled, cloud-native architectures. 
+A collection of _Components_ forms a 'logical' view of an _Application_. Because each _Component_ comes with its own security and DevOps data, DeployHub Pro aggregates the _Component_ insights for all 'logical' _Applications_. This aggregation provides a comprehensive view of the 'logical' _Application's_ SBOMs and vulnerabilities, supporting a unified security perspective within complex, decoupled, cloud-native architectures. 
 
 _Components_ change over time, and so they have both a _Component Base Versions_, the first iteration of a _Component_, and _Component Versions_, all subsequent iterations.
 
@@ -20,7 +20,7 @@ _Components_ change over time, and so they have both a _Component Base Versions_
 
 ## Publish New _Component Versions_ automatically via the CI/CD Pipeline
 
-Components can only be added via your CI/CD pipeline. Configure your CI/CD Pipeline to automatically update new _Component Versions_ each time a new GitCommit triggers the workflow process.  Add DeployHub to the workflow to perform the continuous versioning of new _Components_ and their consuming _Applications_.  For more information, see [Using DeployHub with CI/CD](/userguide/integrations/ci-cd_integrations/).
+Components can only be added via your CI/CD pipeline. Configure your CI/CD Pipeline to automatically update new _Component Versions_ each time a new GitCommit triggers the workflow process.  Add DeployHub Pro to the workflow to perform the continuous versioning of new _Components_ and their consuming _Applications_.  For more information, see [Using DeployHub Pro with CI/CD](/userguide/integrations/ci-cd_integrations/).
 
 ## Components and Domains
 
@@ -32,11 +32,11 @@ The organization of _Components_ by _Domains_ support the Domain Driven Design o
 
 _Components_ are consumed by _Applications_. You track a 'logical' view of your complete software solution by assigning _Components_ to the consuming _Application_. Defining _Components_ to _Applications_ is a "packaging" process that is done through your CI/CD pipeline.
 
-There is a many-to-many relationship between _Applications_ and _Components._ An _Application_ can contain many different _Components_. A _Component_ can be used across many different _Applications_. DeployHub tracks and versions all _Component Version_ relationships including to which _Applications_ they have been assigned.
+There is a many-to-many relationship between _Applications_ and _Components._ An _Application_ can contain many different _Components_. A _Component_ can be used across many different _Applications_. DeployHub Pro tracks and versions all _Component Version_ relationships including to which _Applications_ they have been assigned.
 
 ## _Component_ Versioning
 
-DeployHub uses a backend versioning engine to track your _Components_. When you first add your _Component_, DeployHub tracks it as the _Component Base Version_. Subsequent updates to that _Component_ creates a new _Component Version_ which represent the updates over time. A _Component Base Version_ is always the first one created, and it acts as a model for subsequent _Component Versions_. Versioning tracks _Component_ attributes including low level information that is needed for other teams to reuse your _Component_ including:
+DeployHub Pro uses a backend versioning engine to track your _Components_. When you first add your _Component_, DeployHub Pro tracks it as the _Component Base Version_. Subsequent updates to that _Component_ creates a new _Component Version_ which represent the updates over time. A _Component Base Version_ is always the first one created, and it acts as a model for subsequent _Component Versions_. Versioning tracks _Component_ attributes including low level information that is needed for other teams to reuse your _Component_ including:
 
 - SBOMs 
 - OpenSSF Scorecard 
@@ -50,15 +50,15 @@ DeployHub uses a backend versioning engine to track your _Components_. When you 
 - CD Build / Workflow Number
 - Deployment Metadata 
 
-DevOps and security information is collected for all _Components_ via the CI/CD pipeline. When your CD engine initiates a workflow for the _Component_, DeployHub is called to determine that a new version of the _Component_ is being pushed across the Pipeline. When a _Component_ is updated, DeployHub automatically updates all consuming _Applications_ and creates a new logical _Application Version_. If a _Component_ changes, the consuming _Application_ also changes.  Both get a new version number. For more information see [Using DeployHub with CI/CD](/userguide/integrations/ci-cd_integrations/).
+DevOps and security information is collected for all _Components_ via the CI/CD pipeline. When your CD engine initiates a workflow for the _Component_, DeployHub Pro is called to determine that a new version of the _Component_ is being pushed across the Pipeline. When a _Component_ is updated, DeployHub Pro automatically updates all consuming _Applications_ and creates a new logical _Application Version_. If a _Component_ changes, the consuming _Application_ also changes.  Both get a new version number. For more information see [Using DeployHub Pro with CI/CD](/userguide/integrations/ci-cd_integrations/).
 
-DeployHub uses a simple versioning number schema starting at 1 and incrementing over time, for example: ` Myapp;1, Myapp;2. ` .
+DeployHub Pro uses a simple versioning number schema starting at 1 and incrementing over time, for example: ` Myapp;1, Myapp;2. ` .
 
 You can use your DevOps Pipeline to include variance in your versioning number (base name, variant, version).  See [Step 2 - Create Your Component.toml File in the CI/CD Integrations](/userguide/integrations/ci-cd_integrations/#_component_-versioning-schema).
 
 ## The _Component_ List View
 
-_Components_ are added to DeployHub through the CI/CD process. Once added, the _Component_ will be displayed in the _Component_ list view. Use the _Components_ List View accessible from the left hand _Components_ menu option to view all of your available _Components Versions_. The list of all _Components_ is organized by the following:
+_Components_ are added to DeployHub Pro through the CI/CD process. Once added, the _Component_ will be displayed in the _Component_ list view. Use the _Components_ List View accessible from the left hand _Components_ menu option to view all of your available _Components Versions_. The list of all _Components_ is organized by the following:
 
 | List Column                        | Description |
 |------------------------------------|------------------------------------------------|
@@ -88,11 +88,11 @@ You can also use the Filter bar, represented by a funnel icon, to reorder your _
 
 ## Viewing a _Component's_ Security Details
 
-Double click on a _Component_ from the _Component List_ to view and edit an individual _Component's_ security and DevOps details. The DeployHub Dashboard displays all information related to a specific _Component Version_.
+Double click on a _Component_ from the _Component List_ to view and edit an individual _Component's_ security and DevOps details. The DeployHub Pro Dashboard displays all information related to a specific _Component Version_.
 
 ### Viewing all _Component Versions_
 
-You can view a list of all _Component Versions_ by selecting the "Versions" button displayed after the _Component's_ name at the top of the DeployHub Dashboard. 
+You can view a list of all _Component Versions_ by selecting the "Versions" button displayed after the _Component's_ name at the top of the DeployHub Pro Dashboard. 
 
 ### Comparing Two _Component Versions_
 
@@ -100,14 +100,14 @@ You can compare any two _Component Versions_ by selecting the _Compare_button. Y
 
 ## Security Posture Section
 
-The first information you will see when viewing a _Component_ is the Security Posture. DeployHub gathers security insights created by open-source and commercial tools coming from organizations such as the [OpenSSF](https://openssf.org/projects/), [Continuous Delivery Foundation](https://cd.foundation), [OSV.dev](https://osv.dev/), and [Sonatype](https://www.sonatype.com/). When security tooling is added to your CI/CD pipeline, DeployHub pulls the security information and maps it to the deployment locations providing real-time security insights for every software update, referred to as continuous security monitoring. By mapping the security data to release versions, and their deployed locations, DeployHub gives you continuous insights into vulnerabilities long after your static CI/CD container scan was completed.
+The first information you will see when viewing a _Component_ is the Security Posture. DeployHub Pro gathers security insights created by open-source and commercial tools coming from organizations such as the [OpenSSF](https://openssf.org/projects/), [Continuous Delivery Foundation](https://cd.foundation), [OSV.dev](https://osv.dev/), and [Sonatype](https://www.sonatype.com/). When security tooling is added to your CI/CD pipeline, DeployHub Pro pulls the security information and maps it to the deployment locations providing real-time security insights for every software update, referred to as continuous security monitoring. By mapping the security data to release versions, and their deployed locations, DeployHub Pro gives you continuous insights into vulnerabilities long after your static CI/CD container scan was completed.
 
->Note: Data from security tools can only be displayed if the tools are added to the CI/CD pipeline. To learn how DeployHub can simplify this step view [Setting up DeployHub via the CLI](/userguide/integrations/ci-cd_integrations/).
+>Note: Data from security tools can only be displayed if the tools are added to the CI/CD pipeline. To learn how DeployHub Pro can simplify this step view [Setting up DeployHub Pro via the CLI](/userguide/integrations/ci-cd_integrations/).
 
 
 ### Software Bill of Materials
 
-DeployHub consumes a _Component's_ Software Bill of Materials data as part of the CI/CD process. It can consume both [SPDX](https://spdx.dev/) and [CycloneDX](https://cyclonedx.org/) formats. DeployHub presents the following SBOM summary information:
+DeployHub Pro consumes a _Component's_ Software Bill of Materials data as part of the CI/CD process. It can consume both [SPDX](https://spdx.dev/) and [CycloneDX](https://cyclonedx.org/) formats. DeployHub Pro presents the following SBOM summary information:
 
 | SBOM Element  | Description |
 |------------------|--------------------------------------------------|
@@ -116,11 +116,11 @@ DeployHub consumes a _Component's_ Software Bill of Materials data as part of th
 | **License**         | The license used by the Package. |
 | **OSSF Scorecard**  | When available, the OpenSSF Scorecard status for each package.|
 
->Note: SBOM information will only be displayed if SBOM usage is added to the CI/CD pipeline. To learn how DeployHub can simplify this step view [the CI/CD chapter](/userguide/first-steps/2-intro-to-setting-up-deployhub/).
+>Note: SBOM information will only be displayed if SBOM usage is added to the CI/CD pipeline. To learn how DeployHub Pro can simplify this step view [the CI/CD chapter](/userguide/first-steps/2-intro-to-setting-up-DeployHub Pro/).
 
 ### Real-Time Vulnerabilities
 
-With the SBOM data, DeployHub continuously monitors the vulnerabilities for the _Component_. Every 10 minutes, DeployHub scans the OSV.dev distributed vulnerability database for the most recent vulnerabilities for the _Component_.
+With the SBOM data, DeployHub Pro continuously monitors the vulnerabilities for the _Component_. Every 10 minutes, DeployHub Pro scans the OSV.dev distributed vulnerability database for the most recent vulnerabilities for the _Component_.
 
 | Vulnerability Element  | Description |
 |------------------|--------------------------------------------------|
@@ -133,7 +133,7 @@ With the SBOM data, DeployHub continuously monitors the vulnerabilities for the 
 
 ### OpenSSF Scorecard
 
-OpenSSF Scorecard is a collection of security health metrics for open source packages. These metrics are critical as they allow consumers to evaluate the security posture before use. DeployHub displays the OpenSSF score card information for the _Component_ and all of the packages the _Component_ consumes (displayed at the SBOM level). 
+OpenSSF Scorecard is a collection of security health metrics for open source packages. These metrics are critical as they allow consumers to evaluate the security posture before use. DeployHub Pro displays the OpenSSF score card information for the _Component_ and all of the packages the _Component_ consumes (displayed at the SBOM level). 
 
 
 |OpenSSF Scorecard Element  | Description |
@@ -145,15 +145,15 @@ OpenSSF Scorecard is a collection of security health metrics for open source pac
 
 ### Readme
 
-DeployHub consumes the README text file found in the associated GitHub repo. The Readme section provides information about the _Component_ and help users understand what the _Component_ is about and how to use it.
+DeployHub Pro consumes the README text file found in the associated GitHub repo. The Readme section provides information about the _Component_ and help users understand what the _Component_ is about and how to use it.
 
 ### License
 
-DeployHub consumes the license information from the GitHub repository associated to the _Component_. The full license is displayed. 
+DeployHub Pro consumes the license information from the GitHub repository associated to the _Component_. The full license is displayed. 
 
 ## Impact Assessment Section
 
-When responding to vulnerabilities you must know how widespread the vulnerability is across your runtime environments. DeployHub maps security data to DevOps data to provide an inventory of each _Application_ who consumes _Component_. 
+When responding to vulnerabilities you must know how widespread the vulnerability is across your runtime environments. DeployHub Pro maps security data to DevOps data to provide an inventory of each _Application_ who consumes _Component_. 
 
 ### Consuming Applications
 
@@ -164,7 +164,7 @@ The table shows you all of the _Applications_ who are consuming this _Component_
 | **Application**       | The _Application Version_ that consumes the _Component Version_.|
 | **Domain**         | The organizational level to which the _Application_ belongs.|
 | **Environment** | The artifact repository, or physical _Environment_ where the _Component's_ consuming _Application_ is running. |
-| **Deployment Log** | The DeployHub internal deployment number linked to the deployment log generated by the deployment tool. |
+| **Deployment Log** | The DeployHub Pro internal deployment number linked to the deployment log generated by the deployment tool. |
 | **Completed** | The date/time stamp of when the _Application Version_ was released. |
 | **Results** | Shows if the deployment completed with a success or fail status. |
 
@@ -174,14 +174,14 @@ The Blast Radius shows a graphic representation of how many _Applications_ are c
 
 ### Swagger
 
-As many _Components_ are APIs, DeployHub gathers the Swagger information. Swagger is important because it plays a crucial role in API development and documentation. Swagger helps design, build, document, and consume RESTful web services. If available, the Swagger information is displayed in this section. 
+As many _Components_ are APIs, DeployHub Pro gathers the Swagger information. Swagger is important because it plays a crucial role in API development and documentation. Swagger helps design, build, document, and consume RESTful web services. If available, the Swagger information is displayed in this section. 
 
 >Note: Automate the Readme, SBOM, License, and Swagger Upload via Your Pipeline. You can automatically upload you readme, SBOM, License, and Swagger data using the Command Line Interface (CLI) added to your pipeline. For more information review the [CI/CD CLI details](/userguide/integrations/ci-cd_integrations/).
 
 
 ## _Component_ with DevOps Details Section
 
-DeployHub gathers both security insights and DevOps insights to provide a comprehensive view of a _Component's_ security posture. The DevOps details shows the owner of the _Component_, Build information, Helm and Git details, Key Value data, and DeployHub deployment engine information if used.  
+DeployHub Pro gathers both security insights and DevOps insights to provide a comprehensive view of a _Component's_ security posture. The DevOps details shows the owner of the _Component_, Build information, Helm and Git details, Key Value data, and DeployHub Pro deployment engine information if used.  
 
 ### _Component_ Details
 
@@ -201,7 +201,7 @@ DeployHub gathers both security insights and DevOps insights to provide a compre
 
 ### Build Details
 
-When integrated with your CI/CD engine, DeployHub tracks the DevOps data from the build including: 
+When integrated with your CI/CD engine, DeployHub Pro tracks the DevOps data from the build including: 
 
 | **Field**                | **Description**  |  
 |--------------------------| -------------------------------------------------------|
@@ -215,7 +215,7 @@ When integrated with your CI/CD engine, DeployHub tracks the DevOps data from th
 
 ### Helm Details
 
-Helm can be used for deploying Container _Components_. DeployHub interfaces with Helm to support a Kubernetes Cluster deployment. Follow the steps at [Helm for Container Deployments](/userguide/integrations/helm/).
+Helm can be used for deploying Container _Components_. DeployHub Pro interfaces with Helm to support a Kubernetes Cluster deployment. Follow the steps at [Helm for Container Deployments](/userguide/integrations/helm/).
 
 A Container _Component_ has the following optional attributes:
 
@@ -241,12 +241,12 @@ The following Git information is gathered for each _Component_.
 
 ## Deployment Engine
 
-DeployHub includes an agentless deployment engine, but can also integrate with external deployment tools. The following information is needed when configuring the internal DeployHub engine for the _Component_.
+DeployHub Pro includes an agentless deployment engine, but can also integrate with external deployment tools. The following information is needed when configuring the internal DeployHub Pro engine for the _Component_.
 
 | **Field**                | **Description** |
 |--------------------------|-----------------------------------------|
 | **Change Request Data Source**     | This _Data Source_ is assigned to the _Component_ for tracking Change Request. A Change Request Data Source must be pre-defined for this field to be used.   |
-| **Category**                       | Assigning a Category to an Object allows lists of Objects based on Categories to be used throughout DeployHub. Add a new Category in the entry field or use an existing Category displayed in the drop down. Categories are most commonly associated with _Actions_, _Functions_ and _Procedures_. Pre-defined Categories include: <li>Build - _Actions_, _Functions_ and _Procedures_ for calling ANT (SalesForce integration).</li><li>Database - _Actions_, _Functions_ and _Procedures_ for database updates.</li><li>Deploy- _Actions_, _Functions_ and _Procedures_ for Deployments.</li><li>Dropzone- _Actions_, _Functions_ and _Procedures_ for interacting with the Dropzone.</li><li>File Logic- _Actions_, _Functions_ and _Procedures_ related to File manipulation.</li><li>Flow Logic- _Actions_, _Functions_ and _Procedures_ for if then else in DMScript.</li><li>Loops- _Actions_, _Functions_ and _Procedures_ for file looping.</li><li>General-Non-categorized Objects (default).</li><li>WebLogic- _Actions_, _Functions_ and _Procedures_ for deploying to WebLogic.</li><li>WebSphere- _Actions_, _Functions_ and _Procedures_ for deploying to WebSphere.</li><li>Windows- _Actions, Functions_ and _Procedures_ used for Windows deployments.</li> |
+| **Category**                       | Assigning a Category to an Object allows lists of Objects based on Categories to be used throughout DeployHub Pro. Add a new Category in the entry field or use an existing Category displayed in the drop down. Categories are most commonly associated with _Actions_, _Functions_ and _Procedures_. Pre-defined Categories include: <li>Build - _Actions_, _Functions_ and _Procedures_ for calling ANT (SalesForce integration).</li><li>Database - _Actions_, _Functions_ and _Procedures_ for database updates.</li><li>Deploy- _Actions_, _Functions_ and _Procedures_ for Deployments.</li><li>Dropzone- _Actions_, _Functions_ and _Procedures_ for interacting with the Dropzone.</li><li>File Logic- _Actions_, _Functions_ and _Procedures_ related to File manipulation.</li><li>Flow Logic- _Actions_, _Functions_ and _Procedures_ for if then else in DMScript.</li><li>Loops- _Actions_, _Functions_ and _Procedures_ for file looping.</li><li>General-Non-categorized Objects (default).</li><li>WebLogic- _Actions_, _Functions_ and _Procedures_ for deploying to WebLogic.</li><li>WebSphere- _Actions_, _Functions_ and _Procedures_ for deploying to WebSphere.</li><li>Windows- _Actions, Functions_ and _Procedures_ used for Windows deployments.</li> |
 | **Always Deploy**                  | The _Component_ is deployed to the associated _Endpoints_ in the _Target Environment_ regardless if the _Component_ is already present on the _Endpoints_. This is useful for monolithic applications where you want to copy over a binary for example.   |
 | **Deploy Sequentially**            | Normally when a _Component_ in an _Application_ is deployed to several _Endpoints_ in an _Environment_, it is deployed to each _Endpoint_ at the same time (in parallel). The "Deploy Sequentially" option changes this behavior to force the _Component_ to deploy to each _Endpoint_ in turn, sequentially.  |
 | **Base Directory**    | Base, or high level, directory where the file will be deployed. This value will be ignored if the _Endpoint_ has a Base Directory defined.   |

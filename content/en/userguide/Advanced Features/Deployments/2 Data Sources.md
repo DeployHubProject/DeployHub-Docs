@@ -45,7 +45,7 @@ The following details are common to all _Data Sources_ types:
 
 ## Change Request _Data Sources_
 
-DeployHub supports GitHub, Jira and Bugzilla for tracking change request to _Applications_ and _Components_. For a complete description of the integration see [Tracking Jira, Bugzilla and GitHub Issues](/userguide/integrations/jira-bugzilla-and-git-issues/ ).
+DeployHub Pro supports GitHub, Jira and Bugzilla for tracking change request to _Applications_ and _Components_. For a complete description of the integration see [Tracking Jira, Bugzilla and GitHub Issues](/userguide/integrations/jira-bugzilla-and-git-issues/ ).
 
 ### GitHub _Data Source_ Details
 
@@ -53,7 +53,7 @@ This _Data Source_ allows you to connect to GitHub to retrieve GitHub issues ass
 
 | Field                       | Description                                                                                                                                                         |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Poll Interval**           | The time frequency of how often DeployHub should look for Git issues in seconds, i.e. 60.                                                                           |
+| **Poll Interval**           | The time frequency of how often DeployHub Pro should look for Git issues in seconds, i.e. 60.                                                                           |
 | **Poll Interval Encrypted** | Select the box to indicate the Poll Interval should be hidden in the database.                                                                                      |
 | **Poll Interval Override**  | Select the box if the Poll Interval can be changed.                                                                                                                 |
 | **Organization**            | The full URL to the Git [Organization](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/about-organizations).                      |
@@ -72,13 +72,13 @@ This _Data Source_ allows you to connect to Jira to retrieve Jira issues associa
 | **Filter**                  | Enter the [Jira Status](https://confluence.atlassian.com/adminjiraserver/defining-status-field-values-938847108.html) you want to use as your filter. |
 | **Filter Encrypted**        | Select the box to indicate the Filter name should be hidden in the database.                                                                          |
 | **Filter Override**         | Select the box to indicate the Filter name can be changed.                                                                                            |
-| **Poll Interval**           | The time frequency of how often DeployHub should look for Jira issues in seconds, i.e. 60.                                                            |
+| **Poll Interval**           | The time frequency of how often DeployHub Pro should look for Jira issues in seconds, i.e. 60.                                                            |
 | **Poll Interval Encrypted** | Select the box to indicate the Poll Interval should be hidden in the database.                                                                        |
 | **Poll Interval Override**  | Select the box if the Poll Interval can be changed.                                                                                                   |
 | **Project Key**             | The [The Jira Project Key](https://support.atlassian.com/jira-software-cloud/docs/what-is-a-jira-software-project/) within the Jira Server.           |
 | **Project Key Encrypted**   | Select the box to indicate the Project name should be hidden in the database.                                                                         |
 | **Project Key Override**    | Select the box if the Project can be changed.                                                                                                         |
-| **Server**                  | The fully qualified URL to the Jira Server so DeployHub can get access.                                                                               |
+| **Server**                  | The fully qualified URL to the Jira Server so DeployHub Pro can get access.                                                                               |
 | **Server Encrypted**        | Select the box to indicate the Jira Server should be hidden in the database.                                                                          |
 | **Server Override**         | Select the box if the Jira Server can be changed.                                                                                                     |
 
@@ -91,13 +91,13 @@ This _Data Source_ allows you to connect to Bugzilla to retrieve Bugzilla issues
 | **Component**               | The name of the [Bugzilla Component](https://bugzilla.readthedocs.io/en/latest/api/core/v1/bug.html#search-bugs).                                          |
 | **Component Encrypted**     | Select the box to indicate the Bugzilla Component should be hidden in the database.                                                                        |
 | **Component Override**      | Select the box if the Bugzilla Component can be changed.                                                                                                   |
-| **Poll Interval**           | The time frequency of how often DeployHub should look for Bugzilla issues in seconds, i.e. 60.                                                             |
+| **Poll Interval**           | The time frequency of how often DeployHub Pro should look for Bugzilla issues in seconds, i.e. 60.                                                             |
 | **Poll Interval Encrypted** | Select the box to indicate the Poll Interval should be hidden in the database.                                                                             |
 | **Poll Interval Override**  | Select the box if the Poll Interval can be changed.                                                                                                        |
 | **Product**                 | The full URL to the [Bugzilla Product](https://bugzilla.readthedocs.io/en/latest/administering/categorization.html).                                       |
 | **Product Encrypted**       | Select the box to indicate the Product name should be hidden in the database.                                                                              |
 | **Product Override**        | Select the box if the Product can be changed.                                                                                                              |
-| **Server**                  | The fully qualified URL to the Bugzilla Server so DeployHub can get access.                                                                                |
+| **Server**                  | The fully qualified URL to the Bugzilla Server so DeployHub Pro can get access.                                                                                |
 | **Server Encrypted**        | Select the box to indicate the Server should be hidden in the database.                                                                                    |
 | **Server Override**         | Select the box if the Server can be changed.                                                                                                               |
 | **Status**                  | The [Bugzilla Status](https://bugzilla.readthedocs.io/en/latest/using/understanding.html?highlight=what%20is%20a%20status) you want to use as your Filter. |

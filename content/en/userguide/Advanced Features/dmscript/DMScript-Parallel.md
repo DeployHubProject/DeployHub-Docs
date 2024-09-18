@@ -23,7 +23,7 @@ In this example, action1 and action2 are executed simultaneously.
 
 Sequential
 
-Each statement within the block is executed sequentially. Within a sequential block, _DMScript_ waits for each statement to complete before executing the next. Note, this is normal DeployHub operation. Sequential is usually only needed to organize sequential blocks within a parallel option.
+Each statement within the block is executed sequentially. Within a sequential block, _DMScript_ waits for each statement to complete before executing the next. Note, this is normal DeployHub Pro operation. Sequential is usually only needed to organize sequential blocks within a parallel option.
 
 ```bash
 parallel {

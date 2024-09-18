@@ -10,7 +10,7 @@ description: >
 
 ## Integrating Tomcat into Your Deployment Logic
 
-DeployHub integrates with Tomcat for managing deployments where you need to stop and start the Tomcat server as part of your deployment logic. _Actions_ for Tomcat Windows servers are pre-defined within DeployHub. At the _Application_ level, you define _Pre_ and _Post_ _Actions_ that perform the calls to stop and then start Tomcat. You will be creating new _Procedures_ and _Actions_ to complete this setup.  For more information see:
+DeployHub Pro integrates with Tomcat for managing deployments where you need to stop and start the Tomcat server as part of your deployment logic. _Actions_ for Tomcat Windows servers are pre-defined within DeployHub Pro. At the _Application_ level, you define _Pre_ and _Post_ _Actions_ that perform the calls to stop and then start Tomcat. You will be creating new _Procedures_ and _Actions_ to complete this setup.  For more information see:
 
 - [Customizing Actions](/userguide/advanced-features/deployments/2-define-your-actions/)
 - [Procedures and Functions](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/)
@@ -21,7 +21,7 @@ The following steps will take you through the process.
 
 **Step 1 - Download and Import the Tomcat Stop and Start scripts as _Procedures_**
 
-Download the the most current DeployHub Tomcat Procedures from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). There will be two:
+Download the the most current DeployHub Pro Tomcat Procedures from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). There will be two:
 
 - **TomcatPreDeploy.re**:  This _Procedure_ stops your Tomcat Server.
 
@@ -29,13 +29,13 @@ Download the the most current DeployHub Tomcat Procedures from the [Ortelius Git
 
 **Step 2 - Create your Tomcat _Procedures_**
 
-Once downloaded, you will need to Import the scripts into DeployHub as _Procedures_. To import these _Procedures_ navigate to the _Func/Procs_ Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the _Functions and Procedures_ List View. From the _Functions and Procedures_ List View select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the TomcatPreDeploy.re and TomcatPostDeploy.re files.
+Once downloaded, you will need to Import the scripts into DeployHub Pro as _Procedures_. To import these _Procedures_ navigate to the _Func/Procs_ Menu option on the left hand side of the DeployHub Pro Main Menu panel. This will take you to the _Functions and Procedures_ List View. From the _Functions and Procedures_ List View select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the TomcatPreDeploy.re and TomcatPostDeploy.re files.
 
-Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub. If you select a lower level _Sub-Domain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
+Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub Pro. If you select a lower level _Sub-Domain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
 
 **Step 3 - Create your _Action_ for the Tomcat _Procedures_**
 
-Once you have imported your TomcatPreDeploy.re and TomcatPostDeploy.re files as _Procedures_, you can define your _Actions_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Main Menu panel. You will be creating two _Actions_, one for your Tomcat stop step, and the other for the Tomcat start step. One will be called in the _Pre Action_ the other in the _PostAction_.
+Once you have imported your TomcatPreDeploy.re and TomcatPostDeploy.re files as _Procedures_, you can define your _Actions_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Pro Main Menu panel. You will be creating two _Actions_, one for your Tomcat stop step, and the other for the Tomcat start step. One will be called in the _Pre Action_ the other in the _PostAction_.
 
 - Create the TomcatStopAction
 Use the +Add option to create your first new _Action_.  In the "Full Domain" field select your "Global" _Domain_. If you select a lower level _Sub-Domain_ you will restrict access to this _Custom Action_.  By defining it to your highest level _Domain_, all _Users_ will be able to execute the process regardless of their _Sub-Domain_.

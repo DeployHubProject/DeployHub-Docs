@@ -10,7 +10,7 @@ You can create your own _Endpoint Types_ for defining this mapping.
 
 ## Using the _Customize Type_ List View for Adding or Deleting
 
-You will find _Customize Types_ from the left hand side of the DeployHub main panel.  Selecting _Customize Types_ will take you to a list of all _Custom Types_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Custom Types__ List View based on Type and _Domain_.
+You will find _Customize Types_ from the left hand side of the DeployHub Pro main panel.  Selecting _Customize Types_ will take you to a list of all _Custom Types_ which you have access to. You can also use the Filter bar, represented by a funnel icon, to reorder your _Custom Types__ List View based on Type and _Domain_.
 
 The _Custom Type_ List View has the following Tabs.
 

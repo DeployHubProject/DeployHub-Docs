@@ -43,14 +43,14 @@ A stream can contain binary data. Streams can be used to create files and can al
 
 ### Using DropZone
 
-Creates a new _DropZone_ (an area on the _Endpoint_ on which the DeployHub deployment engine is running). Typically, _DropZones_ are created for each _Component_ and the _Component_ items are pulled from their associated repositories into these _DropZones_. The using _DropZone_ statement creates a new _DropZone_ and allows files within that _DropZone_ to be created, modified and pushed to target _Endpoint_s without affecting any other files in the_Component DropZones_.
+Creates a new _DropZone_ (an area on the _Endpoint_ on which the DeployHub Pro deployment engine is running). Typically, _DropZones_ are created for each _Component_ and the _Component_ items are pulled from their associated repositories into these _DropZones_. The using _DropZone_ statement creates a new _DropZone_ and allows files within that _DropZone_ to be created, modified and pushed to target _Endpoint_s without affecting any other files in the_Component DropZones_.
 
 #### Example 2
 
 Given an input file "servers.xml" that looks like this:
 
 ```bash
-\<deployhub\>;
+\<DeployHub Pro\>;
 
 \<server name="server1" type="unix" /\>;
 
@@ -58,17 +58,17 @@ Given an input file "servers.xml" that looks like this:
 
 \<server name="server3" type="as400" /\>;
 
-\</deployhub\>;
+\</DeployHub Pro\>;
 
 Change server2 to be of type "unix", and deploy the file:
 
-using DropZone 'DeployHub' {
+using DropZone 'DeployHub Pro' {
 
 checkout(repository: 'local', pattern: 'servers.xml');
 
 modify(modifier: 'xml', file: 'servers.xml') {
 
-set\_attribute(xpath: "/deployhub/server[@name=server2]/@type", value: "unix");
+set\_attribute(xpath: "/DeployHub Pro/server[@name=server2]/@type", value: "unix");
 
 }
 
