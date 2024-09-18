@@ -22,7 +22,7 @@ When you [signup for Ortelius](https://www.DeployHub.com/DeployHub-team-signup/)
 
 Ortelius is accessible through the following url:
 
-[https://console.DeployHub Pro.com/dmadminweb/Home](https://console.DeployHub.com/dmadminweb/Home)
+[https://console.DeployHub.com/dmadminweb/Home](https://console.DeployHub.com/dmadminweb/Home)
 
 Login using the UserID and Password you used when you signed up for Ortelius. Check your email for your login information. 
 
