@@ -7,17 +7,17 @@ description: >
 ---
 
 
-## Installing the Reverse Proxy for Managing Deployments using DeployHub
+## Installing the Reverse Proxy for Managing Deployments using DeployHub Pro
 
-DeployHub includes a deployment engine that can be used to deploy your _Applications_. Alternatively you can push deployment information via your CI/CD pipeline using the [Command Line Interface](/userguide/installation-and-support/0-commandlineinterface/). You will not need the Reverse Proxy if your are pushing deployment results with the CLI.
+DeployHub Pro includes a deployment engine that can be used to deploy your _Applications_. Alternatively you can push deployment information via your CI/CD pipeline using the [Command Line Interface](/userguide/installation-and-support/0-commandlineinterface/). You will not need the Reverse Proxy if your are pushing deployment results with the CLI.
 
-To start using DeployHub to deploy your _Applications_ and _Components_, you will first need to install a Reverse Proxy inside your firewall. This contacts DeployHub in our SaaS environment to receive deployment requests.  The Reverse Proxy is required for deploying into your environment.
+To start using DeployHub Pro to deploy your _Applications_ and _Components_, you will first need to install a Reverse Proxy inside your firewall. This contacts DeployHub Pro in our SaaS environment to receive deployment requests.  The Reverse Proxy is required for deploying into your environment.
 
-A Reverse Proxy queries the DeployHub SaaS every minute to determine if a deployment is needed. For SaaS users, it provides a security layer, preventing you from opening a port to the outside world. It uses standard HTTPS requests to communicate to the DeployHub SaaS on the Google GKE environment. Nothing from the external Google side of the firewall is pushed to the local DeployHub Reverse Proxy.
+A Reverse Proxy queries the DeployHub Pro SaaS every minute to determine if a deployment is needed. For SaaS users, it provides a security layer, preventing you from opening a port to the outside world. It uses standard HTTPS requests to communicate to the DeployHub Pro SaaS on the Google GKE environment. Nothing from the external Google side of the firewall is pushed to the local DeployHub Pro Reverse Proxy.
 
-Once the Reverse Proxy determines that a deployment is needed, it executes the deployment using all files on the inside of the firewall. The one-way communication initiates the deployment but all work is done local to your network. On completion of the deployment, the logs are pushed back up to the DeployHub SaaS for viewing and audit.
+Once the Reverse Proxy determines that a deployment is needed, it executes the deployment using all files on the inside of the firewall. The one-way communication initiates the deployment but all work is done local to your network. On completion of the deployment, the logs are pushed back up to the DeployHub Pro SaaS for viewing and audit.
 
-![DeployHub Architecture](/userguide/images/ReverseProxy.png)
+![DeployHub Pro Architecture](/userguide/images/ReverseProxy.png)
 
 ### Reverse Proxy Installation
 
@@ -35,13 +35,13 @@ The Reverse Proxy runs as docker container. In order to install it, you need to 
 
 See the [Docker Install Test](https://docs.docker.com/get-started/#test-docker-version) instructions
 
-## Installing Your DeployHub Reverse Proxy Docker Image
+## Installing Your DeployHub Pro Reverse Proxy Docker Image
 
-The DeployHub Reverse Proxy Docker Image is found on the Redhat Quay Docker Registry. Follow the steps below to install the Reverse Proxy into your Docker installation.
+The DeployHub Pro Reverse Proxy Docker Image is found on the Redhat Quay Docker Registry. Follow the steps below to install the Reverse Proxy into your Docker installation.
 
 ### Step 1 - Set your CLIENTID as environment variable
 
-Use your Client ID that you received in your "Welcome" sign up email from DeployHub. It will be a hexadecimal number such as:
+Use your Client ID that you received in your "Welcome" sign up email from DeployHub Pro. It will be a hexadecimal number such as:
 
 ```text
 Your CLIENTID is 6d961c2d-69a4-4660-8a4a-aaea11276864
@@ -64,7 +64,7 @@ export CLIENTID=6d961c2d-69a4-4660-8a4a-aaea11276864
 Run:
 
 ```bash
-docker pull quay.io/deployhub/deployhub-rproxy:latest
+docker pull quay.io/DeployHub Pro/DeployHub Pro-rproxy:latest
 ```
 
 ### Step 3 - Find your image SHA
@@ -72,13 +72,13 @@ docker pull quay.io/deployhub/deployhub-rproxy:latest
 Run:
 
 ```bash
-docker images | grep deployhub-rproxy | grep latest
+docker images | grep DeployHub Pro-rproxy | grep latest
 ```
 
 Find the image SHA from the third column in the output.
 
 ```bash
-quay.io/deployhub/deployhub-rproxy      v9.0.0          0114088b0b44        6 days ago          3.32GB
+quay.io/DeployHub Pro/DeployHub Pro-rproxy      v9.0.0          0114088b0b44        6 days ago          3.32GB
 ```
 
 The SHA in the above example is 0114088b0b44.
@@ -91,16 +91,16 @@ Use the image SHA from Step 3 as the last parameter to the docker run.
 docker run -d --hostname `hostname` -e CLIENTID=$CLIENTID -v ~/.ssh:/keys:Z 0114088b0b44
 ```
 
-### Step 5 - Access DeployHub from your browser
+### Step 5 - Access DeployHub Pro from your browser
 
- DeployHub is accessible through the following url:
+ DeployHub Pro is accessible through the following url:
 
 ```text
-https://console.deployhub.com/dmadminweb/Home
+https://console.DeployHub Pro.com/dmadminweb/Home
 ```
 
-Login using the UserID and Password you used when you Signed-up for DeployHub
+Login using the UserID and Password you used when you Signed-up for DeployHub Pro
 
 ### Step 6 - Confirm Your Reverse Proxy is Running
 
-In the upper right hand corner you will see a message that should say "2 out of 2 Reverse Proxy Running."  There is a default proxy used to deploy into the DeployHub environment for the Hipster Store Tutorial.
+In the upper right hand corner you will see a message that should say "2 out of 2 Reverse Proxy Running."  There is a default proxy used to deploy into the DeployHub Pro environment for the Hipster Store Tutorial.

@@ -20,7 +20,7 @@ The following properties can be accessed on the User object:
 | email        | String          | The User's email address.                                                                        |
 | phone        | String          | The User's telephone number.                                                                     |
 | groups       | Array           | Array of UserGroup Objects – the UserGroups to which this user belongs.                          |
-| lastlogin    | Date            | The date/time the user last logged into DeployHub.                                               |
+| lastlogin    | Date            | The date/time the user last logged into DeployHub Pro.                                               |
 | creator      | User            | User Object representing the user who created this user.                                         |
 | modifier     | User            | User Object representing the user who last modified this user.                                   |
 | ctime        | Date            | Date Object representing the date/time the user was created.                                     |

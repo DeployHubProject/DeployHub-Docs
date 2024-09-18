@@ -7,7 +7,7 @@ description: >
 ---
 ## Intro to Releases
 
- A _Release_ manages the progression and deployment of multiple _Applications_ together.  _Releases_ and _Release Versions_ are a DeployHub feature.  _Releases_ and _Release Versions_ are collections of one or more _Applications_ that are managed as a unit due to their interdependencies. This is sometimes referred to as a "Release Train." Like _Applications_ and _Components_, _Releases_ are versioned each time they are deployed. A _Release Base Version_ is the initial version and acts as a model for subsequent _Release Versions_.
+ A _Release_ manages the progression and deployment of multiple _Applications_ together.  _Releases_ and _Release Versions_ are a DeployHub Pro feature.  _Releases_ and _Release Versions_ are collections of one or more _Applications_ that are managed as a unit due to their interdependencies. This is sometimes referred to as a "Release Train." Like _Applications_ and _Components_, _Releases_ are versioned each time they are deployed. A _Release Base Version_ is the initial version and acts as a model for subsequent _Release Versions_.
 
 ## The _Release_ List View for Adding or Deleting
 
@@ -68,7 +68,7 @@ The Dashboard view displays all information related to a specific _Release Base 
 
 This section contains all of the _Applications_ that make up the _Release Version_, linked together in order of deployment. Click on the tree structure on the right side in order to see all the available _Applications_, then click and drag an _Application_ from the list on the right side and drop it into the _Release_ area. It will appear in the area as a box containing the name of the _Application_ and will automatically link to the last _Application_ in the area. The connecting line can be deleted by right clicking on the connector line and selecting "Delete this Connector". A new connector can be created by clicking on the anchor (the green dot at the bottom of the _Application_) and dragging and dropping it onto another _Application_. This determines the order that _Applications_ will be deployed. Keep in mind that each _Application_ contains _Components_, which contain _Component Items_, all of which are linked together in the order that they are executed.
 
-NOTE: In the Application Version area, there is an object that represents the currently selected Release Version. It is distinguishable from any Applications in the area by the arrow icon that appears in the object along with the word "Start" and is positioned in the top center of the window and cannot be moved from that position. This must be connected to the first Application to be deployed, otherwise DeployHub does not know which Application to begin with, and the deployment will fail.
+NOTE: In the Application Version area, there is an object that represents the currently selected Release Version. It is distinguishable from any Applications in the area by the arrow icon that appears in the object along with the word "Start" and is positioned in the top center of the window and cannot be moved from that position. This must be connected to the first Application to be deployed, otherwise DeployHub Pro does not know which Application to begin with, and the deployment will fail.
 
 Applications can be set to deploy in parallel by joining two or more applications to a common parent. In this case, when the parent application has been deployed the "child" applications are deployed in parallel. You can attach multiple application to the "Start" block in order to deploy the initial applications in parallel.
 

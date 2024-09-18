@@ -1,7 +1,7 @@
 
 ## OpenMake Meister _Repository_ Details
 
-If you automate your builds (compile/link) using OpenMake Meister, DeployHub pulls binaries from the Meister binary repository that your _Component_ uses. Following is a list of the details for connecting a Meister repository to DeployHub:
+If you automate your builds (compile/link) using OpenMake Meister, DeployHub Pro pulls binaries from the Meister binary repository that your _Component_ uses. Following is a list of the details for connecting a Meister repository to DeployHub Pro:
 
 | Field                     | Description                                                                                                                       |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------|

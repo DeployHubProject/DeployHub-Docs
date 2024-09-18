@@ -25,13 +25,13 @@ String: The passed string with any trailing whitespace removed.
 ```bash
 set a = "Hello From ";
 
-echo "$a DeployHub";
+echo "$a DeployHub Pro";
 
-echo "${a.rtrim()} DeployHub";
+echo "${a.rtrim()} DeployHub Pro";
 
 Result:
 
-Hello From DeployHub
+Hello From DeployHub Pro
 
-Hello From DeployHub
+Hello From DeployHub Pro
 ```

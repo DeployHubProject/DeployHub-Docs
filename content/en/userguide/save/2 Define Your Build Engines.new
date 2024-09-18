@@ -8,7 +8,7 @@ description: >
 
 ## Intro to CD Engines
 
-A DeployHub CD Engine maps to your continuous delivery orchestration solution.
+A DeployHub Pro CD Engine maps to your continuous delivery orchestration solution.
 
 ## Use the _CD Engine_ List View to Add or Delete
 
@@ -48,7 +48,7 @@ The Access Section allows _Users_ within designated _Groups_ to update the _CD E
 | --- | --- |
 |**View**| This allows any _User_ that belongs to any _Group_ in this list to see the selected _CD Engine_ in the List View. |
 |**Change**| This allows any _User_ that belongs to any _Group_ in this list to make changes to the _CD Engine_. |
-|**Available Groups**|This list contains all the Groups within the DeployHub installation. Dragging and dropping back and forth between this list and the other two lists allows or prevents access to viewing and changing the selected _CD Engine_.
+|**Available Groups**|This list contains all the Groups within the DeployHub Pro installation. Dragging and dropping back and forth between this list and the other two lists allows or prevents access to viewing and changing the selected _CD Engine_.
 
 
 ### Jenkins CD Engine Details
@@ -56,10 +56,10 @@ The Access Section allows _Users_ within designated _Groups_ to update the _CD E
 | Field | Description |
 | --- | --- |
 | **Jenkins Match URL** | End Point URL: The URL where the Build Engine is located. |
-| **Jenkins Match Encrypted** | Hides the Jenkins URL in the DeployHub database. |
+| **Jenkins Match Encrypted** | Hides the Jenkins URL in the DeployHub Pro database. |
 | **Jenkins Match Override** | The Jenkins URL can be changed.|
 | **Server URL**| Only needed if Jenkins is returning a different URL.|
-| **Server URL Encrypted** | Server URL is hidden in the DeployHub database. |
+| **Server URL Encrypted** | Server URL is hidden in the DeployHub Pro database. |
 | **Server URL Override** | Server URL can be changed.|
 
 For more information on the Jenkins Integration see [Jenkins](/userguide/integrations/jenkins/)

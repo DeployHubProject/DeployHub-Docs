@@ -27,7 +27,7 @@ url: Is the URL to GET.
 
 Array: Associative array containing the JSON/XML returned from the RESTful get. If the returned data is encoded with XML then it is converted into the array structure using the rules outlined for xmlparse above.
 
-restful\_get can be used to post requests to DeployHub's own API.
+restful\_get can be used to post requests to DeployHub Pro's own API.
 
 ### Example
 
@@ -64,7 +64,7 @@ set bugid=128
 
 set res = restful\_get("https://api.github.com/repos/$repos/$prod/issues/$bugid",$token);
 
-3) Login to DeployHub and capture the JSESSIONID into a cookie for reuse
+3) Login to DeployHub Pro and capture the JSESSIONID into a cookie for reuse
 
 set id={
 

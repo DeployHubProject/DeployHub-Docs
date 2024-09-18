@@ -5,9 +5,9 @@ weight: 2
 description: >
   Take a Tour of Continuous Security Intelligence
 ---
-To help you understand the need for continuously monitoring your security intelligence, DeployHub has provided a free version with a tutorial for you to explore. This free version is based on the Ortelius.io open-source project incubating at the [Continuous Delivery Foundation](https://cd.foundation), hosted by DeployHub, Inc. Explore how the Ortelius _Application_ is configured and walk through basic concepts of Continuous Security Intelligence. 
+To help you understand the need for continuously monitoring your security intelligence, DeployHub Pro has provided a free version with a tutorial for you to explore. This free version is based on the Ortelius.io open-source project incubating at the [Continuous Delivery Foundation](https://cd.foundation), hosted by DeployHub Pro, Inc. Explore how the Ortelius _Application_ is configured and walk through basic concepts of Continuous Security Intelligence. 
 
-![Ortelius Hosted by DeployHub](/userguide/images/HostedLogo-SignIn.png)
+![Ortelius Hosted by DeployHub Pro](/userguide/images/HostedLogo-SignIn.png)
 
 The Ortelius project uses a decoupled microservices architecture serving as a great example of how Continuous Security Intelligence unifies fragmented clues and forensics across _Components_ to expose the _Application_ level security posture. In this tutorial you will see how Ortelius aggregates _Component_ level security to the _Application_ level providing  _Application_ level:
 - SBOMs
@@ -18,11 +18,11 @@ You will also see how Ortelius uses a Domain-Driven Design (DDD) to organize dat
 
 ## Signing Up and Getting Started
 
-When you [signup for Ortelius](https://www.deployhub.com/deployhub-team-signup/), you are asked for basic information, your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a _Sub-Domain_ under your Company _Domain_.
+When you [signup for Ortelius](https://www.DeployHub.com/DeployHub-team-signup/), you are asked for basic information, your UserID/Password, Company and Project names. Your UserID/Password and Company name are unique.  Your Project will be a _Sub-Domain_ under your Company _Domain_.
 
 Ortelius is accessible through the following url:
 
-[https://console.deployhub.com/dmadminweb/Home](https://console.deployhub.com/dmadminweb/Home)
+[https://console.DeployHub Pro.com/dmadminweb/Home](https://console.DeployHub.com/dmadminweb/Home)
 
 Login using the UserID and Password you used when you signed up for Ortelius. Check your email for your login information. 
 
@@ -36,7 +36,7 @@ Upon logging into Ortelius, you will be given an option to select your Company N
 
 _Domains_ serve as the basic structure of organizing Continuous Security Intelligence. Developers use _Domains_ to catalog their _Components_ based on 'solution spaces.' Organizing your software supply chain in this way allows for _Components_ to be easily shared.
 
-_Domains_ are not folders. They serve as a method for creating fully qualified names of objects within DeployHub to keep things organized. You can explore the _GLOBAL.open source_ Domain to learn how Continuous Security Intelligence is organized.  In DeployHub terminology, the _GLOBAL.open source_ Domain has multiple _Subdomains_.
+_Domains_ are not folders. They serve as a method for creating fully qualified names of objects within DeployHub Pro to keep things organized. You can explore the _GLOBAL.open source_ Domain to learn how Continuous Security Intelligence is organized.  In DeployHub Pro terminology, the _GLOBAL.open source_ Domain has multiple _Subdomains_.
 
 1) From the left hand side menu, select _Domains_. This will take you to the _Domain_ Details. All _Domains_ you have access to will be shown in the _Domain_ List Box. 
 
@@ -66,7 +66,7 @@ Sort Components by "Completed." "Completed" indicates the _Component_ has been d
 
 <strong><u>Viewing a Component's Version</strong></u>
 
-The first item in our sorted _Component_ list is the latest version of _ms-compitem-crud_ represented by the version label "main;10_0_834_g1bdd9d_." DeployHub uses a versioning engine to track changes as artifacts are updated, and appends the name with a new version number.  
+The first item in our sorted _Component_ list is the latest version of _ms-compitem-crud_ represented by the version label "main;10_0_834_g1bdd9d_." DeployHub Pro uses a versioning engine to track changes as artifacts are updated, and appends the name with a new version number.  
 
 ![Component List](/userguide/images/component-version.jpg)
 
@@ -100,7 +100,7 @@ You will be provided a report that shows the differences between these two _Comp
 
 When you view a _Component's_ details, the first attribute you will see is the _Component's_ Software Bill of Materials summary and real-time vulnerabilities. 
 
-When your _Component_ build executes, DeployHub will generate a Software Bill of Materials (SBOM) report using the CI/CD command line integration (CLI). Once gathered, DeployHub cross references the SBOM results to known vulnerabilities in real-time. While the SBOM is a static view, the vulnerabilities are updated regularly. DeployHub continuously scans [OSV.dev](https://osv.dev/) for new known vulnerabilities for all the packages in the SBOM.
+When your _Component_ build executes, DeployHub Pro will generate a Software Bill of Materials (SBOM) report using the CI/CD command line integration (CLI). Once gathered, DeployHub Pro cross references the SBOM results to known vulnerabilities in real-time. While the SBOM is a static view, the vulnerabilities are updated regularly. DeployHub Pro continuously scans [OSV.dev](https://osv.dev/) for new known vulnerabilities for all the packages in the SBOM.
 
 In this SBOM summary, you will see the _Component's_ SBOM displayed with the Package, Version, License and OpenSSF Scorecard values. 
 
@@ -115,7 +115,7 @@ In this SBOM summary, you will see the _Component's_ SBOM displayed with the Pac
 
 <strong><u>OpenSSF ScoreCard</u></strong>
 
-DeployHub uses the GitRepo and GitCommit from the the CI/CD command line integration (CLI) to gather OpenSSF scorecard data. When available, you will see the _Components_ compliance with OpenSSF scorecard. 
+DeployHub Pro uses the GitRepo and GitCommit from the the CI/CD command line integration (CLI) to gather OpenSSF scorecard data. When available, you will see the _Components_ compliance with OpenSSF scorecard. 
 
 ![Components Scorecard](/userguide/images/componentOpenSSFSC.jpg)
 
@@ -123,7 +123,7 @@ DeployHub uses the GitRepo and GitCommit from the the CI/CD command line integra
 
 <strong><u>Readme and License</u></strong>
 
-In addition to the above, DeployHub provides you with the _Read.me_ information and license information defined by the GitRepo. 
+In addition to the above, DeployHub Provides you with the _Read.me_ information and license information defined by the GitRepo. 
 
 <p><br></p>
 
@@ -141,13 +141,13 @@ View a list of _Applications_ that depend on the _Component_, along with a graph
 
 <strong><u>Swagger</u></strong>
 
-DeployHub provides you a view of the _Components_ Swagger information when available. 
+DeployHub Provides you a view of the _Components_ Swagger information when available. 
 
 <p><br></p>
 
 <strong><u>Component with DevOps Details Section</u></strong>
 
-This section gives you additional information about the _Component_ such as _Owner_ name and contact information, build details, Git Repo information and Helm Chart information if used. In addition, if you are using the DeployHub internal Deployment Engine, the configuration for deploying your _Component_ is provided.  
+This section gives you additional information about the _Component_ such as _Owner_ name and contact information, build details, Git Repo information and Helm Chart information if used. In addition, if you are using the DeployHub Pro internal Deployment Engine, the configuration for deploying your _Component_ is provided.  
 
 For More information on Components see - [Components and Their Security Posture](/userguide/2-define-components/).
 
@@ -155,7 +155,7 @@ For More information on Components see - [Components and Their Security Posture]
 
 ## Explore Applications
 
-An _Application_ is a collection of _Components_ that together form a complete software solution. DeployHub handles the logical _Application_ by aggregating _Component_ data at the _Application_ level. The Application features display all logical _Applications_ with their associated _Components_, and their combined security profile.
+An _Application_ is a collection of _Components_ that together form a complete software solution. DeployHub Pro handles the logical _Application_ by aggregating _Component_ data at the _Application_ level. The Application features display all logical _Applications_ with their associated _Components_, and their combined security profile.
 
 
 ### Using the Application List View
@@ -184,7 +184,7 @@ Select the Ortelius Application and run the following reports:
 
 <u><strong>Find an Open-Source Package Across Your Software Supply Chain</u></strong>
 
-DeployHub allows you to search through all _Applications_ for open-source packages. Rapidly responding to vulnerabilities requires you know precisely where your exposure to the vulnerability is running, and what _Components_ need to remediated. 
+DeployHub Pro allows you to search through all _Applications_ for open-source packages. Rapidly responding to vulnerabilities requires you know precisely where your exposure to the vulnerability is running, and what _Components_ need to remediated. 
 
 Search for a Package by selecting the "Package Search" menu option from the _Application_ list view. Enter the package you wish to search for such as "Spring." 
 
@@ -218,7 +218,7 @@ The _Application_ Detail page shows you the _Application_ Security Profile, Impa
 
 When exploring the _Application_ details, the first attribute you will see is the _Applications_ summarized Software Bill of Materials (SBOM) report and known vulnerabilities outlined in the Security Posture Section. 
 
-An _Application_ SBOM provides a detailed report of all _Component_ SBOM data within the _Application_, with duplicates removed. When a _Component_ is updated, DeployHub automatically generates a new version of all _Applications_ that use that _Component_, along with a new aggregated SBOM. DeployHub then cross-references all _Component_ packages within the _Application_ against known vulnerabilities. If you need to produce an SBOM for governance purposes, you can export the SBOM from the _Application_ List View _Reports_ menu option.
+An _Application_ SBOM provides a detailed report of all _Component_ SBOM data within the _Application_, with duplicates removed. When a _Component_ is updated, DeployHub Pro automatically generates a new version of all _Applications_ that use that _Component_, along with a new aggregated SBOM. DeployHub Pro then cross-references all _Component_ packages within the _Application_ against known vulnerabilities. If you need to produce an SBOM for governance purposes, you can export the SBOM from the _Application_ List View _Reports_ menu option.
 
 <p><br></p>
 
@@ -238,10 +238,10 @@ Learn More at  [_Applications_ and Their Security Posture](/userguide/2-defining
 
 ## Conclusion
 
-There are many other features of DeployHub that we did not cover on this short test drive. You may want to explore how to connect your CI/CD pipeline to automatically connect SBOMs and other DevSecOps tooling data to your pipeline process. See [SPDX, CycloneDX and Syft](/userguide/integrations/spdx-syft-cyclonedx/) on how you can include SBOMs in your CI/CD process. 
+There are many other features of DeployHub Pro that we did not cover on this short test drive. You may want to explore how to connect your CI/CD pipeline to automatically connect SBOMs and other DevSecOps tooling data to your pipeline process. See [SPDX, CycloneDX and Syft](/userguide/integrations/spdx-syft-cyclonedx/) on how you can include SBOMs in your CI/CD process. 
 
 Other topics to explore include: 
 
 -  Get started by connecting  your [CI/CD pipeline](/userguide/integrations/ci-cd_integrations/) to add _Components_ and _Applications_.
 
-- [The Internal Deployment Engine](/userguide/advanced-features/deployments/) - execute deployments using DeployHub's internal agentless deployment engine
+- [The Internal Deployment Engine](/userguide/advanced-features/deployments/) - execute deployments using DeployHub Pro's internal agentless deployment engine

@@ -9,9 +9,9 @@ description: >
 ![Weblogic](/userguide/images/weblogic.png)
 
 
-## Introduction to the WebLogic DeployHub Integration
+## Introduction to the WebLogic DeployHub Pro Integration
 
-The DeployHub WebLogic integration supports a WebLogic deployment using a _Post Action_ at the _Component_ level. This _Post Action_  installs your WebLogic solution binaries (.ear, .jar, and .war files) by loading them into the correct WebLogic target.  The process will first send your solution binaries to the the WebLogic Server. The _Post Action_ performs the load into the target.
+The DeployHub Pro WebLogic integration supports a WebLogic deployment using a _Post Action_ at the _Component_ level. This _Post Action_  installs your WebLogic solution binaries (.ear, .jar, and .war files) by loading them into the correct WebLogic target.  The process will first send your solution binaries to the the WebLogic Server. The _Post Action_ performs the load into the target.
 
 ## Creating the Weblogic Action
 
@@ -22,11 +22,11 @@ This process involves the creation of custom _Procedures_ and a _Post Action_.  
 - [Procedures and Functions](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/)
 
 
-Once downloaded, you will need to Import them into DeployHub as the Procedures. To import these Procedures login to DeployHub and select the _Func/Procs_.  From the list view select  **Import** menu. Select your Domain, such as '_Global_ Domain' and upload the _Procedure_ into the DeployHub.
+Once downloaded, you will need to Import them into DeployHub Pro as the Procedures. To import these Procedures login to DeployHub Pro and select the _Func/Procs_.  From the list view select  **Import** menu. Select your Domain, such as '_Global_ Domain' and upload the _Procedure_ into the DeployHub Pro.
 
 **Step 1 - Download and Import the WebLogic scripts as _Procedures_**
 
-Download the the most current DeployHub WebLogic Procedures from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). There will be two:
+Download the the most current DeployHub Pro WebLogic Procedures from the [Ortelius Git Repo](https://github.com/ortelius/ortelius/blob/master/procedures/). There will be two:
 
 - **WeblogicCredential.re** - This _Procedure_ exposes the credential for the Weblogic Deploy _Procedure_.
 
@@ -34,13 +34,13 @@ Download the the most current DeployHub WebLogic Procedures from the [Ortelius G
 
 **Step 2 - Create your WebLogic _Procedures_**
 
-Once downloaded, you will need to Import the scripts into DeployHub as _Procedures_. To import these _Procedures_ navigate to the _Func/Procs_ Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the _Functions and Procedures_ List View. From the _Functions and Procedures_ List View select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the WeblogicCredential.re and WeblogicDeploy.re files.
+Once downloaded, you will need to Import the scripts into DeployHub Pro as _Procedures_. To import these _Procedures_ navigate to the _Func/Procs_ Menu option on the left hand side of the DeployHub Pro Main Menu panel. This will take you to the _Functions and Procedures_ List View. From the _Functions and Procedures_ List View select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the WeblogicCredential.re and WeblogicDeploy.re files.
 
-Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub. If you select a lower level _Sub-Domain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
+Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub Pro. If you select a lower level _Sub-Domain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
 
 **Step 3 - Create your _Action_ for the WebLogic _Procedure_**
 
-Once you have imported your WeblogicCredential.re and WeblogicDeploy.re files as _Procedures_, you can define your WebLogic _Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Main Menu panel.  
+Once you have imported your WeblogicCredential.re and WeblogicDeploy.re files as _Procedures_, you can define your WebLogic _Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Pro Main Menu panel.  
 
 Use the +Add option to create your new _Action_.  In the "Full Domain" field select your "Global" _Domain_. If you select a lower level _Sub-Domain_ you will restrict access to this _Custom Action_.  By defining it to your highest level _Domain_, all _Users_ will be able to execute the process regardless of their _Sub-Domain_.
 

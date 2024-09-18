@@ -5,7 +5,7 @@ weight: 5
 description: >
   Introduction and the Login API
 ---
-APIs can be used to extract and update DeployHub [Objects](/userguide/1-deployhub-basic-concepts/) for custom security reporting or integration into external systems.  
+APIs can be used to extract and update DeployHub Pro [Objects](/userguide/1-DeployHub Pro-basic-concepts/) for custom security reporting or integration into external systems.  
 
 ## Object Accessibility
 
@@ -37,7 +37,7 @@ The query tools in the API return the object's internal ID as well as its name. 
 
 To use the ID, just place it where you would normally place the object's name. The APIs will assume you're specifying an ID if the name given is fully-numeric.
 
-_Do not create objects with fully numeric names - DeployHub will not be able to determine if this is an object ID or the object name._
+_Do not create objects with fully numeric names - DeployHub Pro will not be able to determine if this is an object ID or the object name._
 
 ## Using cURL to access the API
 

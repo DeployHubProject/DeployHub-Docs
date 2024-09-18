@@ -3,20 +3,20 @@ title: "SalesForce"
 linkTitle: "SalesForce"
 weight: 360
 description: >
-  Deploying SalesForce objects with DeployHub.
+  Deploying SalesForce objects with DeployHub Pro.
 ---
 
 ![salesforce](/userguide/images/salesforce.jpg)
 
 ## Using a _Custom Action_ for SalesForce Deployments
 
-If you are developing your _Applications_ using SaleForce, this integration will allow you to support SalesForce deployments. By creating this _Custom Action_ you can replace the DeployHub standard deployment processing engine and instead use a process designed specific to Salesforce including the mapping of DeployHub _Environments_ to different SalesForce regions such as testing, pre-production, production, where the class and package files can be deployed.
+If you are developing your _Applications_ using SaleForce, this integration will allow you to support SalesForce deployments. By creating this _Custom Action_ you can replace the DeployHub Pro standard deployment processing engine and instead use a process designed specific to Salesforce including the mapping of DeployHub Pro _Environments_ to different SalesForce regions such as testing, pre-production, production, where the class and package files can be deployed.
 
-The following directions allows you to create a _Custom Action_ using the pre-written DeployHub _Procedures_ to support a SaleForce deployment model.  Once you create your SalesForce _Custom Action_ you assign it to your SalesForce _Component_ which will override the DeployHub standard deployment engine.
+The following directions allows you to create a _Custom Action_ using the pre-written DeployHub Pro _Procedures_ to support a SaleForce deployment model.  Once you create your SalesForce _Custom Action_ you assign it to your SalesForce _Component_ which will override the DeployHub Pro standard deployment engine.
 
 ## Steps for Creating Your SalesForce _Custom Action_
 
-You will need to create a SalesForce _Custom Action_ that will support your SalesForce deployment . This is done by adding the DeployHub pre-defined _Procedures_ and then defining them to a _Custom Action_ that your _Component_ will use for deployment.  For more details on creating _Procedures_ and _Actions_ see:
+You will need to create a SalesForce _Custom Action_ that will support your SalesForce deployment . This is done by adding the DeployHub Pro pre-defined _Procedures_ and then defining them to a _Custom Action_ that your _Component_ will use for deployment.  For more details on creating _Procedures_ and _Actions_ see:
 
 - [Customizing Actions](/userguide/advanced-features/deployments/2-define-your-actions/)
 - [Procedures and Functions](/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/)
@@ -25,11 +25,11 @@ The following steps will take you through the process:
 
 ### Step 1 - Create a SalesForce _Repository_
 
-A _Repository_ of the type "File System" is used to reference files pulled from Git.  For this reason, you will need to create a DeployHub "File System" _Repository_.  To create this _Repository_ see [Connect Your Repositories](/userguide/advanced-features/deployments/2-define-repositories/).
+A _Repository_ of the type "File System" is used to reference files pulled from Git.  For this reason, you will need to create a DeployHub Pro "File System" _Repository_.  To create this _Repository_ see [Connect Your Repositories](/userguide/advanced-features/deployments/2-define-repositories/).
 
 ### Step 2 - Create a SalesForce _Credential_
 
-You will need a DeployHub _Credential_ to login to Salesforce for the deployment step. To create this _Credential_ see [Create Your Credentials](/userguide/advanced-features/deployments/2-define-your-credentials/).
+You will need a DeployHub Pro _Credential_ to login to Salesforce for the deployment step. To create this _Credential_ see [Create Your Credentials](/userguide/advanced-features/deployments/2-define-your-credentials/).
 
 ### Step 3 - Create a SalesForce _Environment_ and _EndPoint_
 
@@ -65,7 +65,7 @@ You will import and use pre-defined _Procedures_ to create your _Custom Action_.
 
 The following files need to be retrieved:
 
-- **GitCheckout.re** - This _Procedure_ checks-out the files from your git repository to the deployhub eninge and then checks out the commit, branch or tag specified.
+- **GitCheckout.re** - This _Procedure_ checks-out the files from your git repository to the DeployHub Pro eninge and then checks out the commit, branch or tag specified.
 
 - **RunAnt.re** - This _Procedure_ runs Ant
 
@@ -73,13 +73,13 @@ The following files need to be retrieved:
 
 - **SalesforceDeploy.re** - This Procedure executes Ant against a dynamically created build.xml file to upload the classes to Salesforce.
 
-Once downloaded, you will need to Import the scripts into DeployHub as _Procedures_. To import these _Procedures_ navigate to the _Func/Procs_ Menu option on the left hand side of the DeployHub Main Menu panel. This will take you to the _Functions and Procedures_ List View. From the _Functions and Procedures_ List View select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the GitCheckout.re, RunAnt.re and SalesforceCredential.re and SalesforceDeploy.re files.
+Once downloaded, you will need to Import the scripts into DeployHub Pro as _Procedures_. To import these _Procedures_ navigate to the _Func/Procs_ Menu option on the left hand side of the DeployHub Pro Main Menu panel. This will take you to the _Functions and Procedures_ List View. From the _Functions and Procedures_ List View select the **Import** option. The Import will bring you to your operating system "file open" dialog box for selecting the GitCheckout.re, RunAnt.re and SalesforceCredential.re and SalesforceDeploy.re files.
 
-Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub. If you select a lower level _Sub-Domain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
+Next, select your "Global," or highest level, _Domain_ and upload the _Procedure_ into DeployHub Pro. If you select a lower level _Sub-Domain_ you will restrict access.  By defining it to your highest level _Domain_, all _Users_ will be able to see the _Procedures_. Once you have both imported, you are now ready to create your _Action_.
 
 ### Step 5 - Create your SalesForce _Action_ using your _Procedures_
 
-Once you have imported the SalesForce files as _Procedures_, you ready to define your _Custom Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Main Menu panel.
+Once you have imported the SalesForce files as _Procedures_, you ready to define your _Custom Action_. Navigate to the _Actions_ list view from the _Actions_ menu option on the left hand side of the DeployHub Pro Main Menu panel.
 
 Use the +Add option to create a new _Action_ for you _Procedure_. In the "Full Domain" field select your "Global" _Domain_. If you select a lower level _Sub-Domain_ you will restrict access to this _Custom Action_.  By defining it to your highest level _Domain_, all _Users_ will be able to execute the process regardless of their _Sub-Domain_.
 
@@ -141,6 +141,6 @@ The following variables must be added to the Attributes Section for all  _Compon
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GIT_URL**    | git url for the git repository. This is used in the git check out step executed by the SalesForce _Action_.                                                                  |
 | **GIT_COMMIT** | The commit hash for the version to be checked out from the git repository.                                                                                                   |
-| **GIT_DIR**    | The temporary directory is used by git to clone and checkout. This parameter should be a directory defined in a DeployHub _Repository_ for the_Component_ to find the files. |
+| **GIT_DIR**    | The temporary directory is used by git to clone and checkout. This parameter should be a directory defined in a DeployHub Pro _Repository_ for the_Component_ to find the files. |
 
 You are now ready to assign your SalesForce _Component_ to an _Application_ and perform a deployment to one of the SalesForce _Environments_.

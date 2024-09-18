@@ -6,31 +6,31 @@ description: >
   Customize any Action using Built-in Functions and Procedures with DMScript.
 ---
 
-_DMScript_ (_D_eployment_M_anagement _Script_ing) is DeployHub's own scripting language. It underpins nearly all the activities that take place during a deployment.
+_DMScript_ (_D_eployment_M_anagement _Script_ing) is DeployHub Pro's own scripting language. It underpins nearly all the activities that take place during a deployment.
 
-Users with the appropriate permissions can create their own _DMScript Activities_ by creating custom _Procedures_ and _Functions_. _DMScripts_ can be stored in the DeployHub database (as stored procedures) or can be held in an external filesystem or even in a _Repository_. Storing _DMScript_ in a _Repository_ allows it to be version controlled.
+Users with the appropriate permissions can create their own _DMScript Activities_ by creating custom _Procedures_ and _Functions_. _DMScripts_ can be stored in the DeployHub Pro database (as stored procedures) or can be held in an external filesystem or even in a _Repository_. Storing _DMScript_ in a _Repository_ allows it to be version controlled.
 
-_Actions_ are a set of _Functions_ and _Procedures_ that define your deployment _Workflow_ logic. You use the action editor by dragging and dropping _Functions_ and _Procedures_ onto the design pallet, connecting the order in which they execute. When you run the _Action_, DeployHub parses the _Functions_ and _Procedures_ in the _Action Workflow_, generates one big _DMScript_ which is then passed to the deployment engine for deployment execution.
+_Actions_ are a set of _Functions_ and _Procedures_ that define your deployment _Workflow_ logic. You use the action editor by dragging and dropping _Functions_ and _Procedures_ onto the design pallet, connecting the order in which they execute. When you run the _Action_, DeployHub Pro parses the _Functions_ and _Procedures_ in the _Action Workflow_, generates one big _DMScript_ which is then passed to the deployment engine for deployment execution.
 
-Although it is not necessary to understand _DMScript_ in order to use DeployHub, doing so will allow you to create more sophisticated and highly custom deployments. It is also useful to understand the Stack Architecture which underpins _DMScript_. Doing so will allow you to understand variable scoping and inheritance which is useful even if you generate all custom activities via the _Action Workflow Editor_.
+Although it is not necessary to understand _DMScript_ in order to use DeployHub Pro, doing so will allow you to create more sophisticated and highly custom deployments. It is also useful to understand the Stack Architecture which underpins _DMScript_. Doing so will allow you to understand variable scoping and inheritance which is useful even if you generate all custom activities via the _Action Workflow Editor_.
 
 ## Prerequisites
 
 Some scripting or programming experience (in any other scripting or programming language) is assumed. _DMScript_ is object-orientated and has a similar syntax to Javascript but has features from other scripting languages.
 
-Knowledge of DeployHub and its various objects (_Environments, Endpoints, Applications, Components_ etc.) and how they interact is also assumed. Web Based API calls assume some knowledge of SOAP and RESTful interfaces.
+Knowledge of DeployHub Pro and its various objects (_Environments, Endpoints, Applications, Components_ etc.) and how they interact is also assumed. Web Based API calls assume some knowledge of SOAP and RESTful interfaces.
 
 ## Why Use DMScript
 
-DeployHub can call any external script or program (either locally on the deployment engine or remotely on the target _Endpoint_ during a deployment). Given that fact, why would you need to use _DMScript_?
+DeployHub Pro can call any external script or program (either locally on the deployment engine or remotely on the target _Endpoint_ during a deployment). Given that fact, why would you need to use _DMScript_?
 
 _DMScript_ has:
 
-- Knowledge of the DeployHub object model. For example, _DMScript_ allows you to find all the _Endpoint_s in an_Environment_ that have a specific attribute. Doing this in external scripts is difficult if not impossible.
+- Knowledge of the DeployHub Pro object model. For example, _DMScript_ allows you to find all the _Endpoint_s in an_Environment_ that have a specific attribute. Doing this in external scripts is difficult if not impossible.
 
 - Full knowledge of the attributes set against the selected objects. Uses values that have been set against _Endpoint_s,_Environments_, or_Applications_.
 
-- A RESTful and SOAP API client. Makes calls to external systems (or even DeployHub's own API) quickly and easily.
+- A RESTful and SOAP API client. Makes calls to external systems (or even DeployHub Pro's own API) quickly and easily.
 
 - A built-in JSON/XML parser. This means the results of RESTful and SOAP API calls are available as variables within _DMScript_ without the need for complex parsing.
 
@@ -38,7 +38,7 @@ _DMScript_ has:
 
 - A built-in LDAP query tool. Query LDAP _Endpoint_s and use the results in your scripts.
 
-- A built-in mail client. You can construct your own emails (with attachments) and control when they are sent and to whom. This is useful if the normal DeployHub "template" mechanism is insufficient for your needs.
+- A built-in mail client. You can construct your own emails (with attachments) and control when they are sent and to whom. This is useful if the normal DeployHub Pro "template" mechanism is insufficient for your needs.
 
 - A built-in base64 encoder/decoder.
 
@@ -47,7 +47,7 @@ _DMScript_ has:
 - Fine control over the deployment scheme. If you want to change the default deployment mechanism, use _DMScript_.
 
 If you need to do any of these things, either as part of a deployment activity or as part of an integration (for example, notifying an external system when an _Application Version_ has been moved or deployed) then use _DMScript_.
-You can customize any _Action_ using DM Script. DeployHub has _built-in Functions_ and _Procedures_ ready for you to call when you need customization. _Actions_ call _Activities_ that are _Functions_ or _Procedures_. _Function_ performs an _Activity_ and returns an _Object_. A _Procedure_ performs an _Activity_ and returns only 'success'or 'fail.'
+You can customize any _Action_ using DM Script. DeployHub Pro has _built-in Functions_ and _Procedures_ ready for you to call when you need customization. _Actions_ call _Activities_ that are _Functions_ or _Procedures_. _Function_ performs an _Activity_ and returns an _Object_. A _Procedure_ performs an _Activity_ and returns only 'success'or 'fail.'
 
 ## Storing DMScripts
 
@@ -101,7 +101,7 @@ return "$arg1 $arg2";
 }
 ```
 
-When adding _Functions_ via the DeployHub Web User Interface, the "_Function_" header is implied. The argument names are taken from the Arguments tab. There is no need to use the syntax outlined here. However, you can use this in an external _DMScript_ file (one stored in a repository) and call it from other _Procedures_ or _Functions_ stored in the same file.
+When adding _Functions_ via the DeployHub Pro Web User Interface, the "_Function_" header is implied. The argument names are taken from the Arguments tab. There is no need to use the syntax outlined here. However, you can use this in an external _DMScript_ file (one stored in a repository) and call it from other _Procedures_ or _Functions_ stored in the same file.
 
 ### Call a Function
 
@@ -110,10 +110,10 @@ _Functions_ can be called as a simple statement. For example, using the testfunc
 ```bash
 set myres = testfunc("Deploy", "Hub");
 
-echo $myres; // echoes "DeployHub"
+echo $myres; // echoes "DeployHub Pro"
 ```
 
-__NOTE:__ The _Function_ called can also be _DMScript_ stored in the DeployHub database, _DMScript_ held in an external repository, or it can be an external script which is executed. The method used is based on the "kind" of the _Procedure_.
+__NOTE:__ The _Function_ called can also be _DMScript_ stored in the DeployHub Pro database, _DMScript_ held in an external repository, or it can be an external script which is executed. The method used is based on the "kind" of the _Procedure_.
 
 Built-in _Functions_ can be stand-alone _Functions,_ which can be called as described above. There are also _Functions_ which are defined as methods on _DMScript_ Objects. To call a method on an object, use the following syntax:
 
@@ -151,7 +151,7 @@ echo **"** myarg2[1] = $myarg2[1]";
 }
 ```
 
-__NOTE:__ When adding _Procedures_ via the DeployHub Web User Interface, the "action" header is implied. There is no need to use the syntax outlined here. However, you can use this in an external _DMScript_ file (one stored in a repository) and call it from other _Procedures_ or _Functions_ stored in the same file.
+__NOTE:__ When adding _Procedures_ via the DeployHub Pro Web User Interface, the "action" header is implied. There is no need to use the syntax outlined here. However, you can use this in an external _DMScript_ file (one stored in a repository) and call it from other _Procedures_ or _Functions_ stored in the same file.
 
 ### Call a Procedure
 
@@ -169,7 +169,7 @@ myarg1 = value1
 myarg2[1] = list
 ```
 
-__NOTE:__ The _Procedure_ called can also be _DMScript_ stored in the DeployHub database, _DMScript_ held in an external repository or it can be an external script which is executed. The method used is based on the "kind" of the _Procedure_.
+__NOTE:__ The _Procedure_ called can also be _DMScript_ stored in the DeployHub Pro database, _DMScript_ held in an external repository or it can be an external script which is executed. The method used is based on the "kind" of the _Procedure_.
 
 If the action does not have any parameters, then the call should be made with no enclosing braces like this:
 
@@ -181,7 +181,7 @@ This is to allow _DMScript_ to differentiate between _Procedures_ and _Functions
 
 _DMScript_ is an object-orientated scripting language. It uses a fairly broad syntax with elements of Java, Perl, and Shell Script. Any developer should be able to become proficient in _DMScript_ fairly quickly.
 
-_DMScript_ has knowledge of the DeployHub object model. Each object (_Endpoint_, _Environment_, _Application_, _Component_ etc) has a corresponding object in _DMScript_. Thus, you can use ${_Environment_.name} to get the current _Environment_ name (deployment target) and ${_Application_.name} to get the name of the _Application_ being deployed. Other objects (such as _Endpoint_ and _Component_) only become "in scope" when they are pushed onto the _Stack_ during a deployment operation.
+_DMScript_ has knowledge of the DeployHub Pro object model. Each object (_Endpoint_, _Environment_, _Application_, _Component_ etc) has a corresponding object in _DMScript_. Thus, you can use ${_Environment_.name} to get the current _Environment_ name (deployment target) and ${_Application_.name} to get the name of the _Application_ being deployed. Other objects (such as _Endpoint_ and _Component_) only become "in scope" when they are pushed onto the _Stack_ during a deployment operation.
 
 This knowledge of the object model allows _DMScript_ to use fairly sophisticated operations. For example if you have an _Application Version_ object:
 
@@ -209,9 +209,9 @@ NOTE: this operation will not work if the version has two or more child versions
 
 _DMScript_ is an interpreted language. It is not compiled either to machine language or to any intermediate p-code.
 
-In DeployHub, _Procedures_ and _Functions_ can be external scripts (written in any language) which are then executed either on the local deployment engine or on the target _Endpoint_ during a deployment. You can also create _Procedures_ and _Functions_ in _DMScript_ and invoke them as part of a deployment. _DMScript_ can call other _Functions_ and _Procedures_ and these can be written in _DMScript_ or can be external scripts written in any language.
+In DeployHub Pro, _Procedures_ and _Functions_ can be external scripts (written in any language) which are then executed either on the local deployment engine or on the target _Endpoint_ during a deployment. You can also create _Procedures_ and _Functions_ in _DMScript_ and invoke them as part of a deployment. _DMScript_ can call other _Functions_ and _Procedures_ and these can be written in _DMScript_ or can be external scripts written in any language.
 
-Actions are created by dragging and dropping _Functions_, _Procedures_ and workflow directives onto the action editor. When the action is invoked (as part of a deployment or as a stand-alone action), DeployHub generates _DMScript_ from the action flow and then executes it using the built-in _DMScript_ interpreter.
+Actions are created by dragging and dropping _Functions_, _Procedures_ and workflow directives onto the action editor. When the action is invoked (as part of a deployment or as a stand-alone action), DeployHub Pro generates _DMScript_ from the action flow and then executes it using the built-in _DMScript_ interpreter.
 
 NOTE: To see the _DMScript_ generated from an action, right-click in the action editor flow and select "Show Generated _DMScript_".
 

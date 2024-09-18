@@ -86,13 +86,13 @@ transfer; // transfer demo2.b64 to target
 
 ### Example 2
 
-Create new users in DeployHub from a file. Assume the file is constructed like this:
+Create new users in DeployHub Pro from a file. Assume the file is constructed like this:
 
 jdoe|John Doe|<jdoe@mycompany.com>
 
 bsmith|Bill [Smith|bsmith@mycompany.com](mailto:Smith%7Cbsmith@mycompany.com)
 
-The following code, when executed, will read this file and call DeployHub's own API in order to add the users to the database:
+The following code, when executed, will read this file and call DeployHub Pro's own API in order to add the users to the database:
 
 ```bash
 set APIURL="http://mac:8080/dmadminweb/API/new/user/";

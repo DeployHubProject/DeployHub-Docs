@@ -1,7 +1,7 @@
 
 ## Adding Continuous Security Intelligence to your DevOps Pipeline
 
-In order to continuously gather pipeline intelligence, DeployHub must become part of your pipeline. DeployHub integrates with Jenkins and other CI/CD engines using the Ortelius Command Line (CLI). The Ortelius CLI gathers supply chain data based on a single pipeline workflow at the build and deploy steps. The build step gathers Swagger, SBOM, Readme, licenses, Git data, Docker image, and other build output. The deploy step records when a release occurs, what was sent and where the objects were sent to.
+In order to continuously gather pipeline intelligence, DeployHub Pro must become part of your pipeline. DeployHub Pro integrates with Jenkins and other CI/CD engines using the Ortelius Command Line (CLI). The Ortelius CLI gathers supply chain data based on a single pipeline workflow at the build and deploy steps. The build step gathers Swagger, SBOM, Readme, licenses, Git data, Docker image, and other build output. The deploy step records when a release occurs, what was sent and where the objects were sent to.
 
 The [Ortelius](https://Ortelius.io) CLI is maintained by the Ortelius Open Source Community under the governance of the [Linux Foundation's Continuous Delivery Foundation.](https://cd.foundation)
 
@@ -9,7 +9,7 @@ For the most up to date information on the Ortelius CLI visit the [Ortelius GitH
 
 ### Ortelius CLI Data Gathering using .toml
 
-The Ortelius CLI reads from a .toml file. The .toml file contains non-derived information for each artifact that you create at your build step. In DeployHub, an artifact is referred to as a _Component_.  A _Component_ is a Container, DB Object, or file object (.jar, Lamda Function, Apex file, etc.). The .toml file will provide the 'non-derived' data for the _Component_ you are tracking in DeployHub, which includes the _Component_ name, owner, _Component type_, and owner contact details.  The Ortelius CLI will read the .toml file from the Git Repository associated to your pipeline. If you are using a Mono Repository for your entire codebase, you will need a separate Component.toml file for each _Component_ managed in sub-directories.
+The Ortelius CLI reads from a .toml file. The .toml file contains non-derived information for each artifact that you create at your build step. In DeployHub Pro, an artifact is referred to as a _Component_.  A _Component_ is a Container, DB Object, or file object (.jar, Lamda Function, Apex file, etc.). The .toml file will provide the 'non-derived' data for the _Component_ you are tracking in DeployHub Pro, which includes the _Component_ name, owner, _Component type_, and owner contact details.  The Ortelius CLI will read the .toml file from the Git Repository associated to your pipeline. If you are using a Mono Repository for your entire codebase, you will need a separate Component.toml file for each _Component_ managed in sub-directories.
 
 Once created, your .toml file does not need to be updated unless the non-derived information changes or you want to reorganize to which _Applications_ or _Domains_ the _Component_ has been assigned. For example, a _Component_ has been reassigned to a new owner and new team represented by a _Domain_ or _Application_.
 
@@ -70,25 +70,25 @@ The CLI will look for Readme, License, Swagger and OpenAPI files and upload thos
 
 #### Perform the following steps to add your _Components_ using the .toml file
 
-##### Step 1 - Define Your DeployHub Pipeline Variables
+##### Step 1 - Define Your DeployHub Pro Pipeline Variables
 
 The following variables should be set at the beginning of your Pipeline.
 
 | Variable   | Value                            | Description                                                                              |
 |------------|----------------------------------|------------------------------------------------------------------------------------------|
-| DHURL      | URL to DeployHub Login           | The URL used to access DeployHub.                                                        |
-| DHUSER     | UserID                           | The ID used to log into DeployHub                                                        |
-| DHPASS     | password                         | The password used to log into DeployHub. This can encrypted based on the CI/CD solution. |
+| DHURL      | URL to DeployHub Pro Login           | The URL used to access DeployHub Pro.                                                        |
+| DHUSER     | UserID                           | The ID used to log into DeployHub Pro                                                        |
+| DHPASS     | password                         | The password used to log into DeployHub Pro. This can encrypted based on the CI/CD solution. |
 | DOCKERREPO | Name of your Docker Repository   | For Components that are Docker Images. Not needed for non-docker objects.                |
 | IMAGE_TAG  | Tag for the Docker Image if used | For Components that are Docker Images. Not needed for non-docker objects.                |
 
 Example
 
 ```bash
-export DHURL=https://deployhub.example.com
+export DHURL=https://DeployHub Pro.example.com
 export DHUSER=Stella99
 export DHPASS=password
-export DOCKERREPO=quay.io/DeployHub/hello-world
+export DOCKERREPO=quay.io/DeployHub Pro/hello-world
 export IMAGE_TAG=1.0.0
 ```
 
@@ -139,7 +139,7 @@ Version = "v1.0.0.${BUILD_NUM}-g${SHORT_SHA}"
     DockerTag = "${IMAGE_TAG}"
     DiscordChannel = "https://discord.gg/wM4b5yEFzS"
     ServiceOwner= "${DHUSER}"
-    ServiceOwnerEmail = "stella@DeployHub.io"
+    ServiceOwnerEmail = "stella@DeployHub Pro.io"
 
 ```
 
@@ -160,7 +160,7 @@ Version = "v1.0.0.${BUILD_NUM}-g${SHORT_SHA}"
 
 ##### Step 3 - Add a step in your pipeline to run Syft if you are not generating SBOMS (Optional)
 
-DeployHub can consume any SPDX and CycloneDX formated SBOM. If you are already generating SBOMs, you will pass the name of the SBOM results to DeployHub is step 4 below. If you are not generating SBOMs as part of your pipeline process, you will need to add SBOM generation to collect the lower dependency data. Following is how to add Syft to your workflow to include the collection of SBOM data.
+DeployHub Pro can consume any SPDX and CycloneDX formated SBOM. If you are already generating SBOMs, you will pass the name of the SBOM results to DeployHub Pro is step 4 below. If you are not generating SBOMs as part of your pipeline process, you will need to add SBOM generation to collect the lower dependency data. Following is how to add Syft to your workflow to include the collection of SBOM data.
 
 [Syft SBOM tool](https://github.com/anchore/syft) will generate Software Bill of Material Reports for popular coding languages and package managers, including Docker images.
 
@@ -261,14 +261,14 @@ The following variables should be set at the beginning of your Pipeline.
 
 | Variable | Value                  | Description                                                                              |
 |----------|------------------------|------------------------------------------------------------------------------------------|
-| DHURL    | URL to DeployHub Login | The URL used to access DeployHub.                                                        |
-| DHUSER   | UserID                 | The ID used to log into DeployHub                                                        |
-| DHPASS   | password               | The password used to log into DeployHub. This can encrypted based on the CI/CD solution. |
+| DHURL    | URL to DeployHub Pro Login | The URL used to access DeployHub Pro.                                                        |
+| DHUSER   | UserID                 | The ID used to log into DeployHub Pro                                                        |
+| DHPASS   | password               | The password used to log into DeployHub Pro. This can encrypted based on the CI/CD solution. |
 
 Example
 
 ```bash
-export DHURL=https://deployhub.example.com
+export DHURL=https://DeployHub Pro.example.com
 export DHUSER=Stella99
 export DHPASS=password
 ```
@@ -279,7 +279,7 @@ dh deploy --deploydata deploy.json --logdeployment
 
 #### Results
 
-In the DeployHub web UI, navigate to the _Application_ list view.  You will see that the _Application Version_ has been deployed to
+In the DeployHub Pro web UI, navigate to the _Application_ list view.  You will see that the _Application Version_ has been deployed to
 _Environment_ with a _Deployment_ number.  The _Deployment_ number is generated by the CLI.  
 
 The Deployment Frequency report is accessible by selecting an _Application Version_ in the list view, then menu item `Reports -> Deployment Frequency`.

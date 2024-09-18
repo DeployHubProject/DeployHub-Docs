@@ -59,7 +59,7 @@ This section contains the list of email _Users_ that will receive the notificati
 | **${environment.owner}** | The owner of the _Environment_ that was used in the deployment.                          |
 | **${server.owner}**      | The owner of the _Endpoint_ that was used in the deployment                              |
 | **${version.owner}**     | The owner of the Version that was deployed.                                              |
-| **Everyone**             | All of the individual _Users_ in the DeployHub installation.                             |
+| **Everyone**             | All of the individual _Users_ in the DeployHub Pro installation.                             |
 | **Administrators**       | All of the _Users_ in the Administrator _Group_.                                         |
 | **Groups**               | All defined _Groups_ will appear in this list, allowing you to select a specific _Group_ |
 
@@ -67,6 +67,6 @@ You can Delete a Recipient by using the Trash Can Icon next to the item in the t
 
 ## Variables Table
 
-This table shows all variables that can be used when constructing the subject line and message body for a template. These variables are automatically expanded when the notification is issued. Variables can be either Object Methods (such as ${application.name}) or Scalar Variables that are set by DeployHub during specific operations (such as $SERVER_STATUS during a periodic server scan).
+This table shows all variables that can be used when constructing the subject line and message body for a template. These variables are automatically expanded when the notification is issued. Variables can be either Object Methods (such as ${application.name}) or Scalar Variables that are set by DeployHub Pro during specific operations (such as $SERVER_STATUS during a periodic server scan).
 
-Object Methods can be used for any object that is available to DeployHub during the operation. For example, you could use ${application.id} to get the internal application ID or ${application.domain.name} to get the current domain for the application.
+Object Methods can be used for any object that is available to DeployHub Pro during the operation. For example, you could use ${application.id} to get the internal application ID or ${application.domain.name} to get the current domain for the application.

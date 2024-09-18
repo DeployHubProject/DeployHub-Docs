@@ -8,9 +8,9 @@ description: >
 
 ## The Ortelius Command Line Interface (CLI)
 
-DeployHub uses the Open-Source [Ortelius](https://ortelius.io) Command Line Interface to support pipeline automation. The Ortelius Command Line Interface supports integration with DevSecOps tools and CI/CD pipelines. The Ortelius Command Line Interface is under the governance of the [Linux Foundation's Continuous Delivery Foundation (CDF).](https://cd.foundation)
+DeployHub Pro uses the Open-Source [Ortelius](https://ortelius.io) Command Line Interface to support pipeline automation. The Ortelius Command Line Interface supports integration with DevSecOps tools and CI/CD pipelines. The Ortelius Command Line Interface is under the governance of the [Linux Foundation's Continuous Delivery Foundation (CDF).](https://cd.foundation)
 
-The Ortelius CLI Python script interacts with the Ortelius and DeployHub REST APIs to perform various tasks:
+The Ortelius CLI Python script interacts with the Ortelius and DeployHub Pro REST APIs to perform various tasks:
 
 - Create/replace the _Component Version_ Version_ for the _Application Version_
 - Assign a component version to an _Application Version_

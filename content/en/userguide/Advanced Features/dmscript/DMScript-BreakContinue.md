@@ -29,7 +29,7 @@ break; // break out of loop
 
 echo "end of loop";
 
-In this example, DeployHub will iterate through the current _Endpoint_ set, looking at the value of myattribute for each _Endpoint_. When it finds an _Endpoint_ with this attribute set to the value of nomore it will break out of the loop.
+In this example, DeployHub Pro will iterate through the current _Endpoint_ set, looking at the value of myattribute for each _Endpoint_. When it finds an _Endpoint_ with this attribute set to the value of nomore it will break out of the loop.
 ```
 
 **Example with continue:**

@@ -14,7 +14,7 @@ _Xpath notation_ supports subset of xpath notation to identify the elements to c
 - Wildcards are not permitted.
 - The "|" operator is not permitted to select multiple elements.
 
-The following are valid xpath descriptors for DeployHub:
+The following are valid xpath descriptors for DeployHub Pro:
 | Descriptor                          | Description                                                                     |
 |-------------------------------------|---------------------------------------------------------------------------------|
 | /root/branch/element                | All elements under branch.                                                      |
@@ -94,7 +94,7 @@ text\_replace(find: '$', value: "MaxDisk: $MAXDISK");
 }
 ```
 
-As we have not specified line processing mode, the regular expression $ refers to the end of the file. The new config directive is then added at the end of the file. Note we use single quotes around the regular expression to avoid DeployHub trying to expand the $.
+As we have not specified line processing mode, the regular expression $ refers to the end of the file. The new config directive is then added at the end of the file. Note we use single quotes around the regular expression to avoid DeployHub Pro trying to expand the $.
 
 Assuming MAXDISK is set to 20G in the targeted _Environment_ the result will be something like:
 
@@ -177,7 +177,7 @@ _set\_text_ takes two named parameters:
  Given an input file "servers.xml" that looks like this:
 
 ```bash
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
@@ -185,19 +185,19 @@ _set\_text_ takes two named parameters:
 
 \<server name="server3" type="as400" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 
 Set text for each server:
 
 modify(file: 'servers.xml', modifier: "xml") {
 
-set\_text(xpath: "/deployhub/server", value: "server\_text");
+set\_text(xpath: "/DeployHub Pro/server", value: "server\_text");
 
 }
 
 Result:
 
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix"\>server\_text\</server\>
 
@@ -205,7 +205,7 @@ Result:
 
 \<server name="server3" type="as400"\>server\_text\</server\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 NOTE: If the selected element(s) already have text, then that text is replaced by the _set\_text_ operation.
@@ -228,7 +228,7 @@ value: "server\_text");
 
 ```text
 
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
@@ -236,7 +236,7 @@ value: "server\_text");
 
 \<server name="server3" type="as400" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 ## Add\_element
@@ -259,7 +259,7 @@ _add\_element_ takes three named parameters:
  Given an input file "servers.xml" that looks like this:
 
 ```bash
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
@@ -267,7 +267,7 @@ _add\_element_ takes three named parameters:
 
 \<server name="server3" type="as400" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 Add a "_Component_" element to each _Endpoint_:
@@ -275,7 +275,7 @@ Add a "_Component_" element to each _Endpoint_:
 ```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
-add\_element(xpath: "/deployhub/server",
+add\_element(xpath: "/DeployHub Pro/server",
 
 pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
@@ -286,7 +286,7 @@ pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
 ```text
 
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix"\>
 
@@ -306,7 +306,7 @@ pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
 \</server\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 ### Example 7
@@ -316,7 +316,7 @@ Add a "_Component_" element to the second "server" element:
 ```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
-add\_element(xpath: "/deployhub/server[2]",
+add\_element(xpath: "/DeployHub Pro/server[2]",
 
 pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
@@ -326,7 +326,7 @@ pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 #### Example 7 Result
 
 ```text
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
@@ -338,7 +338,7 @@ pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
 \<server name="server3" type="as400" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 ### Example 8
@@ -348,7 +348,7 @@ Add a "_Component_" element to each server of type "unix":
 ```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
-add\_element(xpath: '/deployhub/server[@type=unix]',
+add\_element(xpath: '/DeployHub Pro/server[@type=unix]',
 
 pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
@@ -358,7 +358,7 @@ pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 #### Example 8 Result
 
 ```text
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix"\>
 
@@ -370,7 +370,7 @@ pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
 \<server name="server3" type="as400" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 ### Example 9
@@ -380,11 +380,11 @@ Add different _Component_ elements to _Endpoints_ of specific types:
 ```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
-add\_element(xpath: '/deployhub/server[@type=unix]',
+add\_element(xpath: '/DeployHub Pro/server[@type=unix]',
 
 pos: "inside", value: '\<_Component_ name="mycomp1" /\>');
 
-add\_element(xpath: '/deployhub/server[@type=windows]',
+add\_element(xpath: '/DeployHub Pro/server[@type=windows]',
 
 pos: "inside", value: '\<_Component_ name="mycomp2" /\>');
 
@@ -394,7 +394,7 @@ pos: "inside", value: '\<_Component_ name="mycomp2" /\>');
 #### Example 9 Result
 
 ```text
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix"\>
 
@@ -410,7 +410,7 @@ pos: "inside", value: '\<_Component_ name="mycomp2" /\>');
 
 \<server name="server3" type="as400" /\>
 
-\</ deployhub\>
+\</ DeployHub Pro\>
 ```
 
 ### Example 10
@@ -420,7 +420,7 @@ pos: "inside", value: '\<_Component_ name="mycomp2" /\>');
 ```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
-add\_element(xpath: "/deployhub /server[last()]",
+add\_element(xpath: "/DeployHub Pro /server[last()]",
 
 pos: "after",
 
@@ -433,7 +433,7 @@ value: '\<server name="server4" type="windows" /\>');
 
 ```text
 
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
@@ -443,7 +443,7 @@ value: '\<server name="server4" type="windows" /\>');
 
 \<server name="server4" type="windows" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 ### Example 11
@@ -453,7 +453,7 @@ value: '\<server name="server4" type="windows" /\>');
 ```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
-add\_element(xpath: "/deployhub/server[position()\>1]",
+add\_element(xpath: "/DeployHub Pro/server[position()\>1]",
 
 pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
@@ -463,7 +463,7 @@ pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 #### Example 11 Result
 
 ```text
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
@@ -479,7 +479,7 @@ pos: "inside", value: '\<_Component_ name="mycomp" /\>');
 
 \</server\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 ### Example 12
@@ -489,7 +489,7 @@ Create an entry specific for each _Endpoint_ in the targeted _Environment_.
 ```bash
 modify(file: 'servers.xml', modifier: "xml", serverspecific: true) {
 
-add\_element(xpath: "/deployhub/server[last()]",
+add\_element(xpath: "/DeployHub Pro/server[last()]",
 
 pos: "after",
 
@@ -515,7 +515,7 @@ This example shows several techniques:
 Transferred to _Endpoint_ "midtier1":
 
 ```text
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
@@ -525,11 +525,11 @@ Transferred to _Endpoint_ "midtier1":
 
 \<server name="midtier1" type="unix" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 
 Transferred to _Endpoint_ "fronttier1":
 
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
@@ -539,7 +539,7 @@ Transferred to _Endpoint_ "fronttier1":
 
 \<server name="fronttier1" type="windows" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 
 ```
 
@@ -560,7 +560,7 @@ NOTE:The xpath must specify an attribute using @ syntax – see examples below.
 Given an input file "servers.xml" that looks like this:
 
 ```bash
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
@@ -568,7 +568,7 @@ Given an input file "servers.xml" that looks like this:
 
 \<server name="server3" type="as400" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 Change server2 to be of type "unix":
@@ -576,7 +576,7 @@ Change server2 to be of type "unix":
 ```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
-set\_attribute(xpath: "/deployhub/server[@name=server2]/@type",
+set\_attribute(xpath: "/DeployHub Pro/server[@name=server2]/@type",
 
 value: "unix");
 
@@ -587,7 +587,7 @@ value: "unix");
 
 ```text
 
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
@@ -595,7 +595,7 @@ value: "unix");
 
 \<server name="server3" type="as400" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 ### Example 15
@@ -605,7 +605,7 @@ Add a new attribute to every _Endpoint_ apart from the first one.
 ```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
-set\_attribute(xpath: "/deployhub/server[position()\>1]/@newattr",
+set\_attribute(xpath: "/DeployHub Pro/server[position()\>1]/@newattr",
 
 value: "newval");
 
@@ -615,7 +615,7 @@ value: "newval");
 #### Example 15 Result
 
 ```text
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
@@ -623,7 +623,7 @@ value: "newval");
 
 \<server name="server3" type="as400" newattr="newval" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 ### Example 16
@@ -651,7 +651,7 @@ This works by looping through each _Endpoint_ in the current _Endpoint_ set (usi
 Assuming that "server1" has an attribute "serverval" set to "val1", "server2" has an attribute "serverval" set to "val2" and "server3" has an attribute set to "val3", the result will be:
 
 ```bash
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" serverattr="val1" /\>
 
@@ -659,7 +659,7 @@ Assuming that "server1" has an attribute "serverval" set to "val1", "server2" ha
 
 \<server name="server3" type="as400" serverattr="val3" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 ## Remove\_element
@@ -675,7 +675,7 @@ xpath An xpath descriptor indicating the elements(s) in the XML document to be r
 Given an input file "servers.xml" that looks like this:
 
 ```bash
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
@@ -683,7 +683,7 @@ Given an input file "servers.xml" that looks like this:
 
 \<server name="server3" type="as400" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 Remove server2:
@@ -691,7 +691,7 @@ Remove server2:
 ```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
-remove\_element(xpath: "/deployhub/server[@name=server2]");
+remove\_element(xpath: "/DeployHub Pro/server[@name=server2]");
 
 }
 ```
@@ -700,13 +700,13 @@ remove\_element(xpath: "/deployhub/server[@name=server2]");
 
 ```text
 
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server1" type="unix" /\>
 
 \<server name="server3" type="as400" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 ### Example 18
@@ -716,7 +716,7 @@ Remove all Unix _Endpoints_:
 ```bash
 modify(file: 'servers.xml', modifier: "xml") {
 
-remove\_element(xpath: "/deployhub/server[@type=unix]");
+remove\_element(xpath: "/DeployHub Pro/server[@type=unix]");
 
 }
 ```
@@ -724,13 +724,13 @@ remove\_element(xpath: "/deployhub/server[@type=unix]");
 #### Example 18 Result
 
 ```text
-\<deployhub\>
+\<DeployHub Pro\>
 
 \<server name="server2" type="windows" /\>
 
 \<server name="server3" type="as400" /\>
 
-\</deployhub\>
+\</DeployHub Pro\>
 ```
 
 ### Example 19
@@ -740,7 +740,7 @@ Ensure each _Endpoint_ gets its own copy of the file with its own entry removed.
 ```bash
 modify(file: 'servers.xml', modifier: "xml", serverspecific: true) {
 
-remove\_element(xpath: "/deployhub/server[@name=${server.name}]");
+remove\_element(xpath: "/DeployHub Pro/server[@name=${server.name}]");
 
 }
 ```

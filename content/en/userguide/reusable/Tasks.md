@@ -8,9 +8,9 @@ The following Tasks are available as default Tasks, but you can create any type 
 - Deploy Version to _Environment_
 - Manually Trigger _Action_ to be executed
 
-### DeployHub Calendars
+### DeployHub Pro Calendars
 
-DeployHub includes a ["smart" Calendar](/userguide/advanced-features/deployments/calendar/).  The following Task are used to interact with the DeployHub Smart Calendar for Requesting and Approving deployments.
+DeployHub Pro includes a ["smart" Calendar](/userguide/advanced-features/deployments/calendar/).  The following Task are used to interact with the DeployHub Pro Smart Calendar for Requesting and Approving deployments.
 
 - Request Calendar Entry for Deployment to an _Environment_
 

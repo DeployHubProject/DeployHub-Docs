@@ -8,17 +8,17 @@ description: >
 
 ## Intro to Credentials
 
-_Credentials_ are objects within DeployHub that contain username and password pairs. _Credentials_ access the various objects used to retrieve files, interact with git, execute actions, and deploy files. Each _Credential_ can be assigned to various objects within DeployHub, so that a single _Credential_ could be assigned to many _Endpoints_ with the same username/password pair. _Credentials_ are primarily used for accessing _Endpoints_ and _Repositories_ but can be applied to any object in DeployHub that requires a User Name and Password. _Credentials_ are assigned to _Domains._ Anyone with access to the _Domain_ can view the _Credentials_. Further restrictions can be applied at the _Credential_ access level .
+_Credentials_ are objects within DeployHub Pro that contain username and password pairs. _Credentials_ access the various objects used to retrieve files, interact with git, execute actions, and deploy files. Each _Credential_ can be assigned to various objects within DeployHub Pro, so that a single _Credential_ could be assigned to many _Endpoints_ with the same username/password pair. _Credentials_ are primarily used for accessing _Endpoints_ and _Repositories_ but can be applied to any object in DeployHub Pro that requires a User Name and Password. _Credentials_ are assigned to _Domains._ Anyone with access to the _Domain_ can view the _Credentials_. Further restrictions can be applied at the _Credential_ access level .
 
 Note:  In order to define a _Repository_ or _Endpoint_ you will need to first define the _Credential_ used to access them.
 
 ## Containers and Credentials
 
-You may not need _Credentials_ if you only deploy containers. DeployHub uses Helm to perform container deployments.  Helm interacts with the Kubernetes cluster, Helm Chart Museum and the container registry to pull charts and images for the deployment. _Credentials_ are only needed to access private container registries and private Chart Museums and are assigned at the _Endpoint_ or _Environment_ level.
+You may not need _Credentials_ if you only deploy containers. DeployHub Pro uses Helm to perform container deployments.  Helm interacts with the Kubernetes cluster, Helm Chart Museum and the container registry to pull charts and images for the deployment. _Credentials_ are only needed to access private container registries and private Chart Museums and are assigned at the _Endpoint_ or _Environment_ level.
 
 ## Use the Credential List View for Adding or Deleting
 
-_Credentials_ are found under the Advanced Features menu on the left of the DeployHub main panel. By selecting the _Credentials_ menu, you see a list of all _Credentials_ to which you have access. You can also use the Search bar, represented by a funnel icon, to filter _Credentials_ based on Name or _Domain_.
+_Credentials_ are found under the Advanced Features menu on the left of the DeployHub Pro main panel. By selecting the _Credentials_ menu, you see a list of all _Credentials_ to which you have access. You can also use the Search bar, represented by a funnel icon, to filter _Credentials_ based on Name or _Domain_.
 
 The _Credentials_ List View has the following Tabs:
 
@@ -41,7 +41,7 @@ The Dashboard view displays all information related to a specific _Credential_.
 | **Full Domain** | The fully qualified path of the _Domain_ to which the _Credential_ belongs.                                                                                                                                                                                                                                                                                                                                                                    |
 | **Name**        | The name of the _Credential._                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | **Summary**     | A general description of the _Credential._                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **Type**        | The kind of _Credential_. There are two different Types of _Credentials_:<ul style="list-style-type: none;"><li>**Encrypted in Database:** This _Credential_ Type is used to access external _Data Sources_ such as Git or SalesForce. The username/password pair resides in DeployHub's database using 3DES encryption.</li><li>**SSH Private Key:** An operating system level SSH key used to access _Endpoints_ for deployments. </li></ul> |
+| **Type**        | The kind of _Credential_. There are two different Types of _Credentials_:<ul style="list-style-type: none;"><li>**Encrypted in Database:** This _Credential_ Type is used to access external _Data Sources_ such as Git or SalesForce. The username/password pair resides in DeployHub Pro's database using 3DES encryption.</li><li>**SSH Private Key:** An operating system level SSH key used to access _Endpoints_ for deployments. </li></ul> |
 | **Owner Type**  | _User_ or _Group_.                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **Owner**       | The _User_ name or _Group_ name who created the _Credential_.                                                                                                                                                                                                                                                                                                                                                                                  |
 | **Created**     | The date and time the _Credential_ was created.                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -49,7 +49,7 @@ The Dashboard view displays all information related to a specific _Credential_.
 
 ### SSH Private Keys for Connecting to _Endpoints_
 
-SSH Private Keys are used to access the _Endpoints_ for deployments over ssh protocol.  These keys are generated at the operating system level and need to be made available to DeployHub in order to connect to the _Endpoints_.
+SSH Private Keys are used to access the _Endpoints_ for deployments over ssh protocol.  These keys are generated at the operating system level and need to be made available to DeployHub Pro in order to connect to the _Endpoints_.
 If you are using SSH Private keys, you will find these files in your Home directory under the .ssh directory.  These files need to be created by you using ssh-keygen. ssh-keygen is a Linux or UNIX command line program.  It will generate a id_rsa file or id_dsa file depending on your parameters used.  See [SSH Keygen](https://www.ssh.com/ssh/keygen/) more information on generating and using SSH Private keys. Following are additional detail parameters needed for SSH Private Key.
 
 | Field        | Description                                                                         |
@@ -59,7 +59,7 @@ If you are using SSH Private keys, you will find these files in your Home direct
 
 ### Encrypted in Database User and Password Pairs for Accessing External _Data Sources_
 
-This _Credential_ can be used for accessing any external repository or tool such as Git, SalesForce, or any kind of _Data Source_ external to DeployHub.  The data entered into the Username and Password fields is encrypted in the DeployHub database.
+This _Credential_ can be used for accessing any external repository or tool such as Git, SalesForce, or any kind of _Data Source_ external to DeployHub Pro.  The data entered into the Username and Password fields is encrypted in the DeployHub Pro database.
 
 | Field        | Description                                             |
 |--------------|---------------------------------------------------------|

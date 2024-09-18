@@ -27,7 +27,7 @@ url: Is the URL to be POSTed.
 
 Array: Associative array containing the JSON/XML returned from the RESTful post. If the returned data is encoded with XML then it is converted into the array structure using the rules outlined for xmlparse above.
 
-restful\_post can be used to post requests to DeployHub's own API.
+restful\_post can be used to post requests to DeployHub Pro's own API.
 
 ### Examples
 
@@ -42,13 +42,13 @@ set res = restful\_post("http://jenkins:8081/job/IT%20Guys/build");
 
 echo "Kicking off build";
 
-set token={"token":"deployHub"};
+set token={"token":"DeployHub Pro"};
 
 set res = restful\_post("http://mac:8081/job/IT%20Guys/build",$token);
 
 // this is equivalent to:
 
-set res = restful\_post("http://mac:8081/job/IT%20Guys/build","token=DeployHub");
+set res = restful\_post("http://mac:8081/job/IT%20Guys/build","token=DeployHub Pro");
 
 3. Use basic authentication from a Credential:
 
@@ -97,7 +97,7 @@ null,null,$auth);
 echo "res is $res";
 ```
 
-A header directive passed in the array will automatically replace the value that would normally be used by DeployHub. You can use this to change values for Host, Content-Type and User-Agent.
+A header directive passed in the array will automatically replace the value that would normally be used by DeployHub Pro. You can use this to change values for Host, Content-Type and User-Agent.
 
 ### See Also
 
