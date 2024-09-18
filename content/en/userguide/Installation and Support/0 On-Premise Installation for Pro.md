@@ -23,4 +23,4 @@ To log in please use userId: admin and password: admin.
 **Note:**
 You can create your own Administrator UserID and remove the default userid and password.
 
-Once you have completed your installation, you can take the next step and complete a [Proof of Concept](https://www.DeployHub Pro.com/docs/DeployHub Pro-General-POC.pdf) integrated into your CI/CD pipeline with the Command Line Interface.
+Once you have completed your installation, you can take the next step and complete a [Proof of Concept](https://www.DeployHub.com/docs/DeployHub Pro-General-POC.pdf) integrated into your CI/CD pipeline with the Command Line Interface.
