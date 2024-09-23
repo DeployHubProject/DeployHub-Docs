@@ -3,12 +3,12 @@ title: "Why Use DeployHub Pro"
 linkTitle: "Why Use DeployHub Pro"
 weight: 1
 description: >
-  DeployHub Pro - Continuous Security Intelligence
+  DeployHub Pro - Continuous Vulnerability Management
 ---
 
 ## Why Use DeployHub Pro
 
-DeployHub Pro is a Continuous Security Intelligence solution designed for decoupled architectures. DeployHub Pro  monitors and collects DevSecOps data from the CI/CD pipeline for every artifact. It unifies the data generated across the pipeline, offering a consolidated security profile of the software delivered to end users. With DeployHub Pro’s integrated security intelligence, IT Teams can quickly respond to vulnerabilities and issues, gaining a clear view of how a vulnerable package is used, which applications depend on it, and where it has been deployed.  
+DeployHub Pro is a Continuous Vulnerability Management solution designed to improve vulnerability response in decoupled architectures. DeployHub Pro monitors and collects DevSecOps data from the CI/CD pipeline for every artifact. It unifies the data generated across the pipeline, offering a consolidated security profile of the software delivered to end users, with real-time vulnerability updates across all assets of the infrastructure. With DeployHub Pro’s integrated vulnerability management IT Teams can quickly respond to vulnerabilities and issues, gaining a clear view of how a vulnerable package is used, which applications depend on it, and where it has been deployed.  
 
 ![Supply Chain Catalog](/userguide/images/supplychaincatalog.png/)
 
@@ -83,7 +83,7 @@ DeployHub Pro is automated via the CD Pipeline to continuously version your deco
 
 ## Ortelius Open Source - Free Version
 
-DeployHub Pro is based on the [Ortleius](https://www.Ortelius.io/) open source project, incubating at the [Continuous Delivery Foundation](https://cd.foundation). DeployHub Provides a hosted version of Ortelius, or an on premise installation. Ortelius is a free open source continuous security intelligence system that integrates with your DevOps tools. It supports unlimited endpoints, versions, and users. [Learn more](/userguide/0-ortelius-tutorial/). 
+DeployHub Pro is based on the [Ortelius](https://www.Ortelius.io/) open source project, incubating at the [Continuous Delivery Foundation](https://cd.foundation). DeployHub Provides a hosted version of Ortelius, or an on premise installation. Ortelius is a free open source continuous vulnerability management system that integrates with your DevOps tools. It supports unlimited endpoints, versions, and users. [Learn more](/userguide/0-ortelius-tutorial/). 
 
 ## DeployHub Pro Upgrade from Ortelius Open Source
 
