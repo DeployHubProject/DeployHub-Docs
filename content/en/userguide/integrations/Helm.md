@@ -15,7 +15,7 @@ DeployHub Pro supports Helm in two ways:
 
 ## Storing Helm Chart Repository and Version
 
-DeployHub Pro integrates with Helm using the [CI/CD Command Line Interface](/userguide/integrations/ci-cd_integrations/) (CLI). For every _Component Version_, the CLI gathers and stores the 
+DeployHub Pro integrates with Helm using the [CI/CD Command Line Interface](/userguide/integrations/ci-cd_integrations/) (CLI). For every _Component Version_, the CLI gathers and stores the following: 
 
 | Access                      | Description                                                                                                                                                         |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
