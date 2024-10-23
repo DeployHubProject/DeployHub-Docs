@@ -18,7 +18,7 @@ You will also see how Ortelius uses a Domain-Driven Design (DDD) to organize dat
 
 ## Signing Up and Getting Started
 
-When you [signup for Ortelius](https://www.DeployHub.com/DeployHub-team-signup/), you are asked for required information, Company, Project name, first name, last name, email and UserID/Password. Your UserID/Password and Company name are unique.  Your Project will be a _Sub-Domain_ under your Company _Domain_.
+When you [signup for Ortelius](https://www.deployhub.com/deployhub-team/), you are asked for required information, Company, Project name, first name, last name, email and UserID/Password. Your UserID/Password and Company name are unique.  Your Project will be a _Sub-Domain_ under your Company _Domain_.
 
 Ortelius is accessible through the following url:
 
