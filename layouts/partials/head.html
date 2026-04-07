@@ -40,11 +40,8 @@
 {{ partial "hooks/head-end.html" . -}}
 
 {{/* To comply with GDPR, cookie consent scripts places in head-end must execute before Google Analytics is enabled */ -}}
-{{ if hugo.IsProduction -}}
-  {{ $enableGtagForUniversalAnalytics := not .Site.Params.disableGtagForUniversalAnalytics -}}
-  {{ if (or $enableGtagForUniversalAnalytics (hasPrefix .Site.GoogleAnalytics "G-")) -}}
-    {{ template "_internal/google_analytics_gtag.html" . -}}
-  {{ else -}}
-    {{ template "_internal/google_analytics_async.html" . -}}
-  {{ end -}}
-{{ end -}}
+{{ if hugo.IsProduction }}
+  {{ with .Site.Config.Services.GoogleAnalytics.ID }}
+    {{ template "_internal/google_analytics.html" $ }}
+  {{ end }}
+{{ end }}

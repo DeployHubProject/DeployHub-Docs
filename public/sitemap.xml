@@ -2,647 +2,427 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/userguide/publishing-components/intro-to-components/</loc>
-    <lastmod>2020-07-07T18:25:28-06:00</lastmod>
+    <loc>//localhost:1313/userguide/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-intro/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-intro/</loc>
   </url><url>
-    <loc>/userguide/installation-and-support/0-saas-and-reverse-proxy/</loc>
-    <lastmod>2022-11-30T14:23:40-07:00</lastmod>
+    <loc>//localhost:1313/userguide/0-introduction/</loc>
   </url><url>
-    <loc>/userguide/first-steps/2-intro-to-setting-up-deployhub/</loc>
-    <lastmod>2022-10-26T12:57:13-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/1-deployhub-processing/</loc>
   </url><url>
-    <loc>/userguide/introduction-to-deployhub/</loc>
-    <lastmod>2021-12-28T17:14:59-07:00</lastmod>
+    <loc>//localhost:1313/userguide/0-ortelius-tutorial/</loc>
   </url><url>
-    <loc>/userguide/introduction-to-deployhub/0-introduction/</loc>
-    <lastmod>2022-10-26T12:57:13-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/0-quick-setup-map/</loc>
   </url><url>
-    <loc>/userguide/first-steps/2-defining-domains/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/</loc>
   </url><url>
-    <loc>/userguide/userguide/2-define-components/</loc>
-    <lastmod>2022-12-07T17:34:50-07:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-workingwithobjects/</loc>
   </url><url>
-    <loc>/userguide/1-deployhub-basic-concepts/</loc>
-    <lastmod>2020-07-20T16:04:26-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-abort/</loc>
   </url><url>
-    <loc>/userguide/installation-and-support/</loc>
-    <lastmod>2020-06-04T17:28:49-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/2-define-your-credentials/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-workingwithobjects/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/installation-and-support/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-abort/</loc>
-    <lastmod>2020-06-04T17:28:49-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/0-saas-and-reverse-proxy/</loc>
   </url><url>
-    <loc>/userguide/first-steps/2-define-your-credentials/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-append/</loc>
   </url><url>
-    <loc>/userguide/installation-and-support/0-on-premise-installation-for-pro/</loc>
-    <lastmod>2022-11-30T14:23:40-07:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/</loc>
   </url><url>
-    <loc>/userguide/introduction-to-deployhub/0-hipster-store-tutorial/</loc>
-    <lastmod>2024-01-16T15:31:22-07:00</lastmod>
+    <loc>//localhost:1313/userguide/1-deployhub-basic-concepts/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-append/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/addingtopipeline/</loc>
   </url><url>
-    <loc>/userguide/concepts/1-deployhub-processing/</loc>
-    <lastmod>2020-07-07T18:25:28-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/2-define-repositories/</loc>
   </url><url>
-    <loc>/userguide/installation-and-support/0-commandlineinterface/</loc>
-    <lastmod>2022-10-26T12:57:13-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/restapi/intro-and-logging-in/</loc>
   </url><url>
-    <loc>/userguide/packaging-applications/buildingapplications/</loc>
-    <lastmod>2020-07-07T18:25:28-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-appendstd/</loc>
   </url><url>
-    <loc>/userguide/installation-and-support/0-enabling-sso/</loc>
+    <loc>//localhost:1313/userguide/2-define-components/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/deployments/2-define-repositories/</loc>
-    <lastmod>2021-05-27T12:23:36-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/2-define-your-actions/</loc>
   </url><url>
-    <loc>/userguide/installation-and-support/0-contactsupport/</loc>
-    <lastmod>2020-07-07T09:59:29-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/restapi/</loc>
   </url><url>
-    <loc>/userguide/2-defining-applications/</loc>
-    <lastmod>2022-12-07T17:08:23-07:00</lastmod>
+    <loc>//localhost:1313/userguide/2-defining-applications/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/restapi/intro-and-logging-in/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/2-defining-domains/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-appendstd/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/</loc>
   </url><url>
-    <loc>/userguide/concepts/3-executing-deployments/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/5-application-releases/</loc>
   </url><url>
-    <loc>/userguide/installation-and-support/0-terms-of-use-agreement/</loc>
-    <lastmod>2020-06-04T17:28:49-06:00</lastmod>
+    <loc>//localhost:1313/userguide/2-define-endpoints/</loc>
   </url><url>
-    <loc>/userguide/2-define-endpoints/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/restapi/applications/</loc>
   </url><url>
-    <loc>/userguide/2-define-environments/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-assert/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/restapi/applications/</loc>
-    <lastmod>2020-06-28T15:52:03-06:00</lastmod>
+    <loc>//localhost:1313/userguide/2-define-environments/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-assert/</loc>
-    <lastmod>2020-05-21T11:20:33-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/changerequest/</loc>
   </url><url>
-    <loc>/userguide/concepts/</loc>
-    <lastmod>2020-06-30T09:25:28-06:00</lastmod>
+    <loc>//localhost:1313/userguide/installation-and-support/0-commandlineinterface/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-attachment/</loc>
-    <lastmod>2020-05-21T11:20:33-06:00</lastmod>
+    <loc>//localhost:1313/userguide/2-users/</loc>
   </url><url>
-    <loc>/userguide/first-steps/</loc>
-    <lastmod>2020-06-26T10:47:36-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-attachment/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-avloop/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/user-groups/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/restapi/components/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/installation-and-support/0-on-premise-installation-for-pro/</loc>
   </url><url>
-    <loc>/userguide/publishing-components/</loc>
-    <lastmod>2020-06-26T08:55:02-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-avloop/</loc>
   </url><url>
-    <loc>/userguide/packaging-applications/</loc>
-    <lastmod>2020-06-22T13:05:31-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/restapi/components/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-base64decode/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/installation-and-support/0-contactsupport/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/restapi/credentials/</loc>
-    <lastmod>2020-06-15T16:15:25-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-base64decode/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-base64encode/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/restapi/pro-credentials/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/restapi/deployment/</loc>
-    <lastmod>2020-06-22T13:10:16-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-base64encode/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/deployments/2-data-sources/</loc>
-    <lastmod>2020-06-28T15:52:03-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/restapi/pro-deployment/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-basename/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/3-executing-deployments/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/restapi/deployment-log/</loc>
-    <lastmod>2020-06-15T16:02:37-06:00</lastmod>
+    <loc>//localhost:1313/userguide/installation-and-support/0-enabling-sso/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-breakcontinue/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/2-data-sources/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/restapi/endpoints/</loc>
-    <lastmod>2020-06-22T13:10:16-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-basename/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-changerequestobject/</loc>
-    <lastmod>2020-05-21T11:20:33-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/restapi/deployment-log/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/restapi/environments/</loc>
-    <lastmod>2020-06-22T13:10:16-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-breakcontinue/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-checkout/</loc>
-    <lastmod>2020-05-21T11:18:48-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/restapi/endpoints/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/restapi/calendar/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-changerequestobject/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-comploop/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/restapi/environments/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/deployments/2-define-notifiers/</loc>
-    <lastmod>2020-06-26T08:56:13-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-checkout/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-componentitemobject/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/restapi/pro-calendar/</loc>
   </url><url>
-    <loc>/userguide/customizations/2-notifier-templates/</loc>
-    <lastmod>2020-06-28T15:52:03-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-comploop/</loc>
   </url><url>
-    <loc>/userguide/customizations/2-define-your-actions/</loc>
-    <lastmod>2020-07-01T16:25:04-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-componentitemobject/</loc>
   </url><url>
-    <loc>/userguide/integrations/dora/dorametrics/</loc>
+    <loc>//localhost:1313/userguide/installation-and-support/0-terms-of-use-agreement/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/restapi/users/</loc>
-    <lastmod>2020-06-17T14:59:15-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/restapi/users/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-conditionalstatements/</loc>
-    <lastmod>2020-05-21T11:18:48-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-conditionalstatements/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-create/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-create/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-credentials/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-credentials/</loc>
   </url><url>
-    <loc>/userguide/customizations/2-define-your-functions-and-procedures/</loc>
-    <lastmod>2021-12-28T17:14:59-07:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-date/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-date/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-dateobject/</loc>
   </url><url>
-    <loc>/userguide/integrations/dorametrics/</loc>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-decimal/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-dateobject/</loc>
-    <lastmod>2020-05-21T11:20:33-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-delete/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-decimal/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-deploystatement/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-delete/</loc>
-    <lastmod>2020-05-21T11:18:48-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-dirname/</loc>
   </url><url>
-    <loc>/userguide/concepts/lifecyclesubdomains/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-domainobjectt/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-deploystatement/</loc>
-    <lastmod>2020-05-21T11:18:48-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-dropzone/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-dirname/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-dropzonefileobject/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-domainobjectt/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-dropzoneobject/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-dropzone/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-echo/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-dropzonefileobject/</loc>
-    <lastmod>2020-05-21T11:20:33-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-eval/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-dropzoneobject/</loc>
-    <lastmod>2020-05-21T11:20:33-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-filter/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-echo/</loc>
-    <lastmod>2020-05-21T11:18:48-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-flatten/</loc>
   </url><url>
-    <loc>/userguide/integrations/dorametrics/</loc>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-foreachstatement/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-eval/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getapplication/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-filter/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getcomponnet/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-flatten/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getcredential/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-foreachstatement/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getenvironment/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-getapplication/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-gethex/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-getcomponnet/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getserver/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-getcredential/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getuser/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-getenvironment/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getusergroup/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-gethex/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-increment/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-getserver/</loc>
-    <lastmod>2020-05-21T11:18:48-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-instr/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-getuser/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-iterate/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-getusergroup/</loc>
-    <lastmod>2020-06-17T14:59:15-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-length/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-increment/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-lower/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-instr/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-iterate/</loc>
-    <lastmod>2020-06-17T14:59:15-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-me/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-length/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-modify/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-lower/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-notify/</loc>
   </url><url>
-    <loc>/userguide/profeatures/5-application-releases/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-now/</loc>
   </url><url>
-    <loc>/userguide/integrations/</loc>
-    <lastmod>2020-05-13T13:30:08-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-octal/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-me/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-parallel/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-modify/</loc>
-    <lastmod>2020-07-20T16:04:26-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/calendar/</loc>
   </url><url>
-    <loc>/userguide/user-groups/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-psloop/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-notify/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-query/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-now/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-random/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-octal/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-regsub/</loc>
   </url><url>
-    <loc>/userguide/customizations/</loc>
-    <lastmod>2020-06-26T08:56:13-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-parallel/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-remotescript/</loc>
   </url><url>
-    <loc>/userguide/profeatures/calendar/</loc>
-    <lastmod>2020-06-26T08:56:13-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-rename/</loc>
   </url><url>
-    <loc>/userguide/customizations/2-users/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-restfulget/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-psloop/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-restfulpost/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-query/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-rtrim/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-random/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-setatt/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-regsub/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-setstatement/</loc>
   </url><url>
-    <loc>/userguide/customizations/customtypes/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-sleep/</loc>
   </url><url>
-    <loc>/userguide/customizations/teamgroups/</loc>
-    <lastmod>2020-06-28T15:52:03-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-soap/</loc>
   </url><url>
-    <loc>/userguide/profeatures/</loc>
-    <lastmod>2020-06-26T08:56:13-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-split/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-remotescript/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-stack/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-rename/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-stdpath/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-restfulget/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-substr/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-restfulpost/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-sum/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-rtrim/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-switch/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-runtask/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-tojson/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-setatt/</loc>
-    <lastmod>2020-07-20T16:04:26-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-trasnfer/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-setstatement/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-trycatchfinally/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-sleep/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-upper/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-soap/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-usergroup/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-split/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-userobject/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/restapi/</loc>
-    <lastmod>2020-05-21T11:33:49-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-using/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-stack/</loc>
-    <lastmod>2020-06-14T19:15:19-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-waitfor/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-stdpath/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-whileloop/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-substr/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-xmlparse/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-sum/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-xpathnotation/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-switch/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-zipadd/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-tojson/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-zipdel/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-trasnfer/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-zipget/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-trycatchfinally/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/installation-and-support/oslicenses/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-upper/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/2-define-notifiers/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-usergroup/</loc>
-    <lastmod>2020-06-17T14:59:15-06:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/intro-to-integrations/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-userobject/</loc>
-    <lastmod>2020-06-17T14:59:15-06:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/ci-cd_integrations/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-using/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/compliance-summary/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/dorametrics/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-waitfor/</loc>
-    <lastmod>2020-05-21T11:18:48-06:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/github/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-whileloop/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/helm/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-xmlparse/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/hipchat/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-xpathnotation/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/jira-bugzilla-and-git-issues/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-zipadd/</loc>
-    <lastmod>2020-06-15T10:20:11-06:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/lamda/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-zipdel/</loc>
-    <lastmod>2020-05-21T11:18:48-06:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/ldap-and-active-directory/</loc>
   </url><url>
-    <loc>/userguide/advanced-features/dmscript/dmscript-zipget/</loc>
-    <lastmod>2020-05-19T20:43:18-06:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/odbc/</loc>
   </url><url>
-    <loc>/userguide/integrations/intro-to-integrations/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/openmake-meister/</loc>
   </url><url>
-    <loc>/userguide/integrations/ci-cd_integrations/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/openssf-scorecard/</loc>
   </url><url>
-    <loc>/userguide/integrations/dora/</loc>
+    <loc>//localhost:1313/userguide/integrations/osvdev/</loc>
   </url><url>
-    <loc>/userguide/integrations/circleci/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/salesforce/</loc>
   </url><url>
-    <loc>/userguide/integrations/github/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/swagger/</loc>
   </url><url>
-    <loc>/userguide/integrations/helm/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/slack/</loc>
   </url><url>
-    <loc>/userguide/integrations/hipchat/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/sonarqube/</loc>
   </url><url>
-    <loc>/userguide/integrations/jira-bugzilla-and-git-issues/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/spdx-syft-cyclonedx/</loc>
   </url><url>
-    <loc>/userguide/integrations/ldap-and-active-directory/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/svn/</loc>
   </url><url>
-    <loc>/userguide/integrations/odbc/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/tomcat/</loc>
   </url><url>
-    <loc>/userguide/integrations/openmake-meister/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/veracode/</loc>
   </url><url>
-    <loc>/userguide/integrations/osvdev/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/integrations/weblogic/</loc>
   </url><url>
-    <loc>/userguide/integrations/sonarqube/</loc>
+    <loc>//localhost:1313/userguide/integrations/websphere/</loc>
   </url><url>
-    <loc>/userguide/integrations/veracode/</loc>
+    <loc>//localhost:1313/userguide/advanced-features/deployments/2-notifier-templates/</loc>
   </url><url>
-    <loc>/userguide/integrations/salesforce/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/attributes/</loc>
   </url><url>
-    <loc>/userguide/integrations/slack/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/audittrail-withdeployments/</loc>
   </url><url>
-    <loc>/userguide/integrations/spdx-syft-cyclonedx/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/audittrail/</loc>
   </url><url>
-    <loc>/userguide/integrations/svn/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/changerequest/</loc>
   </url><url>
-    <loc>/userguide/integrations/swagger/</loc>
-    <lastmod>2022-12-07T17:34:50-07:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/commandline/</loc>
   </url><url>
-    <loc>/userguide/integrations/tomcat/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/git/</loc>
   </url><url>
-    <loc>/userguide/integrations/weblogic/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/hipchat/</loc>
   </url><url>
-    <loc>/userguide/integrations/websphere/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/ldap-datasource/</loc>
   </url><url>
-    <loc>/userguide/reusable/application-and-release-tasks/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/listofactions/</loc>
   </url><url>
-    <loc>/userguide/reusable/attributes/</loc>
-    <lastmod>2020-07-20T16:04:26-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-application-predecessor/</loc>
   </url><url>
-    <loc>/userguide/reusable/audittrail-withdeployments/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-application-result/</loc>
   </url><url>
-    <loc>/userguide/reusable/audittrail/</loc>
-    <lastmod>2020-06-28T15:52:03-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-application-version-full/</loc>
   </url><url>
-    <loc>/userguide/reusable/changerequest/</loc>
-    <lastmod>2020-06-28T15:52:03-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-application-version-result/</loc>
   </url><url>
-    <loc>/userguide/reusable/commandline/</loc>
-    <lastmod>2024-01-16T15:27:50-07:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-application-version/</loc>
   </url><url>
-    <loc>/userguide/reusable/git/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-application/</loc>
   </url><url>
-    <loc>/userguide/reusable/hipchat/</loc>
-    <lastmod>2021-12-28T17:14:59-07:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-approve-or-reject/</loc>
   </url><url>
-    <loc>/userguide/reusable/ldap-datasource/</loc>
-    <lastmod>2020-06-28T15:52:03-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-attribute-result/</loc>
   </url><url>
-    <loc>/userguide/reusable/listofactions/</loc>
-    <lastmod>2022-12-07T11:23:06-07:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-attribute/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-application-predecessor/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-calendar-event-result/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-application-result/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-calendar-event/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-application-version-full/</loc>
-    <lastmod>2020-06-15T16:15:25-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-component-predecessor/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-application-version-result/</loc>
-    <lastmod>2020-06-15T08:26:09-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-component-result/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-application-version/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-component-version-full/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-application/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-component-version-result/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-approve-or-reject/</loc>
-    <lastmod>2020-06-15T08:26:09-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-component-version/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-attribute-result/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-component/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-attribute/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-comptype/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-calendar-event-result/</loc>
-    <lastmod>2020-06-14T20:08:59-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-deployment-log-result/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-calendar-event/</loc>
-    <lastmod>2020-06-14T20:08:59-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-deployment-log/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-component-predecessor/</loc>
-    <lastmod>2020-06-15T08:26:09-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-deployment-result/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-component-result/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-endpoint-result/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-component-version-full/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-endpoints-result/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-component-version-result/</loc>
-    <lastmod>2020-06-15T08:26:09-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-endpoints/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-component-version/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-environment-result/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-component/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-environment/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-comptype/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-environments-result/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-deployment-log-result/</loc>
-    <lastmod>2020-06-15T08:26:09-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-event-creator/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-deployment-log/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-event-environment/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-deployment-result/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-event-timestamp/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-endpoint-result/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-request/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-endpoints-result/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/model-success/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-endpoints/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/openmake-meister/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-environment-result/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/slack/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-environment/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/svn/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-environments-result/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/reusable/tasks/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-event-creator/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/save/application-and-release-tasks/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-event-environment/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/save/customtypes/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-event-timestamp/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/save/databasedeployments/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-request/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/userguide/save/dmscript-runtask/</loc>
   </url><url>
-    <loc>/userguide/reusable/model-success/</loc>
-    <lastmod>2020-06-28T15:52:03-06:00</lastmod>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>/userguide/reusable/openmake-meister/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
+    <loc>//localhost:1313/</loc>
   </url><url>
-    <loc>/userguide/reusable/slack/</loc>
-    <lastmod>2020-06-30T16:13:30-06:00</lastmod>
-  </url><url>
-    <loc>/userguide/reusable/svn/</loc>
-    <lastmod>2020-06-15T16:06:20-06:00</lastmod>
-  </url><url>
-    <loc>/userguide/reusable/tasks/</loc>
-    <lastmod>2020-07-09T16:50:53-06:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2020-07-07T10:13:15-06:00</lastmod>
-  </url><url>
-    <loc>/search/</loc>
-    <lastmod>2020-05-11T11:46:48-06:00</lastmod>
+    <loc>//localhost:1313/search/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>/tags/</loc>
-  </url><url>
-    <loc>/userguide/</loc>
-    <lastmod>2024-01-16T15:31:22-07:00</lastmod>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>

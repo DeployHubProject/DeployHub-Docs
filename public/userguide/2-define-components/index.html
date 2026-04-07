@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.151.2">
+<meta name="robots" content="noindex, nofollow">
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Components and Their Security Posture | DeployHub User Guide and API Reference</title>
+<meta name="description" content="Viewing a Component&#39;s Security Posture
+">
+<meta property="og:url" content="//localhost:1313/userguide/2-define-components/">
+  <meta property="og:site_name" content="DeployHub User Guide and API Reference">
+  <meta property="og:title" content="Components and Their Security Posture">
+  <meta property="og:description" content="Viewing a Component&#39;s Security Posture">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="userguide">
+
+  <meta itemprop="name" content="Components and Their Security Posture">
+  <meta itemprop="description" content="Viewing a Component&#39;s Security Posture">
+  <meta itemprop="wordCount" content="3352">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Components and Their Security Posture">
+  <meta name="twitter:description" content="Viewing a Component&#39;s Security Posture">
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 543 500" width="64" height="500"><g style="isolation:isolate" id="Layer 0"><path d="M79 245C79 136.273 166.153 48 273.5 48S468 136.273 468 245 380.847 442 273.5 442C166.153 442 79 353.727 79 245z" fill="rgb(248,149,26)"/><path d="M153 381.5c0-36.702 51.978-66.5 116-66.5s116 29.798 116 66.5S333.022 448 269 448s-116-29.798-116-66.5z" fill="rgb(255,255,255)"/></g><path d="M367.061 418.894C327.293 419.647 222.975 419.673 178.837 418.973l-21.6-14.688C157.954 403.283 157.544 400.696 156.105 396.488 145.845 366.481 143.894 343.806 148.15 304.039 150.088 285.928 155.866 260.736 160.319 250.982 161.054 249.372 161.34 245.29 161.351 236.249 161.405 190.369 182.404 138.356 205.255 127.502 210.959 124.793 211.694 124.838 218.678 128.334 232.695 135.349 243.333 150.619 251.279 175.125 253.538 182.09 252.817 181.755 265.518 181.755 271.674 181.755 280.191 182.044 284.445 182.398 293.704 183.168 293.789 183.113 296.215 174.757 305.363 143.254 327.982 120.114 342.272 127.638c24.726 13.019 45.07 65.823 43.548 113.031C385.459 251.852 385.533 252.712 387.31 257.98 396.5 285.228 395.694 364.918 386.002 387.28 385.651 388.09 384.677 390.908 383.837 393.541 382.998 396.175 381.146 400.711 379.723 403.621 377.997 407.149 377.503 410.105 377.979 411.463L367.061 418.894z" fill="rgb(255,255,255)"/><path d="M205.507 144.37c-12.335 12.985-23.442 37.283-27.864 60.957C173.202 229.101 174.555 236.216 181.817 227.284c10.861-13.358 30.901-27.491 48.394-34.13C239.492 189.632 240.55 188.762 239.882 185.2 236.481 167.057 219.561 140.134 211.559 140.134 210.048 140.134 208.506 141.214 205.507 144.37z" fill-rule="evenodd" fill="rgb(90,92,92)"/><path d="M329.099 143.474C321.245 149.872 314.42 161.604 308.696 178.549 305.152 189.042 305.05 188.837 315.752 192.823 332.214 198.955 353.604 213.735 363.967 226.138 372 235.753 373.556 230.593 369.463 207.906 364.768 181.883 355.014 159.836 341.521 144.751 336.318 138.934 334.857 138.784 329.099 143.474z" fill-rule="evenodd" fill="rgb(90,92,92)"/><path d="M209.468 232.538c-27.184 10.098-33.853 47.983-11.917 67.705 22.506 20.235 56.754 1.822 56.654-30.458C254.126 244.516 230.4 224.762 209.468 232.538z" fill-rule="evenodd" fill="rgb(90,92,92)"/><path d="M323.855 256.85C314.425 261.135 313.44 271.947 321.956 277.686 330.883 283.702 342.996 272.367 337.989 262.683 335.183 257.257 328.777 254.613 323.855 256.85z" fill-rule="evenodd" fill="rgb(90,92,92)"/><path d="M224.256 259.242C225.388 259.813 226.962 261.341 227.753 262.638 233.738 272.455 219.876 283.142 212.32 274.536 204.558 265.695 213.733 253.939 224.256 259.242z" fill-rule="evenodd" fill="rgb(255,255,255)"/><path d="M257.426 318.296C248.757 321.292 245.104 325.883 245.222 333.636 245.361 342.8 253.705 355.335 262.944 360.259 268.584 363.266 268.329 362.172 268.183 382.715 268.045 402.114 268.292 403.27 272.918 404.918 280.263 407.533 281.797 403.619 282.235 381.151L282.603 362.234 286.695 360.024C304.85 350.219 310.307 327.794 296.278 320.637 288.593 316.716 265.947 315.352 257.426 318.296z" fill-rule="evenodd" fill="rgb(90,92,92)"/></svg></span><span class="navbar-brand__name">DeployHub User Guide and API Reference</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-userguide-li">
+  <a href="/userguide/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-userguide"><span class="">DeployHub Pro User Guide</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguide0-introduction-li">
+  <a href="/userguide/0-introduction/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguide0-introduction"><span class="">Why Use DeployHub Pro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguide0-ortelius-tutorial-li">
+  <a href="/userguide/0-ortelius-tutorial/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguide0-ortelius-tutorial"><span class="">Free SaaS Signup and Quick Tutorial</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideinstallation-and-support-li">
+  <a href="/userguide/installation-and-support/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideinstallation-and-support"><span class="">Installation and Support</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-commandlineinterface-li">
+  <a href="/userguide/installation-and-support/0-commandlineinterface/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-commandlineinterface"><span class="">Command Line Interface Installation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-on-premise-installation-for-pro-li">
+  <a href="/userguide/installation-and-support/0-on-premise-installation-for-pro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-on-premise-installation-for-pro"><span class="">DeployHub Pro On-Prem Installation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-contactsupport-li">
+  <a href="/userguide/installation-and-support/0-contactsupport/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-contactsupport"><span class="">Contact Support</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-enabling-sso-li">
+  <a href="/userguide/installation-and-support/0-enabling-sso/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-enabling-sso"><span class="">Single Sign On using Okta and SAML</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-support0-terms-of-use-agreement-li">
+  <a href="/userguide/installation-and-support/0-terms-of-use-agreement/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-support0-terms-of-use-agreement"><span class="">Terms of Use Agreement</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideinstallation-and-supportoslicenses-li">
+  <a href="/userguide/installation-and-support/oslicenses/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideinstallation-and-supportoslicenses"><span class="">Dependency Licenses</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguide1-deployhub-basic-concepts-li">
+  <a href="/userguide/1-deployhub-basic-concepts/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguide1-deployhub-basic-concepts"><span class="">Understanding DeployHub Pro Objects</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguideaddingtopipeline-li">
+  <a href="/userguide/addingtopipeline/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideaddingtopipeline"><span class="">Adding Your Components and Applications to DeployHub Pro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-userguide2-define-components-li">
+  <a href="/userguide/2-define-components/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-userguide2-define-components"><span class="td-sidebar-nav-active-item">Components and Their Security Posture</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguide2-defining-applications-li">
+  <a href="/userguide/2-defining-applications/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguide2-defining-applications"><span class="">Applications and Their Security Posture</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguide2-defining-domains-li">
+  <a href="/userguide/2-defining-domains/" title="Building Your Domain Catalog" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguide2-defining-domains"><span class="">Building your Domain Catalog</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguide2-define-endpoints-li">
+  <a href="/userguide/2-define-endpoints/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguide2-define-endpoints"><span class="">Define Your Endpoints</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguide2-define-environments-li">
+  <a href="/userguide/2-define-environments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguide2-define-environments"><span class="">Associate Environments</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguide2-users-li">
+  <a href="/userguide/2-users/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguide2-users"><span class="">Managing Users</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguideuser-groups-li">
+  <a href="/userguide/user-groups/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideuser-groups"><span class="">Creating User Groups</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideintegrations-li">
+  <a href="/userguide/integrations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideintegrations"><span class="">Integrations</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsintro-to-integrations-li">
+  <a href="/userguide/integrations/intro-to-integrations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsintro-to-integrations"><span class="">Custom DeployHub Pro Actions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsci-cd_integrations-li">
+  <a href="/userguide/integrations/ci-cd_integrations/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsci-cd_integrations"><span class="">CI/CD and DeployHub Pro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationscompliance-summary-li">
+  <a href="/userguide/integrations/compliance-summary/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationscompliance-summary"><span class="">Compliance Summary Report</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsdorametrics-li">
+  <a href="/userguide/integrations/dorametrics/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsdorametrics"><span class="">DORA Metrics Reports</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsgithub-li">
+  <a href="/userguide/integrations/github/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsgithub"><span class="">Git Repo Integration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationshelm-li">
+  <a href="/userguide/integrations/helm/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationshelm"><span class="">Helm for Container Deployments</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationshipchat-li">
+  <a href="/userguide/integrations/hipchat/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationshipchat"><span class="">HipChat</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsjira-bugzilla-and-git-issues-li">
+  <a href="/userguide/integrations/jira-bugzilla-and-git-issues/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsjira-bugzilla-and-git-issues"><span class="">Jira, Bugzilla and GitHub Issues</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationslamda-li">
+  <a href="/userguide/integrations/lamda/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationslamda"><span class="">AWS Lamda</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsldap-and-active-directory-li">
+  <a href="/userguide/integrations/ldap-and-active-directory/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsldap-and-active-directory"><span class="">LDAP and Active Directory</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsodbc-li">
+  <a href="/userguide/integrations/odbc/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsodbc"><span class="">ODBC Connection</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsopenmake-meister-li">
+  <a href="/userguide/integrations/openmake-meister/" title="OpenMake Meister Binary Repository" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsopenmake-meister"><span class="">OpenMake Meister</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsopenssf-scorecard-li">
+  <a href="/userguide/integrations/openssf-scorecard/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsopenssf-scorecard"><span class="">OpenSSF Scorecard Integration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsosvdev-li">
+  <a href="/userguide/integrations/osvdev/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsosvdev"><span class="">OSV.Dev CVE Integration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationssalesforce-li">
+  <a href="/userguide/integrations/salesforce/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationssalesforce"><span class="">SalesForce</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsswagger-li">
+  <a href="/userguide/integrations/swagger/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsswagger"><span class="">Swagger Integration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsslack-li">
+  <a href="/userguide/integrations/slack/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsslack"><span class="">Slack</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationssonarqube-li">
+  <a href="/userguide/integrations/sonarqube/" title="SonarQube Code Quality and Security Solution Integration" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationssonarqube"><span class="">SonarQube Integration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsspdx-syft-cyclonedx-li">
+  <a href="/userguide/integrations/spdx-syft-cyclonedx/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsspdx-syft-cyclonedx"><span class="">SPDX, CycloneDX and Syft</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationssvn-li">
+  <a href="/userguide/integrations/svn/" title="SVN as a Repository" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationssvn"><span class="">SVN</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationstomcat-li">
+  <a href="/userguide/integrations/tomcat/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationstomcat"><span class="">Tomcat</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsveracode-li">
+  <a href="/userguide/integrations/veracode/" title="Veracode Software Security Integration" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsveracode"><span class="">Veracode Integration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationsweblogic-li">
+  <a href="/userguide/integrations/weblogic/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationsweblogic"><span class="">Weblogic</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideintegrationswebsphere-li">
+  <a href="/userguide/integrations/websphere/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideintegrationswebsphere"><span class="">WebSphere</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-userguideadvanced-features-li">
+  <a href="/userguide/advanced-features/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideadvanced-features"><span class="">Advanced Features</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-userguideadvanced-featuresdeployments-li">
+  <a href="/userguide/advanced-features/deployments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideadvanced-featuresdeployments"><span class="">Using the Internal Deployment Engine</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeployments1-deployhub-processing-li">
+  <a href="/userguide/advanced-features/deployments/1-deployhub-processing/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeployments1-deployhub-processing"><span class="">Architecture</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeployments0-quick-setup-map-li">
+  <a href="/userguide/advanced-features/deployments/0-quick-setup-map/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeployments0-quick-setup-map"><span class="">Quick Setup Map</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeployments2-define-your-credentials-li">
+  <a href="/userguide/advanced-features/deployments/2-define-your-credentials/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeployments2-define-your-credentials"><span class="">Create Your Credentials</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeployments0-saas-and-reverse-proxy-li">
+  <a href="/userguide/advanced-features/deployments/0-saas-and-reverse-proxy/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeployments0-saas-and-reverse-proxy"><span class="">Reverse Proxy for Deployments</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeployments2-define-repositories-li">
+  <a href="/userguide/advanced-features/deployments/2-define-repositories/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeployments2-define-repositories"><span class="">Connect Your Repositories</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeployments2-define-your-actions-li">
+  <a href="/userguide/advanced-features/deployments/2-define-your-actions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeployments2-define-your-actions"><span class="">Customize Your Actions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeployments2-define-your-functions-and-procedures-li">
+  <a href="/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeployments2-define-your-functions-and-procedures"><span class="">Procedures and Functions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeployments5-application-releases-li">
+  <a href="/userguide/advanced-features/deployments/5-application-releases/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeployments5-application-releases"><span class="">Creating Releases</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeploymentschangerequest-li">
+  <a href="/userguide/advanced-features/deployments/changerequest/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeploymentschangerequest"><span class="">Change Requests</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeployments3-executing-deployments-li">
+  <a href="/userguide/advanced-features/deployments/3-executing-deployments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeployments3-executing-deployments"><span class="">Executing Deployments</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeployments2-data-sources-li">
+  <a href="/userguide/advanced-features/deployments/2-data-sources/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeployments2-data-sources"><span class="">Using Data Sources</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeploymentscalendar-li">
+  <a href="/userguide/advanced-features/deployments/calendar/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeploymentscalendar"><span class="">DeployHub Pro Smart Calendars</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeployments2-define-notifiers-li">
+  <a href="/userguide/advanced-features/deployments/2-define-notifiers/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeployments2-define-notifiers"><span class="">Using Notifiers for Messaging</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdeployments2-notifier-templates-li">
+  <a href="/userguide/advanced-features/deployments/2-notifier-templates/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdeployments2-notifier-templates"><span class="">Using Notifier Templates</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-userguideadvanced-featuresdmscript-li">
+  <a href="/userguide/advanced-features/dmscript/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideadvanced-featuresdmscript"><span class="">DM Script</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-intro-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-intro"><span class="">Intro to Customizing Actions with DMScript</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-workingwithobjects-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-workingwithobjects/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-workingwithobjects"><span class="">Working with Objects</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-abort-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-abort/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-abort"><span class="">Abort</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-append-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-append/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-append"><span class="">Append</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-appendstd-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-appendstd/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-appendstd"><span class="">Appendstd</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-assert-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-assert/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-assert"><span class="">Assert</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-attachment-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-attachment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-attachment"><span class="">Attachment</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-avloop-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-avloop/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-avloop"><span class="">AVLoop</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-base64decode-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-base64decode/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-base64decode"><span class="">base64decode</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-base64encode-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-base64encode/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-base64encode"><span class="">base64encode</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-basename-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-basename/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-basename"><span class="">basename</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-breakcontinue-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-breakcontinue/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-breakcontinue"><span class="">Break/Continue</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-changerequestobject-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-changerequestobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-changerequestobject"><span class="">Change Request</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-checkout-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-checkout/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-checkout"><span class="">Check Out</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-comploop-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-comploop/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-comploop"><span class="">CompLoop</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-componentitemobject-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-componentitemobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-componentitemobject"><span class="">Component Item Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-conditionalstatements-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-conditionalstatements/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-conditionalstatements"><span class="">Conditionals</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-create-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-create/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-create"><span class="">Create and Read</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-credentials-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-credentials/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-credentials"><span class="">Credentials</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-date-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-date/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-date"><span class="">Date</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-dateobject-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-dateobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-dateobject"><span class="">Date Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-decimal-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-decimal/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-decimal"><span class="">Decimal</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-delete-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-delete/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-delete"><span class="">Delete</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-deploystatement-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-deploystatement/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-deploystatement"><span class="">Deploy Statement</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-dirname-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-dirname/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-dirname"><span class="">Directory Name</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-domainobjectt-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-domainobjectt/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-domainobjectt"><span class="">Domain Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-dropzone-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-dropzone/" title="DropZone Physicl Path" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-dropzone"><span class="">DropZone Physical Path</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-dropzonefileobject-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-dropzonefileobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-dropzonefileobject"><span class="">DropZone File Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-dropzoneobject-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-dropzoneobject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-dropzoneobject"><span class="">DropZone Object</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-echo-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-echo/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-echo"><span class="">Echo</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-eval-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-eval/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-eval"><span class="">Eval</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-filter-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-filter/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-filter"><span class="">Filter</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-flatten-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-flatten/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-flatten"><span class="">Flatten</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-foreachstatement-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-foreachstatement/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-foreachstatement"><span class="">For Each Statement</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-getapplication-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-getapplication/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-getapplication"><span class="">Get Application</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-getcomponnet-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-getcomponnet/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-getcomponnet"><span class="">Get Components</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-getcredential-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-getcredential/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-getcredential"><span class="">Get Credentials</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-getenvironment-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-getenvironment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-getenvironment"><span class="">Get Environment</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-gethex-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-gethex/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-gethex"><span class="">Get Hex</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-getserver-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-getserver/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-getserver"><span class="">Get Server</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-getuser-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-getuser/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-getuser"><span class="">Get User</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-getusergroup-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-getusergroup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-getusergroup"><span class="">Get UserGroup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-increment-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-increment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-increment"><span class="">Increment or Decrement</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-instr-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-instr/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-instr"><span class="">Instr</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-iterate-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-iterate/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-iterate"><span class="">Iterate</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-length-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-length/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-length"><span class="">Length</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-lower-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-lower/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-lower"><span class="">Lower</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-me-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-me/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-me"><span class="">Me</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-modify-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-modify/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-modify"><span class="">Modify</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresdmscriptdmscript-notify-li">
+  <a href="/userguide/advanced-features/dmscript/dmscript-notify/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresdmscriptdmscript-notify"><span class="">Notify</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-userguideadvanced-featuresrestapi-li">
+  <a href="/userguide/advanced-features/restapi/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-userguideadvanced-featuresrestapi"><span class="">RESTfull API</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresrestapiintro-and-logging-in-li">
+  <a href="/userguide/advanced-features/restapi/intro-and-logging-in/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresrestapiintro-and-logging-in"><span class="">Intro to APIs and Logging In</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresrestapiapplications-li">
+  <a href="/userguide/advanced-features/restapi/applications/" title="Application APIs" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresrestapiapplications"><span class="">Applications APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresrestapicomponents-li">
+  <a href="/userguide/advanced-features/restapi/components/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresrestapicomponents"><span class="">Component APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresrestapipro-credentials-li">
+  <a href="/userguide/advanced-features/restapi/pro-credentials/" title="Credential APIs" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresrestapipro-credentials"><span class="">Credentials APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresrestapipro-deployment-li">
+  <a href="/userguide/advanced-features/restapi/pro-deployment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresrestapipro-deployment"><span class="">Deployment APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresrestapideployment-log-li">
+  <a href="/userguide/advanced-features/restapi/deployment-log/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresrestapideployment-log"><span class="">Deployment Log APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresrestapiendpoints-li">
+  <a href="/userguide/advanced-features/restapi/endpoints/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresrestapiendpoints"><span class="">Endpoint APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresrestapienvironments-li">
+  <a href="/userguide/advanced-features/restapi/environments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresrestapienvironments"><span class="">Environment APIs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresrestapipro-calendar-li">
+  <a href="/userguide/advanced-features/restapi/pro-calendar/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresrestapipro-calendar"><span class="">Environment Calendar API</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-userguideadvanced-featuresrestapiusers-li">
+  <a href="/userguide/advanced-features/restapi/users/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguideadvanced-featuresrestapiusers"><span class="">User APIs</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableattributes-li">
+  <a href="/userguide/reusable/attributes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableattributes"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableaudittrail-withdeployments-li">
+  <a href="/userguide/reusable/audittrail-withdeployments/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableaudittrail-withdeployments"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableaudittrail-li">
+  <a href="/userguide/reusable/audittrail/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableaudittrail"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablechangerequest-li">
+  <a href="/userguide/reusable/changerequest/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablechangerequest"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablecommandline-li">
+  <a href="/userguide/reusable/commandline/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablecommandline"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablegit-li">
+  <a href="/userguide/reusable/git/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablegit"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablehipchat-li">
+  <a href="/userguide/reusable/hipchat/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablehipchat"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusableldap-datasource-li">
+  <a href="/userguide/reusable/ldap-datasource/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusableldap-datasource"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablelistofactions-li">
+  <a href="/userguide/reusable/listofactions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablelistofactions"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-predecessor-li">
+  <a href="/userguide/reusable/model-application-predecessor/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-predecessor"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-result-li">
+  <a href="/userguide/reusable/model-application-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-version-full-li">
+  <a href="/userguide/reusable/model-application-version-full/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-version-full"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-version-result-li">
+  <a href="/userguide/reusable/model-application-version-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-version-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-version-li">
+  <a href="/userguide/reusable/model-application-version/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application-version"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-application-li">
+  <a href="/userguide/reusable/model-application/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-application"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-approve-or-reject-li">
+  <a href="/userguide/reusable/model-approve-or-reject/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-approve-or-reject"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-attribute-result-li">
+  <a href="/userguide/reusable/model-attribute-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-attribute-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-attribute-li">
+  <a href="/userguide/reusable/model-attribute/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-attribute"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-calendar-event-result-li">
+  <a href="/userguide/reusable/model-calendar-event-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-calendar-event-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-calendar-event-li">
+  <a href="/userguide/reusable/model-calendar-event/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-calendar-event"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-predecessor-li">
+  <a href="/userguide/reusable/model-component-predecessor/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-predecessor"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-result-li">
+  <a href="/userguide/reusable/model-component-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-version-full-li">
+  <a href="/userguide/reusable/model-component-version-full/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-version-full"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-version-result-li">
+  <a href="/userguide/reusable/model-component-version-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-version-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-version-li">
+  <a href="/userguide/reusable/model-component-version/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component-version"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-component-li">
+  <a href="/userguide/reusable/model-component/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-component"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-comptype-li">
+  <a href="/userguide/reusable/model-comptype/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-comptype"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-deployment-log-result-li">
+  <a href="/userguide/reusable/model-deployment-log-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-deployment-log-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-deployment-log-li">
+  <a href="/userguide/reusable/model-deployment-log/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-deployment-log"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-deployment-result-li">
+  <a href="/userguide/reusable/model-deployment-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-deployment-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-endpoint-result-li">
+  <a href="/userguide/reusable/model-endpoint-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-endpoint-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-endpoints-result-li">
+  <a href="/userguide/reusable/model-endpoints-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-endpoints-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-endpoints-li">
+  <a href="/userguide/reusable/model-endpoints/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-endpoints"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-environment-result-li">
+  <a href="/userguide/reusable/model-environment-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-environment-result"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-environment-li">
+  <a href="/userguide/reusable/model-environment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-environment"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-userguidereusablemodel-environments-result-li">
+  <a href="/userguide/reusable/model-environments-result/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-userguidereusablemodel-environments-result"><span class=""></span></a>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro-to-components">Intro to <em>Components</em></a></li>
+    <li><a href="#publish-new-component-versions-automatically-via-the-cicd-pipeline">Publish New <em>Component Versions</em> automatically via the CI/CD Pipeline</a></li>
+    <li><a href="#components-and-domains">Components and Domains</a></li>
+    <li><a href="#components-and-applications"><em>Components</em> and <em>Applications</em></a></li>
+    <li><a href="#component-versioning"><em>Component</em> Versioning</a></li>
+    <li><a href="#the-component-list-view">The <em>Component</em> List View</a></li>
+    <li><a href="#additional-tabs-from-the-component-list-view">Additional Tabs from the <em>Component List</em> View</a></li>
+    <li><a href="#viewing-a-component-security-details">Viewing a <em>Component’s</em> Security Details</a>
+      <ul>
+        <li><a href="#viewing-all-component-versions">Viewing all <em>Component Versions</em></a></li>
+        <li><a href="#comparing-two-component-versions">Comparing Two <em>Component Versions</em></a></li>
+      </ul>
+    </li>
+    <li><a href="#security-posture-section">Security Posture Section</a>
+      <ul>
+        <li><a href="#software-bill-of-materials">Software Bill of Materials</a></li>
+        <li><a href="#real-time-vulnerabilities">Real-Time Vulnerabilities</a></li>
+        <li><a href="#openssf-scorecard">OpenSSF Scorecard</a></li>
+        <li><a href="#readme">Readme</a></li>
+        <li><a href="#license">License</a></li>
+      </ul>
+    </li>
+    <li><a href="#impact-assessment-section">Impact Assessment Section</a>
+      <ul>
+        <li><a href="#consuming-applications">Consuming Applications</a></li>
+        <li><a href="#blast-radius">Blast Radius</a></li>
+        <li><a href="#swagger">Swagger</a></li>
+      </ul>
+    </li>
+    <li><a href="#component-with-devops-details-section"><em>Component</em> with DevOps Details Section</a>
+      <ul>
+        <li><a href="#component-details"><em>Component</em> Details</a></li>
+        <li><a href="#build-details">Build Details</a></li>
+        <li><a href="#helm-details">Helm Details</a></li>
+      </ul>
+    </li>
+    <li><a href="#git-details">Git Details</a></li>
+    <li><a href="#deployment-engine">Deployment Engine</a></li>
+    <li><a href="#key-value-configurations">Key Value Configurations</a></li>
+    <li><a href="#audit-trail">Audit Trail</a></li>
+    <li><a href="#deployment-audits">Deployment Audits</a></li>
+    <li><a href="#access-section">Access Section</a></li>
+  </ul>
+</nav>
+      </div>
+    
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/userguide/">DeployHub Pro User Guide</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Components and Their Security Posture</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Components and Their Security Posture</h1>
+	<div class="lead">Viewing a Component&rsquo;s Security Posture</div>
+	<header class="article-meta">
+		
+</header>
+	<h2 id="intro-to-components">Intro to <em>Components</em></h2>
+<p><em>Components</em> are independent artifacts—such as containers, jar files, and executables—pushed through the CI/CD pipeline and deployed separately, each with its own security details, including Software Bill of Materials (SBOMs) and vulnerabilities. DeployHub Pro continuously tracks the CI/CD pipeline, collecting both security and DevOps insights for every <em>Component</em>. By mapping this data, DeployHub Provides a unified view of each <em>Component&rsquo;s</em> security profile.</p>
+<p>A collection of <em>Components</em> forms a &rsquo;logical&rsquo; view of an <em>Application</em>. Because each <em>Component</em> comes with its own security and DevOps data, DeployHub Pro aggregates the <em>Component</em> insights for all &rsquo;logical&rsquo; <em>Applications</em>. This aggregation provides a comprehensive view of the &rsquo;logical&rsquo; <em>Application&rsquo;s</em> SBOMs and vulnerabilities, supporting a unified security perspective within complex, decoupled, cloud-native architectures.</p>
+<p><em>Components</em> change over time, and so they have both a <em>Component Base Versions</em>, the first iteration of a <em>Component</em>, and <em>Component Versions</em>, all subsequent iterations.</p>
+<ul>
+<li>
+<p><strong>Component Base Version</strong> : The initial definition of a <em>Component</em>.</p>
+</li>
+<li>
+<p><strong>Component Version</strong> : A child of the <em>Component Base Version</em> that represents changes.</p>
+</li>
+</ul>
+<h2 id="publish-new-component-versions-automatically-via-the-cicd-pipeline">Publish New <em>Component Versions</em> automatically via the CI/CD Pipeline</h2>
+<p>Components can only be added via your CI/CD pipeline. Configure your CI/CD Pipeline to automatically update new <em>Component Versions</em> each time a new GitCommit triggers the workflow process.  Add DeployHub Pro to the workflow to perform the continuous versioning of new <em>Components</em> and their consuming <em>Applications</em>.  For more information, see <a href="/userguide/integrations/ci-cd_integrations/">Using DeployHub Pro with CI/CD</a>.</p>
+<h2 id="components-and-domains">Components and Domains</h2>
+<p><em>Components</em> are organized by <em>Domains</em>. When you create a new <em>Component</em> you publish it to the <em>Domain</em> that defines the &ldquo;Solution Space&rdquo; the <em>Component</em> addresses.  By organizing <em>Components</em> into <em>Domains</em>, you create a catalog that allows other teams within your organization to find the <em>Component</em>, view its security profile, and share its Software Bill of Materials (SBOM) report.</p>
+<p>The organization of <em>Components</em> by <em>Domains</em> support the Domain Driven Design of a decoupled architecture. Before you begin publishing <em>Components</em>, you will need to have a <em>Domain</em> ready.  For more on <em>Domains</em> see the <a href="/userguide/2-defining-domains/">Building Your Domain Catalog</a>.</p>
+<h2 id="components-and-applications"><em>Components</em> and <em>Applications</em></h2>
+<p><em>Components</em> are consumed by <em>Applications</em>. You track a &rsquo;logical&rsquo; view of your complete software solution by assigning <em>Components</em> to the consuming <em>Application</em>. Defining <em>Components</em> to <em>Applications</em> is a &ldquo;packaging&rdquo; process that is done through your CI/CD pipeline.</p>
+<p>There is a many-to-many relationship between <em>Applications</em> and <em>Components.</em> An <em>Application</em> can contain many different <em>Components</em>. A <em>Component</em> can be used across many different <em>Applications</em>. DeployHub Pro tracks and versions all <em>Component Version</em> relationships including to which <em>Applications</em> they have been assigned.</p>
+<h2 id="component-versioning"><em>Component</em> Versioning</h2>
+<p>DeployHub Pro uses a backend versioning engine to track your <em>Components</em>. When you first add your <em>Component</em>, DeployHub Pro tracks it as the <em>Component Base Version</em>. Subsequent updates to that <em>Component</em> creates a new <em>Component Version</em> which represent the updates over time. A <em>Component Base Version</em> is always the first one created, and it acts as a model for subsequent <em>Component Versions</em>. Versioning tracks <em>Component</em> attributes including low level information that is needed for other teams to reuse your <em>Component</em> including:</p>
+<ul>
+<li>SBOMs</li>
+<li>OpenSSF Scorecard</li>
+<li>Vulnerabilities</li>
+<li>Swagger and Readme</li>
+<li>License</li>
+<li>Helm Info</li>
+<li>Build Info</li>
+<li>Git repo</li>
+<li>Git commit (Branch and Tag)</li>
+<li>CD Build / Workflow Number</li>
+<li>Deployment Metadata</li>
+</ul>
+<p>DevOps and security information is collected for all <em>Components</em> via the CI/CD pipeline. When your CD engine initiates a workflow for the <em>Component</em>, DeployHub Pro is called to determine that a new version of the <em>Component</em> is being pushed across the Pipeline. When a <em>Component</em> is updated, DeployHub Pro automatically updates all consuming <em>Applications</em> and creates a new logical <em>Application Version</em>. If a <em>Component</em> changes, the consuming <em>Application</em> also changes.  Both get a new version number. For more information see <a href="/userguide/integrations/ci-cd_integrations/">Using DeployHub Pro with CI/CD</a>.</p>
+<p>DeployHub Pro uses a simple versioning number schema starting at 1 and incrementing over time, for example: <code>Myapp;1, Myapp;2.</code> .</p>
+<p>You can use your DevOps Pipeline to include variance in your versioning number (base name, variant, version).  See <a href="/userguide/integrations/ci-cd_integrations/#_component_-versioning-schema">Step 2 - Create Your Component.toml File in the CI/CD Integrations</a>.</p>
+<h2 id="the-component-list-view">The <em>Component</em> List View</h2>
+<p><em>Components</em> are added to DeployHub Pro through the CI/CD process. Once added, the <em>Component</em> will be displayed in the <em>Component</em> list view. Use the <em>Components</em> List View accessible from the left hand <em>Components</em> menu option to view all of your available <em>Components Versions</em>. The list of all <em>Components</em> is organized by the following:</p>
+<table>
+  <thead>
+      <tr>
+          <th>List Column</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Version</strong></td>
+          <td>The <em>Component Base Version</em> or <em>Component Version</em> number.</td>
+      </tr>
+      <tr>
+          <td><strong>Domain</strong></td>
+          <td>The <em>Domain</em> to which the <em>Component</em> belongs.</td>
+      </tr>
+      <tr>
+          <td><strong>Environment</strong></td>
+          <td>The <em>Environment</em> to which the <em>Component</em> has been deployed. Each <em>Environment</em> will represent a different row in the List View table.</td>
+      </tr>
+      <tr>
+          <td><strong>Deployment Log</strong></td>
+          <td>The Deployment Log number with a link to the log.</td>
+      </tr>
+      <tr>
+          <td><strong>Completed</strong></td>
+          <td>The date and time of the last deployment to the listed <em>Environment</em>.</td>
+      </tr>
+      <tr>
+          <td><strong>Results</strong></td>
+          <td>Success or Fail.</td>
+      </tr>
+  </tbody>
+</table>
+<p>You can also use the Filter bar, represented by a funnel icon, to reorder your <em>Component</em> List View:</p>
+<ul>
+<li>Domain</li>
+<li>Environment</li>
+<li>Last Deployment</li>
+<li>Parent</li>
+<li>Result</li>
+<li>Version</li>
+</ul>
+<h2 id="additional-tabs-from-the-component-list-view">Additional Tabs from the <em>Component List</em> View</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Menu Tab</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Refresh</strong></td>
+          <td>Refreshes your screen.</td>
+      </tr>
+      <tr>
+          <td><strong>Delete</strong></td>
+          <td>Deletes the selected <em>Component Version</em>. To delete all, you must delete the <em>Component Versions</em> starting from the newest to the oldest.  The <em>Component Base Version</em> would be deleted last. Sorting by &ldquo;Version&rdquo; gives you the order.</td>
+      </tr>
+      <tr>
+          <td><strong>SBOM</strong></td>
+          <td>Export your Component&rsquo;s Software Bill of Materials report. Select the <em>Component&rsquo;s</em> check box and click on the SBOM button to see your SBOM report.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="viewing-a-component-security-details">Viewing a <em>Component&rsquo;s</em> Security Details</h2>
+<p>Double click on a <em>Component</em> from the <em>Component List</em> to view and edit an individual <em>Component&rsquo;s</em> security and DevOps details. The DeployHub Pro Dashboard displays all information related to a specific <em>Component Version</em>.</p>
+<h3 id="viewing-all-component-versions">Viewing all <em>Component Versions</em></h3>
+<p>You can view a list of all <em>Component Versions</em> by selecting the &ldquo;Versions&rdquo; button displayed after the <em>Component&rsquo;s</em> name at the top of the DeployHub Pro Dashboard.</p>
+<h3 id="comparing-two-component-versions">Comparing Two <em>Component Versions</em></h3>
+<p>You can compare any two <em>Component Versions</em> by selecting the _Compare_button. You will be provided a list to select your second <em>Component Versions</em> for the comparison.</p>
+<h2 id="security-posture-section">Security Posture Section</h2>
+<p>The first information you will see when viewing a <em>Component</em> is the Security Posture. DeployHub Pro gathers security insights created by open-source and commercial tools coming from organizations such as the <a href="https://openssf.org/projects/">OpenSSF</a>, <a href="https://cd.foundation">Continuous Delivery Foundation</a>, <a href="https://osv.dev/">OSV.dev</a>, and <a href="https://www.sonatype.com/">Sonatype</a>. When security tooling is added to your CI/CD pipeline, DeployHub Pro pulls the security information and maps it to the deployment locations providing real-time security insights for every software update, referred to as continuous security monitoring. By mapping the security data to release versions, and their deployed locations, DeployHub Pro gives you continuous insights into vulnerabilities long after your static CI/CD container scan was completed.</p>
+<blockquote>
+<p>Note: Data from security tools can only be displayed if the tools are added to the CI/CD pipeline. To learn how DeployHub Pro can simplify this step view <a href="/userguide/integrations/ci-cd_integrations/">Setting up DeployHub Pro via the CLI</a>.</p>
+</blockquote>
+<h3 id="software-bill-of-materials">Software Bill of Materials</h3>
+<p>DeployHub Pro consumes a <em>Component&rsquo;s</em> Software Bill of Materials data as part of the CI/CD process. It can consume both <a href="https://spdx.dev/">SPDX</a> and <a href="https://cyclonedx.org/">CycloneDX</a> formats. DeployHub Pro presents the following SBOM summary information:</p>
+<table>
+  <thead>
+      <tr>
+          <th>SBOM Element</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Package</strong></td>
+          <td>The name of the package.</td>
+      </tr>
+      <tr>
+          <td><strong>Version</strong></td>
+          <td>The Package release number.</td>
+      </tr>
+      <tr>
+          <td><strong>License</strong></td>
+          <td>The license used by the Package.</td>
+      </tr>
+      <tr>
+          <td><strong>OSSF Scorecard</strong></td>
+          <td>When available, the OpenSSF Scorecard status for each package.</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>Note: SBOM information will only be displayed if SBOM usage is added to the CI/CD pipeline. To learn how DeployHub Pro can simplify this step view [the CI/CD chapter](/userguide/first-steps/2-intro-to-setting-up-DeployHub Pro/).</p>
+</blockquote>
+<h3 id="real-time-vulnerabilities">Real-Time Vulnerabilities</h3>
+<p>With the SBOM data, DeployHub Pro continuously monitors the vulnerabilities for the <em>Component</em>. Every 10 minutes, DeployHub Pro scans the OSV.dev distributed vulnerability database for the most recent vulnerabilities for the <em>Component</em>.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Vulnerability Element</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Package</strong></td>
+          <td>The name of the package with the vulnerability.</td>
+      </tr>
+      <tr>
+          <td><strong>Version</strong></td>
+          <td>The vulnerable Package release number.</td>
+      </tr>
+      <tr>
+          <td><strong>ID</strong></td>
+          <td>The vulnerability ID with a link to the vulnerability description on OSV.dev.</td>
+      </tr>
+      <tr>
+          <td><strong>Summary</strong></td>
+          <td>A brief summary of the vulnerability</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>Note: Without the SBOM data, vulnerabilities cannot be traced.</p>
+</blockquote>
+<h3 id="openssf-scorecard">OpenSSF Scorecard</h3>
+<p>OpenSSF Scorecard is a collection of security health metrics for open source packages. These metrics are critical as they allow consumers to evaluate the security posture before use. DeployHub Pro displays the OpenSSF score card information for the <em>Component</em> and all of the packages the <em>Component</em> consumes (displayed at the SBOM level).</p>
+<table>
+  <thead>
+      <tr>
+          <th>OpenSSF Scorecard Element</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Score</strong></td>
+          <td>The OpenSSF Scorecard assessment of the <em>Component</em> based on the metric.</td>
+      </tr>
+      <tr>
+          <td><strong>Check</strong></td>
+          <td>OpenSSF Scorecard executes a variety of metrics referred to as &lsquo;checks.&rsquo; This column displays each of the metrics.</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>Note: OpenSSF score card information is only available when the package or <em>Component</em> Git repo has been added to gather the OpenSSF scorecard metrics. Learn how to add OpenSSF Scorecard from their <a href="https://github.com/ossf/scorecard">Git Repo</a>.</p>
+</blockquote>
+<h3 id="readme">Readme</h3>
+<p>DeployHub Pro consumes the README text file found in the associated GitHub repo. The Readme section provides information about the <em>Component</em> and help users understand what the <em>Component</em> is about and how to use it.</p>
+<h3 id="license">License</h3>
+<p>DeployHub Pro consumes the license information from the GitHub repository associated to the <em>Component</em>. The full license is displayed.</p>
+<h2 id="impact-assessment-section">Impact Assessment Section</h2>
+<p>When responding to vulnerabilities you must know how widespread the vulnerability is across your runtime environments. DeployHub Pro maps security data to DevOps data to provide an inventory of each <em>Application</em> who consumes <em>Component</em>.</p>
+<h3 id="consuming-applications">Consuming Applications</h3>
+<p>The table shows you all of the <em>Applications</em> who are consuming this <em>Component</em>.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Application</strong></td>
+          <td>The <em>Application Version</em> that consumes the <em>Component Version</em>.</td>
+      </tr>
+      <tr>
+          <td><strong>Domain</strong></td>
+          <td>The organizational level to which the <em>Application</em> belongs.</td>
+      </tr>
+      <tr>
+          <td><strong>Environment</strong></td>
+          <td>The artifact repository, or physical <em>Environment</em> where the <em>Component&rsquo;s</em> consuming <em>Application</em> is running.</td>
+      </tr>
+      <tr>
+          <td><strong>Deployment Log</strong></td>
+          <td>The DeployHub Pro internal deployment number linked to the deployment log generated by the deployment tool.</td>
+      </tr>
+      <tr>
+          <td><strong>Completed</strong></td>
+          <td>The date/time stamp of when the <em>Application Version</em> was released.</td>
+      </tr>
+      <tr>
+          <td><strong>Results</strong></td>
+          <td>Shows if the deployment completed with a success or fail status.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="blast-radius">Blast Radius</h3>
+<p>The Blast Radius shows a graphic representation of how many <em>Applications</em> are consuming the <em>Component</em>. You can scroll through the graphic image to see a full view of your <em>Component&rsquo;s</em> use across the organization.</p>
+<h3 id="swagger">Swagger</h3>
+<p>As many <em>Components</em> are APIs, DeployHub Pro gathers the Swagger information. Swagger is important because it plays a crucial role in API development and documentation. Swagger helps design, build, document, and consume RESTful web services. If available, the Swagger information is displayed in this section.</p>
+<blockquote>
+<p>Note: Automate the Readme, SBOM, License, and Swagger Upload via Your Pipeline. You can automatically upload you readme, SBOM, License, and Swagger data using the Command Line Interface (CLI) added to your pipeline. For more information review the <a href="/userguide/integrations/ci-cd_integrations/">CI/CD CLI details</a>.</p>
+</blockquote>
+<h2 id="component-with-devops-details-section"><em>Component</em> with DevOps Details Section</h2>
+<p>DeployHub Pro gathers both security insights and DevOps insights to provide a comprehensive view of a <em>Component&rsquo;s</em> security posture. The DevOps details shows the owner of the <em>Component</em>, Build information, Helm and Git details, Key Value data, and DeployHub Pro deployment engine information if used.</p>
+<h3 id="component-details"><em>Component</em> Details</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Full Domain</strong></td>
+          <td>The fully qualified path of the <em>Domain</em> that the <em>Component</em> is to be associated, showing all parent <em>Domains</em>.</td>
+      </tr>
+      <tr>
+          <td><strong>Name</strong></td>
+          <td>The name of the _Component.</td>
+      </tr>
+      <tr>
+          <td><strong>Description</strong></td>
+          <td>A short text field with a description of the <em>Component</em>.</td>
+      </tr>
+      <tr>
+          <td><strong>Component Owner</strong></td>
+          <td>The owner of the <em>Component</em>, whose default value is the creator of the</td>
+      </tr>
+      <tr>
+          <td><strong>Component Owner Email</strong></td>
+          <td>The email of</td>
+      </tr>
+      <tr>
+          <td><strong>Component Owner Phone</strong></td>
+          <td>The phone number of the Component owner.</td>
+      </tr>
+      <tr>
+          <td><strong>PagerDuty Business Service URL</strong></td>
+          <td>Enter the address to the PagerDuty page that is associated to the business service for this <em>Component</em>.</td>
+      </tr>
+      <tr>
+          <td><strong>PagerDuty Service URL</strong></td>
+          <td>Enter the address to the PagerDuty page that is associated to the <em>Component</em> itself</td>
+      </tr>
+      <tr>
+          <td><strong>Slack Channel</strong></td>
+          <td>Enter what Slack Channel that can be used to report issues about this <em>Component</em>.</td>
+      </tr>
+      <tr>
+          <td><strong>Discord Channel</strong></td>
+          <td>Enter the Discord Invite Link you would like your consumers to use for this Component_.</td>
+      </tr>
+      <tr>
+          <td><strong>HipChat Channel</strong></td>
+          <td>Enter the HipChat Channel that can be used to report issues about this <em>Component</em>.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="build-details">Build Details</h3>
+<p>When integrated with your CI/CD engine, DeployHub Pro tracks the DevOps data from the build including:</p>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Field</strong></th>
+          <th><strong>Description</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Build Date</strong></td>
+          <td>The timestamp from when this build job was completed</td>
+      </tr>
+      <tr>
+          <td><strong>Build ID</strong></td>
+          <td>The ID of the CI/CD Workflow that created the <em>Component.</em></td>
+      </tr>
+      <tr>
+          <td><strong>Build URL</strong></td>
+          <td>The URL to the CI/CD Workflow.</td>
+      </tr>
+      <tr>
+          <td><strong>Container Registry</strong></td>
+          <td>The Container registry where the Container is stored.</td>
+      </tr>
+      <tr>
+          <td><strong>Container Digest</strong></td>
+          <td>The SHA number of the Container image.</td>
+      </tr>
+      <tr>
+          <td><strong>Container Tag</strong></td>
+          <td>The tag that was assigned to the Container image.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="helm-details">Helm Details</h3>
+<p>Helm can be used for deploying Container <em>Components</em>. DeployHub Pro interfaces with Helm to support a Kubernetes Cluster deployment. Follow the steps at <a href="/userguide/integrations/helm/">Helm for Container Deployments</a>.</p>
+<p>A Container <em>Component</em> has the following optional attributes:</p>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Field</strong></th>
+          <th><strong>Description</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Helm Chart</strong></td>
+          <td>The Helm Chart used to deploy the <em>Component</em>.</td>
+      </tr>
+      <tr>
+          <td><strong>Helm Chart Namespace</strong></td>
+          <td>The sub-division of the Kubernetes cluster where your <em>Component</em> Container should run.</td>
+      </tr>
+      <tr>
+          <td><strong>Helm Chart Repo</strong></td>
+          <td>The repository used to store the Helm Chart, for example DockerHub, ArtifactHub.</td>
+      </tr>
+      <tr>
+          <td><strong>Helm Chart Repo URL</strong></td>
+          <td>Enter the URL to where the chart is located.</td>
+      </tr>
+      <tr>
+          <td><strong>Helm Chart Version</strong></td>
+          <td>The Helm Chart Version from the Helm Repository.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="git-details">Git Details</h2>
+<p>The following Git information is gathered for each <em>Component</em>.</p>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Field</strong></th>
+          <th><strong>Description</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Git Commit</strong></td>
+          <td>The Git SHA number. Populated when integrated into Continuous Delivery Pipelines.</td>
+      </tr>
+      <tr>
+          <td><strong>Git Repo</strong></td>
+          <td>The Git Repository that triggered the build.Populated when integrated into Continuous Delivery Pipelines.</td>
+      </tr>
+      <tr>
+          <td><strong>Git Tag</strong></td>
+          <td>The last tag for the Git Repository. Populated when integrated into Continuous Delivery Pipelines.</td>
+      </tr>
+      <tr>
+          <td><strong>Git URL</strong></td>
+          <td>The link for the Git Repo.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="deployment-engine">Deployment Engine</h2>
+<p>DeployHub Pro includes an agentless deployment engine, but can also integrate with external deployment tools. The following information is needed when configuring the internal DeployHub Pro engine for the <em>Component</em>.</p>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Field</strong></th>
+          <th><strong>Description</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Change Request Data Source</strong></td>
+          <td>This <em>Data Source</em> is assigned to the <em>Component</em> for tracking Change Request. A Change Request Data Source must be pre-defined for this field to be used.</td>
+      </tr>
+      <tr>
+          <td><strong>Category</strong></td>
+          <td>Assigning a Category to an Object allows lists of Objects based on Categories to be used throughout DeployHub Pro. Add a new Category in the entry field or use an existing Category displayed in the drop down. Categories are most commonly associated with <em>Actions</em>, <em>Functions</em> and <em>Procedures</em>. Pre-defined Categories include: <li>Build - <em>Actions</em>, <em>Functions</em> and <em>Procedures</em> for calling ANT (SalesForce integration).</li><li>Database - <em>Actions</em>, <em>Functions</em> and <em>Procedures</em> for database updates.</li><li>Deploy- <em>Actions</em>, <em>Functions</em> and <em>Procedures</em> for Deployments.</li><li>Dropzone- <em>Actions</em>, <em>Functions</em> and <em>Procedures</em> for interacting with the Dropzone.</li><li>File Logic- <em>Actions</em>, <em>Functions</em> and <em>Procedures</em> related to File manipulation.</li><li>Flow Logic- <em>Actions</em>, <em>Functions</em> and <em>Procedures</em> for if then else in DMScript.</li><li>Loops- <em>Actions</em>, <em>Functions</em> and <em>Procedures</em> for file looping.</li><li>General-Non-categorized Objects (default).</li><li>WebLogic- <em>Actions</em>, <em>Functions</em> and <em>Procedures</em> for deploying to WebLogic.</li><li>WebSphere- <em>Actions</em>, <em>Functions</em> and <em>Procedures</em> for deploying to WebSphere.</li><li>Windows- <em>Actions, Functions</em> and <em>Procedures</em> used for Windows deployments.</li></td>
+      </tr>
+      <tr>
+          <td><strong>Always Deploy</strong></td>
+          <td>The <em>Component</em> is deployed to the associated <em>Endpoints</em> in the <em>Target Environment</em> regardless if the <em>Component</em> is already present on the <em>Endpoints</em>. This is useful for monolithic applications where you want to copy over a binary for example.</td>
+      </tr>
+      <tr>
+          <td><strong>Deploy Sequentially</strong></td>
+          <td>Normally when a <em>Component</em> in an <em>Application</em> is deployed to several <em>Endpoints</em> in an <em>Environment</em>, it is deployed to each <em>Endpoint</em> at the same time (in parallel). The &ldquo;Deploy Sequentially&rdquo; option changes this behavior to force the <em>Component</em> to deploy to each <em>Endpoint</em> in turn, sequentially.</td>
+      </tr>
+      <tr>
+          <td><strong>Base Directory</strong></td>
+          <td>Base, or high level, directory where the file will be deployed. This value will be ignored if the <em>Endpoint</em> has a Base Directory defined.</td>
+      </tr>
+      <tr>
+          <td><strong>Pre-Action</strong></td>
+          <td>An <em>Action</em> that is to be run prior to the deployment of this <em>Component</em>. This can be used to perform prerequisite requirements, such as creating directories, creating files from scratch, or moving files between directories.</td>
+      </tr>
+      <tr>
+          <td><strong>Post-Action</strong></td>
+          <td>An <em>Action</em> that is to be run after the deployment of this <em>Component</em>. This can be used to execute actions on the target <em>Endpoint</em> after the <em>Component</em> has been deployed.</td>
+      </tr>
+      <tr>
+          <td><strong>Custom Action</strong></td>
+          <td>An <em>Action</em> that replaces the usual Deployment Engine processing. Custom <em>Actions</em> can be used to call Ansible, Helm or other external deployment tools.</td>
+      </tr>
+      <tr>
+          <td><strong>Base Directory</strong></td>
+          <td>Base, or high level, directory where the file will be deployed. This value will be ignored if the <em>Endpoint</em> has a Base Directory defined.</td>
+      </tr>
+      <tr>
+          <td><strong>Target Directory</strong></td>
+          <td>The directory under the Base Directory where the file will be deployed, or final &ldquo;Target&rdquo; Directory.</td>
+      </tr>
+      <tr>
+          <td><strong>Repository</strong></td>
+          <td>Choose the Repository that contains your <em>Application</em> binaries, files, etc. This list box is populated based on the <em>Repositories</em> pre-defined in your initial setup. Based on the <em>Repository</em> you select, you may be provided override or append fields if they were made available. For a list of the <em>Repositories</em>  See <a href="/userguide/advanced-features/deployments/2-define-repositories/">Connecting Your Repositories</a> for more information.<ul><li>Filepath Override: Enter a filepath that will override the default filepath defined at the <em>Repository</em> level.</li><li>Pattern Override: Enter a pattern that will override the default pattern defined at the <em>Repository</em> level.  Patterns are file types you want to pull from the <em>Repository</em>, such as *.exe, *.dll, *.war. </li><li>Recursive Override: Select the box in order to override the default recursive behavior defined at the <em>Repository</em> level. This will turn recursion on or off depending on the setting at the <em>Repository</em> level. </li><li>Version Override: Overrides the default template of your versioning pattern defined at the <em>Repository</em> level. </li></ul></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="key-value-configurations">Key Value Configurations</h2>
+<p>Key Value pairs are stored for any configuration setting that needs to be persisted with the version of the <em>Object</em>. For example, pairs can be used to store issue numbers from Jira or GitHub issues with the <em>Component Version</em> and/or <em>Applications Version</em>.</p>
+<p>For users of the DeployHub Pro internal deployment engine, Key Value pairs can be stored by DeployHub Pro and referenced during a deployment.</p>
+<p>Key Value pairs can be assigned at multiple levels, from the Global <em>Domain</em> down to an individual <em>Component</em> and have a &ldquo;scope.&rdquo; Lower level Objects can override a higher level Object.  Below is the order in which Key Value Pairs can be overridden:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Object</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Global</strong></td>
+          <td>Contains all Environment variables and any &ldquo;additional Key Value Pairs&rdquo; set by the user when running that task.</td>
+      </tr>
+      <tr>
+          <td><strong>Environment</strong></td>
+          <td>Overrides any Global Key Value Pairs during a deployment.</td>
+      </tr>
+      <tr>
+          <td><strong>Application</strong></td>
+          <td>Overrides the <em>Environment</em> Key Value Pairs during a deployment.</td>
+      </tr>
+      <tr>
+          <td><strong>Endpoint</strong></td>
+          <td>Overrides the <em>Application</em> Key Value Pairs during a deployment.</td>
+      </tr>
+      <tr>
+          <td><strong>Component</strong></td>
+          <td>Overrides the  <em>Application</em> Key Value Pairs during a deployed.</td>
+      </tr>
+  </tbody>
+</table>
+<p>Key Value Pairs can be given any Name and a Value. Use +Add to add Key Value Pairs to the table. Use Save to confirm.  Use the checkbox to Delete or Edit a Key Value Pair.</p>
+<h2 id="audit-trail">Audit Trail</h2>
+<p>The Audit Trail displays audit entries for any changes that impact this <em>Object</em>.</p>
+<ul>
+<li>
+<p>Comment: Click on &lsquo;Comment&rsquo; to add information. There is a field above the list labeled &ldquo;Say something about this <em>Object</em>&rdquo; that can have written comments placed into it, or files can be attached to the comment.  Entering text into this field activates the Add Message button. Click to save the comment as a line in the list.</p>
+</li>
+<li>
+<p>Add Files to Comments: Click on the paperclip icon to add a file to the message.  Once done, click on the &ldquo;Add Message&rdquo; button. These attachments can later be retrieved by clicking on the paperclip icon which then displays the name of the file within a list. Choose the file to download it into the your default Download directory on your local computer.</p>
+</li>
+</ul>
+<h2 id="deployment-audits">Deployment Audits</h2>
+<p>For deployment audits, select a deployment number to see the details including:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Access</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Log</strong></td>
+          <td>The output of the deployment.</td>
+      </tr>
+      <tr>
+          <td><strong>Files</strong></td>
+          <td>Any files or objects deployed.</td>
+      </tr>
+      <tr>
+          <td><strong>Step Duration</strong></td>
+          <td>Deployment Steps with time required to execute.</td>
+      </tr>
+      <tr>
+          <td><strong>Feedback Loop</strong></td>
+          <td>Shows what was updated starting from <em>Component</em>.</td>
+      </tr>
+  </tbody>
+</table>
+<p>When using the internal DeployHub Pro deployment engine, all log output is automatically persisted with the <em>Application Version</em> and <em>Component Version</em>.</p>
+<p>If you are using another deployment solution, you can persist the log via the CI/CD workflow. The output from the deployment can be passed to the CLI to be persisted with the <em>Application Version</em> and <em>Component Versions</em>. Learn more about the <a href="/userguide/integrations/ci-cd_integrations/">CI/CD CLI Integration</a></p>
+<h2 id="access-section">Access Section</h2>
+<p>The Access Section allows <em>Users</em> within designated <em>Groups</em> to update or view the <em>Component</em>. To add a <em>Group</em> to one of the access lists, drag and drop the <em>Group</em> from the Available Groups list onto desired access list. All <em>Users</em> who belong to a <em>Group</em> that appear in one of the Access lists will be granted access to the <em>Component</em>:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Access</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>View</strong></td>
+          <td>This allows any <em>User</em> that belongs to any <em>Group</em> in this list to see the selected <em>Component</em> in the List View.</td>
+      </tr>
+      <tr>
+          <td><strong>Change</strong></td>
+          <td>This allows any <em>User</em> that belongs to any <em>Group</em> in this list to make changes to the <em>Component</em>.</td>
+      </tr>
+  </tbody>
+</table>
+
+	<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/DeployHubProject/DeployHub-Docs/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/DeployHubProject/DeployHub-Docs/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'page_helpful', {
+      'event_category': 'Helpful',
+      'event_label': window.location.pathname,
+      'value': value
+    });
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback( 100 );
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+<br />
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Twitter" aria-label="Twitter">
+    <a target="_blank" rel="noopener" href="https://twitter.com/@deployhubproj" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Facebook" aria-label="Facebook">
+    <a target="_blank" rel="noopener" href="https://www.facebook.com/groups/DeployHubProject/?ref=bookmarks" aria-label="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="LinkedIn" aria-label="LinkedIn">
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/deployhubproj/" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="YouTube" aria-label="YouTube">
+    <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UC7jomcQ2D4VgjGV2ePtKWfA" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/DeployHubProject/DeployHub-Pro" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
+        <span>&copy; 2026 DeployHub, Inc All Rights Reserved</span>
+        <span class="ms-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></span>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeployHub User Guide and API Reference – Advanced Features</title>
+    <link>//localhost:1313/userguide/advanced-features/</link>
+    <description>Recent content in Advanced Features on DeployHub User Guide and API Reference</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:1313/userguide/advanced-features/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Userguide: Using the Internal Deployment Engine</title>
+      <link>//localhost:1313/userguide/advanced-features/deployments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/userguide/advanced-features/deployments/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: DM Script</title>
+      <link>//localhost:1313/userguide/advanced-features/dmscript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/userguide/advanced-features/dmscript/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Userguide: RESTfull API</title>
+      <link>//localhost:1313/userguide/advanced-features/restapi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/userguide/advanced-features/restapi/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
