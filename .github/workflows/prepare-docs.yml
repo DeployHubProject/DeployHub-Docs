@@ -1,0 +1,77 @@
+name: Prepare DeployHub Branded Docs
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_ref:
+        description: "DeployHub docs branch, tag, or commit to mirror"
+        required: false
+        default: "main"
+  schedule:
+    - cron: "0 8 * * 1"
+  push:
+    branches:
+      - main
+    paths:
+      - "prepare-docs.sh"
+      - ".github/workflows/prepare-docs.yml"
+
+concurrency:
+  group: prepare-deployhub-branded-docs
+  cancel-in-progress: true
+
+jobs:
+  prepare-docs:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout DeployHub docs
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Install Hugo extended
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Prepare DeployHub branded docs
+        shell: bash
+        run: |
+          chmod +x prepare-docs.sh
+
+          SOURCE_REF_INPUT="${{ github.event.inputs.source_ref }}"
+          if [ -n "$SOURCE_REF_INPUT" ]; then
+            SOURCE_REF="$SOURCE_REF_INPUT" ./prepare-docs.sh
+          else
+            ./prepare-docs.sh
+          fi
+
+      - name: Install npm dependencies
+        if: hashFiles('package-lock.json') != ''
+        run: npm ci
+
+      - name: Build Hugo site
+        run: hugo --minify
+
+      - name: Commit and push generated site mirror
+        shell: bash
+        run: |
+          rm -rf public
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No docs changes to commit"
+          else
+            git commit -m "chore: update DeployHub branded docs from DeployHub"
+            git push origin main
+          fi
