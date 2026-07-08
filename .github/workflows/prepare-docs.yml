@@ -58,8 +58,7 @@ jobs:
           ./prepare-docs.sh
 
       - name: Install npm dependencies when present
-        if: hashFiles('package-lock.json') != ''
-        run: npm ci
+        run: npm install
 
       - name: Build Hugo site
         run: hugo --minify

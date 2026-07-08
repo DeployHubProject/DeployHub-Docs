@@ -2,177 +2,262 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/guides/</loc>
+    <loc>https://docs.deployhub.com/guides/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/getting-started/welcome/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/getting-started/welcome/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/things-to-know/things-to-know/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/things-to-know/things-to-know/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/dev-environment/00-home/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/dev-environment/00-home/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/community-membership/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/community-membership/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/dev-environment/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/dev-environment/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/application-build-and-containerisation/01_run_go_backend/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/application-build-and-containerisation/01_run_go_backend/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/application-build-and-containerisation/01_run_nextjs_frontend/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/application-build-and-containerisation/01_run_nextjs_frontend/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/application-build-and-containerisation/02_docker_go_backend/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/application-build-and-containerisation/02_docker_go_backend/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/application-build-and-containerisation/02_docker_nextjs_frontend/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/application-build-and-containerisation/02_docker_nextjs_frontend/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/dev-environment/01-setup/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/dev-environment/01-setup/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/dev-environment/02-kind/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/dev-environment/02-kind/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/dev-environment/03-localstack/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/dev-environment/03-localstack/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/github-integration/connect-github/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/github-integration/connect-github/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/developer-resouces/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/developer-resouces/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/read-your-dashboard/executive-summary-cards/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/read-your-dashboard/executive-summary-cards/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/github-integration/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/github-integration/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/choose-your-path/hosted-saas/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/choose-your-path/hosted-saas/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/core-concepts/how-ortelius-objects-relate/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/core-concepts/how-ortelius-objects-relate/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/how-to/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/how-to/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/configure-ortelius/manage-organizations/</loc>
+    <loc>https://docs.deployhub.com/guides/configure-ortelius/manage-organizations/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/sbom-integration/oci-attestations/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/sbom-integration/oci-attestations/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/pull-request-cheat-sheet/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/pull-request-cheat-sheet/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/read-your-dashboard/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/read-your-dashboard/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/rest-api-reference/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/rest-api-reference/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/investigate-vulnerabilities/search-for-packages/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/investigate-vulnerabilities/search-for-packages/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/what-ortelius-does/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/what-ortelius-does/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/application-build-and-containerisation/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/application-build-and-containerisation/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/front-end-development/vscode-backend-setup/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/front-end-development/vscode-backend-setup/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/core-concepts/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/core-concepts/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/sbom-integration/github-release-assets/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/sbom-integration/github-release-assets/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/gitlab-integration/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/gitlab-integration/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/investigate-vulnerabilities/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/investigate-vulnerabilities/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/configure-ortelius/manage-users-and-roles/</loc>
+    <loc>https://docs.deployhub.com/guides/configure-ortelius/manage-users-and-roles/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/github-integration/onboard-repositories/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/github-integration/onboard-repositories/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/core-concepts/orgs/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/core-concepts/orgs/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/investigate-vulnerabilities/review-cve-details/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/investigate-vulnerabilities/review-cve-details/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/choose-your-path/self-hosted/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/choose-your-path/self-hosted/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/read-your-dashboard/severity-breakdown-and-sla-compliance/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/read-your-dashboard/severity-breakdown-and-sla-compliance/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/front-end-development/vscode-setup/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/front-end-development/vscode-setup/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/who-should-use-ortelius/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/who-should-use-ortelius/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/choose-your-path/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/choose-your-path/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/configure-ortelius/configure-sla-policy/</loc>
+    <loc>https://docs.deployhub.com/guides/configure-ortelius/configure-sla-policy/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/deployment-tracking-github-gitlab/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/deployment-tracking-github-gitlab/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/github-integration/github-actions-deployment-tracking/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/github-integration/github-actions-deployment-tracking/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/core-concepts/repositories/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/core-concepts/repositories/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/investigate-vulnerabilities/review-blast-radius-impact/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/investigate-vulnerabilities/review-blast-radius-impact/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/review-sla-status/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/review-sla-status/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/sbom-integration/syft/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/sbom-integration/syft/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/read-your-dashboard/volume-and-flow/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/read-your-dashboard/volume-and-flow/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/sbom-integration/cdxgen/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/sbom-integration/cdxgen/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/configure-ortelius/configure-endpoints/</loc>
+    <loc>https://docs.deployhub.com/guides/configure-ortelius/configure-endpoints/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/deployment-tracking-gke/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/deployment-tracking-gke/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/log-in-for-the-first-time/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/log-in-for-the-first-time/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/core-concepts/releases/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/core-concepts/releases/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/review-deployment-and-dora-metrics/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/review-deployment-and-dora-metrics/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/read-your-dashboard/vulnerability-trend/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/read-your-dashboard/vulnerability-trend/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/configure-ortelius/</loc>
+    <loc>https://docs.deployhub.com/guides/configure-ortelius/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/configure-ortelius/configure-mission-critical-endpoints/</loc>
+    <loc>https://docs.deployhub.com/guides/configure-ortelius/configure-mission-critical-endpoints/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/invite-your-team/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/invite-your-team/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/quick-tour-with-sample-data/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/quick-tour-with-sample-data/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/sbom-integration/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/sbom-integration/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/core-concepts/sboms/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/core-concepts/sboms/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/using-ortelius/read-your-dashboard/security-velocity-and-impact-metrics/</loc>
+    <loc>https://docs.deployhub.com/guides/using-ortelius/read-your-dashboard/security-velocity-and-impact-metrics/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/core-concepts/cves/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/core-concepts/cves/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/openssf-scorecard/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/openssf-scorecard/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/understand-how-ortelius-gets-data/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/understand-how-ortelius-gets-data/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/connect-github/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/connect-github/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/core-concepts/endpoints/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/core-concepts/endpoints/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/integrations/osv-dev/</loc>
+    <loc>https://docs.deployhub.com/guides/integrations/osv-dev/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/contributorguide/</loc>
+    <loc>https://docs.deployhub.com/guides/contributorguide/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/core-concepts/deployments/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/core-concepts/deployments/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/select-repositories-to-watch/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/select-repositories-to-watch/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/core-concepts/sync-records/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/core-concepts/sync-records/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/verify-your-data/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/verify-your-data/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/developer-resources/core-concepts/architecture-guide/</loc>
+    <loc>https://docs.deployhub.com/guides/developer-resources/core-concepts/architecture-guide/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/attach-or-discover-sboms/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/attach-or-discover-sboms/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/track-deployments/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/track-deployments/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/sync-vulnerability-data/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/sync-vulnerability-data/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/first-success-checklist/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/first-success-checklist/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/guides/start-here/get-support/</loc>
+    <loc>https://docs.deployhub.com/guides/start-here/get-support/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2020-07-07T10:13:15-06:00</lastmod>
+    <loc>https://docs.deployhub.com/</loc>
+    <lastmod>2026-07-08T17:15:30-06:00</lastmod>
   </url>
 </urlset>
