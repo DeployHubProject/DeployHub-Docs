@@ -1,12 +1,20 @@
-name: Prepare DeployHub Branded Docs
+name: Prepare DeployHub Docs
 
 on:
   workflow_dispatch:
     inputs:
       source_ref:
-        description: "DeployHub docs branch, tag, or commit to mirror"
+        description: "Ortelius docs branch, tag, or ref"
         required: false
         default: "main"
+      rewrite_lowercase_technical:
+        description: "Rewrite lowercase technical identifier 'ortelius' to 'deployhub'"
+        required: false
+        default: "false"
+      brand_logo_url:
+        description: "DeployHub logo URL. Defaults to the DeployHub website logo CDN URL."
+        required: false
+        default: "https://spcdn.shortpixel.ai/spio/ret_img,q_cdnize,to_webp,s_webp/www.deployhub.com/wp-content/uploads/2024/09/DeployHub-website-loog.png"
   schedule:
     - cron: "0 8 * * 1"
   push:
@@ -17,7 +25,7 @@ on:
       - ".github/workflows/prepare-docs.yml"
 
 concurrency:
-  group: prepare-deployhub-branded-docs
+  group: prepare-deployhub-docs
   cancel-in-progress: true
 
 jobs:
@@ -34,44 +42,45 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - name: Install Hugo extended
+      - name: Install Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: "latest"
           extended: true
 
-      - name: Prepare DeployHub branded docs
-        shell: bash
+      - name: Prepare branded docs
+        env:
+          SOURCE_REF: ${{ github.event.inputs.source_ref || 'main' }}
+          REWRITE_LOWERCASE_TECHNICAL: ${{ github.event.inputs.rewrite_lowercase_technical || 'false' }}
+          BRAND_LOGO_URL: ${{ github.event.inputs.brand_logo_url || '' }}
         run: |
           chmod +x prepare-docs.sh
+          ./prepare-docs.sh
 
-          SOURCE_REF_INPUT="${{ github.event.inputs.source_ref }}"
-          if [ -n "$SOURCE_REF_INPUT" ]; then
-            SOURCE_REF="$SOURCE_REF_INPUT" ./prepare-docs.sh
-          else
-            ./prepare-docs.sh
-          fi
-
-      - name: Install npm dependencies
+      - name: Install npm dependencies when present
         if: hashFiles('package-lock.json') != ''
         run: npm ci
 
       - name: Build Hugo site
         run: hugo --minify
 
-      - name: Commit and push generated site mirror
-        shell: bash
+      - name: Ensure generated Hugo output is not committed
         run: |
-          rm -rf public
+          rm -rf public .hugo_build.lock
+          test -d .git
+          test -d content
+          test "$(find content -type f -name '*.md' | wc -l | tr -d ' ')" != "0"
 
+      - name: Commit generated docs
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git add -A
 
           if git diff --cached --quiet; then
-            echo "No docs changes to commit"
+            echo "No generated docs changes"
           else
-            git commit -m "chore: update DeployHub branded docs from DeployHub"
+            git commit -m "chore: update DeployHub branded docs"
             git push origin main
           fi

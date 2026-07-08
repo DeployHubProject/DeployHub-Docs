@@ -3,8 +3,8 @@
 
 # Default build settings
 [build]
-  command = "npm install postcss-cli autoprefixer && hugo"
+  command = "npm install postcss-cli && hugo"
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.111.0"
+  HUGO_VERSION = "0.151.2"

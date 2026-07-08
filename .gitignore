@@ -134,4 +134,9 @@ dmypy.json
 
 # MegaLinter
 megalinter-reports/
-resources/
+
+#hugo putput
+public/
+
+node_modules/
+.hugo_build.lock

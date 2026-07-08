@@ -2,427 +2,177 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/userguide/</loc>
+    <loc>http://localhost:1313/guides/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-intro/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/getting-started/welcome/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/0-introduction/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/things-to-know/things-to-know/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/1-deployhub-processing/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/dev-environment/00-home/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/0-ortelius-tutorial/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/community-membership/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/0-quick-setup-map/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/dev-environment/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/application-build-and-containerisation/01_run_go_backend/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-workingwithobjects/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/application-build-and-containerisation/01_run_nextjs_frontend/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-abort/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/application-build-and-containerisation/02_docker_go_backend/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/2-define-your-credentials/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/application-build-and-containerisation/02_docker_nextjs_frontend/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/installation-and-support/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/dev-environment/01-setup/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/0-saas-and-reverse-proxy/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/dev-environment/02-kind/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-append/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/dev-environment/03-localstack/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/</loc>
+    <loc>http://localhost:1313/guides/integrations/github-integration/connect-github/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/1-deployhub-basic-concepts/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/developer-resouces/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/addingtopipeline/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/read-your-dashboard/executive-summary-cards/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/2-define-repositories/</loc>
+    <loc>http://localhost:1313/guides/integrations/github-integration/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/restapi/intro-and-logging-in/</loc>
+    <loc>http://localhost:1313/guides/start-here/choose-your-path/hosted-saas/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-appendstd/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/core-concepts/how-ortelius-objects-relate/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/2-define-components/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/how-to/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/2-define-your-actions/</loc>
+    <loc>http://localhost:1313/guides/configure-ortelius/manage-organizations/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/restapi/</loc>
+    <loc>http://localhost:1313/guides/integrations/sbom-integration/oci-attestations/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/2-defining-applications/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/pull-request-cheat-sheet/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/2-defining-domains/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/read-your-dashboard/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/2-define-your-functions-and-procedures/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/rest-api-reference/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/5-application-releases/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/investigate-vulnerabilities/search-for-packages/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/2-define-endpoints/</loc>
+    <loc>http://localhost:1313/guides/start-here/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/restapi/applications/</loc>
+    <loc>http://localhost:1313/guides/start-here/what-ortelius-does/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-assert/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/application-build-and-containerisation/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/2-define-environments/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/front-end-development/vscode-backend-setup/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/changerequest/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/core-concepts/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/installation-and-support/0-commandlineinterface/</loc>
+    <loc>http://localhost:1313/guides/integrations/sbom-integration/github-release-assets/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/2-users/</loc>
+    <loc>http://localhost:1313/guides/integrations/gitlab-integration/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-attachment/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/investigate-vulnerabilities/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/user-groups/</loc>
+    <loc>http://localhost:1313/guides/configure-ortelius/manage-users-and-roles/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/installation-and-support/0-on-premise-installation-for-pro/</loc>
+    <loc>http://localhost:1313/guides/integrations/github-integration/onboard-repositories/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-avloop/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/core-concepts/orgs/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/restapi/components/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/investigate-vulnerabilities/review-cve-details/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/installation-and-support/0-contactsupport/</loc>
+    <loc>http://localhost:1313/guides/start-here/choose-your-path/self-hosted/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-base64decode/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/read-your-dashboard/severity-breakdown-and-sla-compliance/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/restapi/pro-credentials/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/front-end-development/vscode-setup/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-base64encode/</loc>
+    <loc>http://localhost:1313/guides/start-here/who-should-use-ortelius/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/restapi/pro-deployment/</loc>
+    <loc>http://localhost:1313/guides/start-here/choose-your-path/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/3-executing-deployments/</loc>
+    <loc>http://localhost:1313/guides/configure-ortelius/configure-sla-policy/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/installation-and-support/0-enabling-sso/</loc>
+    <loc>http://localhost:1313/guides/integrations/deployment-tracking-github-gitlab/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/2-data-sources/</loc>
+    <loc>http://localhost:1313/guides/integrations/github-integration/github-actions-deployment-tracking/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-basename/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/core-concepts/repositories/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/restapi/deployment-log/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/investigate-vulnerabilities/review-blast-radius-impact/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-breakcontinue/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/review-sla-status/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/restapi/endpoints/</loc>
+    <loc>http://localhost:1313/guides/integrations/sbom-integration/syft/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-changerequestobject/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/restapi/environments/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/read-your-dashboard/volume-and-flow/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-checkout/</loc>
+    <loc>http://localhost:1313/guides/integrations/sbom-integration/cdxgen/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/restapi/pro-calendar/</loc>
+    <loc>http://localhost:1313/guides/configure-ortelius/configure-endpoints/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-comploop/</loc>
+    <loc>http://localhost:1313/guides/integrations/deployment-tracking-gke/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-componentitemobject/</loc>
+    <loc>http://localhost:1313/guides/start-here/log-in-for-the-first-time/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/installation-and-support/0-terms-of-use-agreement/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/core-concepts/releases/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/restapi/users/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/review-deployment-and-dora-metrics/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-conditionalstatements/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/read-your-dashboard/vulnerability-trend/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-create/</loc>
+    <loc>http://localhost:1313/guides/configure-ortelius/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-credentials/</loc>
+    <loc>http://localhost:1313/guides/configure-ortelius/configure-mission-critical-endpoints/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-date/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/invite-your-team/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-dateobject/</loc>
+    <loc>http://localhost:1313/guides/start-here/quick-tour-with-sample-data/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-decimal/</loc>
+    <loc>http://localhost:1313/guides/integrations/sbom-integration/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-delete/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/core-concepts/sboms/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-deploystatement/</loc>
+    <loc>http://localhost:1313/guides/using-ortelius/read-your-dashboard/security-velocity-and-impact-metrics/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-dirname/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/core-concepts/cves/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-domainobjectt/</loc>
+    <loc>http://localhost:1313/guides/integrations/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-dropzone/</loc>
+    <loc>http://localhost:1313/guides/integrations/openssf-scorecard/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-dropzonefileobject/</loc>
+    <loc>http://localhost:1313/guides/start-here/understand-how-ortelius-gets-data/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-dropzoneobject/</loc>
+    <loc>http://localhost:1313/guides/start-here/connect-github/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-echo/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-eval/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/core-concepts/endpoints/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-filter/</loc>
+    <loc>http://localhost:1313/guides/integrations/osv-dev/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-flatten/</loc>
+    <loc>http://localhost:1313/guides/contributorguide/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-foreachstatement/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/core-concepts/deployments/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getapplication/</loc>
+    <loc>http://localhost:1313/guides/start-here/select-repositories-to-watch/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getcomponnet/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/core-concepts/sync-records/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getcredential/</loc>
+    <loc>http://localhost:1313/guides/start-here/verify-your-data/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getenvironment/</loc>
+    <loc>http://localhost:1313/guides/developer-resources/core-concepts/architecture-guide/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-gethex/</loc>
+    <loc>http://localhost:1313/guides/start-here/attach-or-discover-sboms/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getserver/</loc>
+    <loc>http://localhost:1313/guides/start-here/track-deployments/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getuser/</loc>
+    <loc>http://localhost:1313/guides/start-here/sync-vulnerability-data/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-getusergroup/</loc>
+    <loc>http://localhost:1313/guides/start-here/first-success-checklist/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-increment/</loc>
+    <loc>http://localhost:1313/guides/start-here/get-support/</loc>
   </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-instr/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-iterate/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-length/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-lower/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-me/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-modify/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-notify/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-now/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-octal/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-parallel/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/calendar/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-psloop/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-query/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-random/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-regsub/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-remotescript/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-rename/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-restfulget/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-restfulpost/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-rtrim/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-setatt/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-setstatement/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-sleep/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-soap/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-split/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-stack/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-stdpath/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-substr/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-sum/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-switch/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-tojson/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-trasnfer/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-trycatchfinally/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-upper/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-usergroup/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-userobject/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-using/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-waitfor/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-whileloop/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-xmlparse/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-xpathnotation/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-zipadd/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-zipdel/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/dmscript/dmscript-zipget/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/installation-and-support/oslicenses/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/2-define-notifiers/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/intro-to-integrations/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/ci-cd_integrations/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/compliance-summary/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/dorametrics/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/github/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/helm/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/hipchat/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/jira-bugzilla-and-git-issues/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/lamda/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/ldap-and-active-directory/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/odbc/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/openmake-meister/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/openssf-scorecard/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/osvdev/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/salesforce/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/swagger/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/slack/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/sonarqube/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/spdx-syft-cyclonedx/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/svn/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/tomcat/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/veracode/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/weblogic/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/integrations/websphere/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/advanced-features/deployments/2-notifier-templates/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/attributes/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/audittrail-withdeployments/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/audittrail/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/changerequest/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/commandline/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/git/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/hipchat/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/ldap-datasource/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/listofactions/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-application-predecessor/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-application-result/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-application-version-full/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-application-version-result/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-application-version/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-application/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-approve-or-reject/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-attribute-result/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-attribute/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-calendar-event-result/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-calendar-event/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-component-predecessor/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-component-result/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-component-version-full/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-component-version-result/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-component-version/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-component/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-comptype/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-deployment-log-result/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-deployment-log/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-deployment-result/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-endpoint-result/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-endpoints-result/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-endpoints/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-environment-result/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-environment/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-environments-result/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-event-creator/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-event-environment/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-event-timestamp/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-request/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/model-success/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/openmake-meister/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/slack/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/svn/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/reusable/tasks/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/save/application-and-release-tasks/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/save/customtypes/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/save/databasedeployments/</loc>
-  </url><url>
-    <loc>//localhost:1313/userguide/save/dmscript-runtask/</loc>
-  </url><url>
-    <loc>//localhost:1313/categories/</loc>
-  </url><url>
-    <loc>//localhost:1313/</loc>
-  </url><url>
-    <loc>//localhost:1313/search/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2020-07-07T10:13:15-06:00</lastmod>
   </url>
 </urlset>
